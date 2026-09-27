@@ -1,0 +1,99 @@
+
+
+TARGET-LANGUAGE: Wappo (wap), Wappo-Yukian, North America
+
+CORE
+
+1. Possessive marking strategy (adapted from 24A-2)
+   - Source: Dependent marking (Nepali marks the possessor)
+   - Target realization: Head marking via possessive prefixes on the possessed noun (WALS 57A-1)
+   - Intended solver inference: The solver identifies that possession is marked on the head noun (the possessed), not on the possessor, by observing consistent prefixal morphology on possessed nouns
+   - Priority: REQUIRED
+
+2. Genitive-Noun order (86A-1)
+   - Source: Genitive-Noun (Nepali)
+   - Target realization: Genitive-Noun (WALS 86A-1) — directly matches
+   - Intended solver inference: The possessor precedes the possessed noun in the noun phrase
+   - Priority: HIGH
+
+3. Negation (adapted from 112A-4)
+   - Source: Negative word, unclear if verb or particle (Nepali)
+   - Target realization: Negative suffix on the verb (WALS 112A-1, 143F-2)
+   - Intended solver inference: Negation is a verbal suffix, not a separate word or particle; the solver identifies the suffix by its consistent position after the verb stem
+   - Priority: HIGH
+
+4. Polar questions (adapted from 116A-6)
+   - Source: Interrogative intonation only (Nepali)
+   - Target realization: Interrogative verb morphology (WALS 116A-2)
+   - Intended solver inference: Questions are marked morphologically on the verb; the solver identifies a dedicated interrogative suffix or morpheme
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Possessive prefixes as the primary possessive strategy (WALS 57A-1)
+   - Phenomenon: Possession is encoded by a prefix on the possessed noun
+   - Intended solver inference: The prefix is a possessive marker; its form may vary by person/number of possessor
+   - Interaction with CORE: This is the target-language realization of the adapted 24A concept; it creates the head-marking pattern that contrasts with the source language's dependent marking
+   - Difficulty contribution: Medium — requires identifying the prefix as possessive and distinguishing it from other prefixal morphology
+   - Priority: REQUIRED
+
+2. "Have" verb for predicative possession (WALS 117A-5)
+   - Phenomenon: Predicative possession uses a "have" construction rather than a locational strategy
+   - Intended solver inference: The solver distinguishes between attributive possession (prefixal, within the NP) and predicative possession (verbal "have" construction)
+   - Interaction with CORE: Creates a two-way distinction in the possessive domain; interacts with the possessive prefix system by showing a different strategy for a different syntactic context
+   - Difficulty contribution: Medium — the solver must recognize two distinct possessive strategies and their distributional conditions
+   - Priority: HIGH
+
+3. Internally-headed relative clauses (WALS 90A-3, 90D-1)
+   - Phenomenon: The head noun appears inside the relative clause rather than outside it
+   - Intended solver inference: The solver identifies that the noun being modified is embedded within the modifying clause, not following or preceding it as a separate element
+   - Interaction with CORE: Interacts with the overall SOV word order; the internally-headed structure means the "head" is in a clause-internal position, which may interact with case marking
+   - Difficulty contribution: High — this is an unusual pattern that requires the solver to recognize a non-standard RC structure
+   - Priority: HIGH
+
+4. Strongly suffixing morphology (WALS 26A-2)
+   - Phenomenon: Case (51A-1), tense-aspect (69A-2), negation (143F-2), plural (33A-2) are all suffixes
+   - Intended solver inference: The solver identifies a coherent suffixing pattern across multiple morphological domains
+   - Interaction with CORE: Creates a notable asymmetry with possessive prefixes (the primary prefixing domain); the solver can identify that possession is the main exception to the suffixing tendency
+   - Difficulty contribution: Medium — the pattern is clear once multiple examples are available
+   - Priority: HIGH
+
+5. Noun-Adjective order (WALS 87A-2)
+   - Phenomenon: Modifying adjectives follow the noun
+   - Intended solver inference: The solver identifies post-nominal adjective order
+   - Interaction with CORE: Part of the overall word order profile (SOV, NAdj, GenN); contributes to a coherent typological picture
+   - Difficulty contribution: Low — straightforward once identified
+   - Priority: OPTIONAL
+
+6. No verbal person marking (WALS 102A-1)
+   - Phenomenon: Verbs do not mark person of any argument
+   - Intended solver inference: The solver notes the absence of person agreement on verbs; person is expressed only through independent pronouns
+   - Interaction with CORE: Means that the interrogative and negative verbal morphology does not include person marking; simplifies the verbal morphology the solver must parse
+   - Difficulty contribution: Low — the absence is identifiable but not a major challenge
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive prefixes + Genitive-Noun order: The possessor precedes the noun (order) while the possessed noun bears a possessive prefix (marking). The solver must integrate both facts into a coherent model of the possessive NP structure. This creates a clear, consistent system.
+
+2. Possessive prefixes + Strongly suffixing morphology: The possessive prefix is the primary (possibly only) prefixing domain in an otherwise suffixing language. The solver can identify this asymmetry, which is typologically informative and creates a memorable structural contrast.
+
+3. "Have" + Possessive prefixes: Two distinct possessive strategies for two distinct syntactic contexts (predicative vs. attributive). The solver must identify the distributional boundary between them.
+
+4. Negation suffix + Interrogative verb morphology + Tense-aspect suffixes: All verbal morphology is suffixal and stacks on the verb. The solver can identify a coherent verbal morphology system and potentially determine the order of suffixes.
+
+5. Internally-headed RC + SOV: The internally-headed structure means the head noun is in a clause-internal position. Combined with SOV, this creates a distinctive syntactic profile where the "head" of a relative clause is not in the expected external position.
+
+CONSTRAINTS
+
+1. The possessive prefix system must be demonstrated through multiple examples showing different possessors (at minimum, different persons) to allow the solver to identify the prefix as possessive and potentially identify allomorphs.
+
+2. The internally-headed RC must be presented with enough context (e.g., a clear contrast with a simple clause, or multiple examples) for the solver to identify the head within the clause. A single example may be insufficient.
+
+3. The "have" construction for predicative possession must be clearly distinguishable from the attributive possessive prefix in the data. The solver should be able to see that "X has Y" uses a verb while "X's Y" uses a prefix.
+
+4. The suffixing pattern should be demonstrated across at least two or three different morphological domains (e.g., case + tense + negation) to make the generalization clear.
+
+5. Since Wappo is a poorly documented language, all patterns presented in the puzzle must be clearly inferable from the data itself. Do not rely on the solver knowing anything about Wappo or the Wappo-Yukian family.
+
+6. The puzzle should not require the solver to identify the specific form of the possessive prefix or negative suffix from phonological knowledge; these should be identifiable purely from their distributional and functional properties in the data.

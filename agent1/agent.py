@@ -18,8 +18,10 @@ def load_prompt(path: str) -> str:
     return Path(path).read_text(encoding="utf-8")
 
 
-def load_source_problem(path: str) -> dict:
-    with open(path, "r", encoding="utf-8") as f:
+def load_source(source_input: dict | str | Path) -> dict:
+    if isinstance(source_input, dict):
+        return source_input
+    with open(source_input, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -27,16 +29,12 @@ def get_target_language_profile(
     language_id: str,
     languages_file: str,
 ) -> dict:
-
     with open(languages_file, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
-
             if not line:
                 continue
-
             record = json.loads(line)
-
             if record.get("language_id") == language_id:
                 return record
 
@@ -45,23 +43,29 @@ def get_target_language_profile(
     )
 
 
-def build_source_input(source: dict) -> dict:
-    return {
-        "source_language": source.get("language"),
-        "source_rationale": source.get("rationale"),
-        "source_concepts": source.get("concepts"),
-        "difficulty": source.get("difficulty"),
+def extract_target_language_and_wals(target_profile: dict) -> tuple[dict, list]:
+    target_language = {
+        "language_id": target_profile.get("language_id"),
+        "language_name": target_profile.get("language_name"),
+        "family": target_profile.get("family"),
+        "subfamily": target_profile.get("subfamily"),
+        "genus": target_profile.get("genus"),
+        "macroarea": target_profile.get("macroarea"),
     }
+    wals_evidence = target_profile.get("features", [])
+    return target_language, wals_evidence
+
 
 def call_agent1(
     system_prompt: str,
-    source_input: dict,
-    target_profile: dict,
+    source_concepts: dict,
+    target_language: dict,
+    wals_evidence: list,
 ) -> str:
-
     payload = {
-        "SOURCE": source_input,
-        "TARGET_LANGUAGE_PROFILE": target_profile,
+        "SOURCE_CONCEPTS": source_concepts,
+        "TARGET_LANGUAGE": target_language,
+        "WALS_EVIDENCE": wals_evidence,
     }
 
     response = client.chat.completions.create(
@@ -91,24 +95,18 @@ def call_agent1(
 
 def run_agent1(
     language_id: str,
-    source_path: str,
+    source_input: dict | str,
     languages_path: str,
     prompt_path: str,
 ) -> str:
-
     prompt = load_prompt(prompt_path)
-
-    source = load_source_problem(source_path)
-
-    target_profile = get_target_language_profile(
-        language_id=language_id,
-        languages_file=languages_path,
-    )
-
-    source_input = build_source_input(source)
+    source = load_source(source_input)
+    target_profile = get_target_language_profile(language_id, languages_path)
+    target_language, wals_evidence = extract_target_language_and_wals(target_profile)
 
     return call_agent1(
         system_prompt=prompt,
-        source_input=source_input,
-        target_profile=target_profile,
+        source_concepts=source.get("concepts"),
+        target_language=target_language,
+        wals_evidence=wals_evidence,
     )

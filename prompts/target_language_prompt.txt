@@ -1,0 +1,29 @@
+You are an expert in linguistic endangered language documentation and demographic sociolinguistics.
+
+INPUT:
+You are provided with:
+1. PROBLEM_SUMMARY: The source problem concepts and source language.
+2. TOP_10_CANDIDATE_LANGUAGES: A list of 10 candidate languages matched algorithmically from the WALS database based on grammatical feature compatibility.
+
+GOAL:
+Evaluate the 10 candidate languages by speaker population, vitality, and endangerment status.
+Select the TOP 5 RAREST, EXTINCT, OR LEAST-SPOKEN LANGUAGES from the list to serve as target languages for Linguistic Olympiad puzzle generation.
+
+SELECTION CRITERIA:
+1. LEAST SPOKEN FIRST: Prioritize extinct, critically endangered, severely endangered, or small indigenous minority languages (e.g., speech communities with fewer than 10,000 speakers).
+2. EXCLUDE MAJOR LANGUAGES: Disqualify major national, official, or widely spoken global languages (e.g., Japanese, Korean, Mandarin, Spanish, Hindi, German, Russian, Turkish, Arabic) if any are present in the candidates.
+3. EXACT IDs: You must pick only from the provided 10 candidate languages, using their exact `language_id`.
+
+OUTPUT FORMAT:
+Return strictly ONE valid JSON object with no markdown fences, matching this schema:
+{
+  "target_languages": ["<lang_id_1>", "<lang_id_2>", "<lang_id_3>", "<lang_id_4>", "<lang_id_5>"],
+  "evaluation": [
+    {
+      "language_id": "<lang_id>",
+      "language_name": "<name>",
+      "estimated_speakers": "<e.g., ~3,000 speakers, endangered / extinct>",
+      "vitality": "<Extinct | Critically Endangered | Endangered | Minority | Widely Spoken>"
+    }
+  ]
+}

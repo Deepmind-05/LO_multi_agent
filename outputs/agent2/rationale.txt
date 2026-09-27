@@ -1,0 +1,67 @@
+
+
+TARGET-LANGUAGE: Wappo (wap), Wappo-Yukian, North America
+
+CONSTRUCTION RATIONALE
+
+1. Select a small, controlled vocabulary inventory covering: personal pronouns (1st, 2nd, 3rd person, singular at minimum), common countable nouns (house, dog, book, food, water), kinship terms (mother, father, child), a small set of verbs (build, eat, see, go, have), and a few adjectives (big, red, new). Keep the inventory small enough that grammatical patterns dominate over lexical memorization. Include at least one mass noun (e.g., water) to contrast with countable nouns.
+
+2. Establish basic declarative sentence structure through a set of simple SOV sentences with no possessive, no negation, and no questions. Include sentences with adjectives to establish Noun-Adjective order. These sentences serve as the baseline from which all other constructions will be contrasted. The solver should be able to infer SOV word order and post-nominal adjective placement from this initial set. Do not introduce any possessive, negative, or interrogative morphology yet.
+
+3. Introduce attributive possession through a set of noun phrases where the possessed noun bears a prefix. Use at least three different possessors (1st person, 2nd person, 3rd person) with the same possessed noun, and at least one possessor with multiple different possessed nouns. The prefix form should vary by person/number of the possessor. The possessor itself (pronoun or noun) should remain morphologically unchanged. The solver should infer: (a) the prefix is a possessive marker, (b) it is attached to the possessed noun (head marking), and (c) its form encodes the possessor's person/number. This is the central contrast with the source language's dependent marking strategy.
+
+4. Establish Genitive-Noun order by showing that in the possessive noun phrase, the possessor expression precedes the possessed noun (which bears the prefix). Provide enough examples with different possessor types (pronouns, personal names, common nouns) to make the order consistent and generalizable. The solver should infer that the possessor occupies a pre-nominal position within the possessive NP. This interacts with step 3: the solver now has both the marking strategy (prefix on head) and the linear order (Gen-N) of the possessive construction.
+
+5. Introduce predicative possession using a dedicated "have" verb. Provide sentences that express "X has Y" as a complete clause with a verbal predicate, clearly distinct from the attributive possessive noun phrase. The "have" verb should be a full verb that can take tense, negation, and interrogative morphology like other verbs. Provide at least two or three examples with different possessors and possessed items. The solver should infer that there are two distinct possessive strategies: a prefixal attributive strategy (within the NP) and a verbal predicative strategy (as a clause). The distributional boundary should be inferable: the prefix appears in noun phrases, the "have" verb appears in clauses.
+
+6. Introduce negation as a suffix on the verb. Provide paired examples: an affirmative sentence and its negative counterpart, with the same verb stem and the same arguments. The negative suffix should be consistent across different verb stems. Include negation with the "have" verb (e.g., "I do not have a house") and with at least one other verb (e.g., "I do not eat"). The solver should infer that negation is a verbal suffix, not a separate word or pre-verbal particle. The consistent post-stem position across different verbs is the key evidence.
+
+7. Introduce polar question marking as a suffix on the verb. Provide paired examples: a declarative sentence and its corresponding polar question, with the same verb stem and arguments. The interrogative suffix should be distinct from the negative suffix and from tense/aspect suffixes. Include questions with the "have" verb and with at least one other verb. The solver should infer that questions are marked morphologically on the verb, not by intonation alone or by a separate interrogative word. This contrasts with the source language's intonation-only strategy.
+
+8. Introduce tense-aspect suffixes on the verb. Provide examples showing at least two tense/aspect values (e.g., past vs. non-past, or perfective vs. imperfective) with the same verb stem. The suffixes should be clearly suffixal. This step serves two purposes: (a) it adds another domain of suffixal verbal morphology, and (b) it begins to establish the pattern that verbal morphology is suffixal and stacks on the verb stem. The solver should be able to identify the order of suffixes (stem + tense + negation + question, or whatever order is chosen) from the data.
+
+9. Introduce case marking as a suffix on nouns. Provide examples where a noun appears in a different case (e.g., accusative or dative) and bears a suffix. This adds another domain of suffixal morphology outside the verb. The solver should now be able to observe that suffixation is the dominant morphological strategy across multiple domains (case, tense, negation, question, plural), while the possessive prefix is the primary (or only) prefixing domain. This asymmetry is a key generalization the solver should be able to reach.
+
+10. Introduce internally-headed relative clauses. This is the most difficult concept and requires careful evidence design. First, provide a simple clause (e.g., "I build the house") as a baseline. Then provide a relative clause sentence where the head noun appears inside the modifying clause rather than outside it. For example, a sentence meaning "the house that I built" should have the word for "house" appearing within the clause structure, not as a separate element preceding or following the clause. Provide at least two or three examples of internally-headed relative clauses with different heads and different embedded predicates. The solver should infer that the noun being modified is embedded within the modifying clause, not in an external head position. This is unusual and requires the solver to recognize a non-standard RC structure.
+
+11. Ensure that the internally-headed RC examples interact with the possessive prefix system. For instance, include a relative clause where the head noun is possessed (bearing a possessive prefix) and appears inside the clause. This forces the solver to integrate the possessive prefix identification with the RC structure identification. The solver must recognize that the prefixed noun inside the clause is the head of the relative clause.
+
+12. Ensure that the internally-headed RC examples also interact with SOV word order. The head noun, being in a clause-internal position, will appear in a position that is consistent with the language's SOV pattern (e.g., in the object position of the embedded clause). This interaction makes the RC structure more identifiable: the solver can use their knowledge of SOV to predict where the head should appear within the clause.
+
+13. Design the full dataset as an interlocking paradigm rather than isolated sentences. Reuse the same nouns, verbs, and possessors across different grammatical contexts (affirmative, negative, interrogative, attributive possession, predicative possession, relative clauses). This allows the solver to track how a given lexical item behaves across different constructions and to identify morphological patterns through repetition.
+
+14. Provide a vocabulary list that includes all lexical items used in the data and in the questions, with glosses. The vocabulary list should give the base forms of nouns and verbs but should not annotate grammatical behavior (e.g., do not indicate which nouns take possessive prefixes or which verbs take negation suffixes). The solver must discover these properties from the data.
+
+15. Ensure that every grammatical rule is recoverable through contrastive evidence in the data:
+- Possessive prefix on possessed noun → head marking (contrast: possessor unchanged, possessed noun changes)
+- Possessor precedes possessed noun → GenN order (consistent across all possessive NPs)
+- "Have" verb in clauses vs. prefix in NPs → two possessive strategies with distinct distribution
+- Negative suffix on verb → negation is verbal morphology (contrast: same stem, different suffix, different meaning)
+- Interrogative suffix on verb → questions are morphologically marked (contrast: same stem, different suffix, question vs. statement)
+- Head noun inside modifying clause → internally-headed RC (contrast: simple clause vs. RC, head position)
+- Suffixes across case, tense, negation, question, plural → strongly suffixing language with possessive prefix as primary exception
+
+16. Avoid stating any grammatical rules explicitly in the puzzle context or instructions. All rules must be inferable from the data. The context should provide only the vocabulary list and the data sentences with translations.
+
+17. Create translation questions that combine previously demonstrated grammatical pieces in novel combinations. Do not ask the solver to reproduce sentences from the dataset. Each question should require applying two or more inferred rules simultaneously.
+
+18. Structure the questions progressively by difficulty:
+- Level 1: Simple application of a single pattern (e.g., translate a possessive NP with a new possessor and possessed noun).
+- Level 2: Combine possession with negation or interrogation (e.g., "Does she have a dog?" using the "have" verb + interrogative suffix).
+- Level 3: Combine attributive possession with other morphology (e.g., a possessed noun in a relative clause, or a possessed noun with case marking).
+- Level 4: Internally-headed relative clauses with possessive heads (e.g., "the house that my father built").
+- Level 5: Full sentences combining multiple elements: a relative clause with a possessed head, negation, and interrogative morphology (e.g., "Did you see the book that my mother read?").
+
+19. Include questions that test the boundary between the two possessive strategies. For example, provide a sentence that could be interpreted as either attributive or predicative possession in a borderline context, and require the solver to determine which strategy is appropriate based on the syntactic context (NP vs. clause). Alternatively, provide a sentence where only one strategy is valid and require the solver to identify which one and why.
+
+20. Include questions where the solver must produce an internally-headed relative clause. The question should specify the meaning (e.g., "the dog that I fed") and the solver must place the head noun inside the clause in the correct position, with the correct case marking and any possessive prefixes.
+
+21. Ensure that the suffixing pattern is tested in questions. For example, a question might require the solver to produce a verb with tense + negation + interrogative suffixes in the correct order, or to produce a noun with case + plural suffixes. The solver must have identified the suffix order from the data.
+
+22. Use a mixture of first person, second person, third person, personal names, and common nouns as possessors across the questions. This forces the solver to generalize the possessive prefix system rather than memorize specific forms.
+
+23. Use both countable and mass nouns in the questions. The mass noun should appear in contexts where it cannot be counted (no numeral), while countable nouns may appear with numerals if the language has them. This tests whether the solver can distinguish the two noun types.
+
+24. Ensure that every answer can be generated mechanically from the induced rules and vocabulary, with no dependence on world knowledge, semantic guessing, or facts about Wappo beyond what the examples establish. The solver should never need to know that Wappo is a Wappo-Yukian language or that it is spoken in North America.
+
+25. Validate the puzzle by checking: (a) each targeted feature has at least two supporting examples in the data; (b) each translation rule is uniquely recoverable from the evidence; (c) no question requires an unstated grammatical fact; (d) the internally-headed RC is identifiable from at least two examples with different heads; (e) the two possessive strategies are clearly distinguishable in the data; (f) the suffixing generalization is supported by at least three different morphological domains.

@@ -1,0 +1,164 @@
+
+
+CONTEXT
+
+Wappo is a language of the Wappo-Yukian family, spoken in North America. The text below is a romanized transcription.
+
+Here are some Wappo sentences, phrases, and words with their English translations.
+
+**Vocabulary**
+
+| Wappo | English |
+|-------|---------|
+| tá | I |
+| kú | you (sg) |
+| nó | she / he |
+| páw | house |
+| táŋ | dog; big |
+| míŋ | book |
+| kúŋ | food |
+| sáw | water |
+| máŋ | mother |
+| tíŋ | child |
+| wáŋ | build |
+| ŋáŋ | eat |
+| sáŋ | see |
+| ŋáw | drink |
+| páŋ | have |
+
+DATA
+
+1. tá kúŋ-ŋa ŋáŋ — I eat food.
+2. kú míŋ-ŋa sáŋ — You see the book.
+3. nó páw-ŋa wáŋ — She builds the house.
+4. tá sáw-ŋa ŋáw — I drink water.
+5. kú táŋ-ŋa sáŋ — You see the dog.
+6. táŋ kúŋ-ŋa ŋáŋ — The dog eats food.
+7. páw táŋ — big house
+8. míŋ táŋ — big book
+9. tá tá-páw — my house
+10. kú ku-táŋ — your dog
+11. nó no-míŋ — her book
+12. máŋ no-páw — mother's house
+13. tá tá-kúŋ — my food
+14. kú ku-sáw — your water
+15. tá páw-ŋa páŋ — I have a house.
+16. kú táŋ-ŋa páŋ — You have a dog.
+17. nó míŋ-ŋa páŋ — She has a book.
+18. tá kúŋ-ŋa ŋáŋ-na — I don't eat food.
+19. kú míŋ-ŋa sáŋ-na — You don't see the book.
+20. tá páw-ŋa páŋ-na — I don't have a house.
+21. nó táŋ-ŋa sáŋ-na — She doesn't see the dog.
+22. tá kúŋ-ŋa ŋáŋ-ka? — Do I eat food?
+23. kú páw-ŋa páŋ-ka? — Do you have a house?
+24. nó míŋ-ŋa sáŋ-ka? — Does she see the book?
+25. tá táŋ-ŋa sáŋ-ka? — Do I see the dog?
+26. tá kúŋ-ŋa ŋáŋ-ta — I ate food.
+27. kú páw-ŋa wáŋ-ta — You built the house.
+28. nó míŋ-ŋa sáŋ-ta — She saw the book.
+29. tá kúŋ-ŋa ŋáŋ-ta-na — I didn't eat food.
+30. nó míŋ-ŋa sáŋ-ta-ka? — Did she see the book?
+31. tá páw-ŋa páŋ-ta-na-ka? — Did I not have a house?
+32. tá páw-ŋa wáŋ táŋ — The house that I built is big.
+33. tá kú páw-ŋa wáŋ sáŋ — I see the house that you built.
+34. tá táŋ-ri-ŋa sáŋ — I see the dogs.
+35. kú míŋ-ri-ŋa sáŋ — You see the books.
+36. nó no-táŋ-ŋa sáŋ — She sees her dog.
+37. tá tá-míŋ-ri-ŋa sáŋ — I see my books.
+38. kú tá kúŋ-ŋa ŋáŋ sáŋ — You see the food that I ate.
+
+QUESTIONS
+
+Translate the following into Wappo.
+
+**Q1.** her water
+
+**Q2.** child's book
+
+**Q3.** You don't have a book.
+
+**Q4.** Does she have water?
+
+**Q5.** I see my dog.
+
+**Q6.** Did you not eat food?
+
+**Q7.** I see your books.
+
+**Q8.** (a) My house is big. (b) She has water.
+
+**Q9.** The book that I saw is big.
+
+**Q10.** The house that my mother built is big.
+
+**Q11.** Did you not see the dog that I built?
+
+ANSWERS
+
+**Q1.** nó no-sáw
+
+**Q2.** tíŋ no-míŋ
+
+**Q3.** kú míŋ-ŋa páŋ-na
+
+**Q4.** nó sáw-ŋa páŋ-ka?
+
+**Q5.** tá tá-táŋ-ŋa sáŋ
+
+**Q6.** kú kúŋ-ŋa ŋáŋ-ta-na-ka?
+
+**Q7.** tá ku-míŋ-ri-ŋa sáŋ
+
+**Q8.** (a) tá tá-páw táŋ (b) nó sáw-ŋa páŋ
+
+**Q9.** tá míŋ-ŋa sáŋ táŋ
+
+**Q10.** tá tá-máŋ páw-ŋa wáŋ táŋ
+
+**Q11.** kú tá táŋ-ŋa wáŋ sáŋ-ta-na-ka?
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **SOV word order.** Examples 1–6 consistently show Subject + Object + Verb order. The subject is a pronoun or noun in unmarked form; the verb is final.
+
+2. **Accusative case suffix -ŋa on object nouns.** In all transitive clauses (1–6), the object noun bears the suffix -ŋa. The subject noun (example 6: *táŋ*) is unmarked.
+
+3. **Noun–Adjective order.** Examples 7–8 show the adjective following the noun (*páw táŋ* = big house).
+
+4. **Possessive prefixes on the possessed noun (head marking).** Examples 9–14 show that the possessed noun bears a prefix encoding the possessor's person: *tá-* (1sg), *ku-* (2sg), *no-* (3sg). The possessor appears as a separate word before the possessed noun (Genitive–Noun order). Third-person noun possessors (e.g., *máŋ* in example 12) take the 3sg prefix *no-*.
+
+5. **Two possessive strategies.** Attributive possession (within a noun phrase) uses the possessive prefix (examples 9–14). Predicative possession (as a clause) uses the verb *páŋ* "have" with the possessed noun as a plain accusative object (examples 15–17). The possessed noun in the "have" construction does NOT bear a possessive prefix.
+
+6. **Negation suffix -na on the verb.** Examples 18–21 show that negation is expressed by the suffix -na attached to the verb stem, consistent across different verbs (*ŋáŋ-na*, *sáŋ-na*, *páŋ-na*).
+
+7. **Interrogative suffix -ka on the verb.** Examples 22–25 show that polar questions are marked by the suffix -ka on the verb, distinct from -na.
+
+8. **Past tense suffix -ta on the verb.** Examples 26–28 show a past tense marker -ta on the verb.
+
+9. **Verbal suffix order: stem + tense + negation + question.** Example 29 (*ŋáŋ-ta-na*) shows tense before negation. Example 30 (*sáŋ-ta-ka*) shows tense before question. Example 31 (*páŋ-ta-na-ka*) shows the full order: tense + negation + question.
+
+10. **Plural suffix -ri on nouns.** Examples 34–35 show plural -ri on nouns. The order on nouns is: stem + plural + accusative (examples 34–35: *táŋ-ri-ŋa*, *míŋ-ri-ŋa*).
+
+11. **Possessive prefix + plural + accusative can co-occur.** Example 37 (*tá-míŋ-ri-ŋa*) shows the full noun morphology: possessive prefix before the stem, plural and accusative suffixes after.
+
+12. **Internally-headed relative clauses.** In examples 32–33 and 38, the head noun appears inside the modifying clause (in the object position of the embedded clause), not outside it. The RC functions as a noun phrase (subject in 32, object in 33 and 38). The head noun retains its accusative marking inside the RC.
+
+**How the rules produce each answer:**
+
+- **Q1** (*nó no-sáw*): 3sg possessor *nó* + possessed noun *sáw* with 3sg prefix *no-* (rule 4).
+- **Q2** (*tíŋ no-míŋ*): 3sg noun possessor *tíŋ* + possessed noun *míŋ* with 3sg prefix *no-* (rule 4, as in example 12).
+- **Q3** (*kú míŋ-ŋa páŋ-na*): SOV clause with "have" verb (rule 5), object with accusative (rule 2), negation suffix (rule 6).
+- **Q4** (*nó sáw-ŋa páŋ-ka?*): SOV clause with "have" verb, object with accusative, interrogative suffix (rules 1, 2, 5, 7).
+- **Q5** (*tá tá-táŋ-ŋa sáŋ*): SOV clause (rule 1), object with possessive prefix + accusative (rules 2, 4, as in example 36).
+- **Q6** (*kú kúŋ-ŋa ŋáŋ-ta-na-ka?*): SOV clause, object with accusative, verb with tense + negation + question suffixes in that order (rules 1, 2, 9).
+- **Q7** (*tá ku-míŋ-ri-ŋa sáŋ*): SOV clause, object with 2sg possessive prefix + plural + accusative (rules 1, 2, 4, 10, 11, as in example 37).
+- **Q8a** (*tá tá-páw táŋ*): Attributive possessive NP as subject + adjectival predicate (rules 3, 4). **Q8b** (*nó sáw-ŋa páŋ*): Predicative "have" clause (rules 1, 2, 5).
+- **Q9** (*tá míŋ-ŋa sáŋ táŋ*): Internally-headed RC (head *míŋ* in object position of embedded clause) + adjectival predicate (rules 3, 12, as in example 32).
+- **Q10** (*tá tá-máŋ páw-ŋa wáŋ táŋ*): Internally-headed RC with 1sg possessive prefix on the subject of the embedded clause (*tá-máŋ* = my mother) + adjectival predicate (rules 4, 12, as in examples 32–33).
+- **Q11** (*kú tá táŋ-ŋa wáŋ sáŋ-ta-na-ka?*): SOV main clause with internally-headed RC as object (head *táŋ* in object position of embedded clause) + main verb with tense + negation + question suffixes (rules 1, 2, 9, 12, as in examples 33, 38).
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires the solver to identify and integrate multiple interacting systems: a head-marking possessive prefix system, a dual possessive strategy (prefixal vs. verbal), a coherent suffixing verbal morphology with a fixed suffix order, accusative case marking, and—most challenging—an internally-headed relative clause structure. The questions progress from single-pattern application (Q1–Q2) through multi-rule combinations (Q3–Q7) to the most complex integration of RC structure with stacked verbal morphology (Q11). The internally-headed RC is the primary source of difficulty, requiring the solver to recognize a non-standard clause structure and apply it in novel contexts with additional morphological complexity.

@@ -58,16 +58,16 @@ def extract_target_language(target_profile: dict) -> dict:
     }
 
 
-def call_agent2(
+def call_agent4(
     system_prompt: str,
-    agent1_output: str,
-    source_rationale: str,
+    agent3_output: str,
     target_language: dict,
+    target_difficulty: int,
 ) -> str:
     payload = {
-        "AGENT1_OUTPUT": agent1_output,
-        "SOURCE_RATIONALE": source_rationale,
+        "AGENT3_OUTPUT": agent3_output,
         "TARGET_LANGUAGE": target_language,
+        "TARGET_DIFFICULTY": target_difficulty,
     }
 
     response = client.chat.completions.create(
@@ -87,7 +87,7 @@ def call_agent2(
             },
         ],
         max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.2,
+        temperature=0.1,
         top_p=0.95,
         reasoning_effort="low",
     )
@@ -95,22 +95,51 @@ def call_agent2(
     return response.choices[0].message.content
 
 
-def run_agent2(
-    agent1_output_path: str,
+def run_agent4(
+    puzzle_path: str,
     source_input: dict | str,
     languages_path: str,
     language_id: str,
     prompt_path: str,
 ) -> str:
     prompt = load_prompt(prompt_path)
-    agent1_output = load_text(agent1_output_path)
+    puzzle = load_text(puzzle_path)
     source = load_source(source_input)
     target_profile = get_target_language_profile(language_id, languages_path)
     target_language = extract_target_language(target_profile)
 
-    return call_agent2(
+    return call_agent4(
         system_prompt=prompt,
-        agent1_output=agent1_output,
-        source_rationale=source.get("rationale"),
+        agent3_output=puzzle,
         target_language=target_language,
+        target_difficulty=source.get("difficulty"),
     )
+
+
+def parse_validation(output: str) -> tuple[str, str, str]:
+    lines = [line.strip() for line in output.splitlines()]
+
+    verdict = None
+    actual_difficulty = None
+    issues = []
+
+    for i, line in enumerate(lines):
+        if line == "VERDICT" and i + 1 < len(lines):
+            verdict = lines[i + 1]
+        elif line == "ACTUAL DIFFICULTY" and i + 1 < len(lines):
+            actual_difficulty = lines[i + 1]
+        elif line == "ISSUES":
+            for issue in lines[i + 1:]:
+                if issue.startswith("- "):
+                    issues.append(issue[2:].strip())
+
+    if verdict not in {"PASS", "PASS_WITH_ISSUES", "FAIL"}:
+        for candidate in ["PASS", "PASS_WITH_ISSUES", "FAIL"]:
+            if candidate in output:
+                verdict = candidate
+                break
+        if not verdict:
+            verdict = "FAIL"
+
+    feedback = "\n".join(f"- {issue}" for issue in issues) if issues else output
+    return verdict, actual_difficulty or "Not specified", feedback
