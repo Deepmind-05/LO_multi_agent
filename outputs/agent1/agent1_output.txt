@@ -1,139 +1,290 @@
-**TARGET-LANGUAGE**  
-Occitan (ISO 639‑3 occ)
 
----
 
-### TARGET-LANGUAGE ANALYSIS  
+TARGET-LANGUAGE
+Wappo (Wappo-Yukian family, North America)
 
-| Phenomenon | Evidence from WALS / linguistic literature | Inference / Design relevance |
-|------------|--------------------------------------------|------------------------------|
-| **Possession expressed with a lexical verb** – the language has the verb *aver* “to have”. (WALS 37A “Possession” reports that Romance languages use a verb.) | Confirmed by descriptive grammars of Occitan. | Provides a **verb‑based possession** pattern to replace the source’s locational construction. |
-| **Dependent‑marking possessor variants** – (i) clitic pronoun attached to *aver* (e.g., *l’ai* “I have it”), (ii) prepositional phrase *a + NP* (e.g., *ai lo libre a Joan* “I have the book at Joan”). Both are attested in Romance languages (WALS 24A “Possessor marking”). | Documented in Occitan syntax (clitic pronouns for objects, dative *a* for indirect possessor). | Supplies two distinct, semantically equivalent possessor markings for the core puzzle. |
-| **Genitive‑Noun order** – the possessor can precede the possessed noun with the preposition *de* (genitive). (WALS 86A “Genitive noun order” = Genitive‑Noun for Romance.) | Standard in Occitan (e.g., *lo libre de Joan* “John’s book”). | Directly maps the source’s Genitive‑Noun core concept. |
-| **Negative particle** – *pas* follows the verb (e.g., *ai pas* “I do not have”). (WALS 112A “Negative morphemes” – particle). | Well‑attested in Occitan. | Mirrors the source’s “negative word of unclear category”. |
-| **Polar questions by intonation only** – questions are marked solely by rising intonation; no obligatory interrogative particle is required (WALS 116A “Polar questions”). | Described for many Romance varieties, including Occitan. | Keeps the source’s intonation‑only question feature. |
-| **Obligatory gender/number agreement of numerals** – cardinal numerals agree in gender (and sometimes number) with the noun they modify (e.g., *un libre* vs *una carta*). (WALS 55A “Numeral classifiers” – not present, but the related agreement is a robust Romance trait.) | Confirmed by Occitan grammars. | Serves as a **target‑specific** replacement for obligatory numeral classifiers, providing a comparable inferential step. |
-| **Mass nouns** – nouns that lack a plural form and are used without a numeral (e.g., *aiga* “water”). | Standard lexical property. | Allows a contrast between countable and non‑count nouns, similar to the source’s mass‑noun requirement. |
-| **Plural agreement on the verb** – *aver* shows number agreement with the subject (e.g., *avèm* “we have”). | Typical Romance verbal morphology. | Enables a plural‑possession contrast. |
+TARGET-LANGUAGE ANALYSIS
 
-No evidence suggests that Occitan employs obligatory numeral classifiers; therefore that source feature must be replaced.
+Wappo is a SOV language (81A-1) with strongly suffixing morphology (26A-2). Key features relevant to this puzzle:
 
----
+- **Possession (117A-5):** Wappo uses a dedicated "have" verb (Have-Possessive strategy), not locational possession. This is a fundamental departure from the source (Nepali, 117A-1 Locational).
+- **Genitive-Noun order (86A-1):** The genitive-marked possessor precedes the possessed noun. Directly matches the source.
+- **Case suffixes (51A-1):** Case is marked by suffixes, providing the morphological means for a genitive suffix on the possessor (dependent marking).
+- **Possessive prefixes (57A-1):** Wappo has possessive prefixes, providing a head-marking strategy for pronominal possessors.
+- **Obligatorily possessed nouns (58A-1):** Wappo has obligatorily possessed nouns. This creates a natural constraint on which construction is available for which noun class.
+- **No possessive classification (59A-1):** No semantic classification of possessors (unlike some languages with different genitive forms for animate/inanimate).
+- **Negative suffix (112A-1, 143F-2):** Negation is a verbal suffix, not a separate word. Order is [V-Neg] (143A-4).
+- **Interrogative verb morphology (116A-2):** Polar questions are marked by verbal morphology, not intonation alone.
+- **No question particle (92A-6):** No separate interrogative particle.
+- **No numeral classifiers (55A-1):** Classifiers are absent.
+- **Noun-Numeral order (89A-2):** The numeral follows the noun.
+- **Plural suffix (33A-2):** Nouns take a plural suffix.
+- **No verbal person marking (102A-1):** The verb does not encode person. The possessor must be expressed as a separate NP.
+- **Zero copula impossible (120A-1):** Predicative constructions require a verbal element.
+- **Demonstrative as definite article (37A-2):** A demonstrative word functions as a definite article.
+- **Internally-headed relative clauses (90A-3):** Relative clauses are internally headed (dominant strategy, 90D-1).
+- **SOV (81A-1), OV (83A-1):** Subject precedes object, object precedes verb.
+- **No tones (13A-1):** No tonal distinctions.
+- **No productive reduplication (27A-3):** Reduplication is not productive.
 
-### TARGET CONCEPTS  
+**Phenomena relevant to source concepts:**
+- The "have" verb replaces the source's locational construction as the primary possessive strategy.
+- The genitive suffix on the possessor preserves the dependent-marking concept and Gen-N order.
+- The possessive prefix provides a second (head-marking) strategy, creating a contrast analogous to the source's "two variants."
+- The negative suffix and interrogative suffix replace the source's negative word and intonation-only questions.
+- The absence of classifiers means the source's classifier concept must be replaced; Noun-Numeral order provides a comparable word-order inference.
+- Obligatory possessed nouns (58A-1) provide a natural constraint that parallels the source's kinship/genitive distinction.
 
-#### CORE  
+TARGET CONCEPTS
 
-| Core concept (source) | Target realization | Source correspondence | Suitability / Replacement justification | Rule to be discovered |
-|-----------------------|--------------------|-----------------------|------------------------------------------|-----------------------|
-| 24A – Dependent marking of possessor | (i) Clitic pronoun on *aver* (e.g., *l’ai*), (ii) Prepositional phrase *a + NP* (e.g., *ai lo libre a Joan*) | Both are dependent‑marking strategies for the possessor. | Retained – both variants are attested in Occitan and can be shown as equivalent. | Two distinct morphological forms can mark the possessor; both mean “X has Y”. |
-| 86A – Genitive‑Noun order | *de + NP* before the noun (e.g., *lo libre de Joan*) | Direct match. | Retained – standard Romance genitive construction. | Possessor marked with *de* precedes the possessed noun. |
-| 117A – Locational possession | **Replaced** by verb‑based possession with *aver* (e.g., *ai lo libre* “I have the book”). | Source uses “at X exists Y”. | Replaced because Occitan lacks a locational possession construction; the verb *aver* provides a parallel “has” meaning. | Possession is expressed by the verb *aver* plus the possessed noun. |
-| 112A – Negative word (unclear category) | Negative particle *pas* following the verb (e.g., *ai pas lo libre*) | Same functional role; category is a particle. | Retained – matches the source’s ambiguous negative element. | *pas* signals negation of possession; it co‑occurs with the verb. |
-| 116A – Polar questions (intonation only) | Same word order as statements; question indicated only by “?” (rising intonation). | Direct match. | Retained – Occitan allows intonation‑only questions. | Adding “?” converts a statement to a polar question without lexical change. |
-| 55A – Obligatory numeral classifiers | **Replaced** by obligatory gender agreement of numerals (e.g., *un libre* vs *una carta*). | Both are obligatory morphosyntactic elements in numeral phrases. | Replaced because classifiers are absent; gender agreement is obligatory and inferable. | Numeral must agree in gender (and sometimes number) with the noun it modifies. |
+CORE
 
-#### TARGET‑SPECIFIC  
+1. **Genitive-Noun order with dependent marking (86A-1, adapted from 24A-2)**
+   - Target realization: The possessor takes a genitive case suffix and precedes the possessed noun. This is dependent marking (the marking is on the dependent, i.e., the possessor).
+   - Source correspondence: Source had dependent marking (24A-2) and Gen-N order (86A-1). Both are preserved. The source had two dependent-marking variants; here we have one dependent-marking strategy (genitive suffix) contrasted with a verbal strategy ("have") and a head-marking strategy (possessive prefix). The core concept of "multiple valid strategies for expressing the same possessive relationship, with class-based distribution" is preserved.
+   - Suitability: Direct match for Gen-N order. The dependent-marking concept is preserved in the genitive suffix. The "two variants" concept is adapted: instead of two dependent-marking forms, the solver discovers that the genitive construction and the "have" verb are both valid for alienable possession, while only the genitive/possessive-prefix construction is valid for inalienable possession.
+   - Rule the solver should discover: (a) A genitive suffix on the possessor + possessed noun expresses possession. (b) This construction is valid for both alienable and inalienable nouns. (c) For alienable nouns, the "have" verb construction is also valid. (d) For inalienable (obligatorily possessed) nouns, only the genitive/possessive-prefix construction is valid.
 
-| Phenomenon | Reason for inclusion | Difficulty contribution | Intended solver inference |
-|------------|----------------------|------------------------|---------------------------|
-| **Verb agreement on number** (e.g., *ai* vs *avèm*) | Provides a visible plural marker on the possession verb, allowing a contrast with singular. | Medium – requires noticing subject‑verb agreement in possession contexts. | Solver infers that verb form signals the number of the possessor (subject). |
-| **Mass‑noun vs. count‑noun distinction** (e.g., *aiga* “water” vs *libre* “book”) | Forces the learner to treat numeral‑agreement rules only for count nouns. | Low‑medium – adds a lexical‑type contrast. | Solver learns that numeral‑agreement does not apply to mass nouns; possession of mass nouns uses a bare noun. |
-| **Pronoun vs. full‑NP possessor in the clitic variant** (e.g., *l’ai* vs *ai lo libre a Joan*) | Highlights that the clitic can replace a full noun phrase, reinforcing the two‑variant rule. | Low – reinforces core concept. | Solver sees that clitic pronouns and *a + NP* are interchangeable for possessor marking. |
-| **Optional use of *de* with kinship nouns only** (e.g., *ma maire* vs *la maire de Joan*) | Creates a semantic restriction on the genitive construction, mirroring the source’s inalienable‑noun rule. | Medium – requires noticing that *de* appears only with certain nouns. | Solver deduces that kinship/inalienable nouns prefer the *de*‑genitive construction. |
+2. **Have-verb possession (117A-5, replacing 117A-1 Locational)**
+   - Target realization: A dedicated "have" verb in SOV order. The possessor is the subject, the possessed noun is the object. "X has Y" = X Y have-V.
+   - Source correspondence: The source used a locational construction ("at X exists Y"). Wappo uses a "have" verb instead. The functional role is the same (expressing alienable possession), but the typological strategy differs. This is a justified replacement: Wappo's WALS profile explicitly lists 117A-5 (Have-Possessive), not 117A-1 (Locational).
+   - Suitability: The "have" verb serves the same puzzle function as the source's locational construction: it is the primary strategy for alienable possession, it can be negated and questioned, and it contrasts with the genitive construction. The solver's task of discovering the construction's structure and distribution is preserved.
+   - Rule the solver should discover: (a) "Have" is a verb that takes the possessor as subject and the possessed noun as object. (b) Word order is SOV. (c) The verb does not mark person (102A-1), so the possessor must be a separate NP. (d) The "have" verb is only available for alienable possession.
 
----
+3. **Negative suffix on the verb (112A-1, 143F-2, replacing 112A-4)**
+   - Target realization: A negative suffix attaches to the verb. "X does not have Y" = X Y have-Neg.
+   - Source correspondence: The source used a negative word of unclear category. Wappo uses a negative suffix. The functional role is the same (marking negative possession), but the morphological type differs. This is a justified replacement based on WALS evidence (112A-1: Negative affix; 143F-2: Negative suffix).
+   - Suitability: The solver must still discover that a specific morpheme creates negative meaning. The difficulty is slightly different: in the source, the solver had to determine the grammatical category of the negative element; here, the solver must identify the negative suffix among other verbal suffixes (tense-aspect, interrogative) and determine its function.
+   - Rule the solver should discover: (a) A specific suffix on the verb creates negative meaning. (b) It is not a tense-aspect marker or a question marker. (c) It is consistently associated with "does not have."
 
-### TARGET CONSTRUCTION RATIONALE  
+4. **Interrogative verb morphology (116A-2, replacing 116A-6)**
+   - Target realization: A question suffix/morpheme on the verb. "Does X have Y?" = X Y have-Quest.
+   - Source correspondence: The source used intonation only (no morphological marking). Wappo uses interrogative verb morphology. The functional role is the same (marking polar questions), but the mechanism differs. This is a justified replacement based on WALS evidence (116A-2: Interrogative verb morphology; 92A-6: No question particle).
+   - Suitability: The solver must discover that a specific verbal suffix creates a polar question. The difficulty is comparable: the solver must distinguish the question suffix from the negative suffix and from other verbal morphology.
+   - Rule the solver should discover: (a) A specific suffix on the verb creates a polar question. (b) It is distinct from the negative suffix. (c) Word order is unchanged from the declarative.
 
-1. **Create a minimal lexical inventory**  
-   - **Purpose:** Provide nouns (countable, mass, kinship), pronouns, numerals (1–3), and the verb *aver* plus particle *pas*.  
-   - **Data:** List of 12 nouns (e.g., *libre*, *carta*, *clau*, *aiga*, *maire*, *pare*, *casa*, *dinhs* “money”).  
-   - **Contrast:** Count vs. mass; kinship vs. artefact.  
-   - **Inference:** Learner knows which nouns can take numerals and which cannot.  
+5. **Noun-Numeral order (89A-2, replacing 55A-3 Obligatory classifiers)**
+   - Target realization: The numeral follows the noun. "Three houses" = house-pl three.
+   - Source correspondence: The source used obligatory numeral classifiers (numeral + classifier + noun). Wappo has no classifiers (55A-1). The Noun-Numeral order provides a comparable word-order inference: the solver must discover that the numeral follows the noun (opposite of English). This is a justified replacement: the source concept was "a non-English word-order/morphological pattern in the numeral-noun phrase"; the target concept preserves this function.
+   - Suitability: The inference is simpler than classifiers (no additional morpheme to discover), but it still requires the solver to notice the word-order contrast. Combined with the plural suffix, it provides a two-part inference about the numeral-noun phrase.
+   - Rule the solver should discover: (a) The numeral follows the noun. (b) Plural nouns take a suffix. (c) The numeral does not trigger any additional morphology on the noun (no classifier).
 
-2. **Demonstrate basic verb‑based possession**  
-   - **Purpose:** Establish the core “X has Y” pattern with *aver*.  
-   - **Data:** Sentences like *Ai lo libre* “I have the book”.  
-   - **Contrast:** Different subjects (pronoun, proper name, common noun).  
-   - **Inference:** Possession expressed by *aver* + possessed noun.  
+TARGET-SPECIFIC
 
-3. **Introduce two dependent‑marking possessor variants**  
-   - **Purpose:** Show that the possessor can be a clitic or a prepositional phrase.  
-   - **Data:** (i) *L’ai lo libre* “I have the book” (clitic), (ii) *Ai lo libre a Joan* “I have the book at Joan”.  
-   - **Contrast:** Same meaning, different morphology.  
-   - **Inference:** Both forms are equivalent for possession.  
+1. **Obligatorily possessed nouns (58A-1)**
+   - Phenomenon: Certain nouns (kinship terms) cannot appear without a possessor. They require the genitive/possessive-prefix construction and cannot use the "have" verb.
+   - Reason for inclusion: Wappo's WALS profile explicitly lists 58A-1 (Obligatorily possessed nouns exist). This creates a natural, typologically motivated constraint that parallels the source's distinction between ordinary possession and genitive/kinship construction. It adds a class-based selection rule that the solver must infer.
+   - Difficulty contribution: High. The solver must (a) identify which nouns are obligatorily possessed, (b) infer that these nouns cannot use the "have" verb, and (c) apply the correct construction (genitive suffix or possessive prefix) depending on the possessor type.
+   - Intended solver inference: "Kinship terms always appear with possessive marking and never with the 'have' verb. This is a property of the noun, not the possessor."
 
-4. **Add plural subject agreement**  
-   - **Purpose:** Make number on the verb observable.  
-   - **Data:** *Avèm los libres* “We have the books”.  
-   - **Contrast:** Singular *ai* vs. plural *avèm*.  
-   - **Inference:** Verb form signals possessor number.  
+2. **Possessive prefix for pronominal possessors (57A-1)**
+   - Phenomenon: When the possessor is a pronoun, the possessed noun takes a possessive prefix encoding the person/number of the possessor, instead of the pronoun appearing as a separate word with a genitive suffix.
+   - Reason for inclusion: Wappo's WALS profile lists 57A-1 (Possessive prefixes). This creates a clear morphological contrast between pronominal and full-NP possessors, adding a layer of complexity to the genitive construction. It also provides the "two variants" that the solver must discover within the inalienable possession domain.
+   - Difficulty contribution: Medium-high. The solver must notice that pronominal possessors are encoded differently from full-NP possessors and infer the rule.
+   - Intended solver inference: "When the possessor is a pronoun, it is encoded as a prefix on the possessed noun. When the possessor is a full NP, it takes a genitive suffix and precedes the noun."
 
-5. **Present the genitive‑noun construction with *de***  
-   - **Purpose:** Provide the alternative “X’s Y” pattern.  
-   - **Data:** *Lo libre de Joan* “Joan’s book”.  
-   - **Contrast:** Same possessed noun with genitive vs. verb possession.  
-   - **Inference:** *de* marks a genitive relationship; possessor precedes noun.  
+3. **Demonstrative as definite article (37A-2)**
+   - Phenomenon: A demonstrative word functions as a definite article, preceding the noun (88A-1: Demonstrative-Noun order).
+   - Reason for inclusion: This adds a layer of definiteness marking that the solver must notice. It appears in some examples (definite possessed nouns) and not others (indefinite), creating a contrast. It does not interact with the core possessive rules but adds surface complexity.
+   - Difficulty contribution: Low-medium. The solver must notice the demonstrative and infer that it marks definiteness. It does not affect the possessive strategy selection.
+   - Intended solver inference: "A specific word before the noun marks definiteness. It is not part of the possessive construction."
 
-6. **Restrict the genitive to kinship/inalienable nouns**  
-   - **Purpose:** Create a semantic rule for when *de* is obligatory.  
-   - **Data:** *Ma maire* (no *de*) vs *la maire de Joan* (genitive).  
-   - **Contrast:** Kinship noun with and without *de*.  
-   - **Inference:** Kinship nouns prefer the *de* construction; other nouns use verb possession.  
+4. **No verbal person marking (102A-1)**
+   - Phenomenon: The "have" verb does not encode the person of the possessor. The possessor must be expressed as a separate NP (subject).
+   - Reason for inclusion: This is a WALS-attested feature of Wappo. It means the solver cannot rely on verbal agreement to identify the possessor, making the subject NP essential. It also means that the "have" verb form is the same regardless of who the possessor is, which simplifies the verbal paradigm but makes the NP structure more important.
+   - Difficulty contribution: Low. It is a constraint that shapes the data rather than a rule the solver must actively infer. However, it ensures that the solver focuses on the NP structure (subject + object + verb) rather than verbal morphology.
+   - Intended solver inference: "The 'have' verb does not change form based on the possessor. The possessor is always a separate word (the subject)."
 
-7. **Introduce negation with *pas***  
-   - **Purpose:** Show the negative particle’s distribution.  
-   - **Data:** *Ai pas lo libre* “I do not have the book”.  
-   - **Contrast:** Positive vs. negative with identical lexical items.  
-   - **Inference:** *pas* negates the possession predicate.  
+TARGET CONSTRUCTION RATIONALE
 
-8. **Demonstrate polar questions via intonation**  
-   - **Purpose:** Indicate that adding “?” converts a statement to a question without lexical change.  
-   - **Data:** *Ai lo libre?* “Do I have the book?” (same word order as statement).  
-   - **Contrast:** Statement vs. question form.  
-   - **Inference:** Question meaning is signaled solely by intonation/“?”.  
+1. **Establish the "have" verb and SOV word order.**
+   - Purpose: Introduce the primary possessive construction for alienable nouns.
+   - Data to construct: 4–6 examples of "X has Y" with varying possessors (1sg pronoun, 2sg pronoun, a personal name, a common noun) and varying possessed nouns (alienable objects: book, house, money, key). All examples are affirmative, singular, declarative.
+   - Controlled contrast: Vary the possessor and possessed noun while keeping the structure constant (S O V). The verb form is identical across all examples (no person marking, 102A-1).
+   - Evidence for solver: The verb appears in final position; the possessor is in first position; the possessed noun is in second position. The verb form does not change with the possessor.
+   - Intended inference: "There is a verb meaning 'have.' The possessor is the subject, the possessed noun is the object. Word order is SOV. The verb does not mark person."
+   - Dependency on earlier concepts: None (first step).
+   - Difficulty contribution: Low. Establishes the basic frame.
+   - Consistency constraints: All possessed nouns in this step must be alienable. No inalienable nouns should appear yet. The verb form must be identical across all examples.
 
-9. **Show numeral‑noun agreement (target‑specific)**  
-   - **Purpose:** Establish obligatory gender agreement of numerals.  
-   - **Data:** *Un libre* (masc), *Una carta* (fem), *Dos libres*, *Daus cartas*.  
-   - **Contrast:** Masculine vs. feminine forms, singular vs. plural.  
-   - **Inference:** Numeral must match noun gender (and number where applicable).  
+2. **Introduce negation via verbal suffix.**
+   - Purpose: Show that the "have" verb can be negated.
+   - Data to construct: 3–4 pairs of affirmative and negative examples with the same possessor and possessed noun. The negative form adds a suffix to the verb.
+   - Controlled contrast: Each pair differs only in the presence/absence of the negative suffix on the verb. All other elements (possessor, possessed noun, word order) are identical.
+   - Evidence for solver: The negative suffix appears on the verb in negative examples. The meaning shifts from "has" to "does not have."
+   - Intended inference: "A specific suffix on the verb creates negative meaning. It is not a tense or aspect marker."
+   - Dependency on earlier concepts: Step 1 (the "have" verb must be established first).
+   - Difficulty contribution: Low-medium. The solver must identify the negative suffix and its function.
+   - Consistency constraints: The negative suffix must be the same form in all negative examples. It must not appear in any affirmative example. The suffix must be distinguishable from the interrogative suffix (introduced in Step 3).
 
-10. **Combine numerals with possession**  
-    - **Purpose:** Merge numeral agreement with the possession verb.  
-    - **Data:** *Ai un libre* “I have a book”, *Ai dos libres* “I have two books”.  
-    - **Contrast:** Singular vs. plural possessed noun, numeral presence vs. absence.  
-    - **Inference:** Numeral‑classifier (here gender agreement) appears between verb and noun; verb does not change.  
+3. **Introduce polar questions via verbal suffix.**
+   - Purpose: Show how polar questions are formed.
+   - Data to construct: 3–4 pairs of declarative and interrogative examples with the same content. The question form adds a suffix to the verb.
+   - Controlled contrast: Each pair differs only in the presence/absence of the question suffix on the verb. Word order is identical.
+   - Evidence for solver: The question suffix appears on the verb in question examples. The meaning shifts from statement to yes/no question. The suffix is different from the negative suffix.
+   - Intended inference: "A specific suffix on the verb creates a polar question. It is distinct from the negative suffix. Word order is unchanged."
+   - Dependency on earlier concepts: Steps 1 and 2 (the "have" verb and the negative suffix must be established first, so the solver can distinguish the question suffix from the negative suffix).
+   - Difficulty contribution: Medium. The solver must distinguish the question suffix from the negative suffix and from any tense-aspect suffixes.
+   - Consistency constraints: The question suffix must be the same form in all question examples. It must be morphologically distinct from the negative suffix. No example should combine negation and question (to avoid confusion at this stage).
 
-11. **Integrate negation with numeral possession**  
-    - **Purpose:** Test interaction of negative particle and numeral agreement.  
-    - **Data:** *Ai pas dos libres* “I do not have two books”.  
-    - **Contrast:** Positive vs. negative with numeral phrase.  
-    - **Inference:** *pas* can co‑occur with numeral‑agreement structures.  
+4. **Introduce the genitive construction (dependent marking, Gen-N order).**
+   - Purpose: Show an alternative possessive strategy.
+   - Data to construct: 4–5 examples of "X's Y" using the genitive suffix on the possessor. Include both alienable and inalienable possessed nouns. Include both personal names and common nouns as possessors.
+   - Controlled contrast: Compare with the "have" verb construction for the same alienable possession meaning. The genitive construction has no verb; it is a noun phrase.
+   - Evidence for solver: The genitive suffix appears on the possessor. The possessed noun follows. There is no verb. The meaning is equivalent to the "have" verb construction for alienable nouns.
+   - Intended inference: "There is a second way to express possession: a suffix on the possessor + the possessed noun. This is valid for alienable nouns (as an alternative to the 'have' verb) and is the only option for inalienable nouns (to be discovered in Step 6)."
+   - Dependency on earlier concepts: Step 1 (the "have" verb must be established so the solver can recognize the genitive construction as an alternative).
+   - Difficulty contribution: Medium. The solver must recognize a new construction and understand its relationship to the "have" verb.
+   - Consistency constraints: The genitive suffix must be the same form for all full-NP possessors (no possessive classification, 59A-1). The possessed noun must not take any possessive marking in this construction (the marking is on the possessor, not the noun).
 
-12. **Create polar questions for numeral possession**  
-    - **Purpose:** Verify that intonation‑only questions work with numerals.  
-    - **Data:** *Ai dos libres?* “Do I have two books?”  
-    - **Contrast:** Statement vs. question with numeral.  
-    - **Inference:** Question formation is independent of numeral presence.  
+5. **Introduce the possessive prefix for pronominal possessors.**
+   - Purpose: Show that pronominal possessors use a different form.
+   - Data to construct: 4–5 examples of "my/your/his Y" using the possessive prefix on the noun. Include both alienable and inalienable possessed nouns.
+   - Controlled contrast: Compare with the genitive construction using a full-NP possessor (Step 4) and with the "have" verb construction using a pronominal subject (Step 1).
+   - Evidence for solver: When the possessor is a pronoun, the noun takes a prefix and the pronoun does not appear as a separate word. The prefix encodes person (and possibly number).
+   - Intended inference: "Pronominal possessors are encoded as prefixes on the possessed noun. Full-NP possessors use the genitive suffix. This applies to both alienable and inalienable nouns."
+   - Dependency on earlier concepts: Steps 1 and 4 (the "have" verb and the genitive construction must be established so the solver can recognize the possessive prefix as a third strategy).
+   - Difficulty contribution: Medium-high. The solver must discover the pronominal vs. full-NP distinction and the different morphological strategies.
+   - Consistency constraints: The possessive prefix must be consistent across all pronominal examples. The prefix must be morphologically distinct from the genitive suffix. The prefix must encode at least 1sg, 2sg, and 3sg (and possibly 1pl, 2pl, 3pl).
 
-13. **Provide examples where both possessor‑marking variants are valid**  
-    - **Purpose:** Ensure learners see the two‑variant equivalence in varied contexts (pronoun, proper name, common noun).  
-    - **Data:** *L’ai lo libre*, *Ai lo libre a Joan*, *L’ai lo libre a la casa* etc.  
-    - **Contrast:** Same meaning, different morphology.  
-    - **Inference:** Both variants are permissible; answer key must accept both.  
+6. **Introduce obligatorily possessed nouns and the constraint on the "have" verb.**
+   - Purpose: Show that certain nouns require the genitive/possessive-prefix construction.
+   - Data to construct: 3–4 examples of kinship terms (mother, father, sister, child) with possessors, using the genitive construction or possessive prefix. Include at least one example where the possessor is a full NP (genitive suffix) and at least one where the possessor is a pronoun (possessive prefix).
+   - Controlled contrast: The key contrast is the ABSENCE of "have" verb examples with kinship terms. The solver sees that kinship terms only appear with possessive marking, never with the "have" verb.
+   - Evidence for solver: Kinship terms never appear as objects of the "have" verb. They always appear with a possessor (genitive suffix or possessive prefix). This is in contrast to alienable nouns, which can appear in both constructions.
+   - Intended inference: "Kinship terms are obligatorily possessed. They cannot use the 'have' verb. They require the genitive/possessive-prefix construction."
+   - Dependency on earlier concepts: Steps 1, 4, and 5 (all three strategies must be established so the solver can recognize the constraint).
+   - Difficulty contribution: High. The solver must infer a class-based selection rule from the absence of certain forms.
+   - Consistency constraints: No example in the entire dataset should show a kinship term as the object of the "have" verb. All kinship terms must appear with possessive marking. The set of obligatorily possessed nouns should be small and consistent (e.g., only kinship terms, not body parts or other categories, to keep the puzzle manageable).
 
-14. **Supply contrastive examples where only the genitive construction is grammatical**  
-    - **Purpose:** Reinforce the semantic restriction on *de*.  
-    - **Data:** *La maire de Joan* (acceptable) vs **La maire Joan* (ungrammatical).  
-    - **Contrast:** Presence vs. absence of *de* with kinship noun.  
-    - **Inference:** Learner must select the genitive form for kinship nouns.  
+7. **Introduce Noun-Numeral order and plural suffix.**
+   - Purpose: Show how numbers and plurality are expressed in the possessed noun phrase.
+   - Data to construct: 4–5 examples with numerals (one, two, three) and both singular and plural possessed nouns. Include examples in both the "have" verb construction and the genitive construction.
+   - Controlled contrast: (a) Singular vs. plural possessed noun (plural suffix appears). (b) Different numerals (numeral follows the noun in all cases). (c) Numeral + singular vs. numeral + plural (the numeral does not change; the noun takes the plural suffix).
+   - Evidence for solver: The numeral appears after the noun. Plural nouns take a suffix. The numeral does not trigger any additional morphology.
+   - Intended inference: "The numeral follows the noun. Plural is marked by a suffix on the noun. There is no classifier."
+   - Dependency on earlier concepts: Steps 1 and 4 (the "have" verb and genitive construction must be established so numerals can appear in both).
+   - Difficulty contribution: Medium. The word-order contrast (numeral after noun) is clear. The plural suffix is straightforward.
+   - Consistency constraints: The numeral must always follow the noun. The plural suffix must be the same form for all nouns. No classifier should appear. The numeral should not change form based on the noun's number.
 
-15. **Assemble a final interlocking paradigm**  
-    - **Purpose:** Ensure every rule is supported by multiple instances and that the same lexical items recur across contexts.  
-    - **Data:** A matrix of sentences covering all combinations of: possessor type (clitic vs *a NP*), noun type (count vs mass vs kinship), number (singular vs plural), polarity (positive vs negative), interrogative (statement vs question), numeral presence (none vs 1‑3).  
-    - **Contrast:** Systematic variation provides the necessary inferential evidence.  
-    - **Inference:** Learners can generalize each rule and apply it to novel combinations in the test items.  
+8. **Combine elements in complex examples.**
+   - Purpose: Create sentences that require multiple rules simultaneously.
+   - Data to construct: 3–4 examples combining: (a) negation + numeral + plural, (b) question + genitive construction, (c) possessive prefix + plural + numeral, (d) "have" verb + negation + numeral.
+   - Controlled contrast: Each example combines two or more previously established rules. The combinations should be novel (not seen in earlier steps).
+   - Evidence for solver: The rules interact predictably. The negative suffix and question suffix attach to the verb. The numeral follows the noun. The plural suffix appears on the noun. The genitive suffix appears on the possessor. The possessive prefix appears on the noun.
+   - Intended inference: "All rules interact compositionally. There are no unexpected interactions."
+   - Dependency on earlier concepts: All previous steps.
+   - Difficulty contribution: High. The solver must apply multiple rules simultaneously.
+   - Consistency constraints: All combinations must be grammatically consistent with the rules established in earlier steps. No new morphological forms should appear.
 
-*Each step builds on the previous ones, gradually increasing complexity while keeping the core concepts central. The target
+9. **Include the demonstrative as definite article in selected examples.**
+   - Purpose: Add surface complexity without affecting the core possessive rules.
+   - Data to construct: 2–3 examples where the possessed noun is definite (marked by the demonstrative) and 2–3 where it is indefinite (no demonstrative).
+   - Controlled contrast: The demonstrative appears before the noun in definite examples. Its presence/absence does not affect the possessive strategy selection.
+   - Evidence for solver: A specific word before the noun marks definiteness. It is not part of the possessive construction.
+   - Intended inference: "The demonstrative marks definiteness. It is independent of the possessive strategy."
+   - Dependency on earlier concepts: Steps 1 and 4 (the possessive constructions must be established so the demonstrative can be recognized as an additional element).
+   - Difficulty contribution: Low-medium. The solver must notice the demonstrative and infer its function.
+   - Consistency constraints: The demonstrative must always precede the noun (88A-1). It must not appear in the genitive suffix or possessive prefix. It must be the same form in all examples.
+
+10. **Design the translation questions as novel combinations.**
+    - Purpose: Test the solver's ability to apply inferred rules to new inputs.
+    - Data to construct: Questions requiring: (a) "have" verb + pronoun possessor + alienable noun, (b) "have" verb + negation + numeral + plural, (c) genitive construction + full-NP possessor + inalienable noun, (d) possessive prefix + inalienable noun + plural, (e) question + "have" verb + numeral, (f) genitive construction + full-NP possessor + alienable noun (testing that both strategies are valid), (g) "have" verb + negation + inalienable noun (testing that this is ungrammatical — the solver should recognize the constraint).
+    - Controlled contrast: Each question tests a specific rule or combination. Some questions have two valid answers (genitive vs. "have" verb for alienable possession). One question tests the ungrammaticality of "have" + inalienable noun.
+    - Evidence for solver: The questions use vocabulary and structures seen in the examples but in novel combinations.
+    - Intended inference: The solver applies the induced rules to generate the correct output.
+    - Dependency on earlier concepts: All previous steps.
+    - Difficulty contribution: High. The questions require synthesis of multiple rules.
+    - Consistency constraints: All questions must be answerable using only the rules established in the examples. No question should require a rule that is not evidenced in the data. Questions with two valid answers must specify that both are acceptable. The ungrammaticality question (g) should be phrased to allow the solver to recognize the constraint (e.g., "Translate: 'X has a mother'" — the solver should recognize this is not possible and provide the genitive construction instead, or the question should be phrased to elicit the correct construction).
+
+VALIDATION CONSTRAINTS
+
+1. **CORE concepts represented:**
+   - Genitive-Noun order with dependent marking: Present in Steps 4, 5, 6, 8, 10.
+   - Have-verb possession (replacing locational): Present in Steps 1, 2, 3, 7, 8, 10.
+   - Negative suffix (replacing negative word): Present in Steps 2, 8, 10.
+   - Interrogative verb morphology (replacing intonation-only): Present in Steps 3, 8, 10.
+   - Noun-Numeral order (replacing obligatory classifiers): Present in Steps 7, 8, 10.
+
+2. **Replacements/omissions justified:**
+   - Locational possession → Have verb: Justified by WALS 117A-5 (Have-Possessive) for Wappo.
+   - Negative word → Negative suffix: Justified by WALS 112A-1 and 143F-2 for Wappo.
+   - Intonation-only questions → Interrogative verb morphology: Justified by WALS 116A-2 and 92A-6 for Wappo.
+   - Obligatory classifiers → Noun-Numeral order: Justified by WALS 55A-1 (Absent) and 89A-2 (Noun-Numeral) for Wappo.
+
+3. **TARGET-SPECIFIC concepts useful:**
+   - Obligatory possessed nouns: Creates a class-based selection rule, increasing difficulty.
+   - Possessive prefix: Creates a pronominal vs. full-NP contrast, adding a morphological inference.
+   - Demonstrative as definite article: Adds surface complexity without affecting core rules.
+   - No verbal person marking: Shapes the data structure, ensuring focus on NP structure.
+
+4. **Every rule has sufficient evidence:**
+   - "Have" verb: 4–6 examples in Step 1.
+   - Negative suffix: 3–4 pairs in Step 2.
+   - Question suffix: 3–4 pairs in Step 3.
+   - Genitive suffix: 4–5 examples in Step 4.
+   - Possessive prefix: 4–5 examples in Step 5.
+   - Obligatory possessed noun constraint: 3–4 examples in Step 6 + absence of counterexamples throughout.
+   - Noun-Numeral order: 4–5 examples in Step 7.
+   - Plural suffix: 4–5 examples in Step 7.
+   - Demonstrative: 2–3 examples in Step 9.
+
+5. **Contrasts support intended inference:**
+   - Affirmative vs. negative pairs → negative suffix.
+   - Statement vs. question pairs → question suffix.
+   - "Have" verb vs. genitive construction → two valid strategies for alienable possession.
+   - Pronominal possessor vs. full-NP possessor → possessive prefix vs. genitive suffix.
+   - Alienable vs. inalienable nouns → "have" verb available vs. not available.
+   - Singular vs. plural → plural suffix.
+   - Numeral position → Noun-Numeral order.
+
+6. **Concepts interact consistently:**
+   - The negative suffix and question suffix both attach to the "have" verb and do not interact with the genitive construction (which is a noun phrase, not a clause).
+   - The possessive prefix and genitive suffix are mutually exclusive (one for pronominal, one for full-NP possessors).
+   - The obligatorily possessed noun constraint applies to both the genitive and possessive-prefix constructions but not to the "have" verb.
+   - The numeral and plural suffix apply to the possessed noun regardless of the possessive strategy.
+   - The demonstrative is independent of all possessive strategies.
+
+7. **Difficulty progresses:**
+   - Steps 1–3: Low to medium (single-rule application).
+   - Steps 4–5: Medium (new constructions, contrast with existing ones).
+   - Step 6: High (class-based selection rule, inference from absence).
+   - Step 7: Medium (word-order and morphology).
+   - Step 8: High (multi-rule combination).
+   - Step 9: Low-medium (additional surface element).
+   - Step 10: High (synthesis, novel combinations, ungrammaticality recognition).
+
+8. **Data is internally consistent:**
+   - The "have" verb form is identical across all examples (no person marking).
+   - The negative suffix is the same form in all negative examples.
+   - The question suffix is the same form in all question examples.
+   - The genitive suffix is the same form for all full-NP possessors.
+   - The possessive prefix is consistent for each person/number.
+   - The plural suffix is the same form for all nouns.
+   - The numeral is the same form regardless of noun number.
+   - The demonstrative is the same form in all examples.
+   - No kinship term appears as the object of the "have" verb anywhere in the dataset.
+
+9. **No unsupported linguistic fact is introduced:**
+   - All features are based on WALS evidence for Wappo or are design choices clearly marked as such.
+   - The specific forms of suffixes, prefixes, and the "have" verb are design choices (to be determined by the next generation agent) and are not claimed to be attested Wappo forms.
+   - The set of obligatorily possessed nouns is a design choice (kinship terms) consistent with WALS 58A-1.
+
+10. **Established target-language facts are not contradicted:**
+    - SOV word order is maintained (81A-1).
+    - Genitive-Noun order is maintained (86A-1).
+    - Noun-Numeral order is maintained (89A-2).
+    - Negative suffix is postverbal (143F-2, 143A-4).
+    - No question particle is used (92A-6).
+    - No numeral classifiers are used (55A-1).
+    - No verbal person marking (102A-1).
+    - Zero copula is not used (120A-1) — the genitive construction is a noun phrase, not a predicative clause, so no copula is needed.
+    - Demonstrative precedes noun (88A-1).
+    - Plural is marked by suffix (33A-2).
+
+11. **Puzzle remains solvable from provided evidence:**
+    - Every rule is evidenced by at least 3 contrasting examples.
+    - The obligatorily possessed noun constraint is evidenced by the consistent absence of "have" + kinship term and the consistent presence of genitive/possessive-prefix + kinship term.
+    - The two-valid-answer questions (genitive vs. "have" verb for alienable possession) are supported by examples showing both constructions with the same meaning.
+    - No question requires a rule that is not evidenced in the data.
+    - The ungrammaticality question (have + inalienable) is solvable because the constraint is clearly evidenced by the absence of such forms in the data.

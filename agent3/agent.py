@@ -2,18 +2,15 @@ import json
 import os
 from pathlib import Path
 
-from openai import OpenAI
+from cerebras.cloud.sdk import Cerebras
 
 
-MODEL = "openai/gpt-oss-120b"
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-MAX_COMPLETION_TOKENS = 4096
+MODEL = "qwen-3.8-27b"
+MAX_COMPLETION_TOKENS = 32768
 
 
-client = OpenAI(
-    api_key=os.environ["GROQ_API_KEY"],
-    base_url=GROQ_BASE_URL,
-    timeout=300.0,
+client = Cerebras(
+    api_key=os.environ.get("CEREBRAS_API_KEY"),
 )
 
 
@@ -70,6 +67,8 @@ def call_agent3(
         ],
         max_completion_tokens=MAX_COMPLETION_TOKENS,
         temperature=0.1,
+        top_p=0.95,
+        reasoning_effort="low",
     )
 
     return response.choices[0].message.content

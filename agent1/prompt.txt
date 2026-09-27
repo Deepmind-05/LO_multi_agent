@@ -19,7 +19,7 @@ Identify phenomena relevant to SOURCE CONCEPTS and useful for puzzle difficulty.
 Rules:
 - WALS is evidence, not knowledge boundary.
 - Missing WALS data does NOT mean absence.
-- Never invent real linguistic facts.
+- Never invent linguistic facts.
 - Distinguish evidence, known fact, inference, and design choice.
 
 2. TARGET CONCEPTS

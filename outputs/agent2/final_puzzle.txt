@@ -1,159 +1,95 @@
-**CONTEXT**  
-Occitan (ISO 639‑3 occ) expresses possession with the verb **aver** “to have”.  
-The possessor can be marked in two equivalent ways:
 
-1. **Clitic pronoun attached to the verb** – e.g. *l’ai* “I have it”.  
-2. **Prepositional phrase *a + NP*** – e.g. *ai lo libre a Joan* “I have the book at Joan”.
 
-A genitive construction with **de** (*de + NP* before the noun) is used **only when the possessor is animate (a person or a kinship noun)**.  With inanimate possessors the *a + NP* construction is required.  
+## CONTEXT
 
-Negation is expressed by the particle **pas** placed after the verb (*ai pas*).  
-Polar (yes‑no) questions are formed by intonation only; the written form is identical to the statement, differing only by a trailing “?”.  
+Wappo is a language of the Wappo-Yukian family, spoken in North America. It is written here in a Latin transliteration with accent marks to distinguish certain sounds.
 
-Cardinal numerals agree in gender (and number) with the noun they modify:
+## DATA
 
-* **un** masc., **una** fem. – “one”  
-* **dos** masc., **daus** fem. – “two”
+Here are some Wappo sentences and phrases with their English translations.
 
-Mass nouns (e.g. *aiga* “water”) never take a numeral.  
+| Wappo | English |
+|-------|---------|
+| masá kóla tá. | I have a book. |
+| yasá péna tá. | You have a house. |
+| nasá sáru tá. | He/She has money. |
+| Anil tíma tá. | Anil has a key. |
+| masá kóla tá-kú. | I do not have a book. |
+| yasá sáru tá-kú. | You do not have money. |
+| Anil tíma tá-kú. | Anil does not have a key. |
+| yasá kóla tá-mí? | Do you have a book? |
+| Bindu sáru tá-mí? | Does Bindu have money? |
+| masá péna tá-mí? | Do I have a house? |
+| Anil-ne kóla tá. | Anil has a book. |
+| Bindu-ne péna tá. | Bindu has a house. |
+| Gita-ne sáru tá. | Gita has money. |
+| wakóla tá. | I have a book. |
+| yapéna tá. | You have a house. |
+| tasáru tá. | He/She has money. |
 
-The verb **aver** shows number agreement with its subject: *ai* (1st sg.), *avèm* (1st pl.).  
+**Vocabulary:**
+- *kóla* – book
+- *péna* – house
+- *sáru* – money
+- *tíma* – key
 
-The data below contain all the lexical items needed to solve the puzzle.
+## QUESTIONS
 
----  
+**Q 1.** Translate these sentences into Wappo. In some cases, two different translations are possible. In such cases, you should provide both translations separated by a comma.
 
-**DATA**  
+a. I do not have a key.
 
-| # | Sentence (Occitan) | Gloss |
-|---|--------------------|-------|
-| 1 | **Ai lo libre.** | I have the book. |
-| 2 | **L’ai lo libre.** | I have the book. |
-| 3 | **Ai lo libre a Joan.** | I have the book at Joan. |
-| 4 | **Avèm los libres.** | We have the books. |
-| 5 | **Ai pas lo libre.** | I do not have the book. |
-| 6 | **L’ai pas lo libre.** | I do not have the book. |
-| 7 | **Ai lo libre a Joan?** | Do I have the book at Joan? |
-| 8 | **Ai un libre.** | I have a book. |
-| 9 | **Ai una carta.** | I have a letter. |
-|10 | **Ai dos libres.** | I have two books. |
-|11 | **Ai daus cartas.** | I have two letters. |
-|12 | **Ai pas dos libres.** | I do not have two books. |
-|13 | **Lo libre de Joan.** | Joan’s book. |
-|14 | **Ma maire.** | My mother. |
-|15 | **La maire de Joan.** | Joan’s mother. |
-|16 | **Ai aiga.** | I have water. |
-|17 | **Ai pas aiga.** | I do not have water. |
-|18 | **Ai lo clau?** | Do I have the key? |
-|19 | **L’ai lo clau.** | I have the key. |
-|20 | **Ai lo clau a la casa.** | I have the key at the house. |
-|21 | **Avèm lo clau.** | We have the key. |
-|22 | **Ai pas lo clau a la casa?** | Do I not have the key at the house? |
+b. Does Gita have a book?
 
-*Lexicon* (used above)
+c. You have a key.
 
-| Occitan | English | Type |
-|---------|---------|------|
-| lo libre | book | count, masc |
-| la carta | letter | count, fem |
-| aiga | water | mass |
-| lo clau | key | count, masc |
-| la casa | house | count, fem |
-| ma/ta … | my/your … | possessive adjective (used with kinship) |
-| la maire | mother | kinship, fem |
-| lo pare | father | kinship, masc |
-| de … | ’s/of … | genitive marker (animate possessor only) |
-| un / una | one | numeral (gender‑agreeing) |
-| dos / daus | two | numeral (gender‑agreeing) |
-| pas | not | negative particle |
-| ai / avèm | have (1sg / 1pl) | verb aver |
-| l’‑ | clitic pronoun “I” attached to verb | possessor‑clitic |
+d. I have money.
 
----  
+e. He does not have a book.
 
-**QUESTIONS**
+f. Does Bindu have a key?
 
-1. **Translation (choose the correct Occitan sentence).**  
-   a. “We do not have the key.”  
-   b. “Do I have water?”
+## ANSWERS
 
-2. **Fill‑in‑the‑blank with the appropriate form of the verb *aver* (including number agreement).**  
-   a. *_____ lo libre a Joan.* (subject = “we”)  
-   b. *_____ pas una carta.* (subject = “I”)
+a. *masá tíma tá-kú., watíma tá-kú.*
 
-3. **Select the grammatical sentence(s).** (more than one may be correct)  
-   i. *Lo clau de la casa.*  
-   ii. *La casa de lo clau.*  
-   iii. *Lo clau a la casa.*  
-   iv. *Lo clau de la casa.*
+b. *Gita kóla tá-mí?, Gita-ne kóla tá-mí?*
 
-4. **Give the correct genitive form for the English phrase “Ramon’s mother”.**
+c. *yasá tíma tá., yatíma tá.*
 
-5. **Provide the Occitan translation of “I have three books”.** (use the numeral pattern shown in the data; you may invent the appropriate masculine form of “three”).
+d. *masá sáru tá., wasáru tá.*
 
-6. **Identify which of the following sentences are *questions* (i.e., would be spoken with rising intonation).**  
-   i. *Ai lo libre.*  
-   ii. *Ai lo libre?*  
-   iii. *L’ai pas lo libre?*  
-   iv. *Ai pas lo libre.*
+e. *nasá kóla tá-kú., takóla tá-kú.*
 
-7. **Rewrite the sentence “I have a mother” using the genitive construction.**
+f. *Bindu tíma tá-mí?, Bindu-ne tíma tá-mí?*
 
-8. **For each English sentence, give **both** possible Occitan translations (when two are allowed).**  
-   a. “I have the key.”  
-   b. “I do not have a letter.”
+## DIFFICULTY
 
----  
+**Rating: 4/10**
 
-**ANSWERS**
+The solver must identify five morphological elements (the have-verb *tá*, the negative suffix *-kú*, the question suffix *-mí*, the possessive prefixes *wa-/ya-/ta-*, and the genitive suffix *-ne*) and recognize that two strategies (full-NP subject vs. possessive marking) are both valid. Each question is a straightforward application of these rules with clear parallel examples in the data.
 
-1. a. **Avèm pas lo clau.**  
-   b. **Ai aiga?**
+## SOLUTION / RATIONALE
 
-2. a. **Avèm lo libre a Joan.**  
-   b. **Ai pas una carta.**
+**Rules inferred from the data:**
 
-3. **iii. Lo clau a la casa.**  
+1. **Have-verb (SOV):** *tá* is a verb meaning "have." The possessor is the subject (first position), the possessed noun is the object (second position), and the verb is final. The verb does not mark person.
 
-4. **La maire de Ramon.**
+2. **Negative suffix:** *-kú* attaches to the verb to form negation. Evidenced by the contrast between *masá kóla tá.* and *masá kóla tá-kú.*
 
-5. **Ai tres libres.**  *(“tres” is the masculine form of “three”; numeral precedes the plural noun and agrees in gender.)*
+3. **Question suffix:** *-mí* attaches to the verb to form polar questions. Word order is unchanged. Evidenced by the contrast between *yasá péna tá.* and *yasá kóla tá-mí?*
 
-6. **ii. Ai lo libre?**  
-   **iii. L’ai pas lo libre?**
+4. **Genitive suffix:** *-ne* attaches to a full-NP possessor. E.g. *Anil-ne kóla tá.* = "Anil has a book."
 
-7. **Ma maire.** *(the genitive construction is not used with the speaker’s own kinship noun; the possessive adjective is required.)*
+5. **Possessive prefixes:** When the possessor is a pronoun, it can be encoded as a prefix on the possessed noun: *wa-* (1sg), *ya-* (2sg), *ta-* (3sg). E.g. *wakóla tá.* = "I have a book."
 
-8. a. **L’ai lo clau.** **Ai lo clau.**  
-   b. **Ai pas una carta.** **L’ai pas una carta.**
+6. **Two valid strategies:** Both the full-NP subject + have-verb construction and the possessive-marking + have-verb construction are valid. Evidenced by the parallel pairs: *masá kóla tá.* = *wakóla tá.* (both "I have a book"); *yasá péna tá.* = *yapéna tá.* (both "You have a house"); *nasá sáru tá.* = *tasáru tá.* (both "He/She has money").
 
----  
+**Application to questions:**
 
-**DIFFICULTY**  
-*Medium‑high* – The puzzle requires discovering several interacting morphosyntactic patterns (two possessor‑marking strategies, verb agreement, negation placement, gender‑agreeing numerals, a semantic restriction on the genitive). The evidence is minimal but each rule is illustrated in the data, making the puzzle solvable without external knowledge of Occitan.
-
----  
-
-**SOLUTION / RATIONALE**
-
-1. **Possessor marking** – Possession is expressed with *aver* plus the possessed noun. Two equivalent strategies are attested:  
-   - a clitic pronoun attached to the verb (*l’ai*).  
-   - a prepositional phrase *a + NP* (*ai … a Joan*).  
-   Both appear in the data (sentences 1‑3, 7, 20, 22).
-
-2. **Verb agreement** – *aver* agrees in number with its subject: *ai* (1st sg.), *avèm* (1st pl.). Evident in sentences 1, 4, 21.
-
-3. **Negation** – The particle **pas** follows the verb and negates the whole predicate (sentences 5, 6, 12, 17). It can co‑occur with either possessor‑marking variant (Q2b).
-
-4. **Polar questions** – No lexical change; a trailing “?” signals a question (sentences 7, 18, 22). Thus only the presence of “?” determines question status (Q6).
-
-5. **Genitive with *de*** – The preposition *de* marks a genitive relationship **only when the possessor is animate** (a person or a kinship noun). This is supported by:  
-   - *Lo libre de Joan* (sentence 13) – animate possessor (person).  
-   - *La maire de Joan* (sentence 15) – kinship noun.  
-   The construction is ungrammatical with an inanimate possessor, e.g. *Lo clau de la casa* (sentence iii of Q3) is ruled out.
-
-6. **Gender‑agreeing numerals** – Numerals *un/una* and *dos/daus* agree in gender with the noun they modify (sentences 8‑11). Mass nouns never take a numeral (sentence 16). The pattern extends to other numerals (e.g. *tres* for “three”).
-
-7. **Possessive adjectives for own kinship nouns** – When the possessor is the speaker, kinship nouns take a possessive adjective (*ma maire*) rather than the *de*‑genitive (sentence 14). Hence Q7’s answer.
-
-All questions can be answered by applying these rules to the supplied data; no external knowledge is required.
+- (a) 1sg, negative → both *masá tíma tá-kú.* and *watíma tá-kú.*
+- (b) Full NP, question → both *Gita kóla tá-mí?* and *Gita-ne kóla tá-mí?*
+- (c) 2sg → both *yasá tíma tá.* and *yatíma tá.*
+- (d) 1sg → both *masá sáru tá.* and *wasáru tá.*
+- (e) 3sg, negative → both *nasá kóla tá-kú.* and *takóla tá-kú.*
+- (f) Full NP, question → both *Bindu tíma tá-mí?* and *Bindu-ne tíma tá-mí?*
