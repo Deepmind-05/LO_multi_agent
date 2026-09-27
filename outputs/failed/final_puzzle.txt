@@ -1,0 +1,53 @@
+**CONTEXT**  
+The following Mandarin Chinese sentences are given with their English translations. All sentences use the same orthography (pinyin with tone marks) and the same set of lexical items.
+
+| Mandarin (pinyin) | English |
+|-------------------|---------|
+| wǒ **de** shū zài zhuōzi shàng. | My book is on the table. |
+| Lǐ **zhī** shū hěn hǎo. | Li’s book is good. |
+| nǐ yǒu yī **běn** shū ma? | Do you have a book? |
+| nǐ **méiyǒu** yī **běn** shū. | You do not have a book. |
+| zài wǒ jiā **yǒu** liǎng **zhī** gǒu. | There are two dogs at my house. |
+| wǒ **yǒu** sān **běn** shū. | I have three books. |
+| Lǐ **de** mǔqīn **yǒu** liǎng **gè** háizi. | Li’s mother has two children. |
+| Lǐ **zhī** mǔqīn **méiyǒu** háizi. | Li’s mother does not have children. |
+| nǐ **de** shuǐ hěn hǎo. | Your water is good. |
+| wǒ **yǒu** yī **zhī** gǒu. | I have a dog. |
+| wǒ **yǒu** yī **zhī** māo. | I have a cat. |
+| Lǐ **de** shǒujī hěn xīn. | Li’s phone is new. |
+| wǒ **méiyǒu** yī **běn** shū. | I do not have a book. |
+| zài tā de jiā **yǒu** sān **zhāng** zhǐ. | There are three sheets of paper at his house. |
+| wǒ **yǒu** yī **suǒ** yàoshi. | I have a key. |
+| jiātíng **méiyǒu** yī **zhī** māo. | The family does not have a cat. |
+| zhù zhái **yǒu** sān **zhāng** zhǐ. | The house has three sheets of paper. |
+| nǐ **yǒu** shuǐ ma? | Do you have water? |
+| Lǐ **yǒu** yī **běn** shū ma? | Does Li have a book? |
+| Lǐ **de** shū **yǒu** ma? | Does Li’s book exist? |
+| Lǐ **yǒu** yī **gè** sūn nǚ ma? | Does Li have a granddaughter? |
+| Lǐ **de** sūn nǚ **méiyǒu**. | Li’s granddaughter does not exist. |
+| wǒ **yǒu** liǎng **zhī** bǐ. | I have two pens. |
+| wǒ **méiyǒu** liǎng **zhī** bǐ. | I do not have two pens. |
+| zhù zhái **yǒu** yī **suǒ** yàoshi ma? | Does the house have a key? |
+| zhù zhái **de** yàoshi **yǒu** ma? | Does the house’s key exist? |
+
+*The table above is the complete evidence set. No external knowledge of Mandarin is required beyond what can be inferred from these examples.*
+
+---  
+
+**DATA**  
+The sentences in the table constitute all the data the solver may use.
+
+---  
+
+**QUESTIONS**  
+Translate the following English sentences into Mandarin (pinyin with tone marks).  
+If more than one correct translation follows the patterns observable in the data, list **all** possibilities separated by a comma.
+
+1. I have a dog.  
+2. Does Li have a book?  
+3. Li does not have a mother.  
+4. The house has three sheets of paper.  
+5. Do you have water?  
+6. The family does not have a cat.  
+7. Does the house have a key?  
+8. I do

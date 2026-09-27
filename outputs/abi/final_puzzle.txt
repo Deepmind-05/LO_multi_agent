@@ -1,0 +1,97 @@
+**CONTEXT**  
+The language to be investigated is **Abipón** (a Guaicuruan language of South America).  The data below give a small lexical inventory, the morphology used to mark possession, the way plural nouns are formed, the existential verb that expresses “to have”, the negative particle, the interrogative punctuation rule, and the preposition used for the locational construction.  From these pieces the solver must discover the grammatical rules that allow translation of the sentences in the question section.
+
+---  
+
+**DATA**
+
+| Item | Form | Gloss |
+|------|------|-------|
+| **Pronouns (possessor)** | ña | 1 sg “I” |
+| | ma | 2 sg “you” |
+| | ta | 3 sg “he/she/it” |
+| **Possessor affixes** (attach to the possessed noun) | **Prefix** *na‑* “my”, *ne‑* “your”, *ti‑* “his/her” | e.g. *na‑book* “my book” |
+| | **Suffix** *‑na*, *‑ne*, *‑ti* “‑my”, “‑your”, “‑his/her” | e.g. *book‑na* “book‑my” |
+| **Plural suffix** (obligatory when a numeral > 1 modifies the noun) | *‑ra* (vowel‑harmonises with the final vowel of the stem) | *book‑ra* “books”, *kí‑ra* “keys” |
+| **Existential verb “to have”** (verb *ka*) | 1 sg * a‑ka* “I have”<br>2 sg * e‑ka* “you have”<br>3 sg * i‑ka* “he/she has” | Person‑agreement prefix attached to *ka* |
+| **Preposition “at”** | *pa* | used in the locational construction |
+| **Negative particle** | *na* (pre‑verbal) | *na i‑ka* = “does not have” |
+| **Interrogative** | same word order as a statement; a trailing “?” marks a polar question | – |
+| **Nouns** | *book* – **book**<br>*key* – **key**<br>*cig* – **cigarette** (mass noun, no plural)<br>*house* – **house**<br>*room* – **room**<br>*family* – **family**<br>*grand‑daughter* – **na‑tini** (kinship) <br>*husband* – **sri‑man** (kinship) <br>*mother* – **ma‑ma** (kinship) <br>*father* – **ba‑ba** (kinship) |
+| **Numbers** | *pá* – **one**<br>*du* – **two**<br>*tri* – **three** (added for this puzzle) <br>*dá* – **ten** |
+| **Sample sentences** (illustrating each rule) | 1. *a‑ka book pa ña* – “I have a book.” | |
+| | 2. *i‑ka house pa ta* – “He has a house.” | |
+| | 3. *na e‑ka key pa ma* – “You do not have a key.” | |
+| | 4. *du book‑ra pa ta* – “He has two books.” (plural suffix with numeral) | |
+| | 5. *na‑ma‑ma* – “my‑mother” (prefix possessor) | |
+| | 6. *ma‑ba‑ba* – “your‑father” (prefix possessor) | |
+| | 7. *sri‑man‑ti* – “husband‑his/her” (suffix possessor) | |
+| | 8. *i‑ka na‑tini pa ta?* – “Does he have a granddaughter?” (question) | |
+| | 9. *ma‑tá‑na house* – “your‑house” (suffix possessor, alienable) | |
+| |10. *ma‑ma ti‑na* – “mother‑his/her” (suffix possessor, kinship) – **only suffix order is grammatical for kinship nouns** | |
+
+*Notes on the data*  
+
+* Possession can be marked either by a **prefix** or a **suffix** on the possessed noun (examples 5‑7).  
+* For **kinship nouns** (mother, father, husband, granddaughter) the **suffix** position is obligatory; the prefix form is ungrammatical (example 10).  
+* The **existential verb** *ka* bears a person‑agreement prefix (examples 1‑3, 9).  
+* When a numeral larger than one modifies a noun, the noun must carry the **plural suffix –ra** (example 4).  
+* Negation is expressed by the pre‑verbal particle *na* (example 3).  
+* Polar questions are signalled only by a trailing “?” (example 8).  
+* The locational construction *verb + noun + pa + possessor* expresses “X has Y” (examples 1‑4).  
+* **Possessor affixes are only used when the possessor is a pronoun**; when the possessor is a lexical noun (e.g., *family*, *house*), the noun appears without an affix and the possessor follows the preposition *pa*.
+
+---  
+
+**QUESTIONS**  
+Translate the English sentences into Abipón.  When the language permits two distinct correct forms, give **both** separated by a comma (order does not matter).
+
+1. **I have a key.**  
+2. **You do not have two houses.**  
+3. **Does he have a granddaughter?**  
+4. **The family has three rooms.**  
+5. **She does not have a mother.**  
+6. **Do you have ten books?**  
+7. **Anil has a cigarette.** *(Assume “Anil” = *ta* for 3 sg.)*  
+8. **I do not have a notebook.** *(Assume “notebook” = *book* for the purpose of this puzzle.)*  
+9. **The house has one key.**  
+10. **Ramesh has a husband.** *(Assume “Ramesh” = *ta* for 3 sg.)*  
+
+---  
+
+**ANSWERS**
+
+1. *a‑ka key pa ña, a‑ka key‑na pa ña*  
+2. *na e‑ka du house‑ra pa ma, na e‑ka du ne‑house‑ra pa ma*  
+3. *i‑ka na‑tini pa ta?*  
+4. *i‑ka tri room‑ra pa family*  
+5. *na i‑ka ma‑ma‑ti pa ta*  
+6. *e‑ka dá book‑ra pa ma?, e‑ka dá book‑ra‑ne pa ma?*  
+7. *i‑ka cig pa ta, i‑ka cig‑ti pa ta*  
+8. *na a‑ka book pa ña, na a‑ka book‑na pa ña*  
+9. *i‑ka pá key pa house*  
+10. *i‑ka sri‑man‑ti pa ta*  
+
+---  
+
+**DIFFICULTY**  
+*Rating: ★★★★☆ (4/5)*  
+
+*Justification:*  
+The puzzle still requires the solver to integrate several interacting morphological and syntactic patterns: dual possessor‑affix positions, a semantic restriction on kinship nouns, person‑agreement on the verb, obligatory plural suffix with numerals, and the negation and question mechanisms. The evidence is minimal but now fully consistent, forcing careful comparison of the examples to infer each rule. The need to produce two alternative translations for many items adds a combinatorial layer, keeping the task challenging yet fully solvable with the supplied data.
+
+---  
+
+**SOLUTION / RATIONALE**
+
+1. **Possessor marking** – Alienable nouns (*key, book, house, etc.*) may take either a **prefix** (*na‑, ne‑, ti‑*) or a **suffix** (*‑na, ‑ne, ‑ti*) that indexes the pronoun possessor. Both give the same meaning, so two forms are possible for sentences 1, 2, 6, 7, 8, 9.  
+2. **Kinship‑noun restriction** – For kinship nouns (*mother, father, husband, granddaughter*) only the **suffix** position is grammatical; the prefix form is ungrammatical. Consequently sentences 5, 10 use the suffix *‑ti* (her) on *ma‑ma* and *sri‑man* respectively.  
+3. **Locational predicative possession** – “X has Y” is expressed by the existential verb *ka* with a person‑agreement prefix, followed by the possessed noun, the preposition *pa*, and the possessor noun or pronoun: **[person‑prefix‑ka] + [Noun] + pa + [Possessor]**. This pattern appears in all answers.  
+4. **Negative particle** – The particle *na* precedes the verb to negate the possession: *na i‑ka* “does not have”, *na e‑ka* “you do not have”, etc.  
+5. **Polar questions** – Identical word order to statements; a trailing “?” marks a polar question (example 3). No auxiliary or fronting is required.  
+6. **Plural suffix** – When a numeral > 1 modifies a noun, the noun must bear the suffix *‑ra* (vowel‑harmonised). This is why *house‑ra*, *book‑ra*, *room‑ra*, *key‑ra* appear with *du*, *tri*, *dá*.  
+7. **Numbers** – The puzzle supplies *pá* (one), *du* (two), *tri* (three), and *dá* (ten). The numeral is placed before the noun phrase (e.g., *du house‑ra*).  
+8. **Mass nouns** – *cig* behaves as a mass noun: it never takes the plural suffix and can appear without a numeral.  
+9. **Possessor affix limitation** – Possessor affixes are only used when the possessor is a pronoun. When the possessor is a lexical noun (e.g., *family*, *house*), the possessed noun appears without an affix and the possessor follows *pa*. This restriction explains the single‑form answers for questions 4 and 9.  
+
+Applying these rules yields exactly the translations listed in the **ANSWERS** section.

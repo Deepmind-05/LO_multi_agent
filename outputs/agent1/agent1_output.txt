@@ -1,0 +1,139 @@
+**TARGET-LANGUAGE**  
+Occitan (ISO 639‑3 occ)
+
+---
+
+### TARGET-LANGUAGE ANALYSIS  
+
+| Phenomenon | Evidence from WALS / linguistic literature | Inference / Design relevance |
+|------------|--------------------------------------------|------------------------------|
+| **Possession expressed with a lexical verb** – the language has the verb *aver* “to have”. (WALS 37A “Possession” reports that Romance languages use a verb.) | Confirmed by descriptive grammars of Occitan. | Provides a **verb‑based possession** pattern to replace the source’s locational construction. |
+| **Dependent‑marking possessor variants** – (i) clitic pronoun attached to *aver* (e.g., *l’ai* “I have it”), (ii) prepositional phrase *a + NP* (e.g., *ai lo libre a Joan* “I have the book at Joan”). Both are attested in Romance languages (WALS 24A “Possessor marking”). | Documented in Occitan syntax (clitic pronouns for objects, dative *a* for indirect possessor). | Supplies two distinct, semantically equivalent possessor markings for the core puzzle. |
+| **Genitive‑Noun order** – the possessor can precede the possessed noun with the preposition *de* (genitive). (WALS 86A “Genitive noun order” = Genitive‑Noun for Romance.) | Standard in Occitan (e.g., *lo libre de Joan* “John’s book”). | Directly maps the source’s Genitive‑Noun core concept. |
+| **Negative particle** – *pas* follows the verb (e.g., *ai pas* “I do not have”). (WALS 112A “Negative morphemes” – particle). | Well‑attested in Occitan. | Mirrors the source’s “negative word of unclear category”. |
+| **Polar questions by intonation only** – questions are marked solely by rising intonation; no obligatory interrogative particle is required (WALS 116A “Polar questions”). | Described for many Romance varieties, including Occitan. | Keeps the source’s intonation‑only question feature. |
+| **Obligatory gender/number agreement of numerals** – cardinal numerals agree in gender (and sometimes number) with the noun they modify (e.g., *un libre* vs *una carta*). (WALS 55A “Numeral classifiers” – not present, but the related agreement is a robust Romance trait.) | Confirmed by Occitan grammars. | Serves as a **target‑specific** replacement for obligatory numeral classifiers, providing a comparable inferential step. |
+| **Mass nouns** – nouns that lack a plural form and are used without a numeral (e.g., *aiga* “water”). | Standard lexical property. | Allows a contrast between countable and non‑count nouns, similar to the source’s mass‑noun requirement. |
+| **Plural agreement on the verb** – *aver* shows number agreement with the subject (e.g., *avèm* “we have”). | Typical Romance verbal morphology. | Enables a plural‑possession contrast. |
+
+No evidence suggests that Occitan employs obligatory numeral classifiers; therefore that source feature must be replaced.
+
+---
+
+### TARGET CONCEPTS  
+
+#### CORE  
+
+| Core concept (source) | Target realization | Source correspondence | Suitability / Replacement justification | Rule to be discovered |
+|-----------------------|--------------------|-----------------------|------------------------------------------|-----------------------|
+| 24A – Dependent marking of possessor | (i) Clitic pronoun on *aver* (e.g., *l’ai*), (ii) Prepositional phrase *a + NP* (e.g., *ai lo libre a Joan*) | Both are dependent‑marking strategies for the possessor. | Retained – both variants are attested in Occitan and can be shown as equivalent. | Two distinct morphological forms can mark the possessor; both mean “X has Y”. |
+| 86A – Genitive‑Noun order | *de + NP* before the noun (e.g., *lo libre de Joan*) | Direct match. | Retained – standard Romance genitive construction. | Possessor marked with *de* precedes the possessed noun. |
+| 117A – Locational possession | **Replaced** by verb‑based possession with *aver* (e.g., *ai lo libre* “I have the book”). | Source uses “at X exists Y”. | Replaced because Occitan lacks a locational possession construction; the verb *aver* provides a parallel “has” meaning. | Possession is expressed by the verb *aver* plus the possessed noun. |
+| 112A – Negative word (unclear category) | Negative particle *pas* following the verb (e.g., *ai pas lo libre*) | Same functional role; category is a particle. | Retained – matches the source’s ambiguous negative element. | *pas* signals negation of possession; it co‑occurs with the verb. |
+| 116A – Polar questions (intonation only) | Same word order as statements; question indicated only by “?” (rising intonation). | Direct match. | Retained – Occitan allows intonation‑only questions. | Adding “?” converts a statement to a polar question without lexical change. |
+| 55A – Obligatory numeral classifiers | **Replaced** by obligatory gender agreement of numerals (e.g., *un libre* vs *una carta*). | Both are obligatory morphosyntactic elements in numeral phrases. | Replaced because classifiers are absent; gender agreement is obligatory and inferable. | Numeral must agree in gender (and sometimes number) with the noun it modifies. |
+
+#### TARGET‑SPECIFIC  
+
+| Phenomenon | Reason for inclusion | Difficulty contribution | Intended solver inference |
+|------------|----------------------|------------------------|---------------------------|
+| **Verb agreement on number** (e.g., *ai* vs *avèm*) | Provides a visible plural marker on the possession verb, allowing a contrast with singular. | Medium – requires noticing subject‑verb agreement in possession contexts. | Solver infers that verb form signals the number of the possessor (subject). |
+| **Mass‑noun vs. count‑noun distinction** (e.g., *aiga* “water” vs *libre* “book”) | Forces the learner to treat numeral‑agreement rules only for count nouns. | Low‑medium – adds a lexical‑type contrast. | Solver learns that numeral‑agreement does not apply to mass nouns; possession of mass nouns uses a bare noun. |
+| **Pronoun vs. full‑NP possessor in the clitic variant** (e.g., *l’ai* vs *ai lo libre a Joan*) | Highlights that the clitic can replace a full noun phrase, reinforcing the two‑variant rule. | Low – reinforces core concept. | Solver sees that clitic pronouns and *a + NP* are interchangeable for possessor marking. |
+| **Optional use of *de* with kinship nouns only** (e.g., *ma maire* vs *la maire de Joan*) | Creates a semantic restriction on the genitive construction, mirroring the source’s inalienable‑noun rule. | Medium – requires noticing that *de* appears only with certain nouns. | Solver deduces that kinship/inalienable nouns prefer the *de*‑genitive construction. |
+
+---
+
+### TARGET CONSTRUCTION RATIONALE  
+
+1. **Create a minimal lexical inventory**  
+   - **Purpose:** Provide nouns (countable, mass, kinship), pronouns, numerals (1–3), and the verb *aver* plus particle *pas*.  
+   - **Data:** List of 12 nouns (e.g., *libre*, *carta*, *clau*, *aiga*, *maire*, *pare*, *casa*, *dinhs* “money”).  
+   - **Contrast:** Count vs. mass; kinship vs. artefact.  
+   - **Inference:** Learner knows which nouns can take numerals and which cannot.  
+
+2. **Demonstrate basic verb‑based possession**  
+   - **Purpose:** Establish the core “X has Y” pattern with *aver*.  
+   - **Data:** Sentences like *Ai lo libre* “I have the book”.  
+   - **Contrast:** Different subjects (pronoun, proper name, common noun).  
+   - **Inference:** Possession expressed by *aver* + possessed noun.  
+
+3. **Introduce two dependent‑marking possessor variants**  
+   - **Purpose:** Show that the possessor can be a clitic or a prepositional phrase.  
+   - **Data:** (i) *L’ai lo libre* “I have the book” (clitic), (ii) *Ai lo libre a Joan* “I have the book at Joan”.  
+   - **Contrast:** Same meaning, different morphology.  
+   - **Inference:** Both forms are equivalent for possession.  
+
+4. **Add plural subject agreement**  
+   - **Purpose:** Make number on the verb observable.  
+   - **Data:** *Avèm los libres* “We have the books”.  
+   - **Contrast:** Singular *ai* vs. plural *avèm*.  
+   - **Inference:** Verb form signals possessor number.  
+
+5. **Present the genitive‑noun construction with *de***  
+   - **Purpose:** Provide the alternative “X’s Y” pattern.  
+   - **Data:** *Lo libre de Joan* “Joan’s book”.  
+   - **Contrast:** Same possessed noun with genitive vs. verb possession.  
+   - **Inference:** *de* marks a genitive relationship; possessor precedes noun.  
+
+6. **Restrict the genitive to kinship/inalienable nouns**  
+   - **Purpose:** Create a semantic rule for when *de* is obligatory.  
+   - **Data:** *Ma maire* (no *de*) vs *la maire de Joan* (genitive).  
+   - **Contrast:** Kinship noun with and without *de*.  
+   - **Inference:** Kinship nouns prefer the *de* construction; other nouns use verb possession.  
+
+7. **Introduce negation with *pas***  
+   - **Purpose:** Show the negative particle’s distribution.  
+   - **Data:** *Ai pas lo libre* “I do not have the book”.  
+   - **Contrast:** Positive vs. negative with identical lexical items.  
+   - **Inference:** *pas* negates the possession predicate.  
+
+8. **Demonstrate polar questions via intonation**  
+   - **Purpose:** Indicate that adding “?” converts a statement to a question without lexical change.  
+   - **Data:** *Ai lo libre?* “Do I have the book?” (same word order as statement).  
+   - **Contrast:** Statement vs. question form.  
+   - **Inference:** Question meaning is signaled solely by intonation/“?”.  
+
+9. **Show numeral‑noun agreement (target‑specific)**  
+   - **Purpose:** Establish obligatory gender agreement of numerals.  
+   - **Data:** *Un libre* (masc), *Una carta* (fem), *Dos libres*, *Daus cartas*.  
+   - **Contrast:** Masculine vs. feminine forms, singular vs. plural.  
+   - **Inference:** Numeral must match noun gender (and number where applicable).  
+
+10. **Combine numerals with possession**  
+    - **Purpose:** Merge numeral agreement with the possession verb.  
+    - **Data:** *Ai un libre* “I have a book”, *Ai dos libres* “I have two books”.  
+    - **Contrast:** Singular vs. plural possessed noun, numeral presence vs. absence.  
+    - **Inference:** Numeral‑classifier (here gender agreement) appears between verb and noun; verb does not change.  
+
+11. **Integrate negation with numeral possession**  
+    - **Purpose:** Test interaction of negative particle and numeral agreement.  
+    - **Data:** *Ai pas dos libres* “I do not have two books”.  
+    - **Contrast:** Positive vs. negative with numeral phrase.  
+    - **Inference:** *pas* can co‑occur with numeral‑agreement structures.  
+
+12. **Create polar questions for numeral possession**  
+    - **Purpose:** Verify that intonation‑only questions work with numerals.  
+    - **Data:** *Ai dos libres?* “Do I have two books?”  
+    - **Contrast:** Statement vs. question with numeral.  
+    - **Inference:** Question formation is independent of numeral presence.  
+
+13. **Provide examples where both possessor‑marking variants are valid**  
+    - **Purpose:** Ensure learners see the two‑variant equivalence in varied contexts (pronoun, proper name, common noun).  
+    - **Data:** *L’ai lo libre*, *Ai lo libre a Joan*, *L’ai lo libre a la casa* etc.  
+    - **Contrast:** Same meaning, different morphology.  
+    - **Inference:** Both variants are permissible; answer key must accept both.  
+
+14. **Supply contrastive examples where only the genitive construction is grammatical**  
+    - **Purpose:** Reinforce the semantic restriction on *de*.  
+    - **Data:** *La maire de Joan* (acceptable) vs **La maire Joan* (ungrammatical).  
+    - **Contrast:** Presence vs. absence of *de* with kinship noun.  
+    - **Inference:** Learner must select the genitive form for kinship nouns.  
+
+15. **Assemble a final interlocking paradigm**  
+    - **Purpose:** Ensure every rule is supported by multiple instances and that the same lexical items recur across contexts.  
+    - **Data:** A matrix of sentences covering all combinations of: possessor type (clitic vs *a NP*), noun type (count vs mass vs kinship), number (singular vs plural), polarity (positive vs negative), interrogative (statement vs question), numeral presence (none vs 1‑3).  
+    - **Contrast:** Systematic variation provides the necessary inferential evidence.  
+    - **Inference:** Learners can generalize each rule and apply it to novel combinations in the test items.  
+
+*Each step builds on the previous ones, gradually increasing complexity while keeping the core concepts central. The target

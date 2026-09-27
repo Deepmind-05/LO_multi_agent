@@ -1,0 +1,100 @@
+**CONTEXT**  
+Ulithian (Eastern Malayo‑Polynesian, Oceanic) expresses the meaning “X has Y” in two basic ways:
+
+1. **Locative‑existential construction** – a locative preposition *i* “at/in” followed by the possessor, then the existential verb *eʔe* “exist/there is”, then the possessed noun.  
+   *i <possessor> eʔe <noun>* → “X has Y”.  
+   Negation is a preverbal particle *te* placed immediately before the verb: *i <possessor> te eʔe <noun>* → “X does not have Y”.  
+   Yes‑no questions are formed by adding a “?” to a statement; word order does **not** change.
+
+2. **Genitive‑noun construction** – a genitive particle *na* precedes the possessor, which is then followed directly by the possessed noun.  
+   *na <possessor> <noun>* → “X has Y”.  
+   This construction can be used with any noun, but kinship/inalienable nouns (e.g. mother, father, granddaughter) obligatorily use it.
+
+Other grammatical facts needed for the puzzle  
+
+* **Numerals** are followed by the obligatory classifier *‑ta* before a countable noun: *<num> ta <noun>* (e.g. *tolu ta buku* “three books”). A compound numeral such as *viti tasi* “twenty‑one” behaves as a single quantifier and is also followed by the classifier.  
+* **Plural** can be marked on a noun with the suffix *‑i* (optional).  
+* **Possessive suffixes** are used only with body‑part nouns. The suffix *‑gu* marks first‑person possessor, *‑mu* second‑person, *‑nu* third‑person: *lima‑gu* “my hand”. These nouns cannot appear in the two constructions above.  
+
+All sentences below are given in a consistent **S V O** order; there are no articles or case affixes.
+
+---  
+
+**DATA**  
+
+| # | Ulithian sentence | English gloss |
+|---|-------------------|---------------|
+| 1 | i na eʔe buku. | I have a book. |
+| 2 | i ka eʔe peni. | You have a pen. |
+| 3 | i Lani eʔe karu. | Lani has a car. |
+| 4 | na Lani mama. | Lani has a mother. |
+| 5 | na Mako papa. | Mako has a father. |
+| 6 | i na te eʔe buku. | I do not have a book. |
+| 7 | i Lani te eʔe karu. | Lani does not have a car. |
+| 8 | i ka te eʔe peni. | You do not have a pen. |
+| 9 | i na eʔe buku? | Do I have a book? |
+|10 | i Lani eʔe karu? | Does Lani have a car? |
+|11 | na Lani mama? | Does Lani have a mother? |
+|12 | tolu ta buku. | three books |
+|13 | rua ta karu. | two cars |
+|14 | viti tasi ta buku. | twenty‑one books |
+|15 | i na eʔe buku‑i. | I have books (plural). |
+|16 | i na eʔe kili. | I have a key. |
+|17 | i na te eʔe kili. | I do not have a key. |
+|18 | lima‑gu eʔe. | my hand exists (I have a hand). |
+|19 | lima‑mu eʔe. | your hand exists (you have a hand). |
+|20 | lima‑nu eʔe. | his/her hand exists (he/she has a hand). |
+|21 | i fami te eʔe naʔa. | The family does not have a granddaughter. |
+|22 | i ka eʔe swe. | You have sweets. |
+|23 | i ka te eʔe swe? | Do you not have sweets? |
+|24 | i na eʔe swe? | Do I have sweets? |
+|25 | i na eʔe rua ta rumu. | I have two rooms. |
+|26 | na na rua ta rumu. | I have two rooms. |
+|27 | i na eʔe tolu ta buku. | I have three books. |
+|28 | i Lani eʔe tolu ta buku. | Lani has three books. |
+|29 | i Lani te eʔe swe? | Does Lani not have sweets? |
+
+---  
+
+**QUESTIONS**  
+
+1. How is negation expressed in the locative‑existential construction?  
+2. Which type of nouns obligatorily use the genitive‑noun construction? Give two examples from the data.  
+3. What is the Ulithian word order used to form a yes‑no question in the locative‑existential construction?  
+4. Translate the Ulithian sentence “i na eʔe rua ta rumu.”  
+5. Which nouns cannot appear in either of the two “has” constructions and instead use possessive suffixes? List the suffixes that mark first‑, second‑, and third‑person possessors.  
+6. Provide the Ulithian translation for “You have three cars.”  
+
+---  
+
+**ANSWERS**  
+
+1. The negation particle **te** is placed immediately before the existential verb *eʔe* (e.g., *i na te eʔe buku* “I do not have a book”).  
+2. Kinship/inalienable nouns obligatorily use the genitive‑noun construction. Examples: **mama** “mother” (row 4) and **papa** “father” (row 5).  
+3. A yes‑no question is formed simply by adding a question mark “?” at the end of the statement; the word order remains **S V O** (see rows 9‑11, 23‑24, 29).  
+4. “i na eʔe rua ta rumu.” → **“I have two rooms.”** (row 25).  
+5. Body‑part nouns (e.g., *lima* “hand”) cannot appear in the two main constructions; they use possessive suffixes. The suffixes are **‑gu** (1st person), **‑mu** (2nd person), **‑nu** (3rd person) (rows 18‑20).  
+6. “You have three cars.” → **i ka eʔe tolu ta karu.** (pattern from rows 2, 13, 28).  
+
+---  
+
+**DIFFICULTY**  
+Medium – requires recognizing two parallel possessive constructions, the role of the negation particle, classifier usage, and the limited distribution of possessive suffixes.
+
+---  
+
+**SOLUTION / RATIONALE**  
+
+The puzzle rests on a small, self‑contained data set that illustrates all relevant grammatical patterns.  
+
+*Rows 1‑3* demonstrate the basic locative‑existential pattern for first‑, second‑, and third‑person possessors. *Rows 4‑5* show the genitive‑noun construction with kinship nouns, confirming that such nouns are obligatorily genitive. *Rows 6‑8* place the negation particle *te* directly before *eʔe*, establishing the rule for negative statements. *Rows 9‑11, 23‑24, 29* prove that questions are formed by appending “?” without altering order.  
+
+The classifier *‑ta* is illustrated in rows 12‑14, and its combination with numerals is used in rows 25‑28 to show how count nouns appear after the classifier, optionally with the plural suffix *‑i* (row 15).  
+
+Rows 18‑20 provide the only evidence for body‑part nouns that employ possessive suffixes (*‑gu, ‑mu, ‑nu*) and cannot appear in the two main constructions, confirming the restriction.  
+
+Row 21 extends the genitive construction to an inalienable noun (*naʔa* “granddaughter”) and shows that negation works the same way with *te*.  
+
+Row 29, newly completed, mirrors rows 7 and 23, giving a negative‑question example that confirms both the placement of *te* and the question‑formation rule.  
+
+All six questions draw directly on these observations, and each answer can be justified by citing the appropriate rows, ensuring the puzzle is fully solvable from the supplied data.

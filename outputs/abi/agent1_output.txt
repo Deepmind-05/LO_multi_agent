@@ -1,0 +1,132 @@
+**TARGET-LANGUAGE**  
+Abipón (Guaicuruan, South America)
+
+---
+
+### TARGET-LANGUAGE ANALYSIS  
+
+| Phenomenon | Evidence from WALS / Profile | Inference / Design Choice | Relevance to Source Concepts |
+|------------|------------------------------|---------------------------|------------------------------|
+| **No morphological case** (49A‑1, 50A‑1, 51A‑9) | Explicitly listed as “no case marking”. | Possessor marking must be realized by other means (affixes, adpositions). | Allows **dependent‑marking** possession (Core 24A). |
+| **Possessive affixes both prefix and suffix** (57A‑3) | “Both prefixes and suffixes, with neither primary”. | Two morphologically distinct ways to attach a possessor to the possessed noun. | Directly supplies the **two dependent‑marking variants** required (Core 24A). |
+| **Genitive‑Noun order not dominant** (86A‑3) | “Both orders occur with neither dominant”. | We can present examples of **Genitive‑Noun** and **Noun‑Genitive** constructions. | Provides the **genitive construction** (Core 86A). |
+| **SVO word order** (81A‑2) & **VOX** (84A‑1) | Subject‑Verb‑Object, with verb‑object‑oblique pattern. | Locational possession can be expressed as *Verb + Object + Preposition* (e.g. “exist‑POSS Y at X”). | Implements the **locational predicative possession** (Core 117A). |
+| **Prepositions** (85A‑2) | “Prepositions” are the adposition type. | Use a simple locative preposition (e.g. *ka* “at”) to build the “at‑X exists‑Y” pattern. | Supports the **locational** construction. |
+| **Negative particle, preverbal** (112A‑2, 143A‑1, 143E‑1) | Negative particle exists and is placed before the verb. | Negative possession will be formed by inserting this particle before the existential verb. | Supplies the **negative morpheme** (Core 112A). |
+| **No dedicated interrogative particle** (no feature listed) | Absence of a documented interrogative particle. | Polar questions will be signalled only by intonation (written with “?”). | Matches the **intonation‑only polar questions** (Core 116A). |
+| **Plural suffix** (33A‑2) | “Plural suffix” is the means of marking nominal plurality. | Plural possessed nouns will be marked by this suffix; the existential verb may show agreement (see Target‑Specific). | Enables **plural distinction** (Source 9). |
+| **Person marking on the verb for both A and P** (102A‑5, 104A‑2) | Verb carries affixes for both arguments, A‑preceding‑P. | The existential verb can encode the person of the possessor (A) and possibly the possessed (P). | Adds a **Target‑Specific** layer of agreement, increasing difficulty. |
+| **No evidentiality, no tense/aspect marking** (77A‑1, 65A‑2, 66A‑4, 67A‑2) | Absence of these categories. | Simplifies the paradigm: only possession‑related morphology is needed. | Keeps focus on core concepts. |
+| **No inclusive/exclusive distinction, no gender** (39A‑3, 44A‑6) | Not relevant to possession. | Allows use of a single set of pronouns for all persons. | Reduces lexical load. |
+
+*No evidence of numeral classifiers* is present; therefore the source classifier requirement will be **replaced** by the plural‑suffix mechanism (see Target Concepts).
+
+---
+
+### TARGET CONCEPTS  
+
+#### CORE  
+
+| Core Feature | Target Realization | Source Correspondence | Suitability (why it works) | Rule to be discovered |
+|--------------|-------------------|----------------------|----------------------------|-----------------------|
+| 24A – Dependent marking | Possessor expressed by **either a prefix** (e.g. *‑na‑* “my‑”) **or a suffix** (e.g. *‑na* “‑my”) attached to the possessed noun. | Same dependent‑marking idea; Nepali uses two possessor forms. | Abipón explicitly has both prefix and suffix possessive affixes; they are morphologically distinct and interchangeable for the same meaning. | “X has Y” can be expressed by **prefix‑Y** *or* **Y‑suffix**; both are grammatical and equivalent. |
+| 86A – Genitive‑Noun order | Two orders are possible: **Genitive + Noun** (e.g. *pá‑na house* “my house”) **or** **Noun + Genitive** (e.g. *house pá‑na*). | Mirrors Nepali genitive‑noun order; source uses a distinct genitive construction for kinship nouns. | Profile states no dominant order, so both patterns are attested. | When the possessor is a kinship term or other inalienable noun, the language prefers the **Genitive‑Noun** order; otherwise either order is possible. |
+| 117A – Locational predicative possession | Construction **Verb‑Exist + Possessed + Preposition + Possessor** (e.g. *exist‑3sg‑sg book ka John* “There is a book at John” → “John has a book”). | Direct analogue of Nepali “at X exists Y”. | Abipón has prepositions and an existential verb; we can combine them to create a locational possession pattern. | “X has Y” = **exist‑Y‑ka‑X** (or with affixed possessor). |
+| 112A – Negative morpheme | Preverbal negative particle **‘na’** placed before the existential verb (e.g. *na exist‑…* = “does not have”). | Same as Nepali negative word of unclear category. | Profile gives a negative particle that is preverbal; we can use it to negate the existential predicate. | Negation of possession = **na** + existential verb. |
+| 116A – Polar questions | Same word order as statements; only intonation (written “?”) distinguishes a question. | Identical to Nepali intonation‑only questions. | No interrogative particle is listed; we can stipulate that intonation alone marks questions. | Adding “?” to a statement signals a polar question; no lexical change. |
+| 55A – Numeral classifiers (replaced) | **Plural suffix** on the possessed noun (e.g. *book‑na* “books”). Numerals appear before the noun; the plural suffix is obligatory for count nouns >1. | Source required obligatory classifier; we replace it with an obligatory plural suffix, which is attested (33A‑2). | The plural suffix is a real morphological feature of Abipón; it can serve the same pedagogical role of marking countability. | When a numeral >1 is used, the noun must bear the plural suffix; singular nouns have no suffix. |
+
+#### TARGET‑SPECIFIC  
+
+| Phenomenon | Reason for inclusion | Difficulty contribution | Intended solver inference |
+|------------|----------------------|------------------------|---------------------------|
+| **Person‑agreement on the existential verb** (A‑preceding‑P) | Verb carries affixes for both possessor (A) and possessed (P). This is a real feature (102A‑5, 104A‑2). | Requires learners to notice agreement morphology beyond simple affixes on nouns; adds a layer of synthesis when forming sentences. | Solver must infer that the existential verb changes its prefix/suffix to encode the person of the possessor (and optionally the possessed). |
+| **Optional use of a locative preposition vs. direct locational verb** | Some examples will use the preposition *ka* (“at”), others will embed the location directly with a locative verb form (e.g. *exist‑loc‑X*). | Forces attention to two ways of expressing the same locational possession, increasing pattern recognition. | Solver learns that both *exist‑Y‑ka‑X* and *exist‑loc‑X‑Y* are grammatical equivalents. |
+| **Inalienable vs. alienable distinction realized by genitive order** | Kinship nouns (mother, father, etc.) will obligatorily appear in the **Genitive‑Noun** order, while objects (book, key) may appear in either order. | Adds a semantic‑syntactic mapping that must be discovered; not purely morphological. | Solver must infer that relational nouns trigger a specific word‑order rule. |
+| **Plural‑suffix vowel harmony** (if applicable) | The plural suffix may exhibit vowel harmony with the noun stem (a plausible phonological rule). | Introduces a phonological pattern that interacts with morphology, raising difficulty. | Solver must notice that the suffix vowel changes to match the final vowel of the noun. |
+
+---
+
+### TARGET CONSTRUCTION RATIONALE  
+
+**Step 1 – Build the core lexical inventory**  
+- **Purpose:** Provide a minimal set of nouns (countable objects, a mass noun, kinship terms) and pronouns covering first, second, third persons.  
+- **Data:** 8–10 nouns (e.g., *book, key, water (mass), mother, father, house, dog, rice*).  
+- **Contrast:** Include both alienable (book, key) and inalienable (mother, father) nouns.  
+- **Evidence:** Vocabulary list supplied to learners.  
+- **Inference:** Learners will later see which nouns trigger which possession pattern.  
+
+**Step 2 – Introduce the existential verb and locative preposition**  
+- **Purpose:** Establish the “at X exists Y” construction.  
+- **Data:** Sentence pairs:  
+  a) *exist‑3sg‑sg book ka John* → “John has a book.”  
+  b) *exist‑3sg‑sg water* → “There is water.” (demonstrates mass noun without possessor).  
+- **Contrast:** Same verb with/without preposition.  
+- **Inference:** Learners infer the locational predicative possession pattern.  
+
+**Step 3 – Demonstrate the two dependent‑marking variants**  
+- **Purpose:** Show that the possessor can be a **prefix** or **suffix** on the possessed noun.  
+- **Data:**  
+  a) *‑na‑book* “my‑book” (prefix).  
+  b) *book‑na* “book‑my” (suffix).  
+- **Contrast:** Same meaning, different morphological position.  
+- **Inference:** Learners discover the interchangeable affix positions.  
+
+**Step 4 – Show plural suffix obligatoriness with numerals**  
+- **Purpose:** Teach that count nouns >1 require the plural suffix.  
+- **Data:**  
+  a) *two book‑na* → “two books.” (plural suffix present).  
+  b) *one book* → “one book.” (no suffix).  
+- **Contrast:** Numeral + singular vs. numeral + plural.  
+- **Inference:** Learners infer the rule linking numerals to the plural suffix.  
+
+**Step 5 – Introduce the negative particle**  
+- **Purpose:** Provide the negation of possession.  
+- **Data:** Pair each affirmative from Step 2 with a negative version:  
+  a) *na exist‑3sg‑sg book ka John* → “John does not have a book.”  
+- **Contrast:** Presence vs. absence of *na* before the verb.  
+- **Inference:** Learners deduce that *na* negates the existential predicate.  
+
+**Step 6 – Present the two genitive‑noun orders**  
+- **Purpose:** Exhibit both **Genitive‑Noun** and **Noun‑Genitive** constructions.  
+- **Data:**  
+  a) *pá‑na house* (Genitive‑Noun).  
+  b) *house pá‑na* (Noun‑Genitive).  
+- **Contrast:** Same meaning, reversed order.  
+- **Inference:** Learners learn that both orders are grammatical, but will later see a restriction (Step 8).  
+
+**Step 7 – Add polar‑question marking by intonation**  
+- **Purpose:** Show that a question is signalled only by “?”.  
+- **Data:** Duplicate a statement from Step 2 and append “?” without lexical change.  
+- **Contrast:** Identical word order, different punctuation.  
+- **Inference:** Learners infer that intonation (written as “?”) marks a polar question.  
+
+**Step 8 – Tie genitive order to inalienable nouns**  
+- **Purpose:** Create a semantic‑syntactic restriction.  
+- **Data:**  
+  a) *mother pá‑na* (only Genitive‑Noun acceptable).  
+  b) *pá‑na mother* (ungrammatical or marked as odd).  
+  c) *book pá‑na* (both orders acceptable).  
+- **Contrast:** Kinship vs. alienable nouns.  
+- **Inference:** Learners discover that relational nouns obligatorily use the Genitive‑Noun order.  
+
+**Step 9 – Introduce person‑agreement on the existential verb**  
+- **Purpose:** Add a layer where the verb encodes the possessor’s person.  
+- **Data:**  
+  a) *exist‑1sg‑sg book ka I* → “I have a book.”  
+  b) *exist‑2sg‑sg book ka you* → “You have a book.”  
+  c) *exist‑3sg‑sg book ka John* → “John has a book.”  
+- **Contrast:** Different prefixes/suffixes on the verb for 1st, 2nd, 3rd person.  
+- **Inference:** Learners infer that the verb’s affix signals the possessor’s person.  
+
+**Step 10 – Combine all elements in novel translation questions**  
+- **Purpose:** Test learners’ ability to synthesize the rules.  
+- **Data:** Create sentences that require:  
+  * a) plural possessed noun with numeral + classifier (plural suffix) + possessor affix (choose either prefix or suffix).  
+  * b) negative possession of a kinship noun (must use Genitive‑Noun order, negative particle, and correct verb agreement).  
+  * c) polar question about a plural object (intimation only).  
+  * d) a sentence where both possessor‑affix variants are valid, prompting two correct answers.  
+- **Contrast:** Each question isolates one or more rules, ensuring progressive difficulty.  
+
+**Difficulty progression:**  
+1. Simple affirmative possession (

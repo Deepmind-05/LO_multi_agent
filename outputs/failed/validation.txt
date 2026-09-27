@@ -1,0 +1,6 @@
+VERDICT
+FAIL
+
+ISSUES
+- Question 3 cannot be answered uniquely because the required classifier for “mother” and the pattern for negative possession of a singular noun are not demonstrated in the provided data.
+- Question 8 is incomplete (“I do”) and there is no evidence in the data for translating this phrase, making it unsolvable.

@@ -1,0 +1,19 @@
+target_language_id: occ
+max_retries: 3
+
+paths:
+  source: data/source.json
+  languages: data/languages.jsonl
+
+  agent1_prompt: agent1/prompt.txt
+  agent1_output: outputs/agent1/agent1_output.txt
+
+  agent2_prompt: agent2/prompt.txt
+  agent2_revision_prompt: agent2/revision_prompt.txt
+  agent2_output: outputs/agent2/final_puzzle.txt
+
+  agent3_prompt: agent3/prompt.txt
+  agent3_output: outputs/agent3/validation.txt
+
+  failed_puzzle: outputs/failed/final_puzzle.txt
+  failed_validation: outputs/failed/validation.txt

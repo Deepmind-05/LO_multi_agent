@@ -1,0 +1,129 @@
+**TARGET-LANGUAGE**  
+Ulithian (uli) – Eastern Malayo‑Polynesian, Oceanic (Papunesia)
+
+---
+
+### TARGET-LANGUAGE ANALYSIS  
+
+| Phenomenon | Evidence from WALS / language profile | Inference for puzzle design | Design choice |
+|------------|---------------------------------------|-----------------------------|---------------|
+| **Dependent marking on possessor** (via adposition or genitive) | 85A = prepositions; 86A = Genitive‑Noun order; 51A = no case affixes | Possessor can be marked by a prepositional phrase (“at X”) or by a genitive particle preceding the noun. Both are dependent‑marking strategies. | Use the two strategies as the core possession constructions. |
+| **Locational predicative possession** | 117A‑1 = locational predication (e.g., “at X exists Y”) | The basic “have” meaning will be expressed by an existential clause with a locative preposition. | Adopt a pattern *PREP X EXIST Y*. |
+| **Genitive‑Noun order** | 86A‑1 = Genitive‑Noun | A second construction will place the possessor (marked by a genitive particle) before the possessed noun. | Pattern *GEN X Y*. |
+| **Negative word (preverbal)** | 112A‑4, 143E‑1, 144A‑2, 144B‑3 = separate negative word immediately before the verb | Negation will be a preverbal particle that replaces or co‑occurs with the existential verb. | Use a single negative lexical item positioned S Neg V. |
+| **Polar questions (intonation only)** | 116A‑6, 92A‑6 = no interrogative particle, intonation marks questions | Questionhood will be signalled only by punctuation in the data; the word order stays identical to statements. | Provide statement–question pairs differing only by “?”. |
+| **Obligatory numeral classifiers** | 55A‑3 = classifiers obligatory | Numerals must be followed by a classifier before the noun; the classifier is a separate morpheme. | Use *NUM CL N* pattern; include a multi‑word numeral (e.g., “twenty‑one”). |
+| **Plurality** | 34A‑4 = optional plural on all nouns | Plural will be marked by an optional plural morpheme or by numeral > 1; both will be observable. | Provide singular vs. plural examples (with and without numerals). |
+| **Possessive suffixes** (additional) | 57A‑2 = possessive suffixes on nouns | Ulithian also marks possession directly on the possessed noun via suffixes. This can be introduced as a *third* possessor‑marking variant that is restricted to a subset of nouns (e.g., body‑part nouns). | Use as a TARGET‑SPECIFIC concept to raise difficulty. |
+| **Word order** | 81A‑2, 82A‑1, 83A‑2 = S‑V‑O, SV, VO; 84A‑1 = VOX (verb‑object‑oblique) | The basic clause order will be S V O; the locative preposition will appear after the verb as an oblique (VOX). | Align all examples with S V O PREP pattern. |
+| **No articles, no case affixes** | 37A‑5, 38A‑5, 51A‑9 | Absence of articles and case affixes simplifies the surface forms; possession must be expressed solely by the constructions above. | No determiners or case markers appear. |
+
+---
+
+### TARGET CONCEPTS  
+
+#### CORE  
+
+| Core concept (from source) | Ulithian realization | Source correspondence | Suitability / rule to discover |
+|----------------------------|----------------------|----------------------|--------------------------------|
+| Dependent marking on possessor (two variants) | (a) Prepositional locative “at X” + existential verb; (b) Genitive particle before X + possessed noun | Both are dependent‑marking strategies; analogous to Nepali “X‑ko Y” vs. locative “X‑ma Y”. | Learner must infer that both *PREP X EXIST Y* and *GEN X Y* mean “X has Y”. |
+| Locational predicative possession | *PREP X EXIST Y* (e.g., “at John exists book”) | Direct analogue of Nepali locational “X‑ma Y cha”. | Identify the existential predicate and the locative preposition as the “have” construction. |
+| Genitive‑Noun order for inalienable/relational nouns | *GEN X Y* (possessor‑genitive before noun) | Mirrors Nepali genitive “X‑ko Y”. | Recognise that kinship/inalienable nouns obligatorily use this pattern. |
+| Negative possession (preverbal negative word) | S Neg V … (negative particle before existential verb) | Same functional role as Nepali negative “chaina”. | Infer that the negative particle replaces the affirmative existential verb. |
+| Polar questions by intonation only | Identical word order to statements; “?” marks question | Same as Nepali intonation‑only questions. | Conclude that no extra particle is needed for questions. |
+| Obligatory numeral classifiers | *NUM CL N* (classifier obligatorily between numeral and noun) | Direct analogue of Nepali classifier system. | Derive that a classifier must appear whenever a numeral quantifies a noun. |
+| Number distinction (singular vs. plural) | Optional plural morpheme or numeral > 1; observable in verb agreement or noun form | Mirrors Nepali singular/plural distinction in possession. | Detect how plurality is encoded (e.g., plural suffix on verb or noun). |
+
+*All core concepts are retained because Ulithian provides natural, attested counterparts for each.*
+
+#### TARGET‑SPECIFIC  
+
+| Phenomenon | Reason for inclusion | Difficulty contribution | Intended solver inference |
+|------------|----------------------|------------------------|---------------------------|
+| Possessive suffixes on the possessed noun (restricted to a semantic class, e.g., body‑part nouns) | Ulithian has possessive suffixes (57A‑2). Introducing a restricted suffix adds a third, morphologically distinct possession strategy. | Requires learners to discriminate when the suffix is permissible vs. when the locative/genitive constructions are required. | Infer that body‑part nouns obligatorily take a suffix, while other nouns use the two core strategies. |
+| Multi‑word numeral (e.g., “twenty‑one”) with classifier | Demonstrates that the classifier still appears *after* the entire numeral phrase, not after each component. | Adds a layer of parsing to the numeral‑classifier rule. | Recognise that the classifier follows the whole numeral phrase, not individual numeral words. |
+| Optional plural marker on nouns (different shape from classifier) | Ulithian marks plurality optionally on all nouns (34A‑4). Distinguishing plural morphology from classifier morphology deepens the analysis. | Learners must separate plural marking from classifier usage. | Identify the distinct morpheme that signals plurality, independent of numerals/classifiers. |
+
+---
+
+### TARGET CONSTRUCTION RATIONALE  
+
+1. **Create the lexical inventory**  
+   - Compile a short list of nouns: (a) countable objects (e.g., “knife”, “book”), (b) kinship terms (“mother”, “brother”), (c) body‑part nouns (“hand”), (d) a mass noun (“water”).  
+   - Include pronouns, personal names, and a few common nouns for possessors.  
+   - Add a set of numerals (1‑5, 10, 20) and one obligatory classifier (e.g., *‑ta* for objects).  
+   *Purpose*: Provides the raw material for all later contrasts; ensures each semantic class needed for core and target‑specific concepts is present.  
+
+2. **Establish the existential predicate and locative preposition**  
+   - Invent a neutral verb meaning “exist/there is” (e.g., *eʔe*).  
+   - Choose a preposition meaning “at/in” (e.g., *i*).  
+   - Produce sentences of the form **PREP X V Y** (e.g., “i John eʔe book”).  
+   *Controlled contrast*: Same verb with different prepositional phrases shows the locative possession pattern.  
+   *Inference*: Learners see that the preposition + existential verb encodes possession.  
+
+3. **Introduce the genitive particle construction**  
+   - Define a genitive particle (e.g., *na*).  
+   - Create sentences **GEN X Y** (e.g., “na John mother”).  
+   - Use only kinship/inalienable nouns here.  
+   *Contrast*: Same possessor and possessed noun appear in both locative and genitive forms, but only kinship nouns appear in the genitive pattern.  
+   *Inference*: Identify the semantic restriction on the genitive construction.  
+
+4. **Provide two dependent‑marking variants for the same possessor**  
+   - For a set of ordinary nouns, give parallel sentences using (a) the locative construction and (b) the genitive construction (where allowed).  
+   - Ensure at least three possessors (pronoun, name, common noun) appear in both variants.  
+   *Purpose*: Demonstrates that both markings are semantically equivalent for “have”.  
+
+5. **Add plural distinction**  
+   - Create pairs: singular noun with existential verb, plural noun (marked by optional plural suffix *‑i* or by numeral 2) with the same verb.  
+   - Keep the possessor constant to isolate the effect of number.  
+   *Inference*: Learners detect how plurality is signalled (verb agreement or noun suffix).  
+
+6. **Introduce numeral + obligatory classifier**  
+   - Produce sentences with numerals followed by the classifier and a countable noun (e.g., “three‑CL knife”).  
+   - Include both singular (numeral 1) and plural (> 1) contexts.  
+   - Show that the classifier never appears without a numeral and never appears with the mass noun.  
+   *Contrast*: Provide a sentence with a numeral but no classifier (ungrammatical) as a control in the data set (marked as “*”).  
+
+7. **Insert multi‑word numeral expression**  
+   - Use a compound numeral (e.g., “twenty‑one”) followed by the classifier and noun.  
+   - Verify that the classifier follows the whole numeral phrase.  
+   *Difficulty*: Forces learners to treat the numeral phrase as a single quantifier unit.  
+
+8. **Create negative possession examples**  
+   - Define a preverbal negative particle (e.g., *te*).  
+   - Pair each affirmative locative sentence with a negative counterpart where *te* replaces the existential verb (or appears immediately before it).  
+   - Keep possessor and possessed noun identical across the pair.  
+   *Inference*: Identify the negative particle’s position and its function as “does not have”.  
+
+9. **Add polar‑question pairs**  
+   - Duplicate a subset of affirmative sentences, marking the duplicate with “?” but leaving word order unchanged.  
+   - Ensure both locative and genitive constructions appear in question form.  
+   *Inference*: Learners conclude that intonation alone signals a question.  
+
+10. **Introduce the target‑specific possessive suffix**  
+    - For body‑part nouns, create sentences where the possessed noun carries a suffix (e.g., *hand‑my*).  
+    - Show that the same possessor cannot use the locative or genitive construction with these nouns (provide a negative control).  
+    - Keep other nouns using only the two core constructions.  
+    *Contrast*: Highlights a restricted morphological strategy.  
+
+11. **Combine features in novel test items** (to be generated later)  
+    - Mix plural nouns with classifiers, negative possession with numerals, genitive construction with a pronoun, etc., ensuring each test item draws on at least two previously demonstrated rules.  
+    - For items that admit two valid answers (locative vs. genitive), include both variants in the data set.  
+
+*Progression*: Steps 1‑4 establish the basic possession system; steps 5‑9 layer number, classifiers, negation, and questions; steps 10‑11 add the extra difficulty and prepare for combinatorial test items.  
+
+---
+
+### VALIDATION CONSTRAINTS  
+
+1. **CORE coverage** – All six core concepts (two possessor‑marking variants, locative predication, genitive‑noun order, negative word, intonation‑only questions, obligatory classifiers, number distinction) appear in multiple, contrastive examples.  
+2. **Justified replacements** – No core concept is omitted; the genitive particle replaces the Nepali genitive suffix, which is attested in Ulithian (Genitive‑Noun order).  
+3. **TARGET‑SPECIFIC relevance** – Possessive suffixes, multi‑word numerals, and optional plural markers are attested in Ulithian (57A‑2, 34A‑4) and are introduced only because they are naturally present and increase inferential load.  
+4. **Evidence sufficiency** – Every rule is supported by at least three paired sentences (affirmative/negative, statement/question, singular/plural).  
+5. **Contrastive design** – For each rule, a minimal pair isolates the variable (e.g., same possessor, different possessor‑marking; same noun, with vs. without classifier).  
+6. **Internal consistency** – Word order (S V O, VOX for locative) is uniform across the dataset; no article or case affix appears, respecting 37A‑5, 38A‑5, 51A‑9.  
+7. **Difficulty progression** – Early items involve a single construction; later items combine two or more constructions, culminating in items that require choosing between two valid variants.  
+8. **No unsupported facts** – All morphological and syntactic properties are drawn from the WALS profile (e.g., obligatory classifiers, preverbal negative particle, lack of question particle).  
+9. **Solvability** – The dataset provides all necessary evidence; no item relies on world knowledge or unstated grammatical facts.  
+
+These instructions equip the next generation agent to produce the concrete sentence list, vocabulary table, and translation prompts for the Ulithian puzzle while preserving the inference structure of the original Nepali problem.

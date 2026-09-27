@@ -1,0 +1,124 @@
+**TARGET-LANGUAGE ANALYSIS**  
+- **Evidence from WALS / typological profile**  
+  1. **No morphological case** (features 21A‑5, 28A‑1, 49A‑1, 50A‑1, 51A‑9).  
+  2. **Possessive affixation**: both prefixes and suffixes are used on nouns (57A‑3).  
+  3. **Plural marking** is a suffix on nouns (33A‑2).  
+  4. **Negative particle** is attested (112A‑2) and can appear preverbal (143E‑1).  
+  5. **Word order** is SVO with VOX pattern and prepositions (81A‑2, 84A‑1, 85A‑2).  
+  6. **Genitive‑noun order** shows no dominant pattern; both Gen‑N and N‑Gen occur (86A‑3).  
+  7. **No evidence for numeral classifiers** or a dedicated lexical “have” verb.  
+  8. **No evidential, tense‑aspect, or perfect morphology** (65A‑2, 66A‑4, 68A‑4).  
+
+- **Inferences for puzzle design**  
+  * Possession can be expressed by a **possessor‑affix on the possessed noun** (dependent marking).  
+  * Because both prefixes and suffixes exist, we can create **two morphologically distinct dependent‑marking variants** that are semantically equivalent.  
+  * A **genitive construction** can be illustrated with the possessor preceding the noun (Gen‑N) and contrasted with the affixal strategy.  
+  * Negation will be realized by the preverbal negative particle; its category (particle vs. verb) will be left ambiguous.  
+  * Polar questions can be shown to differ from statements only by punctuation (intonation‑only), since the language lacks a dedicated interrogative particle in the profile.  
+  * Numeral expressions will **not** involve classifiers; instead, number will be marked by the plural suffix on the noun, providing a target‑specific difficulty.  
+  * The language’s lack of case means that any possessor‑genitive contrast must rely on word‑order or affixation, not case marking.  
+
+---
+
+**TARGET CONCEPTS**  
+
+**CORE**  
+
+| # | Target realization | Source correspondence | Suitability (why it works in Abipón) | Rule to be discovered |
+|---|--------------------|-----------------------|--------------------------------------|-----------------------|
+| C1 | **Dependent‑marking possessor**: a prefix (e.g., *‑na‑*) or suffix (e.g., *‑ri*) attached to the possessed noun. | Nepali “at X exists Y” (locational) → dependent marking on possessor. | Abipón has both possessive prefixes and suffixes (57A‑3); affix attaches to the noun, not to the possessor, matching the dependent‑marking typology (24A‑2). | Two affixal forms (prefix vs. suffix) both mean “X has Y”. |
+| C2 | **Genitive‑noun order**: possessor noun + genitive marker (e.g., *‑ka*) + possessed noun (Gen‑N). | Nepali genitive‑noun order (86A‑1). | Although Abipón shows no dominant order, Gen‑N is attested and can be highlighted with kinship nouns, making the contrast clear. | Genitive construction is used only with inherently possessed (inalienable) nouns. |
+| C3 | **Negative particle**: a preverbal particle *ma* (or similar) that negates the possession predicate. | Nepali negative word of unclear category (112A‑4). | Profile lists a negative particle (112A‑2) and its preverbal position (143E‑1). | The particle replaces the affirmative existential element. |
+| C4 | **Polar‑question intonation**: same word order as statements; only a “?” marks a question. | Nepali intonation‑only polar questions (116A‑6). | No evidence of a dedicated interrogative particle; we can design data to show that punctuation alone signals a question. | Question meaning is derived solely from intonation/ punctuation, not from extra morphology. |
+| C5 | **Plural suffix on nouns** (‑kʉ, for example). | Not a source feature, but needed because Abipón marks plurality on nouns (33A‑2). | Provides a way to contrast singular vs. plural possessed items without classifiers. | Plural suffix appears on the possessed noun; the possessor affix does not change. |
+
+**TARGET‑SPECIFIC**  
+
+| # | Phenomenon | Reason for inclusion | Difficulty contribution | Intended solver inference |
+|---|------------|----------------------|------------------------|---------------------------|
+| T1 | **Two competing dependent‑marking variants** (prefix vs. suffix) | Exploits the language’s “both prefixes and suffixes” typology; creates a genuine alternative answer situation. | Medium – solvers must notice that both forms are permissible and interchangeable. | Both affix types encode the same semantic relation; choice is stylistic, not grammatical. |
+| T2 | **Verb‑final vs. verb‑initial word order in existential sentences** (e.g., *exist‑V* vs. *V‑exist*) | Although the profile fixes SVO, we can introduce an optional existential verb that may appear before or after the possessor phrase, adding a subtle syntactic contrast. | Higher – requires tracking of word‑order variation across examples. | The existential verb’s position does not affect the meaning of possession. |
+| T3 | **Mass noun without plural suffix** (e.g., *water*). | Provides a contrast to count nouns that obligatorily take the plural suffix when plural. | Low – reinforces the rule that plural suffix is only for count nouns. | Mass nouns never take the plural suffix; possession of mass nouns uses the same affixal strategy. |
+| T4 | **Numeral + noun without classifier** (e.g., “three dogs”). | Replaces the source’s obligatory classifier with a simple numeral‑noun construction, still allowing number to be expressed. | Low – ensures solvers can still handle numerals while not requiring a classifier. | Numerals directly modify the noun; the plural suffix may co‑occur for plural reference. |
+
+---
+
+**TARGET CONSTRUCTION RATIONALE**  
+
+1. **Define the lexical inventory**  
+   - 8–10 core nouns: 4 countable objects (e.g., *dog*, *key*, *book*, *coin*), 2 kinship nouns (*mother*, *brother*), 1 mass noun (*water*), 1 relational noun (*room*).  
+   - 4 pronouns (1st sg, 2nd sg, 3rd sg, 3rd pl).  
+   - Numerals 1–3.  
+   - Possessive affixes: prefix *na‑* and suffix *‑ri*.  
+   - Genitive marker *‑ka*.  
+   - Negative particle *ma*.  
+   - Existential verb *exist* (optional).  
+   *Purpose*: Provides a bounded set of forms for systematic paradigm building.  
+
+2. **Create a baseline affirmative possession paradigm using the prefixal dependent‑marking**  
+   - Sentences of the shape **[Possessor] na‑[Noun]** (e.g., “I na‑dog”).  
+   - Vary possessor type (pronoun, proper name, common noun).  
+   - Include singular and plural possessed nouns (plural suffix on noun).  
+   *Contrast*: Shows that the possessor is encoded on the noun, not on the possessor.  
+
+3. **Introduce the suffixal dependent‑marking variant**  
+   - Parallel sentences **[Possessor] [Noun]‑ri** (e.g., “I dog‑ri”).  
+   - Keep all other elements identical to step 2.  
+   *Inference*: Learners see two morphologically distinct but semantically equivalent constructions.  
+
+4. **Add the genitive‑noun construction for inalienable/relational nouns**  
+   - Sentences **[Possessor] ‑ka [Noun]** (e.g., “my ‑ka mother”).  
+   - Use only kinship/relational nouns to avoid overlap with affixal strategy.  
+   - Provide both singular and plural where applicable.  
+   *Contrast*: Demonstrates a different syntactic strategy that co‑exists with the affixal one.  
+
+5. **Encode plurality on the possessed noun**  
+   - Attach plural suffix *‑kʉ* to count nouns when plural (e.g., “dog‑kʉ”).  
+   - Show that the possessor affix (prefix or suffix) remains unchanged.  
+   *Inference*: Learners deduce that number is marked on the noun, not on the possessor.  
+
+6. **Introduce the negative particle**  
+   - Replace the affirmative existential element (or the verb *exist* if used) with *ma* in otherwise identical sentences (both prefix and suffix variants).  
+   - Provide paired affirmative/negative examples for each possessor and noun.  
+   *Contrast*: Highlights that *ma* functions as a negation marker, its category left ambiguous.  
+
+7. **Create polar‑question counterparts**  
+   - Duplicate every affirmative (and negative) sentence, copy the word order exactly, and append “?” instead of “.”.  
+   - No additional morpheme is added.  
+   *Inference*: Learners infer that intonation (punctuation) alone signals a question.  
+
+8. **Add numeral expressions**  
+   - Combine numerals with count nouns (e.g., “three dog‑kʉ”).  
+   - Show that the plural suffix may co‑occur with the numeral, and that the same possessor affix applies.  
+   *Contrast*: Reinforces that classifiers are not required; number is expressed via numeral + optional plural suffix.  
+
+9. **Insert mass‑noun examples**  
+   - Sentences like “I na‑water” (prefix) and “I water‑ri” (suffix) without plural suffix.  
+   - Provide negative and question versions.  
+   *Purpose*: Confirms that the plural suffix is absent for mass nouns.  
+
+10. **Design translation questions**  
+    - Combine the building blocks in novel ways:  
+      a. Suffixal possession + plural noun + numeral + negative + question.  
+      b. Genitive construction with kinship noun + pronoun possessor.  
+      c. Prefixal possession of a mass noun in a polar question.  
+    - Include at least two items where both prefix and suffix variants are acceptable, explicitly instructing that both answers are valid.  
+    *Difficulty progression*: Starts with single‑affix sentences, then adds negation, number, mass nouns, genitive contrast, and finally multi‑feature combinations.  
+
+**Dependencies**: Steps 2–3 establish the core affixal system; step 4 introduces the alternative genitive system; steps 5–9 layer number, negation, questions, and mass‑noun constraints; step 10 leverages all prior contrasts for the test items.  
+
+---
+
+**VALIDATION CONSTRAINTS**  
+
+1. **CORE coverage** – All five core concepts (C1‑C5) appear in multiple, contrastive examples.  
+2. **Justified replacements** – The locational predicative possession from the source is omitted (no evidence in Abipón) and replaced by affixal possession; the classifier requirement is dropped (no evidence) and replaced by plural suffix marking.  
+3. **TARGET‑SPECIFIC utility** – Each target‑specific phenomenon (T1‑T4) adds a non‑trivial inference step and interacts with at least one core concept.  
+4. **Evidence sufficiency** – Every rule is supported by at least two paired sentences differing only in the targeted morpheme or construction.  
+5. **Contrastive design** – Positive vs. negative, singular vs. plural, prefix vs. suffix, affix vs. genitive, statement vs. question are all systematically contrasted.  
+6. **Internal consistency** – Morphological inventories (affixes, plural suffix, negative particle) are used consistently across all sentences; no form appears with conflicting functions.  
+7. **No unsupported facts** – All claimed properties (absence of case, presence of both possessive prefixes and suffixes, negative particle, SVO order, plural suffix) are directly attested in the WALS profile.  
+8. **Solvability** – The final translation set can be answered by mechanically applying the inferred rules; no world knowledge or unstated grammar is required.  
+9. **Difficulty progression** – The construction sequence ensures learners first master a single rule, then combine two, then three, culminating in items that require simultaneous use of all core and target‑specific rules.  
+
+*End of plan – the next generation agent should instantiate the lexical items and produce the concrete sentence set according to the steps above.*
