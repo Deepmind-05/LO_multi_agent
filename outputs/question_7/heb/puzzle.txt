@@ -1,0 +1,95 @@
+
+
+CONTEXT
+
+The following data consists of noun phrases from an unknown language. Each entry provides a transliteration, the original script, and an English gloss. The language uses a Latin-based transliteration system where "ch" represents a voiceless uvular fricative, "sh" represents a voiceless postalveolar fricative, and "h" represents a voiceless glottal fricative. Use the data to answer the questions.
+
+DATA
+
+| # | Transliteration | Script | Gloss |
+|---|---|---|---|
+| 1 | sefer gadol | ספר גדול | a big book |
+| 2 | hader katan | חדר קטן | a small room |
+| 3 | delet gadola | דלת גדולה | a big door |
+| 4 | chaya katana | חיה קטנה | a small animal |
+| 5 | kese chadash | כיס חדש | a new pocket |
+| 6 | sefarim gadolim | ספרים גדולים | big books |
+| 7 | hadarim katanim | חדרים קטנים | small rooms |
+| 8 | deletot gadolot | דלתות גדולות | big doors |
+| 9 | chiyot katanot | חיות קטנות | small animals |
+| 10 | kesim | כיסים | pockets |
+| 11 | ha-sefer ha-gadol | הספר הגדול | the big book |
+| 12 | ha-delet ha-gadola | הדלת הגדולה | the big door |
+| 13 | ha-sefarim ha-gadolim | הספרים הגדולים | the big books |
+| 14 | ha-deletot ha-gadolot | הדלתות הגדולות | the big doors |
+
+QUESTIONS
+
+**Q1.** Translate the following English phrases into the language:
+
+a) "a new door"
+
+b) "small books"
+
+c) "the new pocket"
+
+d) "the small animals"
+
+**Q2.** Here are two new nouns not found in the data above:
+
+- *shir* (song), plural: *shirim*
+- *shemesh* (sun), plural: *shemeshot*
+
+What is the grammatical gender of each noun? Explain how you determined this.
+
+**Q3.** Compare example 1 (*sefer gadol*) with example 11 (*ha-sefer ha-gadol*). What is the function of the prefix *ha-*? Why does it appear on two words in example 11 but on no words in example 1?
+
+ANSWERS
+
+**Q1a:** *delet chadasha*
+
+**Q1b:** *sefarim katanim*
+
+**Q1c:** *ha-kese ha-chadash*
+
+**Q1d:** *ha-chiyot ha-katanot*
+
+**Q2:** *shir* is masculine; *shemesh* is feminine. The plural suffix *-im* consistently marks masculine nouns in the data (sefarim, hadarim, kesim all take masculine plural adjectives), and *-ot* consistently marks feminine nouns (deletot, chiyot all take feminine plural adjectives). Since *shirim* ends in *-im*, *shir* is masculine. Since *shemeshot* ends in *-ot*, *shemesh* is feminine.
+
+**Q3:** The prefix *ha-* marks definiteness (equivalent to English "the"). It appears on both the noun and the adjective because definiteness is a property of the entire noun phrase and spreads from the head (the noun) to the dependent (the adjective). In example 1, the noun phrase is indefinite (no "the"), so the prefix does not appear on either word.
+
+SOLUTION
+
+**Rules to be inferred:**
+
+1. **Two grammatical genders.** The data shows that nouns fall into two classes. Nouns like *sefer*, *hader*, *kese* consistently take one form of the adjective (e.g., *gadol*, *katan*, *chadash*), while nouns like *delet*, *chaya* consistently take a different form (e.g., *gadola*, *katana*). This establishes a binary gender system (masculine/feminine).
+
+2. **Noun–Adjective order with dependent marking.** In every noun phrase, the first word is the noun (head) and the second word is the adjective (dependent). This is identified by the agreement pattern: the second word changes form depending on the first word's class, while the first word remains stable. The adjective agrees with the noun in gender and number.
+
+3. **Plural suffixes encode gender.** Masculine plural nouns take the suffix *-im* (sefer → sefarim, hader → hadarim, kese → kesim). Feminine plural nouns take the suffix *-ot* (delet → deletot, chaya → chiyot). This is confirmed by example 10 (*kesim*), where a plural noun appears without an adjective, showing that the suffix alone encodes gender. The adjective's plural form also correlates: *-im* on the adjective (gadolim, katanim) appears with *-im* on the noun, and *-ot* on the adjective (gadolot, katanot) appears with *-ot* on the noun.
+
+4. **Definiteness spreading.** The prefix *ha-* marks definiteness. When a noun phrase is definite, *ha-* appears on both the noun and the adjective (examples 11–14). When indefinite, it appears on neither (examples 1–10). This shows that the adjective, as a dependent, participates in the definiteness agreement domain in addition to the gender/number agreement domain.
+
+5. **Adjective paradigm.** Each adjective has four forms:
+   - Masculine singular: base (gadol, katan, chadash)
+   - Feminine singular: base + *-a* (gadola, katana, chadasha)
+   - Masculine plural: base + *-im* (gadolim, katanim, chadashim)
+   - Feminine plural: base + *-ot* (gadolot, katanot, chadashot)
+
+**How the rules produce each answer:**
+
+- **Q1a:** "door" is feminine (delet, from example 3). "new" is *chadash* (M.sg., from example 5). The F.sg. form is predicted by the pattern: base + *-a* → *chadasha*. Indefinite, so no prefix. Result: *delet chadasha*.
+
+- **Q1b:** "book" is masculine (sefer). Plural: *sefarim* (M.pl., -im suffix, from example 6). "small" is *katan* (M.sg.). M.pl. form: *katanim* (from example 7). Indefinite. Result: *sefarim katanim*.
+
+- **Q1c:** "pocket" is masculine (kese, from example 5). "new" is *chadash* (M.sg., from example 5). Definite: *ha-* on both. Result: *ha-kese ha-chadash*.
+
+- **Q1d:** "animal" is feminine (chaya, from example 4). Plural: *chiyot* (F.pl., -ot suffix, from example 9). "small" is *katana* (F.sg.). F.pl. form: *katanot* (from example 9). Definite: *ha-* on both. Result: *ha-chiyot ha-katanot*.
+
+- **Q2:** The plural suffix is the key. In all data, *-im* on a noun co-occurs with masculine plural adjectives, and *-ot* co-occurs with feminine plural adjectives. Example 10 (*kesim*, no adjective) confirms the suffix encodes gender independently. Therefore *shirim* → masculine, *shemeshot* → feminine.
+
+- **Q3:** The contrast between examples 1 and 11 isolates *ha-* as a definiteness marker. Its appearance on both words in the definite NP (and absence from both in the indefinite NP) demonstrates that it spreads across the noun phrase, marking the entire phrase as definite.
+
+DIFFICULTY
+
+**Level 1.** The puzzle requires the solver to identify a binary gender system, recognize head–dependent relationships through agreement, discover that plural suffixes redundantly encode gender, and infer a definiteness spreading rule. Each rule is supported by clear, unambiguous contrasts in the data. The translation questions require combining two or three rules simultaneously (e.g., Q1d requires gender assignment, plural suffix selection, adjective paradigm completion, and definiteness spreading), but each individual rule is straightforward once identified. No irregular forms or phonological complications are present.

@@ -1,0 +1,70 @@
+
+
+TARGET-LANGUAGE: Margany (mny), Pama-Nyungan, Northern Pama-Nyungan, Australia
+
+CORE
+
+1. Concept: Numeral system structure (adapted from "Base 6")
+   - Target-language realization: Margany has a base-10 (decimal) numeral system. Compound numerals (3–9) are formed by combining lower numerals (e.g., 3 = "two-one", 4 = "two-two" pattern). The base-10 structure is confirmed by the existence of a dedicated word for 10.
+   - Intended solver inference: From a set of numeral forms, the solver deduces the compositional pattern (which base numerals combine, in what order, with what morphological process) and confirms the base is 10.
+   - Priority: REQUIRED
+   - Note: The source concept of "Base 6" does NOT transfer. Margany is base-10. The puzzle must be reframed around the *morphological structure* of numerals rather than an unusual base. The solver's challenge shifts from "identify the non-standard base" to "identify the compositional rules and morphological processes governing numeral formation."
+
+2. Concept: Morphological composition of numerals
+   - Target-language realization: Compound numerals are formed by juxtaposition/concatenation of component numerals. The order of components (e.g., "two-one" for 3) is a fixed pattern.
+   - Intended solver inference: The solver identifies which forms are atomic (1, 2, 5, 10) vs. compound, determines the order of components, and generalizes the pattern to predict unseen numerals.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Strongly suffixing morphology applied to numerals
+   - Intended solver inference: Numerals, like other nouns, take case suffixes (e.g., dative, locative, ergative). The solver must separate the numeral stem/compound from the case suffix, identifying the suffix as a separate morphological layer.
+   - Interaction with CORE: The solver must simultaneously solve (a) the numeral composition pattern AND (b) the case suffix identification. This creates a two-layer morphological puzzle.
+   - Difficulty contribution: HIGH — adds a second dimension of analysis; the solver must not confuse suffixes with parts of the numeral compound.
+   - Priority: REQUIRED
+
+2. Phenomenon: SOV word order with Genitive-Noun order
+   - Intended solver inference: Numerals appear in a fixed syntactic position relative to the noun they modify. In SOV languages with GenN order, the numeral (as a modifier) typically precedes the noun. The solver deduces the modifier-noun order from the data.
+   - Interaction with CORE: The syntactic position of numerals provides additional evidence for identifying which string is the numeral vs. the noun, especially when both are unfamiliar.
+   - Difficulty contribution: MEDIUM — helps disambiguate but also adds a layer the solver must account for.
+   - Priority: HIGH
+
+3. Phenomenon: No gender system
+   - Intended solver inference: Numerals do not change form based on the gender of the noun they modify. This is a "negative" constraint — the solver should NOT expect gender agreement on numerals.
+   - Interaction with CORE: Simplifies the numeral forms (no gender variants), making the compositional pattern cleaner and more deducible.
+   - Difficulty contribution: LOW (reduces noise)
+   - Priority: OPTIONAL (useful as a constraint to prevent over-generalization)
+
+4. Phenomenon: Full reduplication only
+   - Intended solver inference: If reduplication appears on numerals in the data, it must be full (entire form repeated), not partial. This constrains the possible morphological operations.
+   - Interaction with CORE: If a numeral appears reduplicated, the solver knows the entire numeral compound is repeated, not just a component. This helps identify the boundaries of the numeral.
+   - Difficulty contribution: MEDIUM — provides a useful constraint on morphological analysis.
+   - Priority: OPTIONAL (include only if reduplication of numerals is attested or can be naturally represented)
+
+INTERACTIONS
+
+1. Numeral composition + Suffixing morphology:
+   - The solver must parse a string like [numeral-compound + case-suffix] into its constituent parts. The case suffix is a single morpheme attached to the entire compound, not to individual components. This creates a clear hierarchical structure: (compound numeral) → (compound + suffix).
+   - Additional inference: The solver can confirm the boundaries of the numeral compound by observing that the same suffix attaches to different numeral compounds in the same way.
+
+2. Numeral composition + SOV/GenN order:
+   - In a sentence like [numeral] [noun-case-suffix] [verb], the solver must identify the numeral, the noun, the case suffix, and the verb. The fixed word order provides a scaffold for parsing.
+   - Additional inference: The consistent position of the numeral relative to the noun helps the solver identify which unfamiliar string is the numeral vs. the noun.
+
+3. Suffixing morphology + No gender:
+   - The absence of gender means the case suffix is the only variable on the noun/numeral, making the suffix identification cleaner. The solver does not need to account for gender-driven allomorphy.
+   - Additional inference: If the same suffix appears on different nouns with different semantic properties, the solver can more confidently identify it as a case marker rather than a gender marker.
+
+CONSTRAINTS
+
+1. The numeral base is 10, NOT 6. The puzzle must not present data that could be misinterpreted as a non-decimal base. If the solver deduces base-10, that is the correct answer. Do not create ambiguity that suggests base-5 or base-6.
+
+2. The morphological pattern of numeral compounds must be regular and consistent across all data points. Irregularities (if they exist in Margany) should be excluded from the puzzle data to maintain solvability.
+
+3. Case suffixes must be consistent (same suffix = same case across all nouns/numerals in the data). No allomorphy should be introduced unless it is clearly conditioned and deducible.
+
+4. The puzzle data must include enough numeral examples (at minimum: 1, 2, 3, 4, 5, 10, and at least one compound with a case suffix) for the solver to deduce both the compositional pattern and the suffixal morphology.
+
+5. Word order must be consistent across all sentences in the data (SOV, GenN). No word order variation should be introduced.
+
+6. Do not introduce gender agreement, evidentiality, or inclusive/exclusive distinctions — these are absent in Margany and would be misleading.

@@ -1,0 +1,129 @@
+
+
+TARGET-LANGUAGE: Carib (Cariban, South America)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the person/number paradigm as the foundational inventory.** Establish the full set of person/number values that will appear in both the possessive and verbal systems: 1SG, 2SG, 3SG (with a binary semantic sub-distinction, e.g., 3SG.a and 3SG.i, or 3SG.m and 3SG.f), 1PL.incl, 1PL.excl, 2PL, 3PL (with the same binary semantic sub-distinction as 3SG). The binary 3rd person distinction must be semantically motivated (e.g., animate/inanimate, or masculine/feminine) and must be restricted to 3rd person only—1st and 2nd person have no such sub-distinction. This restriction is the critical insight the solver must discover (TARGET-SPECIFIC concept 2). Assign a distinct underlying form to each value in the paradigm. This step is purely design-level; no data is presented yet.
+
+2. **Design the possessive prefix system (realizing CORE concept 1: dependent marking).** Assign a distinct prefix to each person/number value in the paradigm. The prefix attaches to the possessed noun (the head of the possessive phrase). The possessor is the dependent and is marked on the head. Ensure the following properties:
+   - 1PL.incl and 1PL.excl receive different possessive prefixes (realizing TARGET-SPECIFIC concept 1 in the nominal domain).
+   - 3SG.a and 3SG.i (or 3SG.m and 3SG.f) receive different possessive prefixes, as do 3PL.a and 3PL.i.
+   - 1SG, 2SG, 2PL each receive a single prefix with no sub-distinction.
+   - The prefixes should be morphologically transparent (no complex phonological alternations are required for this puzzle; the difficulty comes from the morphosyntactic analysis, not from phonology). If you wish to add a small phonological layer (e.g., one prefix has two allomorphs conditioned by root onset), keep it minimal and ensure it does not obscure the person/number identification.
+   - The possessed noun root should be invariant (no agreement morphology on the noun itself).
+
+3. **Design the verbal person marking system (realizing CORE concept 2: ergative alignment, and TARGET-SPECIFIC concepts 1, 3, 4).** The verb carries two sets of person markers:
+   - **S/P set (core-argument slot):** marks intransitive subjects (S) and transitive patients (P). This is a single slot in the verb template.
+   - **A set (agent slot):** marks transitive agents (A). This is a separate slot in the verb template.
+   
+   Both slots are always filled (no zero realization of 3rd person, per WALS 103A-2). The verb template is: [A-marker] + [S/P-marker] + [verb root] for transitive clauses, and [S/P-marker] + [verb root] for intransitive clauses.
+   
+   Critical design decisions:
+   - The S/P set and A set must use **different forms** for at least some person values, so the solver can distinguish them. However, they may share forms for some values (this is the syncretism option, TARGET-SPECIFIC concept 4).
+   - 3rd person values in both the S/P set and the A set must reflect the binary semantic distinction (e.g., 3SG.a-P ≠ 3SG.i-P, and 3SG.a-A ≠ 3SG.i-A).
+   - **Inclusive/exclusive asymmetry in the verbal system (TARGET-SPECIFIC concept 1, WALS 40A-4):** 1PL.inclusive has a distinct form in both the S/P set and the A set. 1PL.exclusive is **syncretic** with another person value in the verbal system (choose which: e.g., 1PL.excl is syncretic with 2PL in both sets, or with 1SG). This asymmetry between the pronominal/possessive system (where 1PL.incl and 1PL.excl are distinct) and the verbal system (where they are not) is a key discovery for the solver.
+   - The A and P markers appear as adjacent morphemes in the verb (TARGET-SPECIFIC concept 3: fusion into a single core-argument slot). The solver should be able to identify the boundary between the A-marker and the S/P-marker in transitive clauses.
+
+4. **Design the independent pronoun system.** Independent pronouns (used as subjects, objects, or in isolation) must show the **full** person/number paradigm:
+   - 1PL.incl and 1PL.excl are distinct.
+   - 3rd person semantic distinction is present.
+   - All values are distinct from each other (no syncretism in the pronominal system, or minimal syncretism that does not create ambiguity).
+   
+   This system serves as a **reference point** for the solver: by comparing independent pronouns with possessive prefixes and verbal markers, the solver can identify which forms correspond to which person/number values. The contrast between the pronominal system (full distinction) and the verbal system (1PL.excl syncretic) is the key asymmetry to be discovered.
+
+5. **Construct the data set with progressive discovery in mind.** The data should be organized so that simpler inferences come first and more complex inferences build on them. The recommended structure (the setter may adjust ordering and grouping):
+
+   **Data Group A: Possessive noun phrases.**
+   Provide word-gloss pairs showing possessed nouns with all person/number prefixes. Include:
+   - At least two different possessed noun roots (to show the prefix is not part of the root).
+   - All person/number values, each appearing at least once.
+   - Both 1PL.incl and 1PL.excl with the same possessed noun (so the solver can directly compare the two prefixes).
+   - Both 3SG.a and 3SG.i (or 3SG.m and 3SG.f) with the same possessed noun.
+   - 1SG and 2SG with the same possessed noun (to show they lack the 3rd person sub-distinction).
+   
+   *What the solver should infer from this group:* (a) there is a prefix on the noun that encodes the possessor (dependent marking); (b) there are two 1PL forms (inclusive/exclusive hypothesis); (c) 3rd person has a sub-distinction that 1st and 2nd person lack.
+
+   **Data Group B: Independent pronouns.**
+   Provide a list of independent pronouns with glosses. Include all person/number values. This group:
+   - Confirms the inclusive/exclusive distinction (two 1PL pronouns with different glosses).
+   - Confirms the 3rd person semantic distinction.
+   - Provides a "key" that the solver can use to identify person/number values in the verbal data.
+   
+   *What the solver should infer:* The full paradigm is confirmed. The solver can now map forms to person/number values with confidence.
+
+   **Data Group C: Intransitive clauses.**
+   Provide sentences with intransitive verbs, showing the S/P marker on the verb. Include:
+   - Intransitive clauses with 1SG, 2SG, 3SG.a, 3SG.i, 1PL.incl, 1PL.excl, 2PL, 3PL.a, 3PL.i subjects.
+   - At least two different intransitive verb roots (to show the marker is not part of the verb root).
+   - The S/P marker should be clearly segmentable from the verb root.
+   
+   *What the solver should infer:* There is a person marker on intransitive verbs. The solver can begin to catalog the S/P set. At this stage, the solver does not yet know the alignment type (could be nominative or ergative).
+
+   **Data Group D: Transitive clauses.**
+   Provide sentences with transitive verbs, showing both the A marker and the S/P marker. Include:
+   - Transitive clauses where the agent and patient have different person values (to make both markers visible).
+   - Crucially, include clauses where:
+     - A = 1SG, P = 3SG.a (or 3SG.i): the solver sees the 1SG-A marker and the 3SG.a-P marker.
+     - A = 3SG.a, P = 1SG: the solver sees the 3SG.a-A marker and the 1SG-P marker.
+     - A = 2SG, P = 3SG.i: the solver sees the 2SG-A marker and the 3SG.i-P marker.
+     - A = 3SG.i, P = 2SG: the solver sees the 3SG.i-A marker and the 2SG-P marker.
+   - Include at least one clause where 1PL.excl is the agent or patient (to reveal the syncretism: the 1PL.excl verbal form is identical to, e.g., the 2PL form).
+   - Include at least one clause where 1PL.incl is the agent or patient (to show it has a distinct form).
+   
+   *What the solver should infer:* (a) transitive verbs have two person markers; (b) by comparing the P-marker in transitive clauses with the S-marker in intransitive clauses, the solver discovers they are the same set (S = P), revealing ergative alignment; (c) the A-marker is a separate set; (d) 1PL.excl in the verbal system is syncretic with another form (the asymmetry with the pronominal/possessive system).
+
+6. **Design the question structure.** The questions should test progressive mastery of the concepts. A recommended structure:
+
+   **Question 1 (Identification):** Given a set of possessive noun phrases (some new, some seen in the data), identify the person/number of the possessor for each. This tests the basic dependent marking analysis and the person/number paradigm.
+
+   **Question 2 (Alignment identification):** Given a set of intransitive and transitive clauses (some new), identify the person/number of each argument (S, A, or P). This tests whether the solver has correctly identified the ergative alignment and can parse the two verbal slots.
+
+   **Question 3 (Inclusive/exclusive and 3rd person distinction):** Given a set of independent pronouns and/or possessive forms, identify which are 1PL.incl vs. 1PL.excl, and which 3rd person forms are 3SG.a vs. 3SG.i. This tests the semantic distinctions.
+
+   **Question 4 (Asymmetry discovery):** Given a verbal form that is ambiguous (e.g., the syncretic 1PL.excl/2PL form), the solver must determine the person/number using context or additional information. Alternatively, present a scenario where the solver must explain why the verbal form for 1PL.excl is the same as for 2PL, while the independent pronouns are different. This tests the verbal/pronominal asymmetry.
+
+   **Question 5 (Production/Translation):** Given English glosses, produce the correct Carib forms. Include:
+   - A possessive noun phrase with a person/number value not prominently featured in the data (testing generalization).
+   - A transitive clause where the solver must correctly assign both the A-marker and the S/P-marker.
+   - A clause involving 1PL.excl in the verbal system (testing the syncretism).
+   - A clause involving 3rd person semantic distinction (testing the 3rd person sub-distinction in the verbal system).
+
+7. **Ensure internal consistency and typological grounding.** Verify the following:
+   - The ergative alignment is consistent: S and P always share the same marker set, A always has a separate set. No exceptions.
+   - The inclusive/exclusive distinction is consistent: in the pronominal and possessive systems, 1PL.incl ≠ 1PL.excl; in the verbal system, 1PL.incl is distinct but 1PL.excl is syncretic with a specific other form (state which one clearly in your design).
+   - The 3rd person semantic distinction is consistent: it appears in 3SG and 3PL in all systems (pronominal, possessive, verbal S/P, verbal A), and is absent from 1st and 2nd person in all systems.
+   - No zero realization of 3rd person in the verbal system: every transitive clause has both an A-marker and an S/P-marker, even when both are 3rd person.
+   - The verb template is consistent: [A] + [S/P] + [root] for transitive, [S/P] + [root] for intransitive. No reordering or additional slots.
+   - The possessive prefix is always a prefix (never a suffix or a separate word).
+
+8. **Verify solvability and uniqueness of inferences.** Check the following:
+   - The solver can identify dependent marking from Data Group A alone (the prefix is on the noun, not a separate word, and changes with the possessor).
+   - The solver can identify ergative alignment (not nominative) by comparing Data Group C and D: the marker that appears on intransitive subjects is the same as the marker that appears on transitive patients. If the data allowed a nominative analysis (S = A), the puzzle would be ambiguous. Ensure that at least one transitive clause has A ≠ P in person, and that the A-marker in that clause is different from the S-marker that would appear if the alignment were nominative.
+   - The solver can identify the inclusive/exclusive distinction from Data Groups A and B (two distinct 1PL forms with different glosses).
+   - The solver can identify the 3rd person restriction by observing that 1SG and 2SG have single forms while 3SG has two (in Data Groups A and B).
+   - The solver can identify the verbal/pronominal asymmetry by comparing the 1PL.excl possessive prefix (distinct from 1PL.incl) with the 1PL.excl verbal marker (syncretic with another form).
+   - No alternative analysis can account for all the data. For example, ensure that the data does not allow the solver to analyze the system as nominative with a separate "object marker" (which would be a different analysis of the same surface pattern). The key is that the S/P marker in transitive clauses is identical to the S marker in intransitive clauses—this is the diagnostic.
+
+9. **Control for potential confusions and ambiguities.**
+   - Ensure that the A-marker and S/P-marker are segmentable in transitive clauses. If they are adjacent, make sure the boundary is clear (e.g., the A-marker ends in a vowel and the S/P-marker begins with a consonant, or vice versa). If you use a consistent morpheme boundary marker (like a glottal stop or a specific consonant), state it in the phonology note.
+   - Ensure that the 3rd person semantic distinction is semantically transparent in the glosses (e.g., "he (animate)" vs. "it (inanimate)" or "he (masc.)" vs. "she (fem.)"). The solver should be able to guess the semantic basis without being told.
+   - Ensure that the syncretism (1PL.excl = 2PL in the verbal system) is discoverable: the solver must see at least one clause where 1PL.excl is the agent/patient and one where 2PL is the agent/patient, and observe that the same verbal form appears in both. The glosses must make it clear which is which.
+   - Avoid having the A-marker and S/P-marker be identical for any person/number value (this would make the transitive clause ambiguous). If you want to include such a case for difficulty, ensure it is resolvable from context.
+
+10. **Write the problem preamble and instructions.** Include:
+    - A brief context: the language is Carib (Cariban family, spoken in South America). Do not provide any linguistic description beyond what is in the data.
+    - A phonology note: list any non-ASCII characters and their approximations. State the syllable structure if relevant.
+    - A glossing convention note: explain how glosses are formatted (e.g., "1PL.incl" = "we (including you)", "3SG.a" = "he/it (animate)").
+    - Clear instructions for each question part, specifying what the solver should do.
+    - For the production question, specify the expected format (e.g., "Write the full verb form including all person markers").
+    - Assign point values reflecting relative difficulty: identification questions (lower points), alignment analysis (medium), asymmetry discovery (higher), production (highest).
+
+11. **Final consistency check: simulate the solver's reasoning path.** Walk through the puzzle as a solver with no knowledge of Carib:
+    - After Data Group A: "There's a prefix on the noun that shows who possesses it. There are two 1PL forms. 3rd person has two sub-forms but 1st and 2nd don't."
+    - After Data Group B: "The pronouns confirm the paradigm. I can now identify all person/number values."
+    - After Data Group C: "Intransitive verbs have a person marker. Let me catalog it."
+    - After Data Group D: "Transitive verbs have two markers. The one that matches the intransitive marker is the patient. The other is the agent. So S = P ≠ A: ergative alignment. Wait, the 1PL.excl form in the verb is the same as 2PL? But the pronouns are different. So the verb doesn't distinguish 1PL.excl from 2PL."
+    - At the questions: "I can now identify all forms, explain the alignment, and produce new forms."
+    
+    If any step in this reasoning path is blocked (the solver cannot make the inference from the data), add more data or adjust the presentation. If any step allows an alternative inference that contradicts the intended analysis, add a controlled contrast to rule it out.

@@ -1,0 +1,121 @@
+
+
+CONTEXT
+
+The following sentences are in Nivkh, a language spoken in the lower Amur River region. Each sentence is followed by its English translation. The orthography is consistent throughout.
+
+DATA
+
+1. taro kila-ta tana — The man saw the fish.
+2. kila taro-ta tana — The fish saw the man.
+3. taro mala-ta vura — The man ate the bird.
+4. mala nura-ta dara — The bird drank the water.
+5. taro tana — The man saw.
+6. mala vura — The bird ate.
+7. taro kila-ta tana-ne — The man did not see the fish.
+8. mala nura-ta dara-ne — The bird did not drink the water.
+9. taro mala-ta vura-ne kora — The man definitely did not eat the bird.
+10. kila taro-ta tana-ne kora — The fish definitely did not see the man.
+11. taro tana-ne — The man did not see.
+12. mala vura-ne kora — The bird definitely did not eat.
+13. sura sila — The stone is big.
+14. pala sila — The house is big.
+15. sura sila-ne — The stone is not big.
+16. pala sila-ne kora — The house definitely is not big.
+17. taro kila-ta pala-na tara tana — The man saw the fish inside the house.
+18. taro mala-ta sura-na hura tana — The man saw the bird on the stone.
+19. taro kila-ta tana ma — Did the man see the fish?
+20. taro kila-ta tana-ne kora ma — Did the man definitely not see the fish?
+21. taro mala-ka kila-ta tana — The man saw the bird's fish.
+22. taro-ka pala sila — The man's house is big.
+23. taro sila mala-ta tana — The man saw the big bird.
+
+QUESTIONS
+
+Q1. For each sentence below, identify the subject (S) and the object (O). If the sentence has no object, write "—" for O.
+
+a. nura kila-ta dara
+b. sura taro-ta tana
+c. kila mala-ta vura
+d. mala tana
+
+Q2. For each sentence below, state (i) whether it is negative (N) or positive (P), and (ii) if negative, whether the word "kora" is present (Y) or absent (N).
+
+a. sura nura-ta dara-ne
+b. nura sura-ta vura-ne kora
+c. mala tana
+d. taro tana-ne kora
+
+Q3. What suffix is attached to the predicate in every negative sentence in the data?
+
+Q4. Translate the following English sentences into Nivkh.
+
+a. The water saw the stone.
+b. The stone did not drink the water.
+c. Did the bird see the man?
+d. The man's house is big.
+
+ANSWERS
+
+Q1:
+a. S: nura, O: kila
+b. S: sura, O: taro
+c. S: kila, O: mala
+d. S: mala, O: —
+
+Q2:
+a. N, N
+b. N, Y
+c. P, —
+d. N, Y
+
+Q3: -ne
+
+Q4:
+a. nura sura-ta tana
+b. sura nura-ta dara-ne
+c. mala taro-ta tana ma
+d. taro-ka pala sila
+
+SOLUTION
+
+**Hidden rules:**
+
+1. **Word order:** SOV. The predicate (verb or predicative adjective) is always the final element of the clause (before any question particle).
+
+2. **Case marking:**
+   - Nominative (subject): zero (unmarked)
+   - Accusative (object): -ta
+   - Locative (complement of a postposition): -na
+   - Genitive (possessor): -ka
+
+3. **Negation:** Two components:
+   - An obligatory suffix -ne attached to the predicate (appears in every negative sentence).
+   - An optional independent word "kora" that may appear immediately after the predicate (appears in some but not all negative sentences).
+
+4. **Predicative adjectives:** In predicative position ("X is [adj]"), the adjective occupies the verb position and takes the negative suffix -ne in negative sentences. It behaves identically to a verb in all syntactic respects. In attributive position, it precedes the noun it modifies.
+
+5. **Postpositions:** "tara" (in/inside) and "hura" (on/above) follow a locative-marked noun (-na). The postpositional phrase appears in pre-verbal position.
+
+6. **Question particle:** "ma" appears at the absolute end of the clause to mark polar questions. In negative questions, it follows the optional negative word.
+
+7. **No verbal agreement:** The verb form is invariant with respect to person and number of arguments.
+
+**Q1 reasoning:**
+The subject is the unmarked noun (nominative); the object bears -ta (accusative). In (d), there is only one NP and no -ta, so the sentence is intransitive.
+
+**Q2 reasoning:**
+The presence of -ne on the predicate marks negation. The word "kora" after the predicate is the optional negative word. In (c), there is no -ne, so the sentence is positive.
+
+**Q3 reasoning:**
+Examining all negative sentences (7, 8, 9, 10, 11, 12, 15, 16, 20), the suffix -ne is attached to the predicate in every one of them. This is the obligatory negative marker.
+
+**Q4 reasoning:**
+a. S = nura (unmarked), O = sura-ta (accusative), V = tana → nura sura-ta tana
+b. S = sura (unmarked), O = nura-ta (accusative), V = dara-ne (negative) → sura nura-ta dara-ne
+c. S = mala (unmarked), O = taro-ta (accusative), V = tana, Q = ma → mala taro-ta tana ma
+d. Possessor = taro-ka (genitive), Possessed = pala, Adj = sila → taro-ka pala sila
+
+DIFFICULTY
+
+Easy. The puzzle requires the solver to: (1) identify SOV word order and the case system from role-contrast data; (2) distinguish the obligatory negative suffix from the optional negative word; (3) recognize a consistent pattern across negative sentences; and (4) apply individual rules in simple production tasks. Each question tests a single concept with minimal inference depth.

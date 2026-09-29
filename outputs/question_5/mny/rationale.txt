@@ -1,0 +1,52 @@
+
+
+TARGET-LANGUAGE: Margany (mny), Pama-Nyungan, Northern Pama-Nyungan, Australia
+
+CONSTRUCTION RATIONALE
+
+1. **Define the numeral system's internal structure.** Establish four atomic numeral stems representing the values 1, 2, 5, and 10. All other numerals (3, 4, 6, 7, 8, 9) are compounds formed by concatenating atomic stems in descending order of value: 3 = [2][1], 4 = [2][2], 6 = [5][1], 7 = [5][2], 8 = [5][2][1], 9 = [5][2][2]. The order is strictly descending (larger-value component precedes smaller-value component). This creates a recursive structure: 8 contains the compound 3 as a sub-component. The solver's ultimate goal is to recover this compositional grammar from surface forms. Choose phonologically opaque, short (1–2 syllable) forms for the four atomic stems that are mutually dissimilar to prevent accidental pattern-matching. The form for 10 must be phonologically distinct from all other numerals and from all nouns/verbs in the data.
+
+2. **Define the case suffix system.** Select two or three case suffixes (e.g., a dative, a locative, and an ergative or allative). Each suffix is a single, invariant morpheme that attaches to the right edge of a noun or numeral compound. The same suffix form marks the same case regardless of what it attaches to. Critically, the suffix attaches to the *entire* numeral compound as a unit, not to individual components within the compound. For example, if the compound for 7 is [5][2] and the dative suffix is -X, the surface form is [5][2]-X, not [5]-X[2] or [5][2]-X with any internal modification. This creates a clear hierarchical structure: the compound is a constituent, and the suffix is a higher-level attachment. The suffixes must be phonologically distinct from the atomic numeral stems and from each other.
+
+3. **Define the syntactic frame.** Use a strict SOV word order with the numeral (as a pre-nominal modifier) immediately preceding the noun it modifies. The basic sentence frame is: [numeral(+case)] [noun(+case)] [verb]. The verb is invariant (or has minimal variation) across all sentences in the data to reduce noise. The noun is drawn from a small set (3–5 nouns) so the solver can track which noun appears in which sentence. The numeral's position (immediately before the noun) is the primary syntactic cue that helps the solver identify which string in a sentence is the numeral. Do not introduce any word order variation, gender agreement, or other syntactic complexity.
+
+4. **Construct the primary data set (sentences).** Create a set of 8–12 sentences, each following the frame from Step 3. The sentences must collectively provide the following evidence:
+   - At least one sentence for each atomic numeral (1, 2, 5, 10) in the nominative (unmarked) case, so the solver can identify the bare atomic forms.
+   - At least one sentence for each compound numeral (3, 4, 6, 7, 8, 9) in the nominative case, so the solver can observe the compositional pattern.
+   - At least two sentences where a numeral (atomic or compound) appears with a case suffix, so the solver can identify the suffix as a separate morphological layer.
+   - At least one sentence where the *same* case suffix appears on two different numerals (e.g., dative on 3 and dative on 7), confirming that the suffix is a consistent morpheme and not part of the numeral.
+   - At least one sentence where a compound numeral with a case suffix appears alongside a noun with the *same* case suffix, so the solver can confirm the suffix is a case marker (not numeral-specific) by seeing it on both the numeral and the noun.
+   - Vary the nouns across sentences so the solver cannot confuse a noun with a numeral. Use at least 3 different nouns.
+   - Randomize the order of sentences so the solver cannot simply match by position in a table.
+
+5. **Design the first inference tier: segmentation and identification.** The solver's first task should be to segment each sentence into its three constituents (numeral, noun, verb) and identify which string is the numeral. The word order (Step 3) provides the scaffold: the leftmost element is the numeral, the middle is the noun, the rightmost is the verb. However, the solver must confirm this by observing that the leftmost element varies systematically in a way consistent with quantity (e.g., if the context implies "three dogs" vs. "five dogs," the leftmost strings should differ). This tier is relatively straightforward and establishes the basic parsing. The solver should be able to produce a list of surface forms for each numeral value (1 through 10) at this stage, though they may not yet understand the internal structure of the compounds.
+
+6. **Design the second inference tier: compositional analysis.** Once the solver has identified the surface forms for all numerals 1–10, the next task is to determine which are atomic and which are compound, and to recover the compositional rules. The evidence for this is:
+   - The forms for 3, 4, 6, 7, 8, 9 should be visibly composed of the forms for 1, 2, and 5 (e.g., the form for 3 contains the form for 2 followed by the form for 1).
+   - The solver should identify that 1, 2, 5, and 10 are atomic (not decomposable into smaller numeral forms present in the data).
+   - The solver should identify the ordering rule (descending value) and the concatenation process (simple juxtaposition, no phonological change at the boundary).
+   - The recursive structure (8 = 5 + [2+1]) provides additional confirmation: if the solver correctly identifies 3 = 2+1, they can verify that 8 contains the same sub-string.
+   This tier requires the solver to perform a kind of morphological decomposition, analogous to the source rationale's "identify which tokens are digits vs. positional markers."
+
+7. **Design the third inference tier: case suffix identification.** The solver must now identify the case suffixes. The key evidence is:
+   - A numeral form that is longer than the bare compound (identified in Tier 2) must have an additional element attached.
+   - The same additional element appears on different numerals (confirming it is a separate morpheme, not part of the numeral).
+   - The same element appears on nouns (confirming it is a case marker, not numeral-specific).
+   - The solver should identify each suffix, determine how many distinct cases are present, and confirm that the suffix attaches to the right edge of the entire compound (not internally).
+   This tier is the "second dimension" of the morphological puzzle. The solver must not confuse the case suffix with a component of the numeral compound. The critical test is: does the suffix appear in the same position (right edge) on all compounds, or does it appear in different positions (which would suggest it is part of the compound)?
+
+8. **Design the fourth inference tier: application to novel data.** Provide the solver with tasks that require applying all discovered rules to new inputs:
+   - (a) Given a new sentence in Margany containing a numeral the solver has not seen before (e.g., a compound with a case suffix that was not in the primary data), ask the solver to identify the numeral value and the case.
+   - (b) Given an Arabic numeral and a case, ask the solver to produce the correct Margany form (testing whether they can compose the numeral and attach the correct suffix).
+   - (c) Given a full sentence with a novel numeral-noun combination, ask the solver to provide a gloss or translation.
+   - Include at least one item that tests the recursive structure (e.g., 8 or 9, which contain a compound as a sub-component) and at least one item that tests the interaction of compound + suffix (e.g., 7 + dative).
+
+9. **Prevent alternative interpretations and calibrate difficulty.** Ensure the following constraints are met:
+   - No atomic numeral stem is a substring of or phonologically similar to any case suffix, so the solver cannot confuse a suffix with a numeral component.
+   - No case suffix is a substring of any atomic numeral stem, preventing the reverse confusion.
+   - The data set includes at least one compound numeral where the boundary between components is unambiguous (e.g., 4 = [2][2], where the same form appears twice, making the boundary clear by repetition).
+   - The base-10 nature is confirmed by the existence of a dedicated form for 10 that is not decomposable into the other numerals. The solver should be able to verify that 10 is not 5+5 or 2+2+2+2+2 (i.e., it is a separate atomic form).
+   - The difficulty progression should be: Tier 1 (segmentation) is accessible to any solver who can observe word order patterns. Tier 2 (composition) requires systematic comparison of forms. Tier 3 (suffixes) requires the solver to hold the Tier 2 analysis in mind and identify an additional layer. Tier 4 (application) requires integrating all layers simultaneously.
+   - The total number of distinct morphemes the solver must identify should be manageable: 4 atomic numerals + 3–4 case suffixes + 3–5 nouns + 1 verb = approximately 11–14 distinct forms. This is within the range of a standard Linguistic Olympiad puzzle.
+
+10. **Specify the glossing convention and answer format.** Instruct the setter to use standard Leipzig glossing rules for any glosses provided in the puzzle (e.g., for context clues or in the answer key). Numerals should be glossed as their Arabic value (e.g., "3" not "three"). Case suffixes should be glossed with standard abbreviations (DAT, LOC, ERG, etc.). The solver's answers should be in the form: (a) for identification tasks, the Arabic numeral value and the case name; (b) for production tasks, the full Margany surface form; (c) for glossing tasks, a full interlinear gloss. The puzzle should not provide any glosses in the stimulus data itself—the solver must work from the raw forms.

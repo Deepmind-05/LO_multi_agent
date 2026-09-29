@@ -1,8 +1,12 @@
 import json
 import os
+import time
 from pathlib import Path
 
 from cerebras.cloud.sdk import Cerebras
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 MODEL = "qwen-3.8-27b"
@@ -58,41 +62,64 @@ def extract_target_language(target_profile: dict) -> dict:
     }
 
 
+def extract_message_content(response) -> str:
+    if not response or not response.choices:
+        return ""
+    msg = response.choices[0].message
+    content = msg.content
+    if content:
+        return content
+    reasoning = getattr(msg, "reasoning_content", None) or getattr(msg, "reasoning", None)
+    return reasoning or ""
+
+
 def call_agent2(
     system_prompt: str,
     agent1_output: str,
     source_rationale: str,
     target_language: dict,
+    feedback: str = "",
 ) -> str:
     payload = {
         "AGENT1_OUTPUT": agent1_output,
         "SOURCE_RATIONALE": source_rationale,
         "TARGET_LANGUAGE": target_language,
     }
+    if feedback:
+        payload["VALIDATOR_FEEDBACK_AND_DIRECTIVE"] = feedback
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-            },
-        ],
-        max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.2,
-        top_p=0.95,
-        reasoning_effort="low",
-    )
-
-    return response.choices[0].message.content
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt,
+                    },
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                    },
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+                temperature=0.2,
+                top_p=0.95,
+                reasoning_effort="low",
+            )
+            return extract_message_content(response)
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_sec = 2.0 * (2 ** attempt)
+                print(f"[Agent 2] API call error ({e}). Retrying in {wait_sec}s...")
+                time.sleep(wait_sec)
+            else:
+                raise e
 
 
 def run_agent2(
@@ -101,6 +128,7 @@ def run_agent2(
     languages_path: str,
     language_id: str,
     prompt_path: str,
+    feedback: str = "",
 ) -> str:
     prompt = load_prompt(prompt_path)
     agent1_output = load_text(agent1_output_path)
@@ -113,4 +141,5 @@ def run_agent2(
         agent1_output=agent1_output,
         source_rationale=source.get("rationale"),
         target_language=target_language,
+        feedback=feedback,
     )

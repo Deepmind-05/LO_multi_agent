@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for target language 'mno' suitable for a Linguistic Olympiad puzzle. Include core phonological, morphological, syntactic, and semantic features, with clear mappings between surface forms and underlying linguistic structure. Ensure the concepts are specific enough to support a solvable, non-trivial puzzle.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before generating the puzzle.",
+    "directive": "Using the existing linguistic concepts for target language 'mno', design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how surface forms map to underlying structure, specify the reasoning steps solvers should follow, and ensure the rules are internally consistent and sufficient for generating a non-trivial, solvable puzzle.",
+    "elapsed_seconds": 5.9
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'mno' using the existing concepts and rationale. Include a clear data section with glossed examples, non-trivial questions, and a complete answer key. Ensure all vocabulary is glossed, all questions are solvable from the provided data, and the puzzle is internally consistent.",
+    "elapsed_seconds": 13.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and validate the newly generated puzzle.",
+    "directive": "Solve and rigorously validate the generated Linguistic Olympiad puzzle for target language 'mno'. Check that all data entries are glossed, all questions are solvable from the provided data, the answer key is correct, and there are no ambiguities, typos, missing vocabulary, or trivial questions. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if issues are found.",
+    "elapsed_seconds": 36.7
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator returned PASS_WITH_ISSUES but identified two major puzzle-level defects: a data inconsistency in sentence (21) and an incorrect answer key entry for Q10b. The concepts and rationale appear sound, so the appropriate next step is to have Agent 3 patch the puzzle directly.",
+    "directive": "Patch the puzzle without changing the concepts or rationale. (1) Fix data sentence (21): if the English translation is 'the houses', the surface form must be s\u026an-k-m-n with gloss house-PL-OBL-DEF; if the intended meaning is indefinite, change the translation to 'houses' and ensure all related questions/answers are updated. Prefer the definite form to match the current translation. (2) Correct the answer to Q10b and the solution verification to: s\u026an-k-m-n na \u0263i k\u026al \u0263at. (3) Re-check all definite noun phrases, especially oblique plural forms, for missing -n DEF, and ensure the answer key is fully consistent with the data.",
+    "elapsed_seconds": 42.8
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline currently has concepts, rationale, and a revised puzzle, and puzzle_needs_validation is true. The latest validator feedback is not present in the current state, but the puzzle has just been revised and must be re-validated before any final decision can be made.",
+    "directive": "Solve and rigorously validate the revised Linguistic Olympiad puzzle for target language 'mno'. Specifically verify that the previously reported issues have been fixed: (1) data sentence (21) is internally consistent with its gloss and translation, preferably s\u007fan-k-m-n glossed as house-PL-OBL-DEF and translated as 'the houses'; (2) the answer key and solution for Q10b are corrected to s\u007fan-k-m-n na \u007fi k\u007fal \u007fat; and (3) all definite noun phrases, especially oblique plural forms, consistently include the required -n DEF marker. Check all glosses, translations, questions, and answer-key entries for consistency, ambiguity, typos, missing vocabulary, or triviality. Return PASS, PASS_WITH_ISSUES, or FAIL with precise feedback if any defects remain.",
+    "elapsed_seconds": 49.6
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, puzzle_needs_validation is false, and all required pipeline components are present. The puzzle has been fully verified and is acceptable, so the process should finish successfully.",
+    "directive": "No further action required; the puzzle has passed validation.",
+    "elapsed_seconds": 55.3
+  }
+]

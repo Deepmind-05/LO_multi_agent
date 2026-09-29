@@ -1,0 +1,184 @@
+
+
+CONTEXT
+
+Amele is a Trans-New Guinea language spoken in the Madang Province of Papua New Guinea, with approximately 1,000 speakers. Below are data from Amele with English glosses. Note: ɨ is a central vowel (similar to the 'i' in *roses*); ŋ is the 'ng' in *sing*. All other characters are as in English.
+
+DATA
+
+**Table 1: Possessive phrases**
+
+| # | Amele | Gloss |
+|---|-------|-------|
+| 1 | aan tɨm | my head |
+| 2 | aan sɨw | my shadow |
+| 3 | aar kɨr | my dog |
+| 4 | aar kɨw | my canoe |
+| 5 | aat tɨl | my tree |
+| 6 | aat dɨl | my banana |
+| 7 | aak gɨl | my house |
+| 8 | aak kɨn | my knife |
+| 9 | aaw mɨr | my name |
+| 10 | aaw sɨl | my dream |
+| 11 | een tɨm | your (sg) head |
+| 12 | eer kɨr | your (sg) dog |
+| 13 | eit tɨl | your (sg) tree |
+| 14 | ek gɨl | your (sg) house |
+| 15 | ew mɨr | your (sg) name |
+| 16 | iŋ tɨm | his head |
+| 17 | ir kɨr | his dog |
+| 18 | it tɨl | his tree |
+| 19 | ik gɨl | his house |
+| 20 | iw mɨr | his name |
+| 21 | unun tɨm | our head |
+| 22 | ur kɨr | our dog |
+| 23 | u mɨr | our name |
+| 24 | oŋ tɨm | your (pl) head |
+| 25 | or kɨr | your (pl) dog |
+| 26 | ok gɨl | your (pl) house |
+| 27 | yyn tɨm | their head |
+| 28 | yr kɨr | their dog |
+| 29 | yk gɨl | their house |
+| 30 | sɨmir kɨr | the man's dog |
+| 31 | tɨriŋ tɨm | the mother's head |
+
+**Table 2: Noun phrases with modifiers**
+
+| # | Amele | Gloss |
+|---|-------|-------|
+| 1 | tɨm tɨ | a big head |
+| 2 | kɨr tɨ | a big dog |
+| 3 | gɨl tɨ | a big house |
+| 4 | mɨr tɨ | a big name |
+| 5 | tɨm kɨ | this head |
+| 6 | kɨr kɨ | this dog |
+| 7 | gɨl kɨ | this house |
+| 8 | tɨm mɨ | two heads |
+| 9 | kɨr mɨ | two dogs |
+| 10 | tɨl mɨ | two trees |
+| 11 | sɨmɨn mɨ | two men |
+| 12 | sɨmɨn tɨ | big men |
+
+**Table 3: Sentences with wɨ**
+
+| # | Amele | Gloss |
+|---|-------|-------|
+| 1 | sɨm wɨ gɨl | The man has a house. |
+| 2 | sɨm wɨ mɨt | The man and the woman. |
+| 3 | sɨm wɨ kɨr | The man with the dog. |
+| 4 | sɨmɨn wɨ gɨl | The men have a house. |
+| 5 | kɨr wɨ bɨl | The dog and the bird. |
+| 6 | sɨm wɨ kɨr | The man has a dog. |
+
+**Vocabulary (additional items not in the tables above):**
+
+| Amele | Gloss |
+|-------|-------|
+| sɨm | man |
+| mɨt | woman |
+| kɨl | child |
+| tɨr | mother |
+| bɨn | father |
+| tɨ | big |
+| kɨ | this |
+| mɨ | two |
+| wɨ | (see Table 3) |
+
+QUESTIONS
+
+**Q1 (2 marks).** In the possessive constructions in Table 1, which element bears the possessive marking – the possessor or the possessed noun? Identify the two dimensions of variation in the marking.
+
+**Q2 (3 marks).** Based on Table 1, identify the possessive classes in Amele. For each class, list all nouns that occur in the possessed position and belong to it. (Note: nouns that appear only in the possessor position, such as *sɨm* and *tɨr*, cannot be assigned a possessive class from the given data.)
+
+**Q3 (2 marks).** Table 2 provides additional evidence about the nature of the noun classification system. Explain why the classes identified in Q2 are (a) not a grammatical gender system, and (b) not a numeral classifier system.
+
+**Q4 (2 marks).** In Table 3, the word *wɨ* appears in different contexts. Identify the grammatical function of *wɨ* in each sentence (1–6). What is the relationship between these functions?
+
+**Q5 (4 marks).** Translate the following into Amele:
+
+(a) your (sg) tree
+(b) their name
+(c) my canoe
+(d) the woman has a house
+(e) the man and the child
+(f) our shadow
+(g) the men have a dog
+(h) the big house
+(i) two trees
+(j) the man with the big dog
+
+**Q6 (2 marks).** The possessive suffix paradigm in Table 1 contains three forms that deviate from the regular pattern. Identify each irregular form (give the table number and the surface form) and state the phonological rule that accounts for it.
+
+ANSWERS
+
+**Q1.** The possessor bears the marking (dependent marking). The marking encodes two dimensions: (i) the person and number of the possessor, and (ii) the possessive class of the possessed noun.
+
+**Q2.** There are five possessive classes:
+
+- **Class A:** tɨm (head), sɨw (shadow)
+- **Class B:** kɨr (dog), kɨw (canoe)
+- **Class C:** tɨl (tree), dɨl (banana)
+- **Class D:** gɨl (house), kɨn (knife)
+- **Class E:** mɨr (name), sɨl (dream)
+
+**Q3.** (a) The classes are not a grammatical gender system because the modifiers in Table 2 (adjective *tɨ*, demonstrative *kɨ*) follow the noun and remain invariant regardless of the noun's possessive class. In a gender system, modifiers would be expected to agree with the noun's class. (b) The classes are not a numeral classifier system because the numeral *mɨ* follows the noun and remains invariant regardless of the noun's class (cf. *tɨm mɨ*, *kɨr mɨ*, *tɨl mɨ*, *sɨmɨn mɨ*). In a classifier system, the numeral would be expected to take a class-specific form.
+
+**Q4.**
+- Sentence 1: predicative possessive ("has")
+- Sentence 2: coordinative conjunction ("and")
+- Sentence 3: comitative ("with")
+- Sentence 4: predicative possessive ("has")
+- Sentence 5: coordinative conjunction ("and")
+- Sentence 6: predicative possessive ("has")
+
+The same lexical item *wɨ* serves three functions: coordinative conjunction, comitative, and predicative possessive marker. The interpretation is determined by context (e.g., whether the construction is predicative or adnominal, whether the second NP is a possessed object or a comitative participant).
+
+**Q5.**
+(a) eit tɨl
+(b) yw mɨr
+(c) aar kɨw
+(d) mɨt wɨ gɨl
+(e) sɨm wɨ kɨl
+(f) unun sɨw
+(g) sɨmɨn wɨ kɨr
+(h) gɨl tɨ
+(i) tɨl mɨ
+(j) sɨm wɨ kɨr tɨ
+
+**Q6.**
+- #16: *iŋ* (3SG + Class A). Expected regular form: *\*in*. Rule: n → ŋ after i (nasal assimilation).
+- #23: *u* (1PL + Class E). Expected regular form: *\*uw*. Rule: w → ∅ after u (final glide deletion).
+- #24: *oŋ* (2PL + Class A). Expected regular form: *\*on*. Rule: n → ŋ after o (nasal assimilation).
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Dependent marking in possessive NPs.** The possessor (dependent) carries a suffix; the possessed noun (head) is unmarked. Evidence: in all Table 1 examples, the first element (possessor) is modified while the second element (possessed noun) remains in its citation form (e.g., *tɨm* appears unchanged in #1, #11, #16, #21, #24, #27, #31).
+
+2. **Five possessive classes.** The suffix consonant is determined by the class of the possessed noun. Evidence: within each person/number value, different possessed nouns trigger different suffix consonants. For example, in 1SG: *aan* (→ tɨm, sɨw), *aar* (→ kɨr, kɨw), *aat* (→ tɨl, dɨl), *aak* (→ gɨl, kɨn), *aaw* (→ mɨr, sɨl). The grouping is confirmed across multiple person/number values.
+
+3. **Person/number encoding.** The suffix vowel encodes the person and number of the possessor: a (1SG), e (2SG), i (3SG), u (1PL), o (2PL), y (3PL). Evidence: comparing across rows in Table 1 (e.g., *aan* vs. *een* vs. *iŋ* vs. *unun* vs. *oŋ* vs. *yyn* for Class A).
+
+4. **Not a gender system.** Modifiers (adjective, demonstrative) follow the noun and are invariant across classes (Table 2, #1–7). If this were a gender system, we would expect class-based agreement on modifiers.
+
+5. **Not a numeral classifier system.** The numeral *mɨ* follows the noun and is invariant across classes, including human nouns (Table 2, #8–11). If this were a classifier system, we would expect class-specific numeral forms.
+
+6. **Human-only plural.** The suffix *-ɨn* marks plural on human nouns (*sɨm* → *sɨmɨn* in Table 2 #11, #12; Table 3 #4). Non-human nouns show no plural marking even in plural contexts (e.g., *kɨr mɨ* "two dogs" in Table 2 #9 has no plural marker on *kɨr*). This is a separate, simpler classification (human vs. non-human) that is orthogonal to the possessive class system.
+
+7. **Conjunctional possessive.** Predicative possession ("X has Y") is expressed with *wɨ* (the same word as "and" and "with"), with no possessive suffix on the possessor (Table 3 #1, #4, #6). This contrasts with attributive possession, which uses the class-based suffix (Table 1).
+
+8. **Phonological irregularities.** Two phonological rules account for the three irregular forms: (i) nasal assimilation: n → ŋ after i or o; (ii) final glide deletion: w → ∅ after u.
+
+**How rules produce each answer:**
+
+- Q1: Directly from observation of Table 1 structure.
+- Q2: From systematic comparison of suffix consonants across all examples; the "surprise" nouns (sɨw → Class A, kɨw → Class B) are assigned by their suffix, not by semantic intuition. Only nouns appearing in the possessed position are classifiable; possessor-only nouns (sɨm, tɨr) cannot be assigned a class from the data.
+- Q3: From the invariance of modifiers and numerals in Table 2.
+- Q4: From the English glosses in Table 3; the solver recognizes three distinct functions of the same form.
+- Q5: (a) 2SG vowel *e* + Class C consonant *t* → *eit* + *tɨl*. (b) 3PL vowel *y* + Class E consonant *w* → *yw* + *mɨr*. (c) 1SG vowel *a* + Class B consonant *r* → *aar* + *kɨw* (canoe is Class B, not D). (d) Predicative possession: *mɨt wɨ gɨl* (no suffix). (e) Coordinative: *sɨm wɨ kɨl*. (f) 1PL vowel *u* + Class A consonant *n* → *unun* + *sɨw* (shadow is Class A, not D). (g) Human plural + predicative possession: *sɨmɨn wɨ kɨr*. (h) Noun + adjective: *gɨl tɨ*. (i) Noun + numeral: *tɨl mɨ*. (j) Comitative + adjective on second NP: *sɨm wɨ kɨr tɨ*.
+- Q6: The solver identifies the expected regular forms by applying the vowel + consonant pattern, notices the deviations, and identifies the phonological rules.
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously reconstruct a multi-class possessive system with dependent marking, distinguish it from gender and classifier systems using negative evidence, identify a three-way functional overlap in a single lexical item, recognize an orthogonal human/non-human plural system, and apply all of these rules in production. The "surprise" nouns (shadow, canoe) require the solver to override semantic intuition in favor of morphological evidence. The irregularities require phonological reasoning. The conjunctional possessive creates a structural contrast with attributive possession that the solver must maintain in production. Multiple interacting concepts create layered inference without any single step being trivially difficult.

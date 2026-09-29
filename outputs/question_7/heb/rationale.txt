@@ -1,0 +1,72 @@
+
+
+TARGET-LANGUAGE: Modern Hebrew (heb)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the morphological system to be encoded in the data.** Establish the following rules that the puzzle data will instantiate:
+   - Two grammatical genders: masculine and feminine. Every noun belongs to exactly one.
+   - Adjective paradigm: each adjective has four surface forms — masculine singular, masculine plural, feminine singular, feminine plural. The forms are morphologically distinct (e.g., via suffixes or stem alternations). The adjective follows the noun (NAdj order).
+   - Plural suffixes: masculine plural nouns take suffix A (e.g., *-im*); feminine plural nouns take suffix B (e.g., *-ot*). These suffixes are phonologically distinct and consistent.
+   - Definite article: a prefix (e.g., *ha-*) attaches to the noun. When the noun is definite, the same prefix also attaches to the adjective (definiteness spreading). Indefinite NPs have no prefix on either word.
+   - These rules are the complete system. Do not include spirantization, vowel reduction, or other phonological processes. The puzzle is purely morphological.
+
+2. **Select a closed vocabulary set.** Choose:
+   - 8–10 concrete, countable nouns, split roughly evenly between masculine and feminine (e.g., 4–5 each). Select from semantically transparent categories (animals, body parts, household objects, natural features) so the solver can guess meanings from context or cross-linguistic cognates. Ensure no noun stem ends in a segment identical to a plural suffix or adjective suffix, to avoid false morpheme boundaries.
+   - 4–6 adjectives, all fully regular across the 2×2 paradigm. Choose from a small set of semantic categories (size, color, quality) to keep the system manageable.
+   - A copula or simple predicate structure if needed for sentence framing, but keep it invariant (no agreement on the verb) so it does not introduce a confounding variable.
+   - Do NOT include an irregular adjective. The difficulty in this puzzle comes from the interaction of multiple regular systems (gender × number × definiteness), not from irregularity.
+
+3. **Design the data set in three progressive layers.** The data should be presented as a list of Hebrew noun phrases (or short sentences) with English glosses. The layers should be ordered so that each layer's evidence depends on discoveries from the previous layer.
+
+   **Layer 1 — Establish gender and head-dependency (singular, indefinite NPs):**
+   - Provide 4–6 singular indefinite NPs (e.g., "noun + adjective" with no prefix).
+   - Ensure that at least two different nouns take the same adjective form (e.g., two nouns both take adjective form X), and at least two different nouns take a different adjective form (e.g., two nouns both take adjective form Y). This establishes that there are exactly two classes of nouns.
+   - Ensure that the same adjective appears with nouns from both classes, showing that the adjective changes form depending on the noun. This is the critical evidence for dependent marking: the adjective is the word that varies, the noun is the word that is constant within a class.
+   - The solver should be able to infer at this stage: (a) there are two noun classes; (b) the second word in the NP is the dependent (adjective) because it is the one that changes; (c) the first word is the head (noun). This resolves the NAdj order question through agreement logic, not through prior knowledge of Hebrew word order.
+
+   **Layer 2 — Reveal that plural suffixes encode gender (plural NPs):**
+   - Provide 4–6 plural NPs. Include both plural-with-adjective and at least one plural-without-adjective.
+   - In plural-with-adjective examples, the adjective must appear in its plural form (masculine plural or feminine plural), confirming that the adjective also marks number.
+   - The critical evidence: the plural suffix on the noun must correlate perfectly with the adjective's plural form. Nouns with suffix A always take the masculine plural adjective; nouns with suffix B always take the feminine plural adjective.
+   - Include at least one plural noun WITHOUT an adjective. This is essential: it shows that the plural suffix alone determines gender, independent of adjective agreement. The solver can now assign gender to a noun even without an adjective present.
+   - The solver should be able to infer at this stage: (a) the plural suffix is not merely a number marker but also encodes gender; (b) gender is redundantly encoded in two places (suffix + adjective), and these two channels always agree; (c) the full 2×2 paradigm for adjectives is now visible (masc-sing, fem-sing from Layer 1; masc-pl, fem-pl from Layer 2).
+
+   **Layer 3 — Reveal definiteness spreading (definite NPs):**
+   - Provide 3–5 definite NPs (both singular and plural, both genders).
+   - The prefix must appear on the noun AND on the adjective in every definite NP.
+   - Include at least one indefinite NP alongside a definite NP with the same noun and adjective, so the solver can contrast and isolate the prefix as a definiteness marker.
+   - The solver should be able to infer at this stage: (a) the prefix marks definiteness; (b) definiteness spreads from the head to the dependent (the adjective also receives the prefix); (c) the dependent participates in two agreement domains: gender/number AND definiteness.
+
+4. **Verify uniqueness of induction.** Before finalizing the data, check:
+   - No alternative assignment of nouns to gender classes is consistent with all adjective forms in Layer 1.
+   - The correlation between plural suffix and adjective plural form in Layer 2 is perfect (no exceptions). If a noun with suffix A ever took a feminine plural adjective, the system would be ambiguous.
+   - The definiteness prefix appears on both words in every definite NP and on neither word in every indefinite NP. No partial spreading.
+   - The head-dependency identification is unambiguous: in every NP, exactly one word varies across contexts (the adjective) and exactly one word is stable within a gender class (the noun).
+   - No noun stem creates a false morphological boundary with a suffix (e.g., a noun ending in *-im* in singular would be confusing).
+
+5. **Design the translation questions with progressive difficulty.** The questions should require the solver to apply discovered rules to novel combinations.
+
+   - **Part a (easiest):** Translate a singular indefinite NP where the noun's gender is already established in the data and the adjective is one that appeared in the data. The solver only applies known forms. This confirms basic rule application.
+   - **Part b:** Translate a plural indefinite NP where the noun's gender is established but the specific noun-adjective pairing is novel. The solver must select the correct plural suffix AND the correct adjective plural form. This tests whether the solver has internalized the 2×2 paradigm.
+   - **Part c:** Translate a definite NP (singular or plural). The solver must apply the definiteness prefix to both the noun and the adjective. This tests whether the solver has discovered the spreading rule.
+   - **Part d (hardest):** Translate a definite plural NP where the noun is one that appeared only in singular in the data (so the solver must predict its plural suffix from its gender) AND the adjective is one that appeared only in singular in the data (so the solver must predict its plural form from the paradigm). This requires combining all three discovered systems simultaneously: gender assignment, plural suffix selection, adjective paradigm completion, and definiteness spreading.
+
+6. **Design metalinguistic / identification questions.** These test whether the solver has abstracted the rules rather than merely memorizing forms.
+
+   - **Q1:** Ask the solver to identify, from a list of novel nouns (not seen in the data), which are masculine and which are feminine, based solely on their plural suffix. This tests whether the solver has internalized that the plural suffix encodes gender independently of adjective agreement.
+   - **Q2:** Ask the solver to explain why a given definite NP has the prefix on two words rather than one. This tests whether the solver has identified the spreading rule as a general principle rather than a coincidence.
+   - **Q3 (optional, for additional depth):** Present a hypothetical NP where the plural suffix and the adjective disagree (e.g., a noun with a masculine plural suffix but a feminine plural adjective). Ask the solver to determine whether this is possible in the language and why not. This tests whether the solver understands the redundancy as a constraint, not merely a correlation.
+
+7. **Control for unintended interpretations and confounds.**
+   - Ensure that no adjective stem is identical to or contains a plural suffix, so the solver cannot misparse the boundary between noun and adjective.
+   - Ensure that the definite article prefix is phonologically distinct from any adjective or noun suffix, so it cannot be confused with agreement morphology.
+   - Keep the copula (if used) completely invariant. If the copula showed any gender or number marking, it would introduce a third agreement channel and confuse the head-dependency identification.
+   - In Layer 1, ensure that the two adjective forms are phonologically sufficiently distinct (not just a single vowel difference) so the solver can reliably distinguish them.
+   - Avoid using nouns whose English cognates might suggest gender to the solver (e.g., avoid "king/queen" pairs where the solver might guess gender from semantics rather than from the morphological evidence). The gender assignment should be discoverable only from the agreement pattern.
+
+8. **Final quality check.** Solve the puzzle yourself using only the provided data. Confirm:
+   - Every rule (two genders, NAdj order, dependent marking, plural suffix = gender, definiteness spreading) is uniquely determined by the evidence.
+   - No question requires a rule that has not been sufficiently evidenced in the data.
+   - The difficulty progression is smooth: each part of the translation question and each metalinguistic question builds on discoveries from earlier layers.
+   - A solver with no prior knowledge of Hebrew but with general linguistic reasoning skills can solve every question from the data alone.

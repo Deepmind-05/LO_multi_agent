@@ -1,0 +1,212 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle. The first required step is to extract linguistic features and mappings for the target language, Hausa (hau).",
+    "directive": "Extract rich, typologically grounded linguistic features for Hausa suitable for a Linguistic Olympiad puzzle. Include core morphological, phonological, syntactic, and lexical phenomena, with clear mappings between Hausa forms and English glosses. Prioritize features that can support non-trivial inference questions.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Hausa are present, but rationale is missing. The next required step is to design the reasoning blueprint, morphological rules, and sentence structure templates that will guide puzzle generation.",
+    "directive": "Using the existing Hausa linguistic concepts, create a detailed rationale for a Linguistic Olympiad puzzle. Define clear step-by-step reasoning rules, morphological patterns, sentence structure templates, and inference constraints. Ensure the rationale supports non-trivial questions with unambiguous solutions and consistent Hausa-English glossing.",
+    "elapsed_seconds": 8.1
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing Hausa concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Hausa (hau) using the provided concepts and rationale. Include a clear DATA section with Hausa sentences and English glosses, a vocabulary list if needed, and multiple non-trivial questions with unambiguous answers. Ensure all forms are consistent with the rationale, all questions are solvable from the data, and the answer key is complete and correct.",
+    "elapsed_seconds": 14.1
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 rigorously validate the puzzle.",
+    "directive": "Validate the generated Hausa Linguistic Olympiad puzzle. Check that all DATA sentences are well-formed, consistently glossed, and supported by the concepts and rationale. Verify that every question is solvable from the provided data, unambiguous, non-trivial, and correctly answered in the answer key. Report PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 21.3
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 failed the puzzle because the generated output did not contain an actual complete puzzle: no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. The concepts and rationale are present, and the failure is a puzzle-generation defect rather than a conceptual or rationale contradiction. Agent 3 must regenerate a complete, final, well-structured Hausa Linguistic Olympiad puzzle.",
+    "directive": "Discard the incomplete stream-of-consciousness output and generate a complete final Hausa (hau) Linguistic Olympiad puzzle. The output must contain clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Include Hausa sentences with consistent English glosses, a vocabulary list if needed, and multiple non-trivial questions that are fully solvable from the provided data. Ensure the answer key is complete, unambiguous, and consistent with the existing concepts and rationale. Do not include reasoning traces, loops, or partial drafts; output only the finished puzzle.",
+    "elapsed_seconds": 24.4
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated and is flagged as needing validation, but no validator verdict exists yet. The next required step is to have Agent 4 rigorously validate the latest complete Hausa puzzle.",
+    "directive": "Validate the latest regenerated Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed and consistently glossed; that every question is solvable from the provided data; that answers are unambiguous and correct; and that the puzzle is non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 33.9
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator failed the latest output because it is not a complete puzzle: it lacks final CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and appears to be an unfinished stream-of-consciousness. The concepts and rationale are present, so this is a puzzle-generation defect. Agent 3 must discard the incomplete output and produce a final, fully structured Hausa puzzle with all required sections and a complete answer key.",
+    "directive": "Discard the incomplete stream-of-consciousness output. Generate a complete final Hausa (hau) Linguistic Olympiad puzzle with clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Include well-formed Hausa sentences with consistent English glosses, a vocabulary list if needed, and multiple non-trivial questions that are fully solvable from the provided data. Resolve any unresolved design choices, including the second adjective and question design, and ensure the answer key is complete, unambiguous, and consistent with the existing concepts and rationale. Do not include reasoning traces, loops, or partial drafts; output only the finished puzzle.",
+    "elapsed_seconds": 37.5
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Hausa puzzle has just been generated and is flagged as needing validation, but no validator verdict is present yet. The next required step is to have Agent 4 validate the latest complete puzzle.",
+    "directive": "Validate the latest regenerated Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed and consistently glossed; that every question is solvable from the provided data; that answers are unambiguous and correct; and that the puzzle is non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 45.7
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL because no complete puzzle was produced. Concepts and rationale are present, so this is a puzzle-generation defect rather than a conceptual or rationale problem. Agent 3 must regenerate a final, complete Hausa puzzle with all required sections and no reasoning traces.",
+    "directive": "Discard the incomplete output. Generate only a final Hausa (hau) Linguistic Olympiad puzzle with clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Include a vocabulary list if needed, well-formed Hausa sentences with consistent English glosses, and 3-5 non-trivial questions fully solvable from the data. Keep the output compact and complete; do not include reasoning, drafts, loops, or meta-commentary. Ensure the answer key is complete and consistent with the existing concepts and rationale.",
+    "elapsed_seconds": 48.8
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that concepts, rationale, and a puzzle are present, and puzzle_needs_validation is true with no validator verdict yet. Therefore the required next step is to have Agent 4 validate the latest Hausa puzzle before any further revision or completion.",
+    "directive": "Validate the latest Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed and consistently glossed; that every question is solvable from the provided data; that the answer key is complete, unambiguous, and correct; and that the puzzle is non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 60.0
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator failed the latest output because it is not a complete puzzle: it is truncated, lacks the required CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections, and never commits to a final design. Concepts and rationale are present, so this is a puzzle-generation defect rather than a conceptual or rationale-level failure. Agent 3 must regenerate a complete, final Hausa puzzle and explicitly resolve the unresolved adjective choice.",
+    "directive": "Discard the incomplete stream-of-consciousness output. Generate only the final Hausa (hau) Linguistic Olympiad puzzle with clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Commit to one concrete adjective that fits the stated paradigm and use it consistently throughout the data and questions. Do not include reasoning traces, drafts, loops, or meta-commentary. Ensure all Hausa forms are well-formed and consistently glossed, all questions are non-trivial and fully solvable from the provided data, and the answer key is complete and unambiguous.",
+    "elapsed_seconds": 63.8
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline currently has concepts, rationale, and a puzzle, and puzzle_needs_validation is true with no validator verdict present. Therefore the required next step is to have Agent 4 validate the latest Hausa puzzle before any further revision or completion.",
+    "directive": "Validate the latest Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed and consistently glossed; that every question is solvable from the provided data; that the answer key is complete, unambiguous, and correct; and that the puzzle is non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 77.1
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT2",
+    "reasoning": "The latest validator verdict is FAIL because Agent 3 produced no complete puzzle and repeatedly failed to resolve a core design problem: a novel adjective with a suffix pattern not supported by the data. This is not merely a typo or missing section; it indicates a structural flaw in the rationale/morphological rule system. Since concepts and rationale exist but the rationale appears to require an underdetermined or impossible adjective pattern, the correct next step is to route to Agent 2 to revise the rationale before regenerating the puzzle.",
+    "directive": "Revise the Hausa rationale to eliminate the unresolved adjective design problem. Do not require a novel adjective whose suffix pattern is not demonstrated or explicitly derivable from the data. Either: (1) include all necessary adjective forms in the DATA section, or (2) define a clear, regular morphological rule that allows the novel adjective to be formed unambiguously. Ensure the sentence-structure rules and morphological paradigm are internally consistent, fully solvable from the provided data, and do not force Agent 3 to invent unsupported forms. Keep the existing linguistic concepts intact, but redesign the rationale so a complete puzzle can be generated without ambiguity.",
+    "elapsed_seconds": 80.7
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline currently has concepts and a revised rationale, but no puzzle is present and no validation is pending. The previous failure was routed to Agent 2 because the rationale required an unsupported adjective pattern. Since the rationale is now present, the next required step is to have Agent 3 generate a complete final Hausa puzzle using the revised rationale, ensuring all forms are supported by the data and all required sections are included.",
+    "directive": "Generate only the final complete Hausa (hau) Linguistic Olympiad puzzle using the revised rationale. Include clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure every Hausa form used in questions is either explicitly present in DATA or unambiguously derivable from a stated regular rule. Do not require unsupported novel adjective forms. Provide 3-5 non-trivial questions fully solvable from the data, with a complete and consistent answer key. Do not include reasoning traces, drafts, meta-commentary, or incomplete output.",
+    "elapsed_seconds": 87.8
+  },
+  {
+    "step": 15,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has concepts, a revised rationale, and a newly generated puzzle, with puzzle_needs_validation true and no validator verdict yet. The required next step is to have Agent 4 validate the latest Hausa puzzle before any further revision or completion.",
+    "directive": "Validate the latest Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed and consistently glossed; that every question is solvable from the provided data; that the answer key is complete, unambiguous, and correct; and that the puzzle is non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 99.5
+  },
+  {
+    "step": 16,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The validator identified critical factual errors in the linguistic foundation: the Hausa adjective agreement paradigm is fabricated and several core vocabulary items are invalid. This is not a puzzle-level typo or a rationale-only issue; the underlying linguistic concepts are incorrect and must be replaced with accurate Hausa morphology and vocabulary before any rationale or puzzle can be regenerated.",
+    "directive": "Extract corrected, typologically accurate Hausa linguistic concepts. Replace the fabricated adjective agreement paradigm with the actual Hausa system and ensure all proposed vocabulary items are valid Hausa words with correct glosses. Provide enough accurate morphological and syntactic depth to support a valid Olympiad puzzle, and explicitly avoid invented forms or incorrect agreement patterns.",
+    "elapsed_seconds": 106.9
+  },
+  {
+    "step": 17,
+    "decision": "CALL_AGENT2",
+    "reasoning": "The pipeline currently has corrected concepts but no rationale or puzzle, and no validation is pending. The previous failure was routed to Agent 1 because the foundational Hausa linguistic concepts were inaccurate. Since concepts are now present, the next required step is to have Agent 2 build a revised, internally consistent rationale using the corrected concepts before puzzle generation.",
+    "directive": "Using the corrected Hausa concepts, design a complete and internally consistent rationale for a Linguistic Olympiad puzzle. Ensure all morphological rules, adjective agreement patterns, and sentence-structure templates are typologically accurate and fully supported by the concepts. Do not rely on fabricated or unsupported forms. The rationale must allow Agent 3 to generate a puzzle where every required form is either explicitly provided in DATA or unambiguously derivable from stated rules.",
+    "elapsed_seconds": 120.3
+  },
+  {
+    "step": 18,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline now has corrected Hausa concepts and a revised rationale, but no puzzle has been generated and no validation is pending. The next required step is to have Agent 3 produce a complete, solvable Hausa Linguistic Olympiad puzzle using the current concepts and rationale.",
+    "directive": "Generate the complete final Hausa (hau) Linguistic Olympiad puzzle using the corrected concepts and revised rationale. Include clearly labeled sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure every Hausa form used in the questions is either explicitly present in DATA or unambiguously derivable from a stated regular rule. Do not use fabricated, unsupported, or incorrect adjective agreement forms. Provide 3-5 non-trivial questions that are fully solvable from the data, with a complete, consistent, and correct answer key. Do not include drafts, meta-commentary, reasoning traces, or incomplete output.",
+    "elapsed_seconds": 128.1
+  },
+  {
+    "step": 19,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has corrected concepts, a revised rationale, and a newly generated Hausa puzzle. Since puzzle_needs_validation is true and no validator verdict is present, the required next step is to have Agent 4 validate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the latest Hausa (hau) Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all Hausa forms are well-formed, correctly glossed, and typologically accurate; that every question is solvable from the provided data or stated rules; that the answer key is complete, unambiguous, and correct; and that the questions are non-trivial. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 142.4
+  },
+  {
+    "step": 20,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the reported issues are concrete puzzle-level defects: an inaccurate context claim about noun-phrase word count and a question that is too trivial because it relies on direct lookup from the data table. The concepts and rationale appear sound, so the appropriate next step is a targeted revision by Agent 3, followed by validation.",
+    "directive": "Patch the existing Hausa puzzle without changing the underlying concepts or rationale. 1) Correct the CONTEXT statement about noun-phrase word count so it accurately matches the DATA; if the data includes three-word noun phrases, do not claim that every noun phrase contains exactly two words. 2) Revise Q3 so it is not a direct lookup: replace at least some of the four nouns with novel nouns absent from the DATA, while ensuring their required adjective forms are unambiguously derivable from the stated rules and typologically accurate. Update QUESTIONS, ANSWERS, and SOLUTION consistently. Do not introduce unsupported forms, factual errors, or new ambiguities.",
+    "elapsed_seconds": 148.6
+  },
+  {
+    "step": 21,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Agent 3 has produced a revised Hausa puzzle after the previous PASS_WITH_ISSUES feedback, and puzzle_needs_validation is true with no new validator verdict. The next required step is validation of the latest revision before deciding whether to finish or route further fixes.",
+    "directive": "Validate the latest revised Hausa (hau) puzzle. Specifically verify that the CONTEXT noun-phrase word-count claim now matches the DATA, that Q3 is no longer a trivial direct lookup and uses novel nouns whose adjective forms are unambiguously derivable from the stated rules, and that all sections, glosses, forms, answers, and solution remain internally consistent and typologically accurate. Return PASS, PASS_WITH_ISSUES, or FAIL with precise issues.",
+    "elapsed_seconds": 156.8
+  },
+  {
+    "step": 22,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the MAJOR issue is a concrete linguistic validity defect in the puzzle data: 'darakta' is treated as feminine although it is masculine in standard Hausa. The MINOR issues are also puzzle-level: an ambiguous gloss for 'kura' and a trivial direct-lookup sub-question. The concepts and rationale do not appear fundamentally flawed, so the correct next step is a targeted patch by Agent 3, followed by re-validation.",
+    "directive": "Patch the existing Hausa puzzle without changing the underlying concepts or rationale. 1) Replace 'darakta' with a genuinely feminine inanimate Hausa noun and update all related forms, glosses, DATA rows, QUESTIONS, ANSWERS, and SOLUTION consistently. Do not retain any form that incorrectly treats 'darakta' as feminine. 2) Change the gloss for 'kura' from 'lion' to 'male lion' if the form is intended to be sex-marked, ensuring consistency with other explicitly sex-marked nouns. 3) Revise Q3d so it is not a trivial direct lookup of 'kaza' from the DATA table; replace it with a novel noun or a form that requires non-trivial derivation from the stated rules. Ensure every revised form is typologically accurate, fully supported by the data or stated rules, and internally consistent across all sections.",
+    "elapsed_seconds": 164.8
+  },
+  {
+    "step": 23,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been revised by Agent 3 and puzzle_needs_validation is true, but no validator verdict is present. The required next step is to have Agent 4 validate the current revised Hausa puzzle before deciding whether to finish or route further fixes.",
+    "directive": "Validate the latest revised Hausa (hau) Linguistic Olympiad puzzle. Specifically verify that: 1) 'darakta' has been removed or corrected and no form incorrectly treats it as feminine; 2) the gloss for 'kura' is consistent with its sex-marked status, preferably 'male lion' if applicable; 3) Q3d is no longer a trivial direct lookup and requires non-trivial derivation from the stated rules; 4) all CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections are internally consistent; 5) all Hausa forms are well-formed, correctly glossed, and typologically accurate; and 6) every question is fully solvable from the provided data or stated rules. Return PASS, PASS_WITH_ISSUES, or FAIL with precise issues if any.",
+    "elapsed_seconds": 176.6
+  },
+  {
+    "step": 24,
+    "decision": "CALL_AGENT1",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the MAJOR issue is a foundational linguistic validity error: the puzzle uses a non-existent Hausa feminine adjective form '\u0257aramu' instead of the standard '\u0257aramar'. This indicates that the extracted linguistic concepts or morphological mappings are incorrect, not merely a surface puzzle bug. The safest and most appropriate next step is to route to Agent 1 to correct the Hausa adjective gender-agreement concepts before regenerating the rationale and puzzle.",
+    "directive": "Re-extract and correct the Hausa linguistic concepts, especially adjective gender agreement. Remove any claim or mapping that the feminine form of '\u0257arami' is '\u0257aramu'. Use standard Hausa forms, e.g. masculine '\u0257arami' and feminine '\u0257aramar', and ensure all adjective paradigms, noun gender/sex-marking examples, and typological descriptions are linguistically valid. Provide corrected, typologically rich concepts suitable for a valid Olympiad puzzle.",
+    "elapsed_seconds": 183.6
+  },
+  {
+    "step": 25,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has supplied corrected concepts after the previous foundational adjective-agreement error. Rationale and puzzle are currently absent, so the next required step is Agent 2 to create a consistent reasoning blueprint and sentence-structure rules from the corrected concepts before puzzle generation.",
+    "directive": "Design the rationale and sentence-structure rules for the Hausa puzzle using the corrected concepts. Ensure adjective gender agreement is standard, e.g. masculine -i and feminine -ar, and do not use nonstandard forms such as 'aramu' for feminine 'arami'. Make all noun gender/sex-marking, plural, and agreement rules internally consistent and typologically accurate. Provide clear step-by-step derivations and templates that Agent 3 can use to generate a non-trivial, fully solvable Olympiad puzzle.",
+    "elapsed_seconds": 197.0
+  },
+  {
+    "step": 26,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 1 has corrected the foundational concepts and Agent 2 has now produced a rationale, but no puzzle exists yet. The next required step is to have Agent 3 generate the complete Hausa puzzle from the corrected concepts and rationale, ensuring all forms are typologically accurate and internally consistent before validation.",
+    "directive": "Generate the complete Hausa (hau) Linguistic Olympiad puzzle using the corrected concepts and rationale. Include all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure adjective gender agreement is standard, e.g. masculine -i and feminine -ar, and do not use nonstandard forms such as 'aramu' for feminine 'arami'. Make all noun gender/sex-marking, plural, and agreement examples typologically accurate and fully supported by the data or stated rules. Avoid trivial direct-lookup questions; require non-trivial derivation where appropriate. Ensure every question is solvable from the provided material and that all glosses, forms, answers, and explanations are internally consistent.",
+    "elapsed_seconds": 205.3
+  },
+  {
+    "step": 27,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Hausa puzzle has just been generated and puzzle_needs_validation is true, but no validator verdict is present. The required next step is to have Agent 4 validate the latest puzzle before any further routing or completion.",
+    "directive": "Validate the latest Hausa (hau) Linguistic Olympiad puzzle. Verify that: 1) all adjective gender-agreement forms are standard and internally consistent, especially masculine -i and feminine -ar; 2) no nonstandard forms such as 'aramu' for feminine 'arami' remain; 3) all noun gender, sex-marking, plural, and agreement examples are typologically accurate; 4) CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION are fully consistent; 5) every question is solvable from the provided data or stated rules and is not trivial; and 6) all glosses and Hausa forms are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with precise issues if any.",
+    "elapsed_seconds": 214.8
+  },
+  {
+    "step": 28,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the MAJOR issue is a concrete puzzle-level inconsistency in examples 17 and 18: adjective number/gender forms do not match the nouns and translations. The MINOR issue is that the current questions are too difficult for the target difficulty of 1. These are implementation and difficulty-calibration defects, not foundational concept or rationale failures, so Agent 3 should patch the puzzle directly.",
+    "directive": "Patch the current Hausa puzzle without changing the corrected concepts or rationale. Fix examples 17 and 18 so adjective form, noun number, and translation are internally consistent: either use singular forms such as 'babba gida \u2014 big house' and 'babbar kofa \u2014 big cup', or use plural forms such as 'babban gidaje \u2014 big houses' and 'babbarwa kofaye \u2014 big cups'. Update every dependent question, answer, and solution accordingly. Also reduce the puzzle to target difficulty 1 by simplifying the questions to very easy, single-step inference; avoid requiring solvers to independently infer two adjective classes, a four-way agreement system, or a semantic/formal gender split unless the rule is explicitly and simply given. Ensure all Hausa forms, glosses, answers, and explanations remain fully consistent and solvable.",
+    "elapsed_seconds": 220.2
+  },
+  {
+    "step": 29,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Hausa puzzle has just been generated after the Agent 3 patch, and puzzle_needs_validation is true with no validator verdict present. The required next step is to have Agent 4 validate the latest puzzle, especially the previously flagged examples 17 and 18, adjective gender/number agreement, difficulty calibration, and full internal consistency.",
+    "directive": "Validate the latest revised Hausa (hau) Linguistic Olympiad puzzle. Check specifically: 1) examples 17 and 18 are now internally consistent in adjective form, noun number, and translation; 2) all adjective gender/number agreement is standard and typologically accurate, with no nonstandard forms such as 'aramu' for feminine 'arami'; 3) the puzzle is calibrated to target difficulty 1, using simple single-step inferences rather than requiring solvers to independently infer complex agreement systems; 4) CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION are fully consistent; 5) every question is solvable from the provided material and not trivial; and 6) all Hausa forms and glosses are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with precise issues if any.",
+    "elapsed_seconds": 236.8
+  },
+  {
+    "step": 30,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 has returned a PASS verdict for the latest Hausa puzzle, and puzzle_needs_validation is false. The puzzle is therefore fully verified and acceptable, so the pipeline should finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 240.2
+  }
+]

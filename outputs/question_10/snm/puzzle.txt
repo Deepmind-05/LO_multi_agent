@@ -1,0 +1,126 @@
+
+
+## CONTEXT
+
+Sanuma is a language of the Yanomami family spoken in the upper Rio Negro region of Brazil. Below are sentences in Sanuma with English translations. Parentheses in the English indicate arguments that are not core arguments of the clause.
+
+## DATA
+
+| Sanuma | English |
+|--------|---------|
+| tapa turi | The man went. |
+| kapi muri | The child slept. |
+| mura turi | The jaguar went. |
+| tapa-ke mura hara | The man saw the jaguar. |
+| yara-ke suri kapa | The woman ate the fish. |
+| kapi-ke tana nari | The child built the house. |
+| tapa mura-na hara | The man saw (the jaguar). |
+| yara suri-na kapa | The woman ate (the fish). |
+| tapa ra-ke mura hara turi | The man who saw the jaguar went. |
+| mura tapa-ke ra hara muri | The jaguar that the man saw slept. |
+| kapi ra turi muri | The child who went slept. |
+| mota-ke ra kapa | We (including you) ate him. |
+| moka-ke ra kapa | We (not including you) ate him. |
+| mota turi | We (including you) went. |
+| tapa-ke ra-ke mura hara suri yara-ke ra hara kapa | The man who saw the jaguar ate the fish that the woman saw. |
+| tapa ra-ke mura hara suri-na kapa | The man who saw the jaguar was eating (the fish). |
+
+## QUESTIONS
+
+**Q1.** Translate the following sentences into English.
+
+a. yara ra-ke kapi hara turi
+
+b. kapi suri-na kapa
+
+c. moka-ke suri yara-ke ra hara kapa
+
+**Q2.** Translate the following sentences into Sanuma.
+
+a. The jaguar went.
+
+b. We (including you) saw the child.
+
+c. The woman ate the fish that the child saw.
+
+d. The man who went was seeing (the jaguar).
+
+**Q3.** Briefly explain the following:
+
+a. What is the basic word order of Sanuma, and what evidence supports this?
+
+b. Describe the case-marking system. What is marked, what is unmarked, and where do the markers appear?
+
+c. What type of alignment does Sanuma have, and how can you determine this from the data?
+
+d. How are relative clauses formed in Sanuma? How is the grammatical role of the head noun in the embedded clause indicated?
+
+e. What is the construction in which the agent is unmarked and the patient bears -na? How does it differ from the basic transitive?
+
+f. How do you determine which 1PL pronoun is inclusive and which is exclusive?
+
+## ANSWERS
+
+**Q1a.** The woman who saw the child went.
+
+**Q1b.** The child was eating (the fish).
+
+**Q1c.** We (not including you) ate the fish that the woman saw.
+
+**Q2a.** mura turi
+
+**Q2b.** mota-ke kapi hara
+
+**Q2c.** yara-ke suri kapi-ke ra hara kapa
+
+**Q2d.** tapa ra turi mura-na hara
+
+**Q3a.** The basic word order is SOV (Subject-Object-Verb). In intransitive clauses, the single NP precedes the verb (e.g., *tapa turi*). In transitive clauses, the agent NP precedes the object NP, which precedes the verb (e.g., *tapa-ke mura hara*). The verb is always final.
+
+**Q3b.** Sanuma has three case markers: (1) the ergative *-ke*, a postpositional clitic that follows the transitive agent; (2) the oblique *-na*, a postpositional clitic that follows the patient in the antipassive; (3) zero marking (absolutive), used for intransitive subjects and transitive objects. All markers are postpositional (they follow the noun).
+
+**Q3c.** Sanuma has ergative-absolutive alignment. In intransitive clauses, the subject is unmarked (e.g., *tapa* in *tapa turi*). In transitive clauses, the object is also unmarked (e.g., *mura* in *tapa-ke mura hara*), while the agent bears *-ke*. Since the intransitive subject (S) and the transitive object (O) share the same unmarked form, while the transitive agent (A) is marked, the alignment is ergative-absolutive.
+
+**Q3d.** Relative clauses are correlative: the head noun appears outside (before) the embedded clause, and a correlative pronoun (*ra*) appears inside the embedded clause in the appropriate argument position. The case marking of the correlative pronoun indicates the head's grammatical role in the embedded clause: if the head is the agent of an embedded transitive clause, the correlative is ergative (*ra-ke*); if the head is the patient or the subject of an intransitive clause, the correlative is unmarked (*ra*). The embedded clause follows the same SOV word order and case-marking rules as main clauses.
+
+**Q3e.** This is the antipassive construction. In the antipassive, the agent is expressed as an unmarked (absolutive) NP and the patient is demoted to an oblique complement marked with *-na*. This differs from the basic transitive, where the agent is ergative-marked (*-ke*) and the patient is unmarked (absolutive). The antipassive is a valence-reducing operation that demotes the patient from a core argument to an oblique.
+
+**Q3f.** The inclusive 1PL pronoun is *mota* and the exclusive 1PL pronoun is *moka*. This is determined from the English translations: *mota* is glossed as "we (including you)" and *moka* as "we (not including you)." The inclusive form includes the addressee in the group; the exclusive form does not.
+
+## SOLUTION
+
+**Rules inferred from the data:**
+
+1. **Word order (SOV):** Intransitive clauses show NP + V (e.g., *tapa turi*, *kapi muri*). Transitive clauses show NP + NP + V (e.g., *tapa-ke mura hara*). The verb is consistently final.
+
+2. **Ergative-absolutive alignment:** Comparing intransitive subjects (unmarked: *tapa*, *kapi*, *mura*) with transitive objects (unmarked: *mura*, *suri*, *tana*) shows they share the same form. Transitive agents bear *-ke* (*tapa-ke*, *yara-ke*, *kapi-ke*). This establishes ergative-absolutive alignment: S and O are absolutive (unmarked); A is ergative (marked).
+
+3. **Postpositional case marking:** The markers *-ke* and *-na* always follow the noun they mark (e.g., *tapa-ke*, *mura-na*), confirming they are postpositional clitics.
+
+4. **Antipassive:** In *tapa mura-na hara* and *yara suri-na kapa*, the agent is unmarked (absolutive) and the patient bears *-na* (oblique). This contrasts with the transitive (*tapa-ke mura hara*) where the agent is ergative and the patient is unmarked. The antipassive demotes the patient to an oblique and promotes the agent to absolutive.
+
+5. **Correlative relative clauses:** The head noun appears before the embedded clause. A correlative pronoun *ra* appears inside the embedded clause. Its case marking reflects the head's role: *ra-ke* when the head is the agent of an embedded transitive clause (D1: *tapa ra-ke mura hara turi*); *ra* (unmarked) when the head is the patient (D2: *mura tapa-ke ra hara muri*) or the subject of an intransitive clause (D3: *kapi ra turi muri*).
+
+6. **Inclusive/exclusive 1PL:** *mota* = inclusive (addressee included), *moka* = exclusive (addressee excluded). Both carry the same case marking as other NPs (*mota-ke*, *moka-ke* when ergative).
+
+7. **No verbal person marking:** Verb forms are invariant across different arguments (e.g., *turi* is the same whether the subject is *tapa* or *mura*; *hara* is the same whether the agent is *tapa-ke* or *yara-ke*).
+
+**How the rules produce each answer:**
+
+- **Q1a:** *yara* (woman, head/subject of main intransitive) + *ra-ke* (correlative, agent of embedded transitive) + *kapi* (child, patient of embedded) + *hara* (see, embedded verb) + *turi* (go, main verb) → "The woman who saw the child went."
+
+- **Q1b:** *kapi* (child, agent, absolutive in antipassive) + *suri-na* (fish, patient, oblique) + *kapa* (eat) → "The child was eating (the fish)."
+
+- **Q1c:** *moka-ke* (we-excl, agent, ergative) + *suri* (fish, head of RC, patient of main) + *yara-ke* (woman, agent of embedded) + *ra* (correlative, patient of embedded, unmarked) + *hara* (see, embedded) + *kapa* (eat, main) → "We (not including you) ate the fish that the woman saw."
+
+- **Q2a:** Intransitive, 3SG subject unmarked, verb final → *mura turi*.
+
+- **Q2b:** Transitive, 1PL-inclusive agent ergative, 3SG object unmarked → *mota-ke kapi hara*.
+
+- **Q2c:** Transitive main clause: agent *yara-ke* (woman-ERG), patient *suri* (fish, unmarked, head of RC). RC on patient: head is patient of embedded → correlative unmarked *ra*; agent of embedded *kapi-ke* (child-ERG); verb *hara*. Main verb *kapa* → *yara-ke suri kapi-ke ra hara kapa*.
+
+- **Q2d:** Antipassive main clause: agent *tapa* (man, unmarked/absolutive, head of RC). RC on agent: head is subject of embedded intransitive → correlative unmarked *ra*; verb *turi* (go). Patient: *mura-na* (jaguar-OBL). Main verb: *hara* (see) → *tapa ra turi mura-na hara*.
+
+## DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously infer and apply multiple interacting systems: ergative-absolutive alignment (distinguished from nominative-accusative by comparing intransitive and transitive), postpositional case marking, a valence-reducing antipassive (identified through structural contrast with the transitive), correlative relative clauses (requiring parsing of embedded clause structure and interpretation of correlative case marking), and an inclusive/exclusive pronoun distinction. The final questions (Q1c, Q2c, Q2d) require combining three or more of these systems in a single sentence, demanding full internalization of the grammar rather than pattern-matching on individual features. The absence of verbal person marking forces exclusive reliance on nominal case and word order, elevating the centrality of the alignment analysis.

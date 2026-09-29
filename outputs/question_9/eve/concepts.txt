@@ -1,0 +1,106 @@
+
+
+TARGET-LANGUAGE
+
+Evenki (Tungusic, Altaic)
+
+CORE
+
+1. Noun Number (source 14-1)
+   - Target-language realization: Singular-plural distinction marked by an obligatory plural suffix on all nouns (WALS 33A-2, 34A-6). The suffix shows a limited vowel alternation (e.g., -la / -le) depending on the stem.
+   - Intended solver inference: From parallel noun forms, solver identifies a consistent plural suffix and its internal vowel alternation.
+   - Priority: REQUIRED
+
+2. Vowel Length (source 3A-3, adapted)
+   - Target-language realization: Two-way phonemic vowel length contrast (short vs. long). Long vowels are heavy for stress (WALS 16A-2). Not three-way as in Dinka; reduced to binary contrast.
+   - Intended solver inference: Solver notices that certain vowels are systematically longer and that this correlates with stress placement or morphological behavior.
+   - Priority: HIGH
+
+3. Verb Agreement (source 81-1, adapted)
+   - Target-language realization: Verb agrees with A (subject) for person and number (WALS 102A-2, 100A-2). No zero 3rd person (103A-2). The specific Dinka cross-paradigm correspondence (1st person = singular noun, 3rd person = plural noun) does NOT exist; replaced by regular person/number agreement paradigm.
+   - Intended solver inference: From verb forms with different subjects, solver reconstructs the person/number agreement paradigm.
+   - Priority: HIGH
+
+4. Vowel quality alternations (source, adapted)
+   - Target-language realization: Vowel alternation in the plural suffix (e.g., -la vs. -le) conditioned by stem properties. Much more limited than Dinka's systematic declensional vowel changes.
+   - Intended solver inference: Solver identifies the conditioning environment for the suffix vowel alternation.
+   - Priority: OPTIONAL
+
+Dropped source concepts:
+- Noun Classes (18-2): Evenki has no noun class or gender system (WALS 31A-1, 32A-1). No natural realization.
+- Tone (61-1): Evenki has no tone (WALS 13A-1). No realization.
+- Correspondence between verb conjugation and noun declension: Depends on noun class system; inapplicable.
+- Consonant alternations in declension: Evenki has some consonant alternations in verb stems but they are not as systematic or central as in Dinka's noun class declension. May be included as target-specific if data supports it.
+
+TARGET-SPECIFIC
+
+1. Inclusive/Exclusive 1st Person Plural Distinction
+   - Phenomenon: Evenki distinguishes inclusive (speaker+addressee) and exclusive (speaker+others) 1st person plural in both independent pronouns (WALS 39A-5) and verbal inflection (WALS 40A-5).
+   - Intended solver inference: From data showing two distinct 1st person plural forms in both pronouns and verb agreement, solver infers the inclusive/exclusive distinction.
+   - Interaction with CORE: Interacts with Verb Agreement — the agreement paradigm has an extra slot (1pl.incl vs. 1pl.excl), making the paradigm more complex and the pattern more interesting to reconstruct.
+   - Difficulty contribution: Medium. Adds a dimension to the agreement paradigm that is not obvious without data.
+   - Priority: HIGH
+
+2. Agglutinative Suffixing Morphology
+   - Phenomenon: Evenki is strongly suffixing (WALS 26A-2), exclusively concatenative (WALS 20A-1), with 6-7 categories per verb word (WALS 22A-4). Multiple suffixes stack on a stem.
+   - Intended solver inference: From complex word forms, solver identifies the stem and individual suffixes, recognizing the agglutinative structure.
+   - Interaction with CORE: Provides the structural framework within which plural marking, case marking, and verbal agreement are realized. Enables the solver to segment words into morphemes.
+   - Difficulty contribution: Foundational. Without recognizing the agglutinative structure, other patterns cannot be identified.
+   - Priority: REQUIRED
+
+3. Rich Case System (10+ cases)
+   - Phenomenon: Evenki has 10 or more case categories (WALS 49A-8), all marked by distinct suffixes with no syncretism (WALS 28A-4). Case suffixes follow the plural suffix.
+   - Intended solver inference: From noun phrases in different syntactic roles, solver identifies multiple case suffixes and their ordering relative to the plural suffix.
+   - Interaction with CORE: Interacts with Noun Number — the plural suffix precedes case suffixes, creating a predictable suffix order (stem + plural + case). This ordering is a key structural insight.
+   - Difficulty contribution: Medium-high. The number of cases and their consistent ordering provides rich data but also more to parse.
+   - Priority: OPTIONAL (include if puzzle needs more data; omit if it makes the puzzle too long)
+
+4. Evidentiality (Direct/Indirect)
+   - Phenomenon: Evenki has direct and indirect evidentials that are part of the tense system (WALS 77A-3, 78A-3).
+   - Intended solver inference: From verb forms, solver identifies an additional morphological slot encoding evidentiality.
+   - Interaction with CORE: Adds a layer to the verbal paradigm beyond person/number/tense, increasing the complexity of the agreement paradigm the solver must reconstruct.
+   - Difficulty contribution: High. Adds a non-obvious dimension to verb morphology.
+   - Priority: OPTIONAL (use if puzzle needs additional difficulty; may be too much combined with other features)
+
+5. Vowel Length and Stress Interaction
+   - Phenomenon: Long vowels are heavy for stress (WALS 16A-2). Stress falls on ultimate or penultimate syllable (WALS 15A-3), with iambic rhythm (WALS 17A-2).
+   - Intended solver inference: If stress is marked in the data, solver can infer that long vowels attract stress, confirming the phonemic length contrast.
+   - Interaction with CORE: Provides independent evidence for the vowel length contrast (CORE item 2). The stress pattern gives the solver a functional consequence of the length contrast.
+   - Difficulty contribution: Medium. Adds a phonological layer that interacts with the morphological layer.
+   - Priority: HIGH (if stress is marked in data; otherwise the length contrast must be shown through other means)
+
+INTERACTIONS
+
+1. Agglutinative structure + Noun Number + Case system:
+   - The suffix order (stem → plural → case) is a key structural pattern. Solver must identify that the plural suffix is invariant in position relative to case suffixes, even when the plural suffix vowel alternates.
+   - Additional inference: The fixed ordering of suffixes is a hallmark of agglutinative morphology and provides a "skeleton" for parsing all noun forms.
+
+2. Verb Agreement + Inclusive/Exclusive:
+   - The agreement paradigm has 6+ person/number slots (1sg, 2sg, 3sg, 1pl.incl, 1pl.excl, 2pl, 3pl). The inclusive/exclusive distinction creates an asymmetry that is not present in most European languages, making the paradigm reconstruction more challenging and more interesting.
+   - Additional inference: The solver must notice that there are TWO 1st person plural forms and determine their semantic distinction from context.
+
+3. Vowel Length + Stress + Agglutinative structure:
+   - Long vowels in stems or suffixes affect stress placement. If a suffix contains a long vowel, it may attract stress, potentially revealing the boundary between stem and suffix.
+   - Additional inference: Stress patterns can serve as a diagnostic for morpheme boundaries, helping the solver segment complex words.
+
+4. Vowel alternation in plural suffix + Stem properties:
+   - The vowel in the plural suffix (-la/-le) is conditioned by the stem (e.g., by the quality of the stem-final vowel or by vowel length). This creates a predictable but non-trivial alternation.
+   - Additional inference: The solver must identify the conditioning factor, which may involve the vowel length contrast (long vs. short stem vowels triggering different suffix vowels).
+
+CONSTRAINTS
+
+1. Do NOT present a noun class or gender system. Evenki has none. Any apparent "class" distinctions in the data must be explainable by other factors (e.g., semantic categories affecting case selection, not morphological class).
+
+2. Do NOT use tone as a distinguishing feature. Evenki is atonal. Any apparent "pitch" differences in data must be attributed to stress or vowel quality, not tone.
+
+3. The vowel length contrast must be presented as binary (short vs. long), not three-way. Do not invent a "medium" length category.
+
+4. The inclusive/exclusive distinction must be clearly evidenced in the data (at least two distinct 1pl forms in both pronouns and verb agreement). The solver must be able to determine which is inclusive and which is exclusive from contextual clues in the data.
+
+5. Suffix ordering must be consistent: stem → plural → case (for nouns); stem → aspect/tense → evidential → person/number (for verbs, approximate). Do not present inconsistent ordering that would confuse the agglutinative pattern.
+
+6. If consonant alternations are included, they must be regular and predictable from the data. Do not include sporadic or lexicalized alternations that cannot be generalized.
+
+7. The puzzle must provide sufficient data points for each pattern: at minimum, 3+ examples for each morphological rule the solver is expected to discover.
+
+8. All linguistic facts presented must be consistent with established Evenki grammar. Do not invent morphological patterns not attested in the language.

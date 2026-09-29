@@ -1,0 +1,139 @@
+
+
+CONTEXT
+
+The following sentences are from a language spoken in the Philippines. Each sentence is followed by its English translation. The language uses a Latin-based writing system. You are given no prior knowledge of this language; all relevant patterns must be inferred from the data.
+
+DATA
+
+**Vocabulary glossary:**
+
+| Form | Meaning |
+|------|---------|
+| Maria, Juan | personal names |
+| pagkain | food |
+| sabon | soap |
+| bahay | house |
+| tubig | water |
+| aso | dog |
+| pusa | cat |
+| tao | person |
+| hayop | animal |
+| bagay | thing |
+| isang | one |
+| dalawang | two |
+| tayo | we (form A) |
+| kami | we (form B) |
+
+**Sentences:**
+
+1. *Magluto si Maria ng pagkain.* — Maria cooks food.
+2. *Magluluto si Maria ng pagkain.* — Maria is cooking food.
+3. *Maghugot si Juan ng sabon.* — Juan washes soap.
+4. *Maghuhugot si Juan ng sabon.* — Juan is washing soap.
+5. *Magdala si Juan ng tubig sa bahay.* — Juan carries water to the house.
+6. *Magdadala si Juan ng tubig sa bahay.* — Juan is carrying water to the house.
+7. *Lutuin ni Maria ang pagkain.* — Maria cooks the food.
+8. *Lulutuin ni Maria ang pagkain.* — Maria is cooking the food.
+9. *Hugutin ni Juan ang sabon.* — Juan washes the soap.
+10. *Huhugutin ni Juan ang sabon.* — Juan is washing the soap.
+11. *Dalaan ni Juan ang bahay.* — Juan carries to the house.
+12. *Dadalaan ni Juan ang bahay.* — Juan is carrying to the house.
+13. *Gawaan ni Maria ang bahay.* — Maria builds in the house.
+14. *Gagawaan ni Maria ang bahay.* — Maria is building in the house.
+15. *Isang tao si Maria.* — Maria is one person.
+16. *Isang hayop ang aso.* — The dog is one animal.
+17. *Isang bagay ang bahay.* — The house is one thing.
+18. *Dalawang tao si Maria at si Juan.* — Maria and Juan are two people.
+19. *Dalawang hayop ang aso at ang pusa.* — The dog and the cat are two animals.
+20. *Dalawang bagay ang bahay at ang sabon.* — The house and the soap are two things.
+21. *Tayo ang magluto ng pagkain.* — Maria says to Juan, who is standing in the kitchen with her: "We will cook food."
+22. *Kami ang magluto ng pagkain.* — Maria says to Juan, who is outside the house: "We will cook food."
+
+QUESTIONS
+
+**Q1.** Compare sentences 1 and 2. The verb changes from *magluto* to *magluluto*. What semantic difference does this change encode? State the general rule for how this difference is marked on the verb.
+
+**Q2.** In sentence 1 (*Magluto si Maria ng pagkain*), the argument *Maria* is marked by *si*. In sentence 7 (*Lutuin ni Maria ang pagkain*), the argument *pagkain* is marked by *ang*. What semantic role does the *si/-ang*-marked argument play in each sentence? What does the verb affix tell you about which argument is in "focus"?
+
+**Q3.** State the ordering rule: given a verb root and a focus affix, where does the reduplicated syllable appear? Express your rule in terms of the relative positions of [focus affix], [reduplicated syllable], and [root].
+
+**Q4.** A new verb root *turo* (teach) is introduced. Produce the correct verb form for each of the following:
+
+a) Actor focus, perfective
+b) Actor focus, imperfective
+c) Patient focus, imperfective
+
+**Q5.** Based on sentences 15–20, what semantic category does each classifier encode?
+
+a) *tao*
+b) *hayop*
+c) *bagay*
+
+**Q6.** Which classifier would you use with each of the following nouns?
+
+a) *pusa* (cat)
+b) *Juan*
+c) *tubig* (water)
+
+**Q7.** In sentences 21 and 22, Maria uses different first-person plural pronouns. Based on the contextual information provided, what is the semantic difference between *tayo* and *kami*?
+
+**Q8.** Translate into the language: "We (including you) are washing the soap."
+
+ANSWERS
+
+**Q1.** The change encodes aspect: *magluto* (no reduplication) is perfective (completed action); *magluluto* (with reduplicated syllable *lu-*) is imperfective (ongoing action). The general rule: imperfective is marked by reduplicating the first syllable of the verb root; perfective has no reduplication.
+
+**Q2.** In sentence 1, *si Maria* is the actor (the one performing the action). In sentence 7, *ang pagkain* is the patient (the thing affected by the action). The verb affix indicates which semantic role is in focus: *mag-* marks actor focus; *-in* marks patient focus. The argument marked by *si/ang* is the one in focus.
+
+**Q3.** The reduplicated syllable always appears adjacent to the verb root, on the side opposite the focus affix. Specifically:
+- With a prefix focus affix (mag-): [prefix] + [redup] + [root]
+- With a suffix focus affix (-in, -an): [redup] + [root] + [suffix]
+
+**Q4.**
+a) *magturo*
+b) *magtuturo*
+c) *tuturuin*
+
+**Q5.**
+a) *tao* → human persons
+b) *hayop* → non-human animals
+c) *bagay* → inanimate objects/things
+
+**Q6.**
+a) *hayop*
+b) *tao*
+c) *bagay*
+
+**Q7.** *Tayo* is inclusive (the "we" includes the addressee); *kami* is exclusive (the "we" excludes the addressee). In sentence 21, Juan is in the kitchen with Maria, so the "we" includes him. In sentence 22, Juan is outside the house, so the "we" does not include him.
+
+**Q8.** *Tayo ang maghuhugot ng sabon.*
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Focus system:** The verb carries an affix that indicates which semantic role is in "focus" (i.e., serves as the topic of the clause). The focus-marked argument is the one preceded by *si* (personal names) or *ang* (common nouns). Evidence: In sentences 1–6, the actor is marked by *si* and the verb has prefix *mag-*; in sentences 7–10, the patient is marked by *ang* and the verb has suffix *-in*; in sentences 11–14, the locative is marked by *ang* and the verb has suffix *-an*. Non-focus arguments appear with *ng* (patient), *ni* (personal name actor), or *sa* (locative).
+
+2. **Aspect via reduplication:** Imperfective (ongoing) is marked by reduplicating the first syllable of the verb root; perfective (completed) has no reduplication. Evidence: Every pair of sentences (1/2, 3/4, 5/6, 7/8, 9/10, 11/12, 13/14) shows the same root with and without a repeated initial syllable, corresponding to "is V-ing" vs. "V's" in the translations.
+
+3. **Ordering rule:** The reduplicated syllable is always adjacent to the root, on the side opposite the focus affix. With prefix *mag-*: mag- + redup + root (e.g., mag- + lu- + luto = magluluto). With suffix *-in* or *-an*: redup + root + suffix (e.g., lu- + luto + -in = lulutuin; da- + dala + -an = dadalaan). This rule is uniquely determined by the data: no alternative ordering (e.g., "redup always first" or "redup always last") is consistent with all forms.
+
+4. **Classifiers:** The word between the numeral and the noun is a classifier encoding a semantic category. *Tao* → human (Maria, Juan); *hayop* → non-human animal (aso, pusa); *bagay* → inanimate thing (bahay, sabon). The mapping is uniquely determined by the pairings in sentences 15–20.
+
+5. **Inclusive/exclusive:** *Tayo* is inclusive; *kami* is exclusive. Evidence: In sentence 21, Juan (the addressee) is physically present in the kitchen with Maria, and *tayo* is used. In sentence 22, Juan is outside the house (not part of the group cooking), and *kami* is used. The solver must notice the contextual difference in the addressee's inclusion in the group and connect it to the pronoun choice.
+
+**How rules produce each answer:**
+
+- Q1: Directly from the aspect contrast in sentence pairs.
+- Q2: From the correlation between *si/ang* marking and verb affix type across sentences.
+- Q3: From comparing reduplication position across focus types (prefix vs. suffix).
+- Q4: Application of rules 1–3 to novel root *turo* (first syllable *tu-*). Part (a) requires only the prefix + root. Part (b) adds reduplication in the correct position after the prefix. Part (c) requires the suffix and reduplication in the correct position before the root.
+- Q5: From the noun-classifier pairings in sentences 15–20.
+- Q6: Application of the classifier mapping to new nouns.
+- Q7: From the contextual contrast in sentences 21–22 (addressee present vs. absent).
+- Q8: Combines inclusive pronoun (*tayo*), actor focus (*mag-*), imperfective (redup *hu-*), and non-focus patient (*ng sabon*): *Tayo ang maghuhugot ng sabon.*
+
+DIFFICULTY
+
+**Level 1.** The puzzle requires identifying a focus-marking system (rather than a simple active/passive voice), extracting a morphological ordering rule for reduplication position, and applying these rules productively to a novel root in a scaffolded manner. The classifier and inclusive/exclusive elements add breadth but are straightforward pattern-identification tasks. The central challenge—recognizing that the verb affix encodes which argument is in topic/focus position, and that reduplication position is determined by the affix type—is non-trivial but fully supported by the controlled contrasts in the data. The inclusive/exclusive question requires the solver to connect contextual information (addressee's physical presence) to the pronoun choice, rather than simply reading a gloss.

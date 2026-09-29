@@ -1,0 +1,14 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+2
+
+ISSUES
+
+* [MAJOR] Sentence (7) has the word order S V Loc (čul-l xan-d war-a) while sentences (8), (9), and (12) all have S Loc V (e.g., xan-l war-a xan-d). This internal inconsistency makes B3 ambiguous: a solver following the majority pattern would produce "čul-l t'ar-a xan-d" while the provided answer "čul-l xan-d t'ar-a" follows only the (7) pattern. The data must be made consistent so that only one word order is supported.
+* [MINOR] The solution states "SOV word order" as a general rule, but this is directly contradicted by sentence (7) in the data. The solution's stated rule should match what the data actually shows.

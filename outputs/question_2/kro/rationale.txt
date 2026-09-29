@@ -1,0 +1,163 @@
+
+
+TARGET-LANGUAGE: Krongo (Kadu, Africa)
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the morphological and syntactic inventory.**
+
+Define the following elements that will appear in the puzzle data:
+
+- **Noun number marking:** Krongo nouns have two forms: singular (zero-marked, no prefix) and plural (prefix-marked with a single, consistent CV-type prefix). This prefix appears on the noun whenever the noun is plural, including in numeral phrases. The prefix is invariant across nouns (no allomorphy in the data).
+
+- **Numeral system (pure vigesimal):** Basic numerals 1–19 are single lexical items. The word for 20 is a distinct lexical item. Numerals 21–39 are formed additively as [20-word] [units-word]. The numeral for 40 is [20-word] [20-word]. Numerals above 40 extend the same additive pattern (e.g., 41 = [20-word] [20-word] [1-word]). The setter must choose a consistent formation strategy and apply it throughout.
+
+- **Noun-numeral phrase structure:** Order is Noun-Numeral. The noun carries its obligatory plural prefix (since any numeral > 1 implies plurality). The numeral is unmarked. No classifier or other element intervenes between noun and numeral.
+
+- **Clause structure (VSO):** Basic word order is Verb-Subject-Object. The verb is a single, uninflected lexical form (no person, number, or tense agreement). Arguments are expressed as full noun phrases.
+
+- **Negation (obligatory double, NegVSONeg):** Negative sentences follow the pattern Neg₁-V-S-O-Neg₂. Both elements are obligatory and must co-occur. Neg₁ is a pre-verbal word; Neg₂ is a post-object (clause-final) word. They are distinct lexical items (not the same word repeated).
+
+- **Pronouns (optional inclusion):** If the inclusive/exclusive 1PL distinction is included, provide two distinct 1PL pronoun forms. Translations must make the distinction explicit (e.g., "we (including you)" vs. "we (not including you)").
+
+2. **Design the baseline data set (affirmative sentences).**
+
+Provide 5–7 affirmative sentences structured to establish inferences in a specific sequence:
+
+- **First 2 sentences:** Simple transitive sentences with singular noun arguments (no numeral phrases). Use different verbs and different nouns for subject and object. These establish: (a) VSO word order (the translation reveals which NP is subject vs. object), (b) verbs are uninflected (same form across sentences with different subjects), (c) singular nouns are zero-marked (no prefix).
+
+- **Next 2–3 sentences:** Sentences containing a noun-numeral phrase in the subject or object position. Use small numerals (2–5). These establish: (a) the noun carries a prefix in numeral phrases (direct contrast with the zero-marked singular in the first sentences), (b) the numeral follows the noun, (c) the numeral is unmarked and invariant. The solver should infer that the prefix is a plural marker (the noun is plural because the numeral > 1), not a numeral-specific form.
+
+- **Final 1–2 sentences:** Sentences with larger basic numerals (e.g., 15, 19) to introduce additional numeral vocabulary and set up the vigesimal inference. Same noun-numeral pattern, new numeral values.
+
+**Critical design constraint:** The first sentences MUST use singular nouns (zero-marked) so the solver has a clear contrast when the plural prefix first appears. Without this contrast, the solver may not notice the prefix or may misinterpret its function.
+
+3. **Design the vigesimal numeral evidence.**
+
+The solver must deduce that the numeral system is base-20. To achieve this:
+
+- Include at least one data item (sentence or list entry) containing the word for 20 in a context where its value is unambiguous (e.g., a sentence meaning "I saw 20 dogs" or a numeral list entry "20 = [word]").
+- Include at least one compound in the 20s (e.g., 21 = [20-word] [1-word], or 25 = [20-word] [5-word]) in a sentence context.
+- Include at least one example of 40 (as [20-word] [20-word]) to confirm the pattern extends.
+- The total set of numeral values visible across all data (baseline sentences + any supplementary list) should span at minimum: 1, 2, 5, 10, 15, 19, 20, 21 (or 25), 40. This range allows the solver to identify the "20" unit and the additive composition rule.
+
+**Presentation options (setter chooses):**
+- Option A: All numerals appear embedded in sentences (more natural, harder to isolate the pattern).
+- Option B: A separate short "numeral list" is provided alongside the sentences (easier focus on the numeral pattern).
+- Option C (recommended): A mix — most numerals appear in sentences, plus a short supplementary list of 3–4 additional numeral values needed for the questions but not visible in the baseline sentences.
+
+**Critical design constraint:** Do NOT present compound numerals in a transparent table that directly shows the additive formula (e.g., do not write "25 = [20-word] + [5-word]"). Instead, let the solver see the pattern in sentence context (e.g., a sentence meaning "I saw 25 dogs" where the Krongo form is [dog.PL] [20-word] [5-word]). The solver must recognize that [20-word] [5-word] = 25 (additive), not 20×5 or some other operation. The semantic context (a natural number of dogs) disambiguates.
+
+4. **Design the negative sentence data.**
+
+Provide 2–3 negative sentences that establish the double negation pattern:
+
+- Each negative sentence must contain BOTH negative elements: Neg₁ immediately before the verb, Neg₂ after the object (clause-final).
+- Use at least one negative sentence that also contains a numeral phrase (to demonstrate the interaction between negation and noun-numeral structure in a single clause).
+- Translations must clearly indicate negation (e.g., "did not see," "does not have").
+- The two negative elements should be distinct words to make it clear they are separate morphemes, not a single element split across the clause.
+
+**Critical design constraint:** All negative sentences in the data must show both elements. Do NOT include a "half-negative" sentence (with only one element). The obligatory nature is established by consistent co-occurrence across all negative examples. If the solver sees both elements in every negative sentence and neither in any affirmative sentence, the inference is forced.
+
+5. **Design Question Set A: "Translate English sentences into Krongo."**
+
+Create 5–7 sub-items with the following coverage and difficulty progression:
+
+- **Item 1 (easiest):** A simple affirmative sentence with singular noun arguments (no numeral). Tests: VSO order, zero-marked singular noun, uninflected verb. All lexical items should be visible in the baseline.
+
+- **Item 2:** An affirmative sentence with a small numeral phrase (e.g., "three dogs"). Tests: VSO order, plural prefix on noun, noun-numeral order, unmarked numeral. The numeral should be one already seen in the baseline.
+
+- **Item 3:** An affirmative sentence with a numeral in the 20s (e.g., "25 dogs"). Tests: vigesimal compound numeral (20+5), plural prefix, noun-numeral order. The solver must apply the additive pattern to a new combination not seen verbatim in the data.
+
+- **Item 4:** A negative sentence with a singular noun (no numeral). Tests: VSO order, double negation frame (Neg₁-V-S-O-Neg₂). The solver must correctly place both negative elements in their fixed positions.
+
+- **Item 5:** A negative sentence with a numeral phrase (e.g., "did not see 21 dogs"). Tests: ALL systems simultaneously — VSO, double negation, plural prefix, noun-numeral order, vigesimal compound. This is the highest-difficulty item in the set.
+
+- **Item 6 (optional, if inclusive/exclusive is included):** A sentence with a 1PL pronoun subject, where the English translation specifies whether the addressee is included. Tests: correct selection of inclusive vs. exclusive form.
+
+- **Item 7 (optional):** A sentence with a numeral of 40 or above (e.g., "41 cats"). Tests: extended vigesimal pattern (2×20 + 1).
+
+**Ambiguity prevention:** Ensure that no question item could be answered in multiple ways. If the solver might be unsure whether 40 is [20][20] or a dedicated word, do not require them to produce 40 unless the pattern is unambiguously established in the data (e.g., by showing 40 in the baseline).
+
+6. **Design Question Set B: "Translate Krongo sentences into English."**
+
+Create 5–7 sub-items testing the reverse direction. These often require decoding unfamiliar combinations:
+
+- **Item 1:** A simple affirmative VSO sentence with singular nouns. Tests: VSO parsing, identification of subject vs. object from word position.
+
+- **Item 2:** An affirmative sentence with a numeral phrase. Tests: identifying the noun-numeral phrase, recognizing the plural prefix, reading the numeral value.
+
+- **Item 3:** An affirmative sentence with a vigesimal compound numeral (e.g., the Krongo form for 37). Tests: decoding the additive pattern (20+17), recognizing the plural prefix, producing the correct English numeral.
+
+- **Item 4:** A negative sentence with a numeral phrase. Tests: identifying the double negation frame, parsing VSO within the frame, decoding the numeral, producing a correct English negative sentence.
+
+- **Item 5:** A negative sentence with a numeral of 40 or above. Tests: extended vigesimal decoding + double negation + noun-numeral parsing simultaneously.
+
+- **Item 6 (optional):** A sentence with a 1PL pronoun. Tests: identifying which 1PL form is used and providing the correct English gloss (inclusive vs. exclusive).
+
+7. **Verify the inference chain is uniquely determined.**
+
+Walk through the solver's perspective in stages:
+
+- **Stage 1 (from first 2 baseline sentences):** The solver identifies VSO word order (verb is first, followed by two NPs; the translation reveals which is subject and which is object). The solver notes that verbs are uninflected (same form regardless of subject). The solver notes that singular nouns have no prefix.
+
+- **Stage 2 (from numeral-phrase sentences):** The solver notices that the noun form changes (a prefix appears) when a numeral is present. The solver identifies the order as Noun-Numeral. The solver infers that the prefix is a plural marker (the noun is plural because the numeral > 1). The solver notes that the numeral itself is invariant. The solver can also confirm the absence of any classifier element (negative space for the "no classification" concept).
+
+- **Stage 3 (from vigesimal evidence):** The solver identifies the word for 20 (it appears in a context where the translation is "20" or in a compound that can only be 20+something given the known values). The solver recognizes the additive pattern: [20-word] [X-word] = 20+X. The solver can then decode or produce any numeral in the 20s, 40s, etc.
+
+- **Stage 4 (from negative sentences):** The solver identifies two negative elements in each negative sentence. The solver notes that Neg₁ precedes the verb and Neg₂ follows the object (clause-final). The solver infers that both are obligatory (they always co-occur in the data, and neither appears in affirmative sentences).
+
+- **Stage 5 (applying to questions):** The solver combines all discovered rules to produce or decode the question items.
+
+**Uniqueness check at each stage:**
+- Could the solver interpret the noun prefix as a case marker rather than a number marker? Prevent this by ensuring the prefix appears ONLY in contexts where plurality is semantically required (numeral phrases, or optionally a simple plural context like "the dogs" without a numeral). If the prefix also appears in a non-numeral plural context, include such an example to confirm it is a number marker.
+- Could the solver interpret the vigesimal compounds as multiplicative? Prevent this by using natural contexts where the value is unambiguous (e.g., "25 dogs" in a realistic scenario cannot be 100).
+- Could the solver interpret one negation element as a focus marker or discourse particle? Prevent this by ensuring both elements appear ONLY in negative sentences and never in affirmative ones, and by using translations that clearly mark negation.
+
+8. **Check for unintended alternative interpretations and edge cases.**
+
+- **VSO vs. other orders:** Ensure no sentence in the data could be parsed as SVO or OVS. Use different nouns for subject and object (no coreference) so the solver can use the translation to identify which NP is which. If a sentence has only one argument (intransitive), it should not appear in the core data (or should be clearly marked as intransitive in the translation).
+- **Numeral ambiguity:** Ensure no numeral in the data could be misread. If the word for "5" is also a component of "25," the solver should be able to distinguish them from context (the presence of the "20" word signals a compound).
+- **Negation scope:** Ensure the double negation is clearly clause-level. Avoid sentences with embedded clauses, relative clauses, or other structures that could create scope ambiguity.
+- **Plural prefix vs. other prefixes:** If nouns have other prefixes (definite article, noun-class prefix), ensure they are consistent and do not interfere with identification of the number prefix. Ideally, use nouns with no other prefixes in the core data to keep the morphological analysis clean.
+- **Numeral "1":** Decide whether "one" triggers the plural prefix or not. In most languages, "one" is semantically singular. If Krongo treats "one" as singular (zero-marked noun), include an example showing this. If "one" triggers the plural prefix (some languages do), make this consistent and provide evidence. The simplest choice for the puzzle is: "one" = singular (zero-marked), so the plural prefix appears only with numerals ≥ 2.
+
+9. **Assign difficulty progression and verify solvability.**
+
+The overall difficulty should progress as follows:
+
+- **Phase 1 (baseline reading, items 1–2 of each set):** The solver discovers VSO, zero-marked singular, and the basic noun-numeral pattern. Relatively straightforward pattern recognition.
+- **Phase 2 (numeral decoding, items 3 of each set):** The solver deduces the vigesimal system. This is the hardest single inference and requires numerical pattern recognition across multiple data points.
+- **Phase 3 (negation, items 4 of each set):** The solver discovers the double negation pattern. Typologically unusual but the pattern is regular and consistent in the data.
+- **Phase 4 (integration, items 5–7 of each set):** The questions require combining all systems. The hardest items (negative + vigesimal + numeral phrase) require the solver to apply 4–5 rules simultaneously.
+
+**Solvability check for each question item:**
+- All required lexical items appear in the data or are derivable from the data.
+- All required grammatical rules are established by the data.
+- The answer is unique (no alternative interpretation yields a different answer).
+- The solver does not need any prior knowledge of Krongo, Kadu, or any specific African language.
+- General linguistic knowledge (e.g., awareness that numeral systems can have different bases, that word order varies across languages, that some languages use multiple negation markers) is sufficient background.
+
+10. **Specify glossing and presentation conventions.**
+
+- Present the data as numbered sentences with English translations.
+- Use a consistent visual distinction between the target-language text and the translation (e.g., target language in roman type, translation in italics or in parentheses).
+- If interlinear glossing is used, follow Leipzig Glossing Rules.
+- Provide a brief instruction to the solver: "The following sentences are in Krongo, a language of the Kadu family spoken in Africa. Use the data to answer the questions."
+- Do NOT provide any grammatical description, rule statements, or hints. The solver must discover everything from the data.
+- If a supplementary numeral list is included, present it as a simple list (e.g., "1 = X, 2 = Y, ...") without commentary.
+- The total number of distinct grammatical rules the solver must apply is five: (1) VSO word order, (2) noun number marking (zero singular / prefix plural), (3) noun-numeral order with dependent marking, (4) vigesimal numeral composition, (5) obligatory double negation (NegVSONeg). Each is independently discoverable from the data.
+
+11. **Final consistency checklist.**
+
+Verify that:
+- (a) Every noun in the data consistently shows the correct number marking (zero for singular, prefix for plural).
+- (b) Every numeral in the data is consistent with the vigesimal system.
+- (c) Every negative sentence contains both negation elements in the correct positions (Neg₁ pre-verbal, Neg₂ clause-final).
+- (d) Every sentence follows VSO order with no exceptions.
+- (e) No verb shows person, number, or tense agreement.
+- (f) The plural prefix is the same morpheme throughout (no allomorphy).
+- (g) The two negation elements are distinct words and are used consistently across all negative sentences.
+- (h) All question items are answerable using only the rules and vocabulary established in the data.
+- (i) No rule requires prior knowledge of Krongo or any specific language.
+- (j) The data contains no irregularities or exceptions that are not themselves part of the puzzle target.

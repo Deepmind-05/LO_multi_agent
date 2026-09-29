@@ -1,0 +1,175 @@
+
+
+CONTEXT
+
+Lezgian is a Nakh-Daghestanian language spoken in the Caucasus region. Below are Lezgian sentences with English translations. Plural (pl) and singular (sg) are indicated in the translations.
+
+DATA
+
+| # | Lezgian | English |
+|---|---------|---------|
+| 1 | tara ba. | Water (sg) is (here). |
+| 2 | tara-a ba. | Waters (pl) are (here). |
+| 3 | bat-i ba. | Dogs (pl) are (here). |
+| 4 | kora ba. | A house (sg) is (here). |
+| 5 | kər-il tara vur. | The man (sg) eats water (sg). |
+| 6 | tara-n kora ba. | The water's (sg) house (sg) is (here). |
+| 7 | kər-il kora-d dʷa. | The man (sg) gives (to) the house (sg). |
+| 8 | zera-s kər tʼa. | The man (sg) goes on the road (sg). |
+| 9 | zera-a-il bat-i kʷa. | The roads (pl) see the dogs (pl). |
+| 10 | tara-a-n kora ba. | The waters' (pl) house (sg) is (here). |
+| 11 | bat-il tara vur. | The dogs (pl) eat water (sg). |
+| 12 | kər-in tara ba. | The men's (pl) water (sg) is (here). |
+| 13 | kər-il dal-id dʷa. | The man (sg) gives (to) the children (pl). |
+| 14 | bat-il tara vur. | The dog (sg) eats water (sg). |
+| 15 | kər-in kora ba. | The man's (sg) house (sg) is (here). |
+| 16 | kər-il tara vur-t. | The man (sg) ate water (sg). |
+| 17 | kər-il tara vur-a. | The man (sg) is eating water (sg). |
+| 18 | kər-il tara vur-t. | The man (sg) was eating water (sg). |
+| 19 | kər-il tara vur-t-r. | The man (sg) ate water (sg) (I heard). |
+| 20 | kər-il tara vur-m. | The man (sg) doesn't eat water (sg). |
+| 21 | kər-il tara vur-q? | Does the man (sg) eat water (sg)? |
+| 22 | kər-il tara vur-mq? | Does the man (sg) not eat water (sg)? |
+| 23 | bat-il tara-a-n kora vur-t-r. | The dogs (pl) ate the waters' (pl) house (sg) (I heard). |
+| 24 | dal-in bat-il kora-a-n tara kʷa-t-r. | The children's (pl) dogs (pl) saw the houses' (pl) water (sg) (I heard). |
+
+**Vocabulary:** tara = water; kora = house; zera = road; bat = dog; kər = man; dal = child; ba = be/stay; vur = eat; kʷa = see; tʼa = go; dʷa = give.
+
+QUESTIONS
+
+Translate each English sentence into Lezgian.
+
+**Q1.** The children (pl) give (to) the dogs (pl).
+
+**Q2.** The man (sg) was eating the dogs' (pl) water (sg) (I heard).
+
+**Q3.** Do the dogs (pl) not eat the houses' (pl) water (sg)?
+
+**Q4.** The children's (pl) dogs (pl) ate the waters' (pl) road (sg) (I heard).
+
+**Q5.** Are the children (pl) going on the roads (pl)?
+
+**Q6.** Do the children's (pl) dogs (pl) not see the houses' (pl) water (sg)?
+
+ANSWERS
+
+**Q1.** dal-il bat-id dʷa.
+
+**Q2.** kər-il bat-in tara vur-t-r.
+
+**Q3.** bat-il kora-a-n tara vur-mq?
+
+**Q4.** dal-in bat-il tara-a-n zera vur-t-r.
+
+**Q5.** zera-a-s dal-i tʼa-a-q?
+
+**Q6.** dal-in bat-il kora-a-n tara kʷa-mq?
+
+SOLUTION
+
+**Inferred rules:**
+
+**1. Noun stems and plural allomorphy.**
+Stems divide into vowel-final (tara, kora, zera) and consonant-final (bat, kər, dal). Plural is marked by -a after vowel-final stems (sentences 2: tara-a) and -i after consonant-final stems (sentence 3: bat-i).
+
+**2. Case marking.**
+Four cases are marked by suffixes. The ergative is -il with no allomorphy (attested on both V-final and C-final stems: sent. 9: zera-a-il; sent. 5: kər-il; sent. 11/14: bat-il). The genitive, dative, and locative show two-way allomorphy conditioned by the stem's final segment:
+
+| Case | After V-final | After C-final |
+|------|--------------|---------------|
+| Ergative | -il | -il |
+| Genitive | -n | -in |
+| Dative | -d | -id |
+| Locative | -s | -is |
+
+Evidence: ergative -il (sent. 5: kər-il; sent. 9: zera-a-il); genitive -n (sent. 6: tara-n) vs. -in (sent. 15: kər-in); dative -d (sent. 7: kora-d) vs. -id (sent. 13: dal-id); locative -s (sent. 8: zera-s).
+
+**3. Plural + case on vowel-final stems (no deletion).**
+The plural suffix -a simply precedes the case suffix: zera-a-il (sent. 9), tara-a-n (sent. 10).
+
+**4. Plural + case on consonant-final stems (deletion of -i).**
+The plural suffix -i is deleted before any case suffix. Evidence:
+- Sent. 11: bat-il = "dogs (pl) eat" — the form is identical to singular ergative (sent. 14: bat-il = "dog (sg) eats"), but the translation confirms plurality. Underlying: bat-i-il → bat-il.
+- Sent. 12: kər-in = "men's (pl)" — identical to singular genitive (sent. 15: kər-in = "man's (sg)"). Underlying: kər-i-in → kər-in.
+- Sent. 13: dal-id = "children (pl)" (dative) — identical to what singular dative would be. Underlying: dal-i-id → dal-id.
+
+This deletion applies before all case suffixes (erg, gen, dat, loc).
+
+**5. Ergative-absolutive alignment.**
+In transitive clauses, the agent bears ergative case and the patient is unmarked (absolutive). The verb carries no person/number agreement. Evidence: sent. 5 (kər-il tara vur: man-erg water-abs eat), sent. 9 (zera-a-il bat-i kʷa: roads-erg dogs-abs see).
+
+**6. Modifier-before-noun order.**
+Genitive possessors precede the head noun (sent. 6: tara-n kora; sent. 10: tara-a-n kora; sent. 24: kora-a-n tara).
+
+**7. Intransitive clause word order: Adv-loc + S-abs + V.**
+In intransitive clauses with a locative adverbial, the locative NP precedes the subject, which precedes the verb. Evidence: sent. 8 (zera-s kər tʼa: road-loc man-abs go).
+
+**8. Verbal morphology: suffix order and allomorphy.**
+Suffix order: Stem + Aspect + Tense + Evidentiality + Negation + Interrogative.
+
+| Category | Marked | Unmarked |
+|----------|--------|----------|
+| Aspect | imperfective: -a | perfective: ∅ |
+| Tense | past: -t | non-past: ∅ |
+| Evidentiality | indirect: -r | direct: ∅ |
+| Negation | negative: -m | affirmative: ∅ |
+| Interrogative | question: -q | statement: ∅ |
+
+Evidence: perfective non-past = bare stem (sent. 5: vur); past = -t (sent. 16: vur-t); imperfective = -a (sent. 17: vur-a); indirect = -r (sent. 19: vur-t-r); negation = -m (sent. 20: vur-m); interrogative = -q (sent. 21: vur-q).
+
+**9. Aspect-tense deletion (imperfective -a deleted before past -t).**
+Sent. 18: vur-t = "was eating" (imperfective past). Underlying: vur-a-t → vur-t. This is surface-identical to perfective past (sent. 16: vur-t = "ate"). The distinction is only recoverable from semantic context.
+
+**10. Evidentiality conditioned on past tense.**
+The suffix -r (indirect evidentiality) appears only in the presence of -t (past). It never appears on non-past verbs in the data. Evidence: sent. 19 (vur-t-r: past + indirect) vs. sent. 16 (vur-t: past + direct). The semantic contrast ("I heard" vs. no evidential marking) confirms -r encodes source of information, not tense.
+
+**11. Negation-interrogative fusion.**
+In negated questions, -m and -q fuse into a single surface form -mq. Evidence: sent. 22 (vur-mq? = "Does... not...?"). The form -m-q never appears; only -mq is attested.
+
+**Answers derived:**
+
+**Q1.** dal-il bat-id dʷa.
+- dal (C-final) + i (pl) + il (erg) → dal-il (deletion of -i)
+- bat (C-final) + i (pl) + id (dat) → bat-id (deletion of -i)
+- dʷa (give, perfective non-past)
+- Order: A-erg + O-dat + V
+
+**Q2.** kər-il bat-in tara vur-t-r.
+- kər-il: C-final sg ergative
+- bat-in: bat (C-final) + i (pl) + in (gen) → bat-in (deletion)
+- tara: V-final sg absolutive
+- vur-t-r: vur + a (imperf) + t (past) → vur-t (deletion of -a) + r (indirect)
+- Order: A-erg + [P-gen P-abs] + V
+
+**Q3.** bat-il kora-a-n tara vur-mq?
+- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
+- kora-a-n: kora (V-final) + a (pl) + n (gen) — no deletion
+- tara: V-final sg absolutive
+- vur-mq: vur + mq (negation-interrogative fusion)
+- Order: A-erg + [P-gen P-abs] + V
+
+**Q4.** dal-in bat-il tara-a-n zera vur-t-r.
+- dal-in: dal (C-final) + i (pl) + in (gen) → dal-in (deletion)
+- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
+- tara-a-n: tara (V-final) + a (pl) + n (gen) — no deletion
+- zera: V-final sg absolutive
+- vur-t-r: vur + a (imperf) + t (past) → vur-t (deletion) + r (indirect)
+- Order: [A-gen A-erg] + [P-gen P-abs] + V
+
+**Q5.** zera-a-s dal-i tʼa-a-q?
+- zera-a-s: zera (V-final) + a (pl) + s (loc) — no deletion
+- dal-i: dal (C-final) + i (pl) — absolutive, no case suffix, so NO deletion
+- tʼa-a-q: tʼa + a (imperf) + q (interrogative) — NO deletion of -a (no -t present); NO fusion (affirmative question)
+- Order: Adv-loc + S-abs + V (per sent. 8)
+
+**Q6.** dal-in bat-il kora-a-n tara kʷa-mq?
+- dal-in: dal (C-final) + i (pl) + in (gen) → dal-in (deletion)
+- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
+- kora-a-n: kora (V-final) + a (pl) + n (gen) — no deletion
+- tara: V-final sg absolutive
+- kʷa-mq: kʷa + mq (negation-interrogative fusion)
+- Order: [A-gen A-erg] + [P-gen P-abs] + V
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to discover and compose multiple interacting rules: (a) a two-way allomorphy system for most nominal suffixes (genitive, dative, locative) plus a uniform ergative; (b) a deletion rule creating genuine singular/plural ambiguity on consonant-final nouns; (c) a parallel deletion rule in the verbal system creating perfective/imperfective past ambiguity; (d) a conditioned rule (evidentiality requires past tense); (e) a fusion rule (negation + interrogative). The production questions require applying 3–5 rules simultaneously in configurations not present in the data, and Q5 specifically tests the solver's understanding of the *conditions* under which rules do NOT apply (no deletion without a case suffix; no -a deletion without -t; no fusion in affirmative questions) as well as the intransitive word order (Adv-loc + S-abs + V).

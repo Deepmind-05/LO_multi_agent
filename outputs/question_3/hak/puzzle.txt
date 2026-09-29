@@ -1,0 +1,108 @@
+
+
+CONTEXT
+
+The following data is from an undocumented language. Tones are indicated by superscript numbers 1 through 6. The vocabulary list gives **citation forms** (the form a word takes in isolation). The utterance data shows how words appear in connected speech.
+
+**Vocabulary (citation forms):**
+
+| Form | Gloss |
+|------|-------|
+| pa¹ | house |
+| ma² | mother |
+| ta³ | hand |
+| ka⁴ | child |
+| sa⁵ | father |
+| na⁶ | water |
+| la¹ | tree |
+| fa² | fish |
+
+**Utterance data:**
+
+| # | Form | Gloss |
+|---|------|-------|
+| 1 | na⁴pa¹ | water-house |
+| 2 | ma¹ko⁴pa¹ | mother's house |
+| 3 | ka⁶ma² | child-mother |
+| 4 | sa¹ko³ka⁴ | father's child |
+| 5 | sa³ka⁴ | father-child |
+| 6 | ka¹ko⁵na⁶ | child's water |
+| 7 | ma⁵na⁶ | mother-water |
+| 8 | ta¹ko²sa⁵ | hand's father |
+| 9 | ta²sa⁵ | hand-father |
+| 10 | ma¹ko⁵na⁶ | mother's water |
+| 11 | pa¹ta³ | house-hand |
+| 12 | sa¹ko⁴pa¹ | father's house |
+| 13 | ma¹ko²sa¹ko⁴pa¹ | mother's father's house |
+| 14 | ka¹ko⁶ma¹ko⁴pa¹ | child's mother's house |
+| 15 | sa¹ko³ka¹ko⁵na⁶ | father's child's water |
+
+QUESTIONS
+
+**Q1.** For each of the following disyllabic compounds, give the surface form with tone numbers:
+
+(a) [la¹ + na⁶]
+
+(b) [fa² + ta³]
+
+(c) [na⁶ + ka⁴]
+
+**Q2.** In the utterance *sa¹ko³ka⁴* (item 4), identify which syllable is the possessor, which is the particle, and which is the possessed. State the underlying (citation) tone of the possessor.
+
+**Q3.** Translate "tree's fish" into the target language, giving the full surface form with tone numbers.
+
+**Q4.** Translate "fish's mother's house" into the target language, giving the full surface form with tone numbers.
+
+**Q5.** Translate "water's hand's child's tree" into the target language, giving the full surface form with tone numbers.
+
+ANSWERS
+
+**Q1.**
+(a) la⁵na⁶
+(b) fa¹ta³
+(c) na³ka⁴
+
+**Q2.** Possessor: *sa* (underlying tone 5); Particle: *ko*; Possessed: *ka* (underlying tone 4).
+
+**Q3.** la¹ko⁶fa²
+
+**Q4.** fa¹ko⁶ma¹ko⁴pa¹
+
+**Q5.** na¹ko¹ta¹ko³ka¹ko⁴la¹
+
+SOLUTION
+
+**Rule 1 – Tone sandhi.** In any sequence of *n* syllables, the final syllable surfaces with its underlying (citation) tone. Every non-final syllable surfaces with a tone determined solely by the underlying tone of the immediately following syllable, via the function:
+
+| Underlying tone of next syllable | → | Surface tone of current syllable |
+|---|---|---|
+| 1 | → | 4 |
+| 2 | → | 6 |
+| 3 | → | 1 |
+| 4 | → | 3 |
+| 5 | → | 2 |
+| 6 | → | 5 |
+
+*Evidence:* From the disyllabic compounds, the second syllable always surfaces with its citation tone (the anchor), while the first syllable's surface tone is a function of the second syllable's underlying tone. Tabulating all six disyllabic items (1, 3, 5, 7, 9, 11) yields the complete mapping above.
+
+**Rule 2 – Possessive construction.** Possession is expressed as **Possessor + ko + Possessed**. The particle *ko* has underlying tone 3. The possessor is marked by the particle (dependent marking); the possessed noun carries no possessive morphology.
+
+*Evidence:* In items 2, 4, 6, 8, 10, 12, the syllable *ko* appears in a fixed middle position between two content nouns, and the glosses confirm a possessive reading. The first syllable (possessor) always surfaces as tone 1 regardless of its underlying tone (compare items 2 and 12: *ma*² and *sa*⁵ both surface as tone 1). The particle's surface tone varies and equals f(underlying tone of the possessed) (e.g., *ko⁴* before *pa¹*, *ko³* before *ka⁴*, *ko⁵* before *na⁶*, *ko²* before *sa⁵*).
+
+**Rule 3 – Iterative application in nested possessives.** The sandhi rule applies uniformly across the entire sequence. In a nested possessive [N₁ + ko + N₂ + ko + N₃], the computation proceeds right-to-left: N₃ surfaces with its underlying tone; the preceding *ko* surfaces as f(N₃); N₂ surfaces as f(3) = 1; the preceding *ko* surfaces as f(N₂); N₁ surfaces as f(3) = 1.
+
+*Evidence:* Items 13–15 confirm this pattern. For example, item 14 *ka¹ko⁶ma¹ko⁴pa¹*: *pa* (final) = 1; *ko* = f(1) = 4; *ma* = f(3) = 1; *ko* = f(2) = 6; *ka* = f(3) = 1.
+
+**Answers derived:**
+
+- **Q1(a):** [la¹ + na⁶]: surface(la) = f(6) = 5; surface(na) = 6 → **la⁵na⁶**
+- **Q1(b):** [fa² + ta³]: surface(fa) = f(3) = 1; surface(ta) = 3 → **fa¹ta³**
+- **Q1(c):** [na⁶ + ka⁴]: surface(na) = f(4) = 3; surface(ka) = 4 → **na³ka⁴**
+- **Q2:** *sa¹ko³ka⁴*: *ko* is the particle (fixed segmental form, middle position); *sa* is the possessor (surfaces as tone 1 = f(3), its underlying tone is 5 from the vocabulary); *ka* is the possessed (surfaces as tone 4 = its citation tone).
+- **Q3:** [la¹ + ko³ + fa²]: surface(fa) = 2; surface(ko) = f(2) = 6; surface(la) = f(3) = 1 → **la¹ko⁶fa²**
+- **Q4:** [fa² + ko³ + ma² + ko³ + pa¹]: surface(pa) = 1; surface(ko₂) = f(1) = 4; surface(ma) = f(3) = 1; surface(ko₁) = f(2) = 6; surface(fa) = f(3) = 1 → **fa¹ko⁶ma¹ko⁴pa¹**
+- **Q5:** [na⁶ + ko³ + ta³ + ko³ + ka⁴ + ko³ + la¹]: surface(la) = 1; surface(ko₃) = f(1) = 4; surface(ka) = f(3) = 1; surface(ko₂) = f(4) = 3; surface(ta) = f(3) = 1; surface(ko₁) = f(3) = 1; surface(na) = f(3) = 1 → **na¹ko¹ta¹ko³ka¹ko⁴la¹**
+
+DIFFICULTY
+
+**Level 2.** The puzzle requires the solver to (i) discover a six-tone sandhi rule from disyllabic data, (ii) identify the possessive construction and its interaction with sandhi, and (iii) apply the rule iteratively across sequences of up to seven syllables. The main challenge lies in correctly chaining the sandhi computation through nested possessives (Q4–Q5), where the solver must track the underlying tone of each syllable and apply f at each step. The appearance of *ko¹* in Q5 (a surface tone for the particle not observed in the data) tests whether the solver has truly internalized the rule rather than memorizing surface patterns.

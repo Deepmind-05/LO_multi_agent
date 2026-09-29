@@ -1,0 +1,13 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [MAJOR] The difficulty is rated 5 but the actual difficulty is 4. While the puzzle has three interacting processes (vowel-length conditioning, /t/→/d/ alternation, and the derivational suffix -kə), each individual rule is straightforward once identified, and the interactions are not deeply nested. The derivational suffix's effects (shortening vowels, blocking the alternation) are each simple and independently verifiable from the data. A true difficulty-5 puzzle would require more obscure or counterintuitive interactions, or rules that are harder to isolate from the data. The generous data (multiple examples of every pattern) further reduces the inference difficulty.

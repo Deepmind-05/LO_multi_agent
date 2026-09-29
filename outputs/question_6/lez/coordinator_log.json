@@ -1,0 +1,100 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract rich linguistic features for the target language, Lez, so that later agents can build a valid Olympiad-level puzzle.",
+    "directive": "Extract a rich set of linguistic features and mappings for Lez (lez), focusing on typologically interesting and puzzle-relevant phenomena such as case marking, noun morphology, verb agreement, evidentiality or aspect if present, word order constraints, and any distinctive phonological or morphological patterns. Provide clear feature names, descriptions, examples if possible, and candidate mappings suitable for constructing a solvable linguistic puzzle.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Lez are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence-structure rules that will guide puzzle generation.",
+    "directive": "Using the existing Lez linguistic concepts, design a clear step-by-step reasoning framework and sentence-structure rules for an Olympiad-level puzzle. Specify how linguistic features should be encoded in the data, how questions should test inference rather than direct copying, and how answers should be uniquely determined.",
+    "elapsed_seconds": 7.3
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answer key using the existing Lez concepts and rationale.",
+    "directive": "Generate a complete Olympiad-level puzzle for Lez (lez) using the provided linguistic concepts and rationale. Include a clear DATA section with glossed examples, a set of non-trivial inference questions, and a complete answer key. Ensure all vocabulary is glossed, all questions are uniquely solvable, and the puzzle tests linguistic reasoning rather than direct copying.",
+    "elapsed_seconds": 14.0
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 rigorously solve and validate the latest puzzle before any further revision or completion.",
+    "directive": "Solve and rigorously validate the generated Lez puzzle. Check that all data entries are glossed, all questions are uniquely solvable, the answer key is correct, no vocabulary is missing or ambiguous, and the puzzle tests genuine linguistic inference rather than direct copying. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects are found.",
+    "elapsed_seconds": 22.7
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES and identified a concrete puzzle-level defect: a typo in data sentence (8) and the corresponding answer B4. Although minor and not affecting solvability, the data and answer key should be internally consistent before final acceptance. Since ample time remains, route to Agent 3 for a targeted patch, after which the revised puzzle must be revalidated.",
+    "directive": "Patch the identified typo only: in data sentence (8), change the word \"\u010d\u00b7ul\" to \"\u010d\u2019ul\" so it matches the vocabulary table and all other occurrences in sentences 4 and 7. Also correct the same typo in the provided answer for B4. Do not alter any other data, questions, glosses, or answers.",
+    "elapsed_seconds": 28.3
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been revised and puzzle_needs_validation is true, while no current validator verdict or feedback is present. The required next step is to have Agent 4 validate the revised puzzle before any further action or completion.",
+    "directive": "Solve and rigorously validate the revised Lez puzzle. Verify that the previously reported typo has been corrected consistently in the data and answer key, that all vocabulary is glossed, all questions are uniquely solvable, the answer key is correct, and the puzzle tests genuine linguistic inference rather than direct copying. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects remain.",
+    "elapsed_seconds": 33.4
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES with two concrete puzzle-level defects: B4 is a trivial direct copy of a data sentence, and C3\u2019s answer key is overly restrictive because the data support either a perfective-aspect or past-tense interpretation. These are implementation-level issues that can be patched without changing the concepts or rationale, so Agent 3 should revise the puzzle directly.",
+    "directive": "Patch only the two reported issues. 1) Replace question B4 with a novel sentence not present in the data, such as 'The cat doesn't see the dog' \u2192 '\u0161ir xur-\u010d', and update the answer key accordingly. 2) For C3, either adjust the question wording to request a less specific characterization or update the answer key to accept both 'perfective aspect' and 'past tense' as valid answers. Do not alter any other data, glosses, questions, or answers.",
+    "elapsed_seconds": 38.6
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The puzzle has just been revised by Agent 3 to address the previously reported issues, and puzzle_needs_validation is true with no current validator verdict. The required next step is to have Agent 4 validate the latest revised puzzle before any further action or completion.",
+    "directive": "Solve and rigorously validate the revised Lez puzzle. Verify that B4 is no longer a trivial copy of a data sentence and that C3\u2019s answer key is appropriately broad or the question is sufficiently constrained. Also confirm that all vocabulary is glossed, all questions are uniquely solvable, the answer key is correct, and the puzzle tests genuine linguistic inference rather than direct copying. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects remain.",
+    "elapsed_seconds": 44.5
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL due to a concrete internal inconsistency in the puzzle: the B3 answer and its explanation contradict the morphological pattern shown in data sentence (7). This is a puzzle-level answer-key/solution defect, not a conceptual or rationale-level failure, so Agent 3 should patch the B3 answer and explanation directly.",
+    "directive": "Patch the B3 answer and solution only. Change the B3 answer from '\u0161ir xan-d war-a' to '\u0161ir-l xan-d war-a' to match the pattern in sentence (7), where the subject of 'go to the house' bears -l. Also correct the solution explanation so the subject is no longer labeled 'unmarked, intransitive'; instead, mark it consistently with the -l pattern shown in the data. Do not alter any other data, glosses, questions, or answers.",
+    "elapsed_seconds": 50.7
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The puzzle has just been revised by Agent 3 to fix the B3 answer and explanation, and puzzle_needs_validation is true with no current validator verdict. The required next step is to have Agent 4 validate the latest revised puzzle before any further action or completion.",
+    "directive": "Solve and rigorously validate the revised Lez puzzle. Verify that the B3 answer and explanation now consistently use the -l subject pattern shown in data sentence (7), that the answer key is correct, all vocabulary is glossed, all questions are uniquely solvable, and the puzzle tests genuine linguistic inference rather than direct copying. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects remain.",
+    "elapsed_seconds": 58.5
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the feedback includes a critical incorrect answer key and a major internal inconsistency rooted in an incorrect morphological generalization: the puzzle treats *-l* as marking only transitive agents, while the data show it marks subjects when the clause contains another argument, including an oblique/locative. This is not merely a typo or isolated answer-key error; it reflects a flawed rule system in the rationale. Therefore Agent 2 should revise the rationale and regenerate the puzzle from the corrected rule.",
+    "directive": "Revise the Lez rationale so that the *-l* marking rule is stated correctly: *-l* marks the subject when the clause contains another argument, such as a patient or an oblique/locative argument, rather than only the agent of a transitive verb. Ensure this rule is consistent with data sentence (7) *\u010d\u010dul-l xan-d war-a* and with all sentence templates, examples, and solution explanations. Remove any transitive-agent-only generalization. After revising the rationale, regenerate the puzzle so that C1, B3, C2, and all related explanations are internally consistent and uniquely solvable.",
+    "elapsed_seconds": 65.5
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline has concepts and a revised rationale, but no puzzle is present and puzzle_needs_validation is false. The last tier-2 correction cleared the puzzle, so the next required step is to have Agent 3 generate a fresh complete Lez puzzle from the corrected rationale. The new puzzle must implement the corrected -l rule consistently and avoid the previous trivial, ambiguous, and answer-key defects.",
+    "directive": "Generate a complete Lez puzzle dataset from the current concepts and revised rationale. Ensure the -l rule is applied exactly as revised: -l marks the subject when the clause contains another argument, such as a patient or an oblique/locative argument, rather than only transitive agents. Include fully glossed data sentences, nontrivial questions, and a correct answer key. Specifically make B3, C1, C2, and any related explanations consistent with sentence (7) \u010dul-l xan-d war-a, avoid direct-copy questions, and ensure every answer is uniquely derivable from the data.",
+    "elapsed_seconds": 76.9
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Agent 3 has just generated a fresh Lez puzzle from the revised rationale, and puzzle_needs_validation is true with no current validator verdict. The required next step is to have Agent 4 validate the latest puzzle before any further action or completion.",
+    "directive": "Solve and rigorously validate the newly generated Lez puzzle. Verify that the revised *-l* rule is implemented consistently: *-l* marks the subject when the clause contains another argument, such as a patient or an oblique/locative argument, not only transitive agents. Check that all data sentences are fully glossed, all questions are nontrivial and uniquely solvable, the answer key is correct, and no internal inconsistencies remain. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 90.8
+  },
+  {
+    "step": 14,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Puzzle passed validation (PASS_WITH_ISSUES).",
+    "directive": "",
+    "elapsed_seconds": 97.7
+  }
+]

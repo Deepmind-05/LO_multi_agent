@@ -1,0 +1,15 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+5
+
+ISSUES
+
+* [CRITICAL] Q1c presents the sentence "de tanga i a no si a bi run" with the intended translation "The child that he didn't see will run." However, the data establishes *a* = past and *bi* = future as mutually exclusive tense markers (sentences 1–3). The sequence "a bi run" contradicts the grammar: if the main clause is future, it should be "bi run" (as in sentence 3: "i bi run"), not "a bi run." The extra *a* makes the sentence ungrammatical under the rules the data supports, and the intended answer cannot be derived without overriding the evidence. The sentence should read "de tanga i a no si bi run."
+
+* [MINOR] Q2a ("They will sleep") requires the solver to produce the Ndyuka word *sleip*, which does not appear anywhere in the DATA. While the English→Ndyuka adaptation pattern is transparent from other cognates (run, singu, si, bui, fisi, boto, iti, tanga, fasi), the solver must still supply a specific lexical item not grounded in the data. Consider either adding a sentence containing *sleip* to the data or replacing the target verb with one already attested (e.g., "They will run" → *den bi run*).

@@ -1,0 +1,98 @@
+
+
+TARGET-LANGUAGE: Oromo (Harar)
+
+CORE
+
+1. Concept: Two genders (30A-2)
+   - Target-language realization: Oromo (Harar) has a two-gender system (masculine/feminine). Nouns are divided into two classes. Gender is marked on nouns (suffixally) and triggers agreement on adjectives.
+   - Intended solver inference: From a set of noun-adjective pairs, the solver identifies that nouns fall into two classes and that adjectives change form depending on which class the noun belongs to.
+   - Priority: REQUIRED
+
+2. Concept: Dependent marking in NPs with adjectives (84A-2)
+   - Target-language realization: Adjectives carry agreement suffixes that match the gender of the head noun. The noun is the head; the adjective is the dependent that bears the agreement marker.
+   - Intended solver inference: The solver identifies that the adjective form is determined by the noun's gender class, not by the adjective's inherent properties. The solver can then predict adjective forms for new nouns.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Sex-based gender system (31A-2)
+   - Intended solver inference: For human nouns, gender corresponds to biological sex (masculine for male, feminine for female). The solver can use this semantic knowledge to predict gender for human nouns without needing to memorize.
+   - Interaction with CORE: Provides a semantic anchor for the two-gender system. Makes the gender system partially predictable, reducing the puzzle to discovering the pattern for non-human nouns.
+   - Difficulty contribution: Medium. Creates a "free" set of examples (human nouns) that validate the system, while non-human nouns require pattern discovery.
+   - Priority: HIGH
+
+2. Phenomenon: Semantic and formal gender assignment (32A-3)
+   - Intended solver inference: Non-human nouns are assigned gender by a discoverable rule (e.g., based on phonological shape, semantic subcategory, or morphological property). The solver must identify this rule from the data.
+   - Interaction with CORE: This is the main challenge of the puzzle. The solver must go beyond the sex-based pattern and discover a formal/semantic rule for non-human nouns.
+   - Difficulty contribution: High. This is the central inferential task.
+   - Priority: HIGH
+
+3. Phenomenon: Noun-Adjective order (87A-2)
+   - Intended solver inference: The modifying adjective follows the noun. The solver identifies the head-dependent relationship from linear order (the first element is the noun, the second is the adjective).
+   - Interaction with CORE: Establishes which element is the head (noun) and which is the dependent (adjective), clarifying the direction of agreement.
+   - Difficulty contribution: Low-Medium. A straightforward word-order observation, but essential for correctly parsing the data.
+   - Priority: HIGH
+
+4. Phenomenon: No obligatory plural / plural only optional for human nouns (33A-9, 34A-2)
+   - Intended solver inference: The gender system operates without a number dimension. The solver does not need to track gender × number interactions. If plural forms appear (for human nouns), they are optional and do not change the gender pattern.
+   - Interaction with CORE: Simplifies the puzzle by removing the number variable. The solver can focus purely on gender.
+   - Difficulty contribution: Low (reduces complexity). Prevents the puzzle from becoming a gender × number matrix.
+   - Priority: HIGH
+
+5. Phenomenon: Strongly suffixing (26A-2)
+   - Intended solver inference: Gender markers are suffixes on the noun. The solver can identify the gender suffix by comparing forms of the same noun in different contexts or by comparing nouns of different genders.
+   - Interaction with CORE: Specifies the morphological strategy for gender marking. The solver identifies the suffix as the gender marker.
+   - Difficulty contribution: Low-Medium. The solver must identify which part of the word is the suffix (the gender marker) versus the root.
+   - Priority: HIGH
+
+6. Phenomenon: Gender distinctions in 3rd person singular pronouns only (44A-3)
+   - Intended solver inference: In the pronoun system, gender is only distinguished in 3rd person singular (he vs. she). 1st and 2nd person pronouns do not distinguish gender. The solver notices this asymmetry between the noun system (all nouns have gender) and the pronoun system (only 3sg has gender).
+   - Interaction with CORE: Creates a contrast between nominal gender (all nouns) and pronominal gender (only 3sg). The solver must recognize that the gender system is not uniformly expressed across all word classes.
+   - Difficulty contribution: Medium. Adds a layer of complexity: the solver must notice that the gender system has different "coverage" in different domains.
+   - Priority: HIGH
+
+7. Phenomenon: Zero realization of some 3sg verbal forms (103A-3)
+   - Intended solver inference: In verbal agreement, 3rd person singular is unmarked (zero). This means gender is NOT expressed in verbal agreement for 3sg. The solver notices that the verb does not change for 3sg, even though the pronoun does distinguish gender.
+   - Interaction with CORE: Creates a three-way contrast: (a) nouns have gender, (b) 3sg pronouns have gender, (c) 3sg verbal agreement does NOT have gender. The solver must recognize this asymmetry.
+   - Difficulty contribution: Medium-High. Requires the solver to notice an absence of marking, which is a more subtle inference than noticing a presence.
+   - Priority: HIGH
+
+8. Phenomenon: Subject affixes on verb / Only A argument marked (101A-2, 102A-2)
+   - Intended solver inference: The verb carries subject (A) agreement but not object (P) agreement. The solver identifies that the verbal suffixes encode the subject's person/number (and possibly gender for non-3sg), but not the object.
+   - Interaction with CORE: Clarifies the domain of gender expression. Gender appears in nouns, adjectives, and 3sg pronouns, but the verbal agreement system is limited to A and does not encode gender for 3sg.
+   - Difficulty contribution: Medium. Helps the solver map out exactly where gender is and is not expressed.
+   - Priority: HIGH
+
+INTERACTIONS
+
+1. Two genders + Sex-based assignment + Semantic/formal assignment:
+   - The sex-based nature provides a "free" validation set (human nouns), while the semantic/formal assignment for non-human nouns is the main puzzle challenge. The solver uses human nouns to confirm the two-class system, then must discover the rule for non-human nouns.
+
+2. Two genders + Dependent marking + Noun-Adjective order:
+   - The N-Adj order tells the solver which element is the head. The dependent marking tells the solver that the adjective (dependent) carries the agreement. Together, these establish the full agreement pattern: Noun[gender] + Adjective[agrees with noun's gender].
+
+3. Two genders + No/optional plural:
+   - The absence of obligatory plural means the gender system is not confounded with number. The solver can focus on a single dimension (gender) rather than a gender × number matrix.
+
+4. Two genders + Gender in 3sg pronouns only + Zero 3sg on verb:
+   - This creates a three-domain contrast: (a) all nouns have gender, (b) only 3sg pronouns have gender, (c) 3sg verbal agreement has no gender. The solver must recognize that gender expression is domain-specific and not uniform.
+
+5. Suffixing + Dependent marking:
+   - The suffixing strategy means the gender marker is a suffix on the noun, and the agreement marker is a suffix on the adjective. The solver must identify both suffixes and their relationship.
+
+CONSTRAINTS
+
+1. The puzzle must present enough noun-adjective pairs to allow the solver to (a) identify the two-gender system, (b) identify the gender suffix on nouns, (c) identify the agreement suffix on adjectives, and (d) discover the rule for non-human noun gender assignment.
+
+2. Human nouns should be included in the data to provide the sex-based "anchor" that validates the two-class system and reduces the inferential load for non-human nouns.
+
+3. The puzzle should NOT include plural forms (or should include them only as optional human-noun forms) to avoid introducing a number dimension that would complicate the gender inference.
+
+4. If verbal data is included, it must clearly show that 3sg is zero (unmarked) to support the inference that gender is absent in 3sg verbal agreement. The contrast with 3sg pronouns (which DO have gender) must be visible in the data.
+
+5. The N-Adj order must be consistent throughout the data. If any variation occurs, it must be explainable and not confuse the head-dependent relationship.
+
+6. The gender assignment rule for non-human nouns must be discoverable from the provided data. The rule should be simple enough to be inferred from a reasonable number of examples (e.g., based on a semantic subcategory, a phonological property, or a morphological property of the noun root).
+
+7. The puzzle should not require the solver to know Oromo or any Afro-Asiatic language. All relevant patterns must be inferable from the data alone using general linguistic reasoning.

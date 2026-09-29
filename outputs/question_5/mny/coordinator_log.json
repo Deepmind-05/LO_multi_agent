@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to establish the foundational linguistic concepts and mappings for the target language.",
+    "directive": "Extract the core linguistic features and mappings for target language 'mny'. Include relevant phonological, morphological, syntactic, and typological properties, along with clear feature-to-language mappings suitable for building a Linguistic Olympiad puzzle.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for the target language 'mny' are present, but no rationale has been generated yet. The next required step is to design the reasoning blueprint and sentence structure rules that will guide puzzle generation.",
+    "directive": "Using the existing linguistic concepts for 'mny', design a clear step-by-step rationale for a Linguistic Olympiad puzzle. Define the morphological, syntactic, and typological rules to be used, specify how sentences should be constructed and glossed, and outline the reasoning steps a solver should follow to derive the target answers.",
+    "elapsed_seconds": 5.7
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'mny' using the existing concepts and rationale. Include a clear DATA section with glossed examples, well-formed questions, and a complete answer key. Ensure all vocabulary is glossed, questions are non-trivial, and the puzzle is solvable from the provided data.",
+    "elapsed_seconds": 12.0
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 rigorously solve and validate the puzzle.",
+    "directive": "Solve and rigorously validate the generated Linguistic Olympiad puzzle for target language 'mny'. Check that all data sentences are well-formed and fully glossed, that the questions are non-trivial and unambiguous, that the answer key is correct, and that the puzzle is solvable from the provided data alone. Return a clear PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 23.8
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline contains concepts, rationale, and a generated puzzle. The validator has already returned a PASS verdict, and the puzzle is not flagged as needing further validation. Therefore the puzzle is acceptable and the process should finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 31.0
+  }
+]

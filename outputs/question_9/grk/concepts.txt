@@ -1,0 +1,98 @@
+
+
+TARGET-LANGUAGE: Modern Greek (grk)
+
+CORE
+
+1. Noun class system with systematic singular-plural alternations (source: 18-2)
+   - Target-language realization: Three-way grammatical gender system (masculine, feminine, neuter) where each gender has characteristic plural formation patterns. Nouns are grouped into three "classes" by their plural behavior.
+   - Intended solver inference: The solver groups nouns into three classes based on their plural formation patterns and article forms, discovering that the language has a three-way class (gender) system.
+   - Priority: REQUIRED
+
+2. Singular-plural distinction marked by systematic phonological alternations (source: 14-1)
+   - Target-language realization: Plural is marked by suffixation combined with internal vowel alternations. The alternations are systematic and conditioned by the noun's class (gender) and final singular vowel.
+   - Intended solver inference: The solver discovers that plural formation is not purely suffixal but involves predictable internal vowel changes.
+   - Priority: REQUIRED
+
+3. Vowel quality alternations in declension (source: vowel quality alternations)
+   - Target-language realization: Systematic vowel changes in plural formation: neuter -ο → -α (e.g., βιβλίο → βιβλία), feminine -α → -ες with -ο- in some (e.g., εικόνα → εικόνες), masculine -ας → -ες (e.g., άντρας → άντρες). The specific alternation is conditioned by gender class.
+   - Intended solver inference: The solver identifies which vowel changes occur in which class and formulates the alternation rules.
+   - Priority: REQUIRED
+
+4. Correspondence between paradigms enabling cross-paradigm prediction (source: cross-paradigm prediction)
+   - Target-language realization: The definite article paradigm (6 forms: 3 genders × 2 numbers) corresponds to the noun paradigm. The article form encodes gender + number, allowing the solver to use the article as a diagnostic for the noun's class. However, there is syncretism: masculine and feminine share the same plural article form (οι).
+   - Intended solver inference: The solver uses article forms to initially group nouns by class, then discovers that the plural article does not fully distinguish all classes, forcing reliance on the noun form itself.
+   - Priority: HIGH
+
+5. Verb agreement with noun class (source: 81-1)
+   - Target-language realization: ADAPTED. In Modern Greek, verbs agree in person and number but NOT in gender (in indicative). The cross-paradigm agreement relevant to the puzzle is on the article and adjective, not the verb. The article/adjective form mirrors the noun's gender and number.
+   - Intended solver inference: The solver discovers that the "agreement" element (article/adjective) tracks the noun's class and number, creating a parallel paradigm.
+   - Priority: HIGH (adapted from verb agreement to article/adjective agreement)
+
+DROPPED source concepts:
+- Tone (61-1): No tones in Modern Greek (WALS 13A-1). No natural realization.
+- Three-way vowel length (3A-3): No three-way vowel length contrast in Modern Greek. No natural realization.
+- Consonant alternations in declension: Modern Greek nominal morphology does not exhibit systematic consonant alternations (palatalization, labialization, etc.) in singular-plural pairs. The alternations are primarily vocalic. Forcing this would be artificial.
+
+TARGET-SPECIFIC
+
+1. Three-way gender with gender-conditioned plural suffixes
+   - Phenomenon: Each gender has a characteristic set of plural suffixes: masculine (-οι, -ες), feminine (-ες, -εις), neuter (-α, -ια). The suffix is determined by the gender class AND the final singular vowel.
+   - Intended solver inference: The solver discovers that the plural suffix is not arbitrary but is determined by the intersection of class (gender) and final singular segment.
+   - Interaction with CORE: This is the morphological realization of the "noun class" concept. The class determines which suffix is used.
+   - Difficulty contribution: Medium. The solver must discover both the class system AND the suffix selection rules.
+   - Priority: REQUIRED
+
+2. Plural article syncretism (masculine = feminine)
+   - Phenomenon: The definite article in the plural is οι for both masculine and feminine (vs. τα for neuter). In the singular, all three are distinct (ο, η, το).
+   - Intended solver inference: The solver initially uses the article to group nouns into three classes (based on singular forms), but discovers that in the plural, two classes merge in the article. This forces the solver to use the noun's own form (suffix, vowel alternation) to distinguish masculine from feminine plurals.
+   - Interaction with CORE: Creates a gap in the cross-paradigm prediction (article → noun class). The article is a necessary but not sufficient diagnostic in the plural.
+   - Difficulty contribution: High. This is the key "twist" that prevents the puzzle from being trivially solvable by article alone.
+   - Priority: REQUIRED
+
+3. Final singular vowel as predictor of plural pattern
+   - Phenomenon: Within each gender class, the final vowel of the singular form predicts the specific plural pattern. E.g., neuter nouns ending in -ο take -α; neuter nouns ending in -ι take -ια. Feminine nouns ending in -η take -εις; feminine nouns ending in -α take -ες.
+   - Intended solver inference: The solver discovers that the class alone is not sufficient to predict the exact plural form; the final singular vowel provides additional conditioning.
+   - Interaction with CORE: Refines the vowel alternation rules. The alternation is not just "class → change" but "class + final vowel → specific change."
+   - Difficulty contribution: Medium-high. Adds a second conditioning factor to the plural formation rules.
+   - Priority: HIGH
+
+4. Gender assignment is partly semantic, partly formal
+   - Phenomenon: Some nouns' gender is predictable from meaning (e.g., male referents → masculine), but many are arbitrary/formal (e.g., το σπίτι 'house' is neuter, η πόλη 'city' is feminine).
+   - Intended solver inference: The solver cannot predict gender from meaning alone; must rely on the article form or the plural pattern. This prevents the solver from using semantic shortcuts.
+   - Interaction with CORE: Ensures the solver must engage with the morphological data rather than semantic guessing.
+   - Difficulty contribution: Low-medium. Prevents trivial solutions but doesn't add structural complexity.
+   - Priority: OPTIONAL (useful for puzzle design but not essential to the core insight)
+
+INTERACTIONS
+
+1. Class (gender) × Final vowel → Plural form
+   - Concepts: Noun class system + Vowel alternations + Final vowel predictor
+   - Interaction: The plural form is determined by the intersection of the noun's class AND its final singular vowel. The solver must discover both dimensions.
+   - Additional inference: The solver learns that the system is two-dimensional (class + final segment), not one-dimensional.
+
+2. Article form → Class (partial) → Plural pattern
+   - Concepts: Cross-paradigm correspondence + Article syncretism + Class system
+   - Interaction: The article provides a partial diagnostic for class. In the singular, it fully identifies the class. In the plural, it only distinguishes neuter from non-neuter (masc/fem). The solver must use the noun form to resolve the masc/fem ambiguity.
+   - Additional inference: The solver discovers that the agreement system is not fully transparent; there is syncretism that must be compensated for by other evidence.
+
+3. Vowel alternation conditioned by class
+   - Concepts: Vowel quality alternations + Noun class system
+   - Interaction: The specific vowel change that occurs in the plural is determined by the class. Neuter shows ο→α; feminine shows α→(ο)ε; masculine shows α→ε. The alternation is not a single rule but a set of class-conditioned rules.
+   - Additional inference: The solver must formulate separate alternation rules for each class rather than a single general rule.
+
+CONSTRAINTS
+
+1. The puzzle must present sufficient data for the solver to discover all three classes. At minimum, the solver needs examples from each class in both singular and plural, with articles.
+
+2. The article syncretism (οι for masc and fem plural) must be clearly visible in the data. The puzzle must include at least one masculine plural and one feminine plural so the solver can observe that they share the same article but have different noun forms.
+
+3. The vowel alternations must be presented in a way that makes the class-conditioning discoverable. The puzzle should include enough examples within each class to show the pattern, and enough across classes to show the differences.
+
+4. Do NOT include verb forms in the puzzle data. Modern Greek verbs do not agree in gender, so including them would create confusion and a false parallel to the Dinka source. The cross-paradigm element should be the article (and optionally adjectives).
+
+5. The puzzle should NOT rely on the solver knowing that the "classes" are called "genders" or that they correspond to sex. The solver should discover the class system purely from morphological behavior. The semantic content of the nouns should be varied (not all male/female referents) to prevent semantic shortcuts.
+
+6. Vowel alternations should be presented in a consistent orthographic system. Since the solver has no prior knowledge of Greek, the puzzle should use a consistent romanization or the Greek alphabet with a key. The alternations must be visually transparent (e.g., if using Greek script, the ο→α change should be clearly visible).
+
+7. The number of nouns in the puzzle should be sufficient to establish patterns (at least 2-3 per class in each number) but not so large as to overwhelm. A total of 8-12 nouns (4-6 per number) is likely optimal.

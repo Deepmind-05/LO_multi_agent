@@ -1,0 +1,183 @@
+
+
+CONTEXT
+
+The following data consists of sentences from a language spoken on the island of Madagascar. Treat all forms as opaque strings; no knowledge of the language's phonology or writing system is required. Each sentence is followed by an English gloss. A vocabulary list is provided at the end of the data.
+
+DATA
+
+**Sentences:**
+
+1. Namody ny vary ahy. — I ate the rice.
+2. Mimody ny vary ianao. — You eat the rice.
+3. Najery ny vorona izy. — He saw the bird.
+4. Mijery ny vato lehibe ahy. — I see the big stone.
+5. Nanao ny trano kely telop izy. — He made the three small houses.
+6. Mijery ny vorona kely roa ahy. — I see the two small birds.
+7. Namody ny vary mavo dimy izy. — He ate the five yellow rices.
+8. Namody ny vary-ko ahy. — I ate my rice.
+9. Mijery ny vato-nao lehibe izy. — He sees your big stone.
+10. Nanao ny trano-ny kely roa ahy. — I made his two small houses.
+11. Namody ny vorona kely roa mijery ahy izy. — He ate the two small birds that I see.
+12. Mijery ny trano-ko nanao izy ahy. — I see my house that he made.
+13. Mimody ny vary isika. — We (including you) eat the rice.
+14. Mimody ny vary fotsiny. — We (excluding you) eat the rice.
+
+**Vocabulary:**
+
+| Form | English |
+|------|---------|
+| mody | eat |
+| jery | see |
+| manao | make |
+| vary | rice |
+| vato | stone |
+| vorona | bird |
+| trano | house |
+| lehibe | big |
+| kely | small |
+| mavo | yellow |
+| iray | one |
+| roa | two |
+| telop | three |
+| efatra | four |
+| dimy | five |
+| ahy | I |
+| ianao | you (SG) |
+| izy | he/she |
+| isika | we (including you) |
+| fotsiny | we (excluding you) |
+| ny | the |
+| -ko | my |
+| -nao | your |
+| -ny | his/her |
+
+QUESTIONS
+
+**Q1. Parse each of the following sentences.** For each, state: (a) the subject, (b) the object (with a full structural analysis of every element in the object noun phrase), (c) the aspect of the main verb (perfective or imperfective), and (d) a complete English translation.
+
+a. Mimody ny vato-ko lehibe telop ahy.
+
+b. Najery ny trano mavo efatra nanao ianao izy.
+
+c. Mimody ny vorona-ny kely dimy mijery izy ahy.
+
+**Q2. Translate each of the following English sentences into the language.**
+
+a. I made the two big houses.
+
+b. You see the three small stones that I made.
+
+c. He ate my four big houses that you see.
+
+**Q3. Explain the difference in meaning between each pair of sentences.**
+
+a. (i) Namody ny vary ahy.
+   (ii) Mimody ny vary ahy.
+
+b. A teacher is speaking to a student in a classroom. The teacher says:
+   (i) Mimody ny vary isika.
+   (ii) Mimody ny vary fotsiny.
+   What is the difference in meaning between these two sentences?
+
+ANSWERS
+
+**Q1a.**
+(a) Subject: ahy (I)
+(b) Object: ny vato-ko lehibe telop
+   - ny = definite article
+   - vato-ko = stone + my (Noun + Genitive)
+   - lehibe = big (Adjective)
+   - telop = three (Numeral)
+   - Gloss: "my three big stones"
+(c) Aspect: imperfective (prefix mi-)
+(d) "I eat my three big stones."
+
+**Q1b.**
+(a) Subject: izy (he/she)
+(b) Object: ny trano mavo efatra nanao ianao
+   - ny = definite article
+   - trano = house (Noun)
+   - mavo = yellow (Adjective)
+   - efatra = four (Numeral)
+   - nanao ianao = made + you (Relative Clause: verb + subject)
+   - Gloss: "the four yellow houses that you made"
+(c) Aspect: perfective (prefix na-)
+(d) "He saw the four yellow houses that you made."
+
+**Q1c.**
+(a) Subject: ahy (I)
+(b) Object: ny vorona-ny kely dimy mijery izy
+   - ny = definite article
+   - vorona-ny = bird + his/her (Noun + Genitive)
+   - kely = small (Adjective)
+   - dimy = five (Numeral)
+   - mijery izy = sees + he/she (Relative Clause: verb + subject)
+   - Gloss: "his/her five small birds that he/she sees"
+(c) Aspect: imperfective (prefix mi-)
+(d) "I eat his/her five small birds that he/she sees."
+
+**Q2a.** Nanao ny trano lehibe roa ahy.
+
+**Q2b.** Mijery ny vato kely telop nanao ahy ianao.
+
+**Q2c.** Namody ny trano-ko lehibe efatra mijery ianao izy.
+
+**Q3a.** The difference is aspect. In (i), the verb bears the prefix *na-* (namody), marking perfective aspect (a completed event: "ate"). In (ii), the verb bears the prefix *mi-* (mimody), marking imperfective aspect (an ongoing or habitual event: "eat"). The verb stem *mody* is unchanged; only the prefix differs.
+
+**Q3b.** The two sentences differ in the composition of the first-person plural group. As shown in sentences 13 and 14, *isika* is the inclusive first-person plural pronoun: it includes the addressee, so (i) means "We (the teacher and the student) eat the rice." *Fotsiny* is the exclusive first-person plural pronoun: it excludes the addressee, so (ii) means "We (the teacher and others, but not the student) eat the rice."
+
+SOLUTION
+
+**Rules to be inferred:**
+
+1. **VOS word order.** In every sentence, the verb occupies the first position, the object NP the second, and the subject the third. This is confirmed by all 14 baseline sentences. The subject is always an independent pronoun (ahy, ianao, izy, isika, fotsiny) or a full NP in final position. Semantic plausibility (e.g., a person eats rice, not vice versa) confirms the agent-patient assignment.
+
+2. **NP modifier order: N(-Gen) + Adj + Num + RelCl.** The definite article *ny* precedes the entire NP. Within the NP:
+   - The genitive is a suffix on the noun (e.g., *vato-ko* = "my stone"), forming a single N-Gen unit.
+   - Adjectives follow the noun (S4: *vato lehibe*).
+   - Numerals follow adjectives (S5: *trano kely telop*; S6: *vorona kely roa*; S7: *vary mavo dimy*).
+   - Adjectives follow N-Gen (S9: *vato-nao lehibe*).
+   - Numerals follow adjectives after N-Gen (S10: *trano-ny kely roa*).
+   - Relative clauses follow numerals (S11: *vorona kely roa mijery ahy*).
+   - Relative clauses follow N-Gen (S12: *trano-ko nanao izy*).
+   
+   Combining all evidence: the order is N(-Gen) + Adj + Num + RelCl.
+
+3. **No plural marking on nouns.** The noun *vary* appears identically in S1 (no numeral) and S7 (with *dimy* = five). The noun *vorona* appears identically in S3 (no numeral) and S6/S11 (with *roa* = two). Number is expressed solely by the numeral.
+
+4. **No numeral classifiers.** Numerals appear directly in their slot within the NP with no intervening classifier or measure word. The same numeral forms (*roa*, *telop*, *dimy*) are used with all noun types.
+
+5. **No verbal person/number agreement.** The verb form is invariant across different subjects: *namody* appears with *ahy* (S1) and *izy* (S7); *mijery* appears with *ahy* (S4, S6) and *izy* (S9). The subject's person and number are encoded only by the independent pronoun.
+
+6. **Aspectual prefix.** Verbs carry a prefix that marks aspect:
+   - *na-* = perfective (completed event): *namody* (ate), *najery* (saw), *nanao* (made).
+   - *mi-* = imperfective (ongoing/habitual event): *mimody* (eats), *mijery* (sees).
+   
+   The prefix is identical across all verbs, confirming it is a grammatical marker. The verb stem is unchanged across aspectual forms.
+
+7. **Relative clause structure.** A relative clause consists of a verb (in its aspectual form) followed by its subject, and it modifies the head noun. The head noun serves as the object of the relative clause verb. Example: *vorona kely roa mijery ahy* = "the two small birds [that] I see" — the bird is the object of *mijery*.
+
+8. **Inclusive/exclusive first-person plural.** Two distinct first-person plural pronouns exist: *isika* (inclusive, includes the addressee) and *fotsiny* (exclusive, excludes the addressee). This is directly established by sentences 13 and 14, where the glosses explicitly mark the inclusion or exclusion of the addressee.
+
+**How the rules produce each answer:**
+
+- **Q1a:** VOS gives subject = *ahy* (final position). The object NP *ny vato-ko lehibe telop* is parsed using the modifier order: *ny* (article) + *vato-ko* (N-Gen) + *lehibe* (Adj) + *telop* (Num). The verb *mimody* has the *mi-* prefix → imperfective.
+
+- **Q1b:** VOS gives subject = *izy*. The object NP *ny trano mavo efatra nanao ianao* is parsed as: *ny* + *trano* (N) + *mavo* (Adj) + *efatra* (Num) + *nanao ianao* (RelCl: perfective verb + subject). The verb *najery* has the *na-* prefix → perfective.
+
+- **Q1c:** VOS gives subject = *ahy*. The object NP *ny vorona-ny kely dimy mijery izy* is parsed as: *ny* + *vorona-ny* (N-Gen) + *kely* (Adj) + *dimy* (Num) + *mijery izy* (RelCl: imperfective verb + subject). The verb *mimody* has the *mi-* prefix → imperfective.
+
+- **Q2a:** "I made the two big houses" → perfective verb *nanao* + object *ny trano lehibe roa* (N + Adj + Num) + subject *ahy*. Result: *Nanao ny trano lehibe roa ahy.*
+
+- **Q2b:** "You see the three small stones that I made" → imperfective verb *mijery* + object *ny vato kely telop nanao ahy* (N + Adj + Num + RelCl) + subject *ianao*. Result: *Mijery ny vato kely telop nanao ahy ianao.*
+
+- **Q2c:** "He ate my four big houses that you see" → perfective verb *namody* + object *ny trano-ko lehibe efatra mijery ianao* (N-Gen + Adj + Num + RelCl) + subject *izy*. Result: *Namody ny trano-ko lehibe efatra mijery ianao izy.*
+
+- **Q3a:** The only difference between the two sentences is the verbal prefix (*na-* vs. *mi-*), which marks perfective vs. imperfective aspect respectively.
+
+- **Q3b:** The two sentences differ only in the subject pronoun. Sentences 13 and 14 in the data establish that *isika* is inclusive (includes the addressee) and *fotsiny* is exclusive (excludes the addressee). In the teacher-student context, (i) means "We (the teacher and the student) eat the rice" and (ii) means "We (the teacher and others, but not the student) eat the rice."
+
+DIFFICULTY
+
+**Level 2.** The puzzle requires multi-step reasoning across several interacting domains: (1) identifying the non-default VOS clause structure; (2) deducing the full NP modifier order through combinatorial comparison of multiple examples; (3) recognizing negative properties (absence of plural marking, classifiers, and verbal agreement) by noticing what is not present; (4) identifying the aspectual prefix system; and (5) applying all rules simultaneously in both parsing and construction tasks. The relative clause analysis adds an additional layer, as the solver must recognize embedded clause structure within the NP. The inclusive/exclusive inference in Q3b requires the solver to connect the data evidence (sentences 13–14) to the new context in the question. Each level of inference builds on the previous one, and errors at any stage propagate to later answers.

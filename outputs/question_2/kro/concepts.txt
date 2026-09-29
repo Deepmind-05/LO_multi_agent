@@ -1,0 +1,83 @@
+
+
+TARGET-LANGUAGE: Krongo (Kadu, Africa)
+
+CORE
+
+1. Concept: Locus of Marking in Noun-Numeral Phrases — Dependent marking
+   Target-language realization: In Krongo, the noun carries a plural prefix (WALS 33A) when it appears in a numeral phrase. The numeral follows the noun (WALS 89A: Noun-Numeral order). The numeral itself is unmarked; the noun (the dependent in the NP) bears the morphological change.
+   Intended solver inference: The solver observes that the noun form changes (a prefix appears) in numeral phrases while the numeral remains invariant, and infers that the dependent (noun) is the marked element — i.e., dependent marking.
+   Priority: REQUIRED
+
+2. Concept: Numeral classification — No classification
+   Target-language realization: Krongo has no classifier system. Numerals simply follow the noun (which may carry its obligatory number prefix). No additional classifier element intervenes.
+   Intended solver inference: The solver observes the absence of any classifier-like element between noun and numeral, confirming a non-classifier system. This serves as a contrastive baseline.
+   Priority: OPTIONAL (useful as a negative space; the solver can confirm its absence from the data)
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Pure vigesimal numeral system (WALS 131A)
+   Intended solver inference: From a set of numeral examples, the solver deduces that the base is 20 (e.g., "21" is expressed as "20+1" rather than "10+11"). This requires numerical pattern recognition.
+   Interaction with CORE: The vigesimal system is the numerical context in which the noun-numeral interaction (dependent marking) is observed. The solver must simultaneously decode the numeral values AND the morphological pattern.
+   Difficulty contribution: HIGH — base-20 is non-obvious and requires the solver to identify the "20" unit and the "10" unit (or their absence) from the data.
+   Priority: REQUIRED
+
+2. Phenomenon: Obligatory plural prefix on all nouns (WALS 33A + 34A)
+   Intended solver inference: The solver observes that every noun in the data carries a number prefix (or that singular is zero-marked and plural is prefix-marked, with no "unmarked" noun form possible). This establishes that number is a mandatory nominal category.
+   Interaction with CORE: The plural prefix IS the "marking" referred to by the dependent-marking concept. The solver must recognize that the prefix on the noun in a numeral phrase is the same obligatory number marker, not a special numeral-triggered form.
+   Difficulty contribution: MEDIUM — the solver must distinguish between "the noun changes because of the numeral" vs. "the noun always has a number marker, and here it happens to be plural."
+   Priority: REQUIRED
+
+3. Phenomenon: VSO word order (WALS 81A)
+   Intended solver inference: From multiple sentences, the solver identifies that the verb precedes both subject and object.
+   Interaction with CORE: VSO order means that in a sentence like "V S(N-Num) O," the numeral phrase is embedded in the subject or object position. The solver must correctly parse the clause structure to isolate the noun-numeral phrase.
+   Difficulty contribution: MEDIUM — VSO is less common than SVO and requires the solver to resist SVO assumptions.
+   Priority: HIGH
+
+4. Phenomenon: No verbal person marking (WALS 102A)
+   Intended solver inference: The solver observes that verbs do not carry person/number affixes; arguments are expressed as full noun phrases.
+   Interaction with CORE: Since there is no verbal agreement, the noun (with its number prefix) is the sole carrier of number information in the clause. This makes the noun's marking more salient and easier to isolate.
+   Difficulty contribution: LOW-MEDIUM — simplifies parsing but removes a potential cross-check.
+   Priority: HIGH
+
+5. Phenomenon: Obligatory double negation, pattern NegVSONeg (WALS 112A, 143A, 144U)
+   Intended solver inference: The solver observes that negative sentences contain TWO negative elements — one before the verb and one after the object (clause-final). Both are obligatory; removing either would be ungrammatical.
+   Interaction with CORE: In a negative sentence containing a numeral phrase (e.g., "Neg-V-S(dog.PL-three)-O-Neg"), the solver must simultaneously parse the VSO structure, identify the double negation frame, AND recognize the noun-numeral interaction within the subject.
+   Difficulty contribution: HIGH — double negation is typologically rare and the NegVSONeg pattern is very specific. The solver must discover that both elements are required (not redundant).
+   Priority: HIGH
+
+6. Phenomenon: Inclusive/exclusive distinction in 1PL pronouns (WALS 39A)
+   Intended solver inference: The solver identifies that first-person plural has two distinct forms (inclusive "we+you" vs. exclusive "we+not you").
+   Interaction with CORE: If a numeral phrase appears with a 1PL pronoun subject, the solver must correctly identify which 1PL form is used, adding a layer of pronoun parsing.
+   Difficulty contribution: MEDIUM — adds a small but clear inference step.
+   Priority: OPTIONAL
+
+7. Phenomenon: Noun-Genitive order with dependent marking in possessive NPs (WALS 86A + 24A)
+   Intended solver inference: The possessor follows the possessed noun and carries a genitive marker (prefix, per WALS 51A). This is structurally parallel to the noun-numeral pattern.
+   Interaction with CORE: Creates a typological parallel — both possessive and numeral NPs show dependent marking with the dependent (possessor/noun) following the head. The solver can notice this parallel as a generalization about Krongo's NP structure.
+   Difficulty contribution: MEDIUM — the parallel is a nice "aha" moment but not essential to the core puzzle.
+   Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Vigesimal + N-Num order + obligatory plural prefix:
+   The solver must simultaneously (a) decode numeral values in base-20, (b) identify that the numeral follows the noun, and (c) recognize that the noun's prefix is an obligatory number marker (not a numeral-specific form). These three inferences are interdependent: misidentifying the base leads to miscounting, which obscures the noun-numeral pattern.
+
+2. VSO + no verbal person marking + double negation:
+   The clause structure is V-S-O with no verbal agreement. In negative sentences, the frame is Neg-V-S-O-Neg. The solver must parse the clause, identify the two negation elements as a pair (not as separate morphemes with different functions), and locate the S and O within the negation frame. This creates a multi-layered parsing task.
+
+3. N-Num dependent marking + N-Gen dependent marking (if included):
+   Both possessive and numeral NPs show the same structural pattern: head noun + dependent (marked). The solver can generalize that Krongo uses dependent marking across NP types, which is a higher-level typological inference.
+
+4. Vigesimal + double negation (in a single sentence):
+   A negative sentence containing a numeral phrase (e.g., "I did not see three dogs") requires the solver to handle all systems simultaneously: VSO order, double negation frame, noun-numeral order, plural prefix, and base-20 numeral decoding. This is the highest-difficulty interaction and should appear in at most 1-2 examples.
+
+CONSTRAINTS
+
+- The puzzle data must provide enough numeral examples (at least 5-6 distinct values) for the solver to reliably deduce base-20. Include values that span the "20" boundary (e.g., 19, 20, 21, 40, 41) to make the base identifiable.
+- The plural prefix must be consistent and transparent in the data. If singular is zero-marked, at least one singular noun example should be included to show the contrast.
+- Double negation examples must clearly show BOTH negative elements in every negative sentence. At least 2-3 negative examples are needed to establish the obligatory nature (the solver must see that both elements always co-occur).
+- VSO order must be consistent across all examples. No SVO or OVS examples should appear, as this would confuse the word-order inference.
+- If the inclusive/exclusive distinction is included, both 1PL forms must appear in the data with translations that make the distinction clear (e.g., "we (including you)" vs. "we (not including you)").
+- The puzzle should not require the solver to know Krongo or Kadu specifically. All inferences must be derivable from the provided data plus general linguistic knowledge (e.g., knowledge of numeral bases, word order typology, negation strategies).
+- Avoid including case-marked NPs in the core numeral examples unless the case system is also a puzzle target. If case prefixes appear, they should be consistent and not interfere with the number-prefix identification (e.g., use nominative/zero case in numeral examples).

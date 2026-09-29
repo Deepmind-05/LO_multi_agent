@@ -1,0 +1,81 @@
+
+
+CONTEXT
+
+The following sentences are in Yaqui, a Uto-Aztecan language spoken in northwestern Mexico. Each sentence is followed by its English translation.
+
+DATA
+
+1. naki tari-ri sapa-ka — The child drinks water.
+2. kame naki-ri kita-ka — The dog eats the child.
+3. naki kame-ri kita-na — The child ate the dog.
+4. kame ma naki-ri kita-ka — The dog does not eat the child.
+5. naki ma tari-ri sapa-na — The child did not drink water.
+6. naki-ta tari-ri sapa-ka — The children drink water.
+7. kame naki-ta-ri kita-ka — The dog eats the children.
+8. naki kame kai naka-ka — The child is under the dog.
+
+Lexicon:
+- kame = dog
+- tari = water
+- naki = child
+- kita = eat
+- sapa = drink
+- naka = be
+- ma = (negative particle)
+- kai = (postposition: under)
+
+QUESTIONS
+
+Q1. Translate into Yaqui: "The dog drinks water."
+
+Q2. Translate into Yaqui: "The child does not eat the dog."
+
+Q3. Translate into Yaqui: "The children eat the dog."
+
+ANSWERS
+
+Q1. kame tari-ri sapa-ka
+Q2. naki ma kame-ri kita-ka
+Q3. naki-ta kame-ri kita-ka
+
+SOLUTION
+
+**Identifying the rules:**
+
+**Word order (SOV):** In every sentence, the verb (the element bearing a TAM suffix) appears in final position. The noun phrases precede the verb.
+
+**Case marking (nominative-accusative):** The subject noun appears in its bare (unmarked) form; the object noun carries the suffix -ri. This is confirmed by *naki* appearing unmarked as subject in sentences 1, 3, 5, 6, 8 and marked with -ri as object in sentences 2, 4, 7. Similarly, *kame* is unmarked as subject in 2, 4, 8 and marked with -ri as object in 3.
+
+**Negative particle:** The invariant word *ma* appears between the subject and the object in negative sentences (4, 5). It is a free word, not an affix.
+
+**Plural suffix:** The suffix -ta marks plural. In sentence 6, *naki-ta* is a plural subject (unmarked case). In sentence 7, *naki-ta-ri* is a plural object (accusative case). This establishes the suffix order: stem + plural + case.
+
+**TAM suffixes:** -ka marks non-past (sentences 1, 2, 4, 6, 7, 8); -na marks past (sentences 3, 5). The verb form is determined solely by TAM, not by the identity or number of the subject.
+
+**Postposition:** *kai* is a free word that follows the noun phrase it modifies, marking a locative relation ("under"). In sentence 8, *kame kai* means "under the dog."
+
+**Solving the questions:**
+
+**Q1:** "The dog drinks water."
+- Subject: dog (singular, nominative) → kame
+- Object: water (singular, accusative) → tari-ri
+- Verb: drink (non-past) → sapa-ka
+- Order: S O V → **kame tari-ri sapa-ka**
+
+**Q2:** "The child does not eat the dog."
+- Subject: child (singular, nominative) → naki
+- Negative: ma
+- Object: dog (singular, accusative) → kame-ri
+- Verb: eat (non-past) → kita-ka
+- Order: S ma O V → **naki ma kame-ri kita-ka**
+
+**Q3:** "The children eat the dog."
+- Subject: children (plural, nominative) → naki-ta
+- Object: dog (singular, accusative) → kame-ri
+- Verb: eat (non-past) → kita-ka
+- Order: S O V → **naki-ta kame-ri kita-ka**
+
+DIFFICULTY
+
+2. The solver must identify SOV word order, a two-case system, a preverbal negative particle, a plural suffix, and TAM suffixes from the data. Each question requires applying one or two of these rules to a new combination of lexical items, testing whether the solver has correctly internalized the patterns.

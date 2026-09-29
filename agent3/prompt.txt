@@ -226,12 +226,13 @@ DIFFICULTY
 
 Difficulty level and brief justification.
 
-Do not output analysis outside these sections.
-
-Do not mention Agent 1 or Agent 2.
-
-Do not copy their rationale.
-
-Do not reveal construction reasoning that should remain invisible to solver.
+CRITICAL FORMATTING RULES:
+- Start immediately with the CONTEXT header.
+- Do NOT output internal monologues, scratchpad reasoning, planning drafts, or conversational debate.
+- Do NOT get stuck debating or looping over vocabulary words: pick distinct phonological forms for distinct meanings and proceed directly.
+- Do not output analysis outside these sections.
+- Do not mention Agent 1 or Agent 2.
+- Do not copy their rationale.
+- Do not reveal construction reasoning that should remain invisible to solver.
 
 The final output must be a complete, standalone linguistic Olympiad puzzle.

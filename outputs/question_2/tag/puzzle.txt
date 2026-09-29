@@ -1,0 +1,166 @@
+
+
+CONTEXT
+
+Tagalog is a language spoken by approximately 28 million people in the Philippines. It belongs to the Austronesian language family. The following expressions are common Tagalog phrases. Each is followed by its English translation.
+
+DATA
+
+**Expressions:**
+
+| # | Tagalog | English |
+|---|---------|---------|
+| 1 | isang libro | one book |
+| 2 | dalawang bahay | two houses |
+| 3 | tatlong bata | three children |
+| 4 | apat na puno | four trees |
+| 5 | limang isda | five fish |
+| 6 | anim na libro | six books |
+| 7 | walong bahay | eight houses |
+| 8 | mga libro | books |
+| 9 | mga bata | children |
+| 10 | bahay-bahay | houses |
+| 11 | puno-puno | trees |
+| 12 | isang-isang | one by one |
+| 13 | dalawang-dalawang | two by two |
+| 14 | unang libro | first book |
+| 15 | ikalawang bahay | second house |
+| 16 | ikatlong bata | third child |
+
+**Numerals:**
+
+| English | Tagalog |
+|---------|---------|
+| 1 | isa |
+| 2 | dalawa |
+| 3 | tatlo |
+| 4 | apat |
+| 5 | lima |
+| 6 | anim |
+| 7 | pitu |
+| 8 | walo |
+| 9 | siyam |
+| 10 | sampu |
+
+QUESTIONS
+
+**Part 1. Write the Tagalog expression for each English description. (6 marks)**
+
+a. "seven fish"
+
+b. "fish" (plural, using the plural marker)
+
+c. "books" (plural, no numeral, no plural marker)
+
+d. "three by three"
+
+e. "sixth house"
+
+f. "first tree"
+
+**Part 2. What does each Tagalog expression mean? (6 marks)**
+
+a. siyam na isda
+
+b. mga puno
+
+c. bata-bata
+
+d. anim na-anim na
+
+e. ikaapat na puno
+
+f. sampung isda
+
+**Part 3. (3 marks)**
+
+In expressions like *isang libro* and *apat na puno*, an element appears between the numeral and the noun (−ng in the first case, *na* in the second). What is the function of this element? Is it a classifier, an agreement marker, or something else? Explain your reasoning with specific evidence from the data.
+
+ANSWERS
+
+**Part 1:**
+
+a. pitung isda
+
+b. mga isda
+
+c. libro-libro
+
+d. tatlong-tatlong
+
+e. ikaanim na bahay
+
+f. unang puno
+
+**Part 2:**
+
+a. nine fish
+
+b. trees (plural)
+
+c. children (plural)
+
+d. six by six
+
+e. fourth tree
+
+f. ten fish
+
+**Part 3:**
+
+The element is a **linker** (a positional/syntactic marker), not a classifier or an agreement marker.
+
+Evidence:
+- It is **invariant with respect to the noun's semantic class**: the same −ng appears with *libro* (book, an object), *bahay* (house, a structure), *bata* (child, a person), *puno* (tree, a plant), and *isda* (fish, an animal). A classifier would be expected to vary by noun class.
+- It is **invariant with respect to the noun's form**: the noun does not change shape regardless of which numeral precedes it (e.g., *libro* appears unchanged in *isang libro*, *anim na libro*, and *walong libro*). An agreement marker would be expected to reflect properties of the noun.
+- It **alternates based on the phonological shape of the preceding word**: −ng follows vowel-final forms (*isa* → *isang*, *dalawa* → *dalawang*, *tatlo* → *tatlong*, *lima* → *limang*, *walo* → *walong*), while *na* follows consonant-final forms (*apat* → *apat na*, *anim* → *anim na*). This phonologically conditioned alternation is characteristic of a positional linker, not of a semantically motivated classifier or agreement suffix.
+
+SOLUTION
+
+**Rules the solver must infer:**
+
+**R1 – Numeral-noun order:** The numeral precedes the noun. Evidenced by all expressions in items 1–7, 14–16.
+
+**R2 – Linker alternation:** A linker appears between the numeral and the noun. The linker is −ng after a vowel-final word and *na* after a consonant-final word. Evidenced by: *isang* (isa + ng), *dalawang* (dalawa + ng), *tatlong* (tatlo + ng), *limang* (lima + ng), *walong* (walo + ng) vs. *apat na* (apat + na), *anim na* (anim + na). The alternation is phonologically conditioned by the final segment of the preceding word.
+
+**R3 – Noun invariance (no agreement, no classifier):** The noun does not change form regardless of the numeral. Evidenced by *libro* appearing unchanged in items 1, 6, 8; *bahay* in items 2, 7, 15; *bata* in items 3, 9, 16. The linker also does not vary with the noun, ruling out both classifier and agreement interpretations.
+
+**R4 – Plural marker *mga*:** The word *mga* is a plural marker that precedes the noun. It is used to express plurality when no numeral is present. Evidenced by items 8 (*mga libro* = books) and 9 (*mga bata* = children), where *mga* precedes a noun and the translation shows plurality. It is an alternative to reduplication (items 10–11) for expressing plurality without a numeral.
+
+**R5 – Reduplication for collective plurality:** A noun may be reduplicated to express plurality without a numeral. Evidenced by items 10 (*bahay-bahay* = houses) and 11 (*puno-puno* = trees).
+
+**R6 – Reduplication for distributive meaning:** A numeral (with its linker) may be reduplicated to express distributive/iterative meaning ("N by N"). Evidenced by items 12 (*isang-isang* = one by one) and 13 (*dalawang-dalawang* = two by two).
+
+**R7 – Ordinal derivation:** Ordinals are formed with the prefix *ika-* attached to the cardinal, followed by the appropriate linker. The first ordinal is suppletive: *unang* (from stem *una* + linker −ng). Evidenced by items 14 (*unang libro*), 15 (*ikalawang bahay* = ika- + dalawa + ng), 16 (*ikatlong bata* = ika- + tatlo + ng).
+
+**How rules produce each answer:**
+
+**Part 1a:** "seven fish" → *pitu* (7, vowel-final) + *ng* (linker) + *isda* (fish) = **pitung isda**.
+
+**Part 1b:** "fish" (plural, using the plural marker) → *mga* (plural marker) + *isda* (fish) = **mga isda** (R4).
+
+**Part 1c:** "books" (plural, no numeral, no plural marker) → reduplication of *libro* = **libro-libro** (R5).
+
+**Part 1d:** "three by three" → reduplication of *tatlong* (3 + ng) = **tatlong-tatlong** (R6).
+
+**Part 1e:** "sixth house" → *ika-* + *anim* = *ikaanim* (consonant-final) + *na* (linker) + *bahay* (house) = **ikaanim na bahay** (R7 + R2).
+
+**Part 1f:** "first tree" → *unang* (suppletive first ordinal) + *puno* (tree) = **unang puno** (R7).
+
+**Part 2a:** *siyam* (9, consonant-final) + *na* (linker) + *isda* (fish) = **nine fish**.
+
+**Part 2b:** *mga* (plural marker) + *puno* (tree) = **trees (plural)** (R4).
+
+**Part 2c:** *bata-bata* = reduplicated noun = **children (plural)** (R5).
+
+**Part 2d:** *anim na-anim na* = reduplicated numeral phrase = **six by six** (R6).
+
+**Part 2e:** *ika-* + *apat* = *ikaapat* (consonant-final) + *na* (linker) + *puno* (tree) = **fourth tree** (R7 + R2).
+
+**Part 2f:** *sampu* (10, vowel-final) + *ng* (linker) + *isda* (fish) = **ten fish**.
+
+**Part 3:** See answer above. The key evidence is the invariance of the linker across semantically diverse nouns (ruling out classifier) and across different noun forms (ruling out agreement), combined with the phonologically conditioned alternation (confirming it as a positional linker).
+
+DIFFICULTY
+
+**Level 2.** The puzzle requires the solver to discover six interacting rules (numeral-noun order, linker alternation, noun invariance, plural marker *mga*, two distinct reduplication functions, and ordinal derivation with suppletion). The linker alternation (−ng vs. *na*) requires phonological reasoning, and the distinction between collective and distributive reduplication requires semantic discrimination. The solver must also recognize *mga* as a plural marker that operates independently of the numeral system. Later questions (Part 1e, 2e) require combining the ordinal derivation rule with the linker alternation rule simultaneously. The explanation question (Part 3) demands meta-linguistic articulation of a negative inference (absence of classifiers and agreement). The difficulty is moderate: no single rule is highly complex, but the interaction of multiple rules and the need for careful generalization from the data place this at a solid Olympiad level 2.

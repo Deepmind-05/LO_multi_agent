@@ -1,0 +1,103 @@
+
+
+TARGET-LANGUAGE
+
+Malagasy (mal), Austronesian (Barito)
+
+CORE
+
+1. No numeral classification
+   - Target-language realization: Malagasy has no numeral classifiers (WALS 55A-1: Absent). Numerals appear directly adjacent to nouns without any classifier or measure word.
+   - Intended solver inference: From examples showing "N + numeral" with no intervening element, the solver infers that Malagasy does not use classifiers, unlike languages such as Chinese or Japanese.
+   - Priority: REQUIRED
+
+2. Numeral as dependent modifier following the noun (adapted from "dependent marking in noun-numeral phrases")
+   - Target-language realization: WALS 89A-2: Noun-Numeral order. The numeral is a dependent element that follows the head noun. There is no agreement or inflectional marking on the noun triggered by the numeral (no plural marking, WALS 33A-9).
+   - Intended solver inference: The solver observes that the numeral consistently follows the noun and that the noun form is unchanged regardless of the numeral value. The solver infers that the numeral is a post-nominal dependent modifier, not a head or a classifier.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Consistent post-nominal modifier order within the noun phrase
+   - Phenomenon: Malagasy noun phrases follow a fixed internal order: Noun + Adjective + Numeral + Genitive + Relative Clause (WALS 87A-2 NAdj, 89A-2 NNum, 86A-2 NGen, 90A-1 NRel).
+   - Intended solver inference: From multiple examples with different combinations of modifiers, the solver can deduce the relative ordering of adjective, numeral, genitive, and relative clause. This is a classic ordering puzzle.
+   - Interaction with CORE: The numeral's position (after adjective, before genitive) is a specific instance of the general modifier order. The "no classification" concept is reinforced by the numeral appearing in a fixed slot without any classifier.
+   - Difficulty contribution: HIGH — creates a multi-step ordering inference; the solver must collect evidence from multiple examples to establish the full order.
+   - Priority: HIGH
+
+2. No plural marking on nouns
+   - Phenomenon: WALS 33A-9: No plural. Nouns do not change form to indicate number.
+   - Intended solver inference: The solver notices that the same noun form appears with both "one" and "many" numerals, and infers that number is expressed solely by the numeral, not by nominal morphology.
+   - Interaction with CORE: This makes the numeral the sole number marker, elevating its importance in the noun phrase and making its position and the absence of classifiers more salient.
+   - Difficulty contribution: MEDIUM — a straightforward observation that supports the central insight about the numeral's role.
+   - Priority: HIGH
+
+3. VOS basic word order
+   - Phenomenon: WALS 81A-4: VOS. The verb precedes both object and subject.
+   - Intended solver inference: The solver identifies the verb-initial pattern and determines that the first NP after the verb is the object and the second is the subject.
+   - Interaction with CORE: The noun phrases (with their internal modifier structure) appear in object and subject positions. The solver must parse both clause-level and phrase-level structure simultaneously.
+   - Difficulty contribution: HIGH — VOS is typologically rare and creates a non-default parsing challenge. The solver must not assume SVO or SOV.
+   - Priority: HIGH
+
+4. No verbal person marking; obligatory subject pronouns
+   - Phenomenon: WALS 102A-1: No person marking on verbs. WALS 101A-1: Obligatory pronouns in subject position. The verb carries no agreement morphology; the subject is expressed as a free pronoun.
+   - Intended solver inference: The solver notices that the verb form is invariant across different subjects and that a pronoun always appears in subject position. The solver infers that person/number of the subject is encoded only by the independent pronoun, not by the verb.
+   - Interaction with CORE: The subject pronoun is a noun phrase (albeit a pronominal one) that occupies the post-object position in VOS order. This interacts with the noun phrase structure analysis.
+   - Difficulty contribution: MEDIUM — the solver must resist the expectation of verbal agreement and instead identify the subject from the independent pronoun.
+   - Priority: HIGH
+
+5. Tense-aspect prefixes (perfective/imperfective)
+   - Phenomenon: WALS 65A-1: Grammatical perfective/imperfective distinction. WALS 69A-1: Tense-aspect prefixes. WALS 66A-4: No past tense. WALS 67A-2: No inflectional future.
+   - Intended solver inference: The solver observes that verbs have prefixes that distinguish aspect (completed vs. ongoing) but not tense (past vs. future). The solver infers an aspectual rather than tensed system.
+   - Interaction with CORE: The verbal prefix is a separate morphological layer from the noun phrase structure. It adds complexity to verb parsing without interfering with NP analysis.
+   - Difficulty contribution: MEDIUM — adds a layer of verbal morphology that the solver must account for, but does not directly interact with the noun-numeral concepts.
+   - Priority: OPTIONAL
+
+6. Demonstrative circumposition (before and after noun)
+   - Phenomenon: WALS 88A-5: Demonstrative simultaneously before and after noun.
+   - Intended solver inference: The solver notices that a demonstrative element appears both before and after the noun (or noun phrase), creating a bracketing pattern.
+   - Interaction with CORE: The demonstrative brackets the entire noun phrase, including all post-nominal modifiers. This tests whether the solver has correctly identified the boundaries of the noun phrase.
+   - Difficulty contribution: MEDIUM-HIGH — the circumposition is unusual and creates a parsing challenge: the solver must determine what is "inside" the demonstrative bracket.
+   - Priority: OPTIONAL
+
+7. Inclusive/exclusive distinction in first-person plural
+   - Phenomenon: WALS 39A-5: Inclusive and exclusive differentiated in independent pronouns.
+   - Intended solver inference: The solver notices two distinct first-person plural pronouns and infers that one includes the addressee (inclusive) and the other excludes the addressee (exclusive).
+   - Interaction with CORE: This is a property of the pronominal noun phrase, which interacts with the VOS structure (the subject pronoun's identity affects interpretation).
+   - Difficulty contribution: MEDIUM — a well-known Austronesian feature that creates an interesting inference about the semantics of the pronouns.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. No plural marking + Numeral position + No classifiers:
+   - The numeral is the sole number marker, appears in a fixed post-nominal slot, and requires no classifier. Together these three facts define the complete noun-numeral relationship in Malagasy. The solver must integrate all three to fully characterize the system.
+
+2. NP modifier order + VOS word order:
+   - The solver must simultaneously parse clause structure (V-O-S) and phrase-internal structure (N + Adj + Num + Gen + RelCl). A misanalysis of one level propagates errors to the other. For example, if the solver incorrectly assumes SVO, they will misidentify which NP is the subject and which is the object, leading to errors in identifying which NP contains the numeral.
+
+3. No verbal person marking + VOS + Obligatory pronouns:
+   - The subject is identified solely by its position (final NP) and its form (independent pronoun). The solver cannot use verbal agreement to confirm subject identity. This creates a dependency: correct identification of the subject requires correct identification of the word order.
+
+4. Demonstrative circumposition + NP modifier order:
+   - If the demonstrative brackets the entire NP (including all post-nominal modifiers), the solver must correctly identify the full extent of the NP to determine what is inside the bracket. This tests the solver's NP boundary analysis.
+
+5. Adjective/relative clause collapse (WALS 60A-4) + NP modifier order:
+   - Since adjectives and relative clauses share the same form and both follow the noun, the solver may face ambiguity in determining whether a post-nominal element is an adjective or a relative clause. Context (presence of a subject within the modifier) may resolve the ambiguity.
+
+CONSTRAINTS
+
+1. The puzzle must provide sufficient examples to establish the full NP modifier order (at least 4 different modifier types must appear in varying combinations). A single example is insufficient for ordering inference.
+
+2. The "no plural marking" property must be demonstrated by showing the same noun form with different numerals (e.g., "one X" and "three X" with identical noun form).
+
+3. The VOS order must be unambiguous in the examples. If the subject and object are both full NPs (not pronouns), the solver needs additional cues (e.g., semantic plausibility, or the presence of a pronoun in one position) to confirm the order.
+
+4. The absence of classifiers must be shown by the direct adjacency of numeral to noun (or to the adjective preceding the numeral), with no intervening element.
+
+5. If tense-aspect prefixes are included, the puzzle must show at least two aspectual forms of the same verb to allow the solver to identify the prefix as aspectual rather than something else.
+
+6. The inclusive/exclusive distinction (if included) requires at least two different 1PL pronouns in different discourse contexts to allow the solver to infer the semantic difference.
+
+7. All target-language forms must be presented in a consistent orthography. The solver should not need to know Malagasy phonology to solve the puzzle; the forms should be treated as opaque strings.
+
+8. The puzzle should not require the solver to know that Malagasy is Austronesian or to have any prior knowledge of the language. All inferences must be derivable from the provided data plus general linguistic knowledge.

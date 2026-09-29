@@ -1,0 +1,216 @@
+
+
+CONTEXT
+
+Evenki is a Tungusic language spoken by the Evenki people in northeastern Siberia and parts of northern China. It is a severely endangered language with fewer than 20 fluent speakers remaining. The language is agglutinative, with rich suffixal morphology on both nouns and verbs.
+
+Below are 18 Evenki sentences with English translations. The language has no articles, no gender, and no classifiers. All morphological marking is suffixal.
+
+DATA
+
+1. kora tula-a vora-a-s
+   "The horse eats the fish."
+
+2. sara-m sila-i tola-a-m
+   "My hand is on the stone."
+
+3. nara-a ne fina-b-a-k
+   "We (including you) do not see the river."
+
+4. kora-t-n lora-t-l mora-i tola-a-l
+   "The horses' eyes are on the tree."
+
+5. kela-m-a ne gala-b-i-d
+   "You (sg.) did not take my head."
+
+6. nara-n tula-s tara-i tola-a-s
+   "The river's fish is in the house."
+
+7. tara-w nara-i tola-a-w
+   "Our (excluding you) house is by the river."
+
+8. kora-n lora-s sila-i tola-a-s
+   "The horse's eye is on the stone."
+
+9. mora-n tula-s fina-a-m
+   "I see the tree's fish."
+
+10. kora-n pala-s-a vora-a-r
+    "You (pl.) eat the horse's foot."
+
+11. nara-n sila-s mora-i tola-a-s
+    "The river's stone is on the tree."
+
+12. kora-n tara-s-i dela-o-w
+    "We (excluding you) will go to the horse's house."
+
+13. sara-t-k mora-i tola-a-k
+    "Our (including you) hands are on the tree."
+
+14. kela-d sila-i tola-a-d
+    "Your (sg.) head is on the stone."
+
+15. kora-t-n lora-t-l-a fina-a-r
+    "You (pl.) see the horses' eyes."
+
+16. tula nara-i dela-e-s
+    "The fish went to the river (indirect evidence)."
+
+17. tara-r nara-i tola-a-r
+    "Your (pl.) house is by the river."
+
+18. kora-n lora-t-l sila-i tola-a-s
+    "The horse's eyes are on the stone."
+
+QUESTIONS
+
+**Part A: Glossing (12 marks)**
+
+Provide the English translation for each of the following Evenki sentences.
+
+A1. mora-n pala-s nara-i tola-a-s
+
+A2. tula-a ne vora-b-e-k
+
+A3. kora-t-n pala-t-l tara-i tola-a-l
+
+A4. nara-n sila-s-a fina-o-d
+
+A5. mora-n kela-s-a ne gala-b-e-m
+
+A6. lora-t-w sila-i tola-a-w
+
+**Part B: Translation (14 marks)**
+
+Translate the following English sentences into Evenki.
+
+B1. The stone's fish is on the tree.
+
+B2. You (sg.) eat our (including you) horse.
+
+B3. You (pl.) did not see the horses' feet (indirect evidence).
+
+B4. I will take the river's head.
+
+B5. We (excluding you) do not see the tree's stone.
+
+B6. The fish's hands are in the house.
+
+B7. You (pl.) will eat the stone's fish.
+
+**Part C: Analysis (8 marks)**
+
+C1. (2 marks) What is the Evenki form for "their (pl.) hands" in the accusative case?
+
+C2. (2 marks) What is the Evenki form for "the river's fish" (singular, nominative)?
+
+C3. (2 marks) The noun *sara* never appears without a suffix in the data above. What does this tell you about *sara*, and which other nouns in the data share this property?
+
+C4. (2 marks) In sentence 18 (*kora-n lora-t-l sila-i tola-a-s*), identify every suffix and state its grammatical function.
+
+ANSWERS
+
+**Part A:**
+
+A1. The tree's foot is in the river.
+
+A2. We (including you) did not eat the fish (indirect evidence).
+
+A3. The horses' feet are in the house.
+
+A4. You (sg.) will see the river's stone.
+
+A5. I did not take the tree's head (indirect evidence).
+
+A6. Our (excluding you) eyes are on the stone.
+
+**Part B:**
+
+B1. sila-n tula-s mora-i tola-a-s
+
+B2. kora-k-a vora-a-d
+
+B3. kora-t-n pala-t-l-a ne fina-b-e-r
+
+B4. nara-n kela-s-a gala-o-m
+
+B5. mora-n sila-s-a ne fina-b-a-w
+
+B6. tula-n sara-t-s tara-i tola-a-s
+
+B7. sila-n tula-s-a vora-o-r
+
+**Part C:**
+
+C1. sara-t-l-a
+
+C2. nara-n tula-s
+
+C3. *sara* is an obligatory possessed noun: it cannot appear without a possessive suffix. The other nouns with this property are *kela*, *lora*, and *pala*.
+
+C4.
+- *kora-n*: **-n** = genitive
+- *lora-t-l*: **-t** = plural; **-l** = 3rd person plural possessive
+- *sila-i*: **-i** = locative
+- *tola-a-s*: **-a** = present tense; **-s** = 3rd person singular (subject, agreeing with the possessor)
+
+SOLUTION
+
+**Inferred rules:**
+
+**Nominal suffix order: STEM + PLURAL + POSSESSIVE + CASE**
+
+- Plural suffix: *-t* (optional on regular nouns)
+- Possessive suffixes (encode person/number of the possessor on the possessed noun): *-m* (1sg), *-d* (2sg), *-s* (3sg), *-k* (1pl.incl), *-w* (1pl.excl), *-r* (2pl), *-l* (3pl). Optional on regular nouns; obligatory on a specific class of nouns.
+- Case suffixes: zero (nominative), *-n* (genitive), *-a* (accusative), *-i* (locative). All distinct.
+
+**Verbal suffix order: STEM + NEGATIVE + TENSE + PERSON**
+
+- Negative suffix: *-b* (obligatory in negative sentences)
+- Tense/evidential: *-a* (present), *-i* (past, direct evidence), *-e* (past, indirect evidence), *-o* (future)
+- Person/number (subject): identical forms to possessive suffixes: *-m*, *-d*, *-s*, *-k*, *-w*, *-r*, *-l*
+
+**Agreement rule:** When the subject is a possessive noun phrase, the verb's person/number suffix agrees with the possessor (the genitive noun), not with the possessed noun. This is demonstrated by sentence 18 (*kora-n lora-t-l sila-i tola-a-s*: singular possessor "horse" → 3sg verb, despite plural possessed "eyes"), sentence 7 (*tara-w nara-i tola-a-w*: 1pl.excl possessor "our" → 1pl.excl verb, despite singular possessed "house"), and sentence 14 (*kela-d sila-i tola-a-d*: 2sg possessor "your" → 2sg verb, despite singular possessed "head").
+
+**Double marking of possession:** When the possessor is a noun, it bears the genitive suffix *-n* and the possessed noun bears the possessive suffix (with person/number matching the possessor noun). When the possessor is a pronoun, only the possessive suffix on the possessed noun is used.
+
+**Double negation:** A negative sentence requires both the preverbal particle *ne* and the verbal suffix *-b*. Neither alone is sufficient.
+
+**Obligatory possessed nouns:** *sara* (hand), *kela* (head), *lora* (eye), *pala* (foot) never appear without a possessive suffix. They form a semantic class (body parts) with a morphological constraint.
+
+**Evidence for each rule:**
+
+- Suffix order (nouns): Sentence 15 (*lora-t-l-a*) shows three suffixes in the order plural + possessive + case. Sentence 12 (*tara-s-i*) shows possessive + case. Sentence 4 (*kora-t-n*) shows plural + genitive.
+- Suffix order (verbs): Sentence 5 (*gala-b-i-d*) shows negative + tense + person. Sentence 12 (*dela-o-w*) shows tense + person.
+- Possessive paradigm: All seven forms appear across the data (e.g., *-m* in 2,5; *-d* in 14; *-s* in 6,8,9,10,11,12; *-k* in 13; *-w* in 7; *-r* in 17; *-l* in 4,15,18).
+- Case paradigm: Nominative (zero) in 1,16; genitive *-n* in 4,6,8,9,10,11,12,15,18; accusative *-a* in 1,3,5,10,15; locative *-i* in 2,4,6,7,8,11,12,13,14,16,17,18.
+- Tense paradigm: Present *-a* in most sentences; past.direct *-i* in 5; past.indirect *-e* in 16; future *-o* in 12.
+- Agreement with possessor: Sentence 18 (*kora-n lora-t-l sila-i tola-a-s*) shows 3sg verb with singular possessor and plural possessed. Sentence 7 (*tara-w nara-i tola-a-w*) shows 1pl.excl verb with 1pl.excl possessor and singular possessed. Sentence 14 (*kela-d sila-i tola-a-d*) shows 2sg verb with 2sg possessor and singular possessed.
+- Double marking: Sentences 4, 6, 8, 9, 10, 11, 12, 15, 18 all show genitive on possessor + possessive suffix on possessed noun.
+- Double negation: Sentences 3 and 5 both contain *ne* + *-b*.
+- Obligatory possessed nouns: *sara* (2,13), *kela* (5,14), *lora* (4,8,15,18), *pala* (10) always carry a possessive suffix; no bare form appears.
+- Inclusive/exclusive: Sentence 3 glossed "including you" has *-k*; sentence 7 glossed "excluding you" has *-w*.
+
+**How rules produce each answer:**
+
+- A1: *mora-n* (tree + gen) + *pala-s* (foot + 3sg poss) + *nara-i* (river + loc) + *tola-a-s* (be + pres + 3sg, agreeing with possessor "tree") → "The tree's foot is in the river."
+- A2: *tula-a* (fish + acc) + *ne* + *vora-b-e-k* (eat + neg + past.ind + 1pl.incl) → "We (incl.) did not eat the fish (indirect evidence)."
+- A3: *kora-t-n* (horse + pl + gen) + *pala-t-l* (foot + pl + 3pl poss) + *tara-i* (house + loc) + *tola-a-l* (be + pres + 3pl, agreeing with possessor "horses") → "The horses' feet are in the house."
+- A4: *nara-n* (river + gen) + *sila-s-a* (stone + 3sg poss + acc) + *fina-o-d* (see + fut + 2sg) → "You (sg.) will see the river's stone."
+- A5: *mora-n* (tree + gen) + *kela-s-a* (head + 3sg poss + acc) + *ne* + *gala-b-e-m* (take + neg + past.ind + 1sg) → "I did not take the tree's head (indirect evidence)."
+- A6: *lora-t-w* (eye + pl + 1pl.excl poss) + *sila-i* (stone + loc) + *tola-a-w* (be + pres + 1pl.excl, agreeing with possessor "we excl.") → "Our (excl.) eyes are on the stone."
+- B1: *sila-n* (stone + gen) + *tula-s* (fish + 3sg poss) + *mora-i* (tree + loc) + *tola-a-s* (be + pres + 3sg, agreeing with possessor "stone")
+- B2: *kora-k-a* (horse + 1pl.incl poss + acc) + *vora-a-d* (eat + pres + 2sg)
+- B3: *kora-t-n* (horse + pl + gen) + *pala-t-l-a* (foot + pl + 3pl poss + acc) + *ne* + *fina-b-e-r* (see + neg + past.ind + 2pl)
+- B4: *nara-n* (river + gen) + *kela-s-a* (head + 3sg poss + acc) + *gala-o-m* (take + fut + 1sg)
+- B5: *mora-n* (tree + gen) + *sila-s-a* (stone + 3sg poss + acc) + *ne* + *fina-b-a-w* (see + neg + pres + 1pl.excl)
+- B6: *tula-n* (fish + gen) + *sara-t-s* (hand + pl + 3sg poss) + *tara-i* (house + loc) + *tola-a-s* (be + pres + 3sg, agreeing with possessor "fish")
+- B7: *sila-n* (stone + gen) + *tula-s-a* (fish + 3sg poss + acc) + *vora-o-r* (eat + fut + 2pl)
+- C1: *sara* + *-t* (pl) + *-l* (3pl poss) + *-a* (acc) = *sara-t-l-a*
+- C2: *nara* + *-n* (gen) + *tula* + *-s* (3sg poss) = *nara-n tula-s*
+- C3: *sara* is obligatory possessed; same class: *kela*, *lora*, *pala*
+- C4: As listed in answers.
+
+DIFFICULTY
+
+**Level 5 (High).** The puzzle requires the solver to simultaneously discover: (1) a fixed suffix order on nouns with up to three co-occurring suffixes; (2) a parallel suffix order on verbs with up to three co-occurring suffixes; (3) a seven-way possessive/person paradigm; (4) a four-way case paradigm; (5) a four-way tense/evidential paradigm; (6) a double-marking strategy for possession; (7) a double-marking strategy for negation; (8) a morphologically defined class of obligatory possessed nouns; (9) an inclusive/exclusive distinction in 1st person plural; and (10) an agreement rule whereby the verb agrees with the possessor rather than the possessed noun in possessive noun phrases. Later questions (Part B) require the simultaneous application of multiple inferred rules (e.g., B3 requires genitive + plural on the possessor, plural + possessive + accusative on the possessed noun, negative particle, negative suffix, past-indirect tense, and 2pl person — seven distinct rule applications in a single sentence). The agreement rule (demonstrated by sentence 18) adds a layer of inference: the solver must recognize that verb agreement targets the possessor's number, not the possessed noun's number, and apply this in B6 where the possessed noun is plural but the possessor is singular. The parallel between nominal and verbal person marking provides a cross-domain generalization that rewards careful pattern recognition.

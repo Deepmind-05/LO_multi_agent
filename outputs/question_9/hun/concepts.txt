@@ -1,0 +1,98 @@
+
+
+TARGET-LANGUAGE: Hungarian
+
+CORE
+
+1. Noun class system with systematic singular-plural alternations
+   - Target-language realization: Vowel harmony classes (front/back × rounded/unrounded) determine the form of all suffixes attached to a root. Nouns and verb stems belong to harmony classes that systematically govern suffix selection.
+   - Intended solver inference: Given a root, the solver identifies its harmony class from its vowels and predicts the form of any suffix. The "class" is phonologically defined (by root vowels) rather than semantically defined.
+   - Priority: REQUIRED
+
+2. Singular-plural distinction marked by systematic phonological alternations
+   - Target-language realization: Plural is marked by a suffix whose vowel form (-k / -ek / -ok / -ök) is determined by the root's harmony class. The root itself remains unchanged; the alternation is in the suffix.
+   - Intended solver inference: The plural suffix form is a predictable function of the root's vowel quality. The solver discovers the mapping from root vowels to suffix form.
+   - Priority: REQUIRED
+
+3. Vowel quality alternations in declension
+   - Target-language realization: Suffix vowels systematically alternate along two dimensions: front/back (a,o ↔ e,ö) and rounded/unrounded (a ↔ o, e ↔ ö). The suffix vowel is selected to match the root's dominant vowel quality.
+   - Intended solver inference: The solver discovers two independent binary dimensions governing suffix vowel selection, not a single undifferentiated alternation.
+   - Priority: REQUIRED
+
+4. Correspondence between verb conjugation and noun declension patterns
+   - Target-language realization: The same vowel harmony rules that determine nominal suffix forms (plural, case, possessive) also determine the vowel forms of verbal agreement suffixes. The harmony class of a verb stem governs its agreement markers just as the harmony class of a noun root governs its nominal suffixes.
+   - Intended solver inference: Rules discovered from nominal paradigms transfer to verbal paradigms. The solver can predict verbal agreement forms using the same harmony rules learned from nouns.
+   - Priority: HIGH
+
+5. Verb agreement with noun class (1st person vs 3rd person mirroring singular vs plural)
+   - Target-language realization: Verbs carry person/number agreement markers (1sg, 2sg, 3sg, 1pl, 2pl, 3pl) whose vowel form depends on the verb stem's harmony class. The singular/plural distinction in agreement parallels the singular/plural distinction in nominal morphology.
+   - Intended solver inference: The agreement system is two-dimensional: person/number × harmony class. The solver must track both dimensions simultaneously.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Vowel harmony as a two-dimensional system (front/back × rounded/unrounded)
+   - Phenomenon: Hungarian suffixes must agree with the root along two independent dimensions: (a) front vs. back vowel, (b) rounded vs. unrounded (relevant primarily for back vowels: a vs. o). This creates up to four suffix variants per morpheme.
+   - Intended solver inference: The solver must discover that there are TWO independent dimensions, not one. This is harder than a simple binary alternation and requires careful analysis of the data.
+   - Interaction with CORE: This is the specific mechanism implementing the "noun class" concept. The two-dimensional nature makes class assignment more complex than a simple binary.
+   - Difficulty contribution: HIGH. The solver must separate the two dimensions, which requires comparing roots that differ in only one dimension.
+   - Priority: REQUIRED
+
+2. Agglutinative suffix stacking
+   - Phenomenon: Multiple suffixes (plural + case + possessive) can be concatenated on a single root, each independently showing vowel harmony. E.g., root + plural + dative + possessive.
+   - Intended solver inference: The solver can decompose complex surface forms into constituent morphemes. The repetition of the harmony pattern across stacked suffixes provides redundant confirmation of the harmony rules.
+   - Interaction with CORE: Provides multiple independent confirmations of the harmony rules within a single form, making the rules more robustly inferable.
+   - Difficulty contribution: MEDIUM. Adds surface complexity but actually aids inference through redundancy.
+   - Priority: HIGH
+
+3. Possessive suffixes (person/number × harmony)
+   - Phenomenon: Hungarian has a full set of possessive suffixes marking person (1sg, 2sg, 3sg, 1pl, 2pl, 3pl) and number, with vowel forms determined by the root's harmony class. E.g., "házam" (my house, back) vs. "szemem" (my eye, front).
+   - Intended solver inference: The possessive suffixes provide a second nominal paradigm (alongside plural and case) for confirming harmony rules. The person/number dimension adds a layer of complexity parallel to verbal agreement.
+   - Interaction with CORE: Creates a three-way parallel: plural suffixes, possessive suffixes, and verbal agreement all show the same harmony pattern. This strengthens the cross-paradigm inference.
+   - Difficulty contribution: MEDIUM-HIGH. The person/number dimension in possessives mirrors the person/number dimension in verbal agreement, creating a structural parallel the solver can exploit.
+   - Priority: HIGH
+
+4. Rich case system with harmonic variants
+   - Phenomenon: Hungarian has 18+ grammatical cases, each with vowel-harmonic variants. E.g., dative: -ba/-be/-ra/-re; inessive: -ban/-ben/-ban/-ben; etc.
+   - Intended solver inference: The case system provides extensive data for confirming the harmony rules. The solver can verify that the same harmony pattern holds across many different case suffixes.
+   - Interaction with CORE: Demonstrates the generality and productivity of the harmony system. The solver can be confident in their rules when they hold across many different suffixes.
+   - Difficulty contribution: LOW-MEDIUM. Primarily provides confirmatory data rather than new inference challenges.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Vowel harmony (two-dimensional) × Plural suffix:
+   - The two-dimensional harmony system determines which of four plural suffix forms is selected. The solver must discover both dimensions to correctly predict all four forms.
+   - Additional inference: The solver must determine which root vowel "dominates" when a root contains multiple vowels (in practice, for the puzzle, use roots with unambiguous harmony to avoid this complication).
+
+2. Vowel harmony × Cross-paradigm consistency (nominal → verbal):
+   - The same two-dimensional harmony rules govern both nominal suffixes and verbal agreement suffixes. The solver discovers the rules from nominal data and transfers them to verbal data.
+   - Additional inference: The solver must recognize that the verbal agreement system is governed by the same abstract rules, not a separate set of rules. This is the key "aha" moment of the puzzle.
+
+3. Agglutinative stacking × Vowel harmony:
+   - When multiple suffixes stack on a root, all show the same harmony pattern. This provides redundant evidence within a single form.
+   - Additional inference: The solver can verify their harmony rules by checking that all suffixes in a complex form are consistent with the root's harmony class. Inconsistency would signal an error in their analysis.
+
+4. Possessive suffixes × Verbal agreement (structural parallel):
+   - Both possessive suffixes and verbal agreement markers encode person/number AND show vowel harmony. This creates a structural parallel: the possessive suffix paradigm and the verbal agreement paradigm have the same two-dimensional structure (person/number × harmony).
+   - Additional inference: The solver can use the structural parallel to cross-check their analysis. If the possessive 1sg suffix has a front vowel, the verbal 1sg agreement suffix should also have a front vowel (for a front-harmony stem).
+
+5. Possessive suffixes × Plural suffix (same root, different suffixes):
+   - The same root can show both a plural suffix and a possessive suffix, both of which must be harmonically consistent with the root.
+   - Additional inference: The solver can confirm that the harmony class is a property of the ROOT (not the suffix), since different suffixes on the same root all show the same harmony pattern.
+
+CONSTRAINTS
+
+1. All roots used in the puzzle must have unambiguous, consistent vowel harmony (all front or all back; if back, all rounded or all unrounded). Avoid mixed-vowel roots that could confuse the solver about which dimension is operative.
+
+2. The puzzle must provide sufficient examples to demonstrate BOTH dimensions of vowel harmony (front/back AND rounded/unrounded). At minimum, the data must include roots from all four harmony classes (back-unrounded, back-rounded, front-unrounded, front-rounded) to make both dimensions discoverable.
+
+3. The cross-paradigm transfer (nominal → verbal) must be supported by at least one clear example where the solver can apply nominal harmony rules to predict a verbal form.
+
+4. The solver must not need to know Hungarian vocabulary. All inference must be based on formal phonological patterns visible in the data. Provide glosses or semantic labels for all forms.
+
+5. Do not rely on consonant alternations or vowel length contrasts as part of the core puzzle mechanism. These are not systematic enough in Hungarian inflection to support reliable inference.
+
+6. The harmony rules must be presented as regular and exceptionless within the puzzle data. Do not include irregular forms that would undermine the solver's confidence in the discovered rules.
+
+7. The possessive suffix paradigm and the verbal agreement paradigm should use the same person/number set (1sg, 2sg, 3sg, 1pl, 2pl, 3pl) to make the structural parallel transparent.

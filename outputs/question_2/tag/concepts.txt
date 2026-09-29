@@ -1,0 +1,74 @@
+
+
+TARGET-LANGUAGE: Tagalog (tag)
+
+CORE
+
+1. Concept: No numeral classification (source 100A-1)
+   - Target-language realization: Tagalog has no numeral classifiers (WALS 55A-1: Absent). Numerals directly modify nouns without an intervening classifier.
+   - Intended solver inference: Solvers observe that numerals combine directly with nouns (via a linker) and infer that no classifier system exists. This is a negative inference (absence of a common feature).
+   - Priority: REQUIRED
+
+2. Concept: Numeral-Noun order (WALS 89A-1)
+   - Target-language realization: Numeral precedes noun (e.g., "dalawang libro" = two books).
+   - Intended solver inference: Solvers identify the linear order of numeral and noun from parallel examples.
+   - Priority: REQUIRED
+
+3. Concept: No dependent marking in noun-numeral phrases (contrast with source 83A-2)
+   - Target-language realization: The noun does not change form based on the numeral. "libro" remains "libro" regardless of whether it is "isang libro" or "dalawang libro."
+   - Intended solver inference: Solvers notice that the noun form is invariant across different numerals and conclude there is no agreement. This contrasts with the Estonian source where the noun does change.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Linker system (positional morpheme -ng/-a/-na)
+   - Intended solver inference: Solvers observe a consistent morpheme appearing between the numeral and the noun (e.g., "dalawa-ng libro") and identify it as a fixed positional marker, not agreement or a classifier. They must distinguish it from the numeral itself and from the noun.
+   - Interaction with CORE: The linker is the element that might be mistaken for a classifier or for agreement. Its identification as a positional (not semantic) marker is a key inference step.
+   - Difficulty contribution: Medium. Requires solvers to recognize a morpheme that is not semantically motivated by the numeral's meaning but by syntactic position.
+   - Priority: HIGH
+
+2. Phenomenon: Optional plural marker "mga" (WALS 34A-4: all nouns, always optional)
+   - Intended solver inference: Solvers see parallel examples with and without "mga" (e.g., "dalawang libro" vs. "mga dalawang libro") and infer that the plural marker is optional, not obligatory.
+   - Interaction with CORE: The optionality of plural interacts with the absence of classifiers and the absence of agreement. The numeral alone is sufficient to indicate plurality; no additional marking is required on the noun.
+   - Difficulty contribution: Medium. Creates a question about what is required vs. optional in the noun-numeral phrase.
+   - Priority: HIGH
+
+3. Phenomenon: Reduplication for plurality and other functions (WALS 27A-1: productive full and partial reduplication)
+   - Intended solver inference: Solvers observe reduplicated forms (e.g., "bahay-bahay") and infer that reduplication can express plurality or distributive/iterative meaning independently of numerals.
+   - Interaction with CORE: Reduplication provides an alternative plurality strategy that coexists with (and is independent of) the numeral system. This creates a typologically interesting contrast: plurality can be expressed by (a) a numeral, (b) the optional marker "mga," or (c) reduplication.
+   - Difficulty contribution: High. Solvers must recognize reduplication as a morphological process and determine its semantic contribution. It also interacts with distributive expressions (e.g., "isang-isang" = one by one).
+   - Priority: HIGH
+
+4. Phenomenon: Ordinal derivation pattern (WALS 53A-6: "first" suppletive, others derived)
+   - Intended solver inference: Solvers observe that "unang" (first) is unrelated in form to the cardinal "isa" (one), while "ikalawa" (second), "ikatlo" (third), etc. are transparently derived from cardinals via prefix ika-.
+   - Interaction with CORE: Shows that the numeral system has internal morphological structure (prefixation for ordinals) even though it lacks classifiers. The suppletive "first" creates an exception that solvers must notice.
+   - Difficulty contribution: Medium. Adds a layer of morphological reasoning about how ordinals relate to cardinals.
+   - Priority: OPTIONAL
+
+5. Phenomenon: Distributive expression via reduplication (WALS 54A-7: mixed/other strategies)
+   - Intended solver inference: Solvers observe that distributive meaning ("one by one," "each") is expressed by reduplicating the numeral (e.g., "isang-isang") or by a separate word "bawat" (each).
+   - Interaction with CORE: Shows that reduplication is not only a plurality strategy but also a distributive strategy, creating a functional overlap that solvers must disentangle.
+   - Difficulty contribution: High. Requires solvers to distinguish distributive from collective plurality and to recognize reduplication as the mechanism.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. [No classifiers] × [Linker]: The linker -ng appears in the same structural position where a classifier would appear in classifier languages. Solvers must determine that it is a positional marker, not a semantic classifier. This is the central inference of the puzzle.
+
+2. [No agreement] × [Linker]: The linker is invariant (always -ng in this position) while true agreement would vary with the noun's properties. Solvers can distinguish the two by observing that the linker does not change with different nouns.
+
+3. [Optional plural "mga"] × [Reduplication]: Two independent, optional strategies for expressing plurality coexist. Solvers must determine that neither is obligatory and that they can in principle co-occur or be used independently.
+
+4. [Reduplication] × [Distributive]: Reduplication serves both collective plurality and distributive functions. Solvers must use context to distinguish these uses, adding a semantic reasoning layer.
+
+5. [Numeral-Noun order] × [Linker]: The linker is always between the numeral and the noun, confirming the linear structure Num-Linker-Noun. This helps solvers segment the phrase correctly.
+
+CONSTRAINTS
+
+- The linker must be presented in sufficient examples for solvers to identify it as a separate, invariant morpheme (not part of the numeral, not part of the noun, not a classifier).
+- The optionality of "mga" must be demonstrated through parallel examples that are identical except for the presence/absence of "mga."
+- Reduplication examples must be clearly distinguishable from compound words or other morphological processes.
+- The puzzle must not require solvers to know specific Tagalog vocabulary; all inferences must be based on formal patterns (position, invariance, optionality, reduplication structure).
+- The absence of classifiers is a negative inference; the puzzle must provide enough positive evidence (direct numeral-noun combinations) to make the absence inferable.
+- If ordinals are included, the suppletive "first" must be clearly contrasted with the regular ika- pattern to make the exception visible.
+- The puzzle should not conflate the linker with the definite article "ang" or other markers; examples should be controlled to isolate the numeral-noun construction.

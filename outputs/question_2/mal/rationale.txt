@@ -1,0 +1,143 @@
+
+
+TARGET-LANGUAGE
+
+Malagasy (mal), Austronesian (Barito)
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the design goal and concept integration.**
+
+The puzzle requires the solver to simultaneously discover: (a) clause-level word order is VOS; (b) noun phrases follow a fixed internal modifier order Noun + Adjective + Numeral + Genitive + Relative Clause; (c) nouns carry no plural morphology; (d) numerals appear directly in the NP with no classifier; (e) the verb carries no person/number agreement and the subject is an independent pronoun or full NP in final position; (f) verbs carry an aspectual prefix (perfective vs. imperfective) that helps identify the verb and adds a morphological layer.
+
+The central difficulty arises from the interaction between clause-level and phrase-level structure: the solver must parse VOS word order and NP modifier order simultaneously. A misanalysis at one level propagates errors to the other. The "negative" inferences (no plural, no classifier, no agreement) require the solver to notice what is absent, which is harder than identifying what is present.
+
+2. **Compile the vocabulary inventory.**
+
+Prepare the following, all as opaque strings (the solver needs no phonological or etymological knowledge):
+
+- 3–4 verb stems, each with a perfective form (bearing a consistent prefix, e.g., a two-morpheme prefix) and an imperfective form (with a different or absent prefix). The prefix must be identical across all verbs so the solver can recognize it as a grammatical marker rather than a lexical element.
+- 4–5 concrete nouns (e.g., food items, animals, objects).
+- 2–3 adjectives.
+- Numerals 1 through 5 (or 1 through 6).
+- 2–3 genitive/possessive elements (short possessive markers or genitive pronouns that follow the noun).
+- 2 relative clause structures (a verb + subject embedded after the noun).
+- A full set of independent pronouns: 1SG, 2SG, 3SG, 1PL-inclusive, 1PL-exclusive, 2PL, 3PL.
+- A single definite article (a pre-nominal element that precedes the entire NP).
+- [Optional] A demonstrative that appears both before and after the NP (circumposition).
+
+Verify that no form in the inventory is transparently related to an English word, so the solver cannot shortcut via lexical guessing.
+
+3. **Design Phase 1 baseline: establish VOS clause structure.**
+
+Provide 4–6 complete sentences. Design principles:
+
+- The verb appears in first position in every sentence. Its aspectual prefix makes it morphologically identifiable as a verb (distinguishing it from NPs).
+- The object NP appears in second position. In the first three sentences, make the object a full NP (definite article + noun + at least one modifier) so it is unambiguously a noun phrase.
+- The subject appears in third position. In the first three sentences, make the subject a simple independent pronoun (1SG, 2SG, 3SG). In the last one or two sentences, make the subject a full NP (definite article + noun).
+- Use semantically plausible agent-patient relationships so that only the VOS reading is sensible. For example, if the object is "the rice" and the subject is a person-name, the only plausible reading is that the person ate the rice, not that the rice ate the person.
+
+What the solver should infer: the first element is the verb; the second NP is the object; the third element is the subject; the verb form is invariant across different subjects (no agreement); the subject is expressed by an independent pronoun or full NP.
+
+4. **Design Phase 2 baseline: establish NP internal modifier order.**
+
+Provide 6–10 noun phrases (embedded in sentences or presented in isolation) showing different combinations of modifiers. The combinations must allow the solver to deduce the relative order of every modifier type through pairwise comparison.
+
+Required combinations (at minimum):
+- N alone
+- N + Adj
+- N + Num
+- N + Adj + Num
+- N + Gen
+- N + Adj + Gen
+- N + RelCl
+- N + Adj + Num + Gen (at least one example with three or more modifiers simultaneously)
+
+Design principle for ordering inference: the solver determines the order by observing which elements appear between which others across examples. If "N + Adj" shows Adj after N, and "N + Adj + Num" shows Num after Adj, the solver knows Adj precedes Num. If "N + Gen" shows Gen after N, and "N + Adj + Gen" shows Gen after Adj, the solver knows Adj precedes Gen. A single example with three or more modifiers confirms the full relative order.
+
+Critical constraint: the complete five-element order (N + Adj + Num + Gen + RelCl) should NOT appear in a single baseline example. It should be the target of a question, requiring the solver to combine inferences from separate examples.
+
+What the solver should infer: the modifier order N < Adj < Num < Gen < RelCl; the noun form is identical regardless of numeral value (no plural marking); the numeral appears directly in its slot with no intervening classifier; the definite article precedes the entire NP.
+
+5. **Design Phase 3 baseline: establish aspectual morphology.**
+
+Provide 2–3 pairs of sentences where the same verb appears in both perfective and imperfective forms. The semantic contrast should be transparent from context (completed event vs. ongoing/habitual event). The aspectual prefix should be a consistent, identifiable morpheme that is the same across all verbs.
+
+What the solver should infer: verbs carry a prefix marking aspect (not tense); the prefix is grammatical (same form across different verbs); the verb stem is unchanged across aspectual forms.
+
+6. **Provide a supplementary vocabulary table.**
+
+List lexical items that appear in the questions but not (or not fully) in the baseline:
+- Additional numerals if the baseline only shows a subset.
+- Additional nouns or adjectives used in questions.
+- The full pronoun set if not all appeared in the baseline.
+- [If including inclusive/exclusive] Both 1PL pronouns, each appearing in a brief contextual sentence that makes the inclusive/exclusive distinction inferable (one context includes the addressee, the other does not).
+
+The table provides lexical resources for the questions but must NOT state structural rules. All grammatical inferences must come from the baseline data.
+
+7. **Design Question Set A: "Parse the sentence."**
+
+Provide 3–4 Malagasy sentences. For each, the solver must: identify the subject and object; label each element within each NP (N, Adj, Num, Gen, RelCl); state the aspect of the verb.
+
+Difficulty progression:
+- Easiest: simple object NP (N only) + pronoun subject. Tests VOS identification and basic NP parsing.
+- Medium: object NP with N + Adj + Num + full NP subject. Tests VOS + modifier order + recognition that the noun is unmarked for number.
+- Harder: object NP with N + Adj + Num + Gen + pronoun subject. Tests full modifier order + genitive identification.
+- Hardest: both object and subject are complex NPs with multiple modifiers. Tests simultaneous parsing of two complex NPs within a VOS frame.
+
+Non-trivial inference: the solver must correctly identify which NP is subject and which is object before parsing either. A VOS/SVO confusion at this stage invalidates all subsequent analysis.
+
+8. **Design Question Set B: "Construct the sentence."**
+
+Provide 3–4 English glosses. The solver writes the Malagasy sentence.
+
+Difficulty progression:
+- Easiest: "I ate the rice." Tests VOS order + pronoun placement + definite article.
+- Medium: "Rana saw the two big birds." Tests VOS + NP modifier order (N + Adj + Num) + no classifier + no plural marking on the noun.
+- Harder: "The three small stones of Andry that were in the garden were given by me." Tests full NP modifier order (N + Adj + Num + Gen + RelCl) + VOS + relative clause placement + aspectual prefix selection.
+- Hardest: A sentence requiring correct aspectual prefix + complex NP construction + VOS order + a numeral that the solver must place without a classifier. Tests all concepts simultaneously.
+
+Non-trivial inference: the solver must hold multiple constraints in mind simultaneously (word order, modifier order, absence of plural, absence of classifier, aspect selection). Omitting any one constraint produces an incorrect answer.
+
+9. **Design Question Set C (optional): "Explain the difference."**
+
+Provide pairs of sentences that differ in exactly one way. The solver explains the semantic or structural difference.
+
+Possible contrasts:
+- Perfective vs. imperfective prefix on the same verb (tests aspect identification).
+- A sentence with a numeral vs. the same sentence without it (tests recognition of the numeral as a modifier, not a classifier or plural trigger).
+- Two sentences with different 1PL pronouns (inclusive vs. exclusive) in contexts that make the distinction clear (tests semantic inference about the pronouns).
+
+10. **Verify the inference chain is uniquely determined.**
+
+Walk through the solver's perspective:
+
+- From Phase 1: VOS order is identified. The verb is recognized by its prefix. The object is the second NP. The subject is the third element. Verb invariance across subjects → no agreement.
+- From Phase 2: Modifier order is deduced by combinatorial comparison. Noun invariance across numerals → no plural. Direct numeral placement → no classifier.
+- From Phase 3: Aspectual prefix identified and its function established.
+- From Questions: All rules applied simultaneously.
+
+Critical check: every rule must be supported by at least two baseline examples (one to establish, one to confirm generalization). No rule should be inferable from a single data point.
+
+11. **Check for unintended alternative interpretations.**
+
+- Could the solver interpret the order as SOV (with the "verb" being a postposed particle)? Prevent by ensuring the verb has a distinctive aspectual prefix that marks it morphologically as a verb, not a particle.
+- Could the solver interpret the numeral as a classifier? Prevent by showing the same numeral forms appear with all noun types (classifiers would vary by noun class). Also, no element appears between the adjective and the numeral.
+- Could the solver interpret the genitive as a relative clause? Prevent by showing genitives are short (a single possessive element) while relative clauses contain an embedded verb and subject. The structural difference is clear.
+- Could the solver miss the no-plural property? Ensure at least two different numerals (e.g., "one" and "three") appear with the same noun in the baseline, with identical noun form.
+- Could the solver confuse the definite article with a demonstrative? If demonstrative circumposition is included, ensure the demonstrative is morphologically distinct from the article and appears in a different distribution (bracketing the NP vs. simply preceding it).
+
+12. **Assign overall difficulty progression.**
+
+- Level 1: Identifying VOS word order (resisting SVO/SOV expectations).
+- Level 2: Deducing NP modifier order (combinatorial inference across multiple examples).
+- Level 3: Recognizing negative properties (no plural, no classifier, no agreement) — noticing what is absent.
+- Level 4: Parsing new sentences (applying discovered rules; difficulty increases with NP complexity).
+- Level 5: Constructing sentences (simultaneous application of all rules under constraint).
+- Level 6: Explaining contrasts (metalinguistic articulation of rules).
+
+Each level depends on the previous one. A solver who fails at Level 1 cannot succeed at Levels 4–6. A solver who succeeds at Level 2 but misses Level 3 will produce answers with spurious plural marking or classifiers.
+
+13. **Final consistency checklist.**
+
+Verify that: (a) every structural rule is supported by at least two baseline examples; (b) no question requires knowledge not derivable from the provided data; (c) the modifier order is unambiguous given the baseline combinations (no two modifier types occupy the same relative position in all examples); (d) the VOS order is unambiguous (semantic plausibility + pronoun position confirm it); (e) the aspectual prefix is consistent across all verb forms; (f) the total number of distinct structural rules is 5–7 (VOS order, NP modifier order, no plural, no classifier, no verbal agreement, aspectual prefix, optionally demonstrative circumposition); (g) the puzzle is solvable by a person with general linguistic knowledge but zero knowledge of Malagasy or Austronesian languages; (h) all forms are presented in a consistent orthography and treated as opaque strings throughout.

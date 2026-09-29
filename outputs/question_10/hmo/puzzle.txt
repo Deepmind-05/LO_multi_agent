@@ -1,0 +1,130 @@
+
+
+CONTEXT
+
+Below are some sentences in Hmong Njua, a language of the Hmong-Mien family spoken in parts of Southeast Asia, with English translations. Hmong Njua is written in a Latin-based alphabet. The language is isolating: it has no inflectional morphology, no case marking, no grammatical gender, and no verbal agreement. All grammatical relations are expressed by word order or by separate particles.
+
+DATA
+
+| # | Hmong Njua | English |
+|---|-----------|---------|
+| 1 | Kuv mus. | I go. |
+| 2 | Tus tseem mus. | He is still going. |
+| 3 | Koj tshaj mus. | You have already gone. |
+| 4 | Tub loj nyob. | The big child stays. |
+| 5 | Kuv nres tawj. | I eat the bird. |
+| 6 | Tus saib tub. | He sees the child. |
+| 7 | Tub me nres tawj. | The small child eats the bird. |
+| 8 | Peb tawj nyob. | Three birds stay. |
+| 9 | Tsev ntawd nyob. | That house stands. |
+| 10 | Kuv tsis mus. | I don't go. |
+| 11 | Tus tsis tseem mus. | He is still not going. |
+| 12 | Koj tsis tshaj nres tawj. | You haven't eaten the bird yet. |
+| 13 | Tawj tseem nyob. | The bird is still staying. |
+| 14 | Kuv saib tawj tseem nyob. | I see the bird that is still staying. |
+| 15 | Tus saib tawj. | He sees the bird. |
+| 16 | Kuv nres tawj tus saib. | I eat the bird that he sees. |
+| 17 | Tub tshaj saib koj. | The child has already seen you. |
+| 18 | Tub tshaj saib koj nres tawj. | The child that has already seen you eats the bird. |
+| 19 | Leejtwg mus ma? | Who goes? |
+| 20 | Leejtwg tseem mus. | Someone is still going. |
+| 21 | Dabtsi koj nres ma? | What do you eat? |
+| 22 | Koj nres dabtsi. | You eat something. |
+| 23 | Kuv tsis saib tawj tseem nyob. | I don't see the bird that is still staying. |
+| 24 | Kuv tshaj saib tawj tus tshaj nres. | I have already seen the bird that has already eaten. |
+
+QUESTIONS
+
+**Q1. Translate the following sentences into English.**
+
+a. Koj tshaj nres tawj loj.
+
+b. Tub tsis tshaj saib koj nres tawj.
+
+c. Kuv tseem saib tawj tshaj nres tawj.
+
+**Q2. Translate the following sentences into Hmong Njua.**
+
+a. The small child is still going.
+
+b. I don't eat the bird that he sees.
+
+c. Who has already seen the big child?
+
+d. The child that has already seen someone eats the bird.
+
+**Q3. Explain the grammatical rules you have inferred from the data. Your explanation should cover: (i) basic clause word order; (ii) the function, position, and relative ordering of preverbal particles; (iii) noun phrase modifier order (including any exceptions); (iv) the structure of relative clauses; (v) the interrogative/indefinite system; (vi) how number is expressed on nouns.**
+
+ANSWERS
+
+**Q1a.** You have already eaten the big bird.
+
+**Q1b.** The child that hasn't seen you yet eats the bird.
+
+**Q1c.** I am still seeing the bird that has already eaten the bird.
+
+**Q2a.** Tub me tseem mus.
+
+**Q2b.** Kuv tsis nres tawj tus saib.
+
+**Q2c.** Leejtwg tshaj saib tub loj ma?
+
+**Q2d.** Tub tshaj saib leejtwg nres tawj.
+
+**Q3.** (See Solution.)
+
+SOLUTION
+
+**Inferred rules:**
+
+**(i) Basic clause word order: SVO.**
+The preverbal NP is the subject; the postverbal NP is the object. Evidence: Sentences (1)–(4) show S–V for intransitives. Sentences (5)–(7) show S–V–O for transitives. Sentences (5) and (6) use the same nouns (*tawj*, *tub*) in reversed positions with reversed meanings, confirming that position determines role. The subject is always present (obligatory subject), and the verb never changes form regardless of its arguments (no agreement).
+
+**(ii) Preverbal particles: TAM and Negation.**
+- *tseem* = progressive/still; *tshaj* = completive/already. These appear between the subject and the verb (sentences 2, 3, 11, 12, 17, 24).
+- *tsis* = negation (not). It also appears in the preverbal zone (sentences 10, 11, 12, 23).
+- **Relative order:** When both negation and a TAM particle are present, the order is Subject – *tsis* – TAM – Verb (sentences 11: *tsis tseem*; 12: *tsis tshaj*). When only a TAM particle is present, it appears directly before the verb (sentences 2, 3). When only negation is present, it appears directly before the verb (sentence 10).
+- Negation does not alter SVO order (sentence 12: *Koj tsis tshaj nres tawj* = S–Neg–TAM–V–O).
+
+**(iii) Noun phrase modifier order: right-branching with a numeral exception.**
+- Adjectives follow the head noun: *tub loj* (big child, sent. 4), *tub me* (small child, sent. 7).
+- Demonstratives follow the head noun: *tsev ntawd* (that house, sent. 9).
+- **Exception:** Numerals precede the head noun: *peb tawj* (three birds, sent. 8).
+- This creates a consistent pattern: all modifiers follow the noun except numerals, which precede it.
+
+**(iv) Relative clauses: postnominal, gap strategy, no marker.**
+- A relative clause follows the head noun directly with no dedicated marker.
+- The relativized element is gapped (absent) in the RC.
+- **Subject relativization:** The subject position in the RC is empty. Compare (13) *Tawj tseem nyob* (The bird is still staying) with (14) *Kuv saib tawj tseem nyob* (I see the bird that is still staying). In (14), the RC is *tseem nyob* with the subject gapped; the head *tawj* fills that gap. Similarly, (17) vs. (18): the RC *tshaj saib koj* has its subject gapped.
+- **Object relativization:** The object position in the RC is empty. Compare (15) *Tus saib tawj* (He sees the bird) with (16) *Kuv nres tawj tus saib* (I eat the bird that he sees). In (16), the RC is *tus saib* with the object gapped; the head *tawj* fills that gap. Similarly in (24): the RC *tus tshaj nres* has its object gapped.
+- The RC is a finite clause with its own verb and optionally its own TAM particles (e.g., *tseem nyob*, *tshaj nres*, *tsis tshaj saib koj*).
+
+**(v) Interrogative/indefinite system.**
+- The forms *leejtwg* (who/someone) and *dabtsi* (what/something) serve dual functions.
+- In **questions**, they appear as interrogatives and the clause ends with the question particle *ma* (sentences 19, 21).
+- In **statements**, the same forms appear without *ma* and receive an indefinite reading (sentences 20, 22).
+- The presence or absence of *ma* is the sole cue distinguishing interrogative from indefinite use.
+- *ma* is clause-final (a non-initial question particle).
+
+**(vi) Number on nouns: no plural marking.**
+- Nouns do not change form for number. *tawj* appears identically in *peb tawj* (three birds, sent. 8) and in singular contexts (e.g., sent. 13). Number is expressed only by numerals or by context.
+
+**How the rules produce each answer:**
+
+**Q1a:** *Koj* (S) *tshaj* (TAM: already) *nres* (V: eat) *tawj loj* (O: big bird, N-Adj). → "You have already eaten the big bird."
+
+**Q1b:** *[Tub tsis tshaj saib koj]* (S with RC) *nres* (V) *tawj* (O). The RC *tsis tshaj saib koj* has its subject gapped (full RC: *Tub tsis tshaj saib koj* = The child hasn't seen you yet). → "The child that hasn't seen you yet eats the bird."
+
+**Q1c:** *Kuv* (S) *tseem* (TAM: still) *saib* (V: see) *[tawj tshaj nres tawj]* (O with RC). The RC *tshaj nres tawj* has its subject gapped (full RC: *Tawj tshaj nres tawj* = The bird has already eaten the bird). → "I am still seeing the bird that has already eaten the bird."
+
+**Q2a:** "The small child" = *Tub me* (N-Adj); "is still going" = *tseem mus* (TAM + V). → *Tub me tseem mus.*
+
+**Q2b:** "I" = *Kuv*; "don't eat" = *tsis nres* (Neg + V); "the bird that he sees" = *tawj tus saib* (N + RC with object gapped; full RC: *Tus saib tawj*). → *Kuv tsis nres tawj tus saib.*
+
+**Q2c:** "Who" = *Leejtwg* (interrogative in subject position); "has already seen" = *tshaj saib* (TAM + V); "the big child" = *tub loj* (N-Adj); question particle = *ma* (clause-final). → *Leejtwg tshaj saib tub loj ma?*
+
+**Q2d:** "The child that has already seen someone" = *Tub tshaj saib leejtwg* (N + RC with subject gapped; *leejtwg* is indefinite because no *ma*); "eats" = *nres*; "the bird" = *tawj*. → *Tub tshaj saib leejtwg nres tawj.*
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously induce and apply six interacting rule systems (SVO, preverbal TAM/negation ordering, right-branching NP with numeral exception, postnominal gap RCs, interrogative/indefinite dual function, and absence of plural marking). The data is organized in progressive layers, but the final questions (Q1c, Q2d) require combining multiple rules in a single structure. The controlled contrasts (full clause vs. RC pairs) demand careful comparison, and the numeral exception to the right-branching pattern prevents overgeneralization. The interrogative/indefinite system adds a layer of functional ambiguity resolved only by the question particle. No single question is answerable by direct copying from the data; each requires generalization and recombination of inferred rules.

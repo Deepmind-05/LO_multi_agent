@@ -3,7 +3,7 @@
 Automated Pipeline to Build source.jsonl from Linguistic Olympiad Cleaned Data.
 
 Pipeline Stages:
-1. Read problem from input JSONL (e.g., cleaned.jsonl or cleaned_with_difficulty.jsonl).
+1. Read problem from input JSONL (e.g., cleaned_with_difficulty.jsonl).
 2. Call Agent 1 (Concept Architect) to extract concepts, WALS features, and source language.
 3. Call Agent 2 (Rationale Architect) to construct the problem-setting rationale.
 4. Python Algorithmic Matcher: Searches languages.jsonl to find Top 10 matching candidate languages.
@@ -100,8 +100,8 @@ def read_prompt(path: Path) -> str:
     return "\n".join(lines).strip()
 
 
-def parse_json_from_response(content: str) -> Any:
-    """Safely extract JSON object or array from LLM response."""
+def parse_json_from_response(content: str, fallback_extractor: Any = None) -> Any:
+    """Safely extract JSON object or array from LLM response with multi-stage fallbacks."""
     cleaned = content.strip()
     if cleaned.startswith("```"):
         lines = cleaned.splitlines()
@@ -111,32 +111,54 @@ def parse_json_from_response(content: str) -> Any:
             lines = lines[:-1]
         cleaned = "\n".join(lines).strip()
 
+    # Strategy 1: Direct JSON parse
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
-        first_curly = cleaned.find("{")
-        last_curly = cleaned.rfind("}")
-        first_bracket = cleaned.find("[")
-        last_bracket = cleaned.rfind("]")
+        pass
 
-        if first_curly != -1 and last_curly > first_curly:
-            if first_bracket == -1 or first_curly < first_bracket:
-                try:
-                    return json.loads(cleaned[first_curly : last_curly + 1])
-                except json.JSONDecodeError:
-                    pass
+    # Strategy 2: Bracket range extraction
+    first_curly = cleaned.find("{")
+    last_curly = cleaned.rfind("}")
+    first_bracket = cleaned.find("[")
+    last_bracket = cleaned.rfind("]")
 
-        if first_bracket != -1 and last_bracket > first_bracket:
+    if first_curly != -1 and last_curly > first_curly:
+        if first_bracket == -1 or first_curly < first_bracket:
             try:
-                return json.loads(cleaned[first_bracket : last_bracket + 1])
+                return json.loads(cleaned[first_curly : last_curly + 1])
             except json.JSONDecodeError:
                 pass
 
-        raise ValueError(f"Could not parse valid JSON from response: {content[:300]}...")
+    if first_bracket != -1 and last_bracket > first_bracket:
+        try:
+            return json.loads(cleaned[first_bracket : last_bracket + 1])
+        except json.JSONDecodeError:
+            pass
+
+    # Strategy 3: Scan string for embedded JSON object using raw_decode
+    decoder = json.JSONDecoder()
+    pos = 0
+    while pos < len(cleaned):
+        while pos < len(cleaned) and cleaned[pos] not in "{[":
+            pos += 1
+        if pos >= len(cleaned):
+            break
+        try:
+            obj, _ = decoder.raw_decode(cleaned, pos)
+            return obj
+        except Exception:
+            pos += 1
+
+    # Strategy 4: Fallback heuristic extractor if conversational text was returned
+    if fallback_extractor and callable(fallback_extractor):
+        return fallback_extractor(content)
+
+    raise ValueError(f"Could not parse valid JSON from response: {content[:300]}...")
 
 
 # =====================================================================
-# Zero-Dependency LLM Client (Urllib)
+# Zero-Dependency LLM Client (Urllib with Cloudflare Bypass)
 # =====================================================================
 
 class SimpleLLMClient:
@@ -180,12 +202,21 @@ class SimpleLLMClient:
                 f"Please ensure {self.provider.upper()}_API_KEY is set in your .env or environment."
             )
 
-    def complete(self, system_prompt: str, user_payload: str | dict, max_retries: int = 5) -> str:
+    def complete(
+        self,
+        system_prompt: str,
+        user_payload: str | dict,
+        max_retries: int = 5,
+        json_mode: bool = False,
+    ) -> str:
         """Send chat completion with exponential backoff on rate limits."""
         if isinstance(user_payload, (dict, list)):
             user_text = json.dumps(user_payload, ensure_ascii=False, indent=2)
         else:
             user_text = str(user_payload)
+
+        # Common headers to avoid Cloudflare 403 (error code 1010)
+        ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
         if self.provider == "gemini":
             url = f"{self.endpoint}?key={self.api_key}"
@@ -197,7 +228,9 @@ class SimpleLLMClient:
                     "temperature": self.temperature,
                 },
             }
-            headers = {"Content-Type": "application/json"}
+            if json_mode:
+                body_dict["generationConfig"]["responseMimeType"] = "application/json"
+            headers = {"Content-Type": "application/json", "User-Agent": ua}
         else:
             url = self.endpoint
             body_dict = {
@@ -206,12 +239,18 @@ class SimpleLLMClient:
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_text},
                 ],
-                "max_tokens": self.max_tokens,
+                "max_completion_tokens": self.max_tokens,
                 "temperature": self.temperature,
             }
+            if self.provider == "cerebras":
+                body_dict["reasoning_effort"] = "low"
+            if json_mode:
+                body_dict["response_format"] = {"type": "json_object"}
+
             headers = {
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {self.api_key}",
+                "User-Agent": ua,
             }
 
         body_data = json.dumps(body_dict).encode("utf-8")
@@ -225,7 +264,11 @@ class SimpleLLMClient:
                 if self.provider == "gemini":
                     return resp_json["candidates"][0]["content"]["parts"][0]["text"]
                 else:
-                    return resp_json["choices"][0]["message"]["content"]
+                    msg = resp_json["choices"][0]["message"]
+                    content = msg.get("content") or ""
+                    if not content and "reasoning" in msg:
+                        content = msg["reasoning"]
+                    return content
 
             except urllib.error.HTTPError as e:
                 err_text = e.read().decode("utf-8", errors="ignore")
@@ -237,13 +280,11 @@ class SimpleLLMClient:
                     raise RuntimeError(f"LLM API Error ({e.code}): {err_text}") from e
             except Exception as e:
                 if attempt < max_retries:
-                    wait_sec = min(2 ** (attempt + 1) * 2, 30)
-                    print(f"  [LLM Warning] Connection error: {e}. Retrying in {wait_sec}s...")
-                    time.sleep(wait_sec)
+                    time.sleep(2)
                 else:
-                    raise
+                    raise e
 
-        raise RuntimeError("Max retries exceeded without successful response.")
+        return ""
 
 
 # =====================================================================
@@ -275,7 +316,7 @@ def find_top_10_wals_languages(
     1. Compares required (feature_id, value_id) pairs against WALS languages.
     2. Excludes the source language.
     3. Ranks candidates by matched feature count (descending) and total documented features.
-    4. Returns Top 10 candidate languages.
+    4. Backfills to ensure Top 10 candidate languages are always returned.
     """
     feature_pairs = {
         (str(f.get("feature_id")).strip(), str(f.get("value_id")).strip())
@@ -332,6 +373,32 @@ def find_top_10_wals_languages(
         reverse=True,
     )
 
+    # If fewer than 10 languages matched, backfill with diverse well-documented WALS languages
+    if len(scored) < 10:
+        seen_ids = {s["language_id"] for s in scored}
+        fallback_langs = []
+        for lang in wals_languages:
+            lid = lang.get("language_id")
+            lname = str(lang.get("language_name", "")).strip().casefold()
+            if lid in seen_ids or (source_norm and (source_norm == lname or source_norm in lname)):
+                continue
+            fallback_langs.append({
+                "language_id": lid,
+                "language_name": lang.get("language_name"),
+                "family": lang.get("family", ""),
+                "genus": lang.get("genus", ""),
+                "macroarea": lang.get("macroarea", ""),
+                "matched_feature_count": 0,
+                "total_feature_count": len(lang.get("features", [])),
+                "matched_features": [],
+                "raw_features_summary": [
+                    {"feature_id": f.get("feature_id"), "feature_name": f.get("feature_name"), "value_name": f.get("value_name")}
+                    for f in lang.get("features", [])[:10]
+                ],
+            })
+        fallback_langs.sort(key=lambda x: x["total_feature_count"], reverse=True)
+        scored.extend(fallback_langs[:(10 - len(scored))])
+
     # Return top 10 candidates
     return scored[:10]
 
@@ -352,6 +419,23 @@ def run_concept_agent(
             "Concept prompt is empty! Please paste your prompt into prompts/concept_prompt.txt"
         )
 
+    def _heuristic_concept_fallback(text: str) -> dict:
+        lang_match = re.search(r"\b(?:about|in|language of|language is)\s+([A-Z][a-z]+)", text)
+        lang = lang_match.group(1) if lang_match else ""
+        concepts = []
+        for line in text.splitlines():
+            line = line.strip()
+            if re.match(r"^(\d+\.|\*|-)\s+\*\*", line):
+                c_name = re.sub(r"^(\d+\.|\*|-)\s+\*\*([^*]+)\*\*.*", r"\2", line).strip()
+                concepts.append({"feature_id": None, "feature_name": c_name, "value_id": None, "value_name": line})
+        return {
+            "question_id": question_id,
+            "source_language": lang,
+            "difficulty": 3,
+            "features": concepts,
+            "tested_concepts_summary": text[:200],
+        }
+
     response_text = client.complete(
         system_prompt=prompt_template,
         user_payload={
@@ -360,9 +444,10 @@ def run_concept_agent(
             "CONTEXT": problem_data.get("context", ""),
             "QUESTIONS": problem_data.get("questions", []),
         },
+        json_mode=True,
     )
 
-    parsed = parse_json_from_response(response_text)
+    parsed = parse_json_from_response(response_text, fallback_extractor=_heuristic_concept_fallback)
     if isinstance(parsed, dict):
         return parsed
     return {"raw_response": response_text}
@@ -390,6 +475,7 @@ def run_rationale_agent(
             },
             "CONCEPTS": concepts_data,
         },
+        json_mode=False,
     )
     return response_text.strip()
 
@@ -412,6 +498,7 @@ def run_target_language_agent(
             "PROBLEM_SUMMARY": problem_summary,
             "TOP_10_CANDIDATE_LANGUAGES": top_10_candidates,
         },
+        json_mode=True,
     )
 
     parsed = parse_json_from_response(response_text)
@@ -498,15 +585,21 @@ def build_source_dataset(
     output_file.parent.mkdir(parents=True, exist_ok=True)
     if resume and output_file.exists():
         with open(output_file, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        rec = json.loads(line)
-                        if "id" in rec:
-                            processed_ids.add(str(rec["id"]))
-                    except json.JSONDecodeError:
-                        pass
+            content = f.read()
+            decoder = json.JSONDecoder()
+            pos = 0
+            while pos < len(content):
+                while pos < len(content) and content[pos].isspace():
+                    pos += 1
+                if pos >= len(content):
+                    break
+                try:
+                    obj, end = decoder.raw_decode(content, pos)
+                    if "id" in obj:
+                        processed_ids.add(str(obj["id"]))
+                    pos = end
+                except Exception:
+                    pos += 1
         if processed_ids:
             print(f"Found {len(processed_ids)} already processed problems in {output_file.name}. Resuming...")
 
@@ -530,12 +623,8 @@ def build_source_dataset(
 
     with open(output_file, "a", encoding="utf-8") as out_f:
         for idx, item in selected_problems:
+            # Canonical unique ID strictly based on 1-indexed row number
             question_id = f"question_{idx + 1}"
-            if "id" in item:
-                question_id = str(item["id"])
-            elif item.get("questions") and item["questions"][0].get("question_n"):
-                question_id = str(item["questions"][0]["question_n"]).strip()
-
             if resume and question_id in processed_ids:
                 print(f"[{idx + 1}/{total_problems}] Skipping already processed {question_id}")
                 continue

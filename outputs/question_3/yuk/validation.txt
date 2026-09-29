@@ -1,0 +1,13 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+2
+
+ISSUES
+
+* [MINOR] The solution states "The word order is SVO (subject–verb–object)" but the data clearly shows Agent–Object–Verb order (e.g., item 8: wiri-na wara waka = A-O-V). This mislabeling does not affect solvability or answer correctness, but the solution should accurately describe the word order as AOV (or equivalently, that the verb is final in transitive clauses).

@@ -1,0 +1,102 @@
+
+
+TARGET-LANGUAGE
+
+Finnish (Finno-Ugric, Uralic)
+
+CORE
+
+1. Possessive suffix on the head noun (adapted from 81A-2 "Dependent marking")
+   - Source concept: Dependent marking (possessor is marked)
+   - Finnish realization: HEAD MARKING — the possessed noun carries a possessive suffix encoding the possessor's person and number (e.g., *talo* "house" → *taloni* "my house"). The possessor is NOT the primary locus of marking.
+   - Intended solver inference: The solver discovers that the possessed noun bears a suffix that encodes who the possessor is (person/number), rather than the possessor being marked. This inverts the source-language pattern and is the central typological contrast.
+   - Priority: REQUIRED
+
+2. Genitive case on the possessor (retained from 83A-1 "Genitive construction")
+   - Source concept: Genitive construction
+   - Finnish realization: The possessor NP takes a genitive case suffix (e.g., *Johan* "John.GEN", *meidän* "we.GEN"). This co-occurs with (or can appear without) the possessive suffix on the possessed noun.
+   - Intended solver inference: The solver discovers that the possessor is also marked, creating a double-marking pattern. The solver must determine the relationship between the genitive on the possessor and the possessive suffix on the possessed noun (agreement).
+   - Priority: HIGH
+
+3. GenN word order (REPLACES 84A-2 "Possessed before possessor")
+   - Source concept: Possessed before possessor (Coptic order)
+   - Finnish realization: Possessor PRECEDES possessed (GenN order): *Johan talo* "John's house" (John.GEN house). WALS 86A-1 confirms GenN.
+   - Intended solver inference: The solver discovers the linear order of the two NPs in the possessive construction. This is the opposite of the source-language order, making it a clear structural discovery.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Possessive suffix paradigm (person/number)
+   - Phenomenon: Finnish has a closed set of possessive suffixes: 1SG *-ni*, 2SG *-si*, 3SG *-nsa*, 1PL *-mme*, 2PL *-nne*, 3PL *-n*. These attach to the possessed noun.
+   - Intended solver inference: The solver reconstructs the person/number paradigm from multiple examples and can predict the form for unseen person/number combinations.
+   - Interaction with CORE: This is the concrete realization of the head-marking concept (CORE #1). The paradigm gives the puzzle its core "decoding" task.
+   - Difficulty contribution: Medium. Requires pattern recognition across 6 forms; the 3SG *-nsa* and 3PL *-n* are less transparent and create a small asymmetry.
+   - Priority: REQUIRED
+
+2. Morphological ordering: case suffix precedes possessive suffix
+   - Phenomenon: When the possessed noun is case-marked, the case suffix attaches BEFORE the possessive suffix. E.g., *talo* → *talossa* (in house, inessive) → *talossani* (in my house). The order is: stem + case + possessive.
+   - Intended solver inference: The solver discovers a consistent suffix ordering rule. Given a case-marked possessed noun with a possessive suffix, the solver can segment the form correctly and identify both the case and the possessor.
+   - Interaction with CORE: Extends the head-marking concept (CORE #1) into a morphological ordering puzzle. The solver must determine which suffix is which and in what order they appear.
+   - Difficulty contribution: High. Requires understanding of morpheme ordering and segmentation, which is a non-trivial reasoning step.
+   - Priority: HIGH
+
+3. Vowel harmony in suffixes
+   - Phenomenon: Finnish suffixes exhibit vowel harmony: stems with back vowels (a, o, u) take back-vowel suffixes; stems with front vowels (ä, ö, y) take front-vowel suffixes. E.g., inessive: *-ssa* (after back: *talossa*) vs. *-ssä* (after front: *käsessä*). The possessive suffixes themselves are relatively stable (*-ni, -si, -nsa, -mme, -nne, -n*), but case suffixes show clear harmony.
+   - Intended solver inference: The solver discovers that suffix vowel quality is conditioned by the stem's vowel class. This adds a phonological constraint layer on top of the morphological pattern.
+   - Interaction with CORE: Interacts with the morphological ordering concept (TARGET-SPECIFIC #2): the solver must not only identify suffix order but also predict the correct vowel form of each suffix based on the stem.
+   - Difficulty contribution: High. Adds a phonological reasoning layer that is independent of the morphological/syntactic layer, creating a multi-dimensional puzzle.
+   - Priority: OPTIONAL (include if puzzle length allows; significantly increases difficulty and richness)
+
+4. Possessive agreement (double marking)
+   - Phenomenon: When a full NP possessor appears in genitive, the possessed noun may carry a possessive suffix that AGREES with the possessor in person and number. E.g., *Johan talonsa* (John.GEN house+3SG.POSS) "John's own house." With 1SG: *minun taloni* (I.GEN house+1SG.POSS) "my house."
+   - Intended solver inference: The solver discovers that the possessive suffix on the possessed noun agrees with the possessor's person/number, creating a concord/agreement relationship between the two marked elements.
+   - Interaction with CORE: Connects CORE #1 (head marking) and CORE #2 (genitive on possessor) into a single agreement system. The solver must recognize that the two markings are not independent but are in agreement.
+   - Difficulty contribution: Medium-High. Requires the solver to notice the agreement relationship and understand that the suffix is not arbitrary but is determined by the possessor.
+   - Priority: HIGH
+
+5. Plural marking on the possessed noun
+   - Phenomenon: The possessed noun can be plural, marked by *-t* (or *-et* after certain stems). The plural marker interacts with the possessive suffix: *taloni* (my house, SG) vs. *taloni* (my houses, PL) — note potential ambiguity, or in some contexts the plural is transparent.
+   - Intended solver inference: The solver discovers how plurality is encoded on the possessed noun and how it interacts with the possessive suffix.
+   - Interaction with CORE: Adds a number dimension to the possessed noun, parallel to the person/number on the possessive suffix.
+   - Difficulty contribution: Medium. Adds another morphological dimension but may create ambiguity that complicates the puzzle.
+   - Priority: OPTIONAL (include only if it does not create unresolvable ambiguity in the puzzle data)
+
+INTERACTIONS
+
+1. Head marking + Possessive paradigm + Agreement:
+   - Concepts: CORE #1, TARGET-SPECIFIC #1, TARGET-SPECIFIC #4
+   - Interaction: The possessive suffix (head marking) forms a paradigm that agrees with the possessor. The solver must simultaneously discover (a) that the head is marked, (b) the paradigm values, and (c) the agreement relationship.
+   - Additional inference: The solver can predict the form of an unseen possessive construction by combining the paradigm with the agreement rule.
+
+2. Morphological ordering + Vowel harmony:
+   - Concepts: TARGET-SPECIFIC #2, TARGET-SPECIFIC #3
+   - Interaction: The solver must segment a complex suffixal string (stem + case + possessive) AND determine the correct vowel form of each suffix based on harmony. This creates a two-step reasoning process: first identify morpheme boundaries, then verify vowel forms.
+   - Additional inference: The solver can use vowel harmony as a diagnostic to confirm correct segmentation (e.g., if a suffix has a front vowel, the stem must contain a front vowel).
+
+3. Genitive + GenN order + Agreement:
+   - Concepts: CORE #2, CORE #3, TARGET-SPECIFIC #4
+   - Interaction: The possessor appears before the possessed noun (GenN), is marked with genitive, and the possessed noun carries an agreeing possessive suffix. The solver must identify all three properties simultaneously from the linear string.
+   - Additional inference: The solver can use the genitive marker to identify the possessor NP, then use the possessive suffix to verify agreement, creating a cross-verification mechanism.
+
+4. Case marking + Possessive suffix ordering:
+   - Concepts: TARGET-SPECIFIC #2, CORE #1
+   - Interaction: The case suffix on the possessed noun precedes the possessive suffix. The solver must determine which suffix is the case marker and which is the possessive marker, and in what order they appear.
+   - Additional inference: The solver can use the possessive paradigm (known from uncase-marked forms) to identify the possessive suffix in case-marked forms, leaving the remaining suffix as the case marker.
+
+CONSTRAINTS
+
+1. The puzzle must clearly demonstrate that Finnish uses HEAD MARKING (possessive suffix on possessed noun) as the primary possessive mechanism, NOT dependent marking. The source concept of "dependent marking" is inverted in Finnish and must not be presented as if Finnish marks the possessor as the primary strategy.
+
+2. The possessive suffix paradigm must be presented with enough examples to allow the solver to reconstruct all 6 person/number values (1SG, 2SG, 3SG, 1PL, 2PL, 3PL). At minimum, 4-5 different person/number values should appear in the data.
+
+3. If morphological ordering (case + possessive) is included, the puzzle must provide both case-marked and uncase-marked forms of the same possessed noun so the solver can isolate the case suffix by comparison.
+
+4. If vowel harmony is included, the puzzle must include stems with both front and back vowels to allow the solver to discover the harmony pattern. At least 2 front-vowel stems and 2 back-vowel stems should appear.
+
+5. The GenN word order must be unambiguous in the data. If the puzzle includes both genitive-NP and suffix-only constructions, the solver must be able to distinguish them.
+
+6. The agreement relationship (possessive suffix agrees with possessor) must be demonstrable: the puzzle should include at least 2 different possessor persons/numbers with their corresponding possessive suffixes on the possessed noun.
+
+7. Do NOT include the source concept "possessed before possessor" (84A-2) — Finnish is GenN and this would be factually incorrect. The puzzle must reflect the actual GenN order.
+
+8. The 3SG possessive suffix *-nsa* and 3PL *-n* are less transparent than the other forms. If included, the puzzle should provide enough context for the solver to distinguish them (e.g., through agreement with a 3SG vs. 3PL possessor).

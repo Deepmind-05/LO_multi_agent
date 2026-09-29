@@ -1,0 +1,113 @@
+
+
+TARGET-LANGUAGE: Otomí (Mezquital)
+
+CORE
+
+1. Polypersonal agreement (source: 81A-4)
+   - Target-language realization: Both A and P arguments marked on the verb (WALS 102A-5, 101A-2). Accusative alignment (100A-2). Head-marking (23A-1, 25A-1).
+   - Intended solver inference: The verb encodes both subject and object person/number; the solver must identify which affix corresponds to which argument.
+   - Priority: REQUIRED
+
+2. Tense-aspect marking (source: 18A-1)
+   - Target-language realization: TAM is expressed via prefixes (WALS 69A-1), fused with agreement (21B-2). The source concept's "suffixes" must be adapted to "prefixes."
+   - Intended solver inference: The solver identifies a prefix slot for tense/aspect distinct from person markers, using consistent alternations across examples.
+   - Priority: REQUIRED
+
+3. Polysynthetic/agglutinative verb structure (source: morphological typology)
+   - Target-language realization: 8–9 categories per word (22A-5), exclusively concatenative (20A-1), weakly prefixing (26A-5). Verb structure: TAM prefix + subject prefix + object prefix + root (order inferred from 104A-2 and 69A-1).
+   - Intended solver inference: The solver reconstructs the morpheme order by comparing forms that vary in one category at a time.
+   - Priority: REQUIRED
+
+4. Object marking via prefix (source: object marking)
+   - Target-language realization: Object (P) marked by prefix on verb; 3sg object is zero (103A-4). A precedes P (104A-2).
+   - Intended solver inference: The solver identifies the object prefix slot and recognizes that absence of a marker in the P position indicates 3sg.
+   - Priority: HIGH
+
+5. Morpheme boundary ambiguity (source: morpheme boundary ambiguity)
+   - Target-language realization: In a concatenative language with complex syllable structure (12A-3) and many morphemes per word, segmentation of a novel verb form can be ambiguous (e.g., is a string one morpheme or two?).
+   - Intended solver inference: The solver must use paradigmatic evidence (other forms in the set) to resolve segmentation.
+   - Priority: OPTIONAL
+
+6. Irregular verb morphology (source: irregular verb morphology)
+   - Target-language realization: Suppletive stems or allomorphy in a concatenative system. Less natural than in fusional languages but possible.
+   - Intended solver inference: The solver notices that one verb does not follow the regular pattern and must identify the irregular form separately.
+   - Priority: OPTIONAL
+
+TARGET-SPECIFIC
+
+1. Zero 3sg (WALS 103A-4)
+   - Phenomenon: All third-person singular S (and by extension, 3sg A and P) are realized as zero on the verb.
+   - Intended solver inference: A verb with no person markers is not "unmarked" in a generic sense—it specifically indicates 3sg subject and/or 3sg object. The solver must recognize that absence of a marker is informative, not neutral.
+   - Interaction with CORE: Creates the central ambiguity of the puzzle. A verb with no person markers could be 3sg-subject + 3sg-object, or 3sg-subject + 3pl-object (if 3pl object is also zero, which it is not per 25B-2 non-zero marking—so 3pl object would be marked). This asymmetry is key.
+   - Difficulty contribution: HIGH. Forces the solver to reason about what absence of a marker means, rather than treating it as "no information."
+   - Priority: REQUIRED
+
+2. A precedes P (WALS 104A-2)
+   - Phenomenon: Subject (A) prefix precedes object (P) prefix on the verb.
+   - Intended solver inference: When both markers are present, their relative order identifies which is subject and which is object. This is the primary disambiguation tool.
+   - Interaction with CORE: Directly supports parsing of polypersonal verbs. Combined with zero 3sg, the solver can determine: if only one person marker is present, is it A or P? The fixed order helps when combined with TAM prefix position.
+   - Difficulty contribution: MEDIUM. Provides a reliable parsing rule.
+   - Priority: REQUIRED
+
+3. VOS word order (WALS 81A-4, 82A-2, 83A-2)
+   - Phenomenon: Canonical order is Verb-Object-Subject.
+   - Intended solver inference: The solver must identify which NP is subject and which is object. Since the verb marks both, the NP order alone is insufficient—the verb morphology is the primary cue. The solver must integrate word order with verb parsing.
+   - Interaction with CORE: Creates a situation where the "first NP" is the object, not the subject (counterintuitive for many solvers). The solver must use verb morphology to assign roles, not rely on linear order.
+   - Difficulty contribution: HIGH. Adds a layer of reasoning: the solver cannot simply map "first NP = subject."
+   - Priority: HIGH
+
+4. TAM prefix position (WALS 69A-1)
+   - Phenomenon: Tense-aspect is prefixed, and (by 21B-2 fusion with agreement) appears before person markers.
+   - Intended solver inference: The leftmost prefix on the verb is TAM, not a person marker. This helps the solver segment the verb from left to right: TAM → A → P → root.
+   - Interaction with CORE: Provides the leftmost anchor for verb parsing. Without it, the solver might confuse a TAM prefix with a person prefix.
+   - Difficulty contribution: MEDIUM. Provides a reliable segmentation cue.
+   - Priority: HIGH
+
+5. No passive (WALS 107A-2)
+   - Phenomenon: No passive construction exists.
+   - Intended solver inference: The solver should not expect a passive form to appear. All transitive clauses use the active polypersonal pattern.
+   - Interaction with CORE: Limits the space of possible constructions, making the puzzle more constrained and solvable.
+   - Difficulty contribution: LOW. Primarily a constraint on the puzzle space.
+   - Priority: OPTIONAL
+
+6. Negative particle, immediately preverbal (WALS 143A-1, 144B-3, 144V-1)
+   - Phenomenon: Negation is a separate word immediately before the verb.
+   - Intended solver inference: A word immediately before the verb that is not a TAM prefix is the negative particle. This helps the solver distinguish negation from verb morphology.
+   - Interaction with CORE: If the puzzle includes negative examples, the solver must not confuse the negative particle with a verb prefix.
+   - Difficulty contribution: MEDIUM. Adds a potential source of confusion that the solver must resolve.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Zero 3sg × A-before-P × VOS:
+   - A verb with no person markers + VOS word order creates a situation where the solver must determine: is the first NP (object) 3sg? Is the second NP (subject) 3sg? The zero marking means the verb provides no direct evidence for 3sg arguments, so the solver must rely on context or paradigmatic contrast.
+   - Additional inference: The solver learns that "no marker" ≠ "no argument"; it specifically means 3sg.
+
+2. TAM prefix × A-before-P × morpheme order:
+   - The fixed left-to-right order (TAM → A → P → root) gives the solver a deterministic parsing algorithm. When a novel form appears, the solver can segment it by applying this order.
+   - Additional inference: The solver can predict the form of a new verb given its TAM, subject, and object.
+
+3. VOS × polypersonal agreement:
+   - The verb is the primary source of argument-role information (not word order). The solver must "read" the verb to determine which NP is subject and which is object, then map the NPs accordingly.
+   - Additional inference: The solver develops a strategy of "parse the verb first, then assign NP roles."
+
+4. Zero 3sg × non-zero marking (25B-2):
+   - Since marking is non-zero (i.e., most person/number combinations are overtly marked), the absence of a marker is specifically diagnostic of 3sg. This makes the zero 3sg a reliable signal rather than a general "unmarked" default.
+   - Additional inference: The solver can use the presence/absence of markers to narrow down possible person/number values.
+
+CONSTRAINTS
+
+1. The puzzle must provide sufficient paradigmatic examples (varying one category at a time) to allow the solver to identify the morpheme order (TAM → A → P → root) without prior knowledge of Otomí.
+
+2. The zero 3sg must be demonstrated through contrast: at least one example where 3sg is present (showing zero) and one where a non-3sg person is present (showing a marker), so the solver can infer that zero = 3sg specifically.
+
+3. VOS word order must be made inferable: the puzzle should include enough examples where the verb morphology clearly identifies subject and object, allowing the solver to notice that the subject NP follows the object NP.
+
+4. The puzzle should not require the solver to know Otomí phonology (tone, nasal vowels) to solve the core morphological task. If tone or nasal vowels are included in the data, they should be transparently marked and not essential to the solution.
+
+5. If negative examples are included, the negative particle must be clearly distinguishable from verb prefixes (e.g., it appears as a separate word, not attached to the verb).
+
+6. The puzzle should avoid requiring knowledge of the hybrid vigesimal-decimal numeral system or other non-verb-morphology features unless they are directly relevant to a sub-task.
+
+7. All morphemes used in the puzzle must be consistent with the exclusively concatenative nature of Otomí morphology (20A-1): no fusion, no suppletion within a single paradigm unless explicitly designed as an "irregular" element.

@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to establish the linguistic foundation for the target language, so Agent 1 must be called to extract rich, typologically grounded linguistic features and mappings.",
+    "directive": "Extract a robust set of linguistic features and mappings for the target language 'may' suitable for a Linguistic Olympiad puzzle. Focus on core typological phenomena such as morphology, argument structure, aspect, evidentiality, noun classification, or other salient features, and provide clear feature-to-form mappings that can support non-trivial reasoning.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has already produced concepts for the target language 'may', but the pipeline currently lacks a rationale. The next required step is to design the reasoning blueprint and sentence-structure rules that will guide puzzle generation.",
+    "directive": "Using the existing linguistic concepts for 'may', design a clear, non-contradictory step-by-step rationale for a Linguistic Olympiad puzzle. Define the morphological, syntactic, or semantic rules to be tested, specify how sentences should be constructed, and outline the reasoning steps solvers must use to derive the target answer. Ensure the rationale supports a non-trivial puzzle with unambiguous inference.",
+    "elapsed_seconds": 6.8
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline already has concepts and rationale for the target language 'may', but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers so that it can subsequently be validated.",
+    "directive": "Using the existing linguistic concepts and rationale for 'may', generate a complete Linguistic Olympiad puzzle dataset. Include a clear DATA section with all necessary vocabulary and glosses, well-formed questions that require non-trivial reasoning, and a complete answer key. Ensure the puzzle is internally consistent, unambiguous, and ready for validation.",
+    "elapsed_seconds": 12.5
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 rigorously validate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the generated Linguistic Olympiad puzzle for 'may'. Check internal consistency, completeness of the DATA section, glossing, question solvability, unambiguity, answer-key correctness, and whether the reasoning required is non-trivial. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if issues are found.",
+    "elapsed_seconds": 27.2
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator found a critical answer-key/solution error in Q3(a) and a major difficulty mismatch: the puzzle is too complex for the target difficulty. These are puzzle-level implementation defects rather than weak concepts or contradictory rationale. Agent 3 should directly patch the answer key, correct the solution explanation, and simplify the puzzle to match the intended difficulty.",
+    "directive": "Patch the puzzle directly. Correct Q3(a): the answer for 'her dog' must be *le-turi*, not *re-turi*, and fix the solution text so it correctly states that the 3sg feminine Class B possessive prefix is *le-*, not *re-*. Verify all possessive prefixes, glosses, and answer-key entries for consistency. Also reduce the overall difficulty to target difficulty 1 by simplifying the task set: remove or simplify extra sub-tasks, avoid requiring integration of multiple interacting systems across five questions, and keep the reasoning very easy and directly inferable from the DATA section. Ensure the revised puzzle remains complete, unambiguous, and ready for validation.",
+    "elapsed_seconds": 31.3
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline contains concepts, rationale, and a revised puzzle, and puzzle_needs_validation is true with no current validator verdict. The latest revision by Agent 3 must be validated before any further action or completion.",
+    "directive": "Validate the revised Linguistic Olympiad puzzle for 'may'. Check that the Q3(a) answer-key correction is consistent, all possessive prefixes and glosses are correct, the DATA section is complete, the questions are unambiguous and solvable, the difficulty is appropriate, and the answer key is fully correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if needed.",
+    "elapsed_seconds": 38.4
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, the puzzle has already been validated, and puzzle_needs_validation is false. The pipeline therefore has a fully verified acceptable puzzle and should terminate successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 43.7
+  }
+]

@@ -1,0 +1,95 @@
+
+
+TARGET-LANGUAGE: Lezgian (lez)
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the noun stem inventory and allomorphy trigger.** Select 6–8 noun stems, ensuring at least 3 are vowel-final (e.g., stems ending in -a, -e, -o) and at least 3 are consonant-final (e.g., stems ending in -r, -k, -t). These stems will serve as the base for all nominal morphology. The solver does not need to know the language; they will discover the V/C distinction from distributional patterns in the data. Do not label stems as "vowel-final" or "consonant-final" in the puzzle presentation—let the solver infer the conditioning environment.
+
+2. **Introduce the plural suffix with its allomorphy.** The plural suffix is -a after vowel-final stems and -i after consonant-final stems. Present this in simple absolutive NPs (no case marking) in the first few data sentences. The solver should be able to infer: (a) a suffix marks plurality, (b) the suffix has two allomorphs, (c) the conditioning factor is the final segment of the stem. This is the first allomorphy the solver encounters and establishes the V/C distinction that will be critical later.
+
+3. **Introduce case suffixes with their allomorphy.** Present the ergative, genitive, dative, and locative cases, each with two allomorphs conditioned by the same V/C factor: ergative -l/-il, genitive -n/-in, dative -d/-id, locative -s/-is. Introduce these in simple singular NPs first (one case per sentence, in controlled contexts: ergative on transitive agents, genitive on possessors, dative on recipients, locative on locations). The solver should generalize the allomorphy pattern from step 2 to the case suffixes: the same V/C conditioning applies. At this point, the solver has a clean two-way allomorphy system for all nominal suffixes.
+
+4. **Introduce the critical deletion rule (ambiguous segmentation).** This is the puzzle's central difficulty-5 mechanism. The rule: the plural suffix -i (on consonant-final stems) is deleted before any case suffix. Thus:
+   - C-final + plural + ergative: stem-i-il → stem-il (surface-identical to singular ergative)
+   - C-final + plural + genitive: stem-i-in → stem-in (surface-identical to singular genitive)
+   - C-final + plural + dative: stem-i-id → stem-id (surface-identical to singular dative)
+   - C-final + plural + locative: stem-i-is → stem-is (surface-identical to singular locative)
+   
+   For vowel-final stems, no deletion occurs: stem-a-l, stem-a-n, etc. are transparently plural.
+   
+   **Construction principle:** Present the first C-final + plural + case example in a context where plurality is semantically unambiguous (e.g., the verb's meaning clearly requires a plural agent, or another NP in the same sentence is overtly plural). The solver should notice that the surface form looks "too short" for a plural (missing the expected -i) and hypothesize a deletion rule. Present at least two such examples with different case suffixes to confirm the rule is general (applies before all case suffixes, not just one).
+   
+   **Critical:** Also include at least one C-final + singular + case example with the same surface form (e.g., stem-il as singular ergative in a context where singularity is clear). This creates the ambiguity: the solver now knows that stem-il can be either singular ergative or plural ergative. The ambiguity is real and must be resolved from context.
+
+5. **Introduce the verb system: basic structure and suffix ordering.** Establish that the verb carries no person/number agreement (all grammatical role information comes from nominal case). Introduce the following verbal suffixes in a fixed order: Stem + Aspect + Tense + Evidentiality + Negation + Interrogative.
+   - Aspect: perfective = ∅, imperfective = -a
+   - Tense: past = -t, non-past = ∅
+   - Evidentiality: indirect = -r, direct = ∅
+   - Negation: affirmative = ∅, negative = -m
+   - Interrogative: statement = ∅, question = -q
+   
+   Introduce these one at a time in simple clauses. Start with perfective non-past affirmative statements (bare stem), then add past (-t), then imperfective (-a), then evidentiality (-r), then negation (-m), then interrogative (-q). At each stage, the solver should be able to segment the suffix string.
+
+6. **Introduce the aspect-tense deletion rule (second ambiguous segmentation).** The rule: the imperfective suffix -a is deleted before the past tense suffix -t. Thus:
+   - Imperfective past: stem-a-t → stem-t (surface-identical to perfective past)
+   - Imperfective non-past: stem-a (transparent)
+   - Perfective past: stem-t (transparent)
+   
+   **Construction principle:** Present an imperfective past example in a context where the imperfective interpretation is semantically forced (e.g., a habitual or ongoing-in-the-past reading that contrasts with a one-time completed event). Then present a perfective past example with the same surface form in a context where the perfective reading is forced. The solver must recognize that the same surface form (stem-t) has two possible analyses and that the distinction is only recoverable from semantic context. This mirrors the nominal ambiguity from step 4 and reinforces the puzzle's theme: surface forms are underdetermined, and context is essential.
+
+7. **Introduce the conditioned evidentiality rule (rule conditioned by another rule's output).** The rule: the evidentiality suffix -r is only licensed in the presence of the past tense suffix -t. It cannot appear on non-past verbs. Thus:
+   - Past + indirect: stem-t-r (valid)
+   - Past + direct: stem-t (valid)
+   - Non-past + indirect: *stem-r (ungrammatical—never appears in data)
+   - Non-past + direct: stem (valid)
+   
+   **Construction principle:** Present at least two past + indirect examples (stem-t-r) and at least two past + direct examples (stem-t). The solver should notice that -r always co-occurs with -t and hypothesize that -r is conditioned on past tense. To confirm this is evidentiality (not, say, a compound past marker), include a semantic contrast: two sentences with identical morphology except for the presence/absence of -r, where the English gloss makes clear that one is "I heard that..." and the other is "I saw that..." (or equivalent direct/indirect distinction). The solver must infer that -r encodes source-of-information, not tense.
+   
+   **Why this is conditioned:** The solver cannot interpret -r until they have already identified -t as past tense. The interpretation of one suffix depends on the prior identification of another. This creates a sequential inference dependency.
+
+8. **Introduce the negation-interrogative fusion (third rule interaction).** The rule: in negated questions, the negation suffix -m and the interrogative suffix -q fuse into a single surface form -mq. They do not appear as separate suffixes. Thus:
+   - Affirmative question: stem...-q
+   - Negated statement: stem...-m
+   - Negated question: stem...-mq (fused, not -m-q)
+   
+   **Construction principle:** Present affirmative questions (with -q) and negated statements (with -m) in separate examples. Then present a negated question showing -mq. The solver must discover that -mq is not two separate suffixes but a fused form. Evidence for fusion: (a) -m never appears immediately before -q in any example; (b) -mq appears in a position where both negation and interrogative are semantically required; (c) the surface form is a single cluster that cannot be re-segmented into -m + -q by any other rule. The solver must infer the fusion rule and apply it in production.
+   
+   **Why this is non-trivial:** A solver who has identified -m as negation and -q as interrogative might naively predict stem...-m-q for a negated question. The data shows this is wrong. The solver must revise their model of suffix concatenation to include a fusion rule.
+
+9. **Construct the integrated data set.** Now assemble 15–20 data sentences that collectively provide evidence for all the rules above. The data should be organized in a progression:
+   - Sentences 1–4: Simple nominal morphology (plural allomorphy, case allomorphy in singular). No ambiguity yet.
+   - Sentences 5–7: First examples of C-final + plural + case (deletion in action), in contexts where plurality is semantically clear. The solver should begin to notice the "missing" -i.
+   - Sentences 8–9: C-final + singular + case with the same surface form as the plural forms in 5–7. The ambiguity is now visible.
+   - Sentences 10–12: Simple verbal morphology (tense, aspect, no evidentiality or negation yet).
+   - Sentences 13–14: Imperfective past (deletion of -a before -t) in semantically clear contexts.
+   - Sentences 15–16: Evidentiality (-r) in past clauses, with semantic contrast to direct past.
+   - Sentences 17–18: Negation and interrogative separately, then the fused -mq form.
+   - Sentences 19–20: Complex sentences combining multiple systems (e.g., a transitive clause with a C-final plural ergative agent [ambiguous form], an imperfective past verb with evidentiality, and a genitive possessive NP). These sentences require the solver to integrate all discovered rules simultaneously.
+   
+   **Critical design constraint:** No single sentence should be fully parseable without applying at least two of the discovered rules. The simplest sentences (1–4) test one rule; the most complex (19–20) test four or more. This ensures progressive difficulty within the data itself.
+
+10. **Design the production questions to require novel application.** The questions must test the solver's ability to generate forms NOT seen verbatim in the data. Specifically:
+    - **Q1 (medium):** Translate a sentence requiring a C-final plural noun in the dative case. The surface form (stem-id) is identical to the singular dative, but the English source makes plurality clear. The solver must apply the deletion rule to produce the correct (ambiguous-looking) form. This tests whether the solver has internalized the deletion rule or is merely pattern-matching.
+    - **Q2 (medium):** Translate a sentence requiring an imperfective past verb with indirect evidentiality. The solver must apply the aspect-tense deletion (producing stem-t) AND add -r (producing stem-t-r). The form stem-t-r appears in the data, but the specific verb stem and the combination of imperfective + past + evidentiality in this particular sentence is novel. The solver must know that -a is deleted before -t, not that they should write stem-a-t-r.
+    - **Q3 (medium-hard):** Translate a negated question with a C-final plural ergative agent. The solver must: (a) apply the nominal deletion rule to the agent NP, (b) apply the negation-interrogative fusion to produce -mq, (c) ensure the verb has no -q (since -mq already encodes interrogativity). This tests three rules simultaneously in a configuration not seen in the data.
+    - **Q4 (hard):** Translate a sentence with a C-final plural genitive possessor modifying a vowel-final possessed noun, where the verb is a perfective past with direct evidentiality. The solver must: (a) produce the genitive with deletion (stem-in, ambiguous with singular), (b) place it before the possessed noun (modifier-before-noun order), (c) produce the correct verb form (stem-t, no -r). The ambiguity of the genitive form is resolved by the English source (which specifies plurality), but the solver must still apply the deletion rule correctly.
+    - **Q5 (hard):** Translate a sentence that is an affirmative question with an imperfective non-past verb and a C-final plural locative NP. The solver must: (a) produce the locative with deletion (stem-is), (b) produce the verb with -a (imperfective, non-past—no deletion because there is no -t), (c) add -q for the question. The critical test: the solver must NOT delete -a here (because there is no -t to trigger deletion) and must NOT fuse -q with anything (because the clause is affirmative). This tests whether the solver understands the CONDITIONS on each rule, not just the rules themselves.
+    - **Q6 (hardest):** Translate a complex sentence combining: a C-final plural ergative agent (deletion applies), a vowel-final singular absolutive patient, a genitive possessive on the patient (vowel-final, so no deletion), an imperfective past verb with indirect evidentiality (deletion of -a applies, -r added), and a negated question (fusion -mq applies). The solver must apply every rule in the system simultaneously and correctly. No sentence in the data contains all these elements together.
+
+11. **Verify solvability and non-transparency.** Check the following:
+    - No isolated example in the data is fully transparent. Every example that contains a C-final noun in a case other than absolutive is potentially ambiguous (singular vs. plural). Every example with stem-t is potentially ambiguous (perfective vs. imperfective past). The solver must always use context.
+    - The deletion rules are discoverable: the solver can compare V-final + plural + case (transparent, e.g., stem-a-l) with C-final + plural + case (opaque, e.g., stem-il) and infer that something has happened to the -i. The contrast between the two stem types provides the evidence.
+    - The conditioned rules are discoverable: -r always appears with -t (evidentiality conditioned on past); -mq always appears where both negation and question are semantically required (fusion conditioned on co-occurrence).
+    - The production questions cannot be answered by lookup: each question requires a combination of rules in a configuration not present in the data. The solver must compose rules, not retrieve forms.
+    - The ambiguity is resolvable: in every data sentence, semantic context (verb meaning, other NPs, discourse) makes the intended interpretation clear. The ambiguity is a formal property of the morphology, not a property of the data presentation.
+
+12. **Ensure the difficulty progression is coherent.** The puzzle should feel like a series of "aha" moments:
+    - First: "There are two allomorphs for each suffix, conditioned by the stem's final segment." (Steps 2–3)
+    - Second: "Wait, the plural -i disappears before case suffixes on consonant-final stems. That means I can't always tell singular from plural on C-final nouns." (Step 4)
+    - Third: "The same thing happens in the verb: -a disappears before -t, so I can't always tell perfective from imperfective past." (Step 6)
+    - Fourth: "-r only appears with -t, so it's not a tense marker—it's something else (evidentiality) that depends on past tense being present." (Step 7)
+    - Fifth: "-m and -q don't just concatenate in questions—they fuse into -mq. My model of suffix stacking needs revision." (Step 8)
+    - Final: "I can now produce novel forms by composing all these rules, knowing which conditions trigger which operations." (Steps 10–11)
+    
+    Each "aha" builds on the previous one. The allomorphy discovery (first) enables the deletion discovery (second), because the solver needs to know what the "expected" form is before they can notice it's missing. The deletion discovery (second) creates the ambiguity that makes the production questions challenging. The conditioned rules (fourth, fifth) add a layer of meta-linguistic reasoning: the solver must not only know the rules but know the CONDITIONS under which they apply.

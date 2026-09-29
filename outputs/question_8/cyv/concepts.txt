@@ -1,0 +1,155 @@
+
+
+TARGET-LANGUAGE
+
+Cayuvava (cyv), Arawakan family, Bolivia.
+
+CORE
+
+1. Polypersonal agreement (both A and P marked on verb)
+   - Target-language realization: WALS 102A-5 confirms both A and P arguments receive person marking on the verb. WALS 101A-2 confirms pronominal subjects are expressed by affixes on the verb.
+   - Intended solver inference: The solver identifies that the verb encodes both subject and object person/number, and must determine the specific morphemes for each.
+   - Priority: REQUIRED
+
+2. Synthetic verb structure (multiple morphemes per verb)
+   - Target-language realization: WALS 22A-4 indicates 6-7 categories per word. WALS 26A-5 indicates weakly prefixing tendency. The verb is composed of multiple morphemes (person markers, root, TAM, possibly negation).
+   - Intended solver inference: The solver must segment the verb into constituent morphemes and identify the function of each.
+   - Priority: REQUIRED
+
+3. Object (P) marking via prefix, A precedes P
+   - Target-language realization: WALS 104A-2 confirms A precedes P in the order of person markers on the verb. Both are prefixed (consistent with weakly prefixing typology).
+   - Intended solver inference: The solver determines the linear order of person markers and identifies which is A and which is P.
+   - Priority: HIGH
+
+4. Tense/aspect marking (monoexponential, mixed position)
+   - Target-language realization: WALS 21B-1 indicates monoexponential TAM (single morpheme for T/A/M). WALS 69A-4 indicates mixed position (both prefixing and suffixing strategies, none primary). WALS 79A-4 confirms no suppletion in tense/aspect.
+   - Intended solver inference: The solver identifies a TAM morpheme and determines whether it is prefixed or suffixed in a given form. The monoexponential nature means one morpheme covers T/A/M, unlike Zuni's separate tense and aspect suffixes.
+   - Priority: HIGH
+
+5. Morpheme boundary ambiguity
+   - Target-language realization: Given 6-7 categories per word and mixed prefix/suffix strategies, boundary ambiguity is a natural consequence. The solver may encounter strings where it is unclear whether a sequence is one morpheme or two.
+   - Intended solver inference: The solver must use paradigmatic evidence (other forms in the paradigm) to resolve segmentation.
+   - Priority: OPTIONAL (useful if the puzzle needs an additional layer of difficulty; omit if the core is already sufficiently complex)
+
+TARGET-SPECIFIC
+
+1. Split alignment in verbal person marking
+   - Phenomenon: WALS 100A-6 indicates split alignment. In Arawakan languages, this typically means the marking pattern for A and P differs depending on person (e.g., 1st/2nd person A may be marked differently from 3rd person A, or the alignment may shift based on some other condition).
+   - Intended solver inference: The solver notices that the marking pattern is not uniform across all person combinations and must determine the condition that triggers the split.
+   - Interaction with CORE: Directly interacts with polypersonal agreement — the agreement system is not a simple grid but has a structural break.
+   - Difficulty contribution: HIGH. This is the central source of difficulty. The solver must go beyond "identify the markers" to "understand the system's structure."
+   - Priority: REQUIRED
+
+2. Inclusive/exclusive distinction in verbal inflection
+   - Phenomenon: WALS 40A-5 confirms inclusive/exclusive is differentiated in verbal inflection. WALS 39A-5 confirms it in independent pronouns as well. This is a classic Arawakan feature.
+   - Intended solver inference: The solver discovers that 1st person plural has two forms (inclusive "we including you" vs. exclusive "we excluding you") and must identify which is which from context.
+   - Interaction with CORE: Adds a dimension to the person marking grid, increasing the number of distinct forms the solver must identify.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a semantic dimension to the morphological puzzle.
+   - Priority: REQUIRED
+
+3. Syncretic person/number marking
+   - Phenomenon: WALS 29A-2 indicates subject person/number marking is syncretic. Some person/number combinations share the same morphological form.
+   - Intended solver inference: The solver notices that two different person/number combinations produce the same form and must use contextual or paradigmatic evidence to disambiguate.
+   - Interaction with CORE: Creates ambiguity within the polypersonal agreement system. The solver cannot rely on a one-to-one mapping between form and person/number.
+   - Difficulty contribution: MEDIUM. Adds a layer of ambiguity that requires careful reasoning.
+   - Priority: HIGH
+
+4. Zero marking in some 3rd person singular forms
+   - Phenomenon: WALS 103A-3 indicates zero realization of some 3sg forms.
+   - Intended solver inference: The solver must recognize that the absence of a marker can be meaningful (i.e., 3sg is marked by zero) and must not mistake a "missing" marker for an error or incomplete data.
+   - Interaction with CORE: Interacts with polypersonal agreement — the solver must understand that a verb with only one person marker may still encode two arguments (one being 3sg zero).
+   - Difficulty contribution: MEDIUM. A classic linguistic puzzle element that tests whether the solver understands that zero is a valid morphological value.
+   - Priority: HIGH
+
+5. Negative prefix
+   - Phenomenon: WALS 143E-2 and 144V-2 confirm a negative prefix on the verb. WALS 144W-6 and 144X-4 confirm no postverbal or clause-final negative. WALS 144V-2 confirms no double negation.
+   - Intended solver inference: The solver identifies a prefix that signals negation and must distinguish it from person markers or other prefixes.
+   - Interaction with CORE: Adds another prefixed morpheme to the verb, increasing segmentation difficulty. The solver must determine the order: is negation before or after person markers?
+   - Difficulty contribution: MEDIUM. Adds a morphological layer without requiring new conceptual knowledge.
+   - Priority: HIGH
+
+6. VOS basic word order
+   - Phenomenon: WALS 81A-4 confirms VOS. WALS 82A-2 confirms VS (subject follows verb). WALS 83A-2 confirms VO (object follows verb).
+   - Intended solver inference: The solver identifies the basic clause structure and uses it to determine which argument is A and which is P (the argument immediately after the verb is the object).
+   - Interaction with CORE: The verb-initial position makes the agreement markers prominent and the first thing the solver encounters. The VOS order helps the solver identify A and P roles.
+   - Difficulty contribution: LOW-MEDIUM. Provides structural context that aids interpretation.
+   - Priority: HIGH
+
+7. Productive full and partial reduplication
+   - Phenomenon: WALS 27A-1 confirms productive full and partial reduplication.
+   - Intended solver inference: The solver identifies reduplicated forms and must determine what semantic function the reduplication serves (e.g., distributive, iterative, diminutive).
+   - Interaction with CORE: Reduplication can affect the verb root, potentially creating ambiguity about what the "base" form is.
+   - Difficulty contribution: MEDIUM. Adds a derivational layer that the solver must account for.
+   - Priority: OPTIONAL (include if the puzzle needs a derivational element; omit if the inflectional system is already complex enough)
+
+8. Contrastive nasal vowels
+   - Phenomenon: WALS 10A-1 confirms contrastive nasal vowels. WALS 2A-3 indicates a large vowel inventory (7-14).
+   - Intended solver inference: The solver recognizes that nasalization is phonemically contrastive and that a nasal vowel is not simply a "variant" of an oral vowel.
+   - Interaction with CORE: Affects the phonological representation of morphemes. The solver must correctly identify nasal vowels to accurately transcribe and compare forms.
+   - Difficulty contribution: LOW-MEDIUM. Adds a phonological dimension that tests attention to detail.
+   - Priority: OPTIONAL
+
+9. Antepenultimate stress
+   - Phenomenon: WALS 14A-5 confirms fixed antepenultimate stress. WALS 15A-8 confirms no weight-sensitivity.
+   - Intended solver inference: The solver can use the stress pattern as a clue for syllable segmentation and word boundaries.
+   - Interaction with CORE: Aids in segmenting the verb into syllables, which is a prerequisite for identifying morpheme boundaries.
+   - Difficulty contribution: LOW. Provides a helpful tool rather than a source of difficulty.
+   - Priority: OPTIONAL
+
+10. Possessive classification (more than five classes)
+    - Phenomenon: WALS 59A-4 indicates more than five possessive classes. WALS 24A-1 indicates head marking in possessive NPs. WALS 57A-3 indicates both possessive prefixes and suffixes.
+    - Intended solver inference: The solver discovers that different nouns take different possessive markers based on semantic class (e.g., body parts, food, tools, etc.) and must determine the classification system.
+    - Interaction with CORE: Provides a separate morphological system that can be contrasted with the verbal agreement system.
+    - Difficulty contribution: MEDIUM-HIGH. Adds a separate but related morphological puzzle.
+    - Priority: OPTIONAL (include if the puzzle can accommodate a second morphological system; omit if the verbal system is the sole focus)
+
+11. Epistemic vs. situational modality distinction
+    - Phenomenon: WALS 75A-2 indicates epistemic possibility is expressed via affixes on verbs. WALS 74A-2 indicates situational possibility is expressed via verbal constructions (not affixes). WALS 76A-3 confirms no overlap.
+    - Intended solver inference: The solver distinguishes between two types of "possibility" based on their morphological encoding (affix vs. periphrastic construction).
+    - Interaction with CORE: The epistemic possibility affix adds another suffix/prefix to the verb, increasing the morphological complexity.
+    - Difficulty contribution: MEDIUM. Adds a semantic distinction that is morphologically encoded.
+    - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Split alignment × Polypersonal agreement × Inclusive/exclusive
+   - The agreement system is not a simple 3×3 (or 4×4 with inclusive/exclusive) grid. The split alignment means the marking pattern changes at a certain point (likely at 3rd person), and the inclusive/exclusive distinction adds a further dimension. The solver must construct a table that reflects both the split and the inclusive/exclusive distinction.
+   - Additional inference: The solver must determine WHERE the split occurs (which person triggers the change) and HOW it manifests (different prefix? different suffix? different order?).
+
+2. Syncretism × Zero marking × Polypersonal agreement
+   - Syncretism means some forms are identical for different person/number combinations. Zero marking means some 3sg forms have no overt marker. Together, these create a situation where the solver may see a verb with no person marker and must determine whether this is 3sg (zero) or a syncretic form that happens to look like zero.
+   - Additional inference: The solver must use paradigmatic and contextual evidence to resolve the ambiguity.
+
+3. Negative prefix × Verb structure × VOS word order
+   - The negative prefix is part of the verb complex. In a VOS language, the verb (with its negative prefix) appears at the beginning of the clause. The solver must segment the initial verb complex into: [Neg][A-marker][P-marker][Root][TAM] (or some other order).
+   - Additional inference: The solver must determine the linear order of all prefixed elements (negation, A, P) and identify which is which.
+
+4. Monoexponential TAM × Mixed position × Verb structure
+   - The TAM morpheme is a single unit (monoexponential) but can appear as either a prefix or a suffix (mixed position). This means the solver cannot assume a fixed template for the verb. In some forms, TAM is prefixed; in others, it is suffixed.
+   - Additional inference: The solver must determine, for each form, whether the TAM morpheme is prefixed or suffixed, and use this to correctly segment the verb.
+
+5. Inclusive/exclusive × VOS word order
+   - In a VOS language, the subject (which may be inclusive or exclusive 1pl) appears after the object. The solver must use the agreement markers on the verb to determine the subject's person/number/inclusivity, and the VOS order to confirm which NP is the subject.
+   - Additional inference: The solver cross-checks the verbal agreement with the NP order to verify the interpretation.
+
+CONSTRAINTS
+
+1. The split alignment pattern must be clearly demonstrated in the data. The solver must be able to identify at least two different alignment patterns and determine the condition that triggers the switch. Provide at least 3-4 examples that clearly show the contrast.
+
+2. The inclusive/exclusive distinction must be unambiguously demonstrated. Provide at least one example where the inclusive form is used in a context that clearly includes the addressee, and one where the exclusive form is used in a context that clearly excludes the addressee.
+
+3. Zero marking must be inferable. Provide enough examples where 3sg is the only possible interpretation given the context, so the solver can conclude that the absence of a marker = 3sg. Do not create situations where zero could be confused with a missing or unattested form.
+
+4. The negative prefix must be distinguishable from person markers. Use a negative prefix that is phonologically distinct from all person markers to avoid unnecessary ambiguity. If the negative prefix is phonologically similar to a person marker, provide enough paradigmatic evidence to disambiguate.
+
+5. The verb structure must be segmentable. Provide a sufficient paradigm (at least 6-8 forms) that covers the major person/number combinations, with and without negation, and with different TAM values. This allows the solver to identify the morpheme boundaries through comparison.
+
+6. Do not require the solver to know that Cayuvava is Arawakan or to have any prior knowledge of the language. All relevant properties must be inferable from the provided data.
+
+7. If reduplication is included, provide at least two reduplicated forms with clear semantic contrast to their non-reduplicated counterparts, so the solver can infer the function of reduplication.
+
+8. If possessive classification is included, provide at least 3-4 possessive classes with clear semantic labels, and show that the same possessor takes different markers with different possessed nouns.
+
+9. The monoexponential TAM means the solver should NOT be expected to identify separate tense and aspect morphemes. Present TAM as a single morpheme that may have different values (e.g., past, present, future, or past, non-past, etc.).
+
+10. The VOS word order should be consistent across all examples to avoid confusing the solver about argument structure. If any example deviates from VOS, provide a clear explanation (e.g., topicalization, focus) or avoid such examples.

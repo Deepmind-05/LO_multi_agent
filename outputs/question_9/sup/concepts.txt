@@ -1,0 +1,94 @@
+
+
+TARGET-LANGUAGE
+
+Supyire (Senufo, Niger-Congo)
+
+CORE
+
+1. Noun class system
+   - Target-language realization: 5+ non-sex-based noun classes with semantic and formal assignment (WALS 30A-5, 31A-3, 32A-3). Classes are identifiable through systematic phonological patterns in noun stems and agreement forms.
+   - Intended solver inference: Identify the number of classes and their phonological signatures from the data; recognize that assignment is not purely semantic (some classes are determined by formal/phonological properties).
+   - Priority: REQUIRED
+
+2. Singular-plural distinction with obligatory plural suffix and stem alternations
+   - Target-language realization: Plural marked by obligatory suffix on all nouns (WALS 33A-2, 34A-6). The suffix may be class-specific. Stem-internal phonological changes (vowel, tone) may accompany the suffix.
+   - Intended solver inference: Identify the plural suffix (and whether it varies by class); identify any stem-internal alternations that co-occur with pluralization; distinguish suffixal marking from stem-internal change.
+   - Priority: REQUIRED
+
+3. Tone participating in class/number alternations
+   - Target-language realization: Complex tone system (WALS 13A-3). Tone patterns on noun stems and/or agreement markers vary systematically across classes and/or number.
+   - Intended solver inference: Identify tone as a phonological dimension of the class/number system; track tone patterns alongside segmental changes.
+   - Priority: HIGH
+
+4. Vowel quality alternations in class/number paradigms
+   - Target-language realization: Large vowel inventory (7-14, WALS 2A-3) with contrastive nasal vowels (WALS 10A-1). Systematic vowel quality changes (including nasalization) in noun stems across class/number forms.
+   - Intended solver inference: Identify systematic vowel alternation patterns; recognize that vowel changes are rule-governed, not arbitrary.
+   - Priority: HIGH
+
+5. Cross-paradigm correspondence (nominal agreement)
+   - Target-language realization: Noun class information is encoded on multiple nominal elements: the noun itself (stem + suffix), demonstratives, adjectives, and 3rd person pronouns (which show gender distinctions in both singular and non-singular, WALS 44A-2). The verb does NOT show class agreement (WALS 29A-1, 102A-1).
+   - Intended solver inference: Discover that class information is redundantly encoded across multiple word classes in a predictable, parallel way; use knowledge of one paradigm to predict forms in another.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Nasal vowel contrast as a phonological dimension of alternation
+   - Phenomenon: Contrastive nasal vowels (WALS 10A-1) participate in class/number alternations alongside oral vowel quality changes.
+   - Intended solver inference: Recognize nasalization as a distinct phonological dimension (not merely a "vowel change"); track it as an independent parameter alongside oral vowel quality and tone.
+   - Interaction with CORE: Adds a third dimension to vowel alternations (oral quality × nasalization × tone), increasing the combinatorial complexity the solver must track.
+   - Difficulty contribution: Medium. Solver must recognize that "a" and "ã" are distinct categories, not allophones, and that nasalization follows its own pattern.
+   - Priority: HIGH
+
+2. Class-specific plural suffixes
+   - Phenomenon: The obligatory plural suffix (WALS 33A-2) may take different forms depending on noun class, creating a class-specific suffix paradigm parallel to the stem alternation paradigm.
+   - Intended solver inference: Discover that the plural suffix is not uniform but varies by class; identify the class-specific suffix forms.
+   - Interaction with CORE: Creates a second locus of class marking (suffix) that must be tracked alongside stem alternations; provides additional evidence for class identification.
+   - Difficulty contribution: Medium. Solver must separate the suffix from the stem and identify class-specific suffix forms.
+   - Priority: HIGH
+
+3. Absence of verbal class/person agreement
+   - Phenomenon: No verbal person/number marking of any kind (WALS 29A-1, 100A-1, 102A-1, 103A-1).
+   - Intended solver inference: Recognize that the agreement system is purely nominal; do not expect verb forms to encode class information.
+   - Interaction with CORE: Constrains the cross-paradigm correspondence to nominal elements only; prevents the solver from applying the Dinka verb-noun correspondence template.
+   - Difficulty contribution: Low directly, but important as a design constraint that shapes the puzzle's structure.
+   - Priority: HIGH (as design constraint)
+
+4. Gender distinctions in 3rd person pronouns (singular and non-singular)
+   - Phenomenon: 3rd person pronouns show class/gender distinctions in both singular and non-singular (WALS 44A-2).
+   - Intended solver inference: Use pronoun forms as an additional paradigm for identifying class patterns; predict pronoun forms from noun class.
+   - Interaction with CORE: Provides a compact, easily comparable paradigm that reinforces the cross-paradigm correspondence; pronouns are short and transparent, making them good "test cases" for the solver.
+   - Difficulty contribution: Low-Medium. Pronouns are simple enough to be accessible but still require class identification.
+   - Priority: HIGH
+
+INTERACTIONS
+
+1. Noun class × nasal vowels × tone × vowel quality: Multiple phonological dimensions create a multi-parameter alternation system. The solver must track at least three independent dimensions (oral vowel quality, nasalization, tone) simultaneously across the class/number paradigm. This is the primary source of difficulty.
+
+2. Noun class × cross-paradigm agreement: The same class information is encoded in the noun stem, the plural suffix, demonstratives/adjectives, and pronouns. The solver must discover this redundancy and use it for prediction. This is the primary source of the puzzle's "insight" (analogous to the Dinka verb-noun correspondence).
+
+3. Plural suffix × stem alternations: The solver must decompose the plural form into (a) stem-internal changes and (b) the added suffix. If the suffix is class-specific, this creates an additional layer: the solver must identify both the stem alternation rule AND the class-specific suffix.
+
+4. Nasal vowels × vowel quality: Nasalization and oral vowel quality are independent dimensions. A vowel may change in quality AND gain/lose nasalization in the same alternation. The solver must not conflate these.
+
+5. Pronoun paradigm × noun paradigm: Pronouns provide a "clean" view of the class system (short, transparent forms) that can be cross-referenced with the more complex noun paradigms. This gives the solver a verification tool.
+
+CONSTRAINTS
+
+1. The puzzle must NOT include any verbal agreement with noun class or person. All agreement evidence must come from nominal elements (nouns, demonstratives, adjectives, pronouns).
+
+2. The cross-paradigm correspondence must be between nominal elements only. The solver should be able to predict agreement forms on one nominal element from the form of another.
+
+3. Plural marking must be presented as obligatory for all nouns (no "invariant" nouns). This ensures sufficient data for pattern discovery.
+
+4. Tone must be represented in a consistent, unambiguous notation (e.g., diacritics: á, à, or a tone letter system). The solver must be able to distinguish tone from segmental identity.
+
+5. Nasal vowels must be clearly distinguished from oral vowels in the notation (e.g., using tilde: ã, ẽ, etc.). The solver must be able to identify nasalization as a separate feature.
+
+6. The number of noun classes should be discoverable from the data but not stated explicitly. The solver should be able to count the distinct class patterns.
+
+7. The puzzle should provide enough exemplars per class to allow the solver to identify patterns with confidence (at least 2-3 nouns per class, each shown in singular and plural, with at least one agreement form).
+
+8. Vowel alternations should be systematic and rule-governed (not suppletive), so that the solver can identify the underlying pattern and apply it to novel forms.
+
+9. The puzzle should include at least one "test" item where the solver must predict an unseen form using the discovered rules, to verify that the cross-paradigm correspondence has been correctly identified.

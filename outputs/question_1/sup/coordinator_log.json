@@ -1,0 +1,65 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for the target language 'sup', including relevant morphological, syntactic, semantic, or phonological features suitable for a Linguistic Olympiad puzzle. Ensure the concepts are specific enough to support a solvable puzzle with clear mappings and non-trivial reasoning.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules so Agent 3 can generate a valid puzzle.",
+    "directive": "Using the existing linguistic concepts for 'sup', design a clear, non-contradictory step-by-step rationale and sentence structure rules for a Linguistic Olympiad puzzle. Ensure the rules support solvable, non-trivial questions with explicit mappings, consistent morphology/syntax, and enough typological depth to avoid triviality.",
+    "elapsed_seconds": 8.0
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'sup' using the existing concepts and rationale. Include a clear DATA section with all necessary vocabulary and glosses, well-formed questions, and a complete answer key. Ensure the puzzle is solvable, non-trivial, internally consistent, and ready for validation.",
+    "elapsed_seconds": 17.3
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Validate the generated Linguistic Olympiad puzzle for target language 'sup'. Solve it independently, check internal consistency of the DATA section, glosses, morphology, syntax, questions, and answer key. Verify that all questions are non-trivial, unambiguous, and solvable from the provided data. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific, actionable feedback if any defects are found.",
+    "elapsed_seconds": 34.5
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator failed the puzzle due to implementation-level defects: the document is truncated, lacks a clean DATA list, SOLUTION section, and structured ANSWERS section, and contains internal design monologue. The concepts and rationale were not identified as weak or contradictory, so the appropriate next step is to have Agent 3 repair or regenerate the final puzzle document.",
+    "directive": "Regenerate or repair the complete final puzzle for 'sup' as a clean, self-contained Olympiad document. Remove all internal monologue, planning notes, self-corrections, and design scratchpad text. Provide: (1) a clean numbered DATA section with all sentences, translations, and glosses; (2) a clear SOLUTION section explaining the linguistic rules in rule-based form, including noun class system, suffix ordering, agreement, negation, postpositions, and any other relevant morphology/syntax; (3) a structured ANSWERS section with one answer per question, matching the question numbers exactly. Ensure the output is not truncated and ends with a complete final section. Address the minor ambiguity issues by clearly glossing homophones such as \u025b ('this'/'hand') and \u0254 ('that'/'mountain'), avoiding or clarifying sentences where they could confuse solvers, and making the distinction between the postposition \u0254 and the Class I definite suffix -\u0254 explicit through spacing, glosses, or a brief note. All vocabulary must be glossed, all questions must be solvable from the provided data, and the answer key must be internally consistent.",
+    "elapsed_seconds": 40.9
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated after the previous validation failure, and puzzle_needs_validation is true with no current validator verdict. The next required step is to have Agent 4 independently solve and validate the latest puzzle.",
+    "directive": "Validate the regenerated Linguistic Olympiad puzzle for target language 'sup'. Independently solve it and verify that the document is clean, complete, and self-contained: no internal monologue or design notes; a clear DATA section with all necessary vocabulary, translations, and glosses; a coherent SOLUTION section explaining the linguistic rules; and a structured ANSWERS section matching all question numbers. Check internal consistency of morphology, syntax, agreement, negation, postpositions, noun class behavior, and any homophone distinctions. Confirm that all questions are unambiguous, non-trivial, and solvable from the provided data. Return PASS, PASS_WITH_ISSUES, or FAIL with specific actionable feedback if defects remain.",
+    "elapsed_seconds": 61.4
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 failed the puzzle due to concrete implementation-level defects: a critical mismatch between the data and answers for the Class IV definite suffix, a major internal contradiction in transitive word order within the data, and leftover internal monologue in the solution. The concepts and rationale are not reported as weak, impossible, or fundamentally contradictory, so the appropriate next step is to have Agent 3 directly patch the puzzle.",
+    "directive": "Patch the 'sup' puzzle directly without changing the underlying concepts or rationale. (1) Resolve the Class IV definite suffix inconsistency by making the data, solution table, and answer key use one consistent suffix. Prefer using -\u0254 as shown by sentence 29: update Q5 to p\u0254\u0254, Q9 to p\u0254\u0254\u00f5, and set Def = -\u0254 for Class IV; if you instead choose -a, change sentence 29 to \u0272\u025ba\u00f5 and keep Q5/Q9 as p\u0254a/p\u0254a\u00f5. Check every Class IV definite form for consistency. (2) Make transitive word order consistent across all data sentences. Align all examples with the rationale; if the rationale does not force a specific order, change the smaller inconsistent set (sentences 23\u201327) to SVO to match sentences 1\u201320, updating glosses and translations as needed. (3) Remove all internal monologue, self-corrections, and design notes from the solution section, leaving only the final clean rule-based grammatical analysis. Ensure the final document is complete, self-contained, and the answer key exactly matches the corrected data.",
+    "elapsed_seconds": 72.4
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has just been generated after the previous validation failure, and puzzle_needs_validation is true with no current validator verdict. The next required step is to have Agent 4 independently solve and validate the latest revised puzzle, with special attention to the previously reported defects: Class IV definite suffix consistency, transitive word-order consistency, removal of internal monologue, and exact alignment between DATA, SOLUTION, and ANSWERS.",
+    "directive": "Validate the latest revised Linguistic Olympiad puzzle for target language 'sup'. Independently solve it and verify that the document is clean, complete, and self-contained. Specifically check: (1) the Class IV definite suffix is now consistent across DATA, SOLUTION, and ANSWERS; (2) transitive word order is consistent across all data sentences and matches the stated rationale; (3) no internal monologue, planning notes, or design scratchpad text remains; (4) all vocabulary is glossed and all questions are unambiguous, non-trivial, and solvable from the provided data; (5) the ANSWERS section exactly matches the corrected DATA and SOLUTION. Return PASS, PASS_WITH_ISSUES, or FAIL with specific actionable feedback if any defects remain.",
+    "elapsed_seconds": 83.6
+  },
+  {
+    "step": 9,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 has issued a PASS verdict for the latest puzzle, and puzzle_needs_validation is false. The puzzle is therefore fully verified and acceptable, so the pipeline should finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 92.5
+  }
+]

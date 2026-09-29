@@ -1,0 +1,107 @@
+
+
+TARGET-LANGUAGE
+
+Nivkh (niv)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the hidden rule set (the "answer key" the solver must discover).** Before constructing any data, the setter must fix the following rules that will govern all puzzle sentences:
+
+   - **Word order:** SOV. The verb (or predicative adjective) is always final in the clause.
+   - **Case marking:** A small set of suffixes (3–4) marks grammatical roles on noun phrases. The nominative (S) is either zero-marked or carries a distinctive suffix; the accusative (O) carries a different suffix; a locative suffix marks the complement of a postposition; a genitive suffix marks possessor. The setter chooses the specific suffix forms. The system is symmetrical: the same suffix marks S regardless of whether the clause is transitive or intransitive.
+   - **Negation:** Two components. (a) An obligatory negative suffix attached to the predicate (verb or predicative adjective). (b) An optional independent negative word that may appear immediately after the predicate. The suffix appears in every negative sentence; the independent word appears in some negative sentences but not all. Both may co-occur.
+   - **Predicative adjectives:** In predicative position ("X is [adj]"), the adjective occupies the verb position and takes the negative suffix in negative sentences. It does not take case suffixes (it is not a noun). It behaves identically to a verb in all syntactic respects.
+   - **Postpositions:** A small set of postpositions (2–3) appear after the noun phrase they modify, in pre-verbal position. The noun in a postpositional phrase carries the locative (or relevant) case suffix.
+   - **Question particle (optional inclusion):** A single particle appears at the absolute end of the clause to mark polar questions. In negative questions, it follows the optional negative word.
+   - **No verbal agreement:** The verb form is invariant with respect to person and number of arguments. The solver cannot use verbal morphology to identify roles.
+
+   The setter should write these rules down explicitly as a reference before generating data, to ensure consistency.
+
+2. **Design the sentence templates.** The following templates cover all structures the puzzle will use. The setter should generate data from these templates:
+
+   - **T1 (Transitive, positive):** S-NOM O-ACC V
+   - **T2 (Intransitive, positive):** S-NOM V
+   - **T3 (Transitive, negative, no optional word):** S-NOM O-ACC V-NEG
+   - **T4 (Transitive, negative, with optional word):** S-NOM O-ACC V-NEG NEG-word
+   - **T5 (Intransitive, negative, no optional word):** S-NOM V-NEG
+   - **T6 (Intransitive, negative, with optional word):** S-NOM V-NEG NEG-word
+   - **T7 (Predicative adjective, positive):** S-NOM Adj
+   - **T8 (Predicative adjective, negative, no optional word):** S-NOM Adj-NEG
+   - **T9 (Predicative adjective, negative, with optional word):** S-NOM Adj-NEG NEG-word
+   - **T10 (With postposition):** S-NOM NP-CASE Postp V
+   - **T11 (Question, positive):** S-NOM O-ACC V Q
+   - **T12 (Question, negative):** S-NOM O-ACC V-NEG (NEG-word) Q
+
+   The setter does not need to use all templates in the data, but the question set should test all of them.
+
+3. **Construct the data set (Part A of the puzzle).** Provide a set of Nivkh sentences with English glosses. The data set must be designed so that the solver can discover the rules in a specific progressive order. The following sub-steps define what evidence to include and why:
+
+   **3a. Evidence for SOV (discovered first).**
+   Include at least 3–4 simple transitive sentences (T1) and 2–3 intransitive sentences (T2). Use a small set of high-frequency verb stems (3–4 verbs) and a small set of nouns (4–6 nouns). The verb should consistently appear in final position. The English glosses should make the semantic roles clear (e.g., "The man saw the fish" vs. "The fish saw the man" — if both are included, the word order swap makes SOV unambiguous). The solver should be able to infer: the last word is the predicate; the first NP is the agent; the second NP is the patient.
+
+   **3b. Evidence for case marking (discovered second, building on SOV).**
+   The same noun must appear in both S and O positions across different sentences, with different suffixes. For example, if "man" appears as S in one sentence and as O in another, the suffix difference is visible. Include at least one pair of sentences where the same two nouns swap roles (S and O), so the solver can directly contrast the suffixes. This is the critical evidence: without it, the solver cannot distinguish the nominative from the accusative suffix. The solver should infer: the suffix on the first NP marks S; the suffix on the second NP marks O.
+
+   **3c. Evidence for the negative suffix (discovered third).**
+   Include at least 3 negative sentences (mix of T3, T4, T5, T6). In every negative sentence, the predicate carries a suffix that is absent in the corresponding positive sentence. The solver should be able to identify this suffix by comparing a positive and negative pair (e.g., T1 vs. T3 with the same verb and arguments). The solver infers: this suffix marks negation and is attached to the predicate.
+
+   **3d. Evidence for the optional negative word (discovered fourth, building on 3c).**
+   Among the negative sentences, some contain an additional word after the predicate and some do not. The setter must ensure that: (a) at least two negative sentences have the optional word, (b) at least two negative sentences lack it, (c) the presence or absence of the optional word is not correlated with any other variable (e.g., it should not be that all transitive negatives have it and all intransitive negatives lack it). The solver infers: this word is an optional intensifier or reinforcement of negation; it is not required for the sentence to be negative.
+
+   **3e. Evidence for predicative adjectives (discovered fifth — the central "twist").**
+   Include 2–3 positive predicative adjective sentences (T7) and 2–3 negative predicative adjective sentences (T8, T9). The positive sentences should look superficially similar to intransitive sentences (S-NOM + a word in final position). The negative sentences should show the negative suffix attached to the adjective. The critical design choice: the adjective in T7 should be a word the solver has NOT seen as a verb anywhere in the data. The solver's initial hypothesis will be "this is an intransitive verb." The negative sentences then force the revision: the negative suffix appears on this word, just as it appears on verbs. The solver must infer that this word is not a verb but an adjective, and that the language treats predicative adjectives identically to verbs for the purposes of negation.
+
+   To make this inference robust, the setter should include at least one sentence where the same adjective appears in a non-predicative (attributive) position modifying a noun (e.g., "the tall man"), showing that the adjective can also modify nouns. This gives the solver a clue that the word is an adjective, not a verb. However, the attributive use should be optional in the data — the core inference (adjective takes negative suffix) should be possible even without it.
+
+   **3f. Evidence for postpositions (discovered sixth, optional layer).**
+   Include 2–3 sentences with a postpositional phrase (T10). The postposition appears after a case-marked noun, and the whole phrase precedes the verb. The solver infers: this language uses postpositions (not prepositions), and the noun in a postpositional phrase carries a specific case suffix (locative). This reinforces the SOV pattern (modifiers precede heads) and adds a new case to the system.
+
+   **3g. Evidence for the question particle (discovered seventh, optional layer).**
+   Include 1–2 question sentences (T11 or T12). The particle appears at the absolute end. In a negative question, it follows the optional negative word. The solver infers: this particle marks polar questions and is the final element in the clause.
+
+4. **Verify the data set for solvability and non-ambiguity.** Before finalizing, the setter must check:
+
+   - **No accidental regularities:** Ensure that the optional negative word does not systematically co-occur with a particular verb, a particular case, or a particular sentence type. If it does, the solver might incorrectly infer it is obligatory in that context.
+   - **Case suffixes are unambiguous:** Each case suffix should be a distinct string. No suffix should be a substring of another in a way that creates segmentation ambiguity. (Since Nivkh is concatenative, this is manageable, but the setter should verify.)
+   - **The adjective "twist" is not pre-empted:** The adjective used in T7/T8/T9 should not appear anywhere else in the data as a verb. If it does, the solver will not experience the discovery moment.
+   - **The negative suffix is not confused with a case suffix:** The negative suffix on the predicate should be phonologically distinct from all case suffixes on nouns. If the same string appears as both a case suffix and a negative suffix, the solver will be confused.
+   - **Glosses are unambiguous:** English glosses should make semantic roles clear without requiring the solver to guess. Use concrete, high-frequency vocabulary (animals, body parts, weather, basic actions).
+
+5. **Design the analysis questions (Part B).** These questions test the solver's understanding of the discovered rules. They should be organized in increasing difficulty, mirroring the discovery order:
+
+   **B1 (Word order and role identification):** Given 3–4 new sentences (not in the data set), the solver must identify the S and O of each sentence. This tests whether the solver has correctly identified the case system and can apply it to novel sentences. The sentences should use the same case suffixes but novel nouns (testing productive generalization of the case rule).
+
+   **B2 (Negation identification):** Given 3–4 new sentences, the solver must identify which are negative and, for each negative sentence, identify (a) the negative suffix on the predicate and (b) whether the optional negative word is present. This tests whether the solver has distinguished the obligatory suffix from the optional word.
+
+   **B3 (Predicate type identification):** Given 2–3 new sentences, the solver must identify whether the predicate is a verb or a predicative adjective. This tests whether the solver has made the "adjective = verbal" inference. The sentences should include at least one predicative adjective sentence that the solver has not seen before.
+
+   **B4 (Structural analysis):** Given 1–2 complex sentences (e.g., a negative question with a postpositional phrase), the solver must provide a full structural analysis: identify S, O, predicate type, negation components, postpositional phrase, and question particle. This tests the integration of all rules simultaneously.
+
+6. **Design the production questions (Part C).** These questions require the solver to produce Nivkh sentences from English glosses. They should progress in complexity:
+
+   **C1 (Basic production):** 2–3 sentences requiring only SOV order and case marking (T1 or T2). Tests whether the solver can apply the case system productively to novel nouns.
+
+   **C2 (Negation production):** 2–3 sentences requiring the negative suffix. At least one should include the optional negative word (the gloss should indicate this, e.g., "definitely not" or "certainly not" to signal the optional word, while a plain "not" signals its absence). Tests whether the solver understands the two-component negation system.
+
+   **C3 (Adjective production):** 1–2 sentences with predicative adjectives, at least one negative. Tests whether the solver correctly applies the negative suffix to an adjective (the key "twist").
+
+   **C4 (Complex production):** 1–2 sentences combining multiple features (e.g., a negative question with a postpositional phrase, or a negative sentence with a genitive possessor). Tests full integration of all rules.
+
+   The setter should ensure that production questions use at least some nouns and verbs not seen in the data set, to test productive generalization rather than rote recall.
+
+7. **Set the difficulty gradient and ensure discriminative power.** The puzzle should be designed so that:
+
+   - A solver who correctly identifies SOV but misses the case system will fail B1 and C1.
+   - A solver who identifies case but misses the optional/obligatory distinction in negation will fail B2 and C2.
+   - A solver who identifies negation correctly but does not make the adjective = verbal inference will fail B3 and C3.
+   - A solver who makes all inferences but cannot integrate them will fail B4 and C4.
+
+   This ensures that each concept contributes independently to the difficulty, and that partial understanding yields partial credit. The "adjective = verbal" inference (B3/C3) should be the hardest single step, as it requires the solver to revise an initial hypothesis (that the word is a verb) based on evidence from negative sentences.
+
+8. **Final consistency check.** The setter should verify:
+
+   - All sentences in the data set and all questions are generated from the fixed rule set in Step 1. No sentence should violate any rule.
+   - The orthography is consistent throughout. If Nivkh-specific phonemes (uvulars, velar nasal) are used, they should be represented consistently and should not create confusion with other morphemes.
+   - No rule is directly stated in the puzzle instructions. The solver must discover all rules from the data.
+   - The total number of distinct morphemes (noun stems, verb stems, adjective stems, case suffixes, negative suffix, negative word, postpositions, question particle) is manageable (aim for 15–25 total distinct forms) so the puzzle is solvable within a reasonable time.

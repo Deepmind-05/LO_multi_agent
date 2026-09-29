@@ -1,0 +1,139 @@
+
+
+CONTEXT
+
+The sentences below are in Lezgian, a language spoken in the Caucasus region. The language has no gender system and does not mark person or number on the verb. Each sentence is followed by its English translation.
+
+DATA
+
+**Vocabulary**
+
+| Lezgian | English |
+|---------|---------|
+| čul | child |
+| xan | dog |
+| war | house |
+| dər | water |
+| k'ar | man |
+| t'ar | tree |
+
+**Sentences**
+
+(1) čul war-d.
+    The child ran.
+
+(2) xan war-d.
+    The dog ran.
+
+(3) k'ar-l čul k'ar-d.
+    The man saw the child.
+
+(4) čul-l xan t'ar-d.
+    The child hit the dog.
+
+(5) xan dər-d.
+    The dog fell.
+
+(6) k'ar war-r.
+    The man runs.
+
+(7) čul-l xan-d war-a.
+    The child sat at the house.
+
+(8) xan-l war-a xan-d.
+    The dog sat at the house.
+
+(9) k'ar-l dər-a dər-d.
+    The man fell at the water.
+
+(10) čul war-r-ma.
+    The child doesn't run.
+
+(11) k'ar-l čul k'ar-d-ma.
+    The man did not see the child.
+
+(12) xan-l war-a xan-d-ma.
+    The dog did not sit at the house.
+
+QUESTIONS
+
+**Part A: Analysis**
+
+A1. List the sentence numbers in which the first noun bears the suffix *-l*. What property do these sentences share that the remaining sentences lack?
+
+A2. What is the function of the suffixes *-d* and *-r* on the verb? Cite specific sentences as evidence.
+
+A3. What is the function of the suffix *-ma* on the verb? Cite specific sentences as evidence.
+
+**Part B: Translation**
+
+Translate each English sentence into Lezgian. Use the perfective or imperfective aspect as indicated.
+
+B1. The dog saw the man. *(perfective)*
+
+B2. The man fell. *(perfective)*
+
+B3. The child sat at the tree. *(perfective)*
+
+B4. The dog did not run. *(imperfective)*
+
+B5. The man did not see the dog at the house. *(perfective)*
+
+**Part C: Explanation**
+
+C1. In sentence (7), the verb *xan-* is intransitive (it takes no object). Explain why the subject *čul* still bears the suffix *-l*.
+
+C2. In sentence (3), the noun *čul* does not bear the suffix *-l*. Explain why.
+
+ANSWERS
+
+A1. Sentences (3), (4), (7), (8), (9), (11), (12). These sentences all contain more than one argument (either a patient noun or a locative phrase). The remaining sentences (1), (2), (5), (6), (10) contain only a single argument (the subject alone).
+
+A2. *-d* marks perfective aspect (a completed event); *-r* marks imperfective aspect (an ongoing or habitual event). Evidence: sentence (1) *čul war-d* ("The child ran") and sentence (6) *k'ar war-r* ("The man runs") use the same verb stem *war-* with different aspect markers, corresponding to the perfective/imperfective contrast in the translations.
+
+A3. *-ma* marks negation. Evidence: sentence (6) *k'ar war-r* ("The man runs") and sentence (10) *čul war-r-ma* ("The child doesn't run") differ only by the addition of *-ma*, which corresponds to the negation in the translation. Similarly, sentence (1) *čul war-d* ("The child ran") and sentence (11) *k'ar-l čul k'ar-d-ma* ("The man did not see the child") show *-ma* following the aspect suffix *-d*.
+
+B1. xan-l k'ar k'ar-d.
+
+B2. k'ar dər-d.
+
+B3. čul-l xan-d t'ar-a.
+
+B4. xan war-r-ma.
+
+B5. k'ar-l xan war-a k'ar-d-ma.
+
+C1. The suffix *-l* does not mark "the agent of a transitive verb." Its rule is: *-l* marks the subject of a clause when that clause contains another argument (a patient or a locative/oblique). In sentence (7), although *xan-* (sit) is intransitive, the clause contains a locative argument (*war-a*, "at the house"). Because there is another argument in the clause, the subject *čul* bears *-l*.
+
+C2. In sentence (3), *čul* is the object (patient) of the transitive verb *k'ar-* (see). The suffix *-l* marks the subject (agent) of a clause that contains another argument, not the object. The subject *k'ar* already bears *-l*; the object remains in the unmarked (absolutive) form.
+
+SOLUTION
+
+**Rules to infer:**
+
+1. **Word order (SOV):** The verb appears in final position in every sentence. Noun arguments precede the verb.
+
+2. **The *-l* rule (subject marking):** The suffix *-l* marks the subject of a clause when that clause contains another argument (a patient or a locative/oblique). Specifically:
+   - Intransitive clause with no other argument → subject is unmarked (sentences 1, 2, 5, 6, 10).
+   - Transitive clause (subject + patient) → subject bears *-l*, patient is unmarked (sentences 3, 4, 11).
+   - Intransitive clause + locative → subject bears *-l*, locative bears *-a* (sentences 7, 8, 9, 12).
+
+   The critical evidence is the contrast between sentences (1)/(2)/(5) (intransitive, no other argument, subject unmarked) and sentences (7)/(8)/(9) (intransitive + locative, subject marked with *-l*). This contrast forces the solver to reject the hypothesis "*-l* marks transitive agents" and adopt the correct generalization.
+
+3. **Locative suffix *-a*:** Marks a locative/oblique argument (sentences 7, 8, 9, 12).
+
+4. **Aspect:** *-d* = perfective; *-r* = imperfective. Evidenced by the contrast between (1) *war-d* and (6) *war-r*.
+
+5. **Negation:** *-ma* is a verbal suffix that follows the aspect marker. Evidenced by (10) *war-r-ma* vs. (6) *war-r*, and (11) *k'ar-d-ma* vs. (3) *k'ar-d*.
+
+**How the rules produce each answer:**
+
+- **B1** (*xan-l k'ar k'ar-d*): Transitive clause → agent *xan* bears *-l*; patient *k'ar* is unmarked; verb *k'ar-* + perfective *-d*.
+- **B2** (*k'ar dər-d*): Intransitive, no other argument → subject *k'ar* unmarked; verb *dər-* + perfective *-d*.
+- **B3** (*čul-l xan-d t'ar-a*): Intransitive + locative → subject *čul* bears *-l* (clause contains another argument: the locative); verb *xan-* + perfective *-d*; locative *t'ar* + *-a*. This is the key "trap" item: a solver who incorrectly generalizes "*-l* = transitive agent" would omit *-l* on *čul*.
+- **B4** (*xan war-r-ma*): Intransitive, no other argument → subject *xan* unmarked; verb *war-* + imperfective *-r* + negative *-ma*.
+- **B5** (*k'ar-l xan war-a k'ar-d-ma*): Transitive + locative → agent *k'ar* bears *-l*; patient *xan* unmarked; locative *war* + *-a*; verb *k'ar-* + perfective *-d* + negative *-ma*.
+
+DIFFICULTY
+
+Level 1 (introductory). The puzzle requires the solver to discover a non-obvious alignment rule (the *-l* rule) through controlled contrasts, identify three verbal suffixes (aspect × 2, negation), and apply multiple rules simultaneously in the translation items. The central difficulty lies in distinguishing the correct generalization ("*-l* marks the subject when the clause contains another argument") from the naive hypothesis ("*-l* marks transitive agents"), which is resolved by the intransitive + locative data in sentences (7)–(9). The trap item B3 discriminates between these two hypotheses.

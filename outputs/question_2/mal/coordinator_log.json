@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for Malay (mal) suitable for a Linguistic Olympiad puzzle. Include clear linguistic features, contrasts, and mappings that can support a multi-step reasoning puzzle.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Malay are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules that will guide puzzle generation.",
+    "directive": "Using the existing Malay linguistic concepts, design a clear step-by-step rationale for a Linguistic Olympiad puzzle. Define the reasoning chain, morphological or syntactic rules, sentence structure templates, and how each puzzle question should require non-trivial inference. Ensure the rationale is internally consistent and solvable.",
+    "elapsed_seconds": 7.1
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers based on the existing Malay linguistic concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Malay using the provided concepts and rationale. Include a clear data section with glossed examples, multiple non-trivial questions, and a complete answer key. Ensure all vocabulary is glossed, all questions are solvable from the given data, and the puzzle requires multi-step linguistic reasoning.",
+    "elapsed_seconds": 18.0
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Validate the generated Malay Linguistic Olympiad puzzle. Solve all questions from the provided data, check glossing completeness, answer-key correctness, ambiguity, solvability, and non-triviality. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 30.5
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES but identified a major solvability defect: Q3b requires assigning inclusive vs. exclusive status to specific Malagasy forms without sufficient data to derive that assignment. This is a puzzle-level ambiguity that can be fixed by revising the question or adding disambiguating data, so Agent 3 should patch the puzzle directly.",
+    "directive": "Revise Q3b so it is fully solvable from the provided DATA/CONTEXT. Either (a) change the question to ask only for the nature of the first-person plural inclusive/exclusive distinction without requiring the solver to assign which specific form is inclusive or exclusive, or (b) add one or more clearly glossed data sentences that disambiguate the two forms, such as a context where inclusion of the addressee is semantically necessary for the inclusive form. Update the answer key accordingly and ensure all added vocabulary is glossed.",
+    "elapsed_seconds": 37.3
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline currently has concepts, rationale, and a puzzle, and puzzle_needs_validation is true. The history indicates Agent 3 was asked to revise a solvability issue in Q3b, so the latest puzzle must now be validated before any further action or completion.",
+    "directive": "Validate the revised Malay Linguistic Olympiad puzzle. Solve all questions from the provided data, verify that Q3b is now fully solvable without unsupported assumptions, check glossing completeness, answer-key correctness, ambiguity, solvability, and non-triviality. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if any defects remain.",
+    "elapsed_seconds": 43.5
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, the puzzle is present, and puzzle_needs_validation is false. No further generation or validation is required.",
+    "directive": "",
+    "elapsed_seconds": 48.9
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "question_id": "question_1",
+    "target_language": "ame",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "eve",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\eve"
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "lez",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "sup",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "abk",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mrt",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "kro",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\kro"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mao",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\mao"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mal",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\mal"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "tag",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\tag"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "yuk",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "fin",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\fin"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "hak",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\hak"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "tur",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "cnt",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\cnt"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "cnl",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\cnl"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "ame",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "eve",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "abk",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\abk"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "car",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\car"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "djp",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\djp"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "mny",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\mny"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "inn",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "mno",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\mno"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "res",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\res"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "niv",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\niv"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "snm",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "yaq",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\yaq"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "lez",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\lez"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "sup",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\sup"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "may",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "heb",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "tag",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\tag"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "orh",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\orh"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "hau",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\hau"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "cyv",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "cle",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_8\\cle"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "zqc",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 3,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_8\\zqc"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "tuk",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_8\\tuk"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "otm",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "ame",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "eve",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_9\\eve"
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "sup",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_9\\sup"
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "grk",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_9\\grk"
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "hun",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "snm",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_10\\snm"
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "eve",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "ndy",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_10\\ndy"
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "sup",
+    "verdict": "ERROR: data must be str, not NoneType",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "hmo",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_10\\hmo"
+  }
+]

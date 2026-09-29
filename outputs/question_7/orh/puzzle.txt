@@ -1,0 +1,196 @@
+
+
+CONTEXT
+
+The following data is from a Cushitic language of the Horn of Africa. The language has a system of grammatical gender and verbal subject agreement. In this language, non-human nouns are assigned gender based on animacy: nouns denoting living things (animals) are masculine, and nouns denoting non-living things are feminine. Study the data carefully and answer the questions.
+
+DATA
+
+Noun–adjective phrases:
+
+(1) baalu guddau — The man is big.
+(2) hawai lagai — The woman is small.
+(3) jaarsau cufaaau — The boy is red.
+(4) dirbii guddai — The girl is big.
+(5) gumau lagau — The dog is small.
+(6) ibsau guddau — The cat is big.
+(7) qarau cufaaau — The horse is red.
+(8) warau lagau — The cow is small.
+(9) gubbaai guddai — The stone is big.
+(10) bishaani lagai — The water is small.
+(11) durai cufaaai — The face is red.
+(12) harkai guddai — The hand is big.
+
+Pronoun–verb sentences:
+
+(13) an barn — I eat.
+(14) aa bara — You eat.
+(15) is bar — He eats.
+(16) ii bar — She eats.
+(17) ena barna — We eat.
+(18) enta barta — You (all) eat.
+(19) isaan baran — They eat.
+(20) an yoon — I go.
+(21) is yoo — He goes.
+(22) ii yoo — She goes.
+(23) ena yoonna — We go.
+
+Vocabulary key (roots only):
+
+| Root | Gloss |
+|------|-------|
+| baal | man |
+| jaarsa | boy |
+| hawa | woman |
+| dirbii | girl |
+| guma | dog |
+| ibsa | cat |
+| qara | horse |
+| wara | cow |
+| gubbaa | stone |
+| bishaan | water |
+| dura | face |
+| harka | hand |
+| gudda | big |
+| laga | small |
+| cufaa | red |
+
+Pronouns:
+
+| Form | Gloss |
+|------|-------|
+| an | I |
+| aa | you (sg) |
+| is | he |
+| ii | she |
+| ena | we |
+| enta | you (pl) |
+| isaan | they |
+
+Verbs:
+
+| Root | Gloss |
+|------|-------|
+| bar | eat |
+| yoo | go |
+
+QUESTIONS
+
+**Q1.** Translate the following English sentences into the language:
+
+a) The woman is red.
+
+b) The man is small.
+
+**Q2.** Given the new roots *qaxa* (bird) and *dhagaa* (tree), translate:
+
+a) The bird is big.
+
+b) The tree is small.
+
+**Q3.** Using the verbal data in sentences (13)–(23), answer the following:
+
+a) What is the form of the verb *yoo* (go) when the subject is *aa* (you, sg)?
+
+b) Given the new verb root *dhaa* (sleep), what is the form of the verb when the subject is *ii* (she)?
+
+**Q4.** In sentences (15) *is bar* and (16) *ii bar*, the pronouns are different but the verb forms are identical. Is the 3rd person singular verb form different from the bare verb root *bar*? Answer yes or no, and briefly explain.
+
+ANSWERS
+
+**Q1a:** hawai cufaaai
+
+**Q1b:** baalu lagau
+
+**Q2a:** qaxau guddau
+
+**Q2b:** dhagaaai lagai
+
+**Q3a:** yooa
+
+**Q3b:** dhaa
+
+**Q4:** No. The 3rd person singular verb form is identical to the bare root (zero affix). The verb does not mark gender in 3rd person singular; the same form is used for both *is* (he) and *ii* (she).
+
+SOLUTION
+
+**Step 1: Identify the two-gender system and noun suffixes.**
+
+From the noun–adjective data, nouns fall into two classes based on their final segment:
+- Nouns ending in **-u**: baalu (man), jaarsau (boy), gumau (dog), ibsau (cat), qarau (horse), warau (cow) → **masculine**
+- Nouns ending in **-i**: hawai (woman), dirbii (girl), gubbaai (stone), bishaani (water), durai (face), harkai (hand) → **feminine**
+
+The suffix is appended to the root. When the root ends in a double vowel (-aa), the surface form shows -au (masc) or -ai (fem) (e.g., gubbaa → gubbaai). When the root ends in a consonant or single vowel, the surface form shows -u (masc) or -i (fem) (e.g., baal → baalu; hawa → hawai).
+
+**Step 2: Identify adjective agreement.**
+
+Adjectives show two forms that match the gender of the noun:
+- guddau (masc) / guddai (fem) — big
+- lagau (masc) / lagai (fem) — small
+- cufaaau (masc) / cufaaai (fem) — red
+
+The adjective (dependent) agrees with the noun (head). Word order is Noun + Adjective.
+
+**Step 3: Gender assignment.**
+
+For human nouns, gender corresponds to biological sex (man, boy → masculine; woman, girl → feminine). For non-human nouns, the rule is stated in the context: animate (living) nouns are masculine; inanimate (non-living) nouns are feminine. This is confirmed by the data: all animals (dog, cat, horse, cow) are masculine; all inanimates (stone, water, face, hand) are feminine.
+
+**Step 4: Identify the pronoun system.**
+
+Gender is distinguished only in 3rd person singular:
+- 3sg.m: is
+- 3sg.f: ii
+- All other persons/numbers: single form (no gender distinction)
+
+**Step 5: Identify the verbal agreement system.**
+
+From the verb data, we extract subject affixes:
+
+| Person/Number | Affix | Example (bar) | Example (yoo) |
+|---|---|---|---|
+| 1sg | -n | barn | yoon |
+| 2sg | -a | bara | yooa |
+| 3sg | ∅ (zero) | bar | yoo |
+| 1pl | -na | barna | yoonna |
+| 2pl | -ta | barta | — |
+| 3pl | -an | baran | — |
+
+The 3sg affix is **zero**: the verb appears as the bare root regardless of the subject's gender. Sentences (15) *is bar* and (16) *ii bar* confirm this directly.
+
+**Step 6: Answer the questions.**
+
+**Q1a:** "The woman is red."
+- "woman" = hawa (feminine) → hawa + -i = hawai
+- "red" = cufaa (feminine agreement) → cufaa + -ai = cufaaai
+- **Answer: hawai cufaaai**
+
+**Q1b:** "The man is small."
+- "man" = baal (masculine) → baal + -u = baalu
+- "small" = laga (masculine agreement) → laga + -u = lagau
+- **Answer: baalu lagau**
+
+**Q2a:** "The bird is big."
+- "bird" = qaxa. A bird is an animal (animate) → masculine → qaxa + -u = qaxau
+- "big" = gudda (masculine agreement) → gudda + -u = guddau
+- **Answer: qaxau guddau**
+
+**Q2b:** "The tree is small."
+- "tree" = dhagaa. A tree is inanimate → feminine → dhagaa + -ai = dhagaaai
+- "small" = laga (feminine agreement) → laga + -i = lagai
+- **Answer: dhagaaai lagai**
+
+**Q3a:** "You (sg) go."
+- From sentence (14) *aa bara*, the 2sg affix is -a.
+- yoo + -a = yooa
+- **Answer: yooa**
+
+**Q3b:** "She sleeps." (new verb root: dhaa)
+- From sentences (15)–(16), the 3sg affix is zero (bare root).
+- dhaa + ∅ = dhaa
+- **Answer: dhaa**
+
+**Q4:** No. The 3sg verb form is identical to the bare root. In both (15) and (16), the verb is simply *bar* with no additional affix. This shows that the verb does not mark gender in 3rd person singular; the zero form is used for both masculine and feminine subjects.
+
+DIFFICULTY
+
+Very easy. The puzzle requires the solver to (a) identify a two-gender system with suffixal marking on nouns and adjectives, (b) apply the stated animacy-based gender rule to novel nouns, and (c) recognize that the 3sg verbal affix is zero (the verb is the bare root). The gender assignment rule is provided in the context, reducing the main task to straightforward pattern application. The zero-morpheme inference is supported by a direct contrast in the data (sentences 15–16) and a focused question (Q4) that guides the solver to the observation.

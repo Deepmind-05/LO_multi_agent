@@ -1,0 +1,83 @@
+
+
+TARGET-LANGUAGE: Turkish
+
+CORE
+
+1. Concept: Dependent marking in possessive NPs (source 81A-2)
+   - Target-language realization: Turkish marks possession via possessive suffixes on the possessed noun (e.g., *ev-im* 'my house'). For pronominal possessors, this is pure dependent marking — only the possessed noun is marked.
+   - Intended solver inference: The solver identifies that a suffix on the possessed noun encodes the person/number of the possessor, and that no separate word or affix marks the pronominal possessor.
+   - Priority: REQUIRED
+
+2. Concept: Genitive construction (source 83A-1)
+   - Target-language realization: Full NP possessors receive genitive case (-ın/-in/-un/-ün): *Ali-nin ev-i* 'Ali's house'. The genitive is a distinct case suffix, not a possessive marker per se.
+   - Intended solver inference: The solver identifies that full NP possessors carry a case suffix distinct from the possessive suffix on the possessed noun, and that this case suffix also shows vowel harmony.
+   - Priority: HIGH
+
+3. Concept: Order of possessor and possessed (source 84A-2, adapted)
+   - Source value was "possessed before possessor" — this does NOT fit Turkish. Turkish has the opposite order: possessor (genitive) before possessed (WALS 86A-1: GenN).
+   - Target-language realization: Possessor precedes possessed: *Ali-nin ev-i* (Ali-GEN house-3SG.POSS).
+   - Intended solver inference: The solver identifies the linear order from the data and recognizes it as possessor-before-possessed, the reverse of the Coptic source pattern.
+   - Priority: HIGH (as an adapted/reversed concept; the solver infers the actual order from data)
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Vowel harmony (front/back and rounded/unrounded)
+   - Intended solver inference: The solver discovers from suffix alternations across stems that suffix vowels systematically match the stem's vowel in frontness and (for back stems) roundedness. E.g., possessive 1sg appears as -ım (back unrounded), -im (front unrounded), -um (back rounded), -üm (front rounded).
+   - Interaction with CORE: All possessive suffixes, the genitive suffix, the plural suffix, and case suffixes show harmony. This is the unifying pattern that makes the entire suffixal system predictable and discoverable.
+   - Difficulty contribution: HIGH — this is the central "aha" insight. Without recognizing harmony, the solver sees dozens of seemingly unrelated suffix forms; with it, everything collapses into a small set of paradigms.
+   - Priority: REQUIRED
+
+2. Phenomenon: Agglutinative suffix stacking in fixed order (Root + Plural + Possessive + Case)
+   - Intended solver inference: The solver discovers from multi-suffix words that suffixes appear in a fixed, non-optional order. E.g., *ev-ler-im-in* (house-PL-1SG.POSS-GEN) 'of my houses' shows plural before possessive before case.
+   - Interaction with CORE: The possessive suffix occupies a specific slot in the stack. Its position relative to plural and case is part of what the solver must infer. The genitive (as a case) appears after the possessive.
+   - Difficulty contribution: MEDIUM-HIGH — adds structural depth; the solver must not only identify individual suffixes but also their ordering.
+   - Priority: HIGH
+
+3. Phenomenon: Double marking in full NP possession (genitive on possessor + possessive suffix on possessed)
+   - Intended solver inference: The solver notices that when the possessor is a full noun phrase, it receives genitive case AND the possessed noun still receives a possessive suffix (3sg form). This contrasts with pronominal possession where only the suffix appears. The solver infers a split system: pronominal = suffix only; full NP = genitive + suffix.
+   - Interaction with CORE: This is the key adaptation of the "dependent marking" source concept. Turkish is not purely dependent-marking; it is double-marking for full NPs. The solver must recognize this asymmetry.
+   - Difficulty contribution: MEDIUM — creates a meaningful contrast that tests whether the solver has truly understood the system rather than just memorizing forms.
+   - Priority: HIGH
+
+4. Phenomenon: Buffer consonant /y/
+   - Intended solver inference: The solver notices that /y/ appears between a vowel-final stem and a vowel-initial suffix (e.g., *göz-üm* vs. a hypothetical vowel-final stem + -ım → stem-y-ım). The solver infers the conditioning: /y/ is inserted to break a vowel sequence.
+   - Interaction with CORE: Affects the surface form of possessive suffixes (and other vowel-initial suffixes). The solver must account for /y/ when predicting forms of vowel-final stems.
+   - Difficulty contribution: MEDIUM — adds a phonological layer that interacts with the morphological system.
+   - Priority: OPTIONAL (include if the puzzle has room; omit if it overcomplicates the core inference)
+
+5. Phenomenon: Plural suffix -lar/-ler (with vowel harmony)
+   - Intended solver inference: The solver identifies the plural suffix and its harmony alternations. The plural suffix precedes the possessive suffix in the stack.
+   - Interaction with CORE: The plural suffix is the element that immediately precedes the possessive suffix, making the ordering (Plural > Possessive) directly observable.
+   - Difficulty contribution: MEDIUM — provides the clearest evidence for suffix ordering.
+   - Priority: HIGH
+
+INTERACTIONS
+
+1. Vowel Harmony × All suffixes (Possessive, Genitive, Plural, Case):
+   - The same harmony pattern governs all suffixes. Once the solver discovers harmony from one set of suffixes, they can predict the forms of all others. This creates a powerful "unlock" moment and makes the puzzle feel coherent.
+
+2. Suffix Ordering × Possessive Suffixes × Genitive:
+   - The genitive appears AFTER the possessive suffix in the stack (e.g., *ev-im-in* 'of my house'). This is counterintuitive for solvers who might expect the genitive (marking the possessor's role) to appear before the possessive. The fixed ordering is a key structural insight.
+
+3. Double Marking × Vowel Harmony:
+   - In full NP possession, BOTH the genitive on the possessor AND the possessive suffix on the possessed noun show vowel harmony, but they harmonize to DIFFERENT stems (the possessor's stem and the possessed noun's stem respectively). The solver must track which stem each suffix harmonizes to.
+
+4. Buffer /y/ × Vowel Harmony:
+   - The /y/ is inserted before the harmonizing vowel, so the harmony pattern still applies to the vowel after /y/. The solver must recognize that /y/ is epenthetic and not part of the harmonizing segment.
+
+CONSTRAINTS
+
+1. The puzzle data must include stems with at least three different vowel qualities (e.g., back unrounded /a/, front unrounded /e/, back rounded /o/ or /u/) to allow the solver to discover the full harmony pattern. Two-way contrast (front vs. back) is the minimum; four-way (front/back × rounded/unrounded) is preferred for full discovery.
+
+2. The puzzle must include at least one example of full NP possession (genitive + possessive suffix) AND at least one example of pronominal possession (possessive suffix only) to demonstrate the double-marking contrast.
+
+3. The puzzle must include at least one multi-suffix word showing the order Plural > Possessive > Case (or at least Possessive > Case) to make the suffix ordering inferable.
+
+4. All Turkish words in the puzzle must be glossed (meaning provided in English or another accessible language). The solver must not need to know Turkish vocabulary.
+
+5. The puzzle should not include forms that are ambiguous or that could be parsed in multiple ways without additional context. Each form should have a unique, unambiguous analysis given the discovered rules.
+
+6. If the buffer /y/ is included, the puzzle must include at least one vowel-final stem with a vowel-initial suffix to demonstrate the /y/ insertion, AND at least one consonant-final stem with the same suffix to show the contrast.
+
+7. The genitive suffix (-ın/-in/-un/-ün) and the possessive 3sg suffix (-ı/-i/-u/-ü) are formally very similar (the genitive has an additional /n/). The puzzle should make this distinction clear in the data so the solver can separate them.

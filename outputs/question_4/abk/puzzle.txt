@@ -1,0 +1,79 @@
+
+
+CONTEXT
+
+The following data is from a Northwest Caucasian language. All forms are given in a standard orthography. The data consists of sentences and noun phrases with English glosses.
+
+DATA
+
+| # | Form | Gloss |
+|---|------|-------|
+| (1) | rra rl | The man goes. |
+| (2) | rsa sl | The woman goes. |
+| (3) | rfa fb | The house is. |
+| (4) | al | I go. |
+| (5) | wl | You go. |
+| (6) | rra rsa sdra | The man sees the woman. |
+| (7) | rsa rra rdsa | The woman sees the man. |
+| (8) | rfa fdba | I see the house. |
+| (9) | rra adra | He sees me. |
+| (10) | rwa fdwa | You see the stone. |
+| (11) | afra | my houses |
+| (12) | ranfra | their houses |
+| (13) | rga | the horse |
+| (14) | rwra | the stones |
+| (15) | wansa | your (pl) woman |
+| (16) | rgra ranl | The horses go. |
+| (17) | rwra fanb | The stones are. |
+| (18) | rfa rga fdra | The horse sees the house. |
+| (19) | rwa rga rdfa | The stone sees the horse. |
+
+QUESTIONS
+
+**Q1 (3 points).** The form *wansa* (item 15) consists of three morphological components. Identify each component and state what it encodes. Then write the form for "your (plural) horses."
+
+**Q2 (4 points).** In sentence (4) *al* ("I go"), the 1st person is marked by the prefix *a-*. In sentence (8) *rfa fdba* ("I see the house"), the 1st person is marked by the suffix *-ba*. Explain why the same person receives different markers in these two sentences. What grammatical property determines which marker is used?
+
+**Q3 (4 points).** Translate into the target language: "The horses see the stones."
+
+**Q4 (4 points).** Consider the string *rra wdba*. Is this a grammatical sentence? If yes, provide its meaning. If no, explain why it is ungrammatical.
+
+ANSWERS
+
+**Q1.**
+- *wansa* = *wan-* (2nd person plural possessive prefix) + *s* (stem "woman") + *-a* (singular suffix)
+- "your (plural) horses" = *wangra*
+
+**Q2.** The language uses ergative alignment. In intransitive clauses, the sole argument (S) is marked with an absolutive prefix (*a-* for 1sg). In transitive clauses, the agent (A) is marked with a distinct ergative suffix (*-ba* for 1sg), while the patient (P) receives the absolutive prefix. The determining property is the grammatical role: S/P (absolutive) vs. A (ergative).
+
+**Q3.** *rgra rwra fandran*
+
+**Q4.** *rra wdba* is ungrammatical. The verb *wdba* decomposes as *w-* (2sg P) + *d* (see) + *-ba* (1sg A), indicating a 1st-person agent and a 2nd-person patient. Since 1st and 2nd person arguments do not appear as independent nouns, no independent noun should precede this verb. The form *rra* is a 3rd-person noun ("the man"), which is incompatible with the verbal markers: if *rra* were the A-argument, the verb would need the 3sg masc ergative suffix *-ra* (not *-ba*); if *rra* were the P-argument, the verb would need the 3sg masc absolutive prefix *r-* (not *w-*).
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Nominal template:** Every noun has the form [possessive prefix] + [stem] + [number suffix]. Possessive prefixes: *a-* (1sg), *w-* (2sg), *r-* (3sg), *an-* (1pl), *wan-* (2pl), *ran-* (3pl). Number suffixes: *-a* (sg), *-ra* (pl). Evidence: items (11)–(15) show different possessive prefixes and number suffixes on the same stems; items (1)–(3), (13)–(14) show the 3sg default prefix *r-*.
+
+2. **Three-gender system:** Nouns are classified as masculine, feminine, or neuter. This is reflected in the verbal absolutive prefix for 3rd person: *r-* (masc), *s-* (fem), *f-* (neut). Evidence: (1) *rra* → *r-* on verb; (2) *rsa* → *s-*; (3) *rfa* → *f-*. The 3pl forms extend this: *ran-* (masc), *san-* (fem), *fan-* (neut). Evidence: (16) *rgra* → *ran-*; (17) *rwra* → *fan-*; 3pl fem *san-* is inferable by analogy.
+
+3. **Ergative alignment:** Intransitive verbs take an absolutive prefix marking S. Transitive verbs take an absolutive prefix marking P and an ergative suffix marking A. The markers for the same person differ between absolutive and ergative: 1sg *a-* vs. *-ba*; 2sg *w-* vs. *-wa*; 3sg masc *r-* vs. *-ra*; 3sg fem *s-* vs. *-sa*; 3sg neut *f-* vs. *-fa*; 3pl masc *ran-* vs. *-ran*; 3pl neut *fan-* vs. *-fan*. Evidence: contrast of (4) *al* (1sg S → *a-*) with (8) *fdba* (1sg A → *-ba*); (5) *wl* (2sg S → *w-*) with (10) *fdwa* (2sg A → *-wa*); (6) *sdra* (3sg masc A → *-ra*) with (1) *rl* (3sg masc S → *r-*).
+
+4. **Morphological order on the verb:** [P/S-prefix] + [verb stem] + [A-suffix (transitive only)]. Evidence: all transitive examples (6)–(10), (18)–(19) show the prefix before the stem and the suffix after.
+
+5. **Argument realization:** 1st and 2nd person arguments are marked only on the verb (no independent noun). 3rd person arguments must appear as independent nouns. In transitive clauses, the A-noun precedes the P-noun. Evidence: (4)–(5) have no independent noun; (1)–(3) have one; (6)–(7), (18)–(19) have two (A before P); (8)–(10) have one (the 3rd-person P).
+
+**How the answers follow:**
+
+- **Q1:** From the nominal template (rule 1), *wansa* = *wan-* + *s* + *-a*. "Your (pl) horses" = *wan-* + *g* + *-ra* = *wangra*.
+
+- **Q2:** The contrast between (4) and (8) shows 1sg as S gets *a-* (prefix) while 1sg as A gets *-ba* (suffix). This is the hallmark of ergative alignment: the language groups S with P (absolutive) and marks A separately (ergative).
+
+- **Q3:** "Horses" (A, 3pl masc) = *r-* + *g* + *-ra* = *rgra*. "Stones" (P, 3pl neut) = *r-* + *w* + *-ra* = *rwra*. Verb: P-prefix *fan-* (3pl neut) + *d* + A-suffix *-ran* (3pl masc) = *fandran*. Word order: A-noun + P-noun + Verb → *rgra rwra fandran*.
+
+- **Q4:** *wdba* = *w-* (2sg P) + *d* + *-ba* (1sg A). Both arguments are 1st/2nd person, so no independent noun is expected. *rra* is a 3rd-person noun, which would require the verb to show a 3rd-person marker in the corresponding position. Since neither the P-prefix (*w-* = 2sg) nor the A-suffix (*-ba* = 1sg) is 3rd person, *rra* cannot be integrated into the clause. The sentence is ungrammatical.
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously discover and integrate: (a) a layered nominal template with possessive and number morphology; (b) a three-gender system with verbal agreement; (c) ergative alignment with distinct absolutive and ergative paradigms; (d) fixed morphological ordering on the verb; (e) rules governing independent argument realization. Q3 requires productive application of all five rules at once, and Q4 requires the solver to detect a violation of the interaction between argument realization and verbal agreement — a non-trivial inference that goes beyond pattern recognition.

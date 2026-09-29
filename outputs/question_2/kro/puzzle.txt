@@ -1,0 +1,95 @@
+
+
+CONTEXT
+
+Krongo is a language of the Kadu family spoken in Africa. The following data consists of a list of basic numerals and a set of sentences with English translations. Use this data to answer the questions.
+
+DATA
+
+**Basic numerals (1–19):**
+
+| | | | | |
+|---|---|---|---|---|
+| 1 = ena | 5 = saba | 9 = wolo | 13 = nira | 17 = zano |
+| 2 = iru | 6 = nelo | 10 = dilo | 14 = voko | 18 = wira |
+| 3 = tala | 7 = vira | 11 = kapa | 15 = sara | 19 = dalo |
+| 4 = moko | 8 = zira | 12 = tuma | 16 = mela | |
+
+**Sentences:**
+
+(1) vora neta tani — 'The man saw the dog.'
+(2) kuma sira molo — 'The horse ate the cat.'
+(3) vora neta batani tala — 'The man saw three dogs.'
+(4) zola dapa bamolo iru — 'The child took two cats.'
+(5) zuma neta basira saba — 'The man killed five horses.'
+(6) vora dapa batani dilo — 'The child saw ten dogs.'
+(7) kuma sira batani dalo — 'The horse ate nineteen dogs.'
+(8) vora neta bamolo kuru — 'The man saw twenty cats.'
+(9) zola dapa batani kuru saba — 'The child took twenty-five dogs.'
+(10) zuma neta basira kuru kuru — 'The man killed forty horses.'
+(11) no vora neta tani ka — 'The man did not see the dog.'
+(12) no kuma dapa molo ka — 'The child did not eat the cat.'
+(13) no vora neta batani tala ka — 'The man did not see three dogs.'
+
+QUESTIONS
+
+**Part A.** Translate the following English sentences into Krongo.
+
+A1. The cat saw the horse.
+A2. The child saw four cats.
+A3. The man took twenty-one dogs.
+A4. The horse did not eat the dog.
+A5. The child did not see thirty-seven cats.
+
+**Part B.** Translate the following Krongo sentences into English.
+
+B1. zuma molo dapa
+B2. kuma neta basira saba
+B3. vora dapa bamolo kuru kuru iru
+B4. no zuma sira batani kuru dilo ka
+B5. no kuma neta basira kuru kuru kuru ka
+
+ANSWERS
+
+A1. vora molo sira
+A2. vora dapa bamolo moko
+A3. zola neta batani kuru ena
+A4. no kuma sira tani ka
+A5. no vora dapa bamolo kuru zano ka
+
+B1. The cat killed the child.
+B2. The man ate five horses.
+B3. The child saw forty-two cats.
+B4. The horse did not kill thirty dogs.
+B5. The man did not eat sixty horses.
+
+SOLUTION
+
+**Rules to infer:**
+
+**1. VSO word order.** In every sentence, the verb appears first, followed by the subject NP and then the object NP. This is established by comparing the word order in the Krongo text with the English translations: in (1) *vora* (see) precedes *neta* (man, the agent) and *tani* (dog, the patient). The same pattern holds in all sentences. The verb is uninflected — it does not change form regardless of the subject (e.g., *vora* appears with *neta*, *dapa*, and *sira* as subjects without any modification).
+
+**2. Noun number marking (zero singular / prefix plural).** Singular nouns appear without any prefix (e.g., *tani* 'dog', *molo* 'cat', *sira* 'horse' in sentences 1–2). When a noun is plural (i.e., modified by a numeral greater than 1), it takes the prefix *ba-* (e.g., *batani* 'dogs', *bamolo* 'cats', *basira* 'horses' in sentences 3–10). The prefix is invariant across all nouns.
+
+**3. Noun–numeral phrase structure (N–Num order, dependent marking).** The numeral follows the noun. The noun bears the plural prefix (the dependent is marked); the numeral itself is unmarked and invariant. No classifier or other element intervenes between the noun and the numeral.
+
+**4. Vigesimal numeral system.** From sentence (8), *kuru* = 20 (the translation says 'twenty'). From sentence (9), *kuru saba* = 25, which is 20 + 5 (additive composition: the word for 20 followed by the word for 5). From sentence (10), *kuru kuru* = 40, which is 20 + 20. The pattern is: numerals above 20 are formed additively by repeating *kuru* (20) as many times as needed, followed by the basic numeral for the remainder. Thus 37 = 20 + 17 = *kuru zano*; 42 = 20 + 20 + 2 = *kuru kuru iru*; 60 = 20 + 20 + 20 = *kuru kuru kuru*.
+
+**5. Obligatory double negation (Neg₁–V–S–O–Neg₂).** Negative sentences contain two distinct negative elements: *no* immediately before the verb (Neg₁) and *ka* at the end of the clause, after the object (Neg₂). Both are obligatory — they appear together in every negative sentence (11–13) and neither appears in any affirmative sentence. The pattern is fixed: Neg₁ precedes the verb, Neg₂ is clause-final.
+
+**How the rules produce each answer:**
+
+- **A1:** VSO order; both nouns singular (zero-marked). → *vora molo sira*
+- **A2:** VSO; object is plural (numeral 4 > 1), so *molo* → *bamolo*; numeral *moko* (4) follows the noun. → *vora dapa bamolo moko*
+- **A3:** VSO; object plural → *batani*; 21 = 20 + 1 = *kuru ena*. → *zola neta batani kuru ena*
+- **A4:** Negative frame: *no* + V + S + O + *ka*; both nouns singular. → *no kuma sira tani ka*
+- **A5:** Negative frame; object plural → *bamolo*; 37 = 20 + 17 = *kuru zano*. → *no vora dapa bamolo kuru zano ka*
+- **B1:** VSO: *zuma* (kill) + *molo* (cat, S) + *dapa* (child, O). → 'The cat killed the child.'
+- **B2:** VSO: *kuma* (eat) + *neta* (man, S) + *basira* (horses.PL) + *saba* (5). → 'The man ate five horses.'
+- **B3:** VSO: *vora* (see) + *dapa* (child, S) + *bamolo* (cats.PL) + *kuru kuru iru* (42 = 20+20+2). → 'The child saw forty-two cats.'
+- **B4:** Negative frame: *no* + *zuma* (kill) + *sira* (horse, S) + *batani* (dogs.PL) + *kuru dilo* (30 = 20+10) + *ka*. → 'The horse did not kill thirty dogs.'
+- **B5:** Negative frame: *no* + *kuma* (eat) + *neta* (man, S) + *basira* (horses.PL) + *kuru kuru kuru* (60 = 20+20+20) + *ka*. → 'The man did not eat sixty horses.'
+
+DIFFICULTY
+
+**Level 2 (moderate).** The puzzle requires the solver to simultaneously discover five interacting rules: VSO word order, obligatory noun number marking, noun–numeral order with dependent marking, a vigesimal numeral system, and obligatory double negation. The vigesimal inference (deducing base-20 from the additive compounds in sentences 8–10) and the double negation pattern (identifying two obligatory, positionally fixed negative elements) are the primary sources of difficulty. The hardest items (A5, B4, B5) require combining all five rules in a single output, but each rule is independently and clearly supported by the data, making the puzzle solvable through systematic pattern recognition.

@@ -1,8 +1,12 @@
 import json
 import os
+import time
 from pathlib import Path
 
 from cerebras.cloud.sdk import Cerebras
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 MODEL = "qwen-3.8-27b"
@@ -58,6 +62,17 @@ def extract_target_language(target_profile: dict) -> dict:
     }
 
 
+def extract_message_content(response) -> str:
+    if not response or not response.choices:
+        return ""
+    msg = response.choices[0].message
+    content = msg.content
+    if content:
+        return content
+    reasoning = getattr(msg, "reasoning_content", None) or getattr(msg, "reasoning", None)
+    return reasoning or ""
+
+
 def call_agent3(
     system_prompt: str,
     source_question: dict,
@@ -74,29 +89,38 @@ def call_agent3(
         "TARGET_DIFFICULTY": target_difficulty,
     }
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-            },
-        ],
-        max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.2,
-        top_p=0.95,
-        reasoning_effort="low",
-    )
-
-    return response.choices[0].message.content
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt,
+                    },
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                    },
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+                temperature=0.2,
+                top_p=0.95,
+                reasoning_effort="low",
+            )
+            return extract_message_content(response)
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_sec = 2.0 * (2 ** attempt)
+                print(f"[Agent 3] API call error ({e}). Retrying in {wait_sec}s...")
+                time.sleep(wait_sec)
+            else:
+                raise e
 
 
 def run_agent3(
@@ -129,36 +153,54 @@ def call_agent3_revision(
     current_puzzle: str,
     target_language: dict,
     feedback: str,
+    agent1_output: str = "",
+    agent2_rationale: str = "",
+    source_question: dict | None = None,
 ) -> str:
     payload = {
         "CURRENT_PUZZLE": current_puzzle,
         "TARGET_LANGUAGE": target_language,
         "VALIDATOR_FEEDBACK": feedback,
     }
+    if agent1_output:
+        payload["AGENT1_OUTPUT"] = agent1_output
+    if agent2_rationale:
+        payload["AGENT2_RATIONALE"] = agent2_rationale
+    if source_question:
+        payload["SOURCE_QUESTION"] = source_question
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-            },
-        ],
-        max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.2,
-        top_p=0.95,
-        reasoning_effort="low",
-    )
-
-    return response.choices[0].message.content
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt,
+                    },
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                    },
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+                temperature=0.2,
+                top_p=0.95,
+                reasoning_effort="low",
+            )
+            return extract_message_content(response)
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_sec = 2.0 * (2 ** attempt)
+                print(f"[Agent 3 Revision] API call error ({e}). Retrying in {wait_sec}s...")
+                time.sleep(wait_sec)
+            else:
+                raise e
 
 
 def run_agent3_revision(
@@ -167,15 +209,25 @@ def run_agent3_revision(
     language_id: str,
     feedback: str,
     revision_prompt_path: str,
+    agent1_output_path: str | None = None,
+    agent2_output_path: str | None = None,
+    source_input: dict | str | None = None,
 ) -> str:
     revision_prompt = load_prompt(revision_prompt_path)
     current_puzzle = load_text(puzzle_path)
     target_profile = get_target_language_profile(language_id, languages_path)
     target_language = extract_target_language(target_profile)
 
+    agent1_output = load_text(agent1_output_path) if agent1_output_path and Path(agent1_output_path).exists() else ""
+    agent2_output = load_text(agent2_output_path) if agent2_output_path and Path(agent2_output_path).exists() else ""
+    source = load_source(source_input) if source_input else {}
+
     return call_agent3_revision(
         system_prompt=revision_prompt,
         current_puzzle=current_puzzle,
         target_language=target_language,
         feedback=feedback,
+        agent1_output=agent1_output,
+        agent2_rationale=agent2_output,
+        source_question=source.get("question") if source else None,
     )

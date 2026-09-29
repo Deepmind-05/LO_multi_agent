@@ -1,0 +1,91 @@
+
+
+TARGET-LANGUAGE
+
+Mono (mno), Uto-Aztecan, Northern Uto-Aztecan, California, USA
+
+CORE
+
+The source concept "Base 6" (Numeral Bases, 144A-5) is DROPPED. Mono, as a Uto-Aztecan language, uses a base-10 (decimal) numeral system. There is no natural or well-attested base-6 system in Mono, and forcing one would violate the solver standard. No source concepts are directly applicable to Mono.
+
+TARGET-SPECIFIC
+
+1. Head-final word order (SOV, postpositions, GenN, NRel)
+   - Phenomenon: Consistent head-finality across clause structure (SOV), adpositions (postpositions), genitive (GenN), and relative clauses (NRel).
+   - Intended solver inference: From multiple sentences, solver identifies that the verb is final, modifiers precede heads, and the language is systematically head-final.
+   - Interaction with CORE: None (replaces dropped source concept as the central structural insight).
+   - Difficulty contribution: Provides the foundational word-order framework against which other elements (negation, question particle) are interpreted. Low-moderate difficulty on its own; becomes more interesting in interaction with negation.
+   - Priority: REQUIRED
+
+2. Suffixing morphology with possessive prefix asymmetry
+   - Phenomenon: Mono is strongly suffixing (case, plural, demonstrative, definite, tense-aspect all suffixal), but possessive marking is prefixal on the noun.
+   - Intended solver inference: Solver discovers that most morphology is suffixal, then notices the exception that possession is prefixal. This asymmetry is a clear, discoverable pattern.
+   - Interaction with CORE: None directly, but the suffixing pattern interacts with noun suffix stacking (concept 5).
+   - Difficulty contribution: Moderate. Requires the solver to catalog morphological positions and notice the single exception. The asymmetry is a memorable, testable insight.
+   - Priority: REQUIRED
+
+3. NegSOV: negative particle precedes subject
+   - Phenomenon: The negative particle appears before the subject (clause-initial), not adjacent to the verb. WALS confirms: NegSOV, preverbal negative word, no postverbal negative, no SNegOV, no SONegV, no SOVNeg.
+   - Intended solver inference: Solver initially expects negation to be preverbal (adjacent to verb, as in many SOV languages) but discovers from data that it is clause-initial, before the subject. This is a counter-expectation that creates genuine reasoning.
+   - Interaction with CORE: Directly interacts with head-final word order. In a head-final language, the "default" expectation is preverbal negation; Mono violates this by placing negation before the subject. This contrast is the puzzle's central tension.
+   - Difficulty contribution: High. The solver must resist the typological expectation and let the data override it. This is the key "aha" moment of the puzzle.
+   - Priority: REQUIRED
+
+4. Question particle in second position
+   - Phenomenon: The polar question particle occupies second position in the clause (WALS 92A-3).
+   - Intended solver inference: Solver discovers that the question particle has a fixed positional slot (second constituent), not simply attached to the verb or clause-final.
+   - Interaction with CORE: Interacts with SOV word order. In a sentence "S O V?", the question particle goes after the first constituent (the subject), yielding "S Q O V". This creates a word-order pattern that is neither simply preverbal nor clause-final.
+   - Difficulty contribution: Moderate-high. Requires the solver to identify a positional constraint that is independent of the basic SOV order.
+   - Priority: HIGH
+
+5. Agglutinative noun suffix stacking (case, plural, demonstrative, definite)
+   - Phenomenon: Nouns can bear multiple suffixes: case, plural, demonstrative, definite article. These stack in a fixed order.
+   - Intended solver inference: From examples with different combinations of these features, solver determines the relative order of suffixes.
+   - Interaction with CORE: Extends the suffixing pattern (concept 2) into a more complex morphological system. The fixed suffix order is a discoverable sub-pattern.
+   - Difficulty contribution: Moderate. Requires multiple examples with different feature combinations to triangulate the order.
+   - Priority: HIGH
+
+6. Tense-aspect suffixes on verb
+   - Phenomenon: Verbs take suffixes encoding tense and/or aspect.
+   - Intended solver inference: Solver identifies which verb-final suffixes encode temporal/aspectual information.
+   - Interaction with CORE: Part of the general suffixing pattern. Provides additional data points for the verb's morphological structure.
+   - Difficulty contribution: Low-moderate. Straightforward once the suffixing pattern is established.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Head-finality × NegSOV:
+   - Concepts: Head-final word order (1) + NegSOV (3)
+   - Interaction: In a head-final language, the typological expectation is preverbal negation (adjacent to the verb). Mono instead places negation clause-initially, before the subject. This creates a clear contrast between expectation and reality.
+   - Additional inference enabled: The solver must use the head-final pattern as a baseline expectation, then notice that negation violates it. This makes the NegSOV discovery more salient and memorable.
+
+2. Head-finality × Question particle 2nd position:
+   - Concepts: Head-final word order (1) + Question particle (4)
+   - Interaction: The question particle's second-position slot interacts with SOV order. In "S O V", the particle goes after S, yielding "S Q O V". This is neither clause-initial (like negation) nor clause-final (like the verb).
+   - Additional inference enabled: The solver must distinguish three different positional strategies: clause-initial (negation), second-position (question particle), and clause-final (verb). This creates a rich positional typology within a single language.
+
+3. Suffixing × Possessive prefix:
+   - Concepts: Suffixing morphology (2) + Possessive prefix (2)
+   - Interaction: The general suffixing pattern makes the possessive prefix stand out as a clear exception. The solver first establishes "everything is suffixal" and then discovers the exception.
+   - Additional inference enabled: The solver can test whether the prefix is truly an exception or whether there are other prefixal elements. This creates a verification step.
+
+4. Noun suffix stacking × Head-finality:
+   - Concepts: Suffix stacking (5) + Head-finality (1)
+   - Interaction: The suffix order on nouns is consistent with the head-final pattern (modifiers follow the head noun). The fixed order of suffixes provides a micro-level reflection of the macro-level head-finality.
+   - Additional inference enabled: The solver can use the head-final principle as a heuristic for predicting suffix order, then verify against data.
+
+CONSTRAINTS
+
+1. The puzzle must include at least 3-4 negative sentences to clearly establish NegSOV and rule out SNegOV, SONegV, and SOVNeg alternatives. The negative particle must be a separate word (not a clitic or affix) to make its position unambiguous.
+
+2. The question particle must appear in at least 2-3 sentences with different first constituents (e.g., subject-initial, and possibly a fronted object or adverb) to demonstrate that it is truly "second position" and not simply "after the subject."
+
+3. The possessive prefix must be clearly distinguishable from other prefixal elements. If possible, include a sentence where a possessive-marked noun also bears a suffix (e.g., case or plural) to show the prefix-suffix co-occurrence.
+
+4. Noun suffix order examples must include at least 3 different combinations of {case, plural, demonstrative, definite} to allow the solver to triangulate the order. At least one example should have 3+ suffixes simultaneously.
+
+5. The puzzle must NOT include any numeral system as a central element. If numbers appear incidentally, they should be in base-10 and not draw attention to the numeral system.
+
+6. All glosses must be consistent and use standard Leipzig Glossing Rules. The solver should be able to work from glosses alone without any prior knowledge of Mono.
+
+7. The head-final pattern must be demonstrated across at least two different domains (e.g., clause structure AND either postpositions or relative clauses) to establish it as a language-wide tendency rather than a single construction.

@@ -1,10 +1,13 @@
 import json
 import os
+import time
 from pathlib import Path
 
 from cerebras.cloud.sdk import Cerebras
 
+from dotenv import load_dotenv
 
+load_dotenv()
 MODEL = "qwen-3.8-27b"
 MAX_COMPLETION_TOKENS = 32768
 
@@ -58,6 +61,17 @@ def extract_target_language(target_profile: dict) -> dict:
     }
 
 
+def extract_message_content(response) -> str:
+    if not response or not response.choices:
+        return ""
+    msg = response.choices[0].message
+    content = msg.content
+    if content:
+        return content
+    reasoning = getattr(msg, "reasoning_content", None) or getattr(msg, "reasoning", None)
+    return reasoning or ""
+
+
 def call_agent4(
     system_prompt: str,
     agent3_output: str,
@@ -70,29 +84,38 @@ def call_agent4(
         "TARGET_DIFFICULTY": target_difficulty,
     }
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-            },
-        ],
-        max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.1,
-        top_p=0.95,
-        reasoning_effort="low",
-    )
-
-    return response.choices[0].message.content
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt,
+                    },
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                    },
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+                temperature=0.1,
+                top_p=0.95,
+                reasoning_effort="low",
+            )
+            return extract_message_content(response)
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_sec = 2.0 * (2 ** attempt)
+                print(f"[Agent 4] API call error ({e}). Retrying in {wait_sec}s...")
+                time.sleep(wait_sec)
+            else:
+                raise e
 
 
 def run_agent4(
@@ -130,11 +153,11 @@ def parse_validation(output: str) -> tuple[str, str, str]:
             actual_difficulty = lines[i + 1]
         elif line == "ISSUES":
             for issue in lines[i + 1:]:
-                if issue.startswith("- "):
+                if issue.startswith(("- ", "* ")):
                     issues.append(issue[2:].strip())
 
     if verdict not in {"PASS", "PASS_WITH_ISSUES", "FAIL"}:
-        for candidate in ["PASS", "PASS_WITH_ISSUES", "FAIL"]:
+        for candidate in ["PASS_WITH_ISSUES", "PASS", "FAIL"]:
             if candidate in output:
                 verdict = candidate
                 break

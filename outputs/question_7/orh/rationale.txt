@@ -1,0 +1,106 @@
+
+
+TARGET-LANGUAGE: Oromo (Harar)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the morphological architecture.** Establish the following surface-form-to-structure mapping before constructing any data:
+   - **Noun:** Root + Gender Suffix. Two distinct suffixes, one per gender class. The suffix is the sole overt gender marker on the noun. Choose suffixes that are phonologically distinct from each other and from common root-final segments to avoid false morpheme boundaries. (Typologically: suffixal gender marking is standard in Cushitic; two-gender systems with suffixal marking are well-attested.)
+   - **Adjective:** Stem + Agreement Suffix. Two distinct suffixes, one per gender class, matching the noun's gender. The adjective is the dependent; the noun is the head. The agreement suffix on the adjective is the same set of forms as (or a cognate set to) the noun's gender suffix, but this is NOT required—what matters is that the adjective suffix is determined by the noun's gender, not by the adjective's identity.
+   - **Word order:** Noun + Adjective (N-Adj). This is consistent throughout all data. The noun is the head; the adjective follows and agrees with it.
+   - **Pronouns:** A small set covering 1sg, 2sg, 3sg.m, 3sg.f, 1pl, 2pl, 3pl. Gender is distinguished ONLY in 3sg (two distinct forms: masculine and feminine). All other persons/numbers have a single form regardless of gender.
+   - **Verb:** Root + Subject Affix (A-argument only). The verb marks the subject's person and number. Critically, 3sg is ZERO (unmarked): the verb appears as bare root when the subject is 3sg, regardless of whether the subject is masculine or feminine. No object (P) agreement is expressed.
+
+   *Why this step first:* Every subsequent construction decision depends on knowing exactly which morphemes exist and where they appear. The setter must fix this architecture before generating data.
+
+2. **Choose the vocabulary set.** Select:
+   - **Human nouns (4–6):** Split evenly between male and female referents (e.g., names or kinship terms for males and females). These serve as the semantic anchor for the sex-based gender system. The solver should be able to identify the sex of the referent from context or transparent semantics.
+   - **Non-human nouns (6–10):** These are the main inferential challenge. Select nouns from 2–3 semantic subcategories (e.g., animals, natural objects, tools/body parts). The gender assignment for these nouns must follow a discoverable rule (see Step 3). Ensure the set includes enough examples from each subcategory to make the rule inferable.
+   - **Adjectives (4–6):** Choose from a small set of semantic categories (size, quality, color). All adjectives must be regular (no irregular forms in this design—the difficulty comes from the non-human gender rule and the pronoun/verb asymmetry, not from irregularity).
+   - **Pronouns and verb forms:** As defined in Step 1.
+
+   *Why this split:* Human nouns provide a "free" validation set that confirms the two-class system with minimal inference. Non-human nouns carry the main puzzle load. The limited adjective set keeps the morphological space manageable.
+
+3. **Define the gender assignment rule for non-human nouns.** This is the central inferential challenge of the puzzle. Choose ONE of the following rule types (or a simple combination):
+   - **Semantic subcategory rule:** e.g., all animate non-human nouns (animals) are masculine; all inanimate nouns are feminine. Or: nouns denoting natural phenomena are feminine; nouns denoting human-made objects are masculine.
+   - **Phonological rule:** e.g., nouns whose root ends in a vowel are feminine; nouns whose root ends in a consonant are masculine.
+   - **Morphological rule:** e.g., nouns with a particular root-initial segment or root shape belong to one class.
+
+   *Constraints on the rule:*
+   - It must be simple enough to be inferred from 6–10 examples.
+   - It must be consistent across ALL non-human nouns in the data (no exceptions).
+   - It must be distinguishable from the sex-based rule (i.e., the solver should be able to see that the rule for non-humans is different from the rule for humans).
+   - It should be typologically plausible: semantic subcategory assignment is the most common and most plausible for a Cushitic language. A phonological rule is also plausible but slightly less common.
+
+   *Why this step:* The solver's main task is to discover this rule. The setter must fix it before constructing data so that all non-human noun forms are generated consistently.
+
+4. **Construct the noun-adjective data set (8–12 pairs).** Design the data with the following coverage requirements:
+   - Every noun in the vocabulary appears in at least one noun-adjective pair.
+   - Every adjective appears with at least one noun of each gender (so the solver sees both agreement suffixes on each adjective).
+   - Include at least two human nouns (one male, one female) paired with the same adjective, so the solver can directly observe the sex-based gender contrast.
+   - Include at least three non-human nouns from the same semantic subcategory, all showing the same gender, so the solver can begin to hypothesize the non-human rule.
+   - Include at least two non-human nouns from DIFFERENT subcategories showing DIFFERENT genders, so the solver can test whether the rule is semantic-subcategory-based.
+   - Vary which adjective pairs with which noun to prevent the solver from overfitting to a fixed template.
+
+   *What the solver should infer at this stage:*
+   - (a) There are two classes of nouns (from the two different noun suffixes).
+   - (b) Adjectives change form depending on which class the noun belongs to (dependent marking).
+   - (c) The noun is the head (it comes first; the adjective agrees with it).
+   - (d) For human nouns, class corresponds to biological sex.
+   - (e) For non-human nouns, class follows a discoverable rule (the solver should be able to hypothesize this rule after seeing 3–4 examples from the same subcategory).
+
+   *Dependency:* Inferences (a)–(d) are prerequisites for (e). The solver must first confirm the two-class system and the sex-based anchor before attempting to discover the non-human rule.
+
+5. **Construct the pronoun data (a small set of sentences or a paradigm table).** Present:
+   - All seven pronoun forms (1sg, 2sg, 3sg.m, 3sg.f, 1pl, 2pl, 3pl).
+   - At least two sentences using 3sg.m and 3sg.f pronouns as subjects, so the solver sees the gender contrast in the pronoun itself.
+   - At least one sentence using a 1sg or 2sg pronoun, so the solver sees that these forms do NOT distinguish gender.
+
+   *What the solver should infer:*
+   - Gender is expressed in the pronoun system, but ONLY in 3sg.
+   - This creates a contrast with the noun system (where ALL nouns have gender).
+   - The solver should recognize that gender expression is domain-specific: it is not uniformly present across all word classes.
+
+   *Dependency:* This step depends on the solver having already identified the two-gender system from the noun-adjective data. Without that foundation, the pronoun gender contrast is meaningless.
+
+6. **Construct the verbal data (4–6 sentences).** Design sentences that show:
+   - A verb with a 1sg subject (verb shows 1sg affix).
+   - A verb with a 2sg subject (verb shows 2sg affix).
+   - A verb with a 3sg.m subject (verb shows ZERO—bare root).
+   - A verb with a 3sg.f subject (verb shows ZERO—bare root, identical to the 3sg.m form).
+   - Optionally: a verb with a 1pl or 2pl subject.
+
+   *Critical design constraint:* The 3sg.m and 3sg.f sentences must use the SAME verb form (bare root). The solver should be able to see that the verb does NOT change between masculine and feminine 3sg subjects. This is the "absence of marking" inference.
+
+   *What the solver should infer:*
+   - The verb marks the subject (A-argument) but not the object.
+   - 3sg is unmarked (zero) on the verb.
+   - Therefore, gender is NOT expressed in 3sg verbal agreement, even though it IS expressed in 3sg pronouns.
+   - This creates a three-domain asymmetry: (i) nouns: all have gender; (ii) 3sg pronouns: have gender; (iii) 3sg verbal agreement: no gender.
+
+   *Dependency:* This step depends on the solver having identified the pronoun gender system (Step 5). The contrast between "pronoun has gender" and "verb does not have gender (for 3sg)" is only meaningful if the solver already knows that 3sg pronouns DO distinguish gender.
+
+7. **Design the question set with progressive difficulty.** Structure questions so that each requires the inferences from earlier steps:
+   - **Q1 (Easy – application of established patterns):** Provide a novel noun-adjective pair where the noun is a human noun (sex is transparent) and the adjective is one seen in the data. The solver applies the known gender suffix and agreement suffix. This tests whether the solver correctly identified the two suffix sets and the N-Adj order.
+   - **Q2 (Medium – applying the non-human rule):** Provide a novel non-human noun (not in the data) from a subcategory already represented in the data. The solver must apply the discovered gender assignment rule to determine the noun's gender, then produce the correct noun form and adjective agreement. This tests whether the solver correctly identified the non-human gender rule.
+   - **Q3 (Medium-High – cross-domain inference):** Provide a sentence with a 3sg subject (gender transparent from context) and ask the solver to produce the correct verb form. The correct answer is the bare root (zero). This tests whether the solver noticed the absence of gender marking in 3sg verbal agreement. A solver who incorrectly assumes gender is marked on the verb (by analogy with the pronoun) will produce an error.
+   - **Q4 (Hard – synthesis across domains):** Provide a short passage or set of sentences that uses both a 3sg pronoun and a verb with a 3sg subject, and ask the solver to explain why the pronoun and the verb differ in their treatment of gender. This requires the solver to synthesize the three-domain asymmetry (nouns, pronouns, verbs) into a coherent description of where gender is and is not expressed.
+
+   *Why this progression:* Each question builds on the previous. Q1 tests basic pattern application. Q2 tests the main inferential achievement (non-human rule). Q3 tests the subtle "absence" inference. Q4 tests synthesis. No question requires a rule that has not been sufficiently evidenced in the data.
+
+8. **Verify internal consistency and prevent unintended interpretations.** Check the following:
+   - **No false morpheme boundaries:** Ensure that no noun root ends in a segment identical to the gender suffix, and no adjective stem ends in a segment identical to the agreement suffix. This prevents the solver from mis-segmenting.
+   - **Uniqueness of the non-human rule:** Verify that no alternative rule (e.g., a different semantic subcategory boundary, or a phonological rule) is equally consistent with the data. If the rule is semantic-subcategory-based, ensure that the data includes at least one noun from each relevant subcategory so that the boundary is clear.
+   - **No accidental gender cues:** Ensure that no adjective stem is phonologically similar to a noun root in a way that could confuse the solver about which element is the head.
+   - **Pronoun-verb contrast is visible:** Ensure that the 3sg.m and 3sg.f sentences in the verbal data use the same verb form AND that the pronoun forms are visibly different. The contrast must be immediately observable.
+   - **No number confounding:** Ensure that no plural forms appear in the data (or if they do, they are clearly optional and do not interact with gender). The puzzle should be solvable without any number inference.
+   - **Typological plausibility:** The overall system (two genders, suffixal marking, N-Adj order, sex-based + semantic assignment, 3sg zero on verb, A-only agreement) should be consistent with known Cushitic typology. No feature should be so unusual as to make the system seem artificial.
+
+9. **Final solvability check.** Solve the puzzle yourself using only the provided data. Confirm:
+   - The two-gender system is identifiable from the noun suffixes alone (no ambiguity).
+   - The sex-based assignment is confirmable from the human nouns.
+   - The non-human gender rule is uniquely determined by the data (no competing hypothesis fits equally well).
+   - The pronoun gender restriction (3sg only) is observable.
+   - The 3sg verbal zero is observable (the solver can see that the verb form is identical for 3sg.m and 3sg.f).
+   - Every question has a single correct answer derivable from the data.
+   - The difficulty progression is smooth: no question requires an inference that the data does not support.

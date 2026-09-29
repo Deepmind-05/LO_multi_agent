@@ -1,0 +1,100 @@
+
+
+TARGET-LANGUAGE: Lealao Chinantec (cle), Oto-Manguean
+
+CORE
+
+1. Subject verbal agreement (adapted from "polypersonal agreement")
+   - Target-language realization: Only the A (subject) argument is marked on the verb via a prefix or clitic. The P (object) argument is NOT marked on the verb (WALS 102A-2, 104A-1). Third person has an overt marker, not zero (WALS 103A-2).
+   - Intended solver inference: The solver identifies which argument is the subject by matching the verbal person/number marker to the NPs in the sentence. The absence of object marking is itself a discoverable pattern.
+   - Priority: REQUIRED
+
+2. Tense/aspect marking (adapted from "tense distinctions")
+   - Target-language realization: Mixed strategies — some tense/aspect is marked affixally, some periphrastically (WALS 69A-4). Not a single uniform suffixal system as in Zuni.
+   - Intended solver inference: The solver identifies aspect/tense distinctions from systematic changes in verb form or from the presence of auxiliary-like elements.
+   - Priority: REQUIRED
+
+3. Suppletive aspect (adapted from "irregular verb morphology")
+   - Target-language realization: Different verb roots are used for different aspects (WALS 79A-2). This is the target-language counterpart of Zuni's root alternation in 'go'.
+   - Intended solver inference: The solver identifies which verb form changes are due to suppletion (entirely different roots) versus regular affixation (same root + affix). This requires comparing multiple verbs to distinguish the two patterns.
+   - Priority: HIGH
+
+4. Reduced verbal morphology (adapted from "polysynthetic/agglutinative verb structure")
+   - Target-language realization: The verb carries subject marking and some aspect marking, but the overall inflectional morphology of the language is minimal (WALS 26A-1). The verb is NOT a long agglutinative string as in Zuni.
+   - Intended solver inference: The solver identifies the (relatively simple) morphological structure of the verb: a small number of morphemes (subject marker + aspect marker, possibly a few others).
+   - Priority: HIGH (functions primarily as a design constraint: keep verb morphology simple)
+
+DROPPED SOURCE CONCEPTS:
+- Object marking via prefix: No object marking exists on the verb (WALS 102A-2, 104A-1). Cannot be realized.
+- Morpheme boundary ambiguity: Given the limited verbal morphology (WALS 26A-1), there is insufficient morphological complexity to create meaningful segmentation ambiguity.
+
+TARGET-SPECIFIC
+
+1. VOS word order
+   - Phenomenon: The basic clause order is Verb–Object–Subject (WALS 81A-4, 82A-2, 83A-2).
+   - Intended solver inference: The solver discovers that the first element is the verb, the second NP is the object, and the final NP is the subject. This is counterintuitive for solvers familiar with SVO or SOV languages.
+   - Interaction with CORE: Works directly with subject verbal agreement — the agreement marker on the verb confirms which of the two NPs is the subject, resolving the initial confusion created by VOS order.
+   - Difficulty contribution: HIGH. VOS is typologically rare and creates the central "aha" moment of the puzzle.
+   - Priority: REQUIRED
+
+2. Syncretic subject person/number marking
+   - Phenomenon: Some person/number combinations share the same verbal marker (WALS 29A-2).
+   - Intended solver inference: The solver encounters forms where the verbal marker does not uniquely identify the subject's person/number. They must use additional context (e.g., independent pronouns, semantic plausibility, or other cues in the sentence) to resolve the ambiguity.
+   - Interaction with CORE: Interacts with subject agreement by creating cases where agreement alone is insufficient, forcing the solver to use other evidence.
+   - Difficulty contribution: MEDIUM. Adds a layer of ambiguity that requires multi-cue reasoning.
+   - Priority: HIGH
+
+3. Complex tone system
+   - Phenomenon: Tone is phonemically contrastive with a complex system (WALS 13A-3).
+   - Intended solver inference: The solver recognizes that tone differences on otherwise identical segmental strings are meaningful (i.e., they distinguish different words or morphemes).
+   - Interaction with CORE: Tone can distinguish suppletive aspect forms or different person markers that are segmentally identical. This adds a phonological layer to the morphological analysis.
+   - Difficulty contribution: HIGH. Adds a dimension that solvers may initially overlook, especially if they focus only on segmental content.
+   - Priority: OPTIONAL (use if the puzzle design can clearly demonstrate tone contrasts in the data without overloading the solver)
+
+4. Inclusive/exclusive asymmetry
+   - Phenomenon: Independent pronouns distinguish 1PL inclusive and exclusive (WALS 39A-5), but verbal inflection does NOT (WALS 40A-3).
+   - Intended solver inference: The solver notices that the pronoun system has a distinction (inclusive vs. exclusive 1PL) that is absent from the verbal agreement system. This asymmetry is a discoverable pattern.
+   - Interaction with CORE: Interacts with subject agreement — when a 1PL subject is present, the verb cannot distinguish inclusive from exclusive, so the independent pronoun must carry this information.
+   - Difficulty contribution: MEDIUM. Requires the solver to compare two subsystems (pronouns vs. verbal agreement) and notice the asymmetry.
+   - Priority: OPTIONAL
+
+5. Preverbal negative in VOS order (NegVOS)
+   - Phenomenon: The negative particle is a separate word that immediately precedes the verb (WALS 143A-1, 144B-3, 144A-12). In the VOS frame, the order is Neg–V–O–S.
+   - Intended solver inference: The solver identifies the negative particle by its consistent preverbal position and its effect on meaning.
+   - Interaction with CORE: Consistent with and reinforces the VOS pattern. The negative particle's position relative to the verb helps confirm verb-initial order.
+   - Difficulty contribution: LOW-MEDIUM. Relatively straightforward once VOS is established.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. VOS + Subject agreement (CORE 1 + TS 1):
+   - The solver sees a verb-initial sentence with two NPs. The verbal person/number marker identifies which NP is the subject. This is the central puzzle mechanism: word order alone is ambiguous (which NP is S vs. O?), but agreement resolves it.
+   - Additional inference: The solver generalizes that the language is VOS and that agreement is the key to argument identification.
+
+2. Suppletive aspect + Tense/aspect marking (CORE 2 + CORE 3):
+   - The solver must distinguish regular aspect marking (same root + affix) from suppletive aspect (different root). This requires comparing multiple verbs: if all verbs change their root for a particular aspect, it's suppletive; if only some do, the change is regular affixation.
+   - Additional inference: The solver builds a paradigm showing which aspects are suppletive and which are regular.
+
+3. Syncretic marking + VOS (CORE 1 + TS 2):
+   - When the verbal marker is syncretic (e.g., same form for 1SG and 3SG), agreement alone cannot identify the subject. The solver must use additional cues: independent pronouns, semantic context, or the inclusive/exclusive distinction if present.
+   - Additional inference: The solver learns that agreement is a necessary but not always sufficient cue, and develops a multi-cue strategy.
+
+4. Tone + Suppletion (TS 3 + CORE 3):
+   - If tone is used, suppletive forms may differ in tone as well as (or instead of) segmental content. The solver must recognize that tone is part of the morphological signal.
+   - Additional inference: The solver expands their analysis from segmental to prosodic, recognizing that "the same letters with different tones" can be different morphemes.
+
+5. Inclusive/exclusive asymmetry + Subject agreement (TS 4 + CORE 1):
+   - When a 1PL subject appears, the verb uses a single 1PL marker (no inclusive/exclusive distinction), but the independent pronoun distinguishes the two. The solver must notice that the pronoun carries information the verb does not.
+   - Additional inference: The solver identifies a systematic asymmetry between the pronominal and verbal subsystems.
+
+CONSTRAINTS
+
+1. The puzzle data must contain enough VOS examples (minimum 4–5 transitive clauses) for the solver to reliably infer the VOS pattern.
+2. Subject agreement must be the ONLY verbal person/number marking. No object marking may appear on the verb. The solver should be able to confirm this by the absence of any P-marking pattern.
+3. Suppletive aspect forms must be clearly distinguishable in the data: at least two verbs should show the same suppletive pattern, and at least one verb should show regular (non-suppletive) aspect marking, so the solver can contrast the two.
+4. Syncretic forms must appear in contexts where they are resolvable (e.g., an independent pronoun is present, or semantic context makes one reading implausible). The puzzle should not contain truly unresolvable ambiguities.
+5. Third person must have an overt verbal marker (no zero form), so that all person values are visible in the data.
+6. Verb morphology should be kept simple (2–3 morphemes per verb form at most), consistent with WALS 26A-1 ("little affixation"). Do not create long agglutinative strings.
+7. If tone is used, it must be clearly marked in the orthography (e.g., diacritics or tone numbers) and the tone contrasts must be demonstrated in the data (at least one minimal pair differing only in tone).
+8. The puzzle must not require any prior knowledge of Chinantec, Oto-Manguean, or Mesoamerican languages. All relevant properties must be inferable from the provided data using general linguistic reasoning.
+9. If the inclusive/exclusive asymmetry is included, both inclusive and exclusive 1PL pronouns must appear in the data, and at least one 1PL subject clause must be present to demonstrate that the verb does not distinguish them.

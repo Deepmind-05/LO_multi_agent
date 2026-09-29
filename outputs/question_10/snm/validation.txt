@@ -1,0 +1,14 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [MAJOR] The actual difficulty is 4, not the target 5. The individual inferences (ergative alignment, antipassive, correlative RCs, inclusive/exclusive) are each standard and clearly supported by the data, and their combination in the final questions is a straightforward application of independently-learned rules rather than a "deep dependency" or non-obvious interaction between systems. To reach difficulty 5, the puzzle would need either ambiguous data requiring disambiguation, rules that interact in non-predictable ways (e.g., a construction that changes how another rule applies), or inferences about phenomena not directly evidenced in the data.
+* [MINOR] Q2a ("The jaguar went" → *mura turi*) is essentially a direct copy of D3 and requires no genuine linguistic reasoning beyond recognizing an intransitive clause. It does not test any of the central puzzle mechanisms and could be replaced with a more demanding item (e.g., a sentence combining the antipassive with a 1PL subject, or a transitive with an exclusive 1PL agent and a 3SG patient).

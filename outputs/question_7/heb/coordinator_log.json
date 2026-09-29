@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language, Hebrew, so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic features and mappings for Hebrew suitable for a Linguistic Olympiad puzzle. Include relevant phonological, morphological, syntactic, or lexical phenomena, with clear feature-to-form mappings and enough depth to support nontrivial reasoning.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Hebrew are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules so Agent 3 can generate a valid puzzle.",
+    "directive": "Using the existing Hebrew linguistic concepts, design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Specify how linguistic features map to observable forms, what transformations or contrasts should be used, and how solvers should infer the target language patterns.",
+    "elapsed_seconds": 6.6
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to have Agent 3 generate the complete puzzle dataset, questions, and answer key based on the existing Hebrew concepts and rationale.",
+    "directive": "Generate a complete Hebrew Linguistic Olympiad puzzle using the provided concepts and rationale. Include a clear data section with glossed examples, nontrivial questions requiring inference of linguistic patterns, and a complete answer key. Ensure all vocabulary is glossed, examples are unambiguous, and the puzzle is solvable from the given data.",
+    "elapsed_seconds": 11.7
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict has been issued yet, so the next required step is to have Agent 4 solve and validate the generated Hebrew puzzle.",
+    "directive": "Solve and rigorously validate the generated Hebrew Linguistic Olympiad puzzle. Check that all data entries are glossed, questions are unambiguous and nontrivial, the answer key is correct, and the puzzle is fully solvable from the provided information. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 24.5
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline contains concepts, rationale, and a generated puzzle. Agent 4 has already validated the puzzle and returned a PASS verdict, so the puzzle is acceptable and no further agent calls are needed.",
+    "directive": "",
+    "elapsed_seconds": 28.3
+  }
+]

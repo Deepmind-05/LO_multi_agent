@@ -1,0 +1,175 @@
+
+
+TARGET-LANGUAGE: Abkhaz (Northwest Caucasian)
+
+CONSTRUCTION RATIONALE
+
+1. **Fix the lexicon.** Use exactly the following 5 noun stems and 3 verb stems. No other stems may appear in the puzzle.
+
+   Nouns:
+   | Stem | Gloss | Gender |
+   |------|-------|--------|
+   | r | man | masculine |
+   | s | woman | feminine |
+   | f | house | neuter |
+   | g | horse | masculine |
+   | w | stone | neuter |
+
+   Verbs:
+   | Stem | Gloss | Valency |
+   |------|-------|---------|
+   | l | go | intransitive |
+   | b | be | intransitive |
+   | d | see | transitive |
+
+   Gender assignment is fixed and semantic (man/horse = masc, woman = fem, house/stone = neut). The solver will discover the gender of each noun from verbal agreement, not from the noun form itself.
+
+2. **Fix the nominal morphology.** Every noun appears in the form [Possessive prefix] + [Stem] + [Number suffix]. The possessive prefix is obligatory (default = 3sg). The number suffix is obligatory.
+
+   Possessive prefixes (mark the possessor on the possessed noun):
+   | Person/Number | Form |
+   |---------------|------|
+   | 1sg | a- |
+   | 2sg | w- |
+   | 3sg | r- |
+   | 1pl | an- |
+   | 2pl | wan- |
+   | 3pl | ran- |
+
+   Number suffixes:
+   | Number | Form |
+   |--------|------|
+   | singular | -a |
+   | plural | -ra |
+
+   There are no phonological alternations. All forms are produced by simple concatenation. Example: "my houses" = a- + f + -ra = *afra*. "Their horses" = ran- + g + -ra = *rangra*.
+
+3. **Fix the verbal morphology.** The verb encodes person/number/gender of its arguments via a prefix (absolutive) and, in transitive clauses, a suffix (ergative).
+
+   Intransitive template: [S-prefix] + [Verb stem]
+   Transitive template: [P-prefix] + [Verb stem] + [A-suffix]
+
+   Absolutive (S/P) prefixes:
+   | Person/Number | Form |
+   |---------------|------|
+   | 1sg | a- |
+   | 2sg | w- |
+   | 3sg masc | r- |
+   | 3sg fem | s- |
+   | 3sg neut | f- |
+   | 1pl | an- |
+   | 2pl | wan- |
+   | 3pl | ran- |
+
+   Ergative (A) suffixes:
+   | Person/Number | Form |
+   |---------------|------|
+   | 1sg | -ba |
+   | 2sg | -wa |
+   | 3sg masc | -ra |
+   | 3sg fem | -sa |
+   | 3sg neut | -fa |
+   | 1pl | -ban |
+   | 2pl | -wan |
+   | 3pl | -ran |
+
+   Key design property: the absolutive and ergative markers for the same person are different forms (e.g., 1sg absolutive = *a-*, 1sg ergative = *-ba*). This is what makes the ergative alignment discoverable. The 3rd-person absolutive prefix reflects the gender of the P/S noun; the 3rd-person ergative suffix reflects the gender of the A noun.
+
+4. **Fix the word order and argument realization rules.**
+
+   - Intransitive clause: [Noun (if 3rd person)] + [Verb]
+   - Transitive clause: [Noun (A, if 3rd person)] + [Noun (P, if 3rd person)] + [Verb]
+   - 1st and 2nd person arguments do NOT appear as independent nouns; they are marked only on the verb.
+   - 3rd person arguments MUST appear as independent nouns.
+   - In a transitive clause, the A-noun precedes the P-noun.
+
+5. **Construct the data set (presented to the solver as a list of sentence–gloss pairs).** Include the following sentences (the setter may add 1–2 more for balance, but must include all of these):
+
+   (1) *rra rl* — "The man goes."
+   (2) *rsa sl* — "The woman goes."
+   (3) *rfa fb* — "The house is [here]."
+   (4) *al* — "I go."
+   (5) *wl* — "You go."
+   (6) *rra rsa sdra* — "The man sees the woman."
+   (7) *rsa rra rdsa* — "The woman sees the man."
+   (8) *rfa fdba* — "I see the house."
+   (9) *rra adra* — "He sees me."
+   (10) *rwa fdwa* — "You see the stone."
+   (11) *afra* — "my houses"
+   (12) *ranfra* — "their houses"
+   (13) *rga* — "the horse"
+   (14) *rwra* — "the stones"
+
+   These sentences are designed so that:
+   - (1)–(3) establish the three-gender system via verbal agreement (r-, s-, f- on the verb correlate with different nouns).
+   - (4)–(5) show 1sg/2sg intransitive (absolutive prefix only, no suffix).
+   - (6)–(7) show 3rd-person transitive with both A and P overt; the verb has a prefix (P-gender) and a suffix (A-gender).
+   - (8)–(10) show 1st/2nd person in transitive roles, revealing that 1sg as A gets *-ba* (suffix) while 1sg as S/P gets *a-* (prefix). This is the ergative alignment discovery.
+   - (11)–(14) establish the nominal template (possessive prefix + stem + number suffix) and show plural.
+
+6. **Design Question 1 (Nominal parsing — moderate difficulty).**
+
+   Prompt: "The form *wansa* appears in the data. Identify its three morphological components and state what each encodes. Then write the form for 'your (plural) horses.'"
+
+   Expected answer:
+   - *wansa* = *wan-* (2pl possessive) + *s* (stem "woman") + *-a* (singular) → "your (pl) woman"
+   - "your (pl) horses" = *wan-* + *g* + *-ra* = *wangra*
+
+   This tests: recognition of the nominal template, identification of the possessive prefix, and productive application to a new possessor + noun + number combination.
+
+7. **Design Question 2 (Ergative alignment identification — high difficulty).**
+
+   Prompt: "In sentence (4) *al* ('I go'), the 1st person is marked by the prefix *a-*. In sentence (8) *rfa fdba* ('I see the house'), the 1st person is marked by the suffix *-ba*. Explain why the same person receives different markers in these two sentences. What grammatical property determines which marker is used?"
+
+   Expected answer: The language uses ergative alignment. In intransitive clauses, the sole argument (S) is marked with the absolutive prefix (*a-* for 1sg). In transitive clauses, the agent (A) is marked with a distinct ergative suffix (*-ba* for 1sg), while the patient (P) receives the absolutive prefix. The determining property is whether the 1st person functions as S/P (absolutive) or as A (ergative).
+
+   This tests: the solver must compare intransitive and transitive data, notice that the same person gets different morphemes, and abstract the alignment pattern.
+
+8. **Design Question 3 (Productive transitive sentence — high difficulty).**
+
+   Prompt: "Translate into the target language: 'The horses see the stones.'"
+
+   Expected answer:
+   - "horses" = 3sg poss *r-* + stem *g* + pl *-ra* = *rgra*
+   - "stones" = 3sg poss *r-* + stem *w* + pl *-ra* = *rwra*
+   - "see" = 3sg neut P *f-* + stem *d* + 3sg masc A *-ra* = *fdra*
+   - Full sentence: *rgra rwra fdra*
+
+   This tests: productive noun formation (plural), correct word order (A before P), correct verbal morphology (P-prefix reflects gender of patient = neut → *f-*, A-suffix reflects gender of agent = masc → *-ra*), and integration of all nominal and verbal rules simultaneously.
+
+9. **Design Question 4 (Disambiguation / role identification — moderate-high difficulty).**
+
+   Prompt: "The sentence *rra wdba* is not in the data. Determine its meaning. Identify who the agent is, who the patient is, and the gender of each."
+
+   Expected answer:
+   - *rra* = 3sg poss *r-* + stem *r* + sg *-a* = "the man" (masculine)
+   - *wdba* = 2sg P *w-* + stem *d* + 1sg A *-ba*
+   - Agent = 1sg (I), Patient = 2sg (you)
+   - The man is the A-noun (first noun position), but the verb shows 1sg A and 2sg P.
+   
+   Wait — this creates a contradiction. If *rra* is the A-noun (3sg masc), the verb should show 3sg masc A (*-ra*), not 1sg A (*-ba*). Let me fix this.
+
+   Revised prompt: "The sentence *rra adra* appears in the data as (9). Now consider the sentence *rra wdba*. Is this a grammatical sentence? If yes, what does it mean? If no, explain why."
+
+   Expected answer: *rra wdba* is NOT grammatical. *rra* is a 3sg masc noun (the man), so if it is the A-argument, the verb must carry the 3sg masc ergative suffix *-ra*. But *wdba* ends in *-ba* (1sg ergative), which would require a 1sg agent. Since 1sg agents do not appear as independent nouns, *rra* cannot be the agent of a verb with 1sg A. The sentence is ungrammatical because the independent noun (3sg masc) is incompatible with the verbal ergative marker (1sg).
+
+   This tests: the solver must recognize the agreement requirement between the independent 3rd-person noun and the verbal ergative marker, and understand that 1st/2nd person arguments cannot appear as independent nouns.
+
+10. **Verify the system for uniqueness and solvability.**
+
+    - All noun forms in the data are unique (no two different possessor + stem + number combinations produce the same surface form).
+    - All verb forms in the data are unique (no two different P + A combinations produce the same surface form).
+    - The gender of each noun is uniquely determined by the verbal absolutive prefix it triggers in intransitive sentences (1)–(3) and by the verbal ergative suffix it triggers as A in transitive sentences (6)–(7).
+    - The ergative alignment is uniquely determined by the contrast between (4) *al* and (8) *rfa fdba*: the same 1sg person gets *a-* as S but *-ba* as A.
+    - The P-before-A ordering is uniquely determined by the fixed template [P-prefix][stem][A-suffix], visible in all transitive examples.
+    - No phonological rules are needed; all forms are transparent concatenations.
+    - The solver does not need prior knowledge of Abkhaz or any Northwest Caucasian language. All rules are inductively recoverable from the data.
+
+11. **Assemble the final puzzle document.**
+
+    Structure:
+    - **Context paragraph** (2–3 sentences): "The following data is from a Northwest Caucasian language. The language has three genders for nouns. All forms are given in a standard orthography."
+    - **Data section**: The 14 sentence/word–gloss pairs from Step 5, presented as a numbered list.
+    - **Questions section**: Questions 1–4 from Steps 6–9, each with a point value (Q1: 3 pts, Q2: 4 pts, Q3: 4 pts, Q4: 4 pts; total 15 pts).
+    - **Answer key**: The expected answers as specified in Steps 6–9.
+    - **Solution explanation**: A paragraph for each question explaining the reasoning chain the solver should follow, referencing specific data items.

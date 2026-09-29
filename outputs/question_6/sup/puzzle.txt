@@ -1,0 +1,149 @@
+
+
+CONTEXT
+
+Supyire is a Senufo language spoken in West Africa. Below are sentences in Supyire with English translations. The language uses the Latin alphabet with the following additional letters: ɛ (open-mid front vowel), ɔ (open-mid back vowel), ɲ (palatal nasal).
+
+DATA
+
+| # | Supyire | English |
+|---|---------|---------|
+| 1 | tɛ gɛ dɛ | A man eats a pot. |
+| 2 | tɛɔ gɛi dɛ | The man eats the pot. |
+| 3 | tɛn gɛn dɛ | Men eat pots. |
+| 4 | tɛnɔ gɛni dɛ | The men eat the pots. |
+| 5 | ɲɔ sɔ kɛ | A child sees a dog. |
+| 6 | ɲɔɔ sɔɔ kɛ | The child sees the dog. |
+| 7 | nɛ sɛ kɛ | A woman sees a tree. |
+| 8 | nɛɔ sɛu kɛ | The woman sees the tree. |
+| 9 | sɔ lɛ dɛ | A dog eats a leaf. |
+| 10 | sɔn lɛnu dɛ | Dogs eat the leaves. |
+| 11 | ɔ gɛi dɛ | He eats the pot. |
+| 12 | i sɔɔ kɛ | It sees the dog. |
+| 13 | u sɛu nɔ wɛ | It goes to the tree. |
+| 14 | tɛɔ gɛi dɛ mɛ | The man does not eat the pot. |
+| 15 | tɛɔ kɔ gɛi dɛ mɛ | The man does not eat the pot. |
+| 16 | ɲɔɔ sɔɔ kɛ mɛ | The child does not see the dog. |
+| 17 | ɲɔɔ kɔ sɔɔ kɛ mɛ | The child does not see the dog. |
+| 18 | tɛɔ gɛi dɛa | The man ate the pot. |
+| 19 | ɲɔɔ sɔɔ kɛa | The child saw the dog. |
+| 20 | nɛɔ sɛu nɔ tɔ | The woman went to the tree. |
+| 21 | nɛɔ sɛu nɔ wɛ | The woman goes to the tree. |
+| 22 | tɛɔ kɔ gɛi dɛa mɛ | The man did not eat the pot. |
+| 23 | ɲɔɔ kɔ sɔɔ kɛa mɛ | The child did not see the dog. |
+| 24 | nɛɔ kɔ sɛu nɔ tɔ mɛ | The woman did not go to the tree. |
+| 25 | tɛnɔ fɛni kɛ | The men see the houses. |
+
+Note: Sentences #18–24 are in the past tense; all other sentences are in the non-past tense.
+
+QUESTIONS
+
+**Q1 (4 marks)**
+
+(a) What is the basic word order of Supyire? (1 mark)
+
+(b) (i) In sentence #2, what suffix is added to *tɛ* to mark definiteness? What suffix is added to *gɛ*? (1 mark)
+
+(ii) In sentence #8, what suffix is added to *sɛ* to mark definiteness? (0.5 marks)
+
+(iii) How many distinct definite suffixes do you observe across all the data? (0.5 marks)
+
+(c) What is the grammatical function of the suffix *-n*? Is it obligatory or optional? What is its position relative to the definite suffix? (1 mark)
+
+**Q2 (3 marks)**
+
+Describe the negation system of Supyire. In your answer, specify:
+
+(a) How many negative elements are there, and where does each appear in the sentence? (1 mark)
+
+(b) Which negative element is obligatory (i.e., appears in every negative sentence)? (1 mark)
+
+(c) In the non-past negative sentences (#14–17), does *kɔ* always appear? In the past negative sentences (#22–24), does *kɔ* always appear? (1 mark)
+
+**Q3 (4 marks)**
+
+Translate the following English sentences into Supyire:
+
+(a) A dog sees a tree. (1 mark)
+
+(b) The man eats a pot. (1 mark)
+
+(c) The dogs eat a leaf. (1 mark)
+
+(d) The child does not see a dog. (1 mark)
+
+ANSWERS
+
+**Q1**
+
+(a) SOV (Subject–Object–Verb).
+
+(b) (i) The suffix *-ɔ* is added to *tɛ* (→ *tɛɔ*); the suffix *-i* is added to *gɛ* (→ *gɛi*).
+
+(ii) The suffix *-u* is added to *sɛ* (→ *sɛu*).
+
+(iii) Three distinct definite suffixes: *-ɔ*, *-i*, *-u*.
+
+(c) *-n* is the plural suffix. It is obligatory (it appears in every plural noun). It precedes the definite suffix (morphological order: stem + *-n* + definite suffix).
+
+**Q2**
+
+(a) There are two negative elements: a preverbal element *kɔ* (appearing between the subject and the object) and a postverbal element *mɛ* (appearing immediately after the verb).
+
+(b) The postverbal element *mɛ* is obligatory.
+
+(c) In the non-past negative sentences (#14–17), *kɔ* does not always appear (it is absent in #14 and #16, present in #15 and #17). In the past negative sentences (#22–24), *kɔ* always appears.
+
+**Q3**
+
+(a) *sɔ sɛ kɛ*
+
+(b) *tɛɔ gɛ dɛ*
+
+(c) *sɔnɔ lɛ dɛ*
+
+(d) *ɲɔɔ sɔ kɛ mɛ* (or *ɲɔɔ kɔ sɔ kɛ mɛ*; both are acceptable since *kɔ* is optional in non-past tense)
+
+SOLUTION
+
+**Rules inferred from the data:**
+
+1. **Word order (SOV):** All transitive sentences show Subject–Object–Verb order (e.g., #1: *tɛ gɛ dɛ*). Intransitive sentences show Subject–Verb (e.g., #13: *u sɛu nɔ wɛ*). The postposition *nɔ* ('to') follows the noun phrase, consistent with a head-final profile.
+
+2. **Noun class system (3 classes):** The definite suffix varies systematically:
+   - *tɛ*→*tɛɔ*, *nɛ*→*nɛɔ*, *ɲɔ*→*ɲɔɔ*, *sɔ*→*sɔɔ* → Class I, suffix *-ɔ*
+   - *gɛ*→*gɛi*, *fɛ*→*fɛi* → Class II, suffix *-i*
+   - *sɛ*→*sɛu*, *lɛ*→*lɛu* → Class III, suffix *-u*
+   
+   The 3rd person pronouns confirm the class system: *ɔ* (Cl I, #11), *i* (Cl II, #12), *u* (Cl III, #13).
+
+3. **Plural suffix *-n* (obligatory, precedes definite suffix):** Plural nouns always bear *-n* (#3: *tɛn*, #10: *sɔn*). When both plural and definite marking are present, the order is stem + *-n* + definite suffix (#4: *tɛnɔ*, #10: *lɛnu*, #25: *fɛni*).
+
+4. **Negation (double negation, asymmetric):**
+   - Postverbal *mɛ* appears in every negative sentence (#14, 15, 16, 17, 22, 23, 24) → obligatory.
+   - Preverbal *kɔ* appears in some but not all non-past negatives (#14 lacks it, #15 has it; #16 lacks it, #17 has it) → optional in non-past.
+   - Preverbal *kɔ* appears in every past negative (#22, 23, 24) → obligatory in past.
+   - Position: *kɔ* appears between S and O; *mɛ* appears immediately after V.
+
+5. **Tense (non-past vs. past, with suppletion):**
+   - Non-past: verb stem as-is (*dɛ*, *kɛ*, *wɛ*).
+   - Past: *dɛa*, *kɛa* (stem + *-a*), but *wɛ*→*tɔ* (suppletive; compare #21 and #20).
+
+**How the rules produce each answer:**
+
+- Q1(a): Directly observable from any transitive sentence (e.g., #1).
+- Q1(b)(i): Directly observable from #2 by comparing with #1.
+- Q1(b)(ii): Directly observable from #8 by comparing with #7.
+- Q1(b)(iii): Count the distinct suffixes identified in (i) and (ii): *-ɔ*, *-i*, *-u* → three.
+- Q1(c): Compare #1 with #3 (singular vs. plural) to identify *-n* as plural; compare #3 with #4 to see that *-n* precedes the definite suffix.
+- Q2(a): Compare #14 with #1 (affirmative vs. negative) to identify *mɛ*; compare #15 with #14 to identify *kɔ*.
+- Q2(b): Check all negative sentences (#14–17, #22–24): *mɛ* is present in all; *kɔ* is absent in some.
+- Q2(c): Check #14–17: *kɔ* absent in #14, #16 → not always present. Check #22–24: *kɔ* present in all → always present.
+- Q3(a): *sɔ* (dog, indefinite, Cl I) + *sɛ* (tree, indefinite, Cl III) + *kɛ* (see, non-past) → SOV.
+- Q3(b): *tɛɔ* (man + definite, Cl I) + *gɛ* (pot, indefinite, Cl II) + *dɛ* (eat, non-past) → SOV.
+- Q3(c): *sɔnɔ* (dog + plural + definite, Cl I) + *lɛ* (leaf, indefinite, Cl III) + *dɛ* (eat, non-past) → SOV.
+- Q3(d): *ɲɔɔ* (child + definite, Cl I) + *sɔ* (dog, indefinite, Cl I) + *kɛ* (see, non-past) + *mɛ* (postverbal negation) → SOV. Since the sentence is non-past, *kɔ* is optional; both *ɲɔɔ sɔ kɛ mɛ* and *ɲɔɔ kɔ sɔ kɛ mɛ* are correct.
+
+DIFFICULTY
+
+**Level 1.** The puzzle requires the solver to identify a three-way noun class system from suffixal variation, determine the morphological order of plural and definite suffixes, and discover an asymmetric negation pattern whose distribution is conditioned by tense. Scaffolding is provided: the tense of each sentence is noted explicitly, and Q1(b) is broken into sub-steps that guide the solver from identifying individual suffixes to counting distinct forms. Each question requires at most a single-step or minimally chained inference: identifying a suffix from a specific sentence pair, counting distinct forms, checking presence/absence of a morpheme in a given set of sentences, or applying one or two rules in a translation. No production item requires simultaneous integration of more than two morphological rules, keeping the overall difficulty accessible.

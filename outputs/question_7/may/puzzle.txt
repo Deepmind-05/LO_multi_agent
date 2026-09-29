@@ -1,0 +1,80 @@
+
+
+CONTEXT
+
+The following data is from a language spoken in the Maybrat region of Papua, Indonesia. Each line shows a phrase or sentence followed by its English translation. The language uses a small set of morphological markers and has a relatively simple word order.
+
+DATA
+
+**A. Sentences**
+
+1. na pa kapa — I see a man.
+2. mu pa puna — You see a house.
+3. ra pa turi — He sees a dog.
+4. la pa wela — She sees a bird.
+5. ta pa sapa — They see trees.
+6. nari pa tala — We see rivers.
+7. muri pa kapa — You (pl.) see men.
+8. na pa sapa — I see a tree.
+
+**B. Noun phrases with demonstratives**
+
+9. di kapa — this man
+10. de puna — this house
+11. ti turi — that (near) dog
+12. ke tala — that (far) river
+13. di mura — this head
+14. de tapa — this hand
+15. di nara — this eye
+
+**C. Possessive constructions**
+
+16. na-mura — my head
+17. mu-tapa — your (sg.) hand
+18. ra-mura — his head
+19. la-tapa — her hand
+20. ta-nara — their eye
+21. ne-kapa — my man
+22. me-puna — your (sg.) house
+23. re-turi — his dog
+24. le-wela — her bird
+25. te-sapa — their tree
+
+QUESTIONS
+
+**Q1.** In the data, the 3rd person singular has two different forms while all other person-number combinations have only one form. Identify the two 3rd person singular forms and state what semantic distinction they encode.
+
+**Q2.** The demonstratives in Section B form a paradigm with two independent dimensions. Identify both dimensions and their values.
+
+**Q3.** Using the patterns in Section C, produce the following possessive constructions:
+(a) her dog
+(b) their house
+
+ANSWERS
+
+**Q1.** The two 3rd person singular forms are *ra* (masculine) and *la* (feminine). They encode the sex (gender) of the referent.
+
+**Q2.** The two dimensions are: (i) distance, with values proximal (d-), medial (t-), distal (k-); and (ii) gender, with values masculine (-i) and feminine (-e).
+
+**Q3.**
+(a) *le-turi*
+(b) *te-puna*
+
+SOLUTION
+
+**Q1:** From the sentence data, *ra* appears with a masculine referent (ex. 3: "He sees a dog"; the dog is confirmed masculine by *ti turi* in ex. 11) and *la* appears with a feminine referent (ex. 4: "She sees a bird"; the bird is confirmed feminine by *de puna*-type patterns). All other person-number cells (1sg *na*, 2sg *mu*, 1pl *nari*, 2pl *muri*, 3pl *ta*) have a single form. The distinction is sex-based gender, restricted to 3rd person singular.
+
+**Q2:** The solver isolates the two dimensions by controlled contrast:
+- *di* (ex. 9, 13, 15) vs. *de* (ex. 10, 14): same distance (proximal), different vowel → the vowel encodes gender (i = masculine, e = feminine).
+- *di* (ex. 9) vs. *ti* (ex. 11): same gender (masculine), different consonant → the consonant encodes distance (d = proximal, t = medial).
+- *ke* (ex. 12) confirms k = distal and e = feminine.
+
+Thus: consonant = distance (d, t, k); vowel = gender (i, e).
+
+**Q3:**
+(a) *turi* (dog) is a non-body-part noun, belonging to the same possessive class as *kapa*, *puna*, *wela*, and *sapa* (Class B, marked by the -e vowel in the prefix). The 3sg feminine Class B prefix is *le-* (attested in ex. 24: *le-wela* "her bird"). Therefore "her dog" = **le-turi**.
+(b) *puna* (house) is also Class B. The 3pl Class B prefix is *te-* (attested in ex. 25: *te-sapa* "their tree"). Therefore "their house" = **te-puna**.
+
+DIFFICULTY
+
+Level 1 (easy). Each question requires a single, direct inference from the data: Q1 identifies a contrast in the pronoun paradigm; Q2 identifies two dimensions in the demonstrative paradigm by controlled contrast; Q3 applies the possessive prefix pattern to two new items. No question requires integrating multiple interacting systems or producing metalinguistic explanations.

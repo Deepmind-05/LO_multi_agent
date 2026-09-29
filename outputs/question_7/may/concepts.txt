@@ -1,0 +1,67 @@
+
+
+TARGET-LANGUAGE: Maybrat (Papuan, Maybrat family)
+
+CORE
+
+1. Concept: Two genders (source 30A-2)
+   - Target-language realization: Two sex-based genders (masculine/feminine), assigned semantically (WALS 30A-2, 31A-2, 32A-2). Gender is not morphologically marked on nouns themselves but surfaces in 3rd person singular pronouns and demonstratives (WALS 44A-3, 43A-5).
+   - Intended solver inference: From the data, the solver identifies two semantic classes (masculine/feminine) assigned by meaning (animate sex, or semantic categories). The solver discovers that gender is a property of referents, not of noun morphology, and that it only becomes morphologically visible in specific contexts (3sg pronouns, demonstratives).
+   - Priority: REQUIRED
+
+2. Concept: Dependent marking (source 84A-2, adapted)
+   - Target-language realization: The source concept (adjective carries agreement marking in NPs) is adapted to the possessive domain, where the possessor (dependent) carries the marking (WALS 24A-2: dependent marking in possessive NPs; 57A-1: possessive prefixes). The possessor is marked with a prefix, not the possessed noun.
+   - Intended solver inference: The solver identifies that in possessive constructions, the morphological marking falls on the possessor (the dependent), not the possessed noun (the head). This is the same "dependent marking" principle as in the Swedish source, realized in a different domain.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Phenomenon: No plural marking on nouns (WALS 33A-9, 34A-1)
+   - Intended solver inference: Nouns do not change form for number. The solver observes that the same noun form is used for singular and plural referents, and infers that number is not a morphological category on nouns.
+   - Interaction with CORE: Creates a striking contrast with gender—gender is semantically assigned to nouns but is NOT morphologically marked on them. Gender only surfaces in pronouns and demonstratives. This forces the solver to understand that gender is a semantic/phonological property of the referent, not a morphological property of the noun.
+   - Difficulty contribution: Medium. The solver must resist the expectation that a gendered language marks gender on nouns.
+   - Priority: HIGH
+
+2. Phenomenon: Gender restricted to 3rd person singular (WALS 44A-3)
+   - Intended solver inference: Gender distinctions appear ONLY in 3rd person singular pronouns. 1st and 2nd person pronouns, and all plural forms, are gender-neutral. The solver must discover this restriction from the data.
+   - Interaction with CORE: Constrains where the gender system is visible. The solver must identify that the two-gender system is not a full morphological agreement system but a limited one, restricted to a specific person-number cell.
+   - Difficulty contribution: High. This is a non-obvious restriction that requires careful comparison across the pronoun paradigm.
+   - Priority: HIGH
+
+3. Phenomenon: Two possessive classes (WALS 59A-2)
+   - Intended solver inference: Possessive marking uses two distinct sets of prefixes (or two distinct morphological patterns), creating a classification of possessed nouns into two classes. The solver must identify what distinguishes the two classes (e.g., body parts vs. non-body parts, or inalienable vs. alienable).
+   - Interaction with CORE: The two possessive classes are a SEPARATE classification system from the two genders. The solver must discover that these are independent dimensions (a masculine noun can belong to either possessive class). This creates a 2×2 interaction space.
+   - Difficulty contribution: High. The solver must disentangle two independent binary classification systems.
+   - Priority: HIGH
+
+4. Phenomenon: Three-way demonstrative contrast with gender (WALS 41A-3, 43A-5)
+   - Intended solver inference: Demonstratives encode a three-way distance contrast (e.g., proximal/medial/distal) AND a two-way gender contrast, yielding up to 6 distinct demonstrative forms. The solver must identify both dimensions and their interaction.
+   - Interaction with CORE: Demonstratives are a primary site where gender becomes morphologically visible (alongside 3sg pronouns). The solver can use the demonstrative paradigm to confirm the two-gender system and to see how gender interacts with another semantic dimension (distance).
+   - Difficulty contribution: Medium-High. The 3×2 paradigm requires the solver to identify two independent dimensions.
+   - Priority: HIGH
+
+5. Phenomenon: Strong prefixing (WALS 26A-6)
+   - Intended solver inference: Morphological markers (possessive, case, etc.) are predominantly prefixes. The solver observes that markers attach to the left of the stem.
+   - Interaction with CORE: The dependent marking (possessive prefixes) is realized through prefixation. This gives the puzzle a consistent morphological pattern.
+   - Difficulty contribution: Low-Medium. Mostly a surface pattern that aids parsing.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Gender × No plural marking: Gender is semantically assigned to nouns but never morphologically marked on them. Number is also absent from noun morphology. The solver must infer that the noun itself is morphologically "bare" with respect to both gender and number, and that these categories surface only in dependent elements (pronouns, demonstratives). This is the central typological insight.
+
+2. Gender × 3sg restriction × Demonstratives: Gender is visible in exactly two contexts: 3sg pronouns and demonstratives. The demonstratives add a second dimension (distance) that interacts with gender. The solver can cross-reference the gender values in pronouns with those in demonstratives to confirm the system.
+
+3. Possessive classes × Gender: Two independent binary systems (gender: masc/fem; possessive class: class A/class B). A noun has both a gender and a possessive class. The solver must discover that these are independent (not correlated) by finding counterexamples in the data.
+
+4. Dependent marking × Prefixing: The dependent-marking principle (possessor carries the marker) is realized through prefixation. The solver observes that the possessor noun/pronoun receives a prefix, while the possessed noun remains unmarked.
+
+CONSTRAINTS
+
+- The puzzle data must clearly demonstrate that nouns do NOT change for gender or number (no plural, no gender marking on nouns). At least one noun should appear in both singular and plural contexts with identical form.
+- The 3sg restriction on gender must be unambiguous: 1sg, 2sg, 1pl, 2pl pronouns must be gender-neutral, while 3sg must show a gender contrast.
+- The two possessive classes must be distinguishable from the two genders. The data should include at least one example where a masculine noun takes a class-B possessive prefix and a feminine noun takes a class-A possessive prefix (or vice versa), proving independence.
+- The demonstrative system should show both the distance dimension (3 values) and the gender dimension (2 values) clearly, ideally in a paradigm or set of examples that allows the solver to isolate each dimension.
+- The possessive marking must be clearly on the possessor (dependent), not the possessed noun (head), to maintain the dependent-marking principle.
+- Do not introduce case marking complexity (WALS data is contradictory on this: 21A says no case, 49A says 2 cases). Keep the puzzle focused on gender, number, possession, and demonstratives.
+- The puzzle should not require the solver to know Maybrat or Papuan languages. All inferences must be derivable from the provided data using general linguistic reasoning.

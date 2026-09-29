@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract rich linguistic features and mappings for the target language so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract a broad, typologically rich set of linguistic features for cyv suitable for a Linguistic Olympiad puzzle. Include core phonological, morphological, syntactic, and semantic phenomena, with clear feature-to-form mappings, example contrasts, and enough depth to support multi-step reasoning. Avoid overly simplistic or generic features.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for cyv are present, but rationale is missing. The next required step is to design the step-by-step reasoning blueprint, morphological rules, and sentence structure templates before puzzle generation.",
+    "directive": "Using the existing cyv concepts, create a rigorous Olympiad-style rationale: define the linguistic phenomena to be tested, specify step-by-step inference rules, establish consistent morphological/syntactic mappings, and provide sentence structure templates that support non-trivial multi-step reasoning.",
+    "elapsed_seconds": 7.5
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete Olympiad puzzle dataset, including data, questions, and answer key, based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for cyv using the existing concepts and rationale. Include a clear DATA section with glossed examples, non-trivial multi-step questions, and a complete answer key. Ensure all vocabulary is glossed, all forms are consistent with the rationale, and the questions require genuine linguistic inference rather than direct copying.",
+    "elapsed_seconds": 17.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the generated cyv Linguistic Olympiad puzzle. Check data glosses, vocabulary coverage, morphological/syntactic consistency with the rationale, question solvability, uniqueness of answers, absence of typos or ambiguities, and non-triviality. Return PASS, PASS_WITH_ISSUES, or FAIL with specific actionable feedback.",
+    "elapsed_seconds": 32.8
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL with concrete puzzle-level defects: one data sentence violates the stated VOS pattern, the Q5 answer key incorrectly treats TAM as a prefix in negative forms, the solution contains an internal inconsistency, and Q3\u2019s person-marking description is incomplete. These are implementation errors in the data, questions, or answer key rather than flaws in the underlying concepts or rationale, so Agent 3 should patch the puzzle directly.",
+    "directive": "Patch the existing cyv puzzle without changing the core concepts or rationale. 1) Correct Sentence 7 so it follows the same VOS transitive word order as the other transitive examples, or otherwise make the data fully consistent with the stated word-order rule. 2) Fix Q5: TAM must be treated as a suffix in both affirmative and negative forms; -e is a suffix in sentences 5 and 17; TAM is always a suffix; ensure Q5(c) answer 'matapapao' is consistent with that rule. 3) Revise Q3\u2019s answer to explicitly note that intransitive 2nd person is unmarked, e.g. banie rather than *tabanie, and make the person-marking description complete for both transitive and intransitive paradigms. 4) Recheck all glosses, data entries, and answer-key entries for consistency before returning the revised puzzle.",
+    "elapsed_seconds": 42.6
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated after Agent 3 patched the previously identified defects, and puzzle_needs_validation is true with no current validator verdict. The required next step is to have Agent 4 re-solve and rigorously validate the revised puzzle, especially the previously flagged issues: VOS consistency, TAM suffix treatment in Q5, and completeness of Q3 person-marking.",
+    "directive": "Solve and rigorously validate the revised cyv Linguistic Olympiad puzzle. Specifically verify: 1) all transitive data sentences consistently follow the stated VOS word order; 2) TAM is consistently treated as a suffix in both affirmative and negative forms, including Q5 and any related answer-key entries; 3) Q3\u2019s person-marking explanation is complete and correctly notes unmarked intransitive 2nd person where applicable; 4) all glosses, vocabulary, data entries, questions, and answer-key entries are internally consistent and unambiguous. Return PASS, PASS_WITH_ISSUES, or FAIL with specific actionable feedback.",
+    "elapsed_seconds": 57.4
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict for the revised cyv puzzle, and puzzle_needs_validation is false. The puzzle has been fully validated and is acceptable, so the pipeline should finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 64.0
+  }
+]

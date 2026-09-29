@@ -26,9 +26,9 @@ def resolve_path(path: str) -> Path:
     return BASE_DIR / path
 
 
-def save_text(path: Path, content: str):
+def save_text(path: Path, content: str | None):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8")
+    path.write_text(content or "", encoding="utf-8")
 
 
 def load_input_records(file_path: Path) -> list[dict]:
@@ -280,6 +280,13 @@ def main():
         default=None,
         help="Override max retries for validation revisions",
     )
+    parser.add_argument(
+        "--limit", "-n", "--rows",
+        dest="limit",
+        type=int,
+        default=None,
+        help="Number of rows/questions to process from the input file",
+    )
     args = parser.parse_args()
 
     config = load_config()
@@ -306,6 +313,18 @@ def main():
     print(f"Loading input records from: {input_path}")
     records = load_input_records(input_path)
     print(f"Total questions loaded: {len(records)}")
+
+    row_limit = (
+        args.limit
+        if args.limit is not None
+        else config.get("limit", None)
+    )
+    if row_limit is not None:
+        if row_limit <= 0:
+            print(f"Row limit is set to {row_limit}; nothing to process.")
+            return
+        records = records[:row_limit]
+        print(f"Limiting processing to first {len(records)} row(s).")
 
     if not records:
         print("No questions found in input file.")

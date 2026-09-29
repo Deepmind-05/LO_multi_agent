@@ -1,0 +1,113 @@
+
+
+CONTEXT
+
+Below are some phrases in Finnish, a Uralic language spoken in Finland, along with their English translations. Note that ä and ö are distinct vowels, not diacritics of a and o. *Matti* and *Liisa* are common Finnish personal names. "Your (plural)" indicates address to more than one person.
+
+DATA
+
+1. Mattin talo — Matti's house
+2. Liisan kala — Liisa's fish
+3. minun taloni — my house
+4. sinun kalasi — your fish
+5. talomme — our house
+6. kalanne — your (plural) fish
+7. talonsa — his/her house
+8. kynttiläni — my candle
+9. pöytäsi — your table
+10. meidän talomme — our house
+11. teidän kalanne — your (plural) fish
+12. talossa — in a house
+13. kynttilässä — in a candle
+14. talossani — in my house
+15. kynttilässäni — in my candle
+16. kalallasi — on your fish
+17. pöydällämme — on our table
+18. talosta — out of a house
+19. kynttilästä — out of a candle
+
+QUESTIONS
+
+**Part A. Translate each Finnish phrase into English.**
+
+A1. Liisan kynttilä
+
+A2. kalamme
+
+A3. pöydälläsi
+
+A4. kynttilänsä
+
+**Part B. Translate each English phrase into Finnish.**
+
+B1. in your (plural) house
+
+B2. on his/her fish
+
+B3. out of our candle
+
+B4. out of your (plural) table
+
+ANSWERS
+
+A1. Liisa's candle
+A2. our fish
+A3. on your table
+A4. his/her candle
+
+B1. talossanne
+B2. kalallansa
+B3. kynttilästämme
+B4. pöydästäänne
+
+SOLUTION
+
+**Rules to infer:**
+
+**1. Word order (GenN):** The possessor precedes the possessed noun. Evidence: items 1–4, 10–11 all show [Possessor] [Possessed].
+
+**2. Genitive case on the possessor:** The possessor NP carries a genitive marker. For proper names, this is the suffix *-n* (Matti → Mattin, Liisa → Liisan). For personal pronouns, the genitive is suppletive: *minun* (1SG), *sinun* (2SG), *meidän* (1PL), *teidän* (2PL). Evidence: items 1–4, 10–11.
+
+**3. Possessive suffix on the possessed noun (head marking):** The possessed noun carries a suffix encoding the possessor's person and number. The paradigm is:
+- 1SG: *-ni* (items 3, 8, 14, 15)
+- 2SG: *-si* (items 4, 9, 16)
+- 3SG: *-nsa* (item 7)
+- 1PL: *-mme* (items 5, 10, 17)
+- 2PL: *-nne* (items 6, 11)
+
+Evidence: suffix-only forms (items 5–9) isolate the suffix; full-NP forms (items 3–4, 10–11) confirm the suffix agrees with the genitive possessor.
+
+**4. Agreement (double marking):** When a full genitive possessor NP is present, the possessive suffix on the possessed noun agrees with it in person and number. Evidence: *minun taloni* (1SG gen + 1SG suffix), *meidän talomme* (1PL gen + 1PL suffix), *teidän kalanne* (2PL gen + 2PL suffix). With 3SG possessors (proper names), the possessive suffix is optional: *Mattin talo* (no suffix) in item 1 vs. *talonsa* (with suffix) in item 7.
+
+**5. Case marking on the possessed noun:** The possessed noun can carry a case suffix. Three cases are attested:
+- Inessive ("in"): *-ssa* (back) / *-ssä* (front) — items 12, 13
+- Adessive ("on"): *-lla* (back) / *-llä* (front) — items 16, 17
+- Elative ("out of"): *-sta* (back) / *-stä* (front) — items 18, 19
+
+**6. Vowel harmony:** Case suffixes alternate in vowel quality based on the stem's vowel class. Stems with back vowels (a, o, u) take back-vowel suffixes; stems with front vowels (ä, ö, y) take front-vowel suffixes. Evidence: *talo* (back) → *talossa*, *kalalla*, *talosta*; *kynttilä* (front) → *kynttilässä*, *pöydällä*, *kynttilästä*. The possessive suffixes do NOT alternate (they are stable across vowel classes: *-ni, -si, -nsa, -mme, -nne*).
+
+**7. Morphological ordering:** When both a case suffix and a possessive suffix appear on the possessed noun, the order is: **stem + case + possessive**. Evidence: *talossa* (item 12) vs. *talossani* (item 14): the inessive *-ssa* is inserted between the stem and the possessive *-ni*. Similarly, *kalalla* (from item 16, minus -si) vs. *kalallasi* (item 16): adessive *-lla* precedes *-si*.
+
+**8. Stem alternation:** The noun *pöytä* (table) alternates to *pöyd-* before case suffixes (consonant gradation t→d). Evidence: *pöytäsi* (item 9, no case suffix, stem is *pöytä-*) vs. *pöydällämme* (item 17, with case suffix, stem is *pöyd-*).
+
+**Answers:**
+
+**A1.** *Liisan kynttilä*: Liisa.GEN + candle. 3SG possessor, no possessive suffix (optional with 3SG). → "Liisa's candle"
+
+**A2.** *kalamme*: fish + 1PL.POSS. Suffix-only construction. → "our fish"
+
+**A3.** *pöydälläsi*: pöyd- + adessive(-llä, front) + 2SG.POSS(-si). → "on your table"
+
+**A4.** *kynttilänsä*: candle + 3SG.POSS(-nsa). Suffix-only. → "his/her candle"
+
+**B1.** "in your (plural) house": *talo* + inessive(-ssa, back) + 2PL.POSS(-nne) = **talossanne**
+
+**B2.** "on his/her fish": *kala* + adessive(-lla, back) + 3SG.POSS(-nsa) = **kalallansa**
+
+**B3.** "out of our candle": *kynttilä* + elative(-stä, front) + 1PL.POSS(-mme) = **kynttilästämme**
+
+**B4.** "out of your (plural) table": *pöytä* → *pöyd-* (stem alternation before case suffix) + elative(-stä, front) + 2PL.POSS(-nne) = **pöydästäänne**
+
+DIFFICULTY
+
+**Level 2 (Moderate).** The puzzle requires the solver to simultaneously discover multiple interacting systems: (a) GenN word order and genitive marking on the possessor, (b) a five-value possessive suffix paradigm on the head noun, (c) an agreement relationship between the two marked elements, (d) three case suffixes with vowel harmony, and (e) a morphological ordering rule (case before possessive). The production questions (Part B) require combining 3–4 independently discovered rules in a single form, with B4 additionally requiring inference of a stem alternation. No single rule is individually difficult, but their interaction creates a multi-layered reasoning task appropriate for an Olympiad setting.

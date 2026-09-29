@@ -1,0 +1,129 @@
+
+
+TARGET-LANGUAGE: Amele (Trans-New Guinea / Madang / Mabuso)
+
+CORE
+
+1. Possessive classification via suffixes
+   - Source concept adapted from: "Noun class system with systematic singular-plural alternations"
+   - Target-language realization: Amele has more than five possessive classes (WALS 59A-4). Possession is marked by suffix on the possessed noun (WALS 57A-2). Different noun classes take different possessive suffixes. Morphology is exclusively concatenative (WALS 20A-1) and strongly suffixing (WALS 26A-2).
+   - Intended solver inference: From possessive data (noun + possessive suffix pairs), the solver groups nouns into classes based on shared suffix sets. The solver discovers that the "class" system in Amele is a possessive classification, not a gender or noun class system in the Bantu/Nilo-Saharan sense.
+   - Priority: REQUIRED
+
+2. Human-only obligatory plural
+   - Source concept adapted from: "Singular-plural distinction marked by systematic phonological alternations"
+   - Target-language realization: Plural marking occurs only on human nouns and is obligatory (WALS 34A-3). Non-human nouns have no plural form.
+   - Intended solver inference: The solver identifies which nouns are human based on the presence of a plural form. This creates a clear binary semantic distinction discoverable purely from morphological evidence.
+   - Priority: REQUIRED
+
+3. Mixed morphological plural strategies
+   - Source concept adapted from: "Systematic phonological alternations" (consonant/vowel alternations in Dinka)
+   - Target-language realization: No single plural strategy is primary (WALS 33A-6). Different human nouns employ different morphological strategies for plural (e.g., different suffixes, possibly reduplication given WALS 27A-1).
+   - Intended solver inference: The solver must discover that plural marking is not uniform across human nouns and identify the distinct strategies. This parallels the Dinka puzzle's requirement to discover systematic alternation patterns, but the "alternations" here are morphological (different affixes) rather than phonological.
+   - Priority: HIGH
+
+4. Verb agreement marking both A and P
+   - Source concept adapted from: "Verb agreement with noun class"
+   - Target-language realization: The verb marks both the A (subject of transitive) and P (object) arguments (WALS 102A-5). Head marking (WALS 23A-1). Accusative alignment (WALS 100A-2). No zero realization of 3rd person (WALS 103A-2). No inclusive/exclusive distinction (WALS 40A-3).
+   - Intended solver inference: The solver builds the verb agreement paradigm from data, identifying person/number markers for both subject and object positions.
+   - Priority: REQUIRED
+
+5. Cross-paradigm correspondence: nominal number → verbal number
+   - Source concept adapted from: "Correspondence between verb conjugation and noun declension patterns"
+   - Target-language realization: Human nouns have singular and plural forms; the verb has corresponding singular and plural agreement forms (WALS 80A-2: singular-plural pairs, no suppletion). The number of the nominal argument determines the number of the verbal agreement marker.
+   - Intended solver inference: The solver discovers that the human/non-human distinction (identified from nominal plural) is reflected in verbal agreement (singular vs. plural verb forms). This is the central cross-paradigm link, analogous to Dinka's 1st-person-verb = singular-noun / 3rd-person-verb = plural-noun correspondence.
+   - Priority: REQUIRED
+
+6. P precedes A on the verb
+   - Source concept adapted from: "Correspondence between verb conjugation and noun declension patterns" (specific ordering)
+   - Target-language realization: On the verb, the P (object) person/number marker precedes the A (subject) person/number marker (WALS 104A-3).
+   - Intended solver inference: From transitive verb forms, the solver determines the linear order of the two agreement markers. This is a specific, checkable pattern that adds precision to the verb paradigm.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Syncretic person/number marking
+   - Phenomenon: Subject person/number marking is syncretic (WALS 29A-2). Some person/number combinations share the same verbal form.
+   - Intended solver inference: The solver notices that not all person/number combinations have distinct forms and must identify which are syncretic.
+   - Interaction with CORE: Complicates the verb agreement paradigm (CORE #4, #5). The solver cannot simply assume a full paradigm; must identify gaps/syncretisms from the data.
+   - Difficulty contribution: MEDIUM-HIGH. Prevents the solver from overgeneralizing a regular paradigm.
+   - Priority: HIGH
+
+2. Consistent postnominal modification
+   - Phenomenon: Adjectives (WALS 87A-2), demonstratives (WALS 88A-2), numerals (WALS 89A-2), and relative clauses (WALS 90A-1) all follow the noun.
+   - Intended solver inference: The solver discovers a uniform postnominal modification pattern, which aids in parsing noun phrases and identifying the head noun.
+   - Interaction with CORE: Helps the solver segment noun phrases correctly, which is necessary for identifying possessive classes (CORE #1) and plural forms (CORE #2).
+   - Difficulty contribution: LOW. Provides a reliable parsing tool that makes other inferences easier.
+   - Priority: HIGH
+
+3. Adjectives and relative clauses formally collapsed
+   - Phenomenon: Adjectives and relative clauses are not formally distinguished (WALS 60A-4). Predicative adjectives have nonverbal encoding (WALS 118A-2). Adjectives may occur without a noun and without marking (WALS 61A-2).
+   - Intended solver inference: The solver encounters postnominal modifiers that could be either adjectives or relative clauses and must recognize that the language does not formally distinguish them. This creates genuine ambiguity in some examples.
+   - Interaction with CORE: Interacts with postnominal modification (TARGET-SPECIFIC #2) — the solver must parse postnominal elements but cannot always determine their category. This adds a layer of uncertainty to noun phrase analysis.
+   - Difficulty contribution: MEDIUM. Creates a principled ambiguity that the solver must acknowledge rather than resolve.
+   - Priority: HIGH
+
+4. Optional double negation
+   - Phenomenon: Both a preverbal negative word (WALS 143E-1) and a negative suffix (WALS 143F-2) exist. Both can appear simultaneously (optional double negation, WALS 143A-15). No negative tone, infix, or stem change (WALS 143G-4).
+   - Intended solver inference: The solver discovers that negation can be marked by a preverbal word, a verbal suffix, or both, and that the double marking is optional (not obligatory).
+   - Interaction with CORE: Adds a layer to verb analysis (CORE #4). The solver must identify the negative morphemes within the verbal complex alongside person/number markers.
+   - Difficulty contribution: MEDIUM. The optionality means the solver must recognize that the absence of one negation marker does not mean the sentence is affirmative.
+   - Priority: OPTIONAL
+
+5. No second-person imperatives
+   - Phenomenon: The language has no morphologically dedicated second-person imperatives (WALS 70A-5). However, it has a maximal imperative-hortative system (WALS 72A-1).
+   - Intended solver inference: The solver notices a gap in the imperative paradigm — 2nd person forms are absent while other persons have imperative markers.
+   - Interaction with CORE: Creates an irregularity in the verb paradigm that the solver must account for.
+   - Difficulty contribution: LOW-MEDIUM. A noticeable gap that tests whether the solver is building a complete paradigm or just pattern-matching.
+   - Priority: OPTIONAL
+
+6. Split nominal and locational predication
+   - Phenomenon: Nominal predication ("X is Y") and locational predication ("X is at Z") are encoded differently (WALS 119A-1). Zero copula is possible (WALS 120A-2).
+   - Intended solver inference: The solver discovers that "is" sentences are not all formed the same way — the type of predicate (nominal vs. locational) determines the encoding strategy.
+   - Interaction with CORE: Adds to the overall grammatical picture; helps the solver understand that Amele has a nonverbal predication system (consistent with WALS 118A-2).
+   - Difficulty contribution: MEDIUM. Requires the solver to distinguish predicate types.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive classification × Human-only plural:
+   - The solver discovers two independent classification systems: possessive class (which suffixes a noun takes for possession) and human/non-human (whether a noun has plural). These are orthogonal — a noun's possessive class does not determine whether it is human. The solver must maintain both systems independently.
+   - Additional inference: The solver learns that "class" in Amele does not mean "gender" or "noun class" in the Bantu sense; it is specifically a possessive classification.
+
+2. Human-only plural × Verb agreement (cross-paradigm):
+   - The human/non-human distinction (discovered from nominal plural) is the key to verbal number agreement. Only human referents trigger plural verb forms. Non-human referents always take singular verb forms regardless of semantic number.
+   - Additional inference: The solver discovers that "number" in Amele is not a universal nominal category but is restricted to the human domain, and this restriction is reflected in agreement.
+
+3. Mixed plural strategies × Possessive classification:
+   - Both systems involve grouping nouns into categories with different morphological behavior. The solver may initially conflate them (thinking possessive class determines plural strategy) but must discover they are independent.
+   - Additional inference: The solver learns to distinguish between different types of "class" systems and their independent morphological consequences.
+
+4. Syncretism × P-before-A order:
+   - Syncretism means some person/number combinations are ambiguous. The P-before-A order helps disambiguate: in a transitive clause, the first marker is P and the second is A. If a form is syncretic, the solver must use the structural position to determine which argument it marks.
+   - Additional inference: The solver learns that linear order is a disambiguation tool in the face of syncretism.
+
+5. Postnominal modification × Adjective/relative clause collapse:
+   - The consistent postnominal pattern tells the solver WHERE modifiers go, but the adjective/relative clause collapse means the solver cannot always determine WHAT TYPE of modifier it is. This creates a productive ambiguity: the solver can parse the structure but not always the category.
+   - Additional inference: The solver learns that structural parsing and categorical identification are separate tasks, and that some languages do not provide formal cues for the latter.
+
+CONSTRAINTS
+
+1. Do NOT present Amele as having a "noun class" or "gender" system. The possessive classification is a different type of class system. The puzzle should make the solver discover that the "classes" are specifically possessive classes, not semantic/gender classes.
+
+2. Do NOT imply that non-human nouns can have plural forms. Plural is strictly human-only and obligatory. Any non-human noun in the data must appear without a plural form.
+
+3. The verb paradigm must reflect syncretism accurately. Do not present a fully regular paradigm. The solver must be able to identify which forms are shared.
+
+4. The P-before-A order must be consistent across all transitive examples. This is a fixed morphological order, not a variable one.
+
+5. Do NOT use tone, vowel length, or consonant alternation as morphological markers. Amele has no tones (WALS 13A-1), no evidence of vowel length contrast, and is exclusively concatenative (WALS 20A-1). All morphological marking is by concatenation (suffixes).
+
+6. The adjective/relative clause collapse should be presented as genuine ambiguity, not as a trick. The solver should be able to recognize that the language does not formally distinguish these categories, rather than being "tricked" into misidentifying one as the other.
+
+7. If optional double negation is included, both the single-negation and double-negation forms must appear in the data so the solver can discover the optionality. Do not present only double-negation forms (which would suggest obligatoriness).
+
+8. The possessive class system should have enough classes (at least 4-5 in the data) to make the classification non-trivial, but not so many that the puzzle becomes unmanageable. The WALS value is ">5" so the actual number should be at least 5.
+
+9. All morphological processes must be suffixal. No prefixes, infixes, or non-concatenative processes should appear in the data.
+
+10. The cross-paradigm link (nominal number → verbal number) must be the central "aha" moment of the puzzle. The data should be structured so that the solver first discovers nominal plural (human-only), then discovers verbal number agreement, and then realizes the connection between them.

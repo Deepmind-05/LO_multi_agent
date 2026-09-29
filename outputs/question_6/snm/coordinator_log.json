@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract a rich set of linguistic features and mappings for target language code 'snm'. Include typologically relevant phonological, morphological, and syntactic properties, with clear examples and glosses where possible. Ensure the concepts are deep enough to support a non-trivial puzzle and avoid assumptions that may not be supported by the language.",
+    "elapsed_seconds": 0.3
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has already produced concepts for the target language, but the pipeline has no rationale yet. The next required step is to design the reasoning blueprint and sentence structure rules so Agent 3 can generate a valid puzzle.",
+    "directive": "Using the existing linguistic concepts for 'snm', design a clear step-by-step reasoning framework and sentence structure rules for a non-trivial Linguistic Olympiad puzzle. Ensure the rules are internally consistent, typologically plausible, and sufficient for generating solvable questions with unambiguous answers.",
+    "elapsed_seconds": 10.0
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete puzzle dataset, questions, and answer key based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'snm' using the existing concepts and rationale. Include a clear data section with glossed examples, well-formed non-trivial questions, and an unambiguous answer key. Ensure all vocabulary is glossed, all questions are solvable from the provided data, and the puzzle is ready for validation.",
+    "elapsed_seconds": 15.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 rigorously validate the puzzle before any further revision or completion.",
+    "directive": "Validate the generated Linguistic Olympiad puzzle for target language 'snm'. Check that the data section is complete and properly glossed, that all questions are solvable from the provided data, that the answer key is unambiguous and correct, and that the linguistic reasoning is internally consistent and typologically plausible. Return a clear verdict of PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if issues are found.",
+    "elapsed_seconds": 24.0
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle. Agent 4 has validated the puzzle and returned a PASS verdict, with no unresolved issues. Since the puzzle is fully verified and acceptable, the process should finish successfully.",
+    "directive": "No further action required; the puzzle passed validation.",
+    "elapsed_seconds": 28.5
+  }
+]

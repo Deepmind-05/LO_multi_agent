@@ -1,0 +1,94 @@
+
+
+TARGET-LANGUAGE: Tagalog
+
+CORE
+
+Both SOURCE CONCEPTS are DROPPED.
+
+- 30A-2 (Two genders): DROPPED. Tagalog has no productive grammatical gender system. There is no gender agreement on adjectives, determiners, or articles. WALS 44A confirms "No gender distinctions" in pronouns. The WALS 30A-2 entry for Tagalog does not correspond to a productive gender agreement system analogous to Swedish. No natural, inferable realization exists for a puzzle.
+
+- 84A-2 (Dependent marking in NPs with adjectives): DROPPED. Tagalog adjectives do not inflect for agreement with the noun. There is no dependent marking in noun phrases. WALS 61A confirms adjectives occur "without marking." No natural realization exists.
+
+TARGET-SPECIFIC
+
+1. Focus/Voice system (verb morphology)
+   - Phenomenon: The verb is affixed to indicate which semantic role (actor, patient, locative, instrumental, beneficiary) is in "focus" (i.e., serves as the topic of the clause). Different affixes (prefixes, infixes, suffixes) encode different focus types.
+   - Intended solver inference: From a set of verb forms with different affixes paired with different argument structures, the solver identifies that the affix encodes which argument is topic/focus, not a passive/active distinction.
+   - Interaction with CORE: N/A (replaces dropped source concepts as the central morphological insight).
+   - Difficulty contribution: HIGH. The solver must recognize that what looks like "voice" is actually a focus/topic system, and must map affixes to semantic roles.
+   - Priority: REQUIRED
+
+2. Aspect marking via reduplication
+   - Phenomenon: Tagalog marks aspect (perfective, imperfective, contemplative) partly through partial reduplication of the first syllable of the verb root. Perfective typically lacks reduplication; imperfective includes it; contemplative uses a different strategy (often reduplication of a different segment or a prefix).
+   - Intended solver inference: The solver identifies that the repeated syllable is not a separate morpheme but a reduplicative aspect marker, and that its presence/absence/position correlates with aspectual meaning.
+   - Interaction with CORE: N/A.
+   - Difficulty contribution: HIGH. Reduplication as a grammatical (not derivational) marker is typologically less familiar to many solvers.
+   - Priority: REQUIRED
+
+3. Interaction: focus affix determines reduplication position
+   - Phenomenon: The position of the reduplicated syllable depends on which focus affix is present. For example, with an infix (e.g., -um-), reduplication may appear before the infix; with a prefix (e.g., mag-), it may appear after the prefix; with a suffix (e.g., -in), it may appear before the suffix. The exact pattern is systematic.
+   - Intended solver inference: The solver must discover that reduplication position is not arbitrary but is determined by the focus affix, revealing a morphological ordering rule.
+   - Interaction with CORE: N/A. This is the central puzzle insight combining concepts 1 and 2.
+   - Difficulty contribution: VERY HIGH. This is the key non-trivial inference: the solver must notice that the same aspect (e.g., imperfective) is realized differently depending on the focus affix, and extract the ordering rule.
+   - Priority: REQUIRED
+
+4. Inclusive/exclusive first person plural
+   - Phenomenon: Tagalog distinguishes "we" inclusive (speaker + listener) from "we" exclusive (speaker + others, not listener) in independent pronouns.
+   - Intended solver inference: From a pronoun paradigm, the solver identifies the inclusive/exclusive distinction and maps it to the semantic relationship between participants.
+   - Interaction with CORE: N/A. Provides a clean, separate puzzle element.
+   - Difficulty contribution: MEDIUM. Typologically well-known; solvers with general linguistic knowledge will recognize it.
+   - Priority: HIGH
+
+5. Generic classifiers with numerals
+   - Phenomenon: Tagalog uses generic classifiers (e.g., tao 'person', bagay 'thing', hayop 'animal') between the numeral and the noun: "isang tao" (one person), "isang bagay" (one thing).
+   - Intended solver inference: The solver identifies that the word between numeral and noun is a classifier encoding a semantic category of the head noun, and that different nouns take different classifiers.
+   - Interaction with CORE: N/A. Provides a semantic-mapping element.
+   - Difficulty contribution: MEDIUM. The concept of classifiers is typologically known; the specific Tagalog system (generic, not elaborate) is straightforward.
+   - Priority: HIGH
+
+6. Locative marking and locative focus
+   - Phenomenon: Locative arguments are marked by the preposition "sa" (at/in/on). The verb can also take a locative focus affix, promoting the location to topic.
+   - Intended solver inference: The solver identifies that "sa" marks locative arguments and that the verb can be marked for locative focus, parallel to actor/patient focus.
+   - Interaction with CORE: Extends the focus system (concept 1) to a third semantic role, making the focus system more complete and the puzzle richer.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a third focus type, increasing the number of affixes the solver must map.
+   - Priority: HIGH
+
+7. Adjectives as verbs (verbal encoding of adjectives)
+   - Phenomenon: Predicative adjectives in Tagalog are encoded as verbs (no copula required). "Maganda siya" = "She is beautiful" where "maganda" functions as a predicate verb.
+   - Intended solver inference: The solver identifies that adjectives do not require a separate copula and function as predicates directly, revealing a different adjective/verb boundary than in Indo-European languages.
+   - Interaction with CORE: N/A. Can be presented as a separate observation or integrated into the verb data.
+   - Difficulty contribution: LOW-MEDIUM. Clean observation; may be a "bonus" identification.
+   - Priority: OPTIONAL
+
+8. Penultimate stress
+   - Phenomenon: Tagalog has fixed penultimate (second-from-right) stress, not sensitive to syllable weight.
+   - Intended solver inference: If stress is marked in the data, the solver identifies the fixed penultimate pattern.
+   - Interaction with CORE: N/A. Phonological element; can be a separate sub-question.
+   - Difficulty contribution: LOW. Simple pattern identification.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Focus affix × Aspect reduplication (concepts 1, 2, 3):
+   - The focus affix determines the position of the reduplicated syllable. The solver must extract a morphological ordering rule: [prefix] + [reduplication] + [root] + [infix/suffix] vs. [prefix] + [root] + [infix] + [reduplication] + [suffix], etc. This is the central puzzle challenge.
+
+2. Focus affix × Noun phrase marking (concept 1 + topic markers):
+   - The focus-marked argument on the verb corresponds to the noun phrase marked by "ang" (or "si" for personal names). The solver can cross-reference verb affixes with NP markers to confirm the focus mapping. This provides a verification mechanism.
+
+3. Classifiers × Noun semantics (concept 5):
+   - The classifier encodes a semantic category (animate person, animate non-person, inanimate). The solver must map nouns to classifiers based on semantic properties, creating a semantic reasoning task.
+
+4. Inclusive/exclusive × Pronoun paradigm (concept 4):
+   - The inclusive/exclusive distinction is only visible in the first person plural. The solver must identify which form is which based on contextual or paradigmatic evidence.
+
+CONSTRAINTS
+
+- Do NOT present any gender system or adjective-noun agreement as a feature of Tagalog. These do not exist and would be factually incorrect.
+- The focus/voice system must be presented with enough verb forms (at least 3-4 focus types × 2-3 aspects) for the solver to identify both the affix-to-role mapping and the reduplication ordering rule.
+- Reduplication patterns must be internally consistent in the puzzle data. The solver should be able to extract a single, clean ordering rule.
+- Classifiers should be presented with at least 3 different semantic categories and enough nouns per category to allow the solver to identify the mapping.
+- The inclusive/exclusive distinction should be presented in a context where the semantic difference is inferable (e.g., through translation or contextual clues), not just as an abstract paradigm.
+- If penultimate stress is included, stress marks must be consistent and unambiguous in the data.
+- The puzzle should not require the solver to know Tagalog vocabulary; all semantic content should be provided through glosses or translations.
+- The "ang/si" topic markers should be presented as part of the focus system data, not as a separate "case" system, to avoid misleading the solver into thinking Tagalog has morphological case.

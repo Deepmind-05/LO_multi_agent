@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language 'hak' so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for the target language 'hak'. Identify core phonological, morphological, syntactic, and lexical features suitable for a Linguistic Olympiad puzzle, including clear mappings between surface forms and underlying structures, and provide enough depth to support non-trivial reasoning.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for 'hak' are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules so Agent 3 can generate a valid puzzle.",
+    "directive": "Using the existing linguistic concepts for 'hak', design a clear, non-contradictory step-by-step rationale for a Linguistic Olympiad puzzle. Define the morphological, syntactic, and lexical rules needed to construct solvable sentences, specify how surface forms map to underlying structures, and provide enough structural detail for Agent 3 to generate a complete puzzle with unambiguous questions and answers.",
+    "elapsed_seconds": 5.8
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale for 'hak' are already present, but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete puzzle dataset, questions, and answer key based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for the target language 'hak' using the existing concepts and rationale. Include a clear DATA section with all necessary vocabulary and glosses, well-formed questions, and a correct answer key. Ensure the puzzle is solvable, non-trivial, internally consistent, and free of missing vocabulary, typos, or ambiguous translations.",
+    "elapsed_seconds": 17.0
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and validate the newly generated puzzle.",
+    "directive": "Solve and rigorously validate the generated 'hak' Linguistic Olympiad puzzle. Check the DATA section for missing vocabulary or unglossed items, verify all questions are unambiguous and non-trivial, confirm the answer key is correct and internally consistent, and return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 27.3
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle. The validator has returned a PASS verdict, and puzzle_needs_validation is false, so the puzzle is fully verified and acceptable. The correct next action is to finish successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 32.6
+  }
+]

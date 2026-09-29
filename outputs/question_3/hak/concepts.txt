@@ -1,0 +1,61 @@
+
+
+TARGET-LANGUAGE: Hakka (hak)
+
+CORE
+
+1. Concept: Dependent marking in possessive noun phrases (source 81A-2)
+   Target-language realization: The possessor is marked by the genitive/possessive particle 个 (go), which follows the possessor noun. The possessed noun carries no possessive morphology.
+   Intended solver inference: The solver identifies that the particle attaches to the possessor (not the possessed), establishing dependent marking. The particle's consistent position relative to the two nouns reveals which is the possessor.
+   Priority: REQUIRED
+
+2. Concept: Genitive construction (source 83A-1)
+   Target-language realization: Possession is expressed via the particle 个 (go) inserted between possessor and possessed. This is a post-positional genitive marker on the possessor.
+   Intended solver inference: The solver recognizes a consistent particle appearing between two nouns in a fixed position, identifying it as a relational (genitive/possessive) marker.
+   Priority: REQUIRED
+
+3. Concept: Possessor before possessed (adaptation of source 84A-2, which specified possessed-before-possessor)
+   Target-language realization: The order is Possessor + 个 + Possessed. The source concept (possessed before possessor) does NOT apply to Hakka and is replaced by the actual order.
+   Intended solver inference: The solver determines the linear order of possessor and possessed from the data. The particle 个 immediately follows the possessor, anchoring the order.
+   Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Tone sandhi (disyllabic and polysyllabic)
+   Intended solver inference: The solver observes that the same underlying syllable surfaces with different tones depending on the tone of the following syllable. By comparing surface forms across contexts, the solver reconstructs the underlying tone and the sandhi mapping rules. The final syllable in a sequence typically retains its underlying tone, providing an anchor.
+   Interaction with CORE concepts: In possessive phrases (Possessor + 个 + Possessed), sandhi applies across the full sequence. The possessive particle 个 has its own underlying tone and participates in sandhi, creating a chain of tonal changes that the solver must work through. This makes the possessive construction a natural testing ground for sandhi rules.
+   Difficulty contribution: HIGH. This is the central puzzle mechanism. The solver must (a) identify that tones are not fixed, (b) determine which tone is underlying vs. surface, (c) reconstruct the sandhi rules, and (d) apply them to novel sequences. The interaction with the possessive construction adds a layer of complexity (multi-syllable sandhi chains).
+   Priority: REQUIRED
+
+2. Phenomenon: Six-tone system
+   Intended solver inference: The solver identifies the set of distinct tone values from the data. The number of tones and their distribution across syllables constrains the possible sandhi mappings.
+   Interaction with CORE concepts: The tone system provides the phonological framework within which sandhi operates. The possessive particle 个 has a specific underlying tone that is part of the sandhi computation.
+   Difficulty contribution: MEDIUM. The tone inventory itself is straightforward to identify, but the interaction with sandhi creates the core reasoning challenge.
+   Priority: REQUIRED
+
+3. Phenomenon: No voicing contrast in obstruents
+   Intended solver inference: The solver observes that the consonant inventory contains no voiced/voiceless pairs (e.g., no /b/-/p/, /d/-/t/, /g/-/k/ contrasts). All plosives and fricatives are voiceless.
+   Interaction with CORE concepts: This constrains the consonant inventory available in the puzzle data, ensuring that consonant identity is unambiguous and that the solver's attention is directed toward tonal and morphosyntactic patterns rather than voicing distinctions.
+   Difficulty contribution: LOW (as a constraint on data design rather than a puzzle feature per se). It prevents the puzzle from being confounded by voicing-based minimal pairs.
+   Priority: HIGH
+
+INTERACTIONS
+
+1. Tone sandhi × Possessive construction:
+   The possessive phrase (Possessor + 个 + Possessed) creates a multi-syllable sequence where sandhi applies in a chain. The solver must determine how sandhi propagates through the phrase: does the first syllable's surface tone depend on the particle's underlying tone? Does the particle's surface tone depend on the possessed noun's tone? This creates a non-trivial reasoning task that goes beyond simple disyllabic sandhi.
+
+2. Dependent marking × Tone sandhi:
+   The marked element (possessor + 个) is where sandhi effects are most visible. The solver can use the sandhi behavior to confirm which element is the possessor: the element that undergoes sandhi relative to the particle is the possessor. This creates a cross-verification between morphosyntactic and phonological evidence.
+
+3. Tone system × Sandhi rules:
+   The specific set of six tones determines the structure of the sandhi mapping. The solver must identify which underlying tones map to which surface tones in which contexts. The constraint that the final syllable retains its underlying tone provides a critical anchor for the inference.
+
+CONSTRAINTS
+
+- The puzzle data must contain enough examples for the solver to (a) identify the tone inventory, (b) discover the sandhi rules, and (c) identify the possessive construction. A minimum of several disyllabic and trisyllabic (possessive) examples is needed.
+- Tone values must be clearly and consistently represented in the data (e.g., using numerical tone labels or diacritics) so the solver can track tonal changes.
+- The possessive particle 个 must be phonologically distinguishable from other particles or function words in the data to avoid ambiguity.
+- The consonant inventory in the puzzle data must respect the no-voicing-contrast constraint: no voiced/voiceless pairs may appear.
+- The final syllable in a sandhi sequence should retain its underlying tone in the data, as this is the critical anchor for the solver's inference. If this is not the case, the puzzle becomes significantly harder to solve.
+- The puzzle should not require the solver to know that the language is Chinese or Hakka; all relevant properties must be inferable from the data alone.
+- The possessive construction should be the primary syntactic context for demonstrating sandhi, but the data should also include non-possessive examples (e.g., simple disyllabic words) to help the solver isolate the sandhi rules before applying them to the more complex possessive phrases.

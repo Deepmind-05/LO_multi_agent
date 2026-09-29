@@ -1,0 +1,113 @@
+
+
+TARGET-LANGUAGE: Evenki (Tungusic, Altaic)
+
+CORE
+
+1. Word order: SOV
+   - Source: VSO (19A-1)
+   - Target-language realization: Subject-Object-Verb (WALS 81A-1, 82A-1, 83A-1)
+   - Intended solver inference: From multiple examples, solver identifies that the verb consistently appears at the end of the clause, and that the subject precedes the object.
+   - Priority: REQUIRED
+
+2. Alignment: Nominative-Accusative
+   - Source: Ergative-Absolutive (16A-2)
+   - Target-language realization: Nominative-Accusative for full NPs and pronouns (WALS 98A-2, 99A-2); accusative alignment in verbal person marking (100A-2); only A marked on verb (102A-2)
+   - Intended solver inference: Solver identifies that intransitive subject (S) and transitive subject (A) share the same (zero/nominative) marking, while the transitive object (P) receives a distinct accusative suffix. This contrasts with the source's ergative-absolutive pattern.
+   - Priority: REQUIRED
+
+3. Tense-Aspect marking: suffixal
+   - Source: Verbal prefixes (18A-1)
+   - Target-language realization: Tense-aspect suffixes on the verb (WALS 69A-2); past/non-past distinction (66A-1); inflectional future (67A-1); perfective/imperfective aspect (65A-1); monoexponential TAM (21B-1); 6-7 categories per verb word (22A-4)
+   - Intended solver inference: Solver identifies that the verb carries a suffixal complex encoding tense and aspect. The position (suffix, not prefix) is observable from the data.
+   - Priority: REQUIRED
+
+4. Relative clause position: Prenominal
+   - Source: Postnominal (22A-1)
+   - Target-language realization: Relative clause precedes the head noun (WALS 90A-2, 90B-1)
+   - Intended solver inference: Solver identifies that the modifying clause appears before the noun it modifies, not after.
+   - Priority: HIGH
+
+5. Case marking: rich suffixal system
+   - Source: Polynesian a/e case system (two-case prepositional system)
+   - Target-language realization: 10+ case categories (WALS 49A-8), all expressed as suffixes (51A-1), no syncretism (28A-4), symmetrical marking (50A-2)
+   - Intended solver inference: Solver identifies that nouns take a variety of distinct case suffixes marking different grammatical/semantic roles. The basic nominative-accusative pattern is embedded within this richer system.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Obligatory double negation (preverbal word + postverbal suffix)
+   - Phenomenon: Negation requires two elements: a preverbal negative word and a postverbal negative suffix (WALS 112A-6, 143A-14, 143B-2, 144N-4: SONeg[V-Neg]). The preverbal element is a separate word that only occurs with the suffix (144R-5); the suffix only occurs with the word (144S-6).
+   - Intended solver inference: Solver observes that negative sentences contain two negative elements in fixed positions (one before the verb, one after), while positive sentences contain neither. The obligatoriness and fixed positions are inferable from consistent data.
+   - Interaction with CORE: The postverbal negative suffix is part of the same verbal suffixal complex as tense/aspect markers (interaction with #3). The preverbal negative word's position is determined by SOV order (interaction with #1).
+   - Difficulty contribution: HIGH — creates a clear, observable pattern that is typologically distinctive and requires the solver to identify both elements and their fixed positions.
+   - Priority: HIGH
+
+2. Evidentiality integrated into the tense system
+   - Phenomenon: Direct and indirect evidentials are part of the tense system (WALS 77A-3, 78A-3). The verbal suffixal complex encodes source of information alongside tense/aspect.
+   - Intended solver inference: Solver identifies that some verbal suffixes distinguish between directly witnessed events and indirectly known events. This is a separate dimension from tense/aspect but occupies the same morphological slot.
+   - Interaction with CORE: Directly interacts with tense-aspect suffixal marking (#3) — the same suffixal position encodes both dimensions, creating a multi-layered verbal complex.
+   - Difficulty contribution: MEDIUM-HIGH — adds a semantic layer to the verbal morphology that the solver must disentangle from tense/aspect.
+   - Priority: HIGH
+
+3. Gap strategy in relative clauses
+   - Phenomenon: Relativization on subjects and obliques uses a gap strategy (WALS 122A-4, 123A-4). The relativized element is simply absent from the relative clause.
+   - Intended solver inference: Solver identifies that the relative clause contains a "missing" element whose identity is determined by the head noun's case/role. No relative pronoun or resumptive element is present.
+   - Interaction with CORE: Interacts with prenominal RC position (#4) and case marking (#5) — the case on the head noun helps identify which element is gapped.
+   - Difficulty contribution: MEDIUM — the gap is observable by comparing the RC to a corresponding independent clause.
+   - Priority: HIGH
+
+4. Inclusive/exclusive first-person plural distinction
+   - Phenomenon: Inclusive and exclusive 1PL are distinguished in both independent pronouns and verbal inflection (WALS 39A-5, 40A-5).
+   - Intended solver inference: Solver identifies that "we" has two distinct forms depending on whether the addressee is included.
+   - Interaction with CORE: Interacts with verbal person marking (part of the suffixal complex in #3).
+   - Difficulty contribution: MEDIUM — adds a person-marking dimension that is typologically interesting.
+   - Priority: OPTIONAL
+
+5. Deranked subordinate clauses
+   - Phenomenon: Purpose, temporal, reason, and complement clauses use deranked (non-finite) verb forms (WALS 125A-3, 126A-3, 127A-3, 128A-3). Suffixal adverbial subordinators (94A-4).
+   - Intended solver inference: Solver identifies that subordinate clauses use a different (non-finite) verbal form that lacks tense marking, distinguished from main-clause verbs.
+   - Interaction with CORE: Interacts with tense-aspect marking (#3) — the absence of tense in subordinate clauses is only interpretable against the background of tense marking in main clauses.
+   - Difficulty contribution: MEDIUM — adds a clause-structure dimension.
+   - Priority: OPTIONAL
+
+6. Zero copula / nonverbal predication
+   - Phenomenon: Predicative adjectives use nonverbal encoding (118A-2); nominal and locational predication share identical encoding (119A-2); zero copula is possible (120A-2).
+   - Intended solver inference: Solver identifies that "X is Y" and "X is in Y" constructions do not use a copula verb; the predicate noun/adjective simply appears in a predicate position.
+   - Interaction with CORE: Provides a contrast to the source's dedicated existential verb. Interacts with word order (#1) — the predicate appears in the final (verb) position.
+   - Difficulty contribution: LOW-MEDIUM — relatively straightforward to observe.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. SOV + Double negation: The preverbal negative word is positioned between the object and the verb (SONegV), while the postverbal negative suffix is the first element of the verbal suffixal complex. The solver must identify both elements and their fixed positions relative to the verb, using SOV as the frame.
+
+2. Tense-aspect suffixes + Evidentiality + Negative suffix: The verbal suffixal complex encodes (at minimum) tense/aspect, evidentiality, and (in negative sentences) the negative suffix. The solver must identify the ordering and function of multiple suffixes on the same verb stem. This creates a multi-layered morphological analysis task.
+
+3. Nominative-Accusative + Rich case system: The basic alignment pattern (S/A = nominative/zero, P = accusative) is embedded within a system of 10+ distinct case suffixes. The solver must first identify the core alignment pattern, then recognize that additional cases mark other roles (locative, dative, etc.).
+
+4. Prenominal RC + Gap strategy + Case marking: The relative clause precedes the head noun, the relativized element is gapped, and the case on the head noun (or the absence thereof) helps identify which argument is relativized. The solver must integrate all three properties.
+
+5. SOV + Prenominal RC + AdjN + GenN: Evenki shows a consistent "modifier-precedes-head" pattern (RC-N, Adj-N, Gen-N, Num-N, Dem-N). The solver can identify this as a coherent typological tendency, reinforcing the SOV profile.
+
+CONSTRAINTS
+
+1. The puzzle must provide sufficient examples to establish SOV order unambiguously (at least 3-4 transitive and intransitive clauses with different S and O).
+
+2. The nominative-accusative alignment must be demonstrated through clear contrast: intransitive S and transitive A must appear with identical (zero) marking, while P must show a distinct accusative suffix. At least one intransitive and one transitive example are needed.
+
+3. Double negation must be shown in at least 2-3 negative examples to establish the obligatory co-occurrence of both elements and their fixed positions. Positive examples must show the absence of both.
+
+4. Evidentiality must be demonstrated through minimal pairs or clear contextual cues that distinguish direct from indirect evidence, with the same tense/aspect value held constant.
+
+5. The relative clause must be presented in a context where the gap is identifiable (e.g., the head noun's case or the semantic content makes the missing element clear). At least one example with a corresponding independent clause would help.
+
+6. The case system should show at least nominative (zero), accusative, and one or two additional cases (e.g., locative, dative) to demonstrate richness without overwhelming the solver.
+
+7. Tense/aspect suffixes must be clearly distinguishable from other verbal suffixes (e.g., person markers, negative suffix). The puzzle should provide examples that isolate tense/aspect variation.
+
+8. Do NOT include articles (Evenki has none). Do NOT include a dedicated existential verb (Evenki uses locational predication). Do NOT include prefixal tense marking (Evenki is suffixing).
+
+9. The inclusive/exclusive distinction, deranked subordination, and zero copula are OPTIONAL — include only if the puzzle remains clean and solvable. If included, they must be clearly demonstrated in the data.
+
+10. All target-language properties must be inferable from the puzzle data alone. The solver should not need any prior knowledge of Evenki or Tungusic languages.

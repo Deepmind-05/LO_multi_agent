@@ -1,0 +1,114 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to establish the linguistic foundation for the target language, so Agent 1 must be called to extract rich, typologically grounded linguistic features and mappings.",
+    "directive": "Extract a rich set of linguistic features and mappings for the target language 'inn' suitable for a Linguistic Olympiad puzzle. Focus on typologically meaningful phenomena such as morphology, word order, agreement, case, evidentiality, aspect, or other salient structural features. Provide clear feature definitions, contrasts, and possible mappings that can support a non-trivial reasoning puzzle.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has already produced a substantial set of linguistic concepts for the target language 'inn', but the pipeline currently lacks a rationale and puzzle. The next required step is to convert those concepts into a coherent reasoning blueprint and sentence-structure rules so that Agent 3 can later generate a valid Olympiad puzzle.",
+    "directive": "Using the existing linguistic concepts for 'inn', design a clear step-by-step rationale for a Linguistic Olympiad puzzle. Define the reasoning path, morphological or syntactic rules, sentence-structure templates, and any necessary contrasts or glossing conventions. Ensure the rationale is internally consistent, typologically plausible, and sufficient for generating non-trivial questions with unambiguous answers.",
+    "elapsed_seconds": 5.7
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline already contains linguistic concepts and a rationale, but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete Olympiad puzzle dataset, including data sentences, questions, and answer key, based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for the target language 'inn' using the existing concepts and rationale. Include a clear DATA section with glossed sentences, a set of non-trivial questions requiring linguistic reasoning, and an unambiguous answer key. Ensure all vocabulary is glossed, all questions are solvable from the provided data, and the puzzle is internally consistent with the rationale.",
+    "elapsed_seconds": 15.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle, and the puzzle is explicitly marked as needing validation. No validator verdict exists yet, so the next required step is to call Agent 4 to solve and rigorously validate the puzzle.",
+    "directive": "Solve and rigorously validate the generated Linguistic Olympiad puzzle for 'inn'. Check that all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the provided data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the rationale and linguistic concepts. Return a clear verdict of PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 21.3
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator reports that no usable puzzle was produced: the previous Agent 3 output stalled in an infinite loop over a phonological conflict and never generated the required CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections. The concepts and rationale are present and not identified as fundamentally flawed, so the next step is to re-run Agent 3 with explicit instructions to resolve the form conflict and produce a complete, well-formed puzzle.",
+    "directive": "Regenerate the complete Linguistic Olympiad puzzle for 'inn' from scratch. Do not loop on unresolved conflicts. If numeral N3 and adjective 'new' are both proposed as *yala*, assign distinct, internally consistent forms (for example, keep one as *yala* and change the other to a clearly different form such as *yalaa*, *yal*, or another plausible variant) and state the chosen forms in the lexicon. Produce all required sections: CONTEXT, DATA with fully glossed sentences, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary is glossed, all questions are non-trivial and solvable from the data, and the answer key is unambiguous.",
+    "elapsed_seconds": 24.4
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has concepts, rationale, and a regenerated puzzle, and puzzle_needs_validation is true with no validator verdict yet. The latest puzzle must be validated before any further action or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for 'inn'. Verify that all required sections are present, all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 30.1
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator reports a critical generation failure: Agent 3 did not produce a complete puzzle and became stuck in an internal reasoning loop over a lexicon conflict. The concepts and rationale are not identified as flawed, so the correct next step is to call Agent 3 again with explicit instructions to make a decisive lexical choice and output the full required puzzle structure.",
+    "directive": "Regenerate the complete Linguistic Olympiad puzzle for 'inn' from scratch. Do not output internal reasoning loops or unresolved conflicts. If numeral N3 and adjective 'new' are both proposed as *yala*, make a decisive choice and assign distinct, internally consistent forms (for example, keep one as *yala* and change the other to a clearly different form such as *yalaa*, *yal*, or another plausible variant), then state the chosen forms explicitly in the lexicon. Produce all required sections: CONTEXT, DATA with fully glossed sentences, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary is glossed, all questions are non-trivial and solvable from the provided data, and the answer key is unambiguous.",
+    "elapsed_seconds": 33.5
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now contains concepts, rationale, and a newly regenerated puzzle, and puzzle_needs_validation is true with no validator verdict yet. The latest puzzle must be validated before any further action or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for 'inn'. Verify that all required sections are present, all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the provided data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 38.1
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Revising puzzle implementation to address validator issues.",
+    "directive": "- [CRITICAL] Agent 3 output contains no actual puzzle \u2014 no CONTEXT, no DATA, no QUESTIONS, no ANSWERS, no SOLUTION. The output is an infinite loop of the agent failing to resolve a lexical conflict (N3 vs. adjective \"new\" both assigned to *yala*) and never producing a complete puzzle.\n- [CRITICAL] The entire output is a repetitive loop with no substantive content to validate. A complete puzzle must be generated before validation can proceed.",
+    "elapsed_seconds": 40.7
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now reports that a puzzle exists and puzzle_needs_validation is true, while no validator verdict is present. The latest puzzle must be validated before any further revision or completion.",
+    "directive": "Solve and rigorously validate the latest Linguistic Olympiad puzzle for 'inn'. Verify that all required sections are present, all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 46.4
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT2",
+    "reasoning": "The validator reports that the current Agent 3 output is not a usable puzzle: it contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION and is stuck in a lexical conflict where numeral N3 and adjective 'new' are both assigned to *yala*. This is not merely a typo or missing gloss; it is a structural/lexicon contradiction that has caused repeated generation failure. The safest next step is to route to Agent 2 to revise the rationale and explicitly resolve the conflicting lexical assignments before regenerating the puzzle.",
+    "directive": "Revise the rationale for 'inn' to eliminate the lexical conflict between numeral N3 and adjective 'new', both currently assigned to *yala*. Provide a clear, internally consistent lexicon with distinct forms for all required items (for example, keep one as *yala* and assign a different plausible form to the other, such as *yalaa*, *yal*, or another consistent variant). Explicitly state the chosen forms, their grammatical categories, and any derivational or inflectional patterns. Ensure the sentence-structure rules and morphological system contain no contradictions that could cause Agent 3 to loop or fail. After revision, the puzzle should be regenerated from scratch using the corrected rationale.",
+    "elapsed_seconds": 49.5
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline has concepts and a revised rationale, but no puzzle exists and no validation is pending. The previous failure was caused by Agent 3 looping over a lexical conflict; Agent 2 was routed to correct the rationale. The next step is to have Agent 3 regenerate the full puzzle from the corrected rationale, with explicit distinct lexical forms and all required sections.",
+    "directive": "Generate the complete Linguistic Olympiad puzzle for 'inn' from scratch using the revised rationale. Do not output internal reasoning loops. If any lexical conflict remains, make a decisive choice and assign distinct, internally consistent forms for numeral N3 and adjective 'new' (or any other conflicting items), and state the chosen forms explicitly in the lexicon. Produce all required sections: CONTEXT, DATA with fully glossed sentences, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary is glossed, all questions are non-trivial and solvable from the provided data, and the answer key is unambiguous.",
+    "elapsed_seconds": 58.5
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline currently contains concepts, rationale, and a newly generated puzzle, and puzzle_needs_validation is true with no validator verdict present. The latest puzzle must be validated before any further revision or completion.",
+    "directive": "Solve and rigorously validate the latest Linguistic Olympiad puzzle for 'inn'. Verify that all required sections are present, all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the provided data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 73.1
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator\u2019s FAIL is caused by concrete puzzle-level errors: an inconsistent numeral entry in Table 1, incorrect answers due to a systematic swap of tara and mala, a missing accusative suffix in Q4(b), and an internally contradictory solution derivation. These are implementation defects in the generated puzzle, not weaknesses in the linguistic concepts or the rationale. Agent 3 should patch the puzzle directly while preserving the existing concepts and rationale.",
+    "directive": "Patch the existing 'inn' puzzle directly without changing the concepts or rationale unless absolutely necessary. Fix all validator-identified errors: (1) Correct Table 1 entry 10 so the numeral expression and decimal value are consistent with the base-5 system; if 586 is intended, use the correct final digit sequence rather than 'mala kuru tara', or if the current expression is intended, change the value to 582. (2) Recompute and correct all affected answers, especially Q2(a), Q2(d), Q3(a), Q3(b), and Q3(c), ensuring the same digit values are used throughout: tara=2 and mala=1 if that is the established mapping. (3) Correct Q4(b) by adding the required accusative case suffix -wa to the object(s), e.g., use 'wara-wa nala' if the data require that marking. (4) Revise the solution derivation so it is internally consistent and does not contradict the digit assignments or case-marking rules. After patching, ensure all data entries, questions, answers, and solution are mutually consistent.",
+    "elapsed_seconds": 82.2
+  },
+  {
+    "step": 15,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline reports that a puzzle exists and puzzle_needs_validation is true, while no validator verdict is present. The latest puzzle was just generated or patched and must be validated before any further revision or completion.",
+    "directive": "Solve and rigorously validate the latest Linguistic Olympiad puzzle for 'inn'. Verify that all required sections are present, all data sentences are fully glossed, all vocabulary is defined or inferable, all questions are non-trivial and solvable from the data, the answer key is unambiguous and correct, and the puzzle is internally consistent with the concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 92.8
+  },
+  {
+    "step": 16,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, the puzzle exists, and puzzle_needs_validation is false. No unresolved issues remain, so the pipeline can finish successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 99.0
+  }
+]

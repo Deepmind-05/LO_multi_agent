@@ -1,0 +1,230 @@
+
+
+TARGET-LANGUAGE
+
+Supyire (Senufo, Niger-Congo, West Africa)
+
+CORE
+
+1. Suffixal definite article (source: 84A-2)
+   - Target-language realization: Supyire has a definite affix on the noun (WALS 37A-3: "Definite affix on noun"). The affix is a suffix that marks definiteness. Based on the noun class system (see TARGET-SPECIFIC #1), the definite suffix is expected to vary by class.
+   - Intended solver inference: The solver discovers that definiteness is marked morphologically on the noun via a suffix, and that the suffix form depends on the noun's class. This parallels the source concept (Norwegian/Swedish suffixal definite article) but in a language with a rich noun class system, making the discovery more complex.
+   - Priority: REQUIRED
+
+2. Negation (source: 100A-1, adapted)
+   - Target-language realization: Supyire has a complex negation system with optional double negation. WALS evidence: negative particle (112A-2); both symmetric and asymmetric negation (113A-3); asymmetric subtypes A/Fin and A/Cat (114A-5); optional double negation (143A-15, 144A-19, 144L-17); preverbal negative word (143E-1); postverbal negative word (143F-1); immediately postverbal (144B-4); pattern S(Neg)OVNeg (144O-2); preverbal negative only occurs with another negative morpheme (144Q-3); negative indefinites co-occur with predicate negation (115A-1). The source concept of a simple "post-verbal negative word" is adapted: Supyire has an obligatory postverbal negative element and an optional preverbal negative element, forming a double negation pattern.
+   - Intended solver inference: The solver discovers that negation is not a single element but involves two morphemes with specific positional requirements: an obligatory postverbal element and an optional preverbal element. The solver must determine which element is obligatory and which is optional, and identify the conditions under which the preverbal element appears. The asymmetric nature (different patterns for different grammatical categories) adds further complexity.
+   - Priority: REQUIRED
+
+3. Word order (source: 81A-1, adapted)
+   - Target-language realization: Supyire is SOV (WALS 81A-1: SOV; 82A-1: SV; 83A-1: OV). The source concept of SVO is adapted to SOV. Additional ordering evidence: postpositions (85A-1); Genitive-Noun (86A-1); Noun-Adjective (87A-2); Demonstrative-Noun (88A-1); Noun-Numeral (89A-2); OVX (84A-5); OV and Postpositions (95A-1); OV and NAdj (97A-2).
+   - Intended solver inference: The solver discovers the basic SOV word order and the consistent head-final pattern across multiple domains (postpositions, adjectives, numerals, genitives). This creates a typological contrast with the source SVO and provides a coherent ordering system for the solver to identify.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Noun class system (5+ classes, non-sex-based, semantic and formal assignment)
+   - Phenomenon: Supyire has a noun class system with five or more classes (WALS 30A-5). The system is non-sex-based (31A-3) and uses both semantic and formal assignment criteria (32A-3). Gender distinctions appear in 3rd person pronouns, both singular and non-singular (44A-2).
+   - Intended solver inference: The solver discovers that nouns are classified into multiple classes, and that the class is reflected in the definite suffix (and possibly in 3rd person pronouns). The solver must identify the class system from morphological evidence (different definite suffixes for different nouns) and possibly from pronoun forms.
+   - Interaction with CORE: The definite suffix (CORE #1) varies by noun class. The solver must identify the class system to fully understand the definite marking pattern. The 3rd person pronoun gender distinctions provide additional evidence for the class system.
+   - Difficulty contribution: HIGH — requires identifying an abstract classification system from morphological evidence; the solver must group nouns by their definite suffix forms and recognize the class system.
+   - Priority: HIGH
+
+2. Obligatory plural suffix
+   - Phenomenon: Supyire marks plurality with a suffix (WALS 33A-2), and this marking is obligatory for all nouns (34A-6: "All nouns, always obligatory").
+   - Intended solver inference: The solver discovers that plurality is marked by a suffix on the noun and that this marking is obligatory (not optional). The solver must determine the morphological order of the plural suffix relative to the definite suffix.
+   - Interaction with CORE: The plural suffix and definite suffix both appear on the noun. The solver must determine their relative order (e.g., Noun-Plural-Definite vs. Noun-Definite-Plural). This creates a morphological ordering puzzle.
+   - Difficulty contribution: MEDIUM — clear pattern but requires attention to morphological order and obligatoriness.
+   - Priority: HIGH
+
+3. Tense/aspect system with suppletion
+   - Phenomenon: Supyire has a past/non-past distinction with 2-3 degrees of past remoteness (WALS 66A-2). There is a grammatical perfective/imperfective aspect distinction (65A-1). There is no inflectional future (67A-2). Suppletion occurs in both tense and aspect (79A-3). The TAM is monoexponential (21B-1) with mixed position of TAM affixes (69A-4). The verb carries 2-3 categories per word (22A-2).
+   - Intended solver inference: The solver discovers the tense/aspect system by identifying different verb forms for different temporal/aspectual contexts. The suppletive patterns (different stems for different tense/aspect combinations) require the solver to recognize that some verb forms are not derivable by regular affixation.
+   - Interaction with CORE: The negation pattern (CORE #2) may vary by tense/aspect due to asymmetric negation (A/Fin and A/Cat). The solver must discover how negation interacts with the tense/aspect system. The SOV word order (CORE #3) provides the frame within which the verb and its TAM markers appear.
+   - Difficulty contribution: HIGH — complex verb paradigm with suppletion; the solver must identify the tense/aspect categories and the suppletive patterns.
+   - Priority: HIGH
+
+4. Asymmetric negation (A/Fin and A/Cat)
+   - Phenomenon: Supyire has both symmetric and asymmetric standard negation (WALS 113A-3). The asymmetric subtypes involve finiteness and other grammatical categories (114A-5: "A/Fin and A/Cat"). This means the negation pattern differs depending on whether the verb is finite or non-finite, and across other grammatical categories.
+   - Intended solver inference: The solver discovers that the negation pattern is not uniform but varies depending on the grammatical context. The solver must identify the conditions under which each negation pattern applies (e.g., finite vs. non-finite verbs, different aspectual forms).
+   - Interaction with CORE: The double negation pattern (CORE #2) applies differently in different grammatical contexts. The solver must identify the full range of negation patterns and their distributional conditions. This interacts with the tense/aspect system (TARGET-SPECIFIC #3) because the asymmetric negation is partly conditioned by finiteness/aspect.
+   - Difficulty contribution: HIGH — adds significant complexity to the negation system; the solver must identify multiple negation patterns and their distributional conditions.
+   - Priority: HIGH
+
+5. No person marking on the verb
+   - Phenomenon: Supyire has no person marking of any argument on the verb (WALS 102A-1, 103A-1, 104A-1). Pronominal subjects are expressed by independent pronouns in subject position (101A-1). Alignment is neutral (98A-1, 99A-1, 100A-1).
+   - Intended solver inference: The solver discovers that the verb does not change for person or number, and that person is expressed by independent pronouns. This simplifies the verb paradigm (no agreement morphology to track) but requires the solver to identify the position of subject pronouns in the SOV structure.
+   - Interaction with CORE: The subject pronoun appears in a fixed position in the SOV structure (CORE #3). The solver must identify the position of the subject pronoun relative to the object and verb. The lack of verbal agreement means that the solver cannot use agreement to identify grammatical roles, making word order and other cues more important.
+   - Difficulty contribution: MEDIUM — the absence of person marking simplifies the verb but makes role identification more dependent on word order.
+   - Priority: OPTIONAL
+
+6. Postpositions
+   - Phenomenon: Supyire uses postpositions (WALS 85A-1). This is consistent with the SOV word order (95A-1: OV and Postpositions).
+   - Intended solver inference: The solver discovers that adpositions follow the noun phrase rather than preceding it.
+   - Interaction with CORE: Consistent with the SOV word order (CORE #3). The postpositional pattern provides additional evidence for the overall head-final typological profile.
+   - Difficulty contribution: LOW — straightforward to discover.
+   - Priority: OPTIONAL
+
+7. Noun-Adjective order (NAdj)
+   - Phenomenon: Adjectives follow the noun (WALS 87A-2). This is consistent with the OV word order (97A-2: OV and NAdj).
+   - Intended solver inference: The solver discovers that adjectives follow the noun.
+   - Interaction with CORE: Consistent with the overall head-final pattern (CORE #3).
+   - Difficulty contribution: LOW — straightforward.
+   - Priority: OPTIONAL
+
+8. Complex tone system
+   - Phenomenon: Supyire has a complex tone system (WALS 13A-3). Fixed initial stress (14A-2), no weight-sensitive stress (15A-8).
+   - Intended solver inference: If tone is marked in the puzzle data (e.g., with diacritics or tone letters), the solver can discover that tone is contrastive and that different tones can distinguish different words or grammatical forms.
+   - Interaction with CORE: Tone may be relevant to word identity and may interact with the noun class system or tense/aspect marking. If tone is part of the definite suffix or TAM markers, the solver must account for tonal variation.
+   - Difficulty contribution: MEDIUM-HIGH — adds phonological complexity; the solver must recognize that tone is a contrastive feature.
+   - Priority: OPTIONAL
+
+9. Contrastive nasal vowels
+   - Phenomenon: Supyire has contrastive nasal vowels (WALS 10A-1). Large vowel inventory of 7-14 (2A-3).
+   - Intended solver inference: If nasal vowels are marked in the puzzle data, the solver can discover that nasalization is a contrastive feature of the vowel system.
+   - Interaction with CORE: Nasal vowels may be relevant to word identity. If nasal vowels appear in morphemes (e.g., definite suffix, plural suffix, TAM markers), the solver must account for nasal/oral vowel contrasts.
+   - Difficulty contribution: MEDIUM — adds phonological complexity.
+   - Priority: OPTIONAL
+
+10. Final question particle
+    - Phenomenon: Polar questions are marked by a question particle at the end of the sentence (WALS 92A-2, 116A-1).
+    - Intended solver inference: The solver discovers that yes/no questions are marked by a particle at the end of the sentence.
+    - Interaction with CORE: The question particle appears after the verb in the SOV structure (CORE #3). The solver must identify the position of the question particle relative to other sentence-final elements.
+    - Difficulty contribution: LOW — straightforward.
+    - Priority: OPTIONAL
+
+11. Conjunctional possession
+    - Phenomenon: Predicative possession is expressed using a conjunction (WALS 117A-4: "Conjunctional Possessive"). No possessive affixes (57A-4). No obligatorily possessed nouns (58A-2). No possessive classification (59A-1). Head marking in possessive noun phrases (24A-1).
+    - Intended solver inference: The solver discovers that possession is expressed with a conjunction rather than a possessive marker or affix. This is a distinctive pattern that contrasts with many languages.
+    - Interaction with CORE: The conjunctional possession pattern interacts with the word order (CORE #3). The solver must identify the position of the possessive conjunction in the sentence.
+    - Difficulty contribution: MEDIUM — distinctive pattern that requires semantic interpretation.
+    - Priority: OPTIONAL
+
+12. Split nominal/locational predication
+    - Phenomenon: Nominal and locational predication are encoded differently (WALS 119A-1: "Different"). Zero copula is impossible (120A-1: "Impossible"). Predicative adjectives have mixed encoding (118A-3).
+    - Intended solver inference: The solver discovers that there are two different predication patterns: one for nominal predicates and one for locational predicates. A copula is required (zero copula is impossible).
+    - Interaction with CORE: The different predication patterns interact with the tense/aspect system (TARGET-SPECIFIC #3). The copula is part of the verb paradigm. The solver must identify the different copular forms for nominal vs. locational predication.
+    - Difficulty contribution: MEDIUM-HIGH — adds complexity to the predication system.
+    - Priority: OPTIONAL
+
+13. Morphological causative
+    - Phenomenon: Supyire has a morphological causative (WALS 111A-2: "Morphological but no compound"). Both sequential and purposive periphrastic causatives also exist (110A-3).
+    - Intended solver inference: The solver discovers that causation can be marked morphologically on the verb, and that there are also periphrastic causative constructions.
+    - Interaction with CORE: The causative interacts with the tense/aspect system (TARGET-SPECIFIC #3) and the verb paradigm. The solver must identify the causative marker and its interaction with other verbal morphology.
+    - Difficulty contribution: MEDIUM — adds derivational complexity.
+    - Priority: OPTIONAL
+
+14. No passive construction
+    - Phenomenon: There is no passive construction in Supyire (WALS 107A-2: "Absent"). No antipassive (108A-3). No applicative (109A-8).
+    - Intended solver inference: The solver discovers that the language lacks a passive, antipassive, and applicative constructions. This means that agentive subjects are always expressed and that there is no way to demote the agent.
+    - Interaction with CORE: The absence of passive means that the SOV word order (CORE #3) always has an agentive subject. The solver cannot expect to find passive-like constructions in the data.
+    - Difficulty contribution: LOW — clear absence that constrains the possible constructions.
+    - Priority: OPTIONAL
+
+15. Reciprocal = reflexive
+    - Phenomenon: The reciprocal and reflexive constructions are formally identical (WALS 106A-4: "Identical to reflexive"). However, intensifiers and reflexive pronouns are formally differentiated (47A-2).
+    - Intended solver inference: The solver discovers that the same form is used for both reciprocal and reflexive meanings, and that the interpretation depends on context.
+    - Interaction with CORE: The reciprocal/reflexive form interacts with the verb paradigm and the SOV word order (CORE #3).
+    - Difficulty contribution: MEDIUM — requires semantic interpretation to distinguish reciprocal from reflexive.
+    - Priority: OPTIONAL
+
+16. N-M pronoun system (paradigmatic)
+    - Phenomenon: Supyire has N-M (non-mirrored) pronouns, paradigmatic (WALS 137A-2). No M-T pronouns (136A-1). m in 1st person singular (136B-2). m in 2nd person singular (137B-2). No inclusive/exclusive distinction (39A-3). No politeness distinction (45A-1). Person-number stem in independent pronouns (35A-4).
+    - Intended solver inference: The solver discovers the pronoun paradigm, including the N-M pattern (where the 1st and 2nd person forms do not mirror each other in the same way as in some languages). The solver must identify the person-number paradigm and the specific forms.
+    - Interaction with CORE: The pronouns appear in the SOV structure (CORE #3). The 3rd person pronouns reflect the noun class system (TARGET-SPECIFIC #1). The solver must identify the position of pronouns in the sentence.
+    - Difficulty contribution: MEDIUM — requires identifying the pronoun paradigm and its interaction with the noun class system.
+    - Priority: OPTIONAL
+
+17. Correlative relative clauses
+    - Phenomenon: Relative clauses are formed using a correlative strategy (WALS 90A-4, 90E-1: "Correlative relative clause dominant"). Internally-headed relative clauses occur as a nondominant type (90D-6). Relativization on subjects and obliques uses non-reduction (122A-2, 123A-2).
+    - Intended solver inference: The solver discovers that relative clauses use a correlative pattern (a relative pronoun in the main clause and a corresponding element in the relative clause). This is a distinctive syntactic pattern.
+    - Interaction with CORE: The correlative relative clause pattern interacts with the SOV word order (CORE #3). The solver must identify the relative pronoun and its position in the main clause.
+    - Difficulty contribution: HIGH — complex syntactic pattern that requires understanding of the correlative strategy.
+    - Priority: OPTIONAL
+
+18. Balanced/deranked subordinate clauses
+    - Phenomenon: Purpose clauses, 'when' clauses, reason clauses, and utterance complement clauses are all balanced/deranked (WALS 125A-2, 126A-2, 127A-1, 128A-1). Adverbial subordinators are initial (94A-1).
+    - Intended solver inference: The solver discovers that subordinate clauses are not morphologically marked for subordination (deranked) and that the subordinator is a separate word at the beginning of the subordinate clause.
+    - Interaction with CORE: The deranked subordinate clauses interact with the SOV word order (CORE #3). The solver must identify the subordinator and its position.
+    - Difficulty contribution: MEDIUM — requires understanding of the subordination strategy.
+    - Priority: OPTIONAL
+
+19. No grammatical evidentials
+    - Phenomenon: Supyire has no grammatical evidentials (WALS 77A-1, 78A-1).
+    - Intended solver inference: The solver discovers that the language does not grammatically mark the source of information (e.g., direct vs. indirect evidence).
+    - Interaction with CORE: The absence of evidentials means that the verb paradigm is not complicated by evidential marking. This simplifies the verb morphology.
+    - Difficulty contribution: LOW — clear absence.
+    - Priority: OPTIONAL
+
+20. Distributive numerals by reduplication
+    - Phenomenon: Distributive numerals are marked by reduplication (WALS 54A-2). Numeral classifiers are absent (55A-1). Ordinal numerals: 'first' is suppletive, others derived from cardinals (53A-6). Other numeral base (131A-4).
+    - Intended solver inference: The solver discovers that distributive numerals (e.g., "each," "per") are formed by reduplicating the numeral. This is a distinctive morphological pattern.
+    - Interaction with CORE: The distributive numeral pattern interacts with the Noun-Numeral order (89A-2). The solver must identify the reduplication pattern and its distributional conditions.
+    - Difficulty contribution: MEDIUM — distinctive morphological pattern.
+    - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Definite article × Noun class system (CORE #1 × TARGET-SPECIFIC #1)
+   - Interaction: The definite suffix varies by noun class. The solver must identify the noun class system from the different definite suffix forms and recognize that the suffix encodes both definiteness and class.
+   - Additional inference enabled: The solver can predict the definite suffix form for a new noun if they know its class. The 3rd person pronoun gender distinctions provide cross-linguistic evidence for the class system.
+
+2. Negation × Tense/aspect (CORE #2 × TARGET-SPECIFIC #3)
+   - Interaction: The asymmetric negation (A/Fin and A/Cat) means that the negation pattern varies depending on the tense/aspect form of the verb. The solver must discover which tense/aspect forms use which negation pattern.
+   - Additional inference enabled: The solver can predict the negation pattern for a new tense/aspect form if they know the distributional conditions.
+
+3. Negation × Word order (CORE #2 × CORE #3)
+   - Interaction: The double negation pattern S(Neg)OVNeg is positioned within the SOV structure. The preverbal negative element appears between the subject and the verb (or between the subject and the object), and the postverbal negative element appears immediately after the verb.
+   - Additional inference enabled: The solver can predict the position of the negative elements in new sentences based on the word order.
+
+4. Plural suffix × Definite suffix (TARGET-SPECIFIC #2 × CORE #1)
+   - Interaction: Both the plural suffix and the definite suffix appear on the noun. The solver must determine their relative order (e.g., Noun-Plural-Definite vs. Noun-Definite-Plural).
+   - Additional inference enabled: The solver can predict the full noun form (with both plural and definite marking) for a new noun.
+
+5. Noun class × 3rd person pronouns (TARGET-SPECIFIC #1 × TARGET-SPECIFIC #16)
+   - Interaction: The 3rd person pronouns reflect the noun class system. The solver can use the pronoun forms to identify the class of a noun, and vice versa.
+   - Additional inference enabled: The solver can use pronoun forms to confirm or disconfirm noun class assignments.
+
+6. SOV × Postpositions × NAdj × GenN × NNum (CORE #3 × TARGET-SPECIFIC #6, #7)
+   - Interaction: The SOV word order is part of a consistent head-final typological profile. Postpositions, NAdj, GenN, and NNum all follow the same head-final pattern.
+   - Additional inference enabled: The solver can use the consistency of the head-final pattern to predict the order of other modifiers and adpositions.
+
+7. Tense/aspect suppletion × No person marking (TARGET-SPECIFIC #3 × TARGET-SPECIFIC #5)
+   - Interaction: The verb paradigm is complex due to suppletion in tense/aspect, but simplified by the absence of person marking. The solver must track the tense/aspect forms without the additional complexity of agreement.
+   - Additional inference enabled: The solver can focus on the tense/aspect system without being distracted by agreement morphology.
+
+8. Asymmetric negation × No passive (TARGET-SPECIFIC #4 × TARGET-SPECIFIC #14)
+   - Interaction: The absence of passive means that the asymmetric negation patterns are not complicated by passive constructions. The solver only needs to consider active constructions when identifying the negation patterns.
+   - Additional inference enabled: The solver can simplify their analysis of the negation system by excluding passive constructions.
+
+CONSTRAINTS
+
+1. The definite suffix must be shown to vary by noun class in the puzzle data. The solver must be able to identify at least 3-4 different noun classes from the definite suffix forms. The class system should be discoverable from the data without requiring prior knowledge of Supyire.
+
+2. The double negation pattern (S(Neg)OVNeg) must be clearly demonstrated in the puzzle data. The solver must be able to identify both the preverbal and postverbal negative elements and determine which is obligatory and which is optional. The data should include both single-negation and double-negation examples.
+
+3. The SOV word order must be consistent across all examples in the puzzle data. The solver should be able to identify the basic word order from the data without ambiguity.
+
+4. The tense/aspect system must be represented with enough examples for the solver to identify the categories and the suppletive patterns. The data should include multiple tense/aspect forms for at least one verb.
+
+5. The asymmetric negation must be demonstrated with examples from at least two different grammatical categories (e.g., finite vs. non-finite, or different aspectual forms). The solver must be able to identify the distributional conditions for each negation pattern.
+
+6. The plural suffix must be shown to be obligatory. The data should include both singular and plural forms of the same noun, with the plural suffix present in all plural forms.
+
+7. The morphological order of the plural and definite suffixes must be consistent in the data. The solver should be able to determine the order from the examples.
+
+8. If tone is included in the puzzle data, it must be consistently marked and must be contrastive (i.e., different tones must correspond to different words or grammatical forms). The solver must be able to discover that tone is a contrastive feature.
+
+9. If nasal vowels are included in the puzzle data, they must be consistently marked and must be contrastive with oral vowels. The solver must be able to discover that nasalization is a contrastive feature.
+
+10. The puzzle data should not include passive, antipassive, or applicative constructions, as these are absent in Supyire. The solver should not be able to infer the existence of these constructions from the data.
+
+11. The pronoun system should be represented consistently in the data. The 3rd person pronouns should reflect the noun class system, and the solver should be able to identify the person-number paradigm.
+
+12. The puzzle should not require the solver to know the specific phonological inventory of Supyire (e.g., the exact set of consonants or vowels). The phonological features (tone, nasal vowels) should only be included if they are directly relevant to the linguistic patterns being tested.
+
+13. The correlative relative clause pattern, if included, must be clearly demonstrated in the data. The solver must be able to identify the relative pronoun and its position in the main clause, as well as the corresponding element in the relative clause.
+
+14. The conjunctional possession pattern, if included, must be clearly demonstrated in the data. The solver must be able to identify the possessive conjunction and its position in the sentence.
+
+15. The balanced/deranked subordinate clause pattern, if included, must be clearly demonstrated in the data. The solver must be able to identify the subordinator and its position, and recognize that the subordinate clause is not morphologically marked for subordination.

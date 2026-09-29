@@ -1,0 +1,99 @@
+
+
+TARGET-LANGUAGE: Hausa (Afro-Asiatic, Chadic, West Chadic)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the core morphological system.** Establish the following rules as the generative grammar for the puzzle:
+   - Two grammatical genders: masculine (M) and feminine (F).
+   - Two numbers: singular (S) and plural (P).
+   - Word order within the noun phrase: Adjective–Noun (AdjN). The adjective always precedes the head noun.
+   - Adjective agreement: The adjective agrees with the head noun in both gender and number, yielding a four-way paradigm. The citation form of an adjective is its Masculine Singular (MS) form. The four forms are derived as follows:
+     - If the MS form ends in **-i**: MS = stem+i, FS = stem+ar, MP = stem+ai, FP = stem+arwa. (Example: ɗarami → ɗarami / ɗaramar / ɗaramai / ɗaramarwa.)
+     - If the MS form ends in **-a**: MS = stem+a, FS = stem+ar, MP = stem+an, FP = stem+arwa. (Example: babba → babba / babbar / babban / babbarwa.)
+   - Noun plurals: Nouns form the plural by adding a suffix. Use two or three regular patterns from the set {-e, -owai, -in}. Each noun is assigned one pattern; the pattern is consistent across all occurrences of that noun in the data. The noun's plural suffix is morphologically independent of the adjective's agreement suffix (they happen to be different strings, which prevents surface confusion).
+   - Gender assignment: Animate nouns (people, animals) have sex-based gender (male referent → masculine, female referent → feminine). Inanimate nouns have arbitrary gender that must be learned from the adjective form in the data.
+   - No tone marking in the data. No definite article in the data (to avoid confusion with the feminine -ar suffix).
+
+2. **Select the vocabulary set.** Choose a closed set of content words with the following properties:
+   - **Nouns (8–12 total):**
+     - At least 2 animate masculine (e.g., a male person or male animal).
+     - At least 2 animate feminine (e.g., a female person or female animal).
+     - At least 3 inanimate nouns of mixed gender (at least one masculine, at least one feminine). These provide the "arbitrary gender" tier.
+     - Assign each noun a plural pattern from {-e, -owai, -in}. Ensure at least two different plural patterns are represented so solvers can observe that plural formation is not a single uniform process.
+     - Choose nouns from semantically transparent, concrete categories (body parts, household objects, animals, natural objects) so meanings are guessable from context or cross-linguistic cognates.
+   - **Adjectives (4–6 total):**
+     - At least 3 adjectives with MS ending in -i (the "i-type").
+     - At least 1 adjective with MS ending in -a (the "a-type"). This creates the stem-dependent allomorphy in the MP form (-ai vs. -an) and adds a layer of inference.
+     - All adjectives must be regular (no irregular forms). Choose from semantic categories like size, quality, or state.
+   - **Optional: a copula or simple predicate frame** if you want to include predicative sentences, but this is not required. The puzzle can be built entirely from attributive AdjN phrases embedded in simple sentences.
+
+3. **Construct the data set with controlled contrasts.** The data must allow solvers to reconstruct the full system through progressive inference. Organize the evidence in the following logical layers (the actual presentation order can vary, but all layers must be present):
+
+   **Layer A – Establish the four-way adjective paradigm (the core discovery):**
+   - Provide at least one AdjN pair for each of the four cells (MS, FS, MP, FP) using the SAME adjective. This is the single most important contrast set. For example, using ɗarami with a masculine noun in singular and plural, and a feminine noun in singular and plural:
+     - MS: ɗarami + [masc. sing. noun]
+     - FS: ɗaramar + [fem. sing. noun]
+     - MP: ɗaramai + [masc. pl. noun]
+     - FP: ɗaramarwa + [fem. pl. noun]
+   - The nouns used here should be semantically transparent (e.g., animate nouns where sex is obvious) so that solvers can immediately map the adjective form to a gender × number combination without ambiguity.
+   - **What the solver infers:** The adjective has four distinct forms; two dimensions (gender, number) are being tracked; the forms are systematically related (shared stem, different suffixes).
+
+   **Layer B – Confirm the paradigm generalizes across adjectives:**
+   - Show a second (and optionally third) i-type adjective in at least two of the four cells (ideally all four, but at minimum MS and FS, plus one plural form). This confirms that the paradigm is not idiosyncratic to one adjective but is a productive pattern.
+   - **What the solver infers:** The suffixes -i / -ar / -ai / -arwa are productive agreement markers, not part of the adjective stem.
+
+   **Layer C – Introduce the a-type adjective (stem-dependent allomorphy):**
+   - Show the a-type adjective in all four cells. The critical contrast is in the MP form: where i-type adjectives get -ai, the a-type adjective gets -an.
+   - **What the solver infers:** The MP suffix is not a fixed string but depends on the final vowel of the MS form. This is a higher-order generalization that builds on Layer B.
+
+   **Layer D – Establish noun plural morphology:**
+   - Ensure that in the data, nouns appear in both singular and plural forms. The plural form should be visible (e.g., ɗan'uwa → ɗan'uwa-e, or whatever the chosen pattern is).
+   - Include at least two nouns with different plural patterns to show that plural formation is not a single rule.
+   - **What the solver infers:** Nouns have their own number marking, separate from the adjective's agreement. The noun's plural form correlates with the adjective's plural form (MP or FP), confirming that number is a real grammatical dimension.
+
+   **Layer E – Introduce inanimate nouns (arbitrary gender):**
+   - Include inanimate nouns whose gender is NOT predictable from meaning. At least one inanimate noun should be masculine and at least one feminine.
+   - These nouns should appear with adjectives in the data, so the solver can read off their gender from the adjective form.
+   - **What the solver infers:** Gender is not uniformly sex-based. For inanimate nouns, the adjective form is the only reliable gender cue. This prevents overgeneralization of the sex-based rule.
+
+   **Layer F – Cross-confirmation and disambiguation:**
+   - Include at least one sentence where the same noun appears with two different adjectives (confirming that the noun's gender is stable and the adjective is the variable).
+   - Include at least one sentence where the same adjective appears with two nouns of different gender (confirming that the adjective form changes with the noun, not the other way around).
+   - If space allows, include a sentence where a plural noun of one gender is paired with an adjective, and a singular noun of the other gender is paired with the same adjective, making the interaction of gender and number explicit in a single contrast.
+
+4. **Design the question set with progressive difficulty.** Structure questions so that each builds on inferences from earlier layers:
+
+   **Q1 (Application – easy):** Translate a simple AdjN phrase where the noun's gender and number are already established in the data, and the adjective is an i-type adjective already seen in the data. The solver only needs to select the correct pre-existing form. This confirms basic paradigm application.
+
+   **Q2 (Application – medium):** Translate an AdjN phrase where the adjective is an i-type adjective seen in the data, but the noun is NEW (not in the data). The noun's gender is semantically transparent (animate, sex-obvious), and its number is given. The solver must select the correct adjective form based on the noun's gender and number. This tests whether the solver has internalized the paradigm as a rule, not just memorized specific pairs.
+
+   **Q3 (Inference – medium-hard):** Translate an AdjN phrase where the adjective is the a-type adjective, and the noun is a NEW inanimate noun whose gender is NOT semantically predictable. The solver must be given the noun's gender (e.g., through a gloss or a prior question that established it) and must apply the a-type paradigm correctly, including the -an MP form. This tests the stem-dependent allomorphy discovery from Layer C.
+
+   **Q4 (Generalization – hard):** Provide a novel adjective (not seen in the data) in its MS form, and ask the solver to produce all four agreement forms. This tests whether the solver has abstracted the full paradigm as a productive rule (stem + {-i, -ar, -ai/-an, -arwa}) rather than memorizing specific adjective paradigms.
+
+   **Q5 (Meta-linguistic – hard):** Ask the solver to identify which nouns in the data set have "predictable" gender (based on sex) and which have "arbitrary" gender, and to state the generalization about how gender is assigned in this language. This tests the meta-level inference from Layer E.
+
+   **Q6 (Optional, very hard):** Provide a novel noun (with its plural form) and a novel adjective (MS form given), and ask the solver to produce the full set of four AdjN phrases (MS, FS, MP, FP). This requires simultaneous application of noun plural formation AND adjective agreement, testing full system integration.
+
+5. **Verify solvability and uniqueness of induction.** Before finalizing, check the following:
+   - Every rule in the system is uniquely determined by the data. No alternative assignment of gender to any noun, or alternative paradigm for any adjective, is consistent with all the evidence.
+   - The four-way paradigm is fully reconstructable: the data contains at least one unambiguous example of each cell, and the examples are sufficient to distinguish the paradigm from simpler alternatives (e.g., a two-way gender-only system, or a two-way number-only system).
+   - The a-type vs. i-type distinction is detectable: the data shows at least one i-type adjective in MP (with -ai) and the a-type adjective in MP (with -an), making the contrast visible.
+   - The sex-based vs. arbitrary gender split is detectable: the data includes enough animate nouns (with obvious sex) and inanimate nouns (with non-obvious gender) for the solver to notice the pattern.
+   - No question requires a rule that has not been sufficiently evidenced in the data. Each question should be solvable using only the inferences available from the layers that precede it.
+   - The noun plural patterns are unambiguous: no noun's plural form could be misparsed as a singular form with an adjective attached, or vice versa.
+
+6. **Prevent unintended confusions.** Apply the following design constraints:
+   - Do NOT include a definite article or any other proclitic/prefix that could be mistaken for a gender marker. In Hausa, gender is marked ONLY on the adjective.
+   - Ensure that no noun's plural suffix is identical to any adjective agreement suffix in a way that creates ambiguity. (The chosen noun plural patterns -e, -owai, -in are all distinct from -i, -ar, -ai, -an, -arwa, so this is satisfied by construction.)
+   - Do not use tone diacritics in the data.
+   - Do not rely on any phonological rule (e.g., vowel harmony, consonant mutation) that the solver would need to know. All forms should be transparently derivable from the stated suffixal rules.
+   - If a noun's stem ends in the same vowel as an agreement suffix (e.g., a noun ending in -a paired with the -ar feminine suffix), ensure the morpheme boundary is clear from context or that the combination is unambiguous.
+
+7. **Final quality check.** Solve the puzzle yourself using only the provided data and questions. Confirm:
+   - (a) Every morphological rule is uniquely determined by the evidence.
+   - (b) Every question has exactly one correct answer.
+   - (c) The difficulty progression is smooth: no question requires a discovery that has not been sufficiently motivated by earlier data.
+   - (d) The puzzle is non-trivial: a solver cannot solve it by guessing or by applying a single simple rule; they must integrate multiple interacting systems (gender, number, adjective paradigm, noun plural, semantic vs. arbitrary gender).
+   - (e) All Hausa forms used are typologically accurate and internally consistent with the stated rules.

@@ -1,0 +1,60 @@
+
+
+TARGET-LANGUAGE: Amele (Trans-New Guinea, Madang, Mabuso)
+
+CORE
+
+1. Concept: Dependent marking in possessive noun phrases (source 81A)
+   - Target-language realization: Possessor is marked by a suffix on the possessed noun (WALS 24A-2). The possessor NP precedes the possessed noun (WALS 86A-1, Gen-N order). The possessed noun carries a possessive suffix (WALS 57A-2).
+   - Intended solver inference: From examples of two-noun sequences, the solver identifies that the element carrying the suffix is the possessed head, not the possessor. The unmarked element preceding it is the possessor. This inverts the English "possessor's possessed" intuition.
+   - Priority: REQUIRED
+
+2. Concept: Noun-before-modifier order (source 82A)
+   - Target-language realization: Consistent postnominal modification across all modifier types: Noun-Adjective (87A-2), Noun-Demonstrative (88A-2), Noun-Numeral (89A-2), Noun-Relative clause (90A-1).
+   - Intended solver inference: The solver uses the consistent postnominal order to identify the head noun in complex noun phrases. The head is the element that precedes its modifiers and carries the possessive suffix. This disambiguates which element in a multi-word sequence is the structural head.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Possessive classification (WALS 59A-4: more than five classes)
+   - Intended solver inference: The solver notices that different possessed nouns take different possessive suffixes. They must hypothesize a semantic or formal criterion that determines which suffix is used (e.g., body parts, kinship terms, animate vs. inanimate, etc.). They then apply the discovered classification to novel examples.
+   - Interaction with CORE: Directly extends dependent marking — the "dependent" marker is not uniform but varies by the class of the head noun. This transforms a simple marking puzzle into a classification puzzle.
+   - Difficulty contribution: HIGH. Requires the solver to abstract a classification system from multiple examples and apply it productively.
+   - Priority: HIGH
+
+2. Phenomenon: Conjunctional possessive for predicative possession (WALS 117A-4)
+   - Intended solver inference: The solver encounters a construction expressing "X has Y" that uses a conjunctional strategy rather than the dependent-marking strategy used in attributive possession. They must recognize this as a distinct construction and understand the functional split between attributive (dependent marking) and predicative (conjunctional) possession.
+   - Interaction with CORE: Creates a contrast within the same domain (possession) that the solver must parse. The solver must not overgeneralize the dependent-marking pattern to all possessive expressions.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a second possessive strategy that must be distinguished from the first.
+   - Priority: HIGH
+
+3. Phenomenon: WITH-language — 'and' identical to 'with' (WALS 63A-2)
+   - Intended solver inference: The conjunction used in the conjunctional possessive is the same word used for comitative/associative meaning. The solver may encounter potential ambiguity between "X and Y" (conjunction), "X with Y" (comitative), and "X has Y" (possessive predication), and must use context or additional cues to disambiguate.
+   - Interaction with CORE: Interacts with the conjunctional possessive — the same morpheme serves multiple functions, creating a polysemy puzzle element.
+   - Difficulty contribution: MEDIUM. Adds a layer of ambiguity that requires contextual reasoning.
+   - Priority: OPTIONAL
+
+4. Phenomenon: Adjectives and relative clauses collapsed (WALS 60A-4)
+   - Intended solver inference: The solver encounters postnominal modifiers that could be either adjectival or relative-clausal. The formal similarity means the boundary is not always clear from form alone. The solver must use semantic or structural cues to distinguish them.
+   - Interaction with CORE: Interacts with noun-before-modifier order — both adjectives and relative clauses follow the noun, so the modifier order alone cannot distinguish them.
+   - Difficulty contribution: MEDIUM. Adds parsing ambiguity within the noun phrase.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Dependent marking × Possessive classification: The solver must simultaneously discover (a) that marking is on the possessed noun, and (b) that the specific marker depends on the semantic class of the possessed noun. This two-step discovery is the central puzzle challenge.
+
+2. Dependent marking × Conjunctional possessive: The solver must recognize two distinct possessive strategies in the same language and map them to different syntactic contexts (attributive vs. predicative). This prevents overgeneralization.
+
+3. Noun-before-modifier × Dependent marking: The consistent postnominal modifier order provides a structural anchor for identifying the head noun. Since the head noun is the element that carries the possessive suffix, the modifier order helps the solver identify which element in a complex NP is the head.
+
+4. Conjunctional possessive × WITH-language: The polysemy of the conjunctional element (and/with/possessive) creates a disambiguation task that requires the solver to use contextual and structural cues.
+
+CONSTRAINTS
+
+- The possessive classification system must be presented with enough examples for the solver to discover the classification criterion. Recommend showing at least 3 distinct classes with clear semantic groupings in the puzzle data.
+- The distinction between attributive and predicative possession must be typologically clear in the examples (e.g., attributive appears within an NP; predicative appears as a clause-level construction).
+- The puzzle must not require the solver to know specific Amele lexical items; all reasoning must be based on formal patterns (suffixes, word order, structural position).
+- If the WITH-language property is included, the ambiguity it creates must be resolvable from the given data (i.e., the puzzle must provide enough context to disambiguate).
+- The noun-before-modifier pattern should be demonstrated consistently across at least two modifier types (e.g., adjective and demonstrative) to establish it as a general rule rather than an accident.
+- Do not require the solver to identify the exact number of possessive classes in the language; the puzzle should focus on discovering the classification principle and applying it to the classes shown.

@@ -1,0 +1,101 @@
+
+
+TARGET-LANGUAGE: Ndyuka (Surinamese Creole, English-based)
+
+CORE
+
+1. Definite articles (source 100A-1)
+   - Target-language realization: Ndyuka has a definite article "de" (from Dutch), distinct from demonstratives (WALS 37A-1). It precedes the noun.
+   - Intended solver inference: A word appearing before some nouns but not others, correlated with semantic definiteness, is a definite article.
+   - Priority: HIGH
+
+2. Postnominal relative clauses (source 22A-1)
+   - Target-language realization: Relative clauses follow the head noun (WALS 90A-1, 90C-1). Relativization uses the gap strategy (WALS 122A-4, 123A-4) — the relativized element is simply absent from the relative clause.
+   - Intended solver inference: A clause following a noun, with a missing element that corresponds to a role in the main clause, is a relative clause modifying that noun.
+   - Priority: HIGH
+
+3. Tense marking (source 18A-1, adapted)
+   - Target-language realization: Tense is marked by preverbal particles (separate words), not verbal affixes. WALS 69A-5 confirms no tense-aspect inflection. Past is marked by a preverbal particle (e.g., "a"), future by another (e.g., "bi"), present/habitual by zero.
+   - Intended solver inference: A preverbal word that is not the subject (a separate subject is present) and whose presence/absence correlates with temporal meaning is a tense marker.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. SVO word order
+   - Phenomenon: Basic clause order is Subject-Verb-Object (WALS 81A-2, 82A-1, 83A-2).
+   - Intended solver inference: The noun/pronoun before the verb is the subject; the noun/pronoun after the verb is the object.
+   - Interaction with CORE: Provides the frame within which tense markers (preverbal) and relative clauses (postnominal) are interpreted.
+   - Difficulty contribution: Baseline; without it, no other inference is possible.
+   - Priority: REQUIRED
+
+2. No case marking / Neutral alignment
+   - Phenomenon: No morphological case marking (WALS 28A-1, 49A-1, 50A-1). Alignment is neutral (WALS 98A-1, 99A-1, 100A-1).
+   - Intended solver inference: Grammatical relations (subject vs. object) are determined solely by linear position relative to the verb, not by morphological marking.
+   - Interaction with CORE: Makes SVO order the sole cue for argument structure; amplifies the importance of correctly identifying the verb.
+   - Difficulty contribution: High — the solver must recognize that the absence of case marking makes word order critical.
+   - Priority: REQUIRED
+
+3. Preverbal tense particles (distinct from affixes)
+   - Phenomenon: Tense markers are independent words preceding the verb, not bound morphemes (WALS 69A-5: no tense-aspect inflection).
+   - Intended solver inference: The preverbal zone contains more than just the subject; the solver must identify which preverbal element is the subject and which is the tense marker.
+   - Interaction with CORE: Creates a parsing challenge in the preverbal zone (subject vs. tense particle).
+   - Difficulty contribution: High — the solver must use semantic and distributional evidence to separate subject from tense marker.
+   - Priority: REQUIRED
+
+4. Gap relativization
+   - Phenomenon: The relativized element is simply absent from the relative clause (WALS 122A-4, 123A-4). No resumptive pronoun or relative pronoun is used.
+   - Intended solver inference: The missing element in the postnominal clause is the one that corresponds to the head noun's role; the solver must identify which argument is "missing" to determine the relativized role.
+   - Interaction with CORE: Works with postnominal relative clauses to create a two-step inference (identify the RC, then identify the gap).
+   - Difficulty contribution: High — requires the solver to perform a "fill-in-the-blank" reasoning step.
+   - Priority: HIGH
+
+5. Preverbal negation (SNegVO)
+   - Phenomenon: A negative word appears immediately before the verb (WALS 143A-1, 144A-2, 144B-3). It is a separate word (WALS 144I-1).
+   - Intended solver inference: A preverbal word that is not the subject and not a tense marker, whose presence flips the truth value of the proposition, is a negation marker.
+   - Interaction with CORE: Adds a third type of preverbal element (subject, tense, negation), increasing the complexity of the preverbal zone.
+   - Difficulty contribution: High — the solver must now distinguish among three possible preverbal elements.
+   - Priority: HIGH
+
+6. No verbal person marking + obligatory pronouns
+   - Phenomenon: No person marking on verbs (WALS 102A-1). Pronominal subjects are obligatory (WALS 101A-1).
+   - Intended solver inference: The subject is always overtly expressed (as a pronoun or full NP); it cannot be "hidden" in verbal morphology. This helps the solver identify the subject position.
+   - Interaction with CORE: Confirms that the preverbal element in subject position is always a full pronoun or NP, not a clitic or affix.
+   - Difficulty contribution: Moderate — simplifies subject identification but confirms the preverbal zone contains a full NP.
+   - Priority: HIGH
+
+7. Noun-Demonstrative order
+   - Phenomenon: Demonstratives follow the noun (WALS 88A-2). Two-way distance contrast (WALS 41A-2). Different stems for pronominal vs. adnominal demonstratives (WALS 42A-2).
+   - Intended solver inference: A word following a noun that indicates spatial/deictic reference is a demonstrative, not part of a relative clause.
+   - Interaction with CORE: Creates a potential ambiguity with postnominal relative clauses (both follow the noun). The solver must distinguish "N + demonstrative" from "N + relative clause."
+   - Difficulty contribution: High — creates a genuine structural ambiguity that the solver must resolve using semantic and structural cues.
+   - Priority: HIGH
+
+INTERACTIONS
+
+1. SVO + no case marking → Word order is the sole determinant of grammatical relations. The solver must correctly identify the verb to parse the clause. If the verb is misidentified, subject and object are swapped.
+
+2. Preverbal tense + SVO + no case marking → The preverbal zone contains both the subject and (optionally) a tense particle. The solver must use distributional evidence (the tense particle appears in multiple sentences with different subjects; the subject varies while the tense particle stays constant) to separate them.
+
+3. Preverbal negation + preverbal tense → Both are preverbal. The solver must determine their relative linear order (e.g., is it Subject-Neg-Tense-V or Subject-Tense-Neg-V?). This requires comparing sentences with and without negation to observe the order.
+
+4. Postnominal relative clauses + Noun-Demonstrative order → Both constructions follow the head noun. The solver must distinguish "N + Dem" (a simple demonstrative phrase) from "N + RC" (a noun modified by a relative clause). Cues: the RC contains a verb and has a gap; the demonstrative is a single word with deictic meaning.
+
+5. Gap relativization + postnominal relative clauses → The solver must identify which argument is missing from the relative clause to determine the relativized role (subject vs. object vs. oblique). This requires comparing the RC's arguments with the expected argument structure of the verb.
+
+6. Definite article + postnominal relative clauses → The definite article precedes the head noun, helping the solver identify the left edge of the noun phrase. This clarifies where the NP begins and where the postnominal material (RC or demonstrative) begins.
+
+CONSTRAINTS
+
+1. No case marking: The puzzle must rely entirely on word order and context for argument identification. No example should contain morphological case markers.
+
+2. No passive construction (WALS 107A-2): All transitive clauses in the puzzle data must have the agent as subject. Do not include sentences that could be interpreted as passives.
+
+3. No question particle (WALS 92A-6, 116A-6): Avoid interrogative sentences in the puzzle data, or if included, mark them clearly (e.g., with a question mark) since there is no morphological question marker to infer.
+
+4. No verbal person marking (WALS 102A-1): All subjects must be overtly expressed as full pronouns or NPs. Do not include sentences with "pro-drop" or zero subjects.
+
+5. Sufficient evidence: Provide enough example sentences to allow the solver to infer: (a) SVO order, (b) the identity and position of tense particles, (c) the identity and position of the negation word, (d) the definite article, (e) the postnominal relative clause structure with gap, (f) the noun-demonstrative order. Each rule should be supported by at least 2-3 contrasting examples.
+
+6. No inclusive/exclusive distinction (WALS 39A-3): If first-person plural pronouns appear, do not create an ambiguity between inclusive and exclusive readings.
+
+7. Balanced subordinate clauses (WALS 125A-2, 126A-1, 127A-1, 128A-1): If subordinate clauses are included, they have the same internal structure as main clauses (SVO, same tense marking). The only cue is the initial subordinator. This should be noted if subordinate clauses are used.

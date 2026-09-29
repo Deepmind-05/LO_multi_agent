@@ -1,0 +1,100 @@
+
+
+TARGET-LANGUAGE: Yukulta (Tangkic, Australia)
+
+CORE
+
+1. Dependent marking (81A-2)
+   - Target-language realization: The possessor bears a genitive case suffix; the possessed noun is unmarked. No dedicated possessive affixes exist (57A-4), so the genitive case is the sole means of marking the possessor.
+   - Intended solver inference: From possessive data, the solver identifies that the first noun (possessor) carries a suffix while the second noun (possessed) does not, concluding that marking falls on the dependent (possessor) rather than the head (possessed).
+   - Priority: REQUIRED
+
+2. Genitive construction (83A-1)
+   - Target-language realization: Possession is expressed via a two-noun genitive construction (possessor + possessed), with the possessor marked by a genitive suffix.
+   - Intended solver inference: The solver identifies the constructional strategy for expressing possession (a free genitive phrase rather than affixation on the possessed noun or a dedicated possessive morpheme).
+   - Priority: REQUIRED
+
+3. Genitive-Noun order (replaces 84A-2 "possessed before possessor")
+   - Target-language realization: The possessor precedes the possessed (GenN, per 86A-1). This is the OPPOSITE of the Coptic source pattern.
+   - Intended solver inference: The solver identifies the linear order from the data. The contrast with the source language's order is not relevant to the solver (who has no prior knowledge of Coptic), but the GenN order is a straightforward, discoverable fact.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Split alignment (100A-6)
+   - Phenomenon: The language exhibits split alignment (ergative-absolutive, as is typical of Australian languages). The transitive agent (A) is marked (likely with an ergative suffix, possibly the same or related to the genitive suffix), while the intransitive subject (S) and transitive patient (P) are unmarked (absolutive).
+   - Intended solver inference: By comparing transitive and intransitive clauses, the solver discovers that the transitive subject is marked while the intransitive subject is not, and that the transitive patient is unmarked (like the intransitive subject).
+   - Interaction with CORE: The genitive suffix on the possessor may be identical to or closely related to the ergative suffix on the transitive agent, creating a cross-domain connection between possessive marking and argument marking.
+   - Difficulty contribution: Medium-high. Requires the solver to compare argument marking across clause types.
+   - Priority: HIGH
+
+2. Both A and P marked on verb + Zero 3rd person (102A-5, 103A-5)
+   - Phenomenon: The verb carries person markers for both the transitive agent and patient, but all 3rd person forms are zero (unmarked).
+   - Intended solver inference: The solver notices that when both arguments are 3rd person, the verb shows no person marking, making 3rd person transitive clauses surface-identical to intransitive clauses with a 3rd person subject. The solver must use the ergative suffix (or its absence) to distinguish them.
+   - Interaction with split alignment: The zero 3rd person on the verb means the ergative suffix on the A argument is the primary (or only) overt marker of transitivity in 3rd person transitive clauses. This creates a dependency between the alignment system and the verbal morphology.
+   - Difficulty contribution: Medium. The ambiguity between 3rd person transitive and intransitive is a natural and interesting puzzle element.
+   - Priority: HIGH
+
+3. Obligatory double negation (112A-6, 143B-2, 144F-8)
+   - Phenomenon: Negation requires both a preverbal negative word AND a negative suffix on the verb. The surface pattern is Neg-S-[V-Neg]-O.
+   - Intended solver inference: From negative sentences, the solver discovers that both elements are obligatory (neither alone is sufficient for negation). The solver can identify the two distinct negative morphemes and their positions.
+   - Interaction with SVO (81A-2): The negative word appears before the subject, and the negative suffix is on the verb, creating a clear positional pattern relative to the SVO order.
+   - Difficulty contribution: Medium. The double requirement is a clear, countable pattern that the solver can verify across multiple examples.
+   - Priority: HIGH
+
+4. Strongly suffixing morphology (26A-2)
+   - Phenomenon: The language is predominantly suffixing. Case markers, person markers, plural markers, and the negative suffix are all suffixal.
+   - Intended solver inference: The solver observes a consistent morphological pattern (suffixation) across different domains, which helps in identifying morpheme boundaries and segmenting words.
+   - Interaction with CORE: The genitive suffix, ergative suffix, and negative suffix all follow the same suffixing pattern, reinforcing the morphological type.
+   - Difficulty contribution: Low (general pattern that aids rather than hinders solving).
+   - Priority: OPTIONAL
+
+5. No possessive affixes (57A-4)
+   - Phenomenon: Pronominal possession is not expressed via affixes on the possessed noun. Instead, pronominal possessors appear as free genitive-marked forms (e.g., a pronominal stem + genitive suffix).
+   - Intended solver inference: The solver might initially expect a different strategy for pronominal possession (e.g., a possessive prefix on the noun, as in many languages). Discovering that the same genitive construction is used for both nominal and pronominal possessors is a unifying insight.
+   - Interaction with CORE: Clarifies that the genitive construction is the universal possessive strategy, not just for nominal possessors.
+   - Difficulty contribution: Low-medium. Prevents the solver from overgeneralizing a "possessive affix" pattern.
+   - Priority: OPTIONAL
+
+6. Productive reduplication (27A-1)
+   - Phenomenon: Full and partial reduplication is productive.
+   - Intended solver inference: If included in the data, the solver can identify the semantic effect of reduplication (e.g., distributive, intensive, pluralizing) from parallel examples.
+   - Interaction: Adds an additional morphological process to the puzzle, increasing the number of patterns to discover.
+   - Difficulty contribution: Medium. Adds a separate pattern that must be identified independently.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Genitive suffix ↔ Ergative suffix (CORE dependent marking + split alignment):
+   - The same (or closely related) suffix marks both the possessor in genitive phrases and the transitive agent in ergative-absolutive alignment. The solver can discover this cross-domain identity, revealing a deep structural connection between possessive and argument marking.
+   - Additional inference: The solver can predict that a noun marked with this suffix in a transitive clause is the agent, and in a possessive phrase is the possessor.
+
+2. Zero 3rd person on verb ↔ Ergative suffix (verbal person marking + split alignment):
+   - In 3rd person transitive clauses, the verb has no person marking (zero), so the ergative suffix on the A argument is the only overt transitivity marker. The solver must use the ergative suffix to identify transitivity when verbal person marking is absent.
+   - Additional inference: The solver can distinguish 3rd person transitive from 3rd person intransitive clauses solely by the presence/absence of the ergative suffix on the subject.
+
+3. Double negation ↔ SVO word order (negation + basic word order):
+   - The negative word appears clause-initially (before S), and the negative suffix is on the verb (between S and O). This creates a fixed positional pattern: Neg-S-[V-Neg]-O.
+   - Additional inference: The solver can predict the position of both negative elements in new sentences.
+
+4. GenN order ↔ SVO order (possessive order + clause order):
+   - Both the genitive construction and the clause structure place the "agentive" element first (possessor before possessed; subject before object). This typological consistency is a subtle but real pattern.
+   - Additional inference: The solver can note the language's general "first element" preference, though this is a weaker inference.
+
+CONSTRAINTS
+
+1. The puzzle must provide sufficient possessive examples (at least 3-4) to establish the genitive construction, the dependent marking pattern, and the GenN order unambiguously.
+
+2. The split alignment must be demonstrated through a clear contrast between transitive and intransitive clauses with the same subject (e.g., "X hits Y" vs. "X goes"), showing that X is marked in the transitive but not in the intransitive.
+
+3. The zero 3rd person on the verb must be contrasted with non-zero person marking (1st or 2nd person) to be discoverable. At least one example with 1st or 2nd person verbal marking is needed.
+
+4. The double negation pattern must be shown in at least 2-3 negative sentences to establish that both elements are obligatory. A single negative example is insufficient.
+
+5. If the genitive/ergative suffix identity is to be a discoverable insight, the puzzle must include both possessive and transitive examples where the same suffix appears, and the solver must be able to recognize it as the same morpheme (same form, same position).
+
+6. All patterns must be inferable from the data alone. No pattern should require external knowledge of Australian languages, the Tangkic family, or typological generalizations.
+
+7. The puzzle should not include more than 3-4 distinct patterns to discover simultaneously, to maintain solvability. The recommended core set is: (a) genitive construction with dependent marking and GenN order, (b) split alignment with zero 3rd person, (c) obligatory double negation. Additional patterns (reduplication, comitative/instrumental distinction) should only be added if the puzzle format allows for multiple sub-questions.
+
+8. The "no possessive affixes" constraint means the puzzle should NOT include any example that could be misread as a possessive affix on the possessed noun. All possessive examples must clearly show the genitive construction.

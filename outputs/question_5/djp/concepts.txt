@@ -1,0 +1,139 @@
+
+
+TARGET-LANGUAGE
+
+Djapu (djp), Western Pama-Nyungan, Australia.
+
+CORE
+
+The sole SOURCE CONCEPT (Base 6 numeral system, WALS 144A-5 for Ngkolmpu) is DROPPED. WALS provides no numeral-base data for Djapu, and no established source confirms a base-6 system. Forcing this concept would violate the "do not invent linguistic facts" constraint. The puzzle is rebuilt around target-language-specific properties that are well-supported by WALS evidence and established Pama-Nyungan typology.
+
+Selected target-language-specific concepts (functioning as the core concept set):
+
+1. Suffixing morphology for case and tense-aspect
+   - Realization: Case markers and tense/aspect markers are suffixes on the relevant word (object for case, verb for tense/aspect). WALS 26A-2 (strongly suffixing), 51A-1 (case suffixes), 69A-2 (tense-aspect suffixes).
+   - Intended solver inference: From multiple sentences, the solver identifies that grammatical markers attach to the right edge of the host word, distinguishing them from free particles.
+   - Priority: REQUIRED
+
+2. Dependent marking (object-marking / ergative alignment)
+   - Realization: The object (P) receives a case suffix; the subject (A/S) is unmarked. WALS 23A-2, 25A-2 (consistently dependent-marking).
+   - Intended solver inference: The solver identifies that the marked argument is the object, not the subject, by observing which argument bears the case suffix across transitive and intransitive clauses.
+   - Priority: REQUIRED
+
+3. SOV basic word order
+   - Realization: Subject precedes object, object precedes verb. WALS 81A-1, 82A-1, 83A-1.
+   - Intended solver inference: The solver identifies constituent order from the consistent positioning of the verb at the end and the object immediately before it.
+   - Priority: REQUIRED
+
+4. Inclusive/exclusive 2nd person plural distinction
+   - Realization: Two distinct 2PL pronoun forms: inclusive (speaker + addressee) and exclusive (addressee + third party, excluding speaker). WALS 39B-2.
+   - Intended solver inference: The solver identifies two distinct 2PL forms and determines which is inclusive vs. exclusive from contextual clues in the data (e.g., co-reference with 1SG in one form).
+   - Priority: HIGH
+
+5. Plurality marked by a separate word (not a suffix)
+   - Realization: A free plural word is used rather than a plural suffix. WALS 33A-7.
+   - Intended solver inference: The solver notices that plurality is NOT expressed by a suffix (unlike case and tense) but by an independent word, creating a contrast with the suffixing pattern.
+   - Priority: HIGH
+
+6. Preverbal negative particle (NegSOV)
+   - Realization: A negative particle appears at the beginning of the clause, before the subject. WALS 144A-5 (NegSOV), 143E-1 (preverbal negative word), 144B-1 (beginning, not immediately preverbal).
+   - Intended solver inference: The solver identifies the negative particle by its invariant position at clause-initial position and its contrast with affirmative sentences.
+   - Priority: HIGH
+
+7. Initial question particle
+   - Realization: A question particle appears at the very beginning of the sentence. WALS 92A-1.
+   - Intended solver inference: The solver identifies the question particle by its invariant initial position and its contrast with declarative sentences.
+   - Priority: HIGH
+
+8. Productive full and partial reduplication
+   - Realization: Reduplication (full or partial) is a productive morphological process, likely marking aspect (e.g., iterative, distributive, or continuative). WALS 27A-1.
+   - Intended solver inference: The solver identifies the reduplicated form and infers its grammatical function (aspectual) by comparing it to the non-reduplicated form in context.
+   - Priority: HIGH
+
+9. Optional (often omitted) subject pronouns
+   - Realization: Subject pronouns may be dropped; the verb or context suffices. WALS 101A-5.
+   - Intended solver inference: The solver must handle sentences where the subject is absent and infer the subject from context or from the verb's morphology.
+   - Priority: HIGH
+
+10. No possessive affixes; possessor is marked (dependent marking in possession)
+    - Realization: The possessed noun does not receive a possessive suffix. Instead, the possessor is marked (likely by a case suffix or genitive marker). WALS 57A-4, 24A-2.
+    - Intended solver inference: The solver identifies that possession is expressed by marking the possessor (not the possessed noun), consistent with the overall dependent-marking strategy.
+    - Priority: HIGH
+
+11. Interrogative-based indefinite pronouns
+    - Realization: Indefinite pronouns (e.g., "someone," "something") are derived from or identical to interrogative forms. WALS 46A-1.
+    - Intended solver inference: The solver notices that the same (or closely related) form is used in both questions and indefinite statements, and infers the derivational relationship.
+    - Priority: OPTIONAL
+
+12. Small vowel inventory (2–4 vowels)
+    - Realization: Djapu has a reduced vowel system. WALS 2A-1.
+    - Intended solver inference: The solver can identify the vowel inventory from the data and note its smallness.
+    - Priority: OPTIONAL
+
+13. No fricatives
+    - Realization: The consonant inventory lacks fricatives. WALS 18A-3.
+    - Intended solver inference: The solver identifies the absence of fricatives from the phonological data.
+    - Priority: OPTIONAL
+
+14. No second-person imperatives (morphologically)
+    - Realization: Djapu lacks a dedicated morphological imperative for 2nd person. WALS 70A-5.
+    - Intended solver inference: If imperative data is included, the solver notices the absence of a dedicated imperative form for 2nd person.
+    - Priority: OPTIONAL
+
+TARGET-SPECIFIC
+
+(All concepts above are target-language-specific. No additional concepts beyond the CORE list are selected, as the CORE list already constitutes the target-specific set.)
+
+INTERACTIONS
+
+1. Suffixing + Dependent marking + SOV
+   - Concepts: #1, #2, #3
+   - Interaction: The object (which precedes the verb in SOV order) bears the case suffix. The solver must simultaneously identify word order AND which argument is marked, confirming that the marked argument is the object (not the subject). This triple interaction is the central structural insight of the puzzle.
+   - Additional inference: The solver can verify the ergative/dependent-marking analysis by checking that intransitive subjects are unmarked (like transitive subjects) while transitive objects are marked.
+
+2. Suffixing (case, tense) vs. Plural word
+   - Concepts: #1, #5
+   - Interaction: The solver discovers that Djapu uses suffixes for case and tense/aspect but a FREE WORD for plurality. This contrast is non-trivial and creates a clear typological observation: not all grammatical categories use the same morphological strategy.
+   - Additional inference: The solver must not overgeneralize the suffixing pattern to all grammatical categories.
+
+3. Inclusive/exclusive 2PL + Optional subject pronouns
+   - Concepts: #4, #9
+   - Interaction: When the subject is omitted, the solver must rely on context to determine whether a 2PL reference is inclusive or exclusive. This creates a genuine inference challenge: the solver cannot simply look at the pronoun form if it is absent.
+   - Additional inference: The solver must use discourse context or co-reference to resolve the inclusive/exclusive distinction in pronoun-dropped sentences.
+
+4. Reduplication + Tense-aspect suffixes
+   - Concepts: #8, #1
+   - Interaction: If reduplication marks a specific aspect (e.g., iterative), it may co-occur with or interact with the tense suffix on the verb. The solver must determine the order of reduplication relative to the suffix and the grammatical function of each.
+   - Additional inference: The solver identifies that reduplication and suffixation are distinct morphological processes operating on the verb, and must determine their relative order.
+
+5. NegSOV + Initial question particle + SOV
+   - Concepts: #6, #7, #3
+   - Interaction: Both the negative particle and the question particle appear at clause-initial position. The solver must distinguish them (they are different forms) and understand that they can potentially co-occur (negative question). Their initial position contrasts with the SOV order of the rest of the clause.
+   - Additional inference: The solver identifies a "particle zone" at the left edge of the clause, distinct from the SOV core.
+
+6. No possessive affixes + Dependent marking
+   - Concepts: #10, #2
+   - Interaction: The dependent-marking strategy extends to possession: the possessor is marked (by a case suffix, consistent with #1), not the possessed noun. This creates a unified analysis: all dependent-marking in Djapu uses the same strategy (suffix on the dependent).
+   - Additional inference: The solver can generalize the dependent-marking pattern from clause-level (object marking) to phrase-level (possessor marking), confirming a consistent typological strategy.
+
+CONSTRAINTS
+
+1. The puzzle data must include at least 3–4 transitive sentences and 2–3 intransitive sentences to allow the solver to identify the dependent-marking pattern (marked object vs. unmarked subject).
+
+2. The inclusive/exclusive 2PL forms must appear in at least 2–3 sentences each, with sufficient contextual clues (e.g., a 1SG co-referent in the inclusive context) to allow the solver to determine which is which.
+
+3. The contrast between suffixal marking (case, tense) and lexical marking (plurality) must be visible: at least one sentence must show a plural noun with the free plural word, and at least one must show a case suffix on a noun, so the solver can distinguish the two strategies.
+
+4. The reduplication pattern must be demonstrated in at least 2–3 examples, with the non-reduplicated base form also present, so the solver can identify the reduplicated segment and infer its function.
+
+5. The negative particle and question particle must each appear in at least 2–3 sentences, and ideally one sentence should show their co-occurrence (negative question) to confirm they are distinct forms.
+
+6. At least one sentence should have an omitted subject pronoun to demonstrate the optionality and force the solver to use context.
+
+7. The possessive construction must be shown in at least 2 examples to allow the solver to identify that the possessor (not the possessed noun) bears the marking.
+
+8. All Djapu forms in the puzzle must be consistent with the small vowel inventory (2–4 vowels) and the absence of fricatives, uvulars, and glottalized consonants. The constructor must not introduce phonemes outside the attested inventory.
+
+9. The puzzle must not require the solver to know that Djapu is Pama-Nyungan or Australian. All inferences must be derivable from the data alone using general linguistic knowledge.
+
+10. The numeral-base concept from the source (Ngkolmpu, base 6) must NOT be included in the puzzle. There is no evidence for a base-6 system in Djapu, and including it would be factually unsupported.

@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language 'orh' so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic features for 'orh' suitable for a Linguistic Olympiad puzzle. Include core phonological, morphological, syntactic, and semantic features, with clear mappings between surface forms and underlying structures. Prioritize features that can support non-trivial inference questions.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has already produced concepts for 'orh', but the pipeline currently lacks rationale and puzzle. The next required step is to have Agent 2 design the reasoning blueprint, morphological/syntactic rules, and sentence structure templates that will allow Agent 3 to generate a valid Olympiad puzzle.",
+    "directive": "Using the existing concepts for 'orh', design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how surface forms map to underlying linguistic structures, specify the inference steps solvers must perform, and ensure the rules are internally consistent, typologically plausible, and sufficient for generating non-trivial questions.",
+    "elapsed_seconds": 7.0
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete Olympiad puzzle dataset, questions, and answer key based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for 'orh' using the existing concepts and rationale. Include a clear data section with glossed examples, well-formed non-trivial questions, and a complete answer key. Ensure all vocabulary is glossed, all questions are solvable from the provided data, and the puzzle is internally consistent with the linguistic rules.",
+    "elapsed_seconds": 12.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is marked as needing validation. No validator verdict exists yet, so the required next step is to have Agent 4 solve and validate the generated puzzle.",
+    "directive": "Solve and rigorously validate the generated 'orh' Linguistic Olympiad puzzle. Check that all data entries are glossed, all questions are solvable from the provided data, the answer key is correct, and the linguistic rules are internally consistent. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 26.0
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the current puzzle output is not a valid puzzle: it lacks CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, and appears to have failed with a repetitive loop. Concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must regenerate a complete, self-contained Olympiad puzzle.",
+    "directive": "Regenerate the complete 'orh' Linguistic Olympiad puzzle from scratch. Do not output a design draft, stream-of-consciousness text, or repeated tokens. The final output must be a complete, self-contained puzzle containing: CONTEXT, DATA with fully glossed examples, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary is glossed, all questions are solvable from the provided data, the answer key is correct, and the puzzle is internally consistent with the existing concepts and rationale.",
+    "elapsed_seconds": 29.1
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has concepts, rationale, and a regenerated puzzle, and puzzle_needs_validation is true with no validator verdict yet. The required next step is to have Agent 4 solve and validate the latest puzzle before any further revision or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated 'orh' Linguistic Olympiad puzzle. Verify that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed; that every question is solvable from the provided data; that the answer key is correct; and that the linguistic rules are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if defects are found.",
+    "elapsed_seconds": 40.8
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL due to a critical internal inconsistency in the feminine suffix pattern, ambiguous Q2b, trivial Q3a/Q3b, and an incorrect solution step. These are concrete puzzle-level defects rather than weak concepts or an impossible rationale. Agent 3 should patch the puzzle directly by making the feminine suffix rule consistent across all data, removing ambiguity, replacing trivial questions with non-lookup items, and correcting the solution.",
+    "directive": "Patch the 'orh' puzzle directly. 1) Resolve the critical feminine suffix inconsistency: choose one consistent rule for feminine nouns ending in -aa and apply it uniformly. If the intended rule is that feminine -aa roots take -i, change harkaa to harkai or revise the relevant data sentence so it no longer contradicts gubbaa -> gubbaai. If the intended rule is that some -aa feminine roots do not take -i, provide a clear, non-ambiguous contrast in the data and adjust Q2b accordingly. 2) Make Q2b unambiguous so the expected answer dhagaaai is forced by the data. 3) Replace trivial Q3a and Q3b, which are verbatim copies of data sentences, with non-trivial questions requiring inference, such as producing a novel form, identifying a morphological pattern, or translating a sentence using unseen but inferable vocabulary. 4) Correct the solution's Step 1: harkaa ends in -aa, not -i; update the pattern description to match the final data. 5) Ensure all vocabulary is glossed, all questions are solvable from the provided data, and the answer key is fully consistent with the revised data and solution.",
+    "elapsed_seconds": 48.8
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been revised by Agent 3 and is marked as needing validation, but no validator verdict is present yet. The required next step is to have Agent 4 solve and rigorously validate the revised puzzle before deciding whether to finish or route further fixes.",
+    "directive": "Solve and rigorously validate the latest revised 'orh' Linguistic Olympiad puzzle. Verify that the previously reported issues are resolved: the feminine suffix rule is internally consistent, Q2b is unambiguous, Q3a/Q3b are non-trivial, and the solution steps are correct. Also confirm that all vocabulary is glossed, all questions are solvable from the provided data, and the answer key is fully consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects remain.",
+    "elapsed_seconds": 57.4
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the reported MAJOR issue is a difficulty mismatch: the puzzle requires multi-step inference while the target difficulty is 1. This is a puzzle-level calibration problem, not a conceptual or rationale failure. Agent 3 should simplify the puzzle or add explicit hints so the required inference is very easy, then the revised puzzle must be revalidated.",
+    "directive": "Revise the 'orh' puzzle to match target difficulty 1 ('very easy inference'). Reduce the multi-step inference burden: make the animate/inanimate gender assignment rule explicit or provide a direct hint, simplify the novel-noun generalization, and make the zero-morpheme 3sg agreement recognition straightforward. Keep all data glossed, all questions solvable, and the answer key consistent. Do not change the underlying linguistic concepts unless necessary for clarity.",
+    "elapsed_seconds": 63.6
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been revised by Agent 3 to address the previous PASS_WITH_ISSUES feedback, especially the difficulty mismatch for target difficulty 1. The state shows puzzle_needs_validation is true and no validator verdict is present yet, so the required next step is to have Agent 4 solve and rigorously validate the revised puzzle before deciding whether to finish or route further fixes.",
+    "directive": "Solve and rigorously validate the latest revised 'orh' Linguistic Olympiad puzzle. Verify that the previous issues are resolved: the feminine suffix rule is internally consistent, Q2b is unambiguous, Q3a/Q3b are non-trivial, the solution steps are correct, and the overall difficulty now matches target difficulty 1 ('very easy inference'). Also confirm that all vocabulary is glossed, all questions are solvable from the provided data, and the answer key is fully consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects remain.",
+    "elapsed_seconds": 70.6
+  },
+  {
+    "step": 11,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict for the latest puzzle, and the state shows puzzle_needs_validation is false. The puzzle is fully verified and acceptable, so the pipeline should finish successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 77.7
+  }
+]

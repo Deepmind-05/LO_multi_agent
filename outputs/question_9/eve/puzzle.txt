@@ -1,0 +1,239 @@
+
+
+# CONTEXT
+
+Evenki is a Tungusic language with approximately 20,000 native speakers, primarily in Siberia and northeastern China. It is an agglutinative language, meaning that grammatical information is expressed by adding suffixes to word stems in a fixed order. The data below is from a single dialect.
+
+Note: ā, ē, ī, ō, ū represent long vowels; a, e, i, o, u represent short vowels; ə is a mid-central vowel (as in the "a" in "about").
+
+# DATA
+
+**Table 1: Noun forms**
+
+| Form | Translation |
+|------|-------------|
+| ta | river |
+| tala | river |
+| tan | river |
+| talan | river |
+| tana | river |
+| talana | river |
+| tā | house |
+| tāle | house |
+| tāna | house |
+| tālena | house |
+| ke | stone |
+| kela | stone |
+| kē | hand |
+| kēle | hand |
+| kēn | hand |
+| kēlen | hand |
+| mu | dog |
+| mula | dog |
+| mū | water |
+| mūle | water |
+| mūna | water |
+| mūlena | water |
+| po | tree |
+| pola | tree |
+| sō | fire |
+| sōle | fire |
+| sōn | fire |
+| sōlen | fire |
+| sa | fish |
+| sala | fish |
+| pē | eye |
+| pēle | eye |
+| wat | rain |
+| watan | rain |
+| watana | rain |
+| wada | rain |
+| wadan | rain |
+| wadana | rain |
+| sət | wind |
+| sətn | wind |
+| sətana | wind |
+| səda | wind |
+| sədan | wind |
+| sədana | wind |
+| mukə | water-related |
+| mukəla | water-related |
+| mukəlena | water-related |
+| takə | house-related |
+| takəla | house-related |
+| takəlena | house-related |
+| watkə | rain-related |
+| watkəla | rain-related |
+| watkəlena | rain-related |
+| sətkə | wind-related |
+| sətkəla | wind-related |
+
+**Table 2: Verb forms**
+
+| Form | Gloss |
+|------|-------|
+| wəm | I go |
+| wən | you go |
+| wəa | he goes |
+| wəj | we go (including you) |
+| wəs | we go (not including you) |
+| wət | you all go |
+| wər | they go |
+| kəa | he eats |
+| kəs | we eat (not including you) |
+| kət | you all eat |
+| kəj | we eat (including you) |
+| kər | they eat |
+| təm | I see |
+| tən | you see |
+| təa | he sees |
+| tər | they see |
+| bən | you give |
+| bəm | I give |
+| bəj | we give (including you) |
+| bəs | we give (not including you) |
+| bət | you all give |
+
+# QUESTIONS
+
+**Q1 (4 marks):** Segment each of the following forms into stem + suffixes. For each suffix, state its grammatical function.
+(a) talana
+(b) mukəlena
+(c) wadana
+(d) sətkəla
+
+**Q2 (5 marks):** Predict the missing forms.
+(a) Given: sa (fish, nominative singular). What is the locative plural?
+(b) Given: pē (eye, nominative singular). What is the accusative plural?
+(c) Given: wada (rain, nominative plural). What is the accusative singular?
+(d) Given: mūlena (water, locative plural). What is the nominative plural of the agentive form?
+(e) Given: sət (wind, nominative singular). What is the locative plural of the agentive form?
+
+**Q3 (4 marks):** Using the patterns from Table 2, predict the following verb forms:
+(a) "I eat" (stem: kə-)
+(b) "we (including you) see" (stem: tə-)
+(c) "you all see" (stem: tə-)
+(d) "they give" (stem: bə-)
+
+**Q4 (5 marks):** Conjugate the new verb stem sə- (hear) in all person/number slots.
+
+**Q5 (7 marks):** Explain:
+(a) What is the suffix ordering for nouns?
+(b) What conditions the vowel alternation in the plural suffix?
+(c) What is the consonant alternation in the plural, and what conditions it?
+(d) What is the derivational suffix -kə, and what two effects does it have on the morphology of the derived stem?
+(e) What is the inclusive/exclusive distinction, and how is it identified from the data?
+
+# ANSWERS
+
+**Q1:**
+(a) ta + la + na (stem + plural + locative)
+(b) mukə + la + na (derived stem + plural + locative), where mukə = mū + kə
+(c) wad + a + na (stem with alternation + plural + locative), where wad < wat
+(d) sət + kə + la (stem + derivational + plural)
+
+**Q2:**
+(a) salana
+(b) pēlen
+(c) watan
+(d) mukəla
+(e) sətkəlena
+
+**Q3:**
+(a) kəm
+(b) təj
+(c) tət
+(d) bər
+
+**Q4:**
+1sg: səm
+2sg: sən
+3sg: səa
+1pl.incl: səj
+1pl.excl: səs
+2pl: sət
+3pl: sər
+
+**Q5:**
+(a) The suffix order for nouns is: stem → derivational → plural → case. The derivational suffix (if present) comes immediately after the stem, followed by the plural suffix, followed by the case suffix.
+(b) The plural suffix has three allomorphs: -la after stems ending in a short vowel (non-/t/ final), -le after stems ending in a long vowel, and -a after stems ending in /t/. The primary conditioning factor is the vowel length of the stem-final vowel.
+(c) Stems ending in /t/ undergo /t/ → /d/ before the plural suffix. This alternation is specifically conditioned by the plural suffix: it does not occur before the accusative or locative suffixes in the singular (e.g., watan, watana, sətn, sətana show no alternation).
+(d) The derivational suffix -kə creates an agentive/related form. It has two effects: (1) It shortens a long stem-final vowel (mū → mukə, tā → takə), which changes the plural suffix from -le to -la. (2) It blocks the /t/ → /d/ alternation because the /t/ is no longer stem-final (wat → watkə → watkəla, not *wadkəla).
+(e) The inclusive/exclusive distinction is a difference between two 1st person plural forms. The inclusive form (suffix -j) includes the addressee in the group; the exclusive form (suffix -s) excludes the addressee. This is identified from the glosses in Table 2.
+
+# SOLUTION
+
+**Rules the solver should infer:**
+
+**1. Noun morphology (agglutinative suffixing):**
+Evenki nouns are formed by adding suffixes to a stem in a fixed order: stem → derivational → plural → case.
+
+- **Case suffixes:** -∅ (Nominative), -n (Accusative), -na (Locative).
+  - Evidence: ta (nom sg), tan (acc sg), tana (loc sg), tala (nom pl), talan (acc pl), talana (loc pl).
+
+- **Plural suffix allomorphs:**
+  - **-la** after stems ending in a short vowel (non-/t/ final).
+    - Evidence: ta → tala, ke → kela, mu → mula, po → pola, sa → sala.
+  - **-le** after stems ending in a long vowel.
+    - Evidence: tā → tāle, kē → kēle, mū → mūle, sō → sōle, pē → pēle.
+  - **-a** after stems ending in /t/ (with /t/ → /d/).
+    - Evidence: wat → wada, sət → səda.
+
+- **Consonant alternation /t/ → /d/:**
+  - Applies only before the plural suffix when /t/ is stem-final.
+  - Evidence for application: wat → wada, sət → səda.
+  - Evidence for non-application before case suffixes: watan (acc sg), watana (loc sg), sətn (acc sg), sətana (loc sg) — no alternation.
+  - Evidence for blocking by derivational suffix: watkə → watkəla (not *wadkəla), sətkə → sətkəla (not *sədkəla).
+
+- **Derivational suffix -kə (agentive):**
+  - Added to the stem before any inflectional suffixes.
+  - Shortens a long stem-final vowel: mū → mukə, tā → takə.
+  - Does not change short vowels: wat → watkə, sət → sətkə.
+  - The shortened vowel then conditions the plural suffix: mukə → mukəla (not *mukəle), takə → takəla (not *takəle).
+  - Blocks the /t/ → /d/ alternation because /t/ is no longer stem-final: watkə → watkəla (not *wadkəla).
+
+**2. Vowel length:**
+Evenki has a binary vowel length contrast (short vs. long). Long vowels are marked with a macron. The contrast is phonemic: ta 'river' ≠ tā 'house', ke 'stone' ≠ kē 'hand', mu 'dog' ≠ mū 'water'. The length of the stem-final vowel conditions the plural suffix allomorph. The derivational suffix -kə can change vowel length, which in turn changes the plural suffix.
+
+**3. Verb agreement:**
+Evenki verbs agree with the subject for person and number. The agreement suffixes are:
+- 1sg: **-m** (evidence: wəm, təm, bəm)
+- 2sg: **-n** (evidence: wən, tən, bən)
+- 3sg: **-a** (evidence: wəa, kəa, təa)
+- 1pl.incl: **-j** (evidence: wəj, kəj, bəj)
+- 1pl.excl: **-s** (evidence: wəs, kəs, bəs)
+- 2pl: **-t** (evidence: wət, kət, bət)
+- 3pl: **-r** (evidence: wər, kər, tər)
+
+**4. Inclusive/exclusive distinction:**
+The 1st person plural has two forms. The inclusive form (-j) includes the addressee; the exclusive form (-s) excludes the addressee. Identified from glosses: "we go (including you)" = wəj, "we go (not including you)" = wəs.
+
+**How the rules produce each answer:**
+
+**Q1:**
+(a) talana: ends in -na (locative) → remove → tala; ends in -la (plural, short vowel stem) → remove → ta. Result: ta + la + na.
+(b) mukəlena: ends in -na (locative) → remove → mukəla; ends in -la (plural, short vowel stem) → remove → mukə. The form mukə is a derived stem (mū + kə, with ū → u shortening). Result: mukə + la + na.
+(c) wadana: ends in -na (locative) → remove → wadan; ends in -a (plural allomorph after /t/-final stem) → remove → wad. The form wad reflects /t/ → /d/ alternation from base stem wat. Result: wad + a + na.
+(d) sətkəla: ends in -la (plural, short vowel stem) → remove → sətkə. The form sətkə = sət + kə (derivational). The /t/ does NOT alternate to /d/ because it is not stem-final (it is followed by -kə). Result: sət + kə + la.
+
+**Q2:**
+(a) sa (short vowel) → sa + la + na = salana.
+(b) pē (long vowel) → pē + le + n = pēlen.
+(c) wada = wad + a (plural). The base stem is wat (reversing /t/ → /d/). Acc sg = wat + n = watan.
+(d) mūlena = mū + le + na (loc pl of water). Agentive of mū = mū + kə = mukə (ū → u). Nom pl of mukə: mukə has short vowel → -la. Result: mukə + la = mukəla.
+(e) sət + kə = sətkə (agentive). The /t/ is not stem-final, so no /t/ → /d/ alternation. sətkə has short vowel → -la. Loc pl = sətkə + la + na = sətkəlena.
+
+**Q3:**
+(a) kə + m = kəm.
+(b) tə + j = təj.
+(c) tə + t = tət.
+(d) bə + r = bər.
+
+**Q4:**
+sə + m = səm; sə + n = sən; sə + a = səa; sə + j = səj; sə + s = səs; sə + t = sət; sə + r = sər.
+
+**Q5:** As detailed in the rules above.
+
+# DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously track multiple interacting morphological processes within the noun system: (1) vowel length as a phonemic contrast conditioning the plural suffix allomorph, (2) a consonant alternation /t/ → /d/ specifically conditioned by the plural suffix, and (3) a derivational suffix -kə that both shortens long vowels (thereby changing the plural allomorph from -le to -la) and blocks the consonant alternation (because /t/ is no longer stem-final). These three processes interact in non-trivial ways: the derivational suffix changes the input to both the vowel-length rule and the consonant-alternation rule, creating dependency chains where an error at one step cascades. For example, predicting the locative plural of the agentive of sət (Q2e) requires: applying -kə to get sətkə, recognizing that /t/ is now non-stem-final (blocking the alternation), identifying the short vowel (selecting -la), and adding the locative suffix -na. The solver must also distinguish between the three plural allomorphs (-la, -le, -a) and understand the specific conditioning of each. The verb system adds a parallel but independent challenge: identifying seven agreement suffixes and correctly assigning the inclusive/exclusive distinction from glosses. The questions build progressively: Q1 tests segmentation requiring recognition of all three processes, Q2 tests prediction requiring multi-step chaining of derivational and inflectional rules, Q3–Q4 test verb generalization, and Q5 requires explicit articulation of the interacting rules.

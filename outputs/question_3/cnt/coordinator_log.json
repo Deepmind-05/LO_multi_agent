@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for target language 'cnt', including relevant morphological, syntactic, and lexical features suitable for an Olympiad-level puzzle.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the step-by-step reasoning and sentence structure rules based on the extracted concepts.",
+    "directive": "Using the existing linguistic concepts for target language 'cnt', design a clear Olympiad-level rationale with step-by-step reasoning, morphological/syntactic rules, and sentence structure templates needed to generate a valid puzzle.",
+    "elapsed_seconds": 5.7
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing concepts and rationale.",
+    "directive": "Generate a complete Olympiad-level puzzle for target language 'cnt' using the existing linguistic concepts and rationale. Include a clear data section with glossed vocabulary/sentences, well-formed questions, and a complete answer key. Ensure the puzzle is solvable, non-trivial, and consistent with the rationale.",
+    "elapsed_seconds": 10.5
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the newly generated puzzle.",
+    "directive": "Solve and rigorously validate the generated puzzle for target language 'cnt'. Check data completeness, glossing, question solvability, answer-key correctness, consistency with the rationale, and absence of ambiguity or triviality. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if issues are found.",
+    "elapsed_seconds": 21.1
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 has validated the puzzle and returned a PASS verdict. The puzzle is complete, verified, and acceptable, so the pipeline should finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 25.9
+  }
+]

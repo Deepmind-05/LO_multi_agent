@@ -1,0 +1,139 @@
+
+
+TARGET-LANGUAGE
+
+Zoque (Copainalá) [zqc], Mixe-Zoque family, North America
+
+CORE
+
+1. Polypersonal agreement (source: 81A-4)
+   - Target-language realization: WALS 102A-5 confirms both A and P are marked on the verb. However, WALS 104A-5 specifies that A and P markers are FUSED into a single paradigm (not separate slots as in Zuni). The verb carries one person-number marker that encodes the A-P combination.
+   - Intended solver inference: Solver observes verb forms varying with different subject-object combinations and discovers that the person/number marking is a single fused slot, not two independent prefixes. The combinatorial pattern (e.g., 1sg-2sg ≠ 1sg-3sg ≠ 2sg-3sg) reveals the fused paradigm.
+   - Priority: REQUIRED
+
+2. Polysynthetic/agglutinative verb structure (source: morphological typology)
+   - Target-language realization: WALS 22A-4 (6-7 categories per word) confirms polysynthetic verb. WALS 20A-1 (exclusively concatenative) means the verb is agglutinative. Structure: [Fused A/P marker] + Root + [TAM suffixes] + [Evidential suffix]. WALS 26A-4 (equal prefixing and suffixing) and 69A-2 (TAM suffixes) confirm the distribution.
+   - Intended solver inference: Solver segments the verb into morphemes and identifies the slot order. The concatenative nature means boundaries are (in principle) recoverable, but the fused A/P slot creates a challenge.
+   - Priority: REQUIRED
+
+3. Tense/aspect (source: 18A-1)
+   - Target-language realization: WALS 66A-1 (past/non-past, no remoteness), 65A-1 (perfective/imperfective grammatical), 69A-2 (TAM suffixes), 67A-2 (no inflectional future). The verb has suffixal TAM marking with at least a past/non-past distinction and a perfective/imperfective distinction.
+   - Intended solver inference: Solver identifies suffixal TAM markers by comparing verb forms across sentences with different temporal/aspectual meanings. The absence of a future form is a negative constraint the solver can verify.
+   - Priority: HIGH
+
+4. Morpheme boundary ambiguity (source: morpheme boundary ambiguity)
+   - Target-language realization: The fused A/P paradigm (104A-5) combined with 6-7 categories per word creates genuine segmentation challenges. A surface string like [marker]+[root]+[suffix] may be ambiguous if the boundary between the fused A/P marker and the root is unclear, or if a TAM suffix could be reanalyzed as part of the root.
+   - Intended solver inference: Solver must use paradigmatic evidence (other forms of the same verb, other verbs with the same A/P combination) to resolve boundary ambiguity. This is the key reasoning challenge.
+   - Priority: HIGH
+
+5. Object marking (source: object marking via prefix)
+   - Target-language realization: Adapted. In Zuni, object is a separate prefix slot. In Zoque, object (P) is encoded within the fused A/P paradigm (104A-5). There is no separate "object prefix." The P argument's person/number is part of the single fused marker.
+   - Intended solver inference: Solver discovers that the object is not marked by a separate affix but is integrated into the same person-number slot as the subject. This is a key structural difference from the source language that the solver must infer.
+   - Priority: HIGH
+
+6. Irregular verb morphology (source: irregular verb)
+   - Target-language realization: WALS 29A-3 (not syncretic in verbal person/number) suggests the paradigm is regular in the sense that all person/number combinations are distinct. However, root alternation is not ruled out. One verb could show a suppletive or alternating root to add difficulty.
+   - Intended solver inference: If included, the solver must notice that one verb has a different root form in certain contexts and identify the pattern. This adds a layer of difficulty.
+   - Priority: OPTIONAL
+
+TARGET-SPECIFIC
+
+1. Ergative-absolutive case marking with accusative verbal agreement (split alignment)
+   - Phenomenon: WALS 98A-4 (ergative-absolutive for full NPs), 99A-4 (ergative-absolutive for pronouns), 100A-2 (accusative alignment in verbal person marking). The language has a genuine split: case on NPs follows ergative-absolutive alignment, but the verb's person-number marking follows accusative alignment.
+   - Intended solver inference: Solver discovers the case system from NP forms (transitive subject marked differently from intransitive subject and object). Solver discovers the agreement system from verb forms. The critical insight is that these two systems do NOT align: the verb "agrees" with the object (accusative) while the case system marks the transitive subject (ergative). This split is the central puzzle insight.
+   - Interaction with CORE: The fused A/P paradigm (CORE #1) encodes accusative alignment, while the case system (this concept) encodes ergative alignment. The solver must reconcile these two systems.
+   - Difficulty contribution: HIGH. This is the main reasoning challenge. The solver must independently discover two alignment systems and then notice their mismatch.
+   - Priority: REQUIRED
+
+2. Fused A/P person-number paradigm (104A-5)
+   - Phenomenon: The verb does not have separate subject and object slots. Instead, a single set of markers encodes the A-P combination. This is distinct from both the Zuni source (separate prefixes) and from languages with only subject agreement.
+   - Intended solver inference: Solver sees that the verb marker changes with both subject and object person/number, but must determine whether this is two slots or one fused slot. The evidence: if it were two slots, the marker for "1sg-2sg" would be predictable as [1sg-marker]+[2sg-marker]. If fused, it is an unpredictable unique form. The solver must test this hypothesis.
+   - Interaction with CORE: This IS the realization of CORE #1 (polypersonal agreement) and CORE #5 (object marking). It transforms the source concept from "two slots" to "one fused slot."
+   - Difficulty contribution: HIGH. The solver must perform a structural analysis to determine slot architecture.
+   - Priority: REQUIRED
+
+3. Inclusive/exclusive distinction in verbal inflection (40A-5)
+   - Phenomenon: WALS 40A-5 confirms inclusive/exclusive is differentiated in verbal inflection. WALS 39A-5 confirms it in independent pronouns as well. This means 1pl has two values: inclusive (speaker+addressee) and exclusive (speaker+others).
+   - Intended solver inference: Solver notices that 1pl has two distinct forms in the verb paradigm and in the pronoun set. The solver must determine what semantic distinction this encodes (inclusive vs. exclusive) from contextual clues in the puzzle data.
+   - Interaction with CORE: Adds a dimension to the fused A/P paradigm. The fused slot now has more cells (1pl-incl vs. 1pl-excl as A or P). This increases the paradigm size and the evidence needed.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a person dimension that the solver must discover and correctly assign.
+   - Priority: HIGH
+
+4. Evidentiality (indirect, verbal affix) (77A-2, 78A-2)
+   - Phenomenon: WALS 77A-2 (only indirect evidentials), 78A-2 (verbal affix or clitic). The language marks indirect evidence (hearsay, inference, etc.) with a verbal affix.
+   - Intended solver inference: Solver identifies an additional verbal suffix that correlates with indirect evidence in the translation. This adds another slot to the verb and increases the morphological complexity.
+   - Interaction with CORE: Adds to the polysynthetic verb structure (CORE #2). The verb now has: [Fused A/P] + Root + [TAM] + [Evidential]. The solver must identify all slots.
+   - Difficulty contribution: MEDIUM. Adds a slot to identify but is relatively straightforward once the pattern is visible.
+   - Priority: HIGH
+
+5. VOS basic word order (81A-4)
+   - Phenomenon: WALS 81A-4 (VOS), 82A-2 (VS), 83A-2 (VO). The basic word order is Verb-Object-Subject.
+   - Intended solver inference: Solver observes that the verb precedes both arguments, and the object precedes the subject. This is typologically marked and helps the solver identify which NP is the subject and which is the object (in addition to case marking).
+   - Interaction with CORE: The VOS order interacts with the split alignment. In a VOS language with ergative case, the subject (ergative) appears LAST, after the object (absolutive). This creates a clear positional cue for the solver.
+   - Difficulty contribution: MEDIUM. Provides a structural cue that helps the solver identify arguments, but also creates a potential confusion (the last NP is the subject, not the object, as in SVO languages).
+   - Priority: HIGH
+
+6. Double marking (23A-3, 25A-3)
+   - Phenomenon: WALS 23A-3 (P is double-marked: case + agreement), 25A-3 (consistently double-marking). The object (P) is marked both by case (absolutive, which may be zero) and by verbal agreement.
+   - Intended solver inference: Solver notices that the object's person/number is reflected both in the NP (case) and in the verb (agreement). This redundancy is a clue that the agreement system is independent of the case system.
+   - Interaction with CORE: Reinforces the split alignment discovery. The double marking makes it clear that the verb's agreement is an independent system, not simply a reflection of case.
+   - Difficulty contribution: MEDIUM. Provides confirmatory evidence for the split alignment.
+   - Priority: HIGH
+
+7. Antipassive construction (108A-1)
+   - Phenomenon: WALS 108A-1 (antipassive with implicit patient), 108B-2 (partially productive). The language has an antipassive that demotes the object, leaving it implicit.
+   - Intended solver inference: If included, the solver sees a form where the verb has only one argument marked (the A, now S) and the object is absent. The solver must identify this as a derived intransitive.
+   - Interaction with CORE: The antipassive interacts with the fused A/P paradigm. In the antipassive, the P slot is "empty" or has a special value, which the solver must identify.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a derivational process that the solver must identify.
+   - Priority: OPTIONAL
+
+8. Asymmetric negation (113A-2, 114A-4)
+   - Phenomenon: WALS 113A-2 (asymmetric negation), 114A-4 (A/Fin and A/NonReal subtypes). Different negation strategies for finite vs. non-finite and real vs. non-real clauses. WALS 112A-3 (negative auxiliary verb).
+   - Intended solver inference: If included, the solver sees different negation patterns in different clause types and must identify the asymmetry.
+   - Interaction with CORE: Adds complexity to the clause structure but does not directly interact with the core agreement/case puzzle.
+   - Difficulty contribution: MEDIUM. Adds a separate subsystem.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Fused A/P paradigm + Ergative case + Accusative agreement (CORE #1, TS #1, TS #2)
+   - Interaction: The verb's fused A/P marker encodes accusative alignment (agrees with object), while the NP case system encodes ergative alignment (marks transitive subject). These two systems are independent and must be discovered separately.
+   - Additional inference: The solver must realize that the verb marker for "1sg-2sg" (I-you) is NOT the same as what you'd predict from the case system. The case system says "1sg is ergative (marked), 2sg is absolutive (unmarked)" but the verb says "the combination 1sg-2sg has a unique fused marker." The solver must hold both systems in mind simultaneously.
+
+2. Fused A/P + Inclusive/exclusive (TS #2, TS #3)
+   - Interaction: The inclusive/exclusive distinction adds cells to the fused paradigm. 1pl-incl and 1pl-excl are distinct values in the fused slot, whether they appear as A or P.
+   - Additional inference: The solver must determine which 1pl form is inclusive and which is exclusive from contextual evidence. This requires understanding the semantic content of the sentences.
+
+3. VOS word order + Ergative case (TS #5, TS #1)
+   - Interaction: In VOS order, the ergative-marked subject appears in the final position. The absolutive object appears in the middle. This creates a clear positional pattern: V + [absolutive NP] + [ergative NP].
+   - Additional inference: The solver can use word order as a cross-check for case identification. If the last NP has the ergative marker, this confirms both the case system and the word order.
+
+4. Double marking + Split alignment (TS #6, TS #1)
+   - Interaction: The object (P) is marked by both case (absolutive) and verbal agreement. This redundancy makes it clear that the verbal agreement is an independent system.
+   - Additional inference: The solver can verify that the verbal agreement matches the object's person/number (accusative alignment) rather than the subject's (which would be ergative alignment).
+
+5. Polysynthetic verb + Evidentiality + TAM (CORE #2, TS #4, CORE #3)
+   - Interaction: The verb has multiple suffixal slots: [Fused A/P prefix] + Root + [TAM suffix] + [Evidential suffix]. The solver must identify all slots and their order.
+   - Additional inference: The solver must determine the relative order of TAM and evidential suffixes, which requires comparing forms that vary in one dimension while holding the other constant.
+
+CONSTRAINTS
+
+1. The fused A/P paradigm must be presented with enough cells to demonstrate that it is truly fused (not two separate slots). At minimum, the puzzle should show 3+ different A-P combinations where the marker is not decomposable into a predictable [A-marker]+[P-marker] pattern.
+
+2. The split alignment (ergative case vs. accusative agreement) must be discoverable from the data. The puzzle must include both transitive and intransitive sentences to allow the solver to identify the ergative marker (the marker that appears on transitive subjects but not intransitive subjects).
+
+3. The inclusive/exclusive distinction must be supported by contextual evidence in the translations. The solver cannot know which 1pl form is inclusive without semantic cues.
+
+4. The evidentiality marker must be distinguishable from TAM markers. The puzzle should include sentences where evidentiality varies while TAM is held constant, and vice versa.
+
+5. The VOS word order must be consistent across all sentences in the puzzle (or at least the majority), so the solver can use it as a reliable structural cue.
+
+6. If the antipassive is included, it must be clearly distinguishable from a simple intransitive. The puzzle should show that the antipassive verb has a different form from the intransitive verb (not just the absence of an object).
+
+7. The morpheme boundary ambiguity (CORE #4) must be resolvable from the data. The puzzle should provide enough paradigmatic evidence (other verbs, other forms) to allow the solver to determine the correct segmentation.
+
+8. WALS 20A-1 (exclusively concatenative) means no suppletion or non-concatenative processes should be included in the core puzzle. Any irregularity (if included) should be limited to root alternation, not to non-concatenative morphology.
+
+9. WALS 103A-2 (no zero realization of third person S) means that third person intransitive subjects are marked on the verb. The puzzle should reflect this: there should be no "unmarked" third person S form.
+
+10. The puzzle should not require the solver to know that Zoque is a Mixe-Zoque language or any specific linguistic facts about the language. All relevant properties must be inferable from the puzzle data alone.

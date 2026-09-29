@@ -1,0 +1,65 @@
+
+
+TARGET-LANGUAGE: Yukulta (Tangkic, Australia)
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the morphological type and basic vocabulary.** Select a controlled vocabulary of 10–14 nouns from at least three semantic categories (e.g., body parts, kinship terms, natural objects) and 4–6 verbs (a mix of intransitive and transitive). All morphological marking in the language must be suffixal: case markers, person markers, and the negative suffix attach to the right edge of their host. This suffixing consistency is a background property that aids segmentation but is not itself a discovery target. Ensure no lexical item is homophonous with any grammatical morpheme. The vocabulary should include at least two nouns that can serve as both subjects and objects in clause data, and at least two nouns that can serve as both possessor and possessed in possessive data, enabling cross-domain comparisons later.
+
+2. **Design the genitive construction.** Possession is expressed as a free two-noun phrase: [Possessor + Genitive Suffix] + [Possessed Noun]. The possessor bears a single genitive suffix; the possessed noun is unmarked. There are no possessive affixes on the possessed noun for any person. Pronominal possessors appear as a pronominal stem + the same genitive suffix (e.g., a 1st person pronoun stem + genitive suffix = "my"). This means the genitive construction is the universal possessive strategy regardless of whether the possessor is nominal or pronominal. The genitive suffix must be a single, phonologically simple suffix (one syllable or a consonant cluster) so that it is easily identifiable as a distinct morpheme.
+
+3. **Design the clause structure and alignment system.** The basic clause order is SVO. The language exhibits ergative-absolutive split alignment: the transitive agent (A) bears an ergative suffix; the intransitive subject (S) and the transitive patient (P) are unmarked (absolutive). The ergative suffix must be the same morpheme as the genitive suffix designed in Step 2 (same form, same position: right edge of the host). This identity is the central cross-domain insight of the puzzle. The solver will discover it by recognizing that the suffix appearing on the possessor in genitive phrases is the same suffix appearing on the transitive agent in clauses. Do not make this identity obvious from the first example; it should emerge as a unifying observation after both domains have been independently established.
+
+4. **Design the verbal person marking system.** The verb carries person markers for both the agent and the patient in transitive clauses. However, all 3rd person forms are zero (unmarked). 1st and 2nd person forms must be overt and distinct from each other and from the ergative/genitive suffix. This creates a critical consequence: in 3rd person transitive clauses, the verb shows no person marking, making such clauses surface-identical to 3rd person intransitive clauses at the verbal level. The ergative suffix on the A argument is therefore the only overt marker of transitivity in 3rd person. The solver must discover this by comparing a 3rd person transitive clause (where the verb is unmarked but the subject bears the ergative suffix) with a 3rd person intransitive clause (where neither the verb nor the subject is marked).
+
+5. **Design the negation system.** Negation is expressed by two obligatory elements: (a) a preverbal negative word (a free morpheme appearing before the subject) and (b) a negative suffix on the verb. The surface pattern is: Neg-word + S + V-Neg-suffix + O. Both elements are required; neither alone constitutes negation. The negative suffix must be phonologically distinct from the ergative/genitive suffix to avoid confusion. The negative word must be a distinct free form that does not resemble any other element in the data. Provide at least three negative examples in the data to establish that both elements are consistently present and obligatory.
+
+6. **Construct the baseline data set in a carefully ordered sequence.** Present all data as a flat, ungrouped list (not organized by rule) to force simultaneous induction. The ordering should follow a progressive difficulty arc:
+
+   - **Early items (first 4–5 sentences):** Simple possessive phrases with nominal possessors. Vary the possessor and possessed nouns. These establish: the genitive construction, the GenN linear order, dependent marking (suffix on possessor, not possessed), and the absence of possessive affixes on the head. The solver should be able to identify the genitive suffix and its position.
+
+   - **Next items (2–3 sentences):** Possessive phrases with pronominal possessors (1st person, 2nd person). These confirm that the same genitive construction applies to pronominal possessors and prevent the solver from hypothesizing a separate pronominal possessive strategy (e.g., possessive affixes on the head).
+
+   - **Next items (3–4 sentences):** Simple intransitive clauses (S + V) and simple transitive clauses (S + V + O). Include at least one 3rd person intransitive and one 3rd person transitive with the same subject noun. These establish: SVO word order, the ergative suffix on the transitive agent, the unmarked status of S and P, and the zero 3rd person on the verb. The critical contrast is: the same noun appears unmarked as S in an intransitive clause but marked (with the ergative suffix) as A in a transitive clause.
+
+   - **Next items (2–3 sentences):** Transitive clauses with 1st or 2nd person agents or patients, showing overt verbal person marking. These establish that the verb does carry person markers when the person is not 3rd, confirming that the absence of verbal marking in 3rd person transitive clauses is due to zero allomorphy rather than the absence of a person-marking system.
+
+   - **Final items (3–4 sentences):** Negative clauses (both intransitive and transitive). These establish the double negation pattern: the preverbal negative word and the negative suffix on the verb. Include at least one negative transitive clause with a 3rd person agent to show the interaction of negation with the ergative suffix (the ergative suffix on the agent co-occurs with the negative suffix on the verb).
+
+7. **Introduce minimal pairs and controlled contrasts to prevent alternative analyses.**
+
+   - **Genitive vs. Ergative identity:** Ensure that the genitive suffix and the ergative suffix are phonologically identical (same form, same position). The solver should be able to recognize the identity by comparing a possessive phrase (e.g., "X's house" where X bears the suffix) with a transitive clause (e.g., "X hits Y" where X bears the same suffix). Do not make this identity the first thing the solver encounters; it should emerge as a unifying insight after both patterns are independently established.
+
+   - **Transitive vs. Intransitive (3rd person):** Include a minimal pair where the only difference is the presence or absence of the ergative suffix on the subject, with the verb and object otherwise identical in form. This forces the solver to recognize the ergative suffix as the sole overt transitivity marker in 3rd person.
+
+   - **1st/2nd person vs. 3rd person on the verb:** Include a pair where the only difference is the person of the agent (or patient), showing that the verb is marked for 1st/2nd person but unmarked for 3rd person. This isolates the zero 3rd person pattern.
+
+   - **Negation completeness:** Include a pair where one sentence has both negative elements and another (if the puzzle format allows) could be misread as having only one. In practice, since both are obligatory, all negative examples should show both. The solver infers obligatoriness from the consistent co-occurrence across multiple examples.
+
+   - **Pronominal vs. Nominal possessor:** Include both types to show that the genitive construction is uniform. This prevents the solver from hypothesizing a separate pronominal possessive strategy.
+
+8. **Control for confounds and unintended interpretations.**
+
+   - Ensure the ergative/genitive suffix does not phonologically resemble the negative suffix or any verbal person marker.
+   - Ensure the negative word is not homophonous with any noun, verb, or other grammatical morpheme.
+   - Ensure that no intransitive clause could be misread as a transitive clause with a missing object (e.g., avoid using the same verb in both intransitive and transitive uses unless the data clearly distinguishes them).
+   - Ensure that the possessed noun in genitive phrases is never marked in any way (no case, no agreement, no possessive affix), so the solver cannot hypothesize head-marking.
+   - If the puzzle includes any example where a noun appears in both a possessive and a clause context, ensure the context makes the function unambiguous (e.g., the presence of a verb makes it a clause; the absence of a verb and the presence of two nouns makes it a possessive phrase).
+
+9. **Design the questions in two tiers with progressive difficulty.**
+
+   - **Tier 1 (Interpretation: target-language → English, 4–5 items):**
+     - Item 1: A simple possessive phrase (nominal possessor). Tests: genitive construction, GenN order, dependent marking.
+     - Item 2: A possessive phrase with a pronominal possessor. Tests: uniformity of the genitive construction across possessor types.
+     - Item 3: A 3rd person transitive clause. Tests: SVO order, ergative suffix on A, zero 3rd person on verb. The solver must recognize that the ergative suffix marks the agent and that the verb's lack of person marking is due to 3rd person zero.
+     - Item 4: A 3rd person intransitive clause. Tests: the solver must distinguish this from a transitive clause (no ergative suffix, no object). This is the critical contrast with Item 3.
+     - Item 5: A negative transitive clause with a 1st or 2nd person agent. Tests: double negation, verbal person marking, ergative suffix.
+
+   - **Tier 2 (Production: English → target-language, 4–5 items):**
+     - Item 6: A possessive phrase with a novel possessor and possessed noun (not seen in the data). Tests: application of the genitive construction to new vocabulary.
+     - Item 7: A 3rd person transitive clause with novel nouns. Tests: ergative suffix placement, SVO order, zero 3rd person on verb.
+     - Item 8: A negative intransitive clause with a 2nd person subject. Tests: double negation, verbal person marking (2nd person), intransitive (no ergative).
+     - Item 9: A negative transitive clause with a 3rd person agent and a 1st person patient. Tests: all systems simultaneously—ergative suffix on A, zero 3rd person + 1st person marking on verb, double negation, SVO order. This is the hardest item.
+     - Item 10 (optional, for additional difficulty): A sentence that requires the solver to recognize the genitive/ergative suffix identity in a novel context (e.g., a possessive phrase embedded in a clause, or a question that asks the solver to explain why the same suffix appears in two different syntactic contexts).
+
+10. **Verify solvability by solving the puzzle using only the provided data.** Confirm that: (a) every rule needed to answer every question is uniquely determined by the data—no underdetermination; (b) the genitive/ergative suffix identity is discoverable from the data (the same form appears in both domains, and the solver can recognize it as the same morpheme); (c) the zero 3rd person pattern is discoverable (the solver sees overt 1st/2nd person marking and can infer that 3rd person is zero by the absence of marking in 3rd person contexts); (d) the double negation pattern is established by sufficient examples (at least 3 negative sentences showing both elements); (e) no question requires knowledge of a rule not evidenced in the data; (f) the most likely alternative analyses are ruled out by the minimal pairs (e.g., the solver might initially think the ergative suffix is a "subject marker" rather than specifically an agent marker—the contrast with intransitive clauses where the subject is unmarked rules this out); (g) the difficulty progression is smooth, with each tier-2 item requiring one or two additional rules beyond the previous item.

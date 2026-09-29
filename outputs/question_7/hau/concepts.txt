@@ -1,0 +1,73 @@
+
+
+TARGET-LANGUAGE: Hausa (Afro-Asiatic, Chadic, West Chadic)
+
+CORE
+
+1. Concept: Two genders (30A-2)
+   - Target-language realization: Hausa has two genders: masculine and feminine.
+   - Intended solver inference: Solvers discover that nouns partition into two classes, distinguished by the form of the agreeing adjective.
+   - Priority: REQUIRED
+
+2. Concept: Dependent marking in NPs with adjectives (84A-2)
+   - Target-language realization: Hausa adjectives agree with the head noun in both gender and number, yielding a four-way paradigm (MS, FS, MP, FP). Example paradigm for ɗarami ('useful'): MS ɗarami, FS ɗaramar, MP ɗaramai, FP ɗaramarwa.
+   - Intended solver inference: Solvers reconstruct the full four-way agreement paradigm from attested noun–adjective pairs and apply it to novel combinations.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Sex-based gender system (WALS 31A-2)
+   - Intended solver inference: Animate nouns show a transparent semantic mapping (male → masculine, female → feminine), giving solvers a semantic anchor. Inanimate nouns have non-semantic (arbitrary) gender that must be learned from the adjective form.
+   - Interaction with CORE: Makes the two-gender system partially predictable (animate) and partially opaque (inanimate), creating a two-tier inference task.
+   - Difficulty contribution: Medium. The semantic transparency for animate nouns aids initial discovery; the opacity for inanimate nouns prevents overgeneralization and forces attention to the adjective form as the true diagnostic.
+   - Priority: HIGH
+
+2. Phenomenon: Four-way adjective agreement paradigm (MS / FS / MP / FP)
+   - Intended solver inference: Solvers identify that the adjective has four distinct allomorphic forms and map each to a gender × number combination. The paradigm is regular enough to be fully reconstructable from a modest data set.
+   - Interaction with CORE: This is the concrete morphological realization of "dependent marking." The four-way system is richer than a simple two-way gender contrast, requiring solvers to track both dimensions simultaneously.
+   - Difficulty contribution: High. The interaction of two binary features (gender, number) on the adjective creates a combinatorial space that solvers must fully map.
+   - Priority: REQUIRED
+
+3. Phenomenon: Adjective precedes noun (AdjN; WALS 87A-1)
+   - Intended solver inference: Solvers identify the modifier–head order and recognize that the adjective form is determined by the following noun.
+   - Interaction with CORE: Establishes the linear structure of the NP. Because the adjective precedes the noun, the solver sees the agreement form before the noun that triggers it, requiring forward-looking interpretation.
+   - Difficulty contribution: Low–Medium. Straightforward once identified, but the pre-noun position means the adjective form must be "held in memory" until the noun is encountered.
+   - Priority: HIGH
+
+4. Phenomenon: Plural suffixes on nouns (WALS 33A-2)
+   - Intended solver inference: Solvers discover that nouns change form in the plural (e.g., masculine -ai, feminine -arwa, or other patterns) and that this change is correlated with the adjective's plural form.
+   - Interaction with CORE: Noun number is the trigger for the MP/FP distinction in the adjective. Solvers must link the noun's plural morphology to the correct adjective form.
+   - Difficulty contribution: Medium. Adds a second morphological dimension (noun number) that interacts with the adjective paradigm.
+   - Priority: HIGH
+
+5. Phenomenon: Semantic and formal gender assignment (WALS 32A-3)
+   - Intended solver inference: Solvers notice that gender is predictable for animate nouns (sex-based) but arbitrary for inanimate nouns. This creates a "learnable rule + memorized exceptions" pattern.
+   - Interaction with CORE: Distinguishes between nouns whose gender can be predicted from meaning and those whose gender must be read off the adjective. Prevents solvers from assuming a single uniform assignment rule.
+   - Difficulty contribution: Medium. Adds a meta-level inference about the nature of the gender system itself.
+   - Priority: OPTIONAL (include if data space allows; omit if it makes the puzzle too long)
+
+INTERACTIONS
+
+1. Gender × Number on the adjective: The two binary features (gender, number) combine to produce four distinct adjective forms. Solvers must discover both dimensions and their interaction. This is the central combinatorial challenge.
+
+2. Semantic transparency × Arbitrary assignment: Animate nouns allow solvers to verify their gender hypothesis semantically; inanimate nouns force reliance on the adjective form alone. This creates a natural "easy → hard" progression within the puzzle.
+
+3. AdjN order × Agreement: Because the adjective precedes the noun, the solver encounters the agreement form before the triggering noun. This requires the solver to form a hypothesis about the noun's gender/number from the adjective and then confirm it with the noun, or to work backward from the noun to predict the adjective.
+
+4. Noun plural morphology × Adjective plural form: The noun's plural suffix and the adjective's plural form are correlated but morphologically distinct. Solvers must recognize that both the noun and the adjective change in the plural, and that the changes are systematically related.
+
+CONSTRAINTS
+
+1. All adjective forms must use the correct Hausa paradigm. The feminine singular of ɗarami is ɗaramar (NOT ɗaramu). The full paradigm is: MS ɗarami, FS ɗaramar, MP ɗaramai, FP ɗaramarwa. All other adjective examples must follow the same morphological pattern.
+
+2. The puzzle must provide at least one example for each of the four cells of the gender × number matrix (MS, FS, MP, FP) to allow full paradigm reconstruction.
+
+3. Include both animate and inanimate nouns in the data to demonstrate the semantic/formal split in gender assignment. Animate nouns should include at least one male and one female referent.
+
+4. Noun plural forms must be included in the data so that solvers can observe the correlation between noun number and adjective number.
+
+5. Do not include tone marking in the puzzle data (it would be unfair to solvers without audio and is not central to the agreement system).
+
+6. The puzzle should not require knowledge of Hausa phonology (ejectives, implosives, etc.) to solve the agreement problem.
+
+7. Avoid using the definite article as a puzzle element unless its forms are unambiguous and do not create confusion with the feminine adjective ending -ar. If included, it must be clearly distinguishable from the adjective agreement morphology in the data.

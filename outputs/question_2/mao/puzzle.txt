@@ -1,0 +1,150 @@
+
+
+CONTEXT
+
+The following sentences are in Māori, a language spoken in New Zealand. Study the data carefully and answer the questions that follow.
+
+DATA
+
+| # | Māori | English |
+|---|-------|---------|
+| 1 | e rere ana te manu | The bird is flying |
+| 2 | e waiata ana te pēpi | The child is singing |
+| 3 | e kai ana i te pēpi te hēmi | The child is eating the food |
+| 4 | e kite ana i te pēpi te manu | The child is seeing the bird |
+| 5 | e kai ana i a Hēmi te hēmi | John is eating the food |
+| 6 | e kite ana i te pēpi a Mere | The child is seeing Mary |
+| 7 | Kāore te manu e rere ana | The bird is not flying |
+| 8 | Kāore i a Hēmi e kai ana te hēmi | John is not eating the food |
+| 9 | Kāore i te pēpi e kite ana te manu | The child is not seeing the bird |
+| 10 | e waiata ana tātou | We (including you) are singing |
+| 11 | e waiata ana mātou | We (not including you) are singing |
+| 12 | e kai ana i mātou te hēmi | We (not including you) are eating the food |
+| 13 | e kite ana i te pēpi te manu e toru | The child is seeing three birds |
+| 14 | e hanga ana i a Hēmi te whare e rua | John is building two houses |
+
+**Vocabulary**
+
+| Māori | English | | Māori | English |
+|-------|---------|-|-------|---------|
+| manu | bird | | rere | fly |
+| pēpi | child | | waiata | sing |
+| ika | fish | | kai | eat |
+| hēmi | food | | kite | see |
+| whare | house | | hanga | build |
+| Hēmi | John | | tātou | we (including you) |
+| Mere | Mary | | mātou | we (not including you) |
+| | | | e rua | two |
+| | | | e toru | three |
+| | | | e whā | four |
+
+QUESTIONS
+
+**Part A.** Translate the following English sentences into Māori.
+
+A1. The fish is flying.
+
+A2. The fish is eating the food.
+
+A3. Mary is building the house.
+
+A4. John is not eating the food.
+
+A5. We (including you) are not eating the food.
+
+A6. The bird is eating two fish.
+
+A7. Mary is not seeing four houses.
+
+**Part B.** Translate the following Māori sentences into English.
+
+B1. e rere ana te ika
+
+B2. e kite ana i te manu te ika
+
+B3. e hanga ana i a Hēmi te whare
+
+B4. Kāore i a Mere e kai ana te hēmi
+
+B5. Kāore te ika e rere ana
+
+B6. e hanga ana i te ika te whare e toru
+
+B7. Kāore i tātou e kite ana te manu e rua
+
+ANSWERS
+
+**Part A**
+
+A1. e rere ana te ika
+
+A2. e kai ana i te ika te hēmi
+
+A3. e hanga ana i a Mere te whare
+
+A4. Kāore i a Hēmi e kai ana te hēmi
+
+A5. Kāore i tātou e kai ana te hēmi
+
+A6. e kai ana i te manu te ika e rua
+
+A7. Kāore i a Mere e kite ana te whare e whā
+
+**Part B**
+
+B1. The fish is flying.
+
+B2. The bird is seeing the fish.
+
+B3. John is building the house.
+
+B4. Mary is not eating the food.
+
+B5. The fish is not flying.
+
+B6. The fish is building three houses.
+
+B7. We (including you) are not seeing two birds.
+
+SOLUTION
+
+**Rules to infer:**
+
+1. **VSO word order (affirmative):** The verb (in the frame *e V ana*) precedes both arguments. In intransitive clauses: *e V ana + te/a + Noun(S)*. In transitive clauses: *e V ana + i + te/a + Noun(A) + te/a + Noun(P)*.
+   - Evidence: Sentences 1–2 show verb-first order with a single argument. Sentences 3–4 show verb-first order with two arguments.
+
+2. **Ergative-absolutive alignment:** The particle *i* marks the transitive agent (A). It is absent in intransitive clauses. The absolutive (S in intransitive, P in transitive) is unmarked.
+   - Evidence: In every transitive sentence (3–6, 12–14), *i* precedes the semantic agent. In every intransitive sentence (1–2, 7, 10–11), *i* is absent. The patient always appears in the same form as an intransitive subject (e.g., *te manu* in sentence 1 vs. *te manu* as patient in sentence 4).
+
+3. **NegSVO word order (negative):** Negation triggers a word-order change. Intransitive: *Kāore + te/a + Noun(S) + e V ana*. Transitive: *Kāore + i + te/a + Noun(A) + e V ana + te/a + Noun(P)*. The ergative particle *i* moves to a pre-verbal position.
+   - Evidence: Sentences 7–9 contrast with 1–4. In sentence 8, *i a Hēmi* precedes the verb, proving *i* is associated with the agent (not the verb). In sentence 7 (intransitive), *i* is absent, confirming the alignment system operates identically in negative clauses.
+
+4. **Article system:** *te* precedes common nouns; *a* precedes proper names.
+   - Evidence: Sentences 1–4, 7, 9, 12–13 show *te* before common nouns. Sentences 5–6, 8, 14 show *a* before proper names. Critically, sentence 6 shows *a Mere* as the patient (without *i*), proving *a* is an article, not part of the ergative marker.
+
+5. **Noun-Numeral order:** The numeral follows the noun, introduced by the particle *e*: *te + Noun + e + Numeral*.
+   - Evidence: Sentences 13–14 show *te manu e toru* (three birds) and *te whare e rua* (two houses). The numeral always follows the noun with no intervening classifier.
+
+6. **Inclusive/exclusive first-person plural:** *tātou* = we (including addressee); *mātou* = we (excluding addressee). Both can serve as S (unmarked) or A (with ergative *i*).
+   - Evidence: Sentences 10–11 contrast the two forms in the S position. Sentence 12 shows *i mātou* (ergative + exclusive we) in the A position.
+
+**How rules produce each answer:**
+
+- **A1:** Intransitive affirmative → *e rere ana* + *te ika* (Rules 1, 4).
+- **A2:** Transitive affirmative, common noun A and P → *e kai ana* + *i te ika* + *te hēmi* (Rules 1, 2, 4). The agent *ika* (fish) is a novel agent not seen in the ergative position in the data, requiring the solver to generalize the ergative pattern to a new noun.
+- **A3:** Transitive affirmative, proper name A → *e hanga ana* + *i a Mere* + *te whare* (Rules 1, 2, 4).
+- **A4:** Negative transitive, proper name A → *Kāore* + *i a Hēmi* + *e kai ana* + *te hēmi* (Rules 2, 3, 4).
+- **A5:** Negative transitive, inclusive we as A → *Kāore* + *i tātou* + *e kai ana* + *te hēmi* (Rules 2, 3, 6).
+- **A6:** Transitive affirmative, common noun A, numeral P → *e kai ana* + *i te manu* + *te ika e rua* (Rules 1, 2, 4, 5). The numeral-noun phrase *te ika e rua* (two fish) is a novel combination not appearing in the data, requiring the solver to apply the Noun-Numeral order rule to a new noun.
+- **A7:** Negative transitive, proper name A, numeral P → *Kāore* + *i a Mere* + *e kite ana* + *te whare e whā* (Rules 2, 3, 4, 5). Generalizes the numeral pattern to *e whā*, which appears only in the vocabulary list.
+- **B1:** *e rere ana te ika* → intransitive affirmative (Rules 1, 4) → "The fish is flying."
+- **B2:** *e kite ana i te manu te ika* → transitive affirmative; *i te manu* = agent, *te ika* = patient (Rules 1, 2, 4) → "The bird is seeing the fish."
+- **B3:** *e hanga ana i a Hēmi te whare* → transitive affirmative, proper name A (Rules 1, 2, 4) → "John is building the house."
+- **B4:** *Kāore i a Mere e kai ana te hēmi* → negative transitive, proper name A (Rules 2, 3, 4) → "Mary is not eating the food."
+- **B5:** *Kāore te ika e rere ana* → negative intransitive (Rules 1, 3, 4) → "The fish is not flying."
+- **B6:** *e hanga ana i te ika te whare e toru* → transitive affirmative, numeral P (Rules 1, 2, 4, 5) → "The fish is building three houses."
+- **B7:** *Kāore i tātou e kite ana te manu e rua* → negative transitive, inclusive we as A, numeral P (Rules 2, 3, 5, 6) → "We (including you) are not seeing two birds."
+
+DIFFICULTY
+
+**Level 2 (Medium).** The puzzle requires the solver to discover and integrate six interacting rules: VSO/NegSVO word order, ergative-absolutive alignment, the article split, noun-numeral order, and the inclusive/exclusive distinction. The central challenge is recognizing that the ergative particle *i* marks the agent in both affirmative and negative clauses despite its different surface position, which prevents the solver from using a single positional heuristic. Questions A2 and A6 require the solver to generalize the ergative and numeral rules to novel noun combinations not present in the data, while later questions (A7, B7) require simultaneous application of multiple rules, creating layered inference without requiring any prior knowledge of Māori.

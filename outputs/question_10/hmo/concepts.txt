@@ -1,0 +1,127 @@
+
+
+TARGET-LANGUAGE: Hmong Njua (Hmong-Mien, Hmongic)
+
+CORE
+
+1. Concept: Basic clause word order (adapted from source VSO)
+   - Target-language realization: SVO (WALS 81A-2, 82A-1, 83A-2). Subject precedes verb, verb precedes object.
+   - Intended solver inference: Solver identifies S as the preverbal NP, V as the predicate, O as the postverbal NP. The consistent SVO pattern across examples allows the solver to segment clauses and identify argument roles by position.
+   - Priority: REQUIRED
+
+2. Concept: Postnominal relative clauses (direct match from source)
+   - Target-language realization: Noun-Relative clause order (WALS 90A-1, 90C-1). The relative clause follows the head noun. Relativization on subjects uses a gap strategy (WALS 122A-4).
+   - Intended solver inference: Solver recognizes that a clause following a noun is a modifier of that noun (not a separate clause). The gap strategy (missing argument in the RC that corresponds to the head noun) is discoverable by comparing the RC to a standalone clause.
+   - Priority: REQUIRED
+
+3. Concept: Tense/aspect marking (adapted from source verbal prefixes)
+   - Target-language realization: Monoexponential TAM expressed by preverbal particles (WALS 21B-1). The language is exclusively isolating (WALS 20A-2) with little affixation (WALS 26A-1), so TAM markers are separate words/particles preceding the verb. No inflectional tense-aspect (WALS 69A-5).
+   - Intended solver inference: Solver identifies preverbal elements that are not the subject as TAM markers. Their position (between subject and verb, or immediately preverbal) and their systematic variation across examples allow the solver to map them to tense/aspect values.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Right-branching modifier order in noun phrases (Noun-Adjective, Noun-Demonstrative)
+   - WALS evidence: 87A-2 (Noun-Adjective), 88A-2 (Noun-Demonstrative), 89A-1 (Numeral-Noun, the one exception).
+   - Intended solver inference: Solver discovers that adjectives and demonstratives follow the head noun, creating a consistent right-branching pattern. This is typologically notable (many SVO languages have prenominal adjectives) and creates a clear, discoverable rule.
+   - Interaction with CORE: Reinforces the postnominal relative clause pattern, creating a unified "modifiers follow the head" principle for NPs. The numeral-Noun order (89A-1) provides a contrastive exception that sharpens the pattern.
+   - Difficulty contribution: Medium. The solver must distinguish between different types of prenominal vs. postnominal elements and notice the consistent pattern.
+   - Priority: HIGH
+
+2. Phenomenon: Obligatory subject pronouns
+   - WALS evidence: 101A-1 (obligatory pronouns in subject position).
+   - Intended solver inference: Solver notices that subject position is always filled by a pronoun (or full NP), never empty. This contrasts with many languages that allow subject dropping. The solver can use this to confirm subject identification.
+   - Interaction with CORE: Combined with SVO and no case marking, the obligatory subject in preverbal position becomes the primary cue for identifying the subject. This makes the SVO pattern more robustly discoverable.
+   - Difficulty contribution: Low-Medium. It's a constraint that aids rather than hinders inference, but the solver must notice it.
+   - Priority: HIGH
+
+3. Phenomenon: No nominal plural marking
+   - WALS evidence: 34A-1 (no nominal plural).
+   - Intended solver inference: Solver notices that nouns do not change form for number. Plurality must be expressed by other means (numerals, context, or the numeral 'one' as indefinite, WALS 38A-2). This is typologically interesting and prevents the solver from using a common strategy (looking for plural morphology).
+   - Interaction with CORE: In the absence of plural marking, the solver must rely on context and numerals to determine number, which interacts with the Numeral-Noun order (89A-1).
+   - Difficulty contribution: Medium. The solver might initially search for plural marking and be confused by its absence.
+   - Priority: HIGH
+
+4. Phenomenon: Preverbal negation (SNegVO)
+   - WALS evidence: 143A-1 (preverbal negative word), 144A-2 (SNegVO), 144B-3 (immediately preverbal), 113A-1 (symmetric negation), 144I-1 (separate word, no double negation).
+   - Intended solver inference: Solver identifies a negative word that appears between the subject and the verb. Its consistent position (after S, before V) and its effect on meaning allow the solver to identify it as a negator. The symmetric nature means it negates the entire predicate.
+   - Interaction with CORE: The negation particle occupies the same preverbal zone as TAM markers. The solver must determine the relative order of TAM and negation (or whether they can co-occur), creating an additional inference step.
+   - Difficulty contribution: Medium-High. The interaction between TAM and negation in the preverbal zone creates a non-trivial ordering question.
+   - Priority: HIGH
+
+5. Phenomenon: Gap strategy in relative clauses
+   - WALS evidence: 122A-4 (gap relativization on subjects).
+   - Intended solver inference: Solver compares the relative clause to a standalone clause and notices that an argument is missing (gapped) in the RC, corresponding to the head noun. This is a common cross-linguistic strategy that the solver can recognize.
+   - Interaction with CORE: Directly supports the postnominal relative clause concept. The gap strategy makes the RC structure transparent: the head noun "fills" the gap in the following clause.
+   - Difficulty contribution: Medium. The solver must perform a comparison between the RC and a full clause to identify the gap.
+   - Priority: HIGH
+
+6. Phenomenon: Interrogative-based indefinite pronouns
+   - WALS evidence: 46A-1 (interrogative-based indefinites).
+   - Intended solver inference: Solver notices that indefinite pronouns (e.g., 'someone,' 'something') are formally related to interrogative pronouns (e.g., 'who,' 'what'). This is a well-known cross-linguistic pattern that the solver can recognize.
+   - Interaction with CORE: In questions, the interrogative form appears in its "question" role; in statements, the same or related form appears with an indefinite reading. The solver must distinguish these uses.
+   - Difficulty contribution: Medium. Requires the solver to notice formal similarity between question words and indefinite words.
+   - Priority: OPTIONAL
+
+7. Phenomenon: Question particle in non-initial position
+   - WALS evidence: 92A-4 (other position), 116A-1 (question particle).
+   - Intended solver inference: Solver identifies a particle that marks polar questions but is not in the initial position of the clause. Its position (likely final or post-verbal) must be inferred from the data.
+   - Interaction with CORE: The question particle's position relative to S, V, O, and preverbal elements (TAM, negation) creates additional ordering constraints.
+   - Difficulty contribution: Medium. The solver must identify the particle and determine its position.
+   - Priority: OPTIONAL
+
+8. Phenomenon: Existential construction
+   - WALS evidence: Not directly reported, but expected cross-linguistically.
+   - Intended solver inference: If included, the solver identifies a dedicated verb or construction for expressing existence ('there is/are').
+   - Interaction with CORE: The existential construction may interact with the SVO pattern (the "subject" of an existential is the theme/experiencer).
+   - Difficulty contribution: Low-Medium.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Right-branching NPs + SVO + Postnominal RC:
+   - Concepts: SVO, N-Adj, N-Dem, N-Rel
+   - Interaction: All modifiers in the NP follow the head noun, creating a consistent right-branching pattern. Combined with SVO, this means the "heavy" end of the clause (object with its modifiers) is at the right periphery.
+   - Additional inference: The solver can use the right-branching pattern to segment complex NPs and identify the head noun (the leftmost element in the NP).
+
+2. Preverbal TAM + Preverbal Negation:
+   - Concepts: TAM particles, SNegVO negation
+   - Interaction: Both TAM and negation occupy the preverbal zone. Their relative order (TAM-Neg-V vs. Neg-TAM-V) is a discoverable pattern.
+   - Additional inference: The solver must determine the fixed order of preverbal elements, creating a "preverbal slot" analysis.
+
+3. Obligatory subjects + No case + SVO:
+   - Concepts: Obligatory subject pronouns, neutral alignment, SVO
+   - Interaction: With no case marking and obligatory subjects, the preverbal NP is unambiguously the subject. This makes argument identification straightforward but also means the solver cannot use case to confirm roles.
+   - Additional inference: The solver relies entirely on position and the obligatory-subject constraint to identify arguments.
+
+4. Postnominal RC + Gap strategy + No plural:
+   - Concepts: N-Rel, gap relativization, no nominal plural
+   - Interaction: The head noun of the RC has no plural marking, so the number of the head must be inferred from context or the RC content. The gap in the RC corresponds to the head noun.
+   - Additional inference: The solver must use the RC content to determine the number/properties of the head noun.
+
+5. Interrogative-based indefinites + Question particle:
+   - Concepts: Interrogative-based indefinites, question particle
+   - Interaction: The same lexical items serve as interrogatives (in questions) and indefinites (in statements). The question particle (or its absence) distinguishes the two uses.
+   - Additional inference: The solver must identify the question particle as the cue that distinguishes interrogative from indefinite use of the same forms.
+
+CONSTRAINTS
+
+1. Hmong Njua is exclusively isolating (WALS 20A-2) with little affixation (WALS 26A-1). Do NOT introduce any inflectional morphology, case affixes, or verbal agreement. All grammatical relations are expressed by separate words or position.
+
+2. No morphological case marking (WALS 49A-1, 50A-1, 51A-9). Do NOT introduce any case markers. Argument roles are identified by position (SVO) and obligatory subject presence.
+
+3. No verbal person/number marking (WALS 102A-1, 103A-1, 29A-1). The verb does not agree with any argument.
+
+4. No nominal plural marking (WALS 34A-1). Nouns do not change form for number.
+
+5. No gender system (WALS 31A-1). Do not introduce any gender distinctions.
+
+6. Tone is present (WALS 13A-3, complex tone system) but should NOT be the focus of the puzzle. If tone markers appear in the data, they are part of the lexical form and should not be treated as a separate grammatical feature to be analyzed. The puzzle should focus on syntax and word order.
+
+7. No inclusive/exclusive distinction (WALS 39A-3). First-person plural does not distinguish inclusive from exclusive.
+
+8. The language has no antipassive (WALS 108A-3) and no applicative (WALS 109A-8). Do not introduce these constructions.
+
+9. Negation is symmetric (WALS 113A-1) and uses a single preverbal word (WALS 143A-1, 144I-1). There is no double negation and no postverbal negation.
+
+10. Subordinate clauses (purpose, reason, utterance complement) are balanced (WALS 125A-1, 127A-1, 128A-1), meaning they have their own subjects. However, in 'want' complements, the subject is left implicit (WALS 124A-1). If subordinate clauses are included, this contrast should be represented.

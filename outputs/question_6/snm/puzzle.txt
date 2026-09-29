@@ -1,0 +1,106 @@
+
+
+CONTEXT
+
+The following sentences are from Sanuma, a language of the Yanomam family spoken in the Amazon basin of South America. Each sentence is followed by an English gloss. A hyphen indicates a closely attached element that is not a separate word.
+
+DATA
+
+| # | Sanuma | English |
+|---|--------|---------|
+| 1 | kapi tana | The child sleeps. |
+| 2 | na tana | I sleep. |
+| 3 | moro mapi | The dog goes. |
+| 4 | kapi-ri tapa hika | The child eats the fish. |
+| 5 | na-ri tapa hika | I eat the fish. |
+| 6 | moro-ri tapa hika | The dog eats the fish. |
+| 7 | kapi tana ma | The child doesn't sleep. |
+| 8 | kapi-ri tapa hika ma | The child doesn't eat the fish. |
+| 9 | ka kapi tana | This child (near me) sleeps. |
+| 10 | pa kapi tana | That child (near you) sleeps. |
+| 11 | wa kapi tana | That child (far away) sleeps. |
+| 12 | nata mapi | We (you and I) go. |
+| 13 | nari mapi | We (my friends and I) go. |
+| 14 | wari sori kapi tana | The child sleeps in the river. |
+| 15 | kapi napi hara kora | The child sees the big house. |
+| 16 | nata-ri tapa hika | We (you and I) eat the fish. |
+
+QUESTIONS
+
+**Q1.** What is the basic word order of the main clause elements (subject, object, verb) in Sanuma? Give your answer as a permutation of the letters S, O, V.
+
+**Q2.**
+a) In sentence 4 (*kapi-ri tapa hika*), which argument is the agent and which is the patient?
+b) What evidence from the data supports your identification?
+c) What is the grammatical function of the element *-ri*?
+
+**Q3.**
+a) What is the function of the word *ma* in sentences 7 and 8?
+b) What is its position in the clause?
+
+**Q4.**
+a) Identify the three demonstratives in the data and state what each one indicates.
+b) What is their position relative to the noun they modify?
+
+**Q5.** What is the difference between *nata* and *nari*?
+
+**Q6.** Translate the following English sentences into Sanuma:
+a) The dog doesn't see the child.
+b) We (my friends and I) eat the fish.
+
+ANSWERS
+
+**Q1.** SOV
+
+**Q2.**
+a) *kapi-ri* is the agent; *tapa* is the patient.
+b) The noun *kapi* appears unmarked in sentence 1 (*kapi tana*), where it is the sole (intransitive) argument. In sentence 4, *kapi* carries the element *-ri* and is the transitive subject, while *tapa* (the transitive object) is unmarked — the same form as the intransitive subject. This shows that the intransitive subject and the transitive object share the unmarked form, while the transitive subject is marked.
+c) *-ri* is an ergative case marker: it marks the agent (transitive subject) of a transitive clause.
+
+**Q3.**
+a) *ma* is a negative marker (it negates the clause).
+b) It appears immediately after the verb (postverbal position).
+
+**Q4.**
+a) *ka* = this (near the speaker); *pa* = that (near the listener); *wa* = that (far from both).
+b) The demonstrative precedes the noun (pre-nominal position).
+
+**Q5.** *nata* is the inclusive first-person plural pronoun (includes the addressee: "you and I"); *nari* is the exclusive first-person plural pronoun (excludes the addressee: "my friends and I").
+
+**Q6.**
+a) *moro-ri kapi kora ma*
+b) *nari-ri tapa hika*
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **SOV word order.** In every sentence, the verb occupies final position. In transitive clauses (4–6, 8, 15, 16), the subject precedes the object, which precedes the verb. In intransitive clauses (1–3, 7, 9–14), the single argument precedes the verb.
+
+2. **Ergative-absolutive alignment.** The transitive subject (agent) is marked with the clitic *-ri*; the transitive object (patient) and the intransitive subject are both unmarked (absolutive). Evidence: *kapi* is unmarked in sentence 1 (intransitive subject) and in sentence 4 as the object *tapa* is also unmarked, but *kapi* carries *-ri* when it is the transitive subject in sentence 4. The same pattern holds for *na* (sentences 2 vs. 5) and *moro* (sentences 3 vs. 6).
+
+3. **Verb invariance.** The verb does not change form regardless of the identity or number of the arguments. *hika* appears identically in sentences 4, 5, 6, 8, 16 with different subjects; *tana* appears identically in sentences 1, 2, 7, 9, 10, 11, 14 with different subjects.
+
+4. **Postverbal negation.** The word *ma* is a separate, invariant negative marker that appears immediately after the verb. In sentence 8, the object *tapa* clearly precedes the verb *hika*, and *ma* follows the verb, confirming that *ma* is not an object or postposition.
+
+5. **Three-way demonstrative system.** *ka* (proximal, near speaker), *pa* (medial, near listener), and *wa* (distal, far from both) all precede the noun they modify (sentences 9–11).
+
+6. **Inclusive/exclusive first-person plural.** *nata* includes the addressee; *nari* excludes the addressee. Both take the ergative clitic *-ri* when functioning as transitive subjects (cf. sentence 16: *nata-ri*).
+
+7. **Postposition.** *sori* ('in/at') follows the noun it modifies (sentence 14: *wari sori*), consistent with the head-final typology.
+
+8. **Noun–adjective order.** The adjective follows the noun (sentence 15: *napi hara* = house big).
+
+**How the rules produce each answer:**
+
+- **Q1:** Directly from the consistent verb-final position across all sentences → SOV.
+- **Q2:** The contrast between unmarked *kapi* (S in sentence 1) and marked *kapi-ri* (A in sentence 4), with the unmarked object *tapa* (P) matching the unmarked S form, establishes ergative-absolutive alignment. *-ri* is the ergative marker.
+- **Q3:** *ma* appears only in negative sentences, always immediately after the verb, and is invariant → postverbal negative marker.
+- **Q4:** Three distinct forms (*ka*, *pa*, *wa*) appear in pre-nominal position with spatially distinct glosses → three-way demonstrative, pre-nominal.
+- **Q5:** The glosses for sentences 12 and 13 make the inclusive/exclusive distinction transparent.
+- **Q6a:** Agent *moro* → ergative *moro-ri*; patient *kapi* → unmarked; verb *kora*; negation *ma* postverbal → *moro-ri kapi kora ma*.
+- **Q6b:** Agent *nari* (exclusive) → ergative *nari-ri*; patient *tapa* → unmarked; verb *hika* → *nari-ri tapa hika*.
+
+DIFFICULTY
+
+**Level 1.** The puzzle tests a coherent set of interacting typological properties (SOV order, ergative-absolutive alignment, postverbal negation, three-way demonstratives, inclusive/exclusive pronouns) but each inference is directly supported by clear, minimal contrasts in the data. The central insight (ergative alignment) requires comparing intransitive and transitive clauses, but the evidence is unambiguous and the production questions require combining at most two or three rules. No external knowledge of Sanuma or the Yanomam family is needed.

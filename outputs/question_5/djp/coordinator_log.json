@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language 'djp' so that a valid Olympiad puzzle can be built.",
+    "directive": "Extract a rich set of linguistic features and mappings for target language 'djp'. Identify core typological properties, morphological or syntactic phenomena, and any necessary lexical or structural contrasts suitable for a Linguistic Olympiad puzzle. Ensure the concepts are specific, non-trivial, and sufficient for downstream rationale and puzzle generation.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for target language 'djp' are present, but rationale is missing. The next required step is to design the step-by-step reasoning and sentence structure rules based on the extracted concepts.",
+    "directive": "Using the existing linguistic concepts for 'djp', design a clear, non-contradictory rationale for the Olympiad puzzle. Specify the reasoning steps, morphological or syntactic rules, sentence structure templates, and how the target phenomena should be demonstrated in the puzzle. Ensure the rationale is sufficient for Agent 3 to generate a valid, solvable puzzle.",
+    "elapsed_seconds": 8.0
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete Olympiad puzzle dataset, including data, questions, and answer key, based on the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'djp' using the existing concepts and rationale. Include a clear DATA section with glossed examples, well-formed questions that require non-trivial linguistic reasoning, and a complete answer key. Ensure all vocabulary is glossed, examples are unambiguous, and the puzzle is solvable from the provided data.",
+    "elapsed_seconds": 17.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is marked as needing validation. No validator verdict exists yet, so the required next step is to have Agent 4 solve and rigorously validate the generated puzzle.",
+    "directive": "Validate the generated Linguistic Olympiad puzzle for target language 'djp'. Solve it independently, check that all data entries are glossed and unambiguous, that questions are non-trivial and solvable from the provided data, that the answer key is correct, and that the linguistic reasoning is consistent with the concepts and rationale. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 27.9
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator returned PASS_WITH_ISSUES, but the MAJOR issue is a concrete puzzle-level defect: the Q10 answer key incorrectly claims the possessed noun is unmarked, while the data show it bears -\u0263a as accusative. The MINOR difficulty issue also indicates the puzzle is too mechanical for the target level. These are implementation-level problems, not conceptual or rationale contradictions, so Agent 3 should patch the answer key and strengthen the questions.",
+    "directive": "Revise the puzzle directly. First, correct the Q10 answer key and explanation: in sentences 17 and 18, the possessed noun bears -\u0263a as the accusative marker because it is the object of the transitive verb, while the possessor bears -\u0263a for genitive/possessive marking. State clearly that both can bear -\u0263a in the same sentence for different functions, and that the possessive/genitive relation is marked on the possessor. Second, raise the difficulty toward the target level by replacing or strengthening questions so they require non-mechanical interaction among multiple rules, especially case, word order, tense, particles, reduplication, plural, and inclusive/exclusive co-reference. Avoid questions that are solved by independent pattern recognition alone. Ensure all revised items remain fully solvable from the provided data and that all vocabulary is glossed.",
+    "elapsed_seconds": 35.8
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline contains concepts, rationale, and a revised puzzle, and puzzle_needs_validation is true. The latest history indicates Agent 3 was asked to patch a concrete puzzle-level issue and strengthen difficulty, so the revised puzzle must now be independently validated before any final decision can be made.",
+    "directive": "Validate the revised Linguistic Olympiad puzzle for target language 'djp'. Solve it independently and verify that the Q10 answer key and explanation now correctly distinguish the functions of -\u0263a on the possessor versus the possessed noun, that all data entries are glossed and unambiguous, that all questions are non-trivial and solvable from the provided data, and that the answer key is fully correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if any defects remain.",
+    "elapsed_seconds": 49.3
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, the puzzle is present, and puzzle_needs_validation is false. The pipeline has completed validation successfully, so the task can be finished.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 59.7
+  }
+]

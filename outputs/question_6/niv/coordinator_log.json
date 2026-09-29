@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic features for the target language 'niv'. Identify core phonological, morphological, syntactic, and lexical features suitable for an Olympiad puzzle, including clear mappings between linguistic phenomena and puzzle-relevant rules.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for 'niv' are present, but rationale is missing. The next required step is to design the step-by-step reasoning and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing linguistic concepts for 'niv', design a clear Olympiad-style rationale: define the reasoning steps, morphological/syntactic rules, sentence structure templates, and how each rule maps to puzzle questions. Ensure the rationale is internally consistent and sufficient for generating a solvable puzzle.",
+    "elapsed_seconds": 10.1
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing concepts and rationale.",
+    "directive": "Generate a complete Olympiad-style puzzle for 'niv' using the existing concepts and rationale. Include a clear data section with glossed vocabulary, well-formed questions, and a complete answer key. Ensure all linguistic rules are consistently applied and the puzzle is solvable without ambiguity.",
+    "elapsed_seconds": 17.1
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is marked as needing validation. No validator verdict exists yet, so the required next step is to have Agent 4 solve and rigorously validate the generated puzzle.",
+    "directive": "Solve and rigorously validate the generated 'niv' puzzle. Check the data section for complete glossed vocabulary, internal consistency of linguistic rules, unambiguous questions, correct answer key, and Olympiad-level solvability. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects are found.",
+    "elapsed_seconds": 21.6
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 failed because Agent 3 did not produce a complete puzzle; it stalled in stem-conflict resolution and omitted required sections. Concepts and rationale appear present, so the defect is puzzle generation. Route to Agent 3 to regenerate a complete, well-formed puzzle.",
+    "directive": "Discard the incomplete output and generate a final complete 'niv' puzzle only. Do not continue stem-conflict deliberation; choose consistent stems and proceed. Include all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure DATA contains all glossed vocabulary, questions are unambiguous and Olympiad-level, ANSWERS is complete and correct, and SOLUTION explains the reasoning. Output only the final puzzle, no meta commentary.",
+    "elapsed_seconds": 24.8
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated and is marked as needing validation, but no validator verdict exists yet. The next required step is to have Agent 4 solve and validate the latest puzzle before any further routing or completion.",
+    "directive": "Solve and rigorously validate the latest 'niv' puzzle. Verify that all required sections are present, DATA vocabulary is complete and glossed, rules are internally consistent, questions are unambiguous and non-trivial, ANSWERS are correct, and SOLUTION is coherent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific defects if any.",
+    "elapsed_seconds": 29.3
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the current output is not a complete puzzle and lacks the required sections, so the defect is in puzzle generation. Concepts and rationale are present, so the correct next step is to route to Agent 3 to regenerate a complete, well-formed puzzle from scratch.",
+    "directive": "Discard the incomplete output and generate a final complete 'niv' puzzle only. Do not include deliberation, loops, or meta commentary. Choose consistent stems and vocabulary, then output all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure DATA contains all glossed vocabulary, questions are unambiguous and Olympiad-level, ANSWERS is complete and correct, and SOLUTION explains the reasoning.",
+    "elapsed_seconds": 32.1
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and marked as needing validation, but no validator verdict exists yet. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle before any further routing or completion.",
+    "directive": "Solve and rigorously validate the latest 'niv' puzzle. Verify that all required sections are present, DATA vocabulary is complete and glossed, linguistic rules are internally consistent, questions are unambiguous and non-trivial, ANSWERS are correct, and SOLUTION is coherent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific defects if any.",
+    "elapsed_seconds": 39.8
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES but identified a major difficulty mismatch: the puzzle is harder than the required TARGET_DIFFICULTY=1. The concepts and rationale appear sufficient, so the defect is at the puzzle level. Agent 3 should revise the questions to make them very easy, single-step inferences and remove the complex multi-rule integration.",
+    "directive": "Revise the existing 'niv' puzzle to match TARGET_DIFFICULTY=1. Keep the current concepts and rationale, but simplify the questions. In particular, make Q3 a direct single-step inference rather than requiring distinction between predicative adjectives and verbs using attributive evidence. Simplify Q4d so it does not combine genitive, postpositional phrase, negation, and question particle simultaneously; split it into separate easy items or reduce it to one rule. Ensure all questions are very easy, unambiguous, Olympiad-appropriate, and fully supported by the DATA section. Preserve all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Output only the final revised puzzle with no meta commentary.",
+    "elapsed_seconds": 44.6
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated and is marked as needing validation, but no validator verdict exists yet. The latest revision was intended to reduce difficulty to TARGET_DIFFICULTY=1, so Agent 4 must now solve and validate the current puzzle before any further routing or completion.",
+    "directive": "Solve and rigorously validate the latest revised 'niv' puzzle. Verify that all required sections are present: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that DATA contains all necessary glossed vocabulary, the linguistic rules are internally consistent, the questions are unambiguous and appropriate for TARGET_DIFFICULTY=1, the answers are correct, and the solution is coherent. Pay special attention to whether Q3 and Q4d have been simplified into easy single-step inferences. Return PASS, PASS_WITH_ISSUES, or FAIL with specific defects if any.",
+    "elapsed_seconds": 49.7
+  },
+  {
+    "step": 11,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict and confirmed the actual difficulty is 1, matching the target. The puzzle is present, validated, and no further revisions are required.",
+    "directive": "No further action required. The puzzle has passed validation and is acceptable.",
+    "elapsed_seconds": 54.2
+  }
+]

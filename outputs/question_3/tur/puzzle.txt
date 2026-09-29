@@ -1,0 +1,133 @@
+
+
+CONTEXT
+
+The following data consists of word-forms and short phrases in a language of the Turkic family, along with their English translations. The language uses the following additional letters: ı (a distinct vowel, not the same as i), ö, ü, ç (as in "church"), ğ (a soft, often silent g), ş (as in "ship").
+
+All word-forms are presented in their surface form. No further information about the language is provided.
+
+DATA
+
+| # | Form | English |
+|---|------|---------|
+| 1 | evim | my house |
+| 2 | evin | your house |
+| 3 | evi | his/her house |
+| 4 | kapım | my door |
+| 5 | kapın | your door |
+| 6 | kapısı | his/her door |
+| 7 | gözüm | my eye |
+| 8 | gözün | your eye |
+| 9 | gözü | his/her eye |
+| 10 | kutum | my box |
+| 11 | kutun | your box |
+| 12 | kutusu | his/her box |
+| 13 | kitabım | my book |
+| 14 | kitabın | your book |
+| 15 | kitabı | his/her book |
+| 16 | Ali-nin evi | Ali's house |
+| 17 | Fatma-nın kutusu | Fatma's box |
+| 18 | kedi-nin gözü | the cat's eye |
+| 19 | çocuk-nun kitabı | the child's book |
+| 20 | evlerim | my houses |
+| 21 | gözlerim | my eyes |
+| 22 | kutuların | your boxes |
+| 23 | kapılar | doors |
+| 24 | evlerimin kapısı | the door of my houses |
+| 25 | kitaplarım | my books |
+| 26 | Ali-nin evinin kapısı | the door of Ali's house |
+| 27 | kedi-nin gözünün anahtarı | the key of the cat's eye |
+| 28 | Ali-nin evinin kapısının anahtarı | the key of the door of Ali's house |
+
+QUESTIONS
+
+**Q1.** Translate into the target language:
+
+1. your books
+2. the cat's box
+3. my boxes
+4. the child's houses
+
+**Q2.** Translate into the target language:
+
+5. the door of Fatma's box
+6. the keys of the doors of my houses
+7. the door of the box of the child's house
+
+ANSWERS
+
+**Q1:**
+
+1. kitapların
+2. kedi-nin kutusu
+3. kutularım
+4. çocuk-nun evleri
+
+**Q2:**
+
+5. Fatma-nın kutusunun kapısı
+6. evlerimin kapılarının anahtarları
+7. çocuk-nun evinin kutusunun kapısı
+
+SOLUTION
+
+**Rules to be inferred:**
+
+**R1 – Possessive suffixes (dependent marking).** The possessed noun carries a suffix encoding the person and number of the possessor. Three persons are attested:
+- 1sg: -ım / -im / -um / -üm
+- 2sg: -ın / -in / -un / -ün
+- 3sg: -ı / -i / -u / -ü
+
+Evidence: Items 1–15 show the same stems with three different suffix sets corresponding to "my," "your," and "his/her." The 1sg and 2sg forms contain an additional /n/ compared to 3sg.
+
+**R2 – Vowel harmony (4-way).** The vowel of every suffix is determined by the last vowel of the stem it attaches to, along two dimensions:
+- Frontness: front stem vowel (/e/, /i/, /ö/, /ü/) → front suffix vowel; back stem vowel (/a/, /ı/, /o/, /u/) → back suffix vowel.
+- Roundedness: rounded stem vowel (/o/, /u/, /ö/, /ü/) → rounded suffix vowel; unrounded stem vowel (/a/, /ı/, /e/, /i/) → unrounded suffix vowel.
+
+The specific suffix vowel matches the stem's last vowel: /a/→/a/, /ı/→/ı/, /e/→/e/, /i/→/i/, /o/→/o/, /u/→/u/, /ö/→/ö/, /ü/→/ü/.
+
+Evidence: Comparing items 1 (ev→-im), 4 (kapı→-ım), 7 (göz→-üm), 10 (kutu→-um) isolates both dimensions. Items 13–15 (kitap, ending in /a/) show the same suffix forms as items 4–6 (kapı, ending in /ı/), confirming that /a/ and /ı/ belong to the same harmony class (back unrounded).
+
+**R3 – Genitive case (full-NP possessor).** When the possessor is a full noun phrase (not a pronoun), it receives a genitive suffix: -ın / -in / -un / -ün (harmonizing to the possessor's stem).
+
+Evidence: Items 16–19 show a noun followed by a suffix, then a possessed noun with a 3sg possessive suffix. The glosses identify the first noun as the possessor.
+
+**R4 – Double marking.** In full-NP possession, BOTH the possessor receives genitive AND the possessed noun receives a 3sg possessive suffix. In pronominal possession, only the possessive suffix appears.
+
+Evidence: Contrast item 1 (evim, "my house" — suffix only) with item 16 (Ali-nin evi, "Ali's house" — genitive + possessive suffix).
+
+**R5 – Linear order: possessor before possessed.** The genitive-marked possessor precedes the possessed noun.
+
+Evidence: Items 16–19 consistently show the genitive-marked noun first.
+
+**R6 – Plural suffix.** The plural suffix is -lar (after back stems) / -ler (after front stems), harmonizing like all other suffixes.
+
+Evidence: Item 23 (kapılar, "doors") shows the plural on a back stem; items 20–21 (evlerim, gözlerim) show it on front stems.
+
+**R7 – Suffix stacking order.** When a noun carries multiple suffixes, the fixed order is: Root → Plural → Possessive → Genitive.
+
+Evidence: Item 24 (evlerimin kapısı) shows ev + -ler + -im + -in (Root-PL-1SG.POSS-GEN), establishing Plural before Possessive and Possessive before Genitive. Items 26–28 confirm this order in nested constructions.
+
+**R8 – Stem-local harmony.** In a multi-noun genitive chain, each suffix harmonizes to the stem it is directly attached to, not to a preceding stem.
+
+Evidence: Item 27 (kedi-nin gözünün anahtarı): -in harmonizes to kedi (/i/, front unrounded), -ü and -nün harmonize to göz (/ö/, front rounded), -ı harmonizes to anahtar (/a/, back unrounded). Three different harmony classes in one chain.
+
+**Answers:**
+
+**Q1.1** "your books": stem kitap (/a/, back unrounded) + plural -lar + 2sg possessive -ın → **kitapların**
+
+**Q1.2** "the cat's box": kedi (/i/, front unrounded) + genitive -in → kedi-nin; kutu (/u/, back rounded) + 3sg possessive -u → kutusu → **kedi-nin kutusu**
+
+**Q1.3** "my boxes": kutu (/u/, back rounded) + plural -lar + 1sg possessive -ım → **kutularım**
+
+**Q1.4** "the child's houses": çocuk (/u/, back rounded) + genitive -un → çocuk-nun; ev (/e/, front unrounded) + plural -ler + 3sg possessive -i → evleri → **çocuk-nun evleri**
+
+**Q2.5** "the door of Fatma's box": Fatma (/a/, back unrounded) + genitive -ın → Fatma-nın; kutu (/u/, back rounded) + 3sg possessive -u + genitive -nun → kutusunun; kapı (/ı/, back unrounded) + 3sg possessive -ı → kapısı → **Fatma-nın kutusunun kapısı**
+
+**Q2.6** "the keys of the doors of my houses": ev (/e/) + -ler + -im + -in → evlerimin; kapı (/ı/) + -lar + -ı + -nın → kapılarının; anahtar (/a/) + -lar → anahtarları → **evlerimin kapılarının anahtarları**
+
+**Q2.7** "the door of the box of the child's house": çocuk (/u/) + -un → çocuk-nun; ev (/e/) + -i + -nin → evinin; kutu (/u/) + -u + -nun → kutusunun; kapı (/ı/) + -ı → kapısı → **çocuk-nun evinin kutusunun kapısı**
+
+DIFFICULTY
+
+**Level 2.** The puzzle requires the solver to discover four interacting systems (vowel harmony, possessive morphology, genitive construction, suffix ordering) from a flat list of glossed forms, then apply them in combination to produce novel multi-suffix chains. The difficulty arises from: (a) decomposing the 4-way harmony into two independent binary dimensions; (b) distinguishing the genitive from the formally identical 2sg possessive by position; (c) tracking stem-local harmony across three or four different stems in a single chain; (d) correctly applying the full suffix stack (Root-PL-POSS-GEN) in nested constructions. Each question in Q2 requires simultaneous application of at least four inferred rules.

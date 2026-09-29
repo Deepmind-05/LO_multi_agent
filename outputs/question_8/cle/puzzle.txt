@@ -1,0 +1,133 @@
+
+
+CONTEXT
+
+Below are sentences from a language of southern Mexico, each followed by its English translation. Tone is marked in the orthography: acute accent (´) = high tone, grave accent (`) = low tone, no diacritic = mid tone.
+
+DATA
+
+1. a-kɔ́ tɔ a — I am drinking water
+2. n-kʷa pa n — You are hitting the child
+3. t-tɛ́ tɔ t — He/She drank water
+4. a-pa kʷa a — I am seeing the dog
+5. t-pan pa t — He/She saw the child
+6. a-mɔ́ a — I am sleeping
+7. t-lɛn t — He/She went
+8. t-mɔ́ t — He/She is sleeping
+9. t-mɔ̀ t — He/She slept
+10. a-kɔ́ tɔ aw — We (incl.) are drinking water
+11. a-tʃi kʷa aʔ — We (excl.) hit the dog
+12. n-pa pa nw — You (pl.) are seeing the child
+13. t-tɛ́ tɔ tw — They drank water
+14. ma a-pa kʷa a — I am not seeing the dog
+15. n-lɛ nw — You (pl.) are going
+16. t-mɔ̀ tw — They slept
+
+Vocabulary: *tɔ* = water; *kʷa* = dog; *pa* = child
+
+QUESTIONS
+
+**Q1.** Translate the following sentences into English. (Give one translation per sentence.)
+
+(a) n-tɛ́ tɔ n
+
+(b) t-kʷa pa tw
+
+(c) a-lɛn aʔ
+
+(d) ma t-pan kʷa t
+
+**Q2.** Translate the following English sentences into the target language.
+
+(a) You (pl.) are drinking water
+
+(b) He/She hit the child
+
+(c) We (incl.) are sleeping
+
+(d) They saw the dog
+
+(e) I am not going
+
+**Q3.** (a) Identify which verbs in the data are **suppletive** (the root changes entirely for the perfective) and which are **regular** (the root is retained and a suffix is added). List each verb with its imperfective and perfective forms.
+
+(b) State the generalization that distinguishes the two strategies.
+
+(c) A new verb "run" has the imperfective form *lɔ́* and is suppletive, with perfective root *tɔ́*. What is the form of "I ran"?
+
+**Q4.** Consider the sentence:
+
+*a-tʃi pa aʔ*
+
+(a) Provide the correct English translation.
+
+(b) Explain why the verbal prefix alone is insufficient to determine the subject's person and number.
+
+(c) Identify the specific cue that resolves the ambiguity and state what it tells you.
+
+**Q5.** Describe the relationship between the verbal agreement system and the independent pronoun system with respect to first person plural. Why is the verbal system unable to distinguish all first-person-plural values, and which subsystem carries the full distinction?
+
+ANSWERS
+
+**Q1.**
+(a) You drank water.
+(b) They are hitting the child.
+(c) We (excl.) went.
+(d) He/She did not see the dog.
+
+**Q2.**
+(a) n-kɔ́ tɔ nw
+(b) t-tʃi pa t
+(c) a-mɔ́ aw
+(d) t-pan kʷa tw
+(e) ma a-lɛ a
+
+**Q3.**
+(a) Suppletive: "drink" (kɔ́ / tɛ́), "hit" (kʷa / tʃi), "sleep" (mɔ́ / mɔ̀). Regular: "see" (pa / pan), "go" (lɛ / lɛn).
+(b) In suppletive verbs, the entire root is replaced by a different form (which may differ in segments, tone, or both) to express the perfective. In regular verbs, the imperfective root is retained and the suffix *-n* is appended to form the perfective.
+(c) a-tɔ́ a
+
+**Q4.**
+(a) We (excl.) hit the child.
+(b) The prefix *a-* is used for both 1SG ("I") and 1PL ("we"), so it cannot distinguish between a singular and a plural subject.
+(c) The independent pronoun *aʔ* in the final (subject) position is the 1PL exclusive form, which resolves the ambiguity by specifying that the subject is "we (excl.)" rather than "I."
+
+**Q5.** The verbal prefix *a-* is identical for 1SG, 1PL inclusive, and 1PL exclusive; it does not encode number or the inclusive/exclusive distinction. The independent pronoun system, by contrast, distinguishes all three values: *a* (1SG), *aw* (1PL inclusive), and *aʔ* (1PL exclusive). Thus the pronominal subsystem carries the full person/number/inclusivity specification, while the verbal agreement system is underspecified for first person.
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **VOS word order.** The basic clause structure is Verb–Object–Subject. This is established by the consistent pattern that the first element is a verb (it bears a person prefix and changes form), the second NP is the object, and the final NP is the subject. Evidence: in every transitive sentence, the verbal prefix matches the final NP (e.g., sentence 1: *a-* matches *a* "I"; sentence 2: *n-* matches *n* "you").
+
+2. **Subject-only verbal agreement.** The verb carries a prefix marking the subject's person/number. There is no object marking on the verb. Evidence: the prefix always corresponds to the subject NP, never the object NP.
+
+3. **Syncretic subject markers.** The verbal prefixes are: *a-* (1SG/1PL), *n-* (2SG/2PL), *t-* (3SG/3PL). Each prefix is shared by a singular and a plural value. Evidence: sentence 1 (*a-* + *a* = 1SG) vs. sentence 10 (*a-* + *aw* = 1PL incl.) vs. sentence 11 (*a-* + *aʔ* = 1PL excl.) all use *a-*; similarly for *n-* (sentences 2, 12, 15) and *t-* (sentences 3, 5, 7, 8, 9, 13, 16).
+
+4. **Independent pronouns resolve syncretism.** The pronouns are: *a* (1SG), *n* (2SG), *t* (3SG), *aw* (1PL incl.), *aʔ* (1PL excl.), *nw* (2PL), *tw* (3PL). They distinguish singular from plural and inclusive from exclusive, resolving the ambiguity left by the verbal prefix.
+
+5. **Aspect system: suppletive vs. regular.** Two aspects are attested: imperfective (ongoing/habitual) and perfective (completed). For suppletive verbs ("drink," "hit," "sleep"), the root changes entirely for the perfective. For regular verbs ("see," "go"), the suffix *-n* is added to the imperfective root. Evidence: "drink" *kɔ́* → *tɛ́* (different root); "see" *pa* → *pan* (same root + *-n*).
+
+6. **Tone is morphologically relevant.** The verb "sleep" uses the same segments for both aspects but differs in tone: *mɔ́* (H, imperfective) vs. *mɔ̀* (L, perfective). Evidence: sentences 8 and 9 are identical except for tone and have different translations.
+
+7. **Preverbal negation.** The negative particle *ma* precedes the verb. Evidence: sentence 14 (*ma a-pa kʷa a*).
+
+**How the rules produce each answer:**
+
+- **Q1(a):** *n-* = 2SG/2PL; final *n* = 2SG → subject is "you (sg.)"; *tɛ́* = perfective "drink"; *tɔ* = water (object). → "You drank water."
+- **Q1(b):** *t-* = 3SG/3PL; final *tw* = 3PL → subject is "they"; *kʷa* = imperfective "hit"; *pa* = child (object). → "They are hitting the child."
+- **Q1(c):** *a-* = 1SG/1PL; final *aʔ* = 1PL excl. → subject is "we (excl.)"; *lɛn* = perfective "go" (intransitive). → "We (excl.) went."
+- **Q1(d):** *ma* = negative; *t-* = 3SG/3PL; final *t* = 3SG → subject is "he/she"; *pan* = perfective "see"; *kʷa* = dog (object). → "He/She did not see the dog."
+- **Q2(a):** 2PL subject → *n-* prefix, *nw* pronoun; imperfective "drink" → *kɔ́*; object "water" → *tɔ*. VOS: *n-kɔ́ tɔ nw*.
+- **Q2(b):** 3SG subject → *t-* prefix, *t* pronoun; perfective "hit" → *tʃi*; object "child" → *pa*. VOS: *t-tʃi pa t*.
+- **Q2(c):** 1PL incl. subject → *a-* prefix, *aw* pronoun; imperfective "sleep" → *mɔ́*; intransitive (no object). VOS: *a-mɔ́ aw*.
+- **Q2(d):** 3PL subject → *t-* prefix, *tw* pronoun; perfective "see" → *pan*; object "dog" → *kʷa*. VOS: *t-pan kʷa tw*.
+- **Q2(e):** Negative → *ma*; 1SG subject → *a-* prefix, *a* pronoun; imperfective "go" → *lɛ*; intransitive. NegVOS: *ma a-lɛ a*.
+- **Q3(a–b):** Direct comparison of verb forms across the data reveals the two strategies.
+- **Q3(c):** "I ran" = 1SG subject (*a-* prefix, *a* pronoun) + perfective "run" (*tɔ́*, suppletive root) + intransitive. → *a-tɔ́ a*.
+- **Q4:** *a-* is syncretic (1SG/1PL); *tʃi* = perfective "hit"; *pa* = child (object); *aʔ* = 1PL excl. (subject). The pronoun *aʔ* resolves the syncretism. → "We (excl.) hit the child."
+- **Q5:** The verbal prefix *a-* covers 1SG, 1PL incl., and 1PL excl. without distinction. The pronouns *a*, *aw*, *aʔ* carry the full specification. The verbal system is underspecified; the pronominal system is the sole carrier of the inclusive/exclusive and number distinctions for first person.
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires the solver to simultaneously discover VOS word order, subject-only agreement, a syncretic person/number system, a two-strategy aspect system (suppletive vs. regular), tone as a morphological feature, and an inclusive/exclusive asymmetry between two subsystems. The central "aha" moment (VOS + agreement) is followed by layered complications: syncretism forces reliance on independent pronouns, the aspect system requires cross-verb comparison to abstract a generalization, and tone adds a phonological dimension that solvers focused only on segmental content may initially overlook. Questions require productive assembly (Q2), metalinguistic generalization (Q3), and multi-cue ambiguity resolution (Q4–Q5), creating a clear difficulty gradient within a single coherent system.

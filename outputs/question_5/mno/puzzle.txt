@@ -1,0 +1,262 @@
+
+
+CONTEXT
+
+The following data consists of sentences in Mono, a language of the Uto-Aztecan family spoken in California. Each sentence is followed by a morpheme-by-morpheme gloss and an English translation. The glosses use standard Leipzig Glossing Rules. You have no prior knowledge of Mono; all relevant properties of the language must be inferred from the data.
+
+DATA
+
+(1) tɨp ʔaw ʔaʔ
+    man dog see
+    "A man sees a dog."
+
+(2) ʔaw tɨp ʔaʔ
+    dog man see
+    "A dog sees a man."
+
+(3) kɨl ʔaw wɨs
+    woman dog carry
+    "A woman carries a dog."
+
+(4) mɨt sɨn ʔaʔ
+    child house see
+    "A child sees a house."
+
+(5) tɨp kɨl ʔaʔ
+    man woman see
+    "A man sees a woman."
+
+(6) tɨp sɨn-m na ʔat
+    man house-OBL in go
+    "A man goes into a house."
+
+(7) kɨl ʔal-m ʔe ʔat
+    woman tree-OBL at go
+    "A woman goes to a tree."
+
+(8) kɨl ʔaw tɨp ʔaʔ wɨs
+    woman dog man see carry
+    "A woman carries the dog that a man saw."
+
+(9) ʔu tɨp ʔaw ʔaʔ
+    NEG man dog see
+    "A man does not see a dog."
+
+(10) ʔu kɨl sɨn-m na ʔat
+     NEG woman house-OBL in go
+     "A woman does not go into a house."
+
+(11) ʔu mɨt ʔal kɨm
+     NEG child tree eat
+     "A child does not eat a tree."
+
+(12) ʔu ʔa-ʔaw-k tɨp ʔaʔ
+     NEG 1SG.POSS-dog-PL man see
+     "My dogs do not see a man."
+
+(13) tɨp ʔi ʔaw ʔaʔ
+     man Q dog see
+     "Does a man see a dog?"
+
+(14) kɨl ʔi mɨt wɨs
+     woman Q child carry
+     "Does a woman carry a child?"
+
+(15) sɨn-m na ʔi tɨp ʔat
+     house-OBL in Q man go
+     "Does a man go into a house?"
+
+(16) ʔal-m ʔe ʔi kɨl ʔat
+     tree-OBL at Q woman go
+     "Does a woman go to a tree?"
+
+(17) ʔa-ʔaw tɨp ʔaʔ
+     1SG.POSS-dog man see
+     "My dog sees a man."
+
+(18) tɨp-k ʔaw ʔaʔ
+     man-PL dog see
+     "Men see a dog."
+
+(19) tɨp-ʔ ʔaw ʔaʔ
+     man-DEM dog see
+     "This man sees a dog."
+
+(20) tɨp-n ʔaw ʔaʔ
+     man-DEF dog see
+     "The man sees a dog."
+
+(21) tɨp sɨn-k-m-n na ʔat
+     man house-PL-OBL-DEF in go
+     "A man goes into the houses."
+
+(22) tɨp sɨn-m-ʔ na ʔat
+     man house-OBL-DEM in go
+     "A man goes into this house."
+
+(23) kɨl ʔal-ʔ-n ʔe ʔat
+     woman tree-DEM-DEF at go
+     "A woman goes to the tree."
+
+(24) tɨp ʔaw-k-ʔ ʔaʔ
+     man dog-PL-DEM see
+     "A man sees these dogs."
+
+(25) tɨp ʔaw-k-n ʔaʔ
+     man dog-PL-DEF see
+     "A man sees the dogs."
+
+(26) tɨp sɨn-m-n na ʔat
+     man house-OBL-DEF in go
+     "A man goes into the house."
+
+(27) tɨp sɨn-k-m-ʔ-n na ʔat
+     man house-PL-OBL-DEM-DEF in go
+     "A man goes into the houses (these)."
+
+(28) ʔa-tɨp-k ʔaw ʔaʔ
+     1SG.POSS-man-PL dog see
+     "My men see a dog."
+
+(29) ʔe-ʔaw-k sɨn-m na ʔat
+     2SG.POSS-dog-PL house-OBL in go
+     "Your dogs go into a house."
+
+(30) tɨp ʔaw ʔaʔ-s
+     man dog see-PAST
+     "A man saw a dog."
+
+(31) tɨp ʔaw ʔaʔ-t
+     man dog see-FUT
+     "A man will see a dog."
+
+(32) kɨl ʔal-m ʔe ʔat-s
+     woman tree-OBL at go-PAST
+     "A woman went to a tree."
+
+(33) ʔu tɨp ʔaw ʔaʔ-s
+     NEG man dog see-PAST
+     "A man did not see a dog."
+
+(34) tɨp ʔi ʔaw ʔaʔ-s
+     man Q dog see-PAST
+     "Did a man see a dog?"
+
+QUESTIONS
+
+**Q1.** What is the basic clause word order of Mono? In sentence (1), label each word as Subject (S), Object (O), or Verb (V).
+
+**Q2.** In sentence (6), what is the grammatical function of the word *na*? What does its position relative to *sɨn-m* reveal about the language's adpositional system?
+
+**Q3.** In sentence (8), identify the head noun and the relative clause that modifies it. What does the linear order of these two elements tell you about Mono's relative clause structure?
+
+**Q4.** In sentence (9), where is the negative particle *ʔu* positioned relative to the subject and the verb? In many SOV languages, negation is expected to appear immediately before the verb. How does Mono's pattern differ from this expectation?
+
+**Q5.** In sentence (15), identify the first constituent of the clause. Where is the question particle *ʔi* positioned? Compare this with sentences (13) and (14). What general positional rule governs the question particle?
+
+**Q6.** Produce the Mono surface form for each of the following English sentences:
+   a. "A child does not see a tree."
+   b. "Does a child see a tree?"
+   c. "Does a child go to a tree?" (with the location phrase in first position)
+
+**Q7.** Segment each of the following forms into morphemes and identify the grammatical function of each morpheme:
+   a. ʔe-ʔaw-n
+   b. ʔaw-m-n
+   c. ʔa-tɨp-k-ʔ
+
+**Q8.** State the fixed order in which noun suffixes stack in Mono. Cite at least three specific data points that support your answer.
+
+**Q9.** What is unusual about possessive marking in Mono compared to the other nominal affixes? Provide evidence from the data.
+
+**Q10.** Produce the Mono surface form for each of the following:
+   a. "My dogs see the man."
+   b. "Does a woman go into the houses?" (location phrase fronted)
+   c. "A man does not go into this house."
+   d. "The men see these dogs."
+   e. "My dogs did not see the man."
+
+**Q11.** What do the verb suffixes *-s* and *-t* indicate? Provide one piece of evidence from the data for each.
+
+ANSWERS
+
+**Q1.** The basic word order is SOV (Subject–Object–Verb). In sentence (1): *tɨp* = S, *ʔaw* = O, *ʔaʔ* = V.
+
+**Q2.** *na* is a postposition meaning "in." It follows the noun *sɨn-m*, showing that Mono uses postpositions (the adposition follows its complement), consistent with a head-final adpositional system.
+
+**Q3.** The head noun is *ʔaw* (dog) and the relative clause is *tɨp ʔaʔ* (man see). The relative clause follows the head noun, indicating an NRel (noun–relative clause) structure, consistent with head-finality.
+
+**Q4.** The negative particle *ʔu* is in clause-initial position, before the subject. This differs from the typical SOV expectation of preverbal negation (immediately before the verb). Mono exhibits a NegSOV pattern rather than the more common SOVNeg or SONegV pattern.
+
+**Q5.** In (15), the first constituent is the postpositional phrase *sɨn-m na* (house-OBL in). The question particle *ʔi* appears in second position, immediately after this first constituent. In (13) and (14), the first constituent is the subject, and *ʔi* again follows it. The general rule is: the question particle occupies second constituent position (after the first constituent of the clause), regardless of what that constituent is.
+
+**Q6.**
+   a. ʔu mɨt ʔal ʔaʔ
+   b. mɨt ʔi ʔal ʔaʔ
+   c. ʔal-m ʔe ʔi mɨt ʔat
+
+**Q7.**
+   a. ʔe-ʔaw-n = 2SG.POSS + dog + DEF ("your dog, definite")
+   b. ʔaw-m-n = dog + OBL + DEF ("the dog, oblique")
+   c. ʔa-tɨp-k-ʔ = 1SG.POSS + man + PL + DEM ("my men, these")
+
+**Q8.** The fixed suffix order is: PL → OBL → DEM → DEF.
+Evidence:
+- (21) *sɨn-k-m-n*: PL precedes OBL, and OBL precedes DEF.
+- (22) *sɨn-m-ʔ*: OBL precedes DEM.
+- (23) *ʔal-ʔ-n*: DEM precedes DEF.
+- (27) *sɨn-k-m-ʔ-n*: confirms the full order PL < OBL < DEM < DEF.
+
+**Q9.** Possessive marking is prefixal (attached to the left of the noun stem), while all other nominal affixes (PL, OBL, DEM, DEF) are suffixal (attached to the right). This creates a prefix–suffix asymmetry. Evidence: in (12) *ʔa-ʔaw-k*, the possessive prefix *ʔa-* is on the left and the plural suffix *-k* is on the right of the stem *ʔaw*. Similarly in (28) *ʔa-tɨp-k* and (29) *ʔe-ʔaw-k*.
+
+**Q10.**
+   a. ʔa-ʔaw-k tɨp-n ʔaʔ
+   b. sɨn-k-m-n na ʔi kɨl ʔat
+   c. ʔu tɨp sɨn-m-ʔ na ʔat
+   d. tɨp-k-n ʔaw-k-ʔ ʔaʔ
+   e. ʔu ʔa-ʔaw-k tɨp-n ʔaʔ-s
+
+**Q11.** *-s* indicates past tense; *-t* indicates future tense.
+Evidence for *-s*: sentence (30) *tɨp ʔaw ʔaʔ-s* ("A man saw a dog") contrasts with sentence (1) *tɨp ʔaw ʔaʔ* ("A man sees a dog"), showing that *-s* marks past.
+Evidence for *-t*: sentence (31) *tɨp ʔaw ʔaʔ-t* ("A man will see a dog") contrasts with sentence (1), showing that *-t* marks future.
+
+SOLUTION
+
+**Rules inferred from the data:**
+
+1. **SOV word order** (sentences 1–5): The verb is consistently final. The controlled contrast in (1) vs. (2) (same verb, swapped nouns) confirms that the first noun is the subject and the second is the object.
+
+2. **Head-final adpositions** (sentences 6–7): Postpositions follow their nominal complement (*sɨn-m na*, *ʔal-m ʔe*), establishing a head-final adpositional system.
+
+3. **NRel structure** (sentence 8): The relative clause follows the head noun (*ʔaw* + *tɨp ʔaʔ*), consistent with head-finality.
+
+4. **NegSOV** (sentences 9–12): The negative particle *ʔu* is clause-initial, before the subject. This is confirmed across four sentences with different subjects (including a complex NP in (12)). The particle is not adjacent to the verb, ruling out preverbal negation.
+
+5. **Second-position question particle** (sentences 13–16): The particle *ʔi* follows the first constituent of the clause. In (13)–(14) the first constituent is the subject; in (15)–(16) it is a fronted postpositional phrase. This demonstrates that *ʔi* is in second constituent position, not simply "after the subject."
+
+6. **Suffixing nominal morphology with fixed order** (sentences 17–29): Nouns bear suffixes for PL (-k), OBL (-m), DEM (-ʔ), and DEF (-n) in the fixed order PL → OBL → DEM → DEF. This order is uniquely determined by the data: (21) shows PL < OBL < DEF, (22) shows OBL < DEM, (23) shows DEM < DEF, and (27) confirms the full sequence.
+
+7. **Possessive prefix asymmetry** (sentences 12, 17, 28, 29): Possessive marking is prefixal (ʔa- = 1SG, ʔe- = 2SG), while all other nominal affixes are suffixal. The co-occurrence of prefix and suffix on the same stem (e.g., ʔa-ʔaw-k in (12)) confirms that they are distinct morphological processes on opposite sides of the stem.
+
+8. **Verb tense/aspect suffixes** (sentences 30–34): Verbs take suffixes -s (PAST) and -t (FUT). These are identified by contrast with the unmarked (present) form in (1).
+
+**How the rules interact:**
+
+- The head-final pattern (SOV, postpositions, NRel) provides the baseline structural expectation. Negation violates this expectation by being clause-initial rather than preverbal, creating the puzzle's central tension.
+- The question particle's second-position slot is independent of both the SOV order and the negation position, creating a three-way positional typology: clause-initial (NEG), second position (Q), clause-final (V).
+- The possessive prefix is the sole exception to the otherwise suffixing nominal system, and its interaction with suffix stacking (prefix + stem + suffixes) is tested in the production questions.
+- The production questions (Q10) require simultaneous application of word order, particle position, suffix order, possessive prefix placement, and verb tense marking.
+
+**Verification of answers:**
+
+- Q6a follows the NegSOV pattern: ʔu + S + O + V.
+- Q6b follows the S + Q + O + V pattern.
+- Q6c follows the PP + Q + S + V pattern (as in (16)).
+- Q10a: 1SG.POSS + dog + PL (subject) + man + DEF (object) + see → ʔa-ʔaw-k tɨp-n ʔaʔ.
+- Q10b: PP (house-PL-OBL-DEF + in) fronted + Q + woman + go → sɨn-k-m-n na ʔi kɨl ʔat.
+- Q10c: NEG + man + PP (house-OBL-DEM + in) + go → ʔu tɨp sɨn-m-ʔ na ʔat.
+- Q10d: man-PL-DEF + dog-PL-DEM + see → tɨp-k-n ʔaw-k-ʔ ʔaʔ.
+- Q10e: NEG + 1SG.POSS-dog-PL + man-DEF + see-PAST → ʔu ʔa-ʔaw-k tɨp-n ʔaʔ-s.
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires sustained inductive reasoning across multiple interacting domains. The solver must: (a) establish the head-final baseline from multiple domains; (b) override the typological expectation of preverbal negation in an SOV language (the central "counter-expectation" challenge); (c) distinguish second-position from "after the subject" for the question particle using fronted-constituent data; (d) triangulate a four-suffix ordering from combinatorial evidence; (e) identify the prefix–suffix asymmetry; and (f) integrate all rules simultaneously in the production questions. The difficulty arises from the interaction of concepts and the need to resist typological priors, not from any single opaque rule.

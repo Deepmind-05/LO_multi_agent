@@ -1,0 +1,61 @@
+
+
+CONTEXT
+
+Hausa is a Chadic language spoken in West Africa. In Hausa, adjectives change form to agree with the noun they modify. The adjective has four forms: one for masculine singular, one for feminine singular, one for masculine plural, and one for feminine plural. The adjective always comes before the noun.
+
+Nouns referring to people have gender based on biological sex (male = masculine, female = feminine). Nouns referring to objects have a fixed gender that must be learned from context.
+
+DATA
+
+1. ɗarami ɗan'uwa — useful brother
+2. ɗaramar ɗan'ya — useful sister
+3. ɗaramai ɗan'uwaɗe — useful brothers
+4. ɗaramarwa ɗan'yaɗe — useful sisters
+5. ƙarami ɗan'uwa — small brother
+6. ƙaramar ɗan'ya — small sister
+7. ƙaramai ɗan'uwaɗe — small brothers
+8. ƙaramarwa ɗan'yaɗe — small sisters
+9. ƙarami gida — small house
+10. ƙaramar kofa — small cup
+11. ƙaramai gidaje — small houses
+12. ƙaramarwa kofaye — small cups
+
+QUESTIONS
+
+**Q1.** The word *ɗan namiji* means "man" (masculine). What is the Hausa for "small man"?
+
+**Q2.** The word *ɗan mata* means "girl" (feminine). Its plural is *ɗan mataɗe*. What is the Hausa for "useful girls"?
+
+**Q3.** The word *ɗari* means "old." Its masculine singular form is *ɗari*. What is the feminine singular form of this adjective?
+
+**Q4.** Using the adjective *ɗari* (old), what is the Hausa for "old cup"? (kofa is feminine singular)
+
+ANSWERS
+
+**Q1.** ƙarami ɗan namiji
+
+**Q2.** ɗaramarwa ɗan mataɗe
+
+**Q3.** ɗarar
+
+**Q4.** ɗarar kofa
+
+SOLUTION
+
+The data shows that adjectives ending in -i have the following four forms:
+- Masculine singular: stem + **-i**
+- Feminine singular: stem + **-ar**
+- Masculine plural: stem + **-ai**
+- Feminine plural: stem + **-arwa**
+
+This pattern is confirmed by both ɗarami (examples 1–4) and ƙarami (examples 5–8).
+
+- **Q1:** "man" is masculine singular. The MS form of ƙarami is ƙarami (example 5). Answer: ƙarami ɗan namiji.
+- **Q2:** "girls" is feminine plural. The FP form of ɗarami is ɗaramarwa (example 4). Answer: ɗaramarwa ɗan mataɗe.
+- **Q3:** ɗari ends in -i, so the FS form replaces -i with -ar: ɗarar.
+- **Q4:** "cup" is feminine singular. The FS form of ɗari is ɗarar (from Q3). Answer: ɗarar kofa.
+
+DIFFICULTY
+
+**Level 1 (Accessible).** The puzzle presents a regular four-way adjective agreement paradigm with a single productive pattern. Each question requires a single step of inference: identifying the relevant gender and number of the noun, then selecting or deriving the correct adjective form. The rules are explicitly stated in the context and clearly demonstrated in the data.

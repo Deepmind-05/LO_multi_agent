@@ -1,0 +1,84 @@
+
+
+TARGET-LANGUAGE
+
+Nivkh (niv)
+
+CORE
+
+1. Concept: Word Order (adapted from source 81A-1 SVO)
+   - Target-language realization: SOV (WALS 81A-1: SOV; 82A-1: SV; 83A-1: OV)
+   - Intended solver inference: From multiple sentences, solver identifies that the verb consistently appears in final position, establishing SOV as the basic order.
+   - Priority: REQUIRED
+
+2. Concept: Negation (adapted from source 100A-1 post-verbal negative word)
+   - Target-language realization: Negative suffix on the verb (obligatory) + optional post-verbal negative word (WALS 143F-3: both postverbal negative word and negative suffix; 143A-15: OptDoubleNeg; 144O-8: SO[V-Neg](Neg))
+   - Intended solver inference: Solver identifies (a) a consistent suffix on the verb in all negative sentences (the obligatory negative affix), and (b) a separate word that appears after the verb in some but not all negative sentences (the optional negative word). The solver must recognize that the suffix is obligatory while the word is optional, and that both can co-occur (double negation).
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Rich case system with suffixes (8-9 cases; WALS 49A-7, 51A-1: case suffixes, 50A-2: symmetrical)
+   - Intended solver inference: From consistent suffixes on noun phrases in different grammatical roles, solver identifies a set of case markers and their functions (e.g., nominative/absolutive, genitive, locative, etc.).
+   - Interaction with CORE: In SOV with no verbal person marking, case is the primary means of identifying grammatical roles. Case marking makes the SOV structure transparent to the solver.
+   - Difficulty contribution: Medium-high. Solver must segment suffixes and map them to roles across multiple sentences.
+   - Priority: HIGH
+
+2. Phenomenon: Postpositions (WALS 85A-1)
+   - Intended solver inference: Solver identifies that prepositional equivalents appear after the noun phrase, consistent with SOV typology.
+   - Interaction with CORE: Reinforces SOV identification; postpositional phrases occupy pre-verbal position, adding structural complexity to the clause.
+   - Difficulty contribution: Low-medium. Relatively straightforward once SOV is established.
+   - Priority: HIGH
+
+3. Phenomenon: Predicative adjectives have verbal encoding (WALS 118A-1)
+   - Intended solver inference: In sentences with predicative adjectives, the adjective behaves like a verb (takes the same suffixes, occupies the same position). When a predicative adjective appears in a negative sentence, it takes the negative suffix just as a verb does. Solver infers that adjectives are verbal in predicative position.
+   - Interaction with CORE (Negation): The negative suffix appears on predicative adjectives, not just on action verbs. This is a key inference: the solver must recognize that the "verb" in some sentences is actually an adjective, and that the language treats them identically in predicative position.
+   - Difficulty contribution: High. This is a non-obvious typological fact that creates a genuine "aha" moment. The solver must notice that the negative suffix appears on what appear to be adjectives.
+   - Priority: HIGH
+
+4. Phenomenon: Final question particle (WALS 92A-2, 116A-1)
+   - Intended solver inference: A consistent particle at the end of sentences marks polar questions.
+   - Interaction with CORE: The question particle appears after the verb (and after the optional negative word in negative questions), adding a layer to the final position.
+   - Difficulty contribution: Low. Easy to identify but adds variety to the data.
+   - Priority: OPTIONAL
+
+5. Phenomenon: No verbal person marking (WALS 102A-1, 100A-1: neutral alignment)
+   - Intended solver inference: The verb does not change form for person or number of arguments. Solver must rely on word order and case marking to identify who is doing what to whom.
+   - Interaction with CORE: This constraint makes the puzzle more challenging because the solver cannot use verbal agreement as a shortcut. Case and word order become the only tools for role identification.
+   - Difficulty contribution: Medium. Increases the importance of case identification.
+   - Priority: HIGH (as a design constraint)
+
+INTERACTIONS
+
+1. SOV + Case marking:
+   - Concepts: Word Order (CORE), Case suffixes (TARGET-SPECIFIC)
+   - Interaction: In SOV, the verb is final. Case suffixes on the pre-verbal NPs identify S and O. Without case, SOV would be ambiguous for the solver; without SOV, case would be harder to map to roles.
+   - Additional inference: Solver can confirm SOV by checking that the case-marked S and O consistently precede the verb.
+
+2. Negation + Predicative adjectives:
+   - Concepts: Negation (CORE), Predicative adjectives = verbal (TARGET-SPECIFIC)
+   - Interaction: The negative suffix appears on both action verbs and predicative adjectives. This is the puzzle's central "twist": the solver initially assumes the negative suffix marks verbs, then discovers it also marks adjectives in predicative position.
+   - Additional inference: The solver infers a broader class "verbal predicates" that includes both verbs and predicative adjectives, and that negation targets this class.
+
+3. SOV + Postpositions:
+   - Concepts: Word Order (CORE), Postpositions (TARGET-SPECIFIC)
+   - Interaction: Postpositional phrases appear in pre-verbal position, consistent with the SOV pattern. This creates a consistent "modifiers precedes head" pattern (Adj-N, Dem-N, Rel-N, NP-Postp, S-O-V).
+   - Additional inference: Solver can identify a general typological tendency toward pre-modification, which helps in parsing unfamiliar structures.
+
+4. Negation + SOV + Question particle:
+   - Concepts: Negation (CORE), Word Order (CORE), Question particle (TARGET-SPECIFIC)
+   - Interaction: In a negative question, the order is S O V-Neg (Neg) Q-particle. The solver must correctly order the negative suffix (on V), the optional negative word (after V), and the question particle (final).
+   - Additional inference: The solver infers a linear hierarchy of final elements: verb → negative suffix (attached) → optional negative word → question particle.
+
+CONSTRAINTS
+
+- Nivkh has NO definite article (suffixal or otherwise). Do not include any concept of definiteness marking.
+- Nivkh has NO verbal person/number marking. The verb form does not change for the person or number of S or O. The solver must use case and word order exclusively for role identification.
+- Nivkh has NO passive construction. Do not include passive data.
+- Nivkh has NO past tense (only future). If tense is included, only future should appear.
+- The negative system is specifically: obligatory negative suffix on the predicate + optional independent negative word after the predicate. The suffix is NOT optional; the word IS optional. Both can co-occur (double negation). The solver must distinguish the obligatory from the optional element.
+- Nivkh is exclusively concatenative (WALS 20A-1). No suppletion, no internal changes for grammatical marking. All morphological marking is by affixation.
+- Case marking is symmetrical (WALS 50A-2) and neutral alignment (WALS 98A-1). There is no ergative-absolutive split.
+- The language has no gender system (WALS 31A-1, 32A-1). Do not include gender-based distinctions.
+- Plural marking on nouns is optional (WALS 34A-4). The solver should not be required to identify plural as a mandatory feature.
+- The puzzle data should be in a consistent orthographic representation. Nivkh has a moderately large consonant inventory with uvulars and a velar nasal (WALS 6A-4, 9A-1), and a simple tone system (WALS 13A-2). If tone is included in the orthography, it must be consistent and not essential to the puzzle's solution (i.e., tone should not be the distinguishing feature of any morpheme the solver must identify).

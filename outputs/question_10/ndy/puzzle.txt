@@ -1,0 +1,112 @@
+
+
+## CONTEXT
+
+Ndyuka is a creole language spoken in Suriname. Below are sentences in Ndyuka with English translations.
+
+## DATA
+
+| # | Ndyuka | English |
+|---|--------|---------|
+| 1 | i run | He runs. |
+| 2 | i a run | He ran. |
+| 3 | i bi run | He will run. |
+| 4 | den a singu | They sang. |
+| 5 | i a si fisi | He saw a fish. |
+| 6 | fisi a si i | A fish saw him. |
+| 7 | den bi bui fasi | They will build a house. |
+| 8 | i a si boto | He saw a boat. |
+| 9 | i a iti fisi | He ate a fish. |
+| 10 | i no run | He doesn't run. |
+| 11 | i a no run | He didn't run. |
+| 12 | den bi no bui fasi | They won't build a house. |
+| 13 | i a si de fisi | He saw the fish. |
+| 14 | de fisi a si i | The fish saw him. |
+| 15 | den bi bui de fasi | They will build the house. |
+| 16 | i a si de fisi den a bui | He saw the fish that they built. |
+| 17 | de tanga i a si a run | The child that he saw ran. |
+| 18 | de tanga a run a si fisi | The child that ran saw a fish. |
+| 19 | i a si de fisi di | He saw this fish. |
+| 20 | de tanga da a run | That child ran. |
+| 21 | i a no si de fisi den bi bui | He didn't see the fish that they will build. |
+| 22 | de tanga i a si a no run | The child that he saw didn't run. |
+
+## QUESTIONS
+
+**Q1.** Translate the following sentences into English.
+
+a. den a no si de fisi
+
+b. de tanga den a si a singu
+
+c. de tanga i a no si a bi run
+
+**Q2.** Translate the following sentences into Ndyuka.
+
+a. They will sleep.
+
+b. He didn't eat the fish.
+
+c. The child that ran saw the boat.
+
+d. They will build the house that he saw.
+
+**Q3.** Briefly explain the rules you have identified for: (a) basic word order; (b) tense marking; (c) negation; (d) the definite article; (e) relative clauses; (f) demonstratives.
+
+## ANSWERS
+
+**Q1a.** They didn't see the fish.
+
+**Q1b.** The child that they saw sang.
+
+**Q1c.** The child that he didn't see will run.
+
+**Q2a.** den bi sleip
+
+**Q2b.** i a no iti de fisi
+
+**Q2c.** de tanga a run a si de boto
+
+**Q2d.** den bi bui de fasi i a si
+
+**Q3.**
+
+(a) Basic word order is SVO: the subject precedes the verb, and the object follows the verb. There is no morphological case marking; grammatical relations are determined solely by linear position relative to the verb.
+
+(b) Tense is marked by independent preverbal particles: *a* marks past, *bi* marks future, and the present/habitual is unmarked (zero). These particles appear between the subject and the verb.
+
+(c) Negation is marked by the independent preverbal particle *no*, which appears after the tense particle (if present) and before the verb. The order is Subject + Tense + Negation + Verb.
+
+(d) The definite article *de* precedes the noun it modifies. It marks a noun as definite (specific/known referent). Its absence indicates an indefinite noun.
+
+(e) Relative clauses follow the head noun (postnominal). They use the gap strategy: the relativized element is simply absent from the relative clause. The gap's position (subject or object) is determined by the argument structure of the RC verb.
+
+(f) Demonstratives (*di* = this, *da* = that) follow the noun (postnominal). They are single words with deictic meaning and do not contain a verb, distinguishing them from relative clauses.
+
+## SOLUTION
+
+**Rules inferred from data:**
+
+**SVO word order (no case marking):** Sentences 1–4 establish that the first element is the subject (a pronoun) and the last element is the verb (intransitive). Sentences 5–9 extend this to transitive clauses: the element after the verb is the object. Sentence 6 (*fisi a si i*) is critical: the same noun *fisi* appears as subject (here) and as object (sentence 5) with no morphological difference, confirming that position alone determines grammatical role.
+
+**Tense particles:** Sentences 1–3 show that *a* correlates with past meaning ("ran") and *bi* with future meaning ("will run"), while their absence gives present ("runs"). These are independent words (not affixes) because they appear between the subject and verb as separate tokens. Sentences 4, 7 confirm the pattern with different subjects and verbs.
+
+**Negation:** Sentences 10–12 introduce *no*, which flips the truth value. Sentence 10 (*i no run*) shows *no* in the absence of tense. Sentences 11 (*i a no run*) and 12 (*den bi no bui fasi*) show that when both tense and negation are present, the order is Tense + Negation (a no, bi no). The solver distinguishes *no* from tense particles by its semantic function (truth-value reversal vs. temporal reference) and its distribution (it can appear without a tense particle, as in sentence 10).
+
+**Definite article:** The contrast between sentences 5/13 (*fisi* vs. *de fisi*) and 7/15 (*fasi* vs. *de fasi*) shows that *de* marks definiteness. It precedes the noun and appears in both subject position (14) and object position (13, 15), confirming it is not a subject marker or tense particle.
+
+**Postnominal relative clauses with gap:** Sentence 16 (*i a si de fisi den a bui*) shows a clause (*den a bui*) following a noun (*de fisi*). The verb *bui* is transitive (from sentence 7: *den bi bui fasi*), so it requires a subject and object. The RC has a subject (*den*) but no object — the missing object is the head noun *fisi*. This is the gap strategy. Sentence 17 (*de tanga i a si a run*) shows a RC with a subject (*i*) and a transitive verb (*si*) missing its object — the gap is the head noun *tanga*. Sentence 18 (*de tanga a run a si fisi*) shows a RC with an intransitive verb (*run*) and no subject — the gap is the subject, i.e., the head noun *tanga*.
+
+**Postnominal demonstratives:** Sentences 19–20 show *di* and *da* following a noun. Unlike relative clauses, these are single words with no verb. The solver distinguishes them from RCs by the presence or absence of a verbal element in the postnominal material.
+
+**How rules interact in the questions:**
+
+- **Q1a** requires identifying the preverbal zone (*den a no* = subject + past + negation), the main verb (*si*), and the definite object (*de fisi*).
+- **Q1b** requires recognizing the RC (*den a si*) modifying *de tanga*, identifying the gap (object of *si*), and parsing the main clause (*a singu*).
+- **Q1c** requires parsing the preverbal zone in the RC (*i a no si* = subject + past + negation + verb), identifying the gap (object of *si*), and parsing the main clause with future tense (*a bi run*).
+- **Q2c** requires producing a RC with a subject gap (omitting *de tanga* from the RC *a run*) and a definite object in the main clause.
+- **Q2d** requires producing a RC with an object gap (omitting *de fasi* from the RC *i a si*) and a future main clause.
+
+## DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously manage multiple interacting systems: (1) parsing a complex preverbal zone with three distinct element types (subject, tense, negation) whose linear order must be inferred from distributional contrasts; (2) identifying postnominal relative clauses and determining the gap role through argument-structure reasoning; (3) distinguishing postnominal demonstratives from postnominal relative clauses; and (4) combining all of these in production tasks where the solver must generate correct gaps and preverbal sequences. The progressive layering of evidence (simple → complex) mirrors the increasing cognitive demands, and the hardest questions require applying four or more inferred rules in a single sentence.

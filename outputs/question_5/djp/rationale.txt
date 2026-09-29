@@ -1,0 +1,105 @@
+
+
+TARGET-LANGUAGE
+
+Djapu (djp), Western Pama-Nyungan, Australia.
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the phonological inventory.** Use exactly three vowels: /a, i, u/. Use a consonant inventory of stops (p, t, k), nasals (m, n, ŋ), liquids (l, r), and glides (w, j). No fricatives, no uvulars, no glottalized consonants. All lexical and morphological forms in the puzzle must be composed exclusively of these segments. This constraint is not itself a question for the solver but ensures internal consistency and prevents the solver from being confused by unexpected phonological patterns. The small vowel inventory means that many forms will be short (1–2 syllables), which is realistic for the language family and keeps the data visually manageable.
+
+2. **Define the core declarative sentence template.** The basic clause structure is: [Q-particle] [NEG-particle] Subject Object-ŋa Verb-tense. In the simplest case (affirmative, no particles): Subject Object-ŋa Verb-tense. The verb is always clause-final. The object immediately precedes the verb and bears the case suffix -ŋa. The subject is unmarked. Intransitive clauses follow: Subject Verb-tense (no object, no case suffix). This template is the backbone of the entire puzzle. Every sentence in the data set must conform to it. The solver's first major discovery should be the verb-final order; the second should be that the pre-verbal noun bears a suffix; the third should be that this suffix marks the object (not the subject).
+
+3. **Design the case system (dependent marking / ergative alignment).** The sole case suffix is -ŋa. It marks: (a) the transitive object (P), and (b) the genitive possessor. The subject (S in intransitive, A in transitive) is unmarked. This is a single-case system where the same suffix serves both accusative and genitive functions, which is typologically common in Pama-Nyungan languages and reinforces a unified dependent-marking strategy. The solver must discover from the data that: (i) in transitive clauses, exactly one argument bears -ŋa; (ii) in intransitive clauses, no argument bears -ŋa; (iii) the argument bearing -ŋa in transitive clauses is the patient/object (confirmed by semantic role and by the fact that it is the same argument that would be the subject in the corresponding intransitive clause). This three-way contrast (transitive with marked object, intransitive with unmarked subject, and the semantic identification of the marked argument as patient) is the central structural inference of the puzzle.
+
+4. **Design the tense-aspect system (suffixal on the verb).** Use two tense suffixes: -ri (past) and -ŋu (non-past/present). The verb stem is a CVCV form (e.g., a four-segment root). The tense suffix attaches to the right edge of the verb stem (or to the right edge of a reduplicated form, see step 8). Example: stem "kura" → past "kura-ri", non-past "kura-ŋu". The solver should be able to identify the tense suffix by observing that the same verb stem appears with different right-edge extensions in different sentences, and that these extensions correlate with temporal context in the English translations. The contrast between -ri and -ŋu should be unambiguous across at least 4–5 examples.
+
+5. **Design the pronoun system, including the inclusive/exclusive 2PL distinction.** Use the following pronoun set: 1SG = ŋa, 2SG = ku, 3SG = ga, 1PL = wu, 2PL inclusive = mura, 2PL exclusive = wura. The inclusive/exclusive distinction is the key inferential challenge in the pronoun subsystem. The solver must determine which of mura and wura is inclusive (speaker + addressee) and which is exclusive (addressee + third party, excluding speaker). The critical evidence is a sentence in which both 1SG (ŋa) and one of the 2PL forms appear as separate arguments in the same clause. Since the speaker is already expressed by ŋa, the 2PL form in that sentence cannot include the speaker and must therefore be exclusive. By elimination, the other 2PL form is inclusive. This sentence is the linchpin of the pronoun inference and must be included in the data. Additionally, at least one sentence should use the inclusive form in a context where the English translation makes it clear that the speaker is included (e.g., "you and I went"), providing a confirming (but not sole) clue.
+
+6. **Design the plurality system (free word, not suffix).** Plurality is expressed by a free word (e.g., "wara") that follows the noun. It is NOT a suffix. This creates a critical contrast with the case and tense systems, which ARE suffixal. The solver must discover that: (a) the plural word is a separate, independent token (not attached to the noun); (b) it appears in a fixed position (immediately after the noun it modifies); (c) it is distinct from the case suffix -ŋa. The interaction with case marking is important: when a noun is both plural and marked for case, the structure is Noun + Plural-word + -ŋa (the case suffix attaches to the rightmost element, which is the plural word). Example: "kura wara-ŋa" (dog PL-ACC = "the dogs" as object). This forces the solver to recognize that -ŋa is a true suffix (it can attach to different hosts: the noun itself or the plural word) rather than a fixed particle. This is a non-trivial morphological insight that adds depth to the puzzle.
+
+7. **Design the clause-initial particle zone (negative and question particles).** The negative particle (e.g., "bura") and the question particle (e.g., "ma") both appear at the very beginning of the clause, before the subject. Their fixed order is: Question-particle > Negative-particle > Subject. So a negative question is: ma bura S O-ŋa V-tense. An affirmative question is: ma S O-ŋa V-tense. A negative declarative is: bura S O-ŋa V-tense. The solver must discover: (a) that both particles are clause-initial (not preverbal in the narrow sense, but at the left edge of the entire clause); (b) that they are distinct forms (not allomorphs of each other); (c) that they can co-occur in a fixed order; (d) that their presence/absence correlates with the interrogative/negative interpretation in the English translations. The "particle zone" at the left edge contrasts sharply with the SOV core, creating a clear structural division: [particles] [S O V]. The solver should be able to identify this division from the data.
+
+8. **Design the reduplication system.** Reduplication is a productive morphological process on the verb stem that marks iterative/habitual aspect. Use partial reduplication: copy the first syllable (CV) of the CVCV stem and prefix it. Example: stem "kura" → iterative "ku-kura". The reduplicated form then takes the tense suffix as usual: "ku-kura-ri" (ate iteratively, past). The solver must discover: (a) that the reduplicated form is related to the non-reduplicated form (same stem, with a prefix that is a copy of the first syllable); (b) that reduplication is a distinct process from suffixation (it operates on the left edge, suffixation on the right edge); (c) that the grammatical function is aspectual (iterative/habitual), identified from the English translations (e.g., "used to eat," "kept eating," "habitually ate"). At least 2–3 reduplicated forms should appear in the data, each with its non-reduplicated counterpart also present (possibly in a different sentence), so the solver can identify the relationship.
+
+9. **Design the possessive construction.** Possession is expressed by marking the possessor with the genitive suffix -ŋa (the same suffix used for transitive objects). The possessed noun is unmarked. Structure: Possessor-ŋa Possessed. Example: "ŋa-ŋa kura" (I-GEN dog = "my dog"). This construction reinforces the dependent-marking strategy: just as the object is marked (not the subject), the possessor is marked (not the possessed noun). The solver should be able to generalize from the clause-level dependent marking (object marked) to the phrase-level dependent marking (possessor marked), recognizing a consistent typological strategy. At least 2 possessive examples should appear in the data, with different possessors (e.g., 1SG and 3SG) to show the pattern is productive.
+
+10. **Incorporate optional subject pronouns.** In at least 2–3 sentences, the subject pronoun is omitted. The subject is recoverable from context (e.g., from a preceding sentence in a mini-dialogue, or from the verb's tense/aspect, or from the overall discourse). This creates an additional inference layer: the solver cannot simply identify the subject by looking for a pronoun; they must use contextual cues. This also interacts with the inclusive/exclusive distinction: if a 2PL subject is omitted, the solver must determine from context whether it was inclusive or exclusive. This is a higher-difficulty inference that should appear in later questions, not in the initial data-identification phase.
+
+11. **Create the data set (sentences with English translations).** The data set should contain approximately 15–20 sentences. The distribution should be:
+    - 4–5 transitive affirmative declarative sentences (showing S O-ŋa V-tense with different subjects, objects, and tenses).
+    - 3–4 intransitive affirmative declarative sentences (showing S V-tense, confirming that intransitive subjects are unmarked).
+    - 2–3 sentences with the negative particle (bura S O-ŋa V-tense or bura S V-tense).
+    - 2–3 sentences with the question particle (ma S O-ŋa V-tense or ma S V-tense).
+    - 1 sentence with both particles (ma bura S O-ŋa V-tense).
+    - 2–3 sentences with reduplicated verbs (showing iterative aspect).
+    - 2–3 sentences with plural nouns (showing the free plural word, including at least one with case marking on the plural word).
+    - 2 sentences with possessive constructions (Possessor-ŋa Possessed).
+    - 2–3 sentences with omitted subject pronouns.
+    - At least 1 sentence where both 1SG and a 2PL form appear as separate arguments (the key evidence for inclusive/exclusive).
+    - At least 2 sentences using each 2PL form (mura and wura) in different contexts.
+
+    The English translations should be natural and should provide the semantic information needed to identify grammatical roles (agent, patient, possessor, possessed) and temporal/aspectual meaning (past, non-past, iterative). The translations should NOT explicitly label grammatical relations (e.g., do not write "the dog (object)" — just write "the dog").
+
+12. **Order the data for progressive discovery.** The sentences should be presented in an order that supports progressive inference:
+    - Begin with 2–3 simple transitive sentences with different subjects and objects, all in the past tense. This allows the solver to immediately identify: verb-final order, the pre-verbal suffixed noun, and the tense suffix.
+    - Follow with 2–3 intransitive sentences. This allows the solver to confirm that the unmarked argument in transitive clauses is the subject (since intransitive subjects are also unmarked) and that the suffixed argument is the object.
+    - Introduce the negative particle in 2–3 sentences. The solver identifies the new initial element and its function.
+    - Introduce the question particle in 2–3 sentences, including one negative question. The solver identifies the second initial element and the particle order.
+    - Introduce reduplicated verbs in 2–3 sentences, with the non-reduplicated form of the same verb appearing elsewhere in the data.
+    - Introduce plural nouns in 2–3 sentences, including one with case marking.
+    - Introduce possessive constructions in 2 sentences.
+    - Introduce sentences with omitted subjects in 2–3 sentences (these can be interspersed or placed toward the end).
+    - Place the critical inclusive/exclusive evidence sentence (with both 1SG and 2PL) in a position where the solver has already identified the pronoun system but not yet resolved the inclusive/exclusive distinction.
+
+    The ordering principle: each new element should be introduced after the solver has had enough data to identify the simpler elements. The solver should be able to work through the data sequentially, with each new sentence type building on previously identified patterns.
+
+13. **Design the question tiers.** Follow a three-tier structure mirroring the source rationale's decoding → analysis → encoding progression:
+
+    **Tier 1 (Identification and decoding):** Questions that test whether the solver has identified the basic patterns. Examples:
+    - "What is the basic word order of Djapu? Identify the position of the subject, object, and verb."
+    - "In sentence [X], which word is the object? How do you know?"
+    - "What is the function of the suffix -ri on the verb? What is the function of -ŋu?"
+    - "What is the function of the word 'bura'? Where does it appear in the clause?"
+    - "What is the function of the word 'ma'?"
+
+    These questions should be answerable from a single sentence or a small set of sentences. They test pattern recognition.
+
+    **Tier 2 (Analysis and interaction):** Questions that test whether the solver understands how the patterns interact and can distinguish competing analyses. Examples:
+    - "How is plurality expressed in Djapu? How does this differ from the way case is expressed? Explain with examples from the data."
+    - "What is the difference between 'mura' and 'wura'? Use the data to explain your reasoning."
+    - "What is the function of the reduplicated form in sentence [X]? How does it differ from the non-reduplicated form?"
+    - "In sentence [X], the subject is not expressed. Who is the subject? How can you tell?"
+    - "In the possessive construction in sentence [X], which noun is marked? What does this tell you about the marking strategy in Djapu?"
+    - "Can the negative particle and the question particle appear in the same sentence? If so, what is their order?"
+
+    These questions require the solver to integrate multiple pieces of evidence and explain their reasoning. They test deeper understanding.
+
+    **Tier 3 (Production and application):** Questions that test whether the solver can apply the discovered grammar to produce new forms. Examples:
+    - "Translate the following English sentence into Djapu: [a sentence requiring SOV order, object case marking, past tense, and the negative particle]."
+    - "Translate: [a sentence requiring the inclusive 2PL pronoun, a plural object with case marking, and iterative aspect]."
+    - "Translate: [a possessive sentence with a 3SG possessor and a plural possessed noun]."
+    - "Form a negative question from the following declarative sentence: [given sentence]."
+
+    These questions require the solver to combine multiple grammatical features in a single output, testing whether they have truly internalized the system.
+
+14. **Prevent alternative interpretations.** Ensure the following constraints are met in the data:
+    - The case suffix -ŋa must appear ONLY on objects and possessors, never on subjects. If it appeared on a subject in any sentence, the solver could not distinguish ergative from accusative alignment.
+    - The tense suffixes must appear ONLY on verbs, never on nouns. This prevents the solver from confusing tense suffixes with case suffixes.
+    - The plural word must be phonologically distinct from the case suffix and from all pronouns. It must appear in a position that is clearly different from the suffix position (i.e., as a separate word, not attached to the noun).
+    - The negative particle and question particle must be phonologically distinct from each other and from all other words in the data. They must appear ONLY in clause-initial position.
+    - The reduplicated form must be clearly related to the non-reduplicated form (same stem, with a transparent prefix). The non-reduplicated form must appear elsewhere in the data so the solver can identify the relationship.
+    - The inclusive/exclusive evidence sentence (with both 1SG and 2PL) must be unambiguous: the 1SG must be clearly the subject (or object) and the 2PL must be the other argument, so that the solver can definitively conclude that the 2PL excludes the speaker.
+    - No sentence should be ambiguous about grammatical roles. If a noun could be either subject or object based on position alone, the case marking must resolve the ambiguity.
+    - The data should not contain any sentence that could be analyzed under a competing grammar (e.g., a sentence where the verb is not final, or where the subject is marked and the object is unmarked).
+
+15. **Calibrate difficulty progression.** The overall difficulty should develop as follows:
+    - The first 5–6 sentences should be "easy": simple transitive and intransitive declaratives with all elements present. The solver should be able to identify word order, case marking, and tense from these alone.
+    - The next 4–5 sentences should introduce one new element at a time (negative, question, reduplication, plurality). Each new element should be identifiable from 2–3 examples.
+    - The final 4–5 sentences should combine multiple elements (e.g., a negative question with a reduplicated verb and a plural object, or a possessive construction with an omitted subject). These are the "capstone" sentences that test full integration.
+    - Tier 1 questions should be solvable after reading the first 6–8 sentences.
+    - Tier 2 questions should require the full data set.
+    - Tier 3 questions should require full integration of all discovered patterns.
+    - The most difficult question (capstone) should require the solver to simultaneously apply: word order, case marking, tense, reduplication, plurality, and a particle (negative or question) in a single production. This tests whether the solver has built a complete grammar, not just identified isolated patterns.
+
+16. **Ensure solvability without prior knowledge.** Every inference the solver must make must be supported by evidence in the data. The solver should not need to know that Djapu is an Australian language, that it is Pama-Nyungan, or that it has any of the typological properties listed in WALS. All properties should be discoverable from the data alone using general linguistic reasoning (e.g., "the word that appears before the verb and has a suffix is likely the object because it is the patient in the English translation"). The puzzle should be solvable by a linguist who has never seen an Australian language before, using only the data and general knowledge of how languages work (e.g., that case markers typically mark grammatical relations, that word order is typically consistent, that morphological processes are typically regular).

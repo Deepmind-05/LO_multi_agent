@@ -1,0 +1,99 @@
+
+
+TARGET-LANGUAGE: Yaqui (Uto-Aztecan, Cahita)
+
+CORE
+
+1. Concept: Basic word order (adapted from source SVO)
+   - Target-language realization: SOV (WALS 81A-1: SOV; 82A-1: SV; 83A-1: OV)
+   - Intended solver inference: From multiple sentences, the solver identifies that the verb consistently appears in final position, and that the unmarked noun precedes the marked noun before the verb. Cross-linguistic knowledge (SOV is the most common order) supports the identification of the unmarked form as nominative.
+   - Priority: REQUIRED
+
+2. Concept: Negation (adapted from source post-verbal negative word)
+   - Target-language realization: Preverbal negative particle, separate word, SNegOV order (WALS 112A-2: negative particle; 143A-1: NegV; 143E-1: preverbal negative word; 144A-6: SNegOV; 144Q-1: separate word, no double negation)
+   - Intended solver inference: The solver identifies a recurring invariant word that appears between the subject and object (or between subject and verb in intransitives) and correlates with negative meaning. Its fixed preverbal position and separation from the verb distinguish it from an affix.
+   - Priority: REQUIRED
+
+3. Concept: Case marking (replaces source suffixal definite article, which is absent in Yaqui)
+   - Target-language realization: Nominative-accusative alignment, 2 cases, suffixal (WALS 49A-2: 2 cases; 51A-1: case suffixes; 98A-2: nominative-accusative standard; 99A-2: nominative-accusative for pronouns)
+   - Intended solver inference: The solver identifies two noun forms in transitive clauses: one unmarked (nominative, subject) and one with a suffix (accusative, object). The cross-linguistic principle that the unmarked case is nominative in a nominative-accusative system enables identification without prior knowledge of Yaqui.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Postpositions (WALS 85A-1; 95A-1: OV and Postpositions)
+   - Intended solver inference: The solver identifies a postposition as a word that follows a noun phrase and marks a spatial/relational role. The typological correlation (OV languages tend to have postpositions) provides a confirmatory inference once SOV is established.
+   - Interaction with CORE: Reinforces SOV identification; the postposition's position (after the noun) contrasts with the preverbal negation, creating a clear left-to-right ordering pattern (S [Neg] O [PP] V).
+   - Difficulty contribution: Medium. Adds a structural element the solver must identify and position correctly.
+   - Priority: HIGH
+
+2. Phenomenon: Obligatory plural suffix on all nouns (WALS 33A-2: plural suffix; 34A-6: all nouns, always obligatory)
+   - Intended solver inference: The solver observes that certain nouns consistently carry an additional suffix in contexts implying plurality. The obligatoriness means the solver can expect to see it in all plural contexts, making it reliably identifiable.
+   - Interaction with CORE: Creates a suffix-ordering question with case (plural suffix vs. case suffix: which is closer to the stem?). The solver must determine the morpheme order from the data.
+   - Difficulty contribution: Medium-high. The suffix ordering (stem + plural + case vs. stem + case + plural) requires careful comparison of forms.
+   - Priority: HIGH
+
+3. Phenomenon: No verbal person marking (WALS 102A-1: no person marking; 100A-1: neutral alignment; 29A-1: no subject person/number marking)
+   - Intended solver inference: The solver notices that the verb does not change form to encode subject or object person/number. This forces reliance on case marking and word order for argument identification, making the case system the critical key to parsing.
+   - Interaction with CORE: Makes case identification essential rather than optional. Without verbal agreement, the solver cannot "cheat" by reading person off the verb; they must correctly identify nominative vs. accusative.
+   - Difficulty contribution: High. This is the feature that makes the puzzle genuinely challenging rather than trivially solvable by agreement.
+   - Priority: HIGH
+
+4. Phenomenon: Tense-aspect suffixes on the verb (WALS 69A-2: tense-aspect suffixes; 21B-1: monoexponential TAM; 65A-1: perfective/imperfective; 66A-1: past/non-past; 67A-1: inflectional future)
+   - Intended solver inference: The solver identifies suffixes on the verb that correlate with temporal/aspectual meaning. The monoexponential nature means a single suffix encodes the TAM value, simplifying identification.
+   - Interaction with CORE: The verb is identifiable as the final element bearing TAM suffixes. This helps the solver confirm SOV order (the TAM-bearing word is the verb, and it is final).
+   - Difficulty contribution: Medium. Provides an independent cue for verb identification that corroborates the SOV analysis.
+   - Priority: HIGH
+
+5. Phenomenon: Predicative adjectives have verbal encoding (WALS 118A-1)
+   - Intended solver inference: The solver encounters a "stative" predicate that behaves like a verb (takes TAM suffixes, appears in final position). This may initially confuse the solver, who must recognize that adjectives are verbal in predicative position.
+   - Interaction with CORE: Creates a potential trap: a sentence like "The house is big" looks structurally identical to a transitive sentence if the solver doesn't recognize the verbal adjective. The solver must use semantic context to distinguish.
+   - Difficulty contribution: Medium. Adds a layer of complexity that tests whether the solver understands the verbal nature of adjectives.
+   - Priority: OPTIONAL
+
+6. Phenomenon: Indefinite article as separate word distinct from 'one' (WALS 37A-4: no definite but indefinite article; 38A-1: indefinite word distinct from numeral 'one')
+   - Intended solver inference: The solver identifies a small invariant word that precedes a noun and signals indefiniteness. Its position (pre-nominal) and invariance distinguish it from case/number suffixes.
+   - Interaction with CORE: The indefinite article's pre-nominal position contrasts with the post-nominal case suffix, helping the solver distinguish free words from bound morphemes.
+   - Difficulty contribution: Low-medium. Adds a small but useful structural element.
+   - Priority: OPTIONAL
+
+7. Phenomenon: Simple tone system (WALS 13A-2)
+   - Intended solver inference: If tone is marked in the puzzle data, the solver can identify tonal contrasts as meaningful. However, this is only useful if the puzzle includes tonal data.
+   - Interaction with CORE: Minimal direct interaction; primarily a phonological feature that could be included for completeness.
+   - Difficulty contribution: Low. Only relevant if the puzzle includes tonal data.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. SOV + Nominative-Accusative + No Verbal Person Marking:
+   - The solver must use case marking as the PRIMARY means of identifying subject vs. object. The unmarked form is nominative (subject), the suffixed form is accusative (object). The verb's final position confirms SOV. This three-way interaction is the central puzzle mechanism.
+
+2. SOV + Postpositions + Negation (SNegOV):
+   - The linear order in a complex transitive sentence is: S [Neg] O [PP] V. The solver must correctly order all elements. The postposition follows the noun it modifies (which is the object), and the negation precedes the object. This creates a specific, non-trivial word order that the solver must reconstruct.
+
+3. Plural Suffix + Case Suffix (suffix ordering):
+   - Both are suffixal. The solver must determine their relative order from the data (e.g., stem + plural + case vs. stem + case + plural). This is a classic morphological ordering puzzle that requires comparing multiple forms.
+
+4. TAM Suffixes + No Person Marking:
+   - The verb is identified by its TAM suffixes and final position. Since there is no person marking, the verb form does not change based on who is doing/being done to. This means the same verb form appears regardless of subject/object identity, which the solver must recognize.
+
+5. Predicative Adjective (verbal) + SOV + TAM:
+   - A stative sentence ("The house is big") has the same surface structure as a transitive sentence if the adjective is verbal. The solver must use semantics to distinguish, or recognize that the "object" position is actually a subject of a stative verb.
+
+CONSTRAINTS
+
+1. The puzzle MUST provide enough transitive sentences for the solver to reliably distinguish nominative from accusative case. At least 3-4 transitive sentences with different nouns are needed.
+
+2. The negative particle must appear in multiple sentences to establish its invariance and position. At least 2-3 negative sentences are needed.
+
+3. Since Yaqui has NO definite article (WALS 37A-4), the puzzle must NOT include any definite article. The source concept of suffixal definite article is entirely absent and must not be forced into the puzzle.
+
+4. The negation is PREVERBAL (SNegOV), not post-verbal as in the source language. The puzzle data must clearly show the negative particle appearing before the verb and between S and O.
+
+5. The puzzle should NOT include verbal person/number agreement, as Yaqui lacks it (WALS 102A-1). All verb forms should be invariant with respect to person/number of arguments.
+
+6. Plural marking is OBLIGATORY (WALS 34A-6). The puzzle should not include any plural context where the plural suffix is absent, as this would contradict the language's actual behavior.
+
+7. If the indefinite article is included, it must be presented as a separate pre-nominal word, not as a suffix. It is distinct from the numeral 'one' (WALS 38A-1).
+
+8. The puzzle should avoid requiring the solver to identify tone or other phonological features unless tonal data is explicitly provided, as these are not central to the syntactic/morphological reasoning.

@@ -1,0 +1,105 @@
+
+
+CONTEXT
+
+Below are some phrases in Cantonese, a Sino-Tibetan language spoken in southern China, along with their English translations. The language is presented in a romanization system; numbers following syllables are tone markers and are an integral part of each word's form.
+
+DATA
+
+1. ngo5 ge3 syu1 = my book
+2. saam1 bun1 syu1 = three books
+3. gaa3 ge3 maau1 = his cat
+4. ji6 bun1 gam1 = two magazines
+5. gaa3de1 ge3 ci1 = their car
+6. saam1 zek1 maau1 = three cats
+7. nei5 ge3 syu1 = your book
+8. jat1 zoeng1 bin1 = one table
+9. ngo5 ge3 saam1 bun1 syu1 = my three books
+10. ji6 zek1 ngau4 = two cows
+11. gaa3 ge3 jat1 zoeng1 bin1 = his one table
+12. saam1 bou6 ci1 = three cars
+13. sik1sin1 ge3 syu1 = the teacher's book
+14. ji6 bou6 syun4 = two ships
+15. gaa3 ge3 haan6sin1 ge3 maau1 = his student's cat
+16. nei5 ge3 ji6 zek1 maau1 = your two cats
+17. haan6sin1 ge3 maau1 = the student's cat
+18. saam1 zoeng1 baa3 = three plates
+19. ngo5 ge3 sik1sin1 ge3 syu1 = my teacher's book
+20. gaa3de1 ge3 saam1 bou6 ci1 = their three cars
+21. ngo5 daan6 syu1 = I read the book
+22. gaa3 sik6 baa3 = he eats the plate
+23. nei5 ge3 sik1sin1 ge3 gam1 = your teacher's magazine
+24. ji6 bun1 syu1 = two books
+
+QUESTIONS
+
+**Q 1.** Translate the following into English:
+
+1. gaa3 ge3 gam1
+2. gaa3de1 ge3 ji6 bou6 syun4
+3. haan6sin1 ge3 gam1
+4. gaa3 ge3 haan6sin1 ge3 ngau4
+
+**Q 2.** Translate the following into Cantonese:
+
+5. my two magazines
+6. the teacher's three plates
+7. their two cows
+8. my teacher's two ships
+
+ANSWERS
+
+1. his magazine
+2. their two ships
+3. the student's magazine
+4. his student's cow
+5. ngo5 ge3 ji6 bun1 gam1
+6. sik1sin1 ge3 saam1 zoeng1 baa3
+7. gaa3de1 ge3 ji6 zek1 ngau4
+8. ngo5 ge3 sik1sin1 ge3 ji6 bou6 syun4
+
+SOLUTION
+
+**Inferred rules:**
+
+**Rule 1 – Possessive particle.** The element *ge3* is a possessive (genitive) particle. It appears in every example expressing a possessive relationship (examples 1, 3, 5, 7, 9, 11, 13, 15, 16, 17, 19, 20, 23) and is absent in non-possessive sentences (examples 21, 22). It is invariant: it does not change form regardless of the person or number of the possessor or the semantic class of the possessed noun.
+
+**Rule 2 – Word order in possessives.** The possessor precedes the possessed noun, with *ge3* intervening: [Possessor + ge3 + Possessed]. This is confirmed by all possessive examples: the pronoun or common noun denoting the owner always comes first.
+
+**Rule 3 – Locus of marking (independent marking).** The particle *ge3* is a free word that follows the possessor. Evidence: it appears after both pronouns (*ngo5*, *nei5*, *gaa3*, *gaa3de1*) and common nouns (*sik1sin1*, *haan6sin1*) with identical form. Since it is not attached to the possessed noun (which varies freely after *ge3*), the possessive marking is associated with the possessor side of the construction. The language is isolating: grammatical relations are expressed by separate particles and word order, not by affixation.
+
+**Rule 4 – Obligatory numeral classifiers.** When a numeral modifies a noun, a classifier (measure word) is obligatory between the numeral and the noun: [Numeral + Classifier + Noun]. Evidence: every example containing a numeral (2, 4, 6, 8, 10, 12, 14, 18, 24) has an element between the numeral and the noun, while examples without numerals (1, 3, 5, 7, 13, 17) have no such element.
+
+**Rule 5 – Classifier selection by noun class.** The classifier is determined by the semantic class of the noun, not by the numeral. Evidence:
+- *bun1* is used with *syu1* (book) in both example 2 (saam1 bun1 syu1) and example 24 (ji6 bun1 syu1), and with *gam1* (magazine) in example 4 (ji6 bun1 gam1). Both *syu1* and *gam1* are documents → *bun1*.
+- *zek1* is used with *maau1* (cat) in example 6 and with *ngau4* (cow) in example 10. Both are animals → *zek1*.
+- *zoeng1* is used with *bin1* (table) in example 8 and with *baa3* (plate) in example 18. Both are flat objects → *zoeng1*.
+- *bou6* is used with *ci1* (car) in example 12 and with *syun4* (ship) in example 14. Both are vehicles → *bou6*.
+
+The same classifier is used with different numerals for the same noun (e.g., *bun1* with both *saam1* and *ji6* for *syu1*), confirming that the classifier is selected by the noun, not the numeral.
+
+**Rule 6 – Interaction of possessive and classifier.** In a possessive construction with a quantified possessed NP, the structure is [Possessor + ge3 + Numeral + Classifier + Noun] (examples 9, 11, 16, 20). The classifier is part of the possessed noun phrase, not part of the possessive construction.
+
+**Rule 7 – Recursive (nested) possessives.** The possessive construction is recursive: the possessed element can itself be a possessive phrase. The structure is [X + ge3 + [Y + ge3 + Z]], meaning "Z of Y of X" (examples 15, 19, 23). Each *ge3* introduces a new possessor for the NP that follows it.
+
+**Answers:**
+
+1. *gaa3 ge3 gam1*: *gaa3* = he/she, *ge3* = possessive, *gam1* = magazine → **his magazine**.
+
+2. *gaa3de1 ge3 ji6 bou6 syun4*: *gaa3de1* = they, *ge3* = possessive, *ji6* = two, *bou6* = classifier (vehicles), *syun4* = ship → **their two ships**.
+
+3. *haan6sin1 ge3 gam1*: *haan6sin1* = student, *ge3* = possessive, *gam1* = magazine → **the student's magazine**.
+
+4. *gaa3 ge3 haan6sin1 ge3 ngau4*: nested possessive. *gaa3* = he, *ge3*, *haan6sin1* = student, *ge3*, *ngau4* = cow → **his student's cow**.
+
+5. "my two magazines": *ngo5* (I) + *ge3* + *ji6* (two) + *bun1* (classifier for documents) + *gam1* (magazine) → **ngo5 ge3 ji6 bun1 gam1**.
+
+6. "the teacher's three plates": *sik1sin1* (teacher) + *ge3* + *saam1* (three) + *zoeng1* (classifier for flat objects) + *baa3* (plate) → **sik1sin1 ge3 saam1 zoeng1 baa3**.
+
+7. "their two cows": *gaa3de1* (they) + *ge3* + *ji6* (two) + *zek1* (classifier for animals) + *ngau4* (cow) → **gaa3de1 ge3 ji6 zek1 ngau4**.
+
+8. "my teacher's two ships": nested possessive with classifier. *ngo5* (I) + *ge3* + *sik1sin1* (teacher) + *ge3* + *ji6* (two) + *bou6* (classifier for vehicles) + *syun4* (ship) → **ngo5 ge3 sik1sin1 ge3 ji6 bou6 syun4**.
+
+DIFFICULTY
+
+**Level 2.** The puzzle requires the solver to identify and integrate multiple interacting patterns: (a) the possessive particle and its position, (b) the obligatory classifier system with noun-class-based selection, (c) the recursive structure of nested possessives, and (d) the interaction between possessives and classifiers. The data provides sufficient evidence for each rule, but the solver must independently discover the classifier-to-noun-class mapping and apply all rules simultaneously in the final question (Q8), which combines a two-level nested possessive with a quantified innermost NP. The isolating typology (free particles, no inflection) is a supporting inference that helps the solver correctly analyze the morphological status of *ge3*.

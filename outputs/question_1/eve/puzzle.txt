@@ -1,0 +1,104 @@
+
+
+CONTEXT
+
+The following data consists of sentences from an undescribed language and their English translations. The language is spoken by a small community in northeastern Siberia.
+
+DATA
+
+1. kura-a vura — The dog runs.
+2. nana-r-a nura — The children eat.
+3. kura-a nana-n kama — The dog sees the child.
+4. nana-a kura-n nura — The child eats the dog.
+5. na-i kura-m-a nana-n kama — My dog sees the child.
+6. ta-i tura-t-a biga — Your house is big.
+7. sa-i nana-s-a nura — His child eats.
+8. biga kura-a vura — The big dog runs.
+9. taka tura-a biga — This house is big.
+10. turu nana-r-a nura — Three children eat.
+11. kura-a tura-u vura — The dog goes to the house.
+12. nana-a sara-y vura — The child comes from the river.
+13. kura-a nana-n ega kama-na — The dog does not see the child.
+14. nana-a ega nura-na — The child does not eat.
+15. pa-i tura-p-a biga — Our (incl.) house is big.
+16. ba-i tura-b-a biga — Our (excl.) house is big.
+17. na-i kura-r-m-a nana-r-n kama — My dogs see the children.
+18. nana-a na-i tura-r-m-n kama — The child sees my houses.
+19. tura-i kura-s-a biga — The house's dog is big.
+20. kura-a tura-o vura — The dog runs in the house.
+21. sa-i biga kura-s-a vura — His big dog runs.
+
+QUESTIONS
+
+Q1. Translate into English: kura-r-a nana-n kama
+
+Q2. Translate into English: ta-i kura-t-a nana-n kama
+
+Q3. Translate into English: sa-i biga kura-s-a nana-n kama
+
+Q4. Translate into English: kura-a tura-r-n ega kama-na
+
+Q5. Translate into the language: The child sees your dogs.
+
+Q6. Translate into the language: The big dog's child goes to the house.
+
+Q7. Translate into the language: Our (excl.) big house does not see the three children.
+
+Q8. Translate into the language: The child's big dogs do not see our (incl.) houses in the river.
+
+ANSWERS
+
+Q1. The dogs see the child.
+Q2. Your dog sees the child.
+Q3. His big dog sees the child.
+Q4. The dog does not see the houses.
+Q5. nana-a ta-i kura-r-t-n kama
+Q6. biga kura-i nana-s-a tura-u vura
+Q7. ba-i biga tura-b-a turu nana-r-n ega kama-na
+Q8. nana-i biga kura-r-s-a pa-i tura-r-p-n sara-o ega kama-na
+
+SOLUTION
+
+**Morphological system:**
+
+Nouns have a fixed suffixal chain: root + plural + possessive + case.
+
+- Plural suffix: -r (obligatory on all plural nouns)
+- Possessive suffixes (on the possessed noun, agreeing with possessor): -m (1sg), -t (2sg), -s (3sg), -p (1pl incl), -b (1pl excl), -d (2pl), -l (3pl)
+- Case suffixes: -a (nominative), -n (accusative), -i (genitive), -o (locative), -u (allative), -y (ablative)
+
+Pronouns: na (I), ta (you sg), sa (he/she), pa (we incl), ba (we excl), da (you pl), la (they). When used as possessors, pronouns take the genitive suffix -i.
+
+**Key rules:**
+
+1. **Double possessive marking:** In a possessive construction, the possessor takes the genitive case suffix (-i) AND the possessed noun takes a possessive suffix agreeing with the possessor's person/number. Evidence: sentences 5–7, 15–19. For example, in (5) na-i kura-m-a, the possessor "I" is marked with genitive -i and the possessed noun "dog" is marked with possessive -m (1sg).
+
+2. **Modifier-before-head word order:** Adjectives, demonstratives, and numerals all precede the noun they modify. Evidence: (8) biga kura-a (Adj-Nom), (9) taka tura-a (Dem-Nom), (10) turu nana-r-a (Num-Nom). In possessive constructions with an attributive adjective, the order is: possessor-Gen + adjective + possessed-noun-poss-Case. Evidence: (21) sa-i biga kura-s-a (Poss-Adj-Nom).
+
+3. **SOV word order:** The verb appears at the end of the clause. Evidence: all transitive sentences (3, 4, 5, 13, 17, 18) and intransitive sentences (1, 2, 7, 8, 10, 11, 12, 14, 20, 21).
+
+4. **Double negation:** Negation requires both a preverbal negative word (ega) and a negative suffix on the verb (-na). Both are obligatory. Evidence: (13) kura-a nana-n ega kama-na and (14) nana-a ega nura-na. In both, ega appears between the object/subject and the verb, and -na is attached to the verb stem.
+
+5. **Inclusive/exclusive 1st person plural:** The language distinguishes inclusive (pa, -p) and exclusive (ba, -b) 1st person plural. Evidence: (15) pa-i tura-p-a vs. (16) ba-i tura-b-a.
+
+**Derivations:**
+
+Q1: kura-r-a = dog-pl-Nom ("the dogs"), nana-n = child-Acc ("the child"), kama = "see." SOV order → "The dogs see the child."
+
+Q2: ta-i = you-Gen ("your"), kura-t-a = dog-poss2sg-Nom ("dog"), nana-n = child-Acc, kama = "see." → "Your dog sees the child."
+
+Q3: sa-i = he-Gen ("his"), biga = "big" (prenominal adjective), kura-s-a = dog-poss3sg-Nom, nana-n = child-Acc, kama = "see." Order: possessor + adjective + possessed noun (cf. 21). → "His big dog sees the child."
+
+Q4: kura-a = dog-Nom, tura-r-n = house-pl-Acc ("the houses"), ega = NEG, kama-na = see-NEG. → "The dog does not see the houses."
+
+Q5: "The child" = nana-a (Nom), "your dogs" = ta-i (you-Gen) + kura-r-t-n (dog-pl-poss2sg-Acc), "sees" = kama. → nana-a ta-i kura-r-t-n kama.
+
+Q6: "The big dog's child" = [biga kura-i] (big dog-Gen, adjective before its head within the genitive NP) + nana-s-a (child-poss3sg-Nom), "goes to the house" = tura-u (house-All) + vura (go). → biga kura-i nana-s-a tura-u vura.
+
+Q7: "Our (excl.) big house" = ba-i (we-excl-Gen) + biga (Adj) + tura-b-a (house-poss1pl.excl-Nom), "the three children" = turu (Num) + nana-r-n (child-pl-Acc), "does not see" = ega + kama-na. → ba-i biga tura-b-a turu nana-r-n ega kama-na.
+
+Q8: "The child's big dogs" = nana-i (child-Gen) + biga (Adj) + kura-r-s-a (dog-pl-poss3sg-Nom), "our (incl.) houses" = pa-i (we-incl-Gen) + tura-r-p-n (house-pl-poss1pl.incl-Acc), "in the river" = sara-o (river-Loc), "do not see" = ega + kama-na. → nana-i biga kura-r-s-a pa-i tura-r-p-n sara-o ega kama-na.
+
+DIFFICULTY
+
+Hard. The puzzle requires the solver to simultaneously integrate multiple interacting systems: a multi-layered suffixal chain on nouns (root + plural + possessive + case), double possessive marking, consistent modifier-before-head word order (including the specific ordering of possessor + adjective + head in possessive constructions), SOV clause structure, obligatory double negation, and an inclusive/exclusive person distinction. The later questions (Q7–Q8) demand correct application of five or more rules in a single output, with no verbatim parallel in the data.

@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract rich linguistic features and mappings for the target language so that a valid Olympiad puzzle can be built.",
+    "directive": "Extract a set of linguistically rich, typologically grounded features for M\u0101ori suitable for an Olympiad puzzle. Include clear feature-to-form mappings, morphological or syntactic patterns, and enough contrastive examples to support non-trivial reasoning. Prioritize phenomena that are well-attested and solvable, such as ergative alignment, aspect or tense marking, reduplication, particles, or noun/verb distinctions, and provide concise glosses for all examples.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for M\u0101ori are present, but rationale is missing and no puzzle has been generated yet. The next required step is to design the reasoning blueprint and sentence-structure rules that will guide puzzle generation.",
+    "directive": "Using the existing M\u0101ori linguistic concepts, design a clear, non-contradictory step-by-step rationale for an Olympiad puzzle. Define the reasoning tasks, morphological/syntactic rules, sentence-structure templates, and expected inference steps. Ensure the rules are typologically consistent, solvable, and rich enough to support non-trivial questions without ambiguity.",
+    "elapsed_seconds": 10.5
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answer key from the existing concepts and rationale.",
+    "directive": "Generate a complete M\u0101ori Linguistic Olympiad puzzle using the existing concepts and rationale. Include a clear DATA section with glossed examples, a vocabulary list if needed, non-trivial questions requiring inference, and a complete answer key. Ensure all forms are consistent with the rationale, all questions are solvable, and no required vocabulary is missing or unglossed.",
+    "elapsed_seconds": 20.6
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is marked as needing validation. No validator verdict or feedback exists yet, so the required next step is to have Agent 4 solve and rigorously validate the generated puzzle.",
+    "directive": "Validate the current M\u0101ori Linguistic Olympiad puzzle by solving it independently. Check the DATA section for glossing completeness, internal consistency, and typological accuracy; verify that all questions are non-trivial, unambiguous, and solvable from the provided data; and confirm that the answer key is correct and complete. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 31.8
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator returned PASS_WITH_ISSUES with concrete minor defects: two questions are verbatim copies of data sentences and therefore too trivial. These are puzzle-level implementation issues, not conceptual or rationale flaws, so Agent 3 should patch the puzzle by replacing the affected questions with novel, rule-applying items and updating the answer key.",
+    "directive": "Revise the puzzle to remove the two trivial questions. Replace A2 with a new sentence that applies the same argument-structure rules to a novel agent-patient pair not seen together in the data. Replace A6 with a new sentence that applies the numeral rule to a novel noun, such as a different numeral-noun combination not copied from the data. Ensure the revised questions are non-trivial, unambiguous, fully supported by the DATA section, and that the answer key is updated consistently.",
+    "elapsed_seconds": 36.7
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The puzzle has been revised by Agent 3 to address the previous validator issues, and it is now marked as needing validation. Since no new validator verdict exists yet, the required next step is to have Agent 4 independently solve and validate the revised puzzle.",
+    "directive": "Validate the revised M\u0101ori Linguistic Olympiad puzzle by solving it independently. Pay special attention to the replaced questions A2 and A6, confirming that they are no longer trivial copies of data sentences, are fully supported by the DATA section, are unambiguous, and have correct answer-key entries. Also re-check glossing completeness, internal consistency, typological accuracy, and overall solvability. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if any defects remain.",
+    "elapsed_seconds": 42.1
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 has returned a PASS verdict for the current M\u0101ori puzzle, and the state shows that concepts, rationale, and puzzle are present with no pending validation. The puzzle is therefore complete and acceptable.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 47.3
+  }
+]

@@ -1,0 +1,102 @@
+
+
+TARGET-LANGUAGE: Abkhaz (Northwest Caucasian)
+
+CORE
+
+1. Possessive marking (adapted from source 81A: Dependent marking)
+   - Target-language realization: Head marking — the possessed noun bears a possessive prefix indicating the possessor (e.g., 1sg, 2sg, 3sg masc/fem/neut, 1pl, 2pl, 3pl). The possessor noun/pronoun is unmarked.
+   - Intended solver inference: From parallel examples (e.g., "my house" vs. "your house" vs. "his house"), the solver discovers that the possessed noun carries a prefix encoding the possessor's person/number/gender, while the possessor itself is unmarked. This is the inverse of the source language's strategy and of English genitive strategy.
+   - Priority: REQUIRED
+
+2. Noun classification with agreement (adapted from source 100A: Noun classes without agreement / classifiers)
+   - Target-language realization: Three-gender system (masculine, feminine, neuter) with semantic assignment and agreement. Gender is reflected in demonstratives, adjectives, and 3rd-person verbal morphology. Unlike the source (classifiers without agreement), Abkhaz gender triggers agreement on other elements.
+   - Intended solver inference: From examples showing different forms of demonstratives/adjectives/verbs paired with different nouns, the solver discovers a three-way classification of nouns and that this classification is reflected in agreement on dependent elements.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Ergative alignment in verbal person marking
+   - Phenomenon: The verb marks the A (transitive agent) and P/S (transitive patient / intransitive subject) with different morphemes. The same person is coded differently depending on whether it functions as A or as S/P.
+   - Intended solver inference: By comparing intransitive sentences (where the subject is S) with transitive sentences (where the same person is A), the solver discovers that the verbal prefix/suffix for that person changes depending on its grammatical role.
+   - Interaction with CORE: The 3rd-person gender system (from CORE #2) interacts with ergative alignment — the 3rd person P/S marker may reflect gender, while the 3rd person A marker may be distinct.
+   - Difficulty contribution: High — requires the solver to abstract the alignment pattern from multiple examples.
+   - Priority: REQUIRED
+
+2. P precedes A in verbal person marking order
+   - Phenomenon: On the verb, the absolutive (P/S) person marker precedes the ergative (A) person marker.
+   - Intended solver inference: From transitive examples, the solver discovers a fixed morphological order: [P-marker][A-marker] on the verb.
+   - Interaction with CORE: Combined with ergative alignment, this creates a specific verbal template that the solver must reconstruct. The gender of the 3rd-person P may be visible in this position.
+   - Difficulty contribution: Medium — the ordering is discoverable once the solver identifies the two person markers.
+   - Priority: HIGH
+
+3. Obligatory plural marking on all nouns
+   - Phenomenon: Every noun must be marked for number (singular or plural suffix). No noun appears without a number marker.
+   - Intended solver inference: From examples, the solver notices that no noun is "bare" — there is always a suffix indicating singular or plural.
+   - Interaction with CORE: The plural suffix co-occurs with the possessive prefix on the same noun, creating a layered nominal morphology: [possessive prefix][stem][plural suffix].
+   - Difficulty contribution: Low-medium — a clear, consistent pattern that adds a layer to nominal analysis.
+   - Priority: HIGH
+
+4. Gender distinctions in 1st and 2nd person pronouns
+   - Phenomenon: Independent pronouns for 1st and 2nd person show gender distinctions (e.g., "I" has different forms for male and female speakers), in addition to the expected 3rd-person gender.
+   - Intended solver inference: From pronoun examples, the solver notices that even "I" and "you" have gendered forms, extending the gender system beyond the typical 3rd-person-only pattern.
+   - Interaction with CORE: Extends the three-gender system (CORE #2) into the pronominal domain more broadly than expected.
+   - Difficulty contribution: Medium — surprising but directly observable from data.
+   - Priority: OPTIONAL
+
+5. Evidentiality (indirect only)
+   - Phenomenon: A verbal affix or clitic marks indirect evidentiality (the speaker did not directly witness the event).
+   - Intended solver inference: From paired examples (direct vs. indirect), the solver discovers a verbal marker that distinguishes how the speaker knows about the event.
+   - Interaction with CORE: Adds another morphological layer to the already complex verb, interacting with person/number and alignment markers.
+   - Difficulty contribution: Medium-high — adds a semantic dimension to verbal morphology.
+   - Priority: OPTIONAL
+
+6. Postpositions
+   - Phenomenon: Spatial and relational words follow the noun phrase (postpositions rather than prepositions).
+   - Intended solver inference: From examples, the solver notices that relational words come after the noun.
+   - Interaction with CORE: Consistent with the head-final typological profile (SOV, N-Adj, Rel-N).
+   - Difficulty contribution: Low — a simple ordering observation.
+   - Priority: OPTIONAL
+
+7. Noun-Adjective order
+   - Phenomenon: Modifying adjectives follow the noun.
+   - Intended solver inference: From examples, the solver notices the N-Adj order.
+   - Interaction with CORE: The adjective may show gender agreement with the noun it follows, linking the gender system (CORE #2) to word order.
+   - Difficulty contribution: Low.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive prefix + Gender + Plural on the noun:
+   - Concepts: CORE #1, CORE #2, Target #3
+   - Interaction: The possessed noun simultaneously encodes possessor (prefix), its own gender (affecting agreement on other elements), and number (suffix). This creates a rich nominal template: [possessor-prefix][stem][plural-suffix].
+   - Additional inference: The solver must parse multiple morphological layers on a single word and identify which layer encodes what.
+
+2. Ergative alignment + P-before-A ordering + 3rd-person gender:
+   - Concepts: Target #1, Target #2, CORE #2
+   - Interaction: In a transitive sentence with a 3rd-person P and a 1st-person A, the verb shows [3sg-gendered-P-marker][1sg-A-marker]. The solver must identify both the alignment (which argument gets which type of marker) and the ordering (P before A) and the gender effect (3rd-person P marker reflects gender).
+   - Additional inference: This is the central "aha" moment of the puzzle — three properties converge on the verbal morphology.
+
+3. Head marking in possession + Head marking in clauses:
+   - Concepts: CORE #1, Target #1
+   - Interaction: The language consistently marks the head of the relationship (possessed noun in possession; verb in clauses). This typological consistency is a unifying principle the solver can discover.
+   - Additional inference: The solver can use the head-marking pattern in one domain to predict the pattern in another.
+
+4. Gender in pronouns + Ergative alignment:
+   - Concepts: Target #4, Target #1
+   - Interaction: If 1st/2nd person pronouns show gender, and the verb marks A and P differently, the solver must determine whether the verbal person markers also reflect the speaker's gender (for 1st person) or the addressee's gender (for 2nd person).
+   - Additional inference: Creates a question of whether gender is a property of the person or of the grammatical role.
+
+CONSTRAINTS
+
+1. No passive or antipassive constructions exist in Abkhaz. The ergative alignment must be presented consistently across all transitive examples without alternative constructions that could confuse the solver.
+
+2. Person/number marking on the verb is non-syncretic: every person/number combination has a distinct form. The puzzle data must reflect this — no two person/number values may share the same verbal marker.
+
+3. Third person has no zero realization on the verb. The 3rd-person marker must always be overtly present, so the solver can always identify it.
+
+4. The puzzle must provide sufficient examples to demonstrate: (a) all three genders, (b) both singular and plural, (c) both intransitive and transitive sentences with multiple person combinations, (d) at least one example showing the possessive prefix on a noun. Without sufficient coverage, the solver cannot reliably infer the full system.
+
+5. The source concept of "classifiers without agreement" (100A-3) is explicitly NOT realized in Abkhaz. The adapted concept must be "noun classification WITH agreement." The puzzle must not present gender as a classifier system; agreement must be visible in the data.
+
+6. The source concept of "dependent marking in possession" (81A-1) is the OPPOSITE of Abkhaz's strategy. The puzzle must clearly demonstrate head marking (prefix on possessed noun) and must not accidentally create ambiguity that could be read as dependent marking.

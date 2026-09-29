@@ -1,0 +1,217 @@
+
+
+CONTEXT
+
+Innamincka is a Pama-Nyungan language spoken in central Australia. The data below consists of a table of noun phrases containing numeral expressions, and a set of sentences with English translations. All words are given in their surface form.
+
+DATA
+
+**Table 1: Noun phrases with numerals**
+
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | gura kuru | 5 |
+| 2 | gura tara kuru | 10 |
+| 3 | gura tara kuru yala | 13 |
+| 4 | gura wala kuru | 20 |
+| 5 | gura bana | 25 |
+| 6 | gura bana kuru | 30 |
+| 7 | gura bana tara kuru yala | 38 |
+| 8 | gura dara | 125 |
+| 9 | gura dara kuru | 130 |
+| 10 | wara wala dara yala bana mala kuru tara | 582 |
+
+**Table 2: Sentences**
+
+| # | Innamincka | English |
+|---|-----------|---------|
+| 1 | gura wara-wa wana | The dog eats the fish. |
+| 2 | gura-ri wara-wa wana-na | The dogs ate the fish. |
+| 3 | bura gura wara-wa wana | The dog doesn't eat the fish. |
+| 4 | muru kura wara-wa tura | The big bird sees the fish. |
+| 5 | gura nala wara-wa wana | The new dog eats the fish. |
+| 6 | bura muru pala wara-wa tura-na | The small bird didn't see the fish. |
+| 7 | gura-ri tana-nga mura | The dogs go to the tree. |
+| 8 | bura gura-ri tana-nga mura-na | The dogs didn't go to the tree. |
+| 9 | gura-ri wara-ri-wa wana-na | The dogs ate the fishes. |
+| 10 | gura-ri tana-ri-nga mura | The dogs go to the trees. |
+| 11 | muru-ri kura wara-wa tura | The big birds see the fish. |
+| 12 | gura wara-wa pala wana | The dog eats the small fish. |
+
+QUESTIONS
+
+**Q1. Structural analysis (12 marks)**
+
+For each of sentences 1–12 in Table 2, answer the following:
+
+(a) Identify the verb and state whether it is in the past or present tense. (1 mark each)
+
+(b) Identify the subject noun phrase. (1 mark each)
+
+(c) Identify the object or oblique noun phrase (if present). (1 mark each)
+
+(d) State whether the sentence is affirmative or negative. (1 mark each)
+
+**Q2. Numeral decoding (12 marks)**
+
+Using the numeral system in Table 1, determine the decimal value of the numeral in each of the following noun phrases:
+
+(a) wara mala kuru tara
+
+(b) tana wala bana tara kuru
+
+(c) muru dara tara kuru wala
+
+(d) gura tara bana wala kuru mala
+
+**Q3. Numeral encoding (12 marks)**
+
+Write the complete Innamincka noun phrase (noun + numeral expression) for each of the following:
+
+(a) 7 dogs
+
+(b) 40 fish
+
+(c) 200 trees
+
+(d) 500 birds
+
+**Q4. Sentence production (14 marks)**
+
+Translate each of the following into Innamincka:
+
+(a) The new dogs didn't eat the small fish.
+
+(b) The big birds see the new fish.
+
+(c) The small trees didn't go to the big dogs.
+
+(d) The new fish ate the small birds.
+
+ANSWERS
+
+**Q1:**
+
+| # | (a) Verb / Tense | (b) Subject | (c) Object/Oblique | (d) Polarity |
+|---|---|---|---|---|
+| 1 | wana / present | gura | wara-wa | affirmative |
+| 2 | wana-na / past | gura-ri | wara-wa | affirmative |
+| 3 | wana / present | gura | wara-wa | negative |
+| 4 | tura / present | muru kura | wara-wa | affirmative |
+| 5 | wana / present | gura nala | wara-wa | affirmative |
+| 6 | tura-na / past | muru pala | wara-wa | negative |
+| 7 | mura / present | gura-ri | tana-nga | affirmative |
+| 8 | mura-na / past | gura-ri | tana-nga | negative |
+| 9 | wana-na / past | gura-ri | wara-ri-wa | affirmative |
+| 10 | mura / present | gura-ri | tana-ri-nga | affirmative |
+| 11 | tura / present | muru-ri kura | wara-wa | affirmative |
+| 12 | wana / present | gura | wara-wa pala | affirmative |
+
+**Q2:**
+
+(a) 7
+(b) 110
+(c) 139
+(d) 71
+
+**Q3:**
+
+(a) gura mala kuru tara
+(b) wara bana yala kuru
+(c) tana dara yala bana
+(d) muru wala dara
+
+**Q4:**
+
+(a) bura gura-ri nala wara-wa pala wana-na
+(b) muru-ri kura wara-wa nala tura
+(c) bura tana-ri pala gura-ri-nga kura mura-na
+(d) wara nala muru-ri-wa pala wana-na
+
+SOLUTION
+
+**Inferred rules:**
+
+**1. Numeral system (base 5, zero-omitting positional notation):**
+
+From Table 1, the solver identifies two classes of tokens:
+- *Digits* (appear in multiple positional slots): tara, mala, yala, wala
+- *Positional markers* (appear in fixed positions, always followed by a digit or end of expression): kuru, bana, dara
+
+The values are determined as follows:
+- kuru alone = 5 → kuru marks the ×5 position; a marker without a preceding digit encodes an implicit value of 1.
+- tara kuru = 10 → tara × 5 = 10, so tara = 2.
+- tara kuru yala = 13 → 2×5 + yala = 13, so yala = 3.
+- wala kuru = 20 → wala × 5 = 20, so wala = 4.
+- bana alone = 25 → bana marks the ×25 position (implicit 1).
+- dara alone = 125 → dara marks the ×125 position (implicit 1).
+- The base is 5 (since 5, 25, 125 = 5¹, 5², 5³).
+- Entry 10 confirms mala = 1: wala(4)×125 + yala(3)×25 + mala(?)×5 + tara(2) = 582 → 500 + 75 + mala×5 + 2 = 582 → mala = 1.
+
+Zero omission: In entry 9 (dara kuru = 130), the ×25 position has value 0 and is omitted from the surface form. Similarly, the units position (value 0) is omitted in entries 1, 2, 4, 5, 6, 8, 9, and 10.
+
+The structure of a numeral expression is: [digit₁][marker₁][digit₂][marker₂]…[digitₙ], where the final bare digit (no marker following) is the units value. A marker without a preceding digit means 1 at that position.
+
+**2. Word order (SOV):**
+
+In every sentence, the verb is the final element. The subject precedes the object/oblique, which precedes the verb. This is consistent SOV order.
+
+**3. Case marking (postpositional clitics):**
+
+- Nominative (subject): zero (unmarked)
+- Accusative (object): -wa
+- Dative (oblique): -nga
+
+Evidence: In sentence 1, wara-wa is the object (accusative). In sentence 7, tana-nga is the oblique (dative). The subject is always unmarked.
+
+**4. Plural suffix:**
+
+-ri marks plural on the noun stem. Evidence: gura-ri = "dogs" (sentences 2, 7, 8, 9, 10), wara-ri-wa = "fishes (acc)" (sentence 9), tana-ri-nga = "trees (dat)" (sentence 10), muru-ri = "birds" (sentence 11).
+
+**5. Suffix order:**
+
+The right edge of a noun has the fixed order: [stem] + [plural -ri] + [case clitic]. Evidence: wara-ri-wa (stem + plural + accusative) in sentence 9; tana-ri-nga (stem + plural + dative) in sentence 10.
+
+**6. Adjective order (NAdj):**
+
+Adjectives are separate words that follow the noun phrase (including its suffixes). Evidence: muru kura (sentence 4), gura nala (sentence 5), muru pala (sentence 6), muru-ri kura (sentence 11), wara-wa pala (sentence 12).
+
+**7. Verb tense:**
+
+-na marks past tense; zero marks present. Evidence: wana (present) vs. wana-na (past) in sentences 1 vs. 2; tura vs. tura-na in sentences 4 vs. 6; mura vs. mura-na in sentences 7 vs. 8.
+
+**8. Negation:**
+
+bura is a clause-initial negation word. It appears at the absolute beginning of the clause, before the subject. It is not adjacent to the verb. Evidence: sentences 3, 6, 8 all begin with bura, followed by the subject.
+
+**9. Distinguishing nala (adjective "new") from yala (digit 3):**
+
+nala appears as a single word directly after a noun (adjective position), in the same distribution as kura and pala. yala appears within multi-token numeral sequences alongside positional markers. The syntactic context disambiguates: in sentence 5 (gura nala wara-wa wana), nala is an adjective modifying gura; in Table 1 entry 3 (gura tara kuru yala), yala is the units digit in a numeral expression.
+
+**Answers derived:**
+
+**Q2:**
+(a) mala kuru tara = 1×5 + 2 = **7**
+(b) wala bana tara kuru = 4×25 + 2×5 = **110**
+(c) dara tara kuru wala = 1×125 + 2×5 + 4 = **139**
+(d) tara bana wala kuru mala = 2×25 + 4×5 + 1 = **71**
+
+**Q3:**
+(a) 7 = 12₅ → mala kuru tara → **gura mala kuru tara**
+(b) 40 = 130₅ → bana yala kuru → **wara bana yala kuru**
+(c) 200 = 1300₅ → dara yala bana → **tana dara yala bana**
+(d) 500 = 4000₅ → wala dara → **muru wala dara**
+
+**Q4:**
+(a) bura gura-ri nala wara-wa pala wana-na
+   [neg] [dog-pl] [new] [fish-acc] [small] [eat-past]
+(b) muru-ri kura wara-wa nala tura
+   [bird-pl] [big] [fish-acc] [new] [see]
+(c) bura tana-ri pala gura-ri-nga kura mura-na
+   [neg] [tree-pl] [small] [dog-pl-dat] [big] [go-past]
+(d) wara nala muru-ri-wa pala wana-na
+   [fish] [new] [bird-pl-acc] [small] [eat-past]
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires the solver to: (1) identify two distinct token classes (digits vs. markers) from distributional evidence; (2) determine the base-5 system through arithmetic reasoning across multiple expressions; (3) infer the zero-omission and implicit-1 conventions from controlled contrasts; (4) parse layered suffixes (stem + plural + case) to determine morpheme order; (5) recognize clause-initial negation as a typological exception to the otherwise consistent right-branching profile; (6) integrate all rules simultaneously in the final sentence-production questions, which require correct application of negation, plural, case, adjective order, tense, and numeral encoding in a single output. The progressive structure (structural → decoding → encoding → full production) ensures that later questions depend on earlier discoveries.

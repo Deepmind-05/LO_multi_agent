@@ -1,0 +1,127 @@
+
+
+TARGET-LANGUAGE: Turkish
+
+CONSTRUCTION RATIONALE
+
+1. **Define the morphological rule system to be encoded in the puzzle.** The puzzle will encode the following interlocking rules, all of which the solver must infer from data:
+
+   (a) *Vowel harmony (4-way).* Every suffix vowel in the puzzle harmonizes to the last vowel of its stem along two dimensions: frontness (front vs. back) and roundedness (rounded vs. unrounded). The four suffix-vowel sets are: back-unrounded {a, ı}, front-unrounded {e, i}, back-rounded {o, u}, front-rounded {ö, ü}. A stem's relevant vowel is its last vowel. This rule governs all suffixes in the puzzle (possessive, genitive, plural, and any case suffixes).
+
+   (b) *Possessive suffixes on the possessed noun.* The possessed noun carries a suffix encoding the person and number of the possessor. The minimum paradigm to include is 1sg, 2sg, 3sg. The 3sg possessive is a single vowel (-ı/-i/-u/-ü). The 1sg and 2sg possessives are that vowel plus /n/ (-ım/-im/-um/-üm for 1sg; -ın/-in/-un/-ün for 2sg). Optionally include 1pl (-ımız/-imiz/-umuz/-ümüz), 2pl (-ınız/-iniz/-unuz/-ünüz), and 3pl (-ları/-leri) for additional complexity.
+
+   (c) *Genitive case suffix on the possessor NP.* When the possessor is a full noun phrase (not a pronoun), it receives a genitive suffix: -ın/-in/-un/-ün. This suffix harmonizes to the possessor's stem.
+
+   (d) *Double-marking rule.* In full-NP possession, BOTH the possessor receives genitive AND the possessed noun receives a possessive suffix (the 3sg form, since the possessor is a 3rd-person entity). In pronominal possession, only the possessive suffix appears on the possessed noun; no separate word or affix marks the pronoun.
+
+   (e) *Linear order: possessor before possessed.* The genitive-marked possessor precedes the possessed noun.
+
+   (f) *Suffix stacking order on a single noun.* When a noun carries multiple suffixes, the fixed order is: Root → Plural → Possessive → Case (genitive). The plural suffix is -lar/-ler (harmonizing). The genitive, when it appears on the possessed noun (because that noun is itself a possessor in a larger construction), appears after the possessive suffix.
+
+   (g) *Harmony is stem-local.* In a multi-noun genitive chain, each suffix harmonizes to the stem it is attached to, not to a global or preceding stem.
+
+   (h) *(Optional) Buffer /y/.* If included: a /y/ is inserted between a vowel-final stem and a vowel-initial suffix. This is optional and should only be included if the setter wants an additional phonological layer. If included, it must be clearly evidenced by a minimal pair (vowel-final stem vs. consonant-final stem with the same suffix).
+
+2. **Select a controlled vocabulary set.** Choose 8–12 nouns (plus 2–3 proper names for full-NP possessors) satisfying these constraints:
+
+   - The stems must cover all four harmony classes: at least one stem with a back-unrounded final vowel (e.g., a noun ending in /a/ or /ı/), at least one with a front-unrounded final vowel (/e/ or /i/), at least one with a back-rounded final vowel (/o/ or /u/), and at least one with a front-rounded final vowel (/ö/ or /ü/). This is essential for the solver to discover the full 4-way harmony pattern rather than a 2-way front/back contrast.
+   - Include at least two nouns that will appear in plural (to evidence the plural suffix and its position in the stack).
+   - Include at least one noun that will appear in a nested genitive chain (as an intermediate possessor) to evidence the stacking order Possessive → Genitive.
+   - If buffer /y/ is included, include at least one vowel-final stem and at least one consonant-final stem that will take the same vowel-initial suffix.
+   - Ensure no stem is homophonous with any suffix or creates a surface form that could be parsed in more than one way.
+   - Use nouns from at least three semantic categories (e.g., body parts, household objects, abstract/concrete objects) so the solver does not attribute grammatical patterns to lexical semantics.
+   - Proper names used as full-NP possessors should have distinct final vowels from each other (e.g., one ending in a back vowel, one in a front vowel) to show that the genitive harmonizes to the possessor's stem independently of the possessed noun's stem.
+
+3. **Construct the data set in a progressive sequence.** The data should be presented as a flat, ungrouped list of glossed word-forms or short phrases (not organized by rule). The ordering below controls what the solver can infer at each stage. Each stage builds on discoveries from the previous stage.
+
+   **Stage A — Simple pronominal possession (introduces possessive suffixes + vowel harmony).**
+   Present 8–12 forms showing 1sg, 2sg, and 3sg possessive suffixes across stems from all four harmony classes. For example, show the same possessor (e.g., 1sg) across four stems of different harmony classes, then show the same stem with different possessors. The solver should be able to:
+   - Identify that a suffix on the noun encodes the possessor (dependent marking).
+   - Notice that the suffix vowel is not constant but varies with the stem.
+   - Begin to hypothesize a systematic relationship between stem vowel and suffix vowel.
+   
+   At this stage, the solver should NOT yet be able to fully specify the 4-way harmony (they may only see a 2-way front/back split). The full 4-way pattern requires seeing both rounded and unrounded examples within the same frontness class. Ensure that at least one pair of stems differs only in roundedness (e.g., a stem ending in /a/ vs. a stem ending in /o/, or a stem ending in /e/ vs. a stem ending in /ö/) so the solver can isolate the roundedness dimension.
+
+   **Stage B — Full-NP possession (introduces genitive + double marking + linear order).**
+   Present 4–6 forms showing a proper name or common noun as possessor, followed by a possessed noun. The possessor carries a suffix (genitive) and the possessed noun carries a 3sg possessive suffix. The solver should be able to:
+   - Identify a new suffix on the possessor noun (genitive).
+   - Notice that the possessed noun STILL carries a possessive suffix (3sg) even though the possessor is a full NP.
+   - Infer the linear order: possessor before possessed.
+   - Recognize the double-marking pattern: full-NP possessor → genitive on possessor + possessive suffix on possessed; pronominal possessor → possessive suffix on possessed only.
+   
+   Critical design point: The genitive suffix (-ın/-in/-un/-ün) is formally identical to the 2sg possessive suffix. The solver must use positional and contextual evidence to distinguish them. Ensure that at least one data item in Stage A shows a 2sg possessive (e.g., "your house") and at least one in Stage B shows a genitive on a possessor (e.g., "Ali's house"), so the solver can compare the two uses of the same form. The solver should infer that the distinction is positional: the suffix on the possessor NP is genitive; the suffix on the possessed NP is possessive.
+
+   **Stage C — Plural and suffix ordering (introduces plural suffix + stacking order).**
+   Present 4–6 forms showing:
+   - Plural possessed nouns with pronominal possessors (e.g., "my houses," "your eyes," "their sofas"). This introduces the plural suffix and shows it precedes the possessive suffix.
+   - At least one form where the possessed noun (with plural + possessive) is itself a possessor in a larger genitive construction (e.g., "the door of my houses"). This shows the full stack: Root + Plural + Possessive + Genitive.
+   
+   The solver should be able to:
+   - Identify the plural suffix and its harmony alternations.
+   - Infer the fixed order: Plural before Possessive.
+   - Infer that the genitive (when it appears on the possessed noun) comes AFTER the possessive.
+   - Recognize that the genitive in this context is the same morpheme as in Stage B (it marks the noun as a possessor in a larger construction).
+
+   **Stage D — Nested genitive chains (introduces recursive application + stem-local harmony).**
+   Present 3–5 forms showing two-level and (optionally) three-level genitive chains. For example:
+   - Two-level: "the door of Ali's house" (Ali-GEN house-GEN door-3SG.POSS).
+   - Three-level: "the key of the door of Ali's house" (Ali-GEN house-GEN door-3SG.POSS-GEN key-3SG.POSS).
+   
+   The solver should be able to:
+   - Apply the genitive construction recursively.
+   - Track which noun is the possessor and which is the possessed at each level.
+   - Apply vowel harmony locally: each suffix harmonizes to its own stem, not to a preceding stem. This is a critical inference: in a chain like [stem₁-GEN stem₂-GEN stem₃-POSS], the genitive on stem₁ harmonizes to stem₁, the genitive on stem₂ harmonizes to stem₂, and the possessive on stem₃ harmonizes to stem₃.
+   
+   Ensure that the stems in the chain have DIFFERENT harmony classes so the solver can verify that harmony is stem-local (e.g., a back-unrounded stem in genitive position followed by a front-rounded stem in genitive position followed by a back-rounded stem in possessed position).
+
+   **Stage E — (Optional) Buffer /y/.**
+   If included, present 2–3 forms showing a vowel-final stem with a vowel-initial suffix (with /y/ inserted) contrasted with a consonant-final stem with the same suffix (without /y/). This should appear after the solver has already discovered the core morphological system, so the /y/ is an additional layer rather than a confound.
+
+4. **Design minimal pairs and controlled contrasts to prevent alternative analyses.** The following contrasts must be present in the data:
+
+   - *Genitive vs. 2sg possessive (same form, different position):* Include at least one pair where the only difference is whether the suffix -ın/-in/-un/-ün appears on the possessor (genitive) or on the possessed noun (2sg possessive). The glosses must make the semantic roles clear. This forces the solver to recognize the positional distinction.
+   
+   - *Pronominal vs. full-NP possession:* Include a pair where the possessed noun is the same but the possessor differs (e.g., "my house" vs. "Ali's house"). This isolates the double-marking contrast: in the pronominal case, only the possessive suffix appears; in the full-NP case, genitive + possessive suffix appear.
+   
+   - *Singular vs. plural possessed:* Include a pair where the only difference is the presence of the plural suffix (e.g., "my house" vs. "my houses"). This isolates the plural morpheme.
+   
+   - *Possessive vs. Possessive+Genitive on the same noun:* Include a pair where the same noun appears with just a possessive suffix (as a simple possessed noun) and with possessive + genitive (as a possessor in a larger construction). This isolates the genitive's position after the possessive.
+   
+   - *Harmony class contrast:* Include at least one pair of stems that differ only in roundedness (same frontness) and one pair that differ only in frontness (same roundedness). This allows the solver to decompose the 4-way harmony into two independent binary dimensions.
+   
+   - *Stem-local harmony in a chain:* In a nested genitive, ensure that two adjacent suffixes in the chain harmonize to different stems (different harmony classes). This forces the solver to recognize that harmony is not global but stem-local.
+
+5. **Control for confounds and ambiguity.**
+
+   - Ensure that no surface form in the data is ambiguous under the intended analysis. If a form could be parsed in two ways (e.g., as 2sg possessive vs. genitive), the surrounding context or gloss must disambiguate.
+   - Ensure that the 3sg possessive (-ı/-i/-u/-ü) is not confused with a case suffix or other morpheme. Since the 3sg possessive is a single vowel, it is the most minimal suffix in the system; ensure it does not appear in a position where it could be mistaken for part of the stem.
+   - Ensure that the plural suffix (-lar/-ler) is not confused with the 3pl possessive (-ları/-leri) if both are included. The 3pl possessive has an additional /ı/-vowel after the /l/, making it longer. If both are included, ensure the data makes this distinction clear.
+   - Avoid stems that end in /n/ or /r/ if the genitive or plural suffix also begins with those consonants, to avoid surface ambiguity.
+   - All forms must be glossed in English (or another accessible language). The solver must not need any prior knowledge of Turkish vocabulary.
+
+6. **Design the questions in two tiers with progressive difficulty.**
+
+   **Tier 1 — Production from English to Turkish (simpler combinations, 4–5 items):**
+   - Item 1: A simple pronominal possessive with a stem from a harmony class seen in the data (tests: possessive suffix + vowel harmony).
+   - Item 2: A full-NP genitive with a proper name possessor (tests: genitive suffix + 3sg possessive + linear order + double marking).
+   - Item 3: A plural pronominal possessive (tests: plural suffix + possessive suffix + ordering).
+   - Item 4: A full-NP genitive where the possessed noun is plural (tests: plural + possessive on the possessed noun + genitive on the possessor).
+   - Item 5 (optional): A form requiring a harmony class that was only partially evidenced in the data (e.g., if the data showed back-unrounded and front-unrounded but only one back-rounded example, the question requires the solver to predict the back-rounded form of a new stem).
+
+   **Tier 2 — Production from English to Turkish (complex combinations, 3–4 items):**
+   - Item 6: A two-level nested genitive (e.g., "the door of Ali's house"). Tests: recursive genitive application + stem-local harmony + correct identification of possessor/possessed at each level.
+   - Item 7: A two-level nested genitive where the intermediate noun is plural and has a pronominal possessor (e.g., "the key of my houses' doors" or similar). Tests: full suffix stack (Root + Plural + Possessive + Genitive) + genitive on the head noun + 3sg possessive on the head.
+   - Item 8: A three-level nested genitive with stems from three different harmony classes. Tests: full recursive application + stem-local harmony across three different stems + correct suffix ordering at each level. This is the hardest item.
+   - Item 9 (optional): A form that requires the solver to distinguish genitive from 2sg possessive in a novel context (e.g., a sentence where a 2sg possessive and a genitive appear in the same phrase, requiring the solver to assign the correct function to each instance of the same surface form).
+
+   The difficulty progression should be: Tier 1 items require 1–2 rules each; Tier 2 items require 3–5 rules interacting simultaneously. Each item should require at least one rule or combination not directly exemplified in the data (i.e., the solver must generalize, not just copy).
+
+7. **Verify the puzzle by solving it using only the provided data.** Before finalizing, the setter must confirm:
+
+   - (a) Every rule needed to answer every question is uniquely determined by the data. No question should require a rule that has no evidential basis in the data.
+   - (b) The 4-way vowel harmony pattern is fully determined: the data must contain enough examples for the solver to predict the suffix form for any stem in any of the four harmony classes.
+   - (c) The genitive/2sg-possessive distinction is resolvable: the data must contain enough positional evidence for the solver to assign the correct function to the suffix in any novel context.
+   - (d) The suffix ordering is fully determined: the data must contain at least one example of each adjacent pair in the stack (Plural+Possessive, Possessive+Genitive) so the solver can infer the complete order.
+   - (e) The double-marking rule is clear: the data must show both pronominal and full-NP possession so the solver can infer the asymmetry.
+   - (f) No question has an ambiguous answer under the intended rules. If a question could have two valid answers, either the question must be revised or additional data must be added to disambiguate.
+   - (g) The difficulty progression is smooth: no question should require a leap of more than one or two new inferences beyond what the previous question required.

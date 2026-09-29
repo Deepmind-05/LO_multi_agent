@@ -1,0 +1,142 @@
+
+
+TARGET-LANGUAGE: Canela (cnl), Macro-Ge / Je / Je Setentrional, South America
+
+CONSTRUCTION RATIONALE
+
+1. **Design the verbal person-marking paradigm.** Establish a set of five P-marker prefixes: 1P, 2P, 3P, 1PL.incl, 1PL.excl. Assign each a distinct, short form (one or two segments). The 3P form must be non-zero (a visible segment, not absence of marking). The 1PL.incl and 1PL.excl forms must be distinct from each other and from 1P. These five forms constitute the only person marking on the verb. There is no A-marking, no case marking, no plural marking, and no gender agreement. The verb root itself is invariant. This paradigm is the single morphological system the solver must decode, and it simultaneously encodes (a) ergative alignment (which argument is marked) and (b) the inclusive/exclusive distinction (which first-person plural form). The two dimensions are entangled in the same set of forms, which is the puzzle's central inferential challenge.
+
+2. **Establish the syntactic frame.** All main clauses follow SOV order. Oblique phrases (postpositional phrases) precede the object (XOV). The verb is the final element in the clause. Negation, if used, is a separate word immediately following the verb. Postpositions follow their noun phrase. These positional rules are fixed and must be consistent across all data. The solver should be able to identify word order from the first few sentences without difficulty; this is not a discovery target but a structural given that supports later inferences.
+
+3. **Construct the baseline verbal data set (Part 1 of the problem).** Provide 18–22 sentence–gloss pairs. The data must satisfy the following coverage requirements:
+   - At least 4 intransitive sentences with different S persons (1P, 2P, 3P, and at least one 1PL form).
+   - At least 4 transitive sentences where P is 1P, 2P, 3P, and at least one 1PL form, with A varying across persons.
+   - At least 2 transitive sentences where A is 1P and P is a different person (to show that 1P on the verb does NOT mean "agent is 1P").
+   - At least 2 transitive sentences where A is 3P and P is 1P or 2P (to show that 3P on the verb does NOT mean "agent is 3P").
+   - At least 1 intransitive sentence with 1PL.incl and 1 intransitive sentence with 1PL.excl (to make the inclusive/exclusive contrast visible in the simplest context).
+   - At least 1 transitive sentence where P is 1PL.incl and 1 where P is 1PL.excl (to show the distinction in a transitive context).
+   - Use at least 6 different verb roots to prevent the solver from associating the prefix with a specific verb.
+   - Use at least 5 different noun roots for arguments.
+   
+   The solver's intended inference sequence from this data:
+   (a) Identify SOV word order (immediate, low difficulty).
+   (b) Notice that the verb has a prefix that varies across sentences (immediate).
+   (c) Attempt to map the prefix to the subject (agent) — this will fail because in transitive sentences the prefix does not match the agent's person. This failure is the critical moment of discovery.
+   (d) Re-analyze: the prefix matches the patient in transitive sentences and the sole argument in intransitive sentences. The solver identifies the ergative P-marking pattern.
+   (e) Notice that there are two distinct first-person plural forms. Map them to inclusive (speaker + addressee) and exclusive (speaker + other) based on the glosses.
+   
+   The inclusive/exclusive identification depends on the solver having already established the P-marking pattern (step d), because the inclusive/exclusive forms only appear in the P slot. If the solver has not yet identified which argument is marked, they cannot correctly parse the inclusive/exclusive contrast. This creates a dependency: ergative alignment must be discovered before inclusive/exclusive can be fully identified.
+
+4. **Construct the possessive noun phrase data (Part 2a of the problem).** Provide 8–10 possessive noun phrases with glosses. The pattern is: [possessor-prefix + possessed-noun]. The possessor prefix uses the same five forms as the verbal P-marker (1P, 2P, 3P, 1PL.incl, 1PL.excl). The possessed noun is unmarked. Examples should cover all five possessor values, with at least two different possessed nouns per value.
+   
+   The solver's intended inference:
+   (a) Identify that the possessor (not the possessed noun) bears the marking.
+   (b) Recognize that the marking is a prefix.
+   (c) Notice that the forms are identical to the verbal P-marker forms. This creates a connection between the verbal and nominal domains.
+   
+   At this stage, the solver has a working hypothesis: "the language uses pronominal prefixes to mark the possessor." This is a correct surface description but not the deepest analysis. The deeper analysis (locational strategy) is reserved for the next step.
+
+5. **Construct the predicative possession data (Part 2b of the problem).** Provide 4–6 predicative possession sentences with glosses. The pattern is: [possessed-noun + possessor + locative-postposition] or [possessed-noun + locative-postposition + possessor] — the setter chooses one consistent order. The locative postposition is a distinct morpheme (not the same as the WITH-language postposition from Step 7). The possessor in this construction is a full pronoun or noun, and the locative postposition follows it.
+   
+   The critical design choice: the locative postposition in predicative possession must be morphologically related to (or identical to) the "possessive prefix" from Step 4. The simplest realization is that they are the same form: the prefix on the possessor in dependent NPs is the same morpheme that appears as a postposition in predicative possession. This means the "possessive prefix" is actually a locative marker.
+   
+   The solver's intended inference:
+   (a) Identify that predicative possession uses a locational strategy ("house at-me" rather than "I have house" or "house is mine" with a copula).
+   (b) Notice that the locative marker is the same form as the "possessive prefix" from Step 4.
+   (c) Revise the analysis: what was identified as a "possessive prefix" is actually a locative marker. The dependent-marking pattern is a surface reflex of the underlying locational strategy.
+   
+   This is a two-stage inference: the solver first identifies dependent marking (Step 4), then discovers the locational strategy (Step 5) and revises their analysis. The dependency is that Step 5 requires the solver to have already identified the prefix forms in Step 4; without that identification, the connection to the locative postposition would not be visible.
+
+6. **Construct the WITH-language data (Part 3a of the problem).** Provide 6–8 sentences with glosses. Include:
+   - At least 2 comitative sentences ("X with Y") where the postposition follows the second NP.
+   - At least 2 coordinative sentences ("X and Y") where the same postposition follows the second NP.
+   - At least 1 sentence where the context makes the comitative reading clear (e.g., the two NPs are arguments of a verb that requires a comitative).
+   - At least 1 sentence where the context makes the coordinative reading clear (e.g., the two NPs are co-subjects or co-objects).
+   - At least 1 sentence where the form is genuinely ambiguous and the solver must use context to disambiguate.
+   
+   The postposition is a single invariant form. It is distinct from the locative postposition in Step 5.
+   
+   The solver's intended inference:
+   (a) Notice that the same postpositional form appears in both comitative and coordinative contexts.
+   (b) Identify the WITH-language property: 'and' = 'with'.
+   (c) Recognize that disambiguation requires contextual/pragmatic reasoning, not formal marking.
+   
+   The interaction with the postpositional system: the solver has already seen postpositions in Steps 5 (locative) and the general syntactic frame (Step 2). The WITH-language postposition is another instance of the postpositional pattern, reinforcing the language's consistent post-head ordering for adpositions.
+
+7. **Construct the verbal adjective data (Part 3b of the problem).** Provide 5–7 adjective predicate sentences with glosses. The pattern is: [subject + adjective-root + P-marker]. The adjective root is invariant (no internal morphology). The P-marker is the same prefix system from Step 1.
+   
+   The data must include:
+   - At least 2 sentences with different P persons.
+   - At least 1 sentence where the adjective predicate is the only predicate (to show it is not a verb in a serial construction).
+   - At least 1 sentence with a 1PL.incl or 1PL.excl P-marker (to confirm the inclusive/exclusive distinction extends to adjectives).
+   
+   The solver's intended inference:
+   (a) Recognize that adjective predicates take the same person marking as verbs.
+   (b) Confirm the ergative P-marking pattern in a non-verbal context (the adjective behaves like a verb in its morphology).
+   (c) This serves as a "control" that strengthens the ergative inference from Step 3: the pattern is not specific to a particular verb class but is a general property of predicates.
+   
+   The interaction: this data provides independent confirmation of the ergative pattern. If the solver had any residual uncertainty about whether the P-marking in Step 3 was a verb-specific phenomenon, the adjective data resolves it.
+
+8. **Construct the matching/identification task (Part 4a of the problem).** Provide 6–8 new Canela sentences (unseen in Parts 1–3) and a shuffled list of 6–8 English glosses. Design the items so that:
+   - At least 2 items require the solver to correctly identify the P-marker in a transitive sentence where A and P have different persons (testing the ergative inference).
+   - At least 1 item involves a 1PL.incl or 1PL.excl P-marker in a transitive context (testing the inclusive/exclusive identification in a less transparent context).
+   - At least 1 item involves a possessive noun phrase (testing the dependent marking pattern).
+   - At least 1 item involves a predicative possession sentence (testing the locational strategy).
+   - At least 1 item involves the WITH-language postposition in an ambiguous context (testing contextual disambiguation).
+   - At least 1 item involves an adjective predicate (testing the verbal adjective pattern).
+   
+   The correct matching must be unique. No two items should match the same gloss, and no gloss should match two items. The difficulty should be moderate: the solver should be able to solve most items by applying rules already visible in Parts 1–3, but at least one item should require a small extrapolation (e.g., a new verb root, or a person combination not seen before).
+
+9. **Construct the "surprise" translation task (Part 4b of the problem).** Provide 5–6 new Canela forms for the solver to translate into English. Design these so that:
+   - **Two** of the forms are "surprising" in the sense that they deviate from what the solver would predict based on a naive (accusative) analysis. For each surprising form, the solver must give both the correct translation AND the translation they would have expected under an accusative analysis.
+     - One surprise should involve a transitive sentence where the 1P marker appears on the verb but the agent is 2P or 3P (the solver's naive expectation would be that 1P marks the agent, but it actually marks the patient).
+     - One surprise should involve a predicative possession sentence where the "possessive prefix" is actually a locative postposition (the solver's naive expectation would be a possessive construction, but the actual structure is locational).
+   - **One** form should involve the WITH-language postposition in a context where the comitative/coordinative ambiguity is resolved by a subtle contextual cue (e.g., the verb's valency or the semantic relationship between the NPs).
+   - **Two** forms should be straightforward (applying already-known rules) to provide contrast and confirm the solver's understanding.
+   
+   The "surprise" mechanism here is different from the source rationale (which used phonological alternations). In Canela, the "surprise" is conceptual: the solver's prior expectations (based on accusative alignment or possessive morphology) are violated by the actual data. The solver must explain WHY their prediction was wrong, which requires articulating the ergative or locational analysis.
+
+10. **Construct the production task (Part 4c of the problem).** Provide 7–9 English glosses for the solver to translate into Canela. Design these so that:
+    - Each item requires combining at least two rules from the system (e.g., ergative P-marking + inclusive/exclusive, or locational possession + WITH-language).
+    - At least 1 item uses a completely new verb root and new noun roots (not seen anywhere in the problem) to test whether the solver has truly generalized the rules.
+    - At least 1 item requires the solver to choose between 1PL.incl and 1PL.excl based on the English gloss (e.g., "we (including you) see them" vs. "we (not including you) see them").
+    - At least 1 item involves a predicative possession sentence (requiring the locational strategy).
+    - At least 1 item involves the WITH-language postposition (requiring the solver to choose the correct form for 'with' or 'and').
+    - At least 1 item involves an adjective predicate (requiring the P-marker on the adjective).
+    - At least 1 item is a transitive sentence where A is 1P and P is 3P (testing that the solver does NOT mark A).
+    - The items should be ordered from easiest to hardest, or grouped by the type of rule combination they test.
+
+11. **Verify internal consistency and uniqueness of the rule system.** Check the following:
+    - The five P-marker forms are all distinct and unambiguous. No two forms should be identical or near-identical (to avoid accidental homophony that would confuse the solver).
+    - The locative postposition (Step 5) is morphologically identical to the "possessive prefix" (Step 4) but distinct from the WITH-language postposition (Step 6). This three-way distinction must be clear in the data.
+    - The ergative P-marking pattern is consistent across all predicate types (verbs, adjectives). No exceptions.
+    - The inclusive/exclusive distinction is consistent: the same two forms appear in all contexts where 1PL is the P argument.
+    - The WITH-language postposition is invariant (no allomorphs).
+    - No case markers, plural markers, or gender markers appear anywhere in the data.
+    - The SOV word order is consistent in all sentences.
+    - The data uniquely determines the rule system: no alternative analysis (e.g., accusative alignment, or a different mapping of the inclusive/exclusive forms) can account for all the data.
+    - Specifically verify: if the solver hypothesized accusative alignment (A-marking), at least 3 data points in Part 1 would be unaccounted for. If the solver hypothesized that the "possessive prefix" is a true possessive marker (not locative), the predicative possession data in Step 5 would be unaccounted for.
+
+12. **Write the problem preamble and instructions.** Include:
+    - A brief context for the language (name: Canela; location: a fictional or real community in the Brazilian Amazon; speaker population). This frames the problem without providing linguistic information.
+    - A phonology note listing any non-ASCII characters and their approximations.
+    - Clear instructions for each part:
+      - Part 1: "The following sentences are from Canela. Each line gives a Canela sentence followed by its English gloss. Study the data."
+      - Part 2: "The following are additional Canela sentences. (a) Identify the pattern in the possessive phrases. (b) Explain how predicative possession is expressed."
+      - Part 3: "The following are additional Canela sentences. (a) What is the relationship between the postposition in sentences 1–3 and the postposition in sentences 4–6? (b) How are adjective predicates formed?"
+      - Part 4a: "Match each Canela sentence to its English gloss."
+      - Part 4b: "Translate each Canela sentence into English. If a sentence is 'surprising' (i.e., you would have expected a different translation based on your initial analysis), also write the translation you would have expected, separated by a semicolon."
+      - Part 4c: "Translate each English gloss into Canela."
+    - Assign point values reflecting relative difficulty. Suggested distribution: Part 1 (4 marks), Part 2 (3 marks), Part 3 (3 marks), Part 4a (3 marks), Part 4b (4 marks), Part 4c (5 marks). Total: 22 marks. The production task (Part 4c) carries the most weight because it requires full generalization.
+
+13. **Design the difficulty progression explicitly.** The puzzle should be solvable in the following order, with each stage building on the previous:
+    - Stage 1 (Parts 1, first half): Identify SOV order and the existence of a verbal prefix. (Low difficulty.)
+    - Stage 2 (Parts 1, second half): Identify the ergative P-marking pattern. This requires the solver to notice that the prefix does NOT match the agent in transitive sentences. (Medium difficulty — the key insight.)
+    - Stage 3 (Parts 1, final): Identify the inclusive/exclusive distinction within the P-marker paradigm. This requires the solver to have already established the P-marking pattern. (Medium difficulty — depends on Stage 2.)
+    - Stage 4 (Part 2a): Identify dependent marking in possessive NPs. (Low-medium difficulty — straightforward pattern recognition.)
+    - Stage 5 (Part 2b): Discover the locational strategy and revise the analysis of the "possessive prefix." (Medium-high difficulty — requires revising a previously correct surface analysis.)
+    - Stage 6 (Part 3a): Identify the WITH-language property. (Medium difficulty — requires recognizing that the same form has two functions.)
+    - Stage 7 (Part 3b): Confirm the ergative pattern with adjective predicates. (Low difficulty — confirmation, not new discovery.)
+    - Stage 8 (Part 4): Apply all rules in production. (High difficulty — requires combining multiple rules simultaneously.)
+    
+    The difficulty curve is: low → medium → medium → low-medium → medium-high → medium → low → high. The "surprise" elements in Part 4b create a local difficulty spike that tests whether the solver has truly internalized the ergative and locational analyses rather than merely memorizing patterns.

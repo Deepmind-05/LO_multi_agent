@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic concepts and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic features and mappings for target_language 'cle'. Include phonological, morphological, syntactic, and lexical features sufficient to support a non-trivial Linguistic Olympiad puzzle, with clear feature-to-form mappings and any necessary contrastive or glossing information.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules that will guide puzzle generation.",
+    "directive": "Using the existing concepts for target_language 'cle', design a rigorous step-by-step rationale for a Linguistic Olympiad puzzle. Define the linguistic reasoning chain, morphological/syntactic rules, sentence structure templates, and how each puzzle question should require non-trivial inference rather than direct copying from the data.",
+    "elapsed_seconds": 7.6
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answer key using the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target_language 'cle' using the existing concepts and rationale. Include a clear DATA section with fully glossed examples, a set of non-trivial questions requiring inference, and a complete answer key. Ensure all vocabulary is defined or glossed, questions are unambiguous, and no question merely copies a data sentence.",
+    "elapsed_seconds": 14.4
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the generated puzzle for target_language 'cle'. Check the DATA section for complete glossing and vocabulary coverage, verify that all questions are unambiguous and non-trivial, confirm the answer key is correct, and return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 26.9
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline contains concepts, rationale, and a generated puzzle. The latest validator verdict is PASS, and puzzle_needs_validation is false, indicating the puzzle has been validated and is acceptable. The correct next action is to finish successfully.",
+    "directive": "",
+    "elapsed_seconds": 34.7
+  }
+]

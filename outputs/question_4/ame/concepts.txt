@@ -1,0 +1,156 @@
+
+
+TARGET-LANGUAGE: Amele (Trans-New Guinea > Madang > Mabuso)
+
+CORE
+
+1. Dependent marking in possessive NPs (source 81A-1)
+   - Target-language realization: The possessor (dependent) is marked with a suffix (WALS 57A-2). The possessed noun (head) is unmarked. The specific form of the possessive suffix is determined by the possessive class of the possessed noun (WALS 59A-4: more than five classes).
+   - Intended solver inference: The solver observes that the possessor carries the possessive marking, not the possessed noun. The solver further observes that the suffix form varies systematically depending on which possessed noun is involved, indicating a class-based system.
+   - Priority: REQUIRED
+
+2. Noun classes without agreement / classifiers (source 100A-3)
+   - Target-language realization: Amele possesses a system of possessive classes (WALS 59A-4: more than five classes) that classify nouns for the purpose of possessive marking. However, there is NO gender system (WALS 31A-1, 32A-1), NO numeral classifiers (WALS 55A-1), and NO agreement triggered by these classes on adjectives, demonstratives, numerals, or other modifiers. The classification is exclusively relevant in possessive constructions.
+   - Intended solver inference: The solver observes that nouns are classified, but the classification only surfaces in possessive suffix selection. The solver should conclude that this is NOT a gender system (no agreement elsewhere) and NOT a classifier system in the numeral sense (no classifiers with numerals). The classes are specifically "possessive classes."
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Possessive classification with more than five classes (WALS 59A-4)
+   - Phenomenon: Amele has a rich possessive class system with more than five classes. Each possessed noun belongs to one class, and the class determines the allomorph of the possessive suffix on the possessor. The classes are semantically motivated (e.g., body parts/kinship, animals, plants, inanimate objects, abstract nouns, etc. — exact semantic groupings to be determined from data).
+   - Intended solver inference: The solver must identify the class boundaries by observing which possessed nouns trigger the same possessive suffix allomorphs across different persons/numbers.
+   - Interaction with CORE: This is the concrete realization of both source concepts. The "dependent marking" is the mechanism; the "noun classes" are the system that determines the form.
+   - Difficulty contribution: HIGH — the solver must inductively reconstruct a multi-class system from suffix allomorphs.
+   - Priority: REQUIRED
+
+2. Conjunctional possessive (WALS 117A-4)
+   - Phenomenon: Predicative possession ("X has Y") is expressed using a conjunction (the same word as "and/with"), not a dedicated possessive verb or copula.
+   - Intended solver inference: The solver observes that the "have" construction uses a conjunction, linking possession to conjunction.
+   - Interaction with CORE: Creates a typological link between the possessive class system and the conjunctional strategy. The solver sees that possession is expressed both attributively (via possessive suffix + class) and predicatively (via conjunction).
+   - Difficulty contribution: MEDIUM — adds a second possessive strategy that the solver must distinguish from the attributive one.
+   - Priority: HIGH
+
+3. 'And' identical to 'with' (WALS 63A-2)
+   - Phenomenon: The conjunction meaning "and" is the same lexical item as "with" (comitative). This is a WITH-language.
+   - Intended solver inference: The solver observes that one word serves both coordinative and comitative functions, and (via interaction with #2) also functions in the possessive construction.
+   - Interaction with CORE: The same word that marks conjunction/comitative also marks predicative possession. This creates a three-way functional overlap (and/with/has) that the solver must disentangle.
+   - Difficulty contribution: MEDIUM — the solver must recognize that one form has three functions.
+   - Priority: HIGH
+
+4. No numeral classifiers (WALS 55A-1)
+   - Phenomenon: Despite the rich possessive class system, Amele has no numeral classifiers. Numerals simply follow the noun (WALS 89A-2: Noun-Numeral order) without any class-based modification.
+   - Intended solver inference: The solver observes that numerals do not trigger class-based forms, confirming that the possessive classes are not a general classifier system.
+   - Interaction with CORE: Directly constrains the interpretation of the "noun classes" concept. The solver must rule out the "classifier" interpretation and settle on "possessive classes."
+   - Difficulty contribution: MEDIUM — provides a negative constraint that sharpens the solver's understanding.
+   - Priority: HIGH
+
+5. No gender system (WALS 31A-1, 32A-1)
+   - Phenomenon: Amele has no grammatical gender. Adjectives (WALS 87A-2: Noun-Adjective), demonstratives (WALS 88A-2: Noun-Demonstrative), and other modifiers do not agree with the noun in any class-based way.
+   - Intended solver inference: The solver observes that modifiers do not change form based on the noun's possessive class, confirming that the classes are not a gender system.
+   - Interaction with CORE: Directly constrains the interpretation of the "noun classes" concept. The solver must rule out the "gender" interpretation.
+   - Difficulty contribution: MEDIUM — provides a negative constraint that sharpens the solver's understanding.
+   - Priority: HIGH
+
+6. Plural only in human nouns, obligatory (WALS 34A-3)
+   - Phenomenon: Morphological plural marking is restricted to human nouns and is obligatory for them. Non-human nouns do not take plural marking. The plural is expressed via a person-number stem + pronominal plural affix (WALS 35A-5) in pronouns, and via a mixed morphological strategy (WALS 33A-6) in nouns.
+   - Intended solver inference: The solver observes that only human referents take plural marking, and that this marking is obligatory (not optional). Non-human nouns remain unmarked regardless of number.
+   - Interaction with CORE: Adds a second noun-classification-like phenomenon (human vs. non-human for plural) that the solver must distinguish from the possessive class system. The solver must recognize that the human/non-human distinction for plural is a separate, simpler system from the multi-class possessive system.
+   - Difficulty contribution: MEDIUM-HIGH — creates a potential confusion point: the solver might initially conflate the human/non-human plural distinction with the possessive class system.
+   - Priority: HIGH
+
+7. No second-person imperatives (WALS 70A-5)
+   - Phenomenon: Amele has no morphologically dedicated second-person imperative forms. The language has a maximal imperative-hortative system (WALS 72A-1) but 2sg imperatives are absent.
+   - Intended solver inference: The solver observes that 2sg imperative forms are missing from the paradigm, while other persons have imperative/hortative forms.
+   - Interaction with CORE: Provides a distinctive morphological gap that the solver must identify. This is independent of the possessive system but adds to the overall morphological picture.
+   - Difficulty contribution: MEDIUM — a clear, observable gap in the paradigm.
+   - Priority: OPTIONAL
+
+8. Consistent head-final word order (WALS 81A-1 SOV, 85A-1 postpositions, 87A-2 NAdj, 88A-2 NDem, 89A-2 NNum, 90A-1 NRel, 86A-1 GenN)
+   - Phenomenon: Amele exhibits a consistent head-final pattern: SOV word order, postpositions, noun-adjective, noun-demonstrative, noun-numeral, noun-relative clause. The one exception is Genitive-Noun order (86A-1), where the genitive (possessor) precedes the possessed noun.
+   - Intended solver inference: The solver observes the consistent head-final pattern and notes the genitive as an exception (possessor precedes possessed noun).
+   - Interaction with CORE: The GenN order is directly relevant to the possessive construction. The possessor precedes the possessed noun, and the possessor carries the suffix. This creates a clear structural frame for the possessive class system.
+   - Difficulty contribution: LOW-MEDIUM — provides structural context; the GenN order is a natural part of the possessive data.
+   - Priority: OPTIONAL
+
+9. Head marking in clauses (WALS 23A-1) with accusative alignment (WALS 100A-2)
+   - Phenomenon: In clauses, the verb marks both A and P (WALS 102A-5), with P preceding A (WALS 104A-3). This is head marking with accusative alignment. There is no morphological case marking on NPs (WALS 49A-1).
+   - Intended solver inference: The solver observes that argument marking is on the verb (head marking), not on the NPs (no case). This contrasts with the possessive construction, where marking is on the possessor (dependent marking).
+   - Interaction with CORE: Creates a typological contrast: clauses use head marking, possessive NPs use dependent marking. The solver should recognize this as a meaningful contrast.
+   - Difficulty contribution: MEDIUM — the contrast between head marking (clauses) and dependent marking (possessives) is a classic typological observation.
+   - Priority: OPTIONAL
+
+10. Productive full and partial reduplication (WALS 27A-1)
+    - Phenomenon: Amele has productive reduplication, both full and partial.
+    - Intended solver inference: The solver observes reduplicated forms and can identify the reduplication pattern.
+    - Interaction with CORE: Reduplication could be used to create derived forms (e.g., plural, diminutive, intensive) that interact with the possessive class system.
+    - Difficulty contribution: MEDIUM — adds a derivational process that the solver must identify.
+    - Priority: OPTIONAL
+
+11. Three-way demonstrative contrast (WALS 41A-3)
+    - Phenomenon: Amele has a three-way spatial deictic contrast (e.g., proximal, medial, distal). Demonstratives follow the noun (WALS 88A-2) and are identical in pronominal and adnominal use (WALS 42A-1).
+    - Intended solver inference: The solver identifies the three-way contrast from the demonstrative forms.
+    - Interaction with CORE: Demonstratives follow the noun and do not agree with the possessive class, providing additional evidence that the classes are not a gender system.
+    - Difficulty contribution: LOW — a straightforward identification task.
+    - Priority: OPTIONAL
+
+12. Labial-velar consonants (WALS 19A-3) and missing /p/ (WALS 5A-3)
+    - Phenomenon: Amele has labial-velar (double-articulated) consonants and lacks /p/ from its plosive inventory. Voicing contrast exists in plosives alone (WALS 4A-2).
+    - Intended solver inference: The solver observes the unusual consonant inventory (labial-velars, no /p/).
+    - Interaction with CORE: Phonological features that add to the overall character of the language. Not directly related to the possessive system but contribute to the puzzle's linguistic richness.
+    - Difficulty contribution: LOW — phonological identification.
+    - Priority: OPTIONAL
+
+13. Clicks for affective meanings (WALS 142A-2)
+    - Phenomenon: Amele uses click consonants, which express affective (emotional) meanings rather than logical/grammatical meanings.
+    - Intended solver inference: The solver observes click sounds in the data and identifies their affective function.
+    - Interaction with CORE: A distinctive phonological/paralinguistic feature that adds to the puzzle's character. Not directly related to the possessive system.
+    - Difficulty contribution: MEDIUM — the solver must identify the function of clicks from context.
+    - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive classes × Dependent marking (CORE × CORE)
+   - The possessor is marked (dependent marking), and the form of the marking is determined by the possessive class of the possessed noun. The solver must simultaneously identify (a) that marking is on the possessor, and (b) that the suffix form varies by class. These two observations are interdependent: recognizing the class system requires recognizing that the suffix is on the possessor, and vice versa.
+   - Additional inference: The solver can predict the possessive suffix form for a new noun if they know its class.
+
+2. Possessive classes × No numeral classifiers × No gender (CORE × TARGET-SPECIFIC)
+   - The possessive classes are NOT a general classifier system (no numeral classifiers) and NOT a gender system (no agreement on modifiers). The solver must use negative evidence (absence of class-based forms in numeral and modifier contexts) to constrain the interpretation of the class system.
+   - Additional inference: The solver concludes that the classes are specifically "possessive classes" — a restricted, function-specific classification system.
+
+3. Conjunctional possessive × 'And' = 'with' × Possessive classes (TARGET-SPECIFIC × CORE)
+   - The same word that means "and" and "with" is used to express predicative possession ("X has Y"). The attributive possessive uses the class-based suffix system. The solver must distinguish between the two possessive strategies (attributive vs. predicative) and recognize that they use different mechanisms.
+   - Additional inference: The solver can identify the conjunction/with/has word from its multiple uses and understand that possession in Amele has two distinct morphosyntactic strategies.
+
+4. Plural (human-only) × Possessive classes (TARGET-SPECIFIC × CORE)
+   - The human/non-human distinction for plural marking is a separate, simpler classification from the multi-class possessive system. The solver must not conflate the two. A human noun may belong to any possessive class, and a non-human noun may also belong to any possessive class — the two systems are orthogonal.
+   - Additional inference: The solver can identify which nouns are human (they take plural) and which are not (they don't), and separately identify the possessive class of each noun.
+
+5. Head marking (clauses) × Dependent marking (possessives) (TARGET-SPECIFIC × CORE)
+   - Clauses use head marking (verb marks A and P), while possessive NPs use dependent marking (possessor is marked). This is a classic typological contrast. The solver should recognize that Amele is not consistent in its marking strategy across domains.
+   - Additional inference: The solver can predict that in a clause, the verb will carry person/number marking, while in a possessive NP, the possessor will carry the possessive suffix.
+
+6. GenN order × Possessive suffix (TARGET-SPECIFIC × CORE)
+   - The possessor precedes the possessed noun (GenN, WALS 86A-1), and the possessor carries the possessive suffix. This creates a clear structural frame: [Possessor-POSS.SUFFIX PossessedNoun]. The solver can use this frame to identify the possessive suffix.
+   - Additional inference: The GenN order provides a reliable structural cue for identifying possessive constructions in the data.
+
+CONSTRAINTS
+
+1. The possessive class system must be fully inferable from the data. The puzzle must provide enough possessive examples (across different persons/numbers and different possessed nouns) for the solver to identify all classes and their suffix allomorphs. At minimum, each class must be represented by at least two different possessed nouns to confirm the class boundary.
+
+2. The data must include negative evidence for the "gender" and "classifier" interpretations. Specifically, the data must show at least one instance where a modifier (adjective, demonstrative, numeral) follows a noun from a particular possessive class WITHOUT any class-based agreement or classifier form. This is essential for the solver to rule out gender and numeral classifier interpretations.
+
+3. The conjunctional possessive must be clearly distinguishable from the attributive possessive in the data. The solver must be able to identify which constructions are attributive (possessor + suffix + possessed noun) and which are predicative (X + conjunction + Y).
+
+4. The human/non-human plural distinction must be clearly represented. The data must include both human and non-human nouns, with human nouns showing plural marking and non-human nouns not showing it. The solver must be able to identify which nouns are human based on the presence/absence of plural marking.
+
+5. The GenN order must be consistent in the data. All possessive constructions must show the possessor preceding the possessed noun, providing a reliable structural frame.
+
+6. The data must not require prior knowledge of Amele. All relevant properties must be inferable from the provided examples. The solver should be able to work purely from the data and general linguistic knowledge.
+
+7. The possessive suffix allomorphs must be phonologically distinct enough to be reliably identified. If two classes have very similar suffix forms, the puzzle may be unsolvable. The constructor should ensure sufficient phonological contrast between class allomorphs.
+
+8. If the no-second-person-imperative feature is included, the data must include imperative forms for other persons (1sg, 3sg, etc.) to make the gap observable. The absence of 2sg imperatives is only inferable if other imperative forms are present.
+
+9. The puzzle should not include more than 5-6 possessive classes in the data, even though WALS reports "more than five." A very large number of classes would make the puzzle unsolvably complex. The constructor should select a manageable subset (e.g., 4-6 classes) that is still rich enough to be interesting.
+
+10. The data should include a mix of transitive and intransitive clauses (if head marking is included) to allow the solver to identify A and P marking on the verb. The P-precedes-A order (WALS 104A-3) should be observable from the data.

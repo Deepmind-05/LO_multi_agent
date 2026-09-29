@@ -1,0 +1,105 @@
+
+
+TARGET-LANGUAGE: Evenki (eve), Tungusic/Altaic
+
+CORE
+
+1. Possessive suffix system (adapted from 81A-1: Dependent marking in possessive NPs)
+   - Target-language realization: Evenki has double marking (WALS 24A-3). The possessed noun bears a possessive suffix encoding the possessor's person and number (WALS 57A-2). The possessor bears a genitive case suffix. The possessive suffix is the primary "dependent marking" element — it marks the possessor's properties on the possessed noun.
+   - Intended solver inference: The suffix on the possessed noun is a possessive marker whose form depends on the person and number of the possessor. The solver should be able to identify the possessive paradigm (1sg, 2sg, 3sg, 1pl, 2pl, 3pl) from data.
+   - Priority: REQUIRED
+
+2. Double marking of possession (WALS 24A-3)
+   - Target-language realization: Both the possessor (genitive suffix) and the possessed noun (possessive suffix) are marked. The genitive on the possessor is independent of the possessive suffix on the possessed noun — they are separate morphological operations.
+   - Intended solver inference: The solver should recognize that two separate markers encode the possessive relationship: one on each noun. The genitive suffix on the possessor is a case marker (it appears in other contexts too), while the possessive suffix on the possessed noun is a possessive agreement marker.
+   - Priority: REQUIRED
+
+3. Obligatory possessed nouns (adapted from 100A-3: Noun classes without agreement)
+   - Target-language realization: Evenki has obligatorily possessed nouns (WALS 58A-1) — a semantic class (typically body parts, kinship terms) that cannot appear without a possessive suffix. This replaces the source "noun class" concept: instead of a classifier system, Evenki has a class of nouns with a morphological constraint.
+   - Intended solver inference: The solver should identify that certain nouns never appear in a "bare" form — they always carry a possessive suffix. This defines a class of nouns with special behavior. The solver should be able to predict that a new noun from this class must have a possessor.
+   - Priority: HIGH
+   - Note: This is a significant adaptation. The source concept (classifiers used with numerals) has no direct counterpart in Evenki (WALS 55A-1: numeral classifiers absent; 59A-1: no possessive classification). The adaptation preserves the puzzle function (identifying a class of nouns with special morphological behavior) while using a genuinely Evenki phenomenon.
+
+TARGET-SPECIFIC
+
+1. Suffixal, concatenative morphology (WALS 26A-2, 20A-1)
+   - Phenomenon: All inflectional morphology is suffixal and exclusively concatenative. No prefixes, no infixes, no non-concatenative processes.
+   - Intended solver inference: The solver should recognize that words are built by adding suffixes in a fixed, predictable order. This creates a "slot" model that the solver can discover.
+   - Interaction with CORE: The possessive suffix, case suffix, and plural suffix all occupy slots in a fixed order on the noun. The solver must discover this order.
+   - Difficulty contribution: Medium. The regularity makes the system learnable, but the solver must still identify the correct order of multiple suffixes.
+   - Priority: REQUIRED
+
+2. Case-possessive-plural suffix interaction (WALS 49A-8, 28A-4, 51A-1, 33A-2, 34A-6)
+   - Phenomenon: Evenki has 10+ case categories, all distinct (no syncretism), all suffixal. Plural is a suffix, obligatory on all nouns. The possessed noun can simultaneously bear a possessive suffix, a plural suffix, and a case suffix.
+   - Intended solver inference: The solver should discover the fixed order of these suffixes (e.g., stem + plural + possessive + case, or some other order) from data where multiple suffixes co-occur. The solver should also recognize that case forms are all distinct (no two cases share the same form).
+   - Interaction with CORE: This is the primary morphological complexity of the possessive system. The possessive suffix (CORE concept 1) must be identified in the context of other suffixes. The obligatory possessed nouns (CORE concept 3) always show the possessive suffix, making the suffix order easier to observe.
+   - Difficulty contribution: High. The solver must segment words into stem + multiple suffixes and identify the function of each.
+   - Priority: HIGH
+
+3. Obligatory double negation (WALS 143A-14, 144A-18, 144N-4)
+   - Phenomenon: Negation in Evenki requires two elements: a preverbal negative word AND a verbal negative suffix. The order is SO Neg [V-Neg]. Both elements are obligatory — neither alone is sufficient for negation.
+   - Intended solver inference: The solver should recognize that negation is morphologically complex, requiring two co-occurring elements. The preverbal word is a separate lexical item; the verbal suffix is part of the verb's suffixal morphology. The solver should be able to predict that a negative sentence must contain both elements.
+   - Interaction with CORE: Creates a parallel to the possessive double-marking system (two markers for one semantic function). Both the possessive system and the negation system show that Evenki uses multiple markers for a single grammatical relation. This parallel can help the solver generalize about the language's morphological strategy.
+   - Difficulty contribution: Medium-High. The pattern is regular and clearly demonstrable, but the solver must recognize that two elements are required (not optional or redundant).
+   - Priority: HIGH
+
+4. Inclusive/exclusive distinction in 1st person plural (WALS 39A-5, 40A-5)
+   - Phenomenon: Evenki distinguishes inclusive and exclusive 1st person plural in both independent pronouns and verbal/possessive inflection.
+   - Intended solver inference: The solver should recognize that 1st person plural has two forms, differing in whether the addressee is included. This adds a dimension to the person marking system.
+   - Interaction with CORE: The possessive suffix for 1st person plural has two forms (inclusive/exclusive), adding complexity to the possessive paradigm the solver must learn.
+   - Difficulty contribution: Medium. The distinction is clearly demonstrable if the data includes both forms.
+   - Priority: OPTIONAL (include if the puzzle needs additional complexity in the person marking system; omit if the puzzle is already sufficiently complex)
+
+5. Absence of articles (WALS 37A-5, 38A-5)
+   - Phenomenon: Evenki has no definite or indefinite articles.
+   - Intended solver inference: Noun phrases do not have article markers. Definiteness is not morphologically encoded.
+   - Interaction with CORE: Simplifies the nominal domain, making the possessive and case marking more prominent and easier to isolate.
+   - Difficulty contribution: Low (primarily a constraint that simplifies the puzzle).
+   - Priority: OPTIONAL (useful as a constraint to prevent the solver from misinterpreting a form as an article)
+
+6. Evidentiality in the tense system (WALS 77A-3, 78A-3)
+   - Phenomenon: Evenki distinguishes direct and indirect evidentials, encoded as part of the tense system (verbal suffixes).
+   - Intended solver inference: The solver should recognize that the verb's tense suffixes encode not just time but also evidentiality (direct vs. indirect evidence).
+   - Interaction with CORE: Adds a dimension to the verbal suffixal system. The verbal negative suffix (from double negation) co-occurs with tense/evidential suffixes, creating a rich verbal morphology.
+   - Difficulty contribution: Medium-High. The solver must identify that some verbal suffixes encode evidentiality rather than (or in addition to) tense.
+   - Priority: OPTIONAL (include only if the puzzle focuses on verbal morphology; omit if the puzzle focuses primarily on the nominal/possessive domain)
+
+INTERACTIONS
+
+1. Possessive suffix × Case suffix × Plural suffix (on the possessed noun)
+   - Concepts: CORE 1, TARGET-SPECIFIC 1, TARGET-SPECIFIC 2
+   - Interaction: All three suffixes can co-occur on the same noun in a fixed order. The solver must segment the word and identify each suffix's function.
+   - Additional inference enabled: The solver can predict the form of any possessed noun in any case and number, given the stem and the possessor's person/number.
+
+2. Obligatory possessed nouns × Possessive suffix
+   - Concepts: CORE 3, CORE 1
+   - Interaction: Obligatory possessed nouns always carry a possessive suffix, making the possessive paradigm more visible in the data. The solver can use these nouns to more easily identify the possessive suffix forms.
+   - Additional inference enabled: The solver can identify the class of obligatory possessed nouns by observing which nouns never appear without a possessive suffix.
+
+3. Double marking (possessive) × Double negation
+   - Concepts: CORE 2, TARGET-SPECIFIC 3
+   - Interaction: Both systems require two markers for a single grammatical function (possession: genitive + possessive suffix; negation: preverbal word + verbal suffix). This parallel highlights a general morphological strategy in Evenki.
+   - Additional inference enabled: The solver can generalize that Evenki tends to use multiple markers for grammatical relations, making the system more "redundant" but also more learnable.
+
+4. Inclusive/exclusive × Possessive suffix
+   - Concepts: TARGET-SPECIFIC 4, CORE 1
+   - Interaction: The possessive suffix for 1st person plural has two forms, adding a dimension to the possessive paradigm.
+   - Additional inference enabled: The solver must track both person and inclusivity when identifying possessive suffix forms.
+
+5. Suffixal morphology × Double negation
+   - Concepts: TARGET-SPECIFIC 1, TARGET-SPECIFIC 3
+   - Interaction: The verbal negative suffix is part of the suffixal system, but the preverbal negative word is a separate lexical item. This shows that not all morphological marking is suffixal — some is lexical.
+   - Additional inference enabled: The solver can distinguish between suffixal morphology (bound, ordered) and lexical items (free, positioned by syntax).
+
+CONSTRAINTS
+
+1. All nominal morphology (possessive, case, plural) must be suffixal and in a fixed, consistent order. The puzzle data must clearly demonstrate this order.
+2. No gender, no articles, no classifiers, no possessive classification may appear in the data. These are absent in Evenki and must not be introduced.
+3. Case forms must be all distinct (no syncretism). If the puzzle includes multiple case forms, they must be morphologically distinct.
+4. Obligatory possessed nouns must never appear without a possessive suffix in the puzzle data. At least one such noun should be included to demonstrate the constraint.
+5. The double negation pattern must be clearly demonstrated: every negative sentence in the data must contain both the preverbal negative word and the verbal negative suffix. No negative sentence should have only one element.
+6. The possessive suffix paradigm must be fully or nearly fully demonstrated in the data (all 6 person/number combinations, or at least enough to allow the solver to infer the missing ones).
+7. If inclusive/exclusive is included, both forms must appear in the data with clear contextual cues (e.g., "we (including you)" vs. "we (excluding you)").
+8. The puzzle must not require prior knowledge of Evenki or Tungusic languages. All patterns must be discoverable from the data alone using general linguistic reasoning.
+9. The source concept of "noun classes without agreement (classifiers)" has been replaced by "obligatory possessed nouns." The constructor must not introduce any classifier-like system into the Evenki data.
+10. Suffix order must be the same across all nouns (no allomorphy in suffix order). If allomorphy is included, it must be regular and inferable.

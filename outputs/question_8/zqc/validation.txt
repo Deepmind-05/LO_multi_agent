@@ -1,0 +1,17 @@
+
+
+VERDICT
+
+FAIL
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [CRITICAL] The AGENT3_OUTPUT is incomplete and truncated — it ends mid-sentence at "20. kmanwa" and never produces a finalized puzzle with a CONTEXT section, a complete DATA section, QUESTIONS, ANSWERS, or a SOLUTION. The output is an internal design monologue, not a deliverable puzzle.
+* [CRITICAL] No questions are defined anywhere in the output, making it impossible to assess solvability, correctness, or question quality.
+* [CRITICAL] No answers or solution are provided, so no validation of correctness or inference is possible.
+* [MAJOR] The agent never resolved the root/marker conflict issues (e.g., root -nwa vs. marker nwa-, root -mra vs. marker mra-, root -twa vs. marker twa-, root -kwa vs. marker kwa-) in a final form; the final sentence list still contains these potential surface ambiguities without a clear resolution strategy.
+* [MAJOR] The boundary-ambiguity feature (kaan = ka- + an-) is designed but never operationalized into a question; there is no question that tests whether the solver can correctly segment this form or predict the verb with a different A-P combination.

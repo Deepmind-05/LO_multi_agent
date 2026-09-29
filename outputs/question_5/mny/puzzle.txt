@@ -1,0 +1,156 @@
+
+
+CONTEXT
+
+The following sentences are from Margany, a Pama-Nyungan language of northern Australia. Each sentence describes a quantity of a particular thing. The sentences are presented in a random order.
+
+DATA
+
+1. balangunwala wurr dha
+2. ngunwala-nha djang-nha yirr
+3. wala djang dha
+4. balangungun djang dha
+5. ngungun wurr dha
+6. yirri ngurru dha
+7. bala djang dha
+8. balangun-nha ngurru-nha yirr
+9. ngun ngurru dha
+10. balawala ngurru dha
+11. balangun barr dha
+12. ngunwala barr dha
+13. bala-lha wurr-lha burr
+14. ngungun-nha barr-nha yirr
+
+QUESTIONS
+
+**Q1** (4 marks)
+
+Match each of the following forms to its numeral value (1–10):
+
+| Form | Value |
+|------|-------|
+| balangungun | ? |
+| ngun | ? |
+| balawala | ? |
+| yirri | ? |
+| ngungun | ? |
+| balangunwala | ? |
+| wala | ? |
+| balangun | ? |
+| ngunwala | ? |
+| bala | ? |
+
+**Q2** (4 marks)
+
+(a) Which of the numerals 1–10 are *atomic* (i.e., not composed of other numeral forms)?
+
+(b) For each compound numeral, identify its component numerals (e.g., 3 = 2 + 1).
+
+(c) State the ordering rule that governs the arrangement of components within a compound numeral.
+
+**Q3** (3 marks)
+
+(a) How many distinct case suffixes are present in the data?
+
+(b) Give the phonological form of each suffix.
+
+(c) Explain how you can determine that these are separate morphemes (case suffixes) rather than integral parts of the numeral or noun stems.
+
+**Q4** (5 marks)
+
+(a) Write the Margany form for "6" with the case suffix that appears in sentence 2.
+
+(b) Write the Margany form for "9" with the case suffix that appears in sentence 13.
+
+(c) Write a complete Margany sentence meaning "go to 8 waters" (use the same verb as in sentence 2).
+
+(d) Provide a full interlinear gloss for the following sentence:
+
+> balangungun-nha wurr-nha yirr
+
+ANSWERS
+
+**Q1:**
+
+| Form | Value |
+|------|-------|
+| balangungun | 9 |
+| ngun | 2 |
+| balawala | 6 |
+| yirri | 10 |
+| ngungun | 4 |
+| balangunwala | 8 |
+| wala | 1 |
+| balangun | 7 |
+| ngunwala | 3 |
+| bala | 5 |
+
+**Q2:**
+
+(a) Atomic numerals: 1 (wala), 2 (ngun), 5 (bala), 10 (yirri).
+
+(b)
+- 3 = 2 + 1 (ngun + wala)
+- 4 = 2 + 2 (ngun + ngun)
+- 6 = 5 + 1 (bala + wala)
+- 7 = 5 + 2 (bala + ngun)
+- 8 = 5 + 2 + 1 (bala + ngun + wala)
+- 9 = 5 + 2 + 2 (bala + ngun + ngun)
+
+(c) Components are arranged in descending order of value (the highest-value component precedes the lower-value components).
+
+**Q3:**
+
+(a) Two distinct case suffixes.
+
+(b) -nha and -lha.
+
+(c) The same suffix form appears at the right edge of multiple different numeral compounds (e.g., -nha on ngunwala, balangun, ngungun) and at the right edge of multiple different nouns (e.g., -nha on djang, ngurru, barr). Because the suffix is phonologically identical regardless of the stem it attaches to, and because it always occupies the rightmost position, it must be a separate morpheme (a case suffix) rather than part of the stem itself.
+
+**Q4:**
+
+(a) balawala-nha
+
+(b) balangungun-lha
+
+(c) balangunwala-nha wurr-nha yirr
+
+(d)
+```
+balangungun-nha  wurr-nha  yirr
+9-DAT            water-DAT go
+"Go to 9 waters"
+```
+
+SOLUTION
+
+**Word order.** Every sentence follows the pattern [X] [Y] [Z], where Z is always one of three invariant forms: *dha*, *yirr*, or *burr*. These are verbs. The consistent three-word structure with a final verb indicates SOV order. The first element (X) is the numeral (it varies systematically and has internal compositional structure); the second element (Y) is the noun.
+
+**Numeral system.** The four shortest forms—*wala*, *ngun*, *bala*, *yirri*—are the atomic numerals. The remaining six forms are visibly composed of these atomic forms as substrings:
+
+- *ngunwala* = ngun + wala
+- *ngungun* = ngun + ngun
+- *balawala* = bala + wala
+- *balangun* = bala + ngun
+- *balangunwala* = bala + ngun + wala
+- *balangungun* = bala + ngun + ngun
+
+Since *yirri* never appears as a component of any compound, it must represent the highest atomic value (10). The three remaining atomic forms must represent 1, 2, and 5. In all three-component compounds, the order is bala → ngun → wala (or ngun), establishing the value hierarchy bala > ngun > wala. The only assignment consistent with all compounds yielding values ≤ 10 without duplication is: bala = 5, ngun = 2, wala = 1.
+
+This yields: 3 = 2+1, 4 = 2+2, 6 = 5+1, 7 = 5+2, 8 = 5+2+1, 9 = 5+2+2. The ordering rule is descending value.
+
+**Case suffixes.** In sentences 2, 8, and 14, the string *-nha* appears at the right edge of both the first and second words. In sentence 13, the string *-lha* appears at the right edge of both the first and second words. The same suffix form is identical across different stems (e.g., -nha on *ngunwala*, *balangun*, *ngungun*, *djang*, *ngurru*, *barr*), confirming it is a separate morpheme. The suffix attaches to the entire compound as a unit (e.g., *balangun-nha*, not *bala-nha-ngun*), confirming the hierarchical structure: (compound) → (compound + suffix).
+
+**Answers derived:**
+
+- Q1: Direct application of the compositional analysis.
+- Q2: Follows from identifying atomic vs. compound forms and observing the consistent ordering.
+- Q3: Follows from observing the invariant right-edge morpheme across multiple stems.
+- Q4(a): 6 = balawala; suffix from sentence 2 = -nha → balawala-nha.
+- Q4(b): 9 = balangungun; suffix from sentence 13 = -lha → balangungun-lha.
+- Q4(c): 8 = balangunwala; dative = -nha; water = wurr; go = yirr → balangunwala-nha wurr-nha yirr.
+- Q4(d): balangungun = 9; -nha = DAT; wurr = water; yirr = go → "Go to 9 waters."
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires four progressive tiers of inference: (1) identifying word order and segmenting sentences; (2) recovering the compositional grammar of numerals, including determining which atomic form corresponds to which value through constraint satisfaction; (3) identifying case suffixes as a separate morphological layer and confirming their attachment to the entire compound; (4) integrating all layers to produce novel forms and glosses. The difficulty arises from the interaction of numeral composition and case morphology (the solver must not confuse suffixes with numeral components) and from the need to deduce the value-to-form mapping through systematic elimination rather than direct observation.

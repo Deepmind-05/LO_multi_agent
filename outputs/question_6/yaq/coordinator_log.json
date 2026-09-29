@@ -1,0 +1,135 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic features and mappings for target language 'yaq' suitable for a Linguistic Olympiad puzzle. Include core phonological, morphological, syntactic, and semantic features, with clear feature-to-form mappings and enough depth to support multi-step reasoning.",
+    "elapsed_seconds": 0.3
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing linguistic concepts for 'yaq', design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how linguistic features map to observable forms, specify the reasoning steps solvers should follow, and ensure the rules are internally consistent and sufficient for generating a valid puzzle.",
+    "elapsed_seconds": 7.8
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'yaq' using the existing concepts and rationale. Include a clear DATA section with glossed examples, a vocabulary list if needed, multiple non-trivial questions requiring multi-step linguistic reasoning, and a complete answer key. Ensure all forms are consistent with the rationale and that no required vocabulary is missing or unglossed.",
+    "elapsed_seconds": 13.7
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 solve and rigorously validate the puzzle.",
+    "directive": "Solve and rigorously validate the generated Linguistic Olympiad puzzle for target language 'yaq'. Check internal consistency of the DATA section, glosses, vocabulary, questions, answer key, and reasoning steps. Verify that all forms follow the provided concepts and rationale, that no required vocabulary is missing or unglossed, and that questions are non-trivial and unambiguous. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if issues are found.",
+    "elapsed_seconds": 17.8
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Although the state reports a puzzle exists, Agent 4 found that the generated output is incomplete/truncated and does not contain a valid final puzzle with the required sections. The failure is at the puzzle-generation level: Agent 3 must produce a complete, well-formed puzzle and resolve the reported stem conflicts without looping.",
+    "directive": "Regenerate the complete Linguistic Olympiad puzzle for 'yaq' as a single final output. It must include all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Do not include meta-commentary, drafts, or unresolved conflicts. Resolve the reported stem conflicts by selecting a small, internally consistent set of noun, verb, and postposition stems and applying them uniformly. Ensure every lexical item in DATA is glossed, all questions are non-trivial and unambiguous, and the answer key matches the solution exactly. If necessary, simplify the puzzle to a coherent subset rather than leaving it incomplete.",
+    "elapsed_seconds": 21.0
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has concepts, rationale, and a regenerated puzzle, and the puzzle is explicitly flagged as needing validation. No validator verdict is present yet, so the next required step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 26.6
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest puzzle output is incomplete and does not contain the required final puzzle sections. The concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must regenerate a complete, coherent, final puzzle without meta-commentary or unresolved loops.",
+    "directive": "Regenerate the complete Linguistic Olympiad puzzle for 'yaq' as a single final output only. Do not include drafts, meta-commentary, or unresolved choices. Commit to a small internally consistent set of noun, verb, and postposition stems and apply them uniformly. Include all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure every lexical item in DATA is glossed, all questions are non-trivial and unambiguous, and the answer key exactly matches the solution.",
+    "elapsed_seconds": 29.8
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been regenerated and is explicitly flagged as needing validation, with no validator verdict present yet. The next required step is to have Agent 4 solve and rigorously validate the current puzzle before any further generation or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 35.5
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the latest output is not a valid puzzle but an incomplete planning loop with no required sections. Concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must be called again with a strict final-output-only directive to produce a complete, internally consistent puzzle.",
+    "directive": "Discard the previous incomplete draft and output only the final puzzle for 'yaq'. Do not include planning, alternatives, meta-commentary, or repeated stem selection. Commit immediately to a small fixed lexicon and use it uniformly. The final output must contain exactly the required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Every lexical item in DATA must be glossed. All morphological forms must be internally consistent. Questions must be non-trivial and unambiguous. The ANSWERS section must exactly match the SOLUTION. If a postposition is needed, choose one simple invariant form and gloss it consistently; do not cycle through options.",
+    "elapsed_seconds": 38.3
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been regenerated and is explicitly flagged as needing validation, but no validator verdict is present yet. Per the pipeline rules, the next required action is to call Agent 4 to solve and rigorously validate the current puzzle before any further generation or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 42.5
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it lacks CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION and appears to be an incomplete planning loop. Concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must be called again with a strict final-output-only directive to produce a complete, solvable puzzle.",
+    "directive": "Discard all previous drafts, planning notes, alternatives, and meta-commentary. Output only the final Linguistic Olympiad puzzle for 'yaq'. The output must contain exactly these sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Commit immediately to a small fixed lexicon and use it consistently. Every lexical item in DATA must be glossed. All morphological forms must be internally consistent. Questions must be non-trivial and unambiguous. The ANSWERS section must exactly match the SOLUTION. Do not include any text outside the required puzzle sections.",
+    "elapsed_seconds": 45.5
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been regenerated and is explicitly flagged as needing validation, but no validator verdict is present yet. Per the pipeline rules, the next required action is to call Agent 4 to solve and rigorously validate the current puzzle before any further generation or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 49.3
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it lacks the required CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and appears to be an incomplete planning loop. Concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must be called again with a strict final-output-only directive to produce a complete, internally consistent puzzle.",
+    "directive": "Discard all previous drafts, planning notes, alternatives, and meta-commentary. Output only the final Linguistic Olympiad puzzle for 'yaq'. The output must contain exactly these sections in order: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Use a small fixed lexicon and one simple invariant postposition if needed; gloss every lexical item in DATA. Ensure all morphological forms are internally consistent, questions are non-trivial and unambiguous, and the ANSWERS section exactly matches the SOLUTION. Do not include any text outside the required puzzle sections.",
+    "elapsed_seconds": 52.4
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A new puzzle has been generated and is explicitly flagged as needing validation, but no validator verdict is present yet. Per the pipeline rules, the next required action is to call Agent 4 to solve and rigorously validate the current puzzle before any further generation or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 56.3
+  },
+  {
+    "step": 15,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it lacks the required CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and appears to be a broken generation loop. Concepts and rationale are present, so the failure is at the puzzle-generation level. Agent 3 must be called again with an extremely strict final-output-only directive to produce a complete, minimal, internally consistent puzzle.",
+    "directive": "Discard all previous drafts, planning notes, alternatives, meta-commentary, and apologies. Output only the final Linguistic Olympiad puzzle for target language 'yaq'. The output must contain exactly these section headers in this order: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. Do not include any text before CONTEXT or after SOLUTION. Keep the puzzle small and solvable: use a fixed lexicon of no more than 8 lexical items, gloss every lexical item in DATA, use internally consistent morphology, and include 3 non-trivial unambiguous questions. The ANSWERS section must exactly match the SOLUTION. If simplification is needed, reduce complexity rather than omitting sections.",
+    "elapsed_seconds": 59.2
+  },
+  {
+    "step": 16,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest state shows that a new puzzle has been generated and is explicitly flagged as needing validation, while no validator verdict is present yet. Per the pipeline rules, the next required action is to call Agent 4 to solve and rigorously validate the current puzzle before any further generation or completion.",
+    "directive": "Solve and rigorously validate the latest regenerated Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the answer key exactly matches the solution. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects are found.",
+    "elapsed_seconds": 66.5
+  },
+  {
+    "step": 17,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES with a major calibration problem: the puzzle is labeled TARGET_DIFFICULTY 1 but requires simultaneous application of multiple grammatical rules, making it at least difficulty 2. This is a puzzle-level defect that can be fixed by simplifying the questions or aligning the stated difficulty. Concepts and rationale do not appear fundamentally flawed, so Agent 3 should revise the puzzle directly.",
+    "directive": "Revise the 'yaq' puzzle to resolve the difficulty mismatch. If TARGET_DIFFICULTY is fixed at 1, simplify the puzzle so each question requires only one or two straightforward inferences rather than combining 3-4 grammatical rules. If the target difficulty field is part of the puzzle and can be changed, set it to 2 and ensure the questions are appropriately calibrated. Preserve all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. Keep the lexicon small, gloss all lexical items, maintain internal morphological consistency, and ensure the ANSWERS section exactly matches the SOLUTION.",
+    "elapsed_seconds": 71.4
+  },
+  {
+    "step": 18,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised puzzle exists and is explicitly flagged as needing validation, while no validator verdict is present. The previous issue was a difficulty calibration problem, which was routed to Agent 3 for revision. The next required step is to have Agent 4 solve and validate the revised puzzle before deciding whether to finish or route further fixes.",
+    "directive": "Solve and rigorously validate the latest revised Linguistic Olympiad puzzle for target language 'yaq'. Verify that all required sections are present and complete: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Check that all lexical items in DATA are glossed, that stems and morphological forms are internally consistent, that questions are non-trivial and unambiguous, and that the stated difficulty is now correctly calibrated. Confirm that the ANSWERS section exactly matches the SOLUTION. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable critique if any defects remain.",
+    "elapsed_seconds": 77.0
+  },
+  {
+    "step": 19,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict for the latest puzzle, and the state shows no pending validation. The puzzle is therefore verified and acceptable, so the pipeline should finish successfully.",
+    "directive": "No further action required. Accept the validated puzzle.",
+    "elapsed_seconds": 80.7
+  }
+]

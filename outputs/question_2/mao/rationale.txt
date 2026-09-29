@@ -1,0 +1,142 @@
+
+
+TARGET-LANGUAGE: Māori (mao)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the complete rule system that the puzzle will encode.** Before constructing any data, the setter must fix the following rules as the "ground truth" that all examples and questions will obey:
+
+   - **Affirmative intransitive:** V + te + Noun(S)
+     (e.g., e rere ana te manu = "the bird is flying")
+   - **Affirmative transitive:** V + i + [a/te] + Noun(A) + te + Noun(P)
+     (e.g., e kai ana i a Hēmi te hēmi = "John is eating the food")
+   - **Negative intransitive:** Kāore + te + Noun(S) + V
+     (e.g., Kāore te manu e rere ana = "the bird is not flying")
+   - **Negative transitive:** Kāore + i + [a/te] + Noun(A) + V + te + Noun(P)
+     (e.g., Kāore i a Hēmi e kai ana i te hēmi = "John is not eating the food")
+   - **Article system:** "te" precedes common nouns; "a" precedes proper names and kinship terms.
+   - **Ergative particle:** "i" marks the transitive agent (A). It is absent in intransitive clauses. The absolutive (S in intransitive, P in transitive) is unmarked.
+   - **Noun-Numeral order:** Numeral follows the noun within the noun phrase. No classifier intervenes. The article precedes the noun: te + Noun + Numeral.
+   - **First-person plural:** Two distinct pronouns exist: one inclusive (addressee included), one exclusive (addressee excluded). Both can serve as S or A.
+
+   **Critical typological consistency check:** The ergative particle "i" is a free particle, not an affix. It appears in a fixed structural position relative to the agent noun phrase in both affirmative and negative clauses. In affirmative clauses it is post-verbal (between V and A); in negative clauses it is pre-verbal (between NEG and A). This is the single most important structural fact the solver must discover, and all data must be consistent with it.
+
+2. **Compile the vocabulary inventory.** Gather and fix the following lexical items. All items must be semantically transparent or contextually inferable so that the inference burden falls on syntactic-semantic mapping, not lexical guessing:
+
+   - **Verbs (3–5):** Choose verbs with clear, distinct meanings (e.g., "eat," "fly," "see," "build," "sing"). Use a consistent aspectual frame (e.g., present continuous with "e ... ana") so the solver does not need to infer aspect.
+   - **Common nouns (4–6):** Choose concrete, unambiguous nouns (e.g., "bird," "food," "house," "child," "fish," "tree"). All take article "te."
+   - **Proper names (2–3):** Choose names that are clearly proper (e.g., Hēmi, Mere, Tāne). All take article "a."
+   - **First-person plural pronouns (2):** One inclusive, one exclusive. The glosses must make the inclusive/exclusive distinction explicit (e.g., "we (incl.)" vs. "we (excl.)").
+   - **Numerals (2–4):** Choose small numerals (e.g., two, three, four). These follow the noun.
+   - **Negative particle:** "Kāore" (or "kāore" — fix one form).
+   - **Ergative particle:** "i" (fix this single form; do not use dialectal variants).
+
+   **Design constraint:** The total number of distinct lexical items should be small enough (roughly 15–20) that the solver can hold them in working memory while focusing on structural patterns.
+
+3. **Design the baseline data set in progressive phases.** The baseline is the "given" data the solver studies before answering questions. It must be organized so that each phase introduces exactly one new structural feature, building on the previous phase. The solver should be able to isolate each new feature against the backdrop of already-discovered structure.
+
+   **Phase 1 — Establish VSO and the article "te" (intransitive affirmative):**
+   Provide 2–3 intransitive affirmative sentences using common nouns.
+   - What the solver should infer: (a) the verb precedes the noun phrase (VSO); (b) a definite article "te" precedes common nouns; (c) the noun does not change form.
+   - Why this comes first: It establishes the basic clause template and the article system before any complexity is added. The solver now has a "default" noun phrase form (te + Noun) to compare against later data.
+   - Controlled contrast: Use at least two different verbs and two different nouns so the solver does not confuse a specific word with a grammatical function.
+
+   **Phase 2 — Introduce the ergative particle (transitive affirmative):**
+   Provide 2–3 transitive affirmative sentences. At least one should reuse a noun from Phase 1 as the object (P), so the solver can see that the object looks identical to an intransitive subject.
+   - What the solver should infer: (a) a new element "i" appears before the agent in transitive clauses; (b) the object (P) is unmarked and looks the same as an intransitive subject (te + Noun); (c) the verb still precedes both arguments.
+   - Key inference: The solver must determine that "i" marks the *agent* (the doer), not the object. The evidence for this is: (i) "i" appears before the semantic agent in every transitive sentence; (ii) the object has no special marker; (iii) in intransitive sentences (Phase 1), the single argument has no "i" and is the semantic subject.
+   - **Ambiguity prevention:** Ensure that in at least one transitive sentence, the agent is a common noun (te + Noun) and the object is also a common noun (te + Noun). This forces the solver to use the presence/absence of "i" to distinguish A from P, rather than relying on article differences.
+
+   **Phase 3 — Introduce the article "a" for proper names:**
+   Provide 1–2 transitive affirmative sentences where the agent is a proper name.
+   - What the solver should infer: (a) proper names take article "a" instead of "te"; (b) the ergative particle "i" still precedes the agent, creating the sequence i + a + Name.
+   - Why this is important: It introduces a segmentation challenge. The solver must recognize that "i" and "a" are two separate elements (ergative + article), not a single morpheme. This is tested later in questions.
+   - **Ambiguity prevention:** Include at least one sentence where a proper name is the *object* (P), showing that "a" appears without "i" before it (e.g., V + i + te + Noun(A) + a + Name(P)). This confirms that "a" is an article, not part of the ergative marking.
+
+   **Phase 4 — Introduce negative clauses (NegSVO):**
+   Provide 2 negative intransitive sentences and 2–3 negative transitive sentences.
+   - What the solver should infer: (a) negation triggers a word-order change: the negative particle "Kāore" precedes the subject/agent, which precedes the verb; (b) in negative transitive clauses, the ergative particle "i" now appears *before* the verb (between Kāore and the agent), not after it; (c) the same alignment system operates in both affirmative and negative clauses.
+   - **Critical inference:** The solver must recognize that the "i" in negative transitive clauses is the *same* ergative marker as in affirmative transitive clauses, despite its different surface position. This is the puzzle's central insight. The evidence is: (i) "i" appears before the agent in both affirmative and negative transitive clauses; (ii) "i" is absent in both affirmative and negative intransitive clauses; (iii) the semantic role marked by "i" (agent) is the same in both.
+   - **Why this is the hardest single inference:** A solver who has only seen affirmative data might hypothesize that "i" is a verbal prefix or an object marker (since it appears between V and A in affirmative). The negative data refutes this: in negative clauses, "i" is separated from the verb by the agent, proving it is associated with the agent, not the verb.
+   - **Design constraint:** The negative transitive sentences must include at least one with a proper-name agent (to show i + a + Name in negative context) and at least one with a common-noun agent.
+
+   **Phase 5 — Introduce inclusive/exclusive first-person plural:**
+   Provide 2–3 sentences using the two different "we" pronouns. At least one should be intransitive (S role) and at least one transitive (A role, with ergative).
+   - What the solver should infer: (a) two distinct first-person plural pronouns exist; (b) the glosses indicate one includes the addressee and one excludes it; (c) both can appear as S (unmarked) or A (with ergative "i").
+   - **Design constraint:** The contextual clues for inclusive vs. exclusive must come from the glosses (e.g., "we (including you) are singing" vs. "we (not including you) are singing"). The solver should not need to infer the distinction from discourse context — the glosses make it explicit. The inference task is to recognize that the two forms are distinct and to track which is which in questions.
+   - **Interaction with ergative:** Include at least one transitive sentence where the exclusive "we" is the agent (i + mātou + ...), showing that the ergative particle can precede either first-person plural form.
+
+   **Phase 6 — Introduce noun-numeral phrases:**
+   Provide 1–2 sentences containing a numeral-noun phrase as either S or P.
+   - What the solver should infer: (a) the numeral follows the noun; (b) no classifier or other element intervenes between the noun and the numeral; (c) the article precedes the noun (te + Noun + Numeral).
+   - **Design constraint:** Use a numeral-noun phrase as the object (P) in at least one sentence, so the solver sees the full sequence: V + i + A + te + Noun + Numeral. This tests whether the solver can parse a three-element noun phrase within a transitive clause.
+
+   **Total baseline size:** Approximately 12–16 sentences. This is large enough to support all inferences but small enough to be manageable.
+
+4. **Design Question Set A: "Translate English sentences into Māori."** These questions test the solver's ability to *produce* Māori sentences using the discovered rules. Create 5–7 sub-items with the following coverage and difficulty progression:
+
+   - **(a) Easy — Intransitive affirmative, common noun S:** A simple sentence like "The bird is flying." Tests: VSO + te + Noun. This confirms the solver has the basic template.
+   - **(b) Medium — Transitive affirmative, common noun A and P:** A sentence like "The child is eating the food." Tests: V + i + te + Noun(A) + te + Noun(P). The solver must correctly place "i" before the agent.
+   - **(c) Medium — Transitive affirmative, proper name A:** A sentence like "John is building the house." Tests: V + i + a + Name(A) + te + Noun(P). The solver must produce the correct article for the proper name and maintain the ergative.
+   - **(d) Hard — Negative transitive, proper name A:** A sentence like "John is not eating the food." Tests: Kāore + i + a + Name(A) + V + te + Noun(P). This is the critical question: the solver must apply the NegSVO word order AND place the ergative correctly in its pre-verbal position.
+   - **(e) Hard — Negative transitive, inclusive "we" as A:** A sentence like "We (including you) are not singing." Tests: Kāore + i + tātou + V. The solver must select the correct inclusive pronoun AND apply the negative transitive template.
+   - **(f) Hard — Transitive affirmative with numeral object:** A sentence like "The child is seeing three birds." Tests: V + i + te + Noun(A) + te + Noun + Numeral(P). The solver must produce the noun-numeral order within the object phrase.
+   - **(g) Hardest — Negative transitive, proper name A, numeral P:** A sentence like "Mere is not seeing two houses." Tests: Kāore + i + a + Name(A) + V + te + Noun + Numeral(P). This combines all features: negative word order, ergative in pre-verbal position, proper-name article, and noun-numeral order.
+
+   **Design principle:** Each question should test at least one feature not tested in the immediately preceding question. The progression should move from single-feature application to multi-feature combination.
+
+5. **Design Question Set B: "Translate Māori sentences into English."** These questions test the solver's ability to *parse* Māori sentences and identify grammatical roles. Create 5–7 sub-items:
+
+   - **(a) Easy — Intransitive affirmative:** A sentence like "e rere ana te manu." The solver must identify the subject and produce "The bird is flying."
+   - **(b) Medium — Transitive affirmative, common nouns:** A sentence like "e kai ana i te pēpi te hēmi." The solver must identify that "i" marks the agent, so "The baby is eating the food" (not "The food is eating the baby").
+   - **(c) Medium — Transitive affirmative, proper name A:** A sentence like "e hanga ana i a Hēmi te whare." The solver must segment "i a Hēmi" as [ERG + ART + Name] and identify Hēmi as the agent: "John is building the house."
+   - **(d) Hard — Negative transitive, proper name A:** A sentence like "Kāore i a Mere e kai ana i te hēmi." The solver must recognize the negative word order, identify "i a Mere" as the ergative-marked agent, and produce "Mere is not eating the food."
+   - **(e) Hard — Negative intransitive:** A sentence like "Kāore te manu e rere ana." The solver must recognize that the absence of "i" confirms this is intransitive, and produce "The bird is not flying."
+   - **(f) Hard — Transitive with numeral P:** A sentence like "e kite ana i te pēpi te manu e toru." The solver must parse the numeral-noun phrase as the object: "The child is seeing three birds."
+   - **(g) Hardest — Negative transitive, exclusive "we" A, numeral P:** A sentence like "Kāore i mātou e kite ana i te whare e rua." The solver must identify the exclusive "we" as the agent (via "i"), recognize the negative structure, and parse the numeral object: "We (not including you) are not seeing two houses."
+
+   **Design principle:** Question Set B should include at least one item that would be *wrong* if the solver used a naive "first noun after verb = subject" heuristic (i.e., a transitive sentence where the agent is not the first noun after the verb). This forces the solver to rely on the ergative marker rather than word position.
+
+6. **Verify the inference chain is uniquely determined.** Walk through the solver's perspective step by step:
+
+   - From Phase 1 data: The solver infers VSO order and the article "te" for common nouns. The noun is unmarked (no case, no plural morphology visible).
+   - From Phase 2 data: The solver notices a new element "i" in transitive clauses. By comparing with Phase 1 (where the single argument has no "i"), the solver infers that "i" is associated with the transitive agent. The object is unmarked (same form as intransitive S).
+   - From Phase 3 data: The solver notices that proper names take "a" instead of "te." The sequence "i a Name" must be segmented as [ERG + ART + Name]. The solver confirms this by seeing "a Name" without "i" when the proper name is the object.
+   - From Phase 4 data: The solver notices that negative clauses have a different word order (NEG + Subject/Agent + V). Critically, the "i" particle is now pre-verbal. The solver must reconcile this with the Phase 2 finding: the "i" is the same ergative marker, not a verbal element. The evidence is that "i" is absent in negative intransitive clauses (just as in affirmative intransitive) and present in negative transitive clauses (just as in affirmative transitive).
+   - From Phase 5 data: The solver identifies two distinct first-person plural forms and maps them to inclusive/exclusive based on the glosses.
+   - From Phase 6 data: The solver infers that numerals follow the noun and that no classifier is present.
+
+   **Uniqueness check:** At each step, verify that no alternative hypothesis is equally supported by the data. Specifically:
+   - Could "i" be an object marker? No — the object is unmarked in all transitive sentences, and "i" is absent in intransitive sentences where the single argument is the semantic subject.
+   - Could "i" be a verbal prefix? No — in negative transitive clauses, "i" is separated from the verb by the agent noun phrase.
+   - Could "a" be part of the ergative marker (i.e., "ia" is a single morpheme)? No — "a" appears without "i" before proper-name objects, and "i" appears without "a" before common-noun agents.
+   - Could the numeral be a classifier? No — it follows the noun (classifiers typically precede or are separate from the noun in a different structural position), and there is no evidence of a separate classifier slot.
+
+7. **Check for unintended alternative interpretations and ambiguity.**
+
+   - **Ergative vs. accusative confusion:** A solver might initially hypothesize that "i" marks the object (accusative). Prevent this by ensuring that in at least one transitive sentence, the object is a proper name (taking "a") and the agent is a common noun (taking "te"). If "i" marked the object, it would appear before "a + Name," but in the data it appears before "te + Noun" (the agent). The negative data further confirms this: in negative transitive, "i" is adjacent to the agent, not the object.
+   - **Word-order confusion in negative clauses:** A solver might think the negative transitive structure is NEG + P + V + A (i.e., the object comes first). Prevent this by including a negative transitive sentence where the agent and object are semantically very different (e.g., "The child is not eating the food" vs. "The food is not eating the child" — only one makes sense). The glosses should make the semantic roles clear.
+   - **Inclusive/exclusive confusion:** Ensure that the two first-person plural forms are phonologically distinct enough that the solver cannot confuse them. The glosses must explicitly label them.
+   - **Numeral-noun vs. noun-numeral:** Ensure that the numeral always follows the noun in all data. If the solver sees even one counterexample, the rule becomes ambiguous. (Māori consistently has Noun-Numeral order, so this is naturally satisfied.)
+
+8. **Assign difficulty progression and verify solvability.**
+
+   The overall difficulty arc should be:
+   - **Level 1 (Phases 1–2, Questions A1–A2, B1–B2):** Basic VSO, article "te," ergative identification. The solver is learning the fundamental template.
+   - **Level 2 (Phase 3, Questions A3, B3):** Proper-name article "a," segmentation of multi-particle sequences.
+   - **Level 3 (Phase 4, Questions A4–A5, B4–B5):** Negative word order, ergative repositioning. This is the conceptual peak — the solver must integrate the alignment system with the word-order change.
+   - **Level 4 (Phases 5–6, Questions A6–A7, B6–B7):** Inclusive/exclusive, noun-numeral order, and multi-feature combination. These require the solver to apply multiple rules simultaneously.
+
+   **Solvability check:** At no point should the solver need to apply a rule that has not been evidenced in the baseline. Every question should be answerable using only the rules discoverable from the given data. If a question requires a rule not present in the baseline, either add that rule to the baseline or remove the question.
+
+9. **Final proofreading checklist.** Before finalizing the puzzle, verify:
+
+   - (a) Every sentence in the baseline and every question is grammatically correct Māori (or at least internally consistent within the puzzle's simplified system).
+   - (b) The ergative particle "i" appears in exactly the right positions: before A in all transitive clauses (both affirmative and negative), and absent in all intransitive clauses.
+   - (c) The article "te" appears before all common nouns and "a" before all proper names, in all positions (S, A, P).
+   - (d) The negative particle "Kāore" appears at the beginning of all negative clauses.
+   - (e) Numerals always follow the noun, with no intervening element.
+   - (f) The two first-person plural pronouns are used consistently (inclusive in contexts where the addressee is included, exclusive where not).
+   - (g) No question has more than one valid answer given the rules.
+   - (h) The total number of distinct rules the solver must apply is no more than six: (1) VSO/NegSVO word order, (2) ergative alignment, (3) article system (te/a), (4) noun-numeral order, (5) inclusive/exclusive distinction, (6) negation.
+   - (i) The glosses are consistent and unambiguous, providing enough semantic information for the solver to identify roles without prior Māori knowledge.

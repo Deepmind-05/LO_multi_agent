@@ -1,0 +1,177 @@
+
+
+TARGET-LANGUAGE: Evenki (eve), Tungusic/Altaic
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the lexical inventory.** The following stems are the complete vocabulary for the puzzle. Each stem has exactly one meaning. No stem is assigned to more than one meaning. The stem *sara* is assigned exclusively to "hand" (an obligatory possessed noun) and no other meaning.
+
+   Regular nouns (may appear without a possessive suffix):
+   - *tara* = house
+   - *nara* = river
+   - *kora* = horse
+   - *sila* = stone
+   - *mora* = tree
+   - *tula* = fish
+
+   Obligatory possessed nouns (must always carry a possessive suffix; never appear bare):
+   - *sara* = hand
+   - *kela* = head
+   - *lora* = eye
+   - *pala* = foot
+
+   Verbs:
+   - *vora-* = to eat
+   - *dela-* = to go
+   - *fina-* = to see
+   - *gala-* = to take
+   - *tola-* = to be (intransitive, used for location or state)
+
+   Negative particle (free word, preverbal):
+   - *ne*
+
+   All stems are phonologically distinct from one another. No two stems share the same form.
+
+2. **Define the nominal suffix system.** All nominal morphology is suffixal, concatenative, and appears in a fixed order: STEM + PLURAL + POSSESSIVE + CASE.
+
+   Plural suffix: *-t* (invariant). Optional on regular nouns. If present, marks plural.
+
+   Possessive suffixes (encode the person and number of the possessor on the possessed noun):
+   - *-m* = 1st person singular
+   - *-d* = 2nd person singular
+   - *-s* = 3rd person singular
+   - *-k* = 1st person plural inclusive
+   - *-w* = 1st person plural exclusive
+   - *-r* = 2nd person plural
+   - *-l* = 3rd person plural
+
+   Possessive suffix is optional on regular nouns (a regular noun may appear without it, in which case the possessor is unspecified or contextually given). Possessive suffix is obligatory on obligatory possessed nouns (*sara, kela, lora, pala*); these nouns never appear without a possessive suffix in any context.
+
+   Case suffixes:
+   - zero = nominative
+   - *-n* = genitive
+   - *-a* = accusative
+   - *-i* = locative
+
+   All case forms are distinct (no syncretism). The genitive suffix *-n* appears on the possessor noun in a possessive construction (e.g., "the horse's eye" = *kora-n lora-s*).
+
+3. **Define the verbal suffix system.** All verbal morphology is suffixal, concatenative, and appears in a fixed order: STEM + [NEGATIVE] + TENSE + PERSON.
+
+   Negative suffix: *-b*. Obligatory in negative sentences. A negative sentence must contain both the preverbal particle *ne* and the verbal suffix *-b*. Neither element alone is sufficient for negation.
+
+   Tense/evidential suffixes:
+   - *-a* = present
+   - *-i* = past, direct evidence
+   - *-e* = past, indirect evidence (hearsay)
+   - *-o* = future
+
+   Person/number suffixes (on the verb, encoding the subject):
+   - *-m* = 1st person singular
+   - *-d* = 2nd person singular
+   - *-s* = 3rd person singular
+   - *-k* = 1st person plural inclusive
+   - *-w* = 1st person plural exclusive
+   - *-r* = 2nd person plural
+   - *-l* = 3rd person plural
+
+   The person/number paradigm on verbs is identical in form to the possessive paradigm on nouns. The solver should be able to recognize this parallel.
+
+4. **Define sentence structure.** Basic word order is SOV (Subject–Object–Verb).
+
+   Positive sentence: S O V
+   Negative sentence: S O ne V (where V contains the negative suffix *-b*)
+
+   The subject is marked by the person suffix on the verb. If the subject is a noun phrase (rather than a pronoun implied by the verb suffix), it appears in the subject position in the nominative case. The object appears in the accusative case.
+
+   In a possessive construction, the possessor noun bears the genitive suffix *-n* and the possessed noun bears the possessive suffix. The possessed noun is the head of the noun phrase.
+
+   There are no articles (definite or indefinite). There are no classifiers. There is no gender marking.
+
+5. **Provide worked examples demonstrating the rules.** The following sentences are produced by applying the rules in steps 2–4. They serve as reference for the setter to verify that the system is unambiguous.
+
+   Example A: "The horse eats the fish."
+   - Subject: *kora* (horse, nominative, singular, no possessive)
+   - Object: *tula-a* (fish, accusative, singular, no possessive)
+   - Verb: *vora-a-s* (eat + present + 3sg)
+   - Sentence: **kora tula-a vora-a-s**
+
+   Example B: "My hand is on the stone."
+   - Subject: *sara-m* (hand + 1sg possessive; obligatory possessed noun, so possessive is required)
+   - Location: *sila-i* (stone + locative)
+   - Verb: *tola-a-m* (be + present + 1sg)
+   - Sentence: **sara-m sila-i tola-a-m**
+
+   Example C: "We (including you) do not see the river."
+   - Object: *nara-a* (river + accusative)
+   - Negative particle: *ne*
+   - Verb: *fina-b-a-k* (see + negative + present + 1pl.incl)
+   - Sentence: **nara-a ne fina-b-a-k**
+
+   Example D: "The horses' eyes are on the tree."
+   - Subject (possessive NP): *kora-t-n lora-t-l*
+     - *kora-t-n* = horse + plural + genitive ("of the horses")
+     - *lora-t-l* = eye + plural + 3pl possessive ("their eyes")
+   - Location: *mora-i* (tree + locative)
+   - Verb: *tola-a-l* (be + present + 3pl)
+   - Sentence: **kora-t-n lora-t-l mora-i tola-a-l**
+
+   Example E: "You (sg.) did not take my head."
+   - Object: *kela-m-a* (head + 1sg possessive + accusative)
+   - Negative particle: *ne*
+   - Verb: *gala-b-i-d* (take + negative + past.direct + 2sg)
+   - Sentence: **kela-m-a ne gala-b-i-d**
+
+   These examples confirm: (a) suffix order is consistent; (b) obligatory possessed nouns always carry a possessive suffix; (c) double marking is present (genitive on possessor + possessive on possessed); (d) double negation is present (ne + -b); (e) inclusive/exclusive is distinguishable; (f) all forms are unambiguous.
+
+6. **Construct Part 1 of the puzzle: labeled data.** Provide 12–16 sentences with full English glosses. The data must satisfy the following coverage requirements:
+
+   - All seven possessive suffixes must appear at least once on a possessed noun.
+   - At least three different regular nouns must appear with possessive suffixes, and at least two must appear without possessive suffixes (to show that the possessive is optional on regular nouns).
+   - At least two obligatory possessed nouns must appear (to allow the solver to notice they never appear bare).
+   - The genitive suffix must appear on at least three different possessor nouns.
+   - The plural suffix must appear at least twice, once on a possessor and once on a possessed noun.
+   - At least two case suffixes (beyond nominative) must appear on possessed nouns (to show that case follows possessive in the suffix order).
+   - At least two different verbs must appear.
+   - At least two tense/evidential values must appear.
+   - At least one negative sentence must appear (showing both *ne* and *-b*).
+   - At least one sentence must show 1pl.inclusive and at least one must show 1pl.exclusive (on the verb or on a possessive suffix), with glosses that make the distinction clear (e.g., "we (including you)" vs. "we (excluding you)").
+   - At least one sentence must show a possessed noun with all three suffixes (plural + possessive + case) to make the suffix order visible.
+
+   The data should be presented as a numbered list of sentences, each followed by its English gloss in brackets. Do not provide any morphological analysis or rule statements.
+
+7. **Construct Part 2 of the puzzle: unlabeled sentences for glossing.** Provide 5–7 new sentences (not seen in Part 1) without glosses. The solver must provide the English meaning of each. Design these sentences so that:
+
+   - At least one sentence uses a combination of suffixes not seen together in Part 1 (e.g., a possessed noun with plural + possessive + a case not yet seen on a possessed noun).
+   - At least one sentence is negative and uses a tense/evidential value not seen in Part 1.
+   - At least one sentence involves an obligatory possessed noun with a possessor in the genitive (testing the double-marking pattern with a new noun).
+   - At least one sentence uses 1pl.exclusive where Part 1 only showed 1pl.inclusive (or vice versa), requiring the solver to apply the person paradigm to a new context.
+   - The correct gloss for each sentence is unique (no two sentences can have the same gloss).
+
+8. **Construct Part 3 of the puzzle: translation from English to Evenki.** Provide 6–8 English sentences for the solver to translate. Design these so that:
+
+   - At least one sentence requires producing a form with all three nominal suffixes (plural + possessive + case) on a possessed noun.
+   - At least one sentence requires producing a negative sentence with a tense/evidential value that was not explicitly shown in the Part 1 data (testing generalization of the tense paradigm).
+   - At least one sentence involves an obligatory possessed noun with a 2pl or 3pl possessor (testing the full possessive paradigm).
+   - At least one sentence uses a verb stem not seen in Part 1 (testing whether the solver has generalized the verbal suffix order to a new stem).
+   - At least one sentence requires the solver to choose between 1pl.inclusive and 1pl.exclusive based on the English gloss (e.g., "we (including you) went" vs. "we (excluding you) went").
+   - The sentences should range from simpler (fewer suffixes, more common combinations) to more complex (multiple suffixes, rarer combinations).
+
+9. **Construct Part 4 of the puzzle: system questions.** Ask 4–6 specific questions that test the solver's understanding of the underlying rules. Examples of question types (the setter chooses which to include):
+
+   - "What is the form for 'their (3pl) hands' in the accusative case?" (tests: obligatory possessed noun + plural + 3pl possessive + accusative)
+   - "What is the form for 'the river's fish' (singular, nominative)?" (tests: genitive on possessor + 3sg possessive on possessed noun)
+   - "Write the Evenki sentence for: 'We (excluding you) did not see the horses' eyes yesterday (indirect evidence).'" (tests: 1pl.excl + negative + past.indirect + plural possessed noun with possessive)
+   - "Why can the noun *sara* not appear without a suffix? What class of nouns does it belong to?" (tests: identification of obligatory possessed nouns)
+   - "In the sentence [provide a specific sentence from Part 1], identify all suffixes and state the function of each." (tests: full morphological segmentation)
+
+10. **Verify unambiguity and solvability.** Before finalizing the puzzle, check the following:
+
+    - No stem in the lexical inventory is assigned to more than one meaning.
+    - No two different rule applications produce the same surface form for the same intended meaning (i.e., the mapping from meaning to form is deterministic given the rules).
+    - Every sentence in Parts 1–3 is segmentable into stem + suffixes using the rules in steps 2–3 without ambiguity.
+    - The obligatory possessed nouns never appear without a possessive suffix in any sentence in the puzzle.
+    - Every negative sentence contains both *ne* and *-b*.
+    - The inclusive/exclusive distinction is always glossed explicitly in Part 1 data so the solver can learn the mapping.
+    - The suffix order (STEM + PLURAL + POSSESSIVE + CASE for nouns; STEM + NEG + TENSE + PERSON for verbs) is the same in every instance.
+    - The solver can, from Part 1 data alone, determine: (a) the full possessive paradigm, (b) the full case paradigm, (c) the suffix order, (d) the existence and behavior of obligatory possessed nouns, (e) the double-marking pattern, (f) the double-negation pattern, (g) the tense/evidential paradigm, (h) the inclusive/exclusive distinction.
+    - No rule stated in this rationale is directly given to the solver. All rules must be inferable from the data.

@@ -1,0 +1,13 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [MAJOR] The difficulty is rated 5 but the actual difficulty is 4. While the puzzle involves a two-dimensional system (class × final vowel) and article syncretism creating ambiguity, each individual rule is transparent once the data is examined. The solver does not face "deep dependencies and multiple interacting layers" characteristic of difficulty 5; rather, the steps are sequential and each is relatively straightforward to identify from the clean data. The ambiguity in Q3 is a nice feature but does not elevate the overall inference to the 5 level.

@@ -1,0 +1,73 @@
+
+
+TARGET-LANGUAGE: Modern Hebrew (heb)
+
+CORE
+
+1. Concept: Two genders (30A-2)
+   - Target-language realization: Hebrew has a two-gender system (masculine/feminine). Every noun is assigned to one of two genders. Gender is marked on adjectives, demonstratives, and the definite article.
+   - Intended solver inference: From the data, the solver should observe that adjectives come in two forms that correlate with two classes of nouns, and deduce a binary gender system.
+   - Priority: REQUIRED
+
+2. Concept: Dependent marking in NPs with adjectives (84A-2)
+   - Target-language realization: Adjectives follow the noun (NAdj order, WALS 87A-2) and agree with the noun in gender and number. The adjective is the dependent that bears the agreement morphology.
+   - Intended solver inference: The solver should identify which word is the head (noun) and which is the dependent (adjective) based on the agreement pattern, and recognize that the dependent encodes features of the head.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Plural suffixes encode gender
+   - Intended solver inference: The solver should notice that plural nouns fall into two suffix classes (-im and -ot) that correlate with the two adjective forms, revealing that the plural suffix itself encodes gender. This provides a second, independent channel for gender identification.
+   - Interaction with CORE: Directly interacts with the two-gender system. The plural suffix creates a "double encoding" of gender (once on the suffix, once on the adjective), which the solver must recognize as redundant. This is the central "aha" of the puzzle.
+   - Difficulty contribution: HIGH. The solver must realize that the plural suffix is not merely a number marker but also a gender marker, and that this creates a predictable 2×2 paradigm (masc-sing, masc-pl, fem-sing, fem-pl).
+   - Priority: HIGH
+
+2. Phenomenon: Definite article as prefix with spreading to adjectives
+   - Intended solver inference: The solver should observe that a prefix (al-/ha-) appears on the noun to mark definiteness, and that when the noun is definite, the adjective also receives the same prefix. This "definiteness spreading" is a clear, learnable pattern.
+   - Interaction with CORE: Interacts with dependent marking: the adjective, as the dependent, also receives the definiteness marker. This shows that the dependent is not just a gender/number marker but also participates in other NP-internal agreement.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a second layer of agreement (definiteness in addition to gender/number) that the solver must discover. The spreading pattern is regular and inferable.
+   - Priority: HIGH
+
+3. Phenomenon: Noun-Adjective order (NAdj)
+   - Intended solver inference: The solver must determine which word in the NP is the noun and which is the adjective. Since Hebrew uses NAdj order (opposite of English), the solver must use the agreement pattern (the word that is agreed upon is the head) to identify the noun.
+   - Interaction with CORE: Essential for the dependent marking concept to work. Without knowing which word is the head, the solver cannot identify the agreement pattern.
+   - Difficulty contribution: MEDIUM. The solver must use the agreement relationship to identify head vs. dependent, which is a standard linguistic reasoning task.
+   - Priority: HIGH
+
+4. Phenomenon: Gender in 3rd person pronouns (hu/hi)
+   - Intended solver inference: If included, the solver can use pronoun gender to confirm or cross-check gender assignments made from adjective agreement.
+   - Interaction with CORE: Provides an independent confirmation of the gender system outside the NP.
+   - Difficulty contribution: LOW-MEDIUM. Useful as a confirmation mechanism but not essential to the core puzzle logic.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Gender × Plural suffix (double encoding):
+   - Concepts: Two genders + Plural suffixes encoding gender
+   - Interaction: Gender is encoded both on the adjective (via agreement) and on the noun's plural suffix. The solver must recognize this redundancy and use it to confirm gender assignments.
+   - Additional inference: If a noun appears in plural without an adjective, its gender can still be determined from the suffix. This allows the solver to extend gender knowledge to new nouns.
+
+2. Gender × Number × Adjective (2×2 paradigm):
+   - Concepts: Two genders + Dependent marking + Plural suffixes
+   - Interaction: Adjectives must agree in both gender and number, creating a four-way paradigm (masc-sing, masc-pl, fem-sing, fem-pl). The solver must discover all four forms.
+   - Additional inference: The solver can predict the form of an adjective in any cell of the paradigm once three cells are known.
+
+3. Definiteness × Adjective (spreading):
+   - Concepts: Definite article prefix + Dependent marking
+   - Interaction: When the noun is definite, the adjective also receives the definite prefix. This shows that the dependent (adjective) participates in multiple agreement domains (gender/number AND definiteness).
+   - Additional inference: The solver can predict that a definite NP will have the prefix on both the noun and the adjective, and that an indefinite NP will have it on neither.
+
+4. NAdj order × Agreement (head identification):
+   - Concepts: Noun-Adjective order + Dependent marking
+   - Interaction: The solver must use the agreement pattern to identify which word is the head. The word that is agreed upon (i.e., whose features are reflected on the other word) is the noun.
+   - Additional inference: This is a standard head-dependency identification task that the solver can solve using general linguistic reasoning.
+
+CONSTRAINTS
+
+1. The puzzle data must include enough examples to establish the 2×2 gender×number paradigm for adjectives (at least 3 of the 4 cells must be visible, with the 4th predictable).
+2. The plural suffixes (-im vs. -ot) must be phonologically distinct and consistently applied in the data.
+3. The definite article prefix must appear in both definite and indefinite NPs in the data so the solver can contrast them and identify the prefix as a definiteness marker.
+4. The data must include at least one case where a noun appears in plural without an adjective, so the solver can discover that the plural suffix encodes gender independently of adjective agreement.
+5. The solver must be able to identify head vs. dependent from the data alone (no external knowledge of Hebrew word order needed). The agreement pattern must be unambiguous.
+6. Avoid including spirantization (begadkefat) after the definite article unless the puzzle specifically targets phonological rules; it would add unnecessary complexity to the morphological focus.
+7. All forms in the puzzle data must be consistent with the rules being tested; no irregular forms should appear unless they are the target of a separate sub-question.

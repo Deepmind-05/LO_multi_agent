@@ -1,0 +1,137 @@
+
+
+TARGET-LANGUAGE
+
+Mono (mno), Uto-Aztecan, Northern Uto-Aztecan, California, USA
+
+CONSTRUCTION RATIONALE
+
+1. **Define the underlying grammar as a complete, internally consistent system.** Before creating any data, fix the following rules that will govern all surface forms:
+   - Clause structure: SOV. The verb is the final constituent of the clause.
+   - Negation: A separate, invariant negative particle appears in clause-initial position, before the subject (NegSOV). It is not an affix, not a clitic, and not adjacent to the verb.
+   - Interrogation: A separate, invariant polar question particle occupies second constituent position in the clause. In an affirmative sentence "S O V," the question form is "S Q O V." If a non-subject constituent is fronted (e.g., a topicalized object or adverb), the question particle still follows the first constituent.
+   - Adpositions: Postpositional. The noun precedes the postposition (e.g., "house in" for "in the house").
+   - Genitive: The possessor precedes the possessed noun (GenN).
+   - Relative clauses: The relative clause follows the head noun (NRel).
+   - Nominal morphology: Suffixing. Nouns may bear suffixes for case (at least two: e.g., nominative/absolutive and oblique), plural, demonstrative, and definite. These stack in a fixed, deterministic order (choose one order and commit to it; e.g., noun stem + plural + case + demonstrative + definite, or any other fixed sequence).
+   - Possessive marking: Prefixal on the noun. A possessive prefix (e.g., 1sg, 2sg, 3sg) attaches to the left of the noun stem. This is the sole prefixal element in the nominal system.
+   - Verbal morphology: Suffixing. Verbs may bear suffixes for tense/aspect (e.g., past, present, future, or perfective/imperfective). Choose a small set (2–3) to keep the system manageable.
+   - The negative particle and question particle are invariant (no allomorphy) and are separate words (space-delimited from adjacent words).
+
+   This step is the "system specification" analogous to choosing the base and digit set in the source rationale. Every later step depends on this being fixed and consistent.
+
+2. **Create the lexicon.** Generate a closed set of lexical items sufficient for the data set:
+   - 4–6 content nouns (phonologically opaque, no internal structure, mutually dissimilar). These will serve as subjects, objects, and heads of phrases.
+   - 3–4 content verbs (phonologically opaque, distinct from nouns). These will serve as the clause-final predicate.
+   - 1 negative particle (a short, invariant word, phonologically distinct from all content words).
+   - 1 question particle (a short, invariant word, phonologically distinct from all other function words and content words).
+   - 1–2 postpositions (short words, distinct from content words).
+   - Noun suffixes: create distinct suffixes for each feature (plural, case, demonstrative, definite). Each suffix should be a short, phonologically distinct string. Ensure no suffix is a substring of another to avoid parsing ambiguity.
+   - Possessive prefixes: create 2–3 distinct prefixes (e.g., 1sg, 2sg, 3sg). Each should be a short, phonologically distinct string, clearly different from any suffix.
+   - Verb suffixes: create 2–3 distinct suffixes for tense/aspect.
+
+   Constraint: No lexical item or affix should be a substring of, or phonologically confusable with, any other. This prevents the solver from making spurious segmental identifications. All forms should be short (1–2 syllables for words; 1–3 consonants or a short CV for affixes) to keep the data readable.
+
+3. **Define surface form templates.** Write out the compositional rules that map underlying structure to surface string:
+   - Affirmative declarative: [S] [O] [V]
+   - Negative declarative: [NEG] [S] [O] [V]
+   - Interrogative (subject-initial): [S] [Q] [O] [V]
+   - Interrogative (fronted non-subject): [X] [Q] [S] [O] [V] (where X is a fronted object, adverb, or other constituent)
+   - Noun phrase: [PossPrefix] [NounStem] [Suffix₁] [Suffix₂] … [Suffixₙ] (suffixes in the fixed order defined in step 1)
+   - Postpositional phrase: [NP] [Postposition]
+   - Genitive phrase: [PossessorNP] [PossessedNP]
+   - Relative clause: [HeadNP] [RelClause] (where RelClause is a full SOV clause)
+   - Verb: [VerbStem] [TenseAspectSuffix]
+
+   These templates are the "surface syntax" analogous to the numeral expression format in the source rationale. They are what the solver must reverse-engineer.
+
+4. **Design the data set as a sequence of sentence groups, each targeting a specific discovery.** The data should be organized into groups that the solver encounters in a deliberate order (though the final presentation may interleave them). Each group should contain enough examples to support the intended inference while minimizing redundancy.
+
+   **Group A – Basic word order (supports discovery of SOV):**
+   - 4–5 affirmative declarative sentences with different subject and object nouns, using 2–3 different verbs.
+   - Include at least one pair of sentences that share the same verb but swap subject and object (e.g., "dog chases cat" and "cat chases dog" rendered in Mono). This controlled contrast lets the solver confirm that the first noun is the subject and the second is the object, not the other way around.
+   - All sentences should be simple (no negation, no question, no complex NPs) to isolate the word-order variable.
+   - Solver inference target: The verb is final; the subject precedes the object; the language is SOV.
+
+   **Group B – Head-finality in other domains (supports generalization of head-finality):**
+   - 2–3 sentences containing a postpositional phrase (e.g., "The man is in the house" → the house-noun precedes the postposition).
+   - 1–2 sentences containing a genitive construction (e.g., "The man's dog" → possessor precedes possessed).
+   - 1–2 sentences containing a relative clause (e.g., "The dog that the man saw" → head noun precedes the relative clause).
+   - These sentences should be affirmative and declarative (no negation or question) to avoid confounding.
+   - Solver inference target: The head-final pattern is not limited to clause structure; it extends to adpositions, genitive, and relative clauses. The language is systematically head-final.
+
+   **Group C – Negation (supports discovery of NegSOV):**
+   - 3–4 negative declarative sentences.
+   - Include at least one pair where the affirmative version (from Group A) and the negative version of the same proposition are both present. This lets the solver see exactly where the negative particle is inserted.
+   - The negative particle must appear before the subject in every negative sentence.
+   - Include at least one negative sentence where the subject is a complex NP (e.g., with a suffix or possessive prefix) to show that the particle precedes the entire subject constituent, not just the noun stem.
+   - Solver inference target: The negative particle is clause-initial, before the subject. This violates the typological expectation for SOV languages (where preverbal negation is common). The solver should feel the tension between expectation and data.
+
+   **Group D – Interrogation (supports discovery of second-position question particle):**
+   - 3–4 interrogative sentences.
+   - At least 2 should have the subject in first position (yielding S Q O V).
+   - At least 1 should have a non-subject constituent in first position (e.g., a fronted object or an adverb), yielding X Q S O V. This is critical: it demonstrates that the particle is in "second position" (after the first constituent) rather than simply "after the subject."
+   - The question particle must be a separate word, invariant, and phonologically distinct from the negative particle.
+   - Solver inference target: The question particle occupies second constituent position. This creates a three-way positional contrast: clause-initial (negation), second position (question), clause-final (verb).
+
+   **Group E – Nominal morphology (supports discovery of suffixing + possessive prefix exception + suffix order):**
+   - 4–6 noun phrases showing different combinations of {possessive prefix, plural, case, demonstrative, definite}.
+   - Include at least one noun with no affixes (bare stem) to establish the stem.
+   - Include at least one noun with a possessive prefix only.
+   - Include at least one noun with a suffix only (e.g., plural or case).
+   - Include at least one noun with both a possessive prefix AND a suffix (e.g., "my dogs" → prefix + stem + plural suffix). This co-occurrence is critical: it shows that the prefix and suffix are on opposite sides of the stem, confirming the prefix-suffix asymmetry.
+   - Include at least 3 different combinations of suffixes to allow triangulation of the suffix order. At least one noun should bear 3 or more suffixes simultaneously.
+   - Solver inference target: (a) Most nominal morphology is suffixal; (b) possessive marking is prefixal (the exception); (c) suffixes stack in a fixed order.
+
+   **Group F – Verbal morphology (supports discovery of tense/aspect suffixes):**
+   - 2–3 sentences where the same verb stem appears with different tense/aspect suffixes, in otherwise similar contexts.
+   - The glosses should make the temporal/aspectual contrast clear (e.g., "The man walks" vs. "The man walked" vs. "The man will walk").
+   - Solver inference target: Verbs take suffixes encoding tense/aspect. This extends the suffixing pattern to the verbal domain.
+
+5. **Design the question tiers with progressive difficulty.** The questions should be organized so that each tier depends on discoveries from earlier tiers.
+
+   **Tier 1 – Structural identification (depends on Group A, B):**
+   - Present a set of sentences (some from the data, some novel but following the same patterns).
+   - Ask the solver to: (a) identify the word order of the language; (b) label each word in a given sentence as S, O, V, postposition, etc.; (c) identify the head-final pattern in a postpositional phrase or relative clause.
+   - This tier tests whether the solver has identified the basic SOV order and the head-final generalization. It is the "decoding" tier analogous to the first tier in the source rationale.
+
+   **Tier 2 – Particle positions (depends on Groups C, D and the SOV discovery from Tier 1):**
+   - Present novel sentences (not in the data) that are negative or interrogative.
+   - Ask the solver to: (a) identify the position of the negative particle and explain why it is there (not preverbal); (b) identify the position of the question particle; (c) predict where the negative particle and question particle would go in a sentence with a fronted constituent.
+   - Include at least one "trap" item: a sentence where the typological expectation (preverbal negation) would give the wrong answer. The solver must rely on the data, not on typological priors.
+   - This tier is the "aha" tier. The solver must resist the expectation that negation in an SOV language is preverbal and instead follow the evidence.
+
+   **Tier 3 – Morphological analysis (depends on Groups E, F and the suffixing discovery):**
+   - Present novel noun phrases and verb forms (not in the data).
+   - Ask the solver to: (a) segment a complex noun into stem + prefix + suffixes; (b) identify the function of each affix; (c) determine the order of suffixes from the data and apply it to a novel combination; (d) identify the possessive prefix and explain why it is on the left while other affixes are on the right.
+   - Include at least one novel noun with 3+ suffixes in an order the solver must predict from the pattern.
+   - This tier tests whether the solver has abstracted the morphological rules and can apply them to new data.
+
+   **Tier 4 – Production (depends on all previous tiers):**
+   - Provide a set of glosses (in English or interlinear gloss) and ask the solver to produce the correct Mono surface form.
+   - The glosses should require the solver to simultaneously apply: correct word order, correct particle position (if negative or interrogative), correct suffix order, correct possessive prefix placement, and correct tense/aspect marking.
+   - Include at least one production item that is a negative interrogative with a complex NP (e.g., "Did your dogs see the man in the house?"). This requires the solver to integrate all rules simultaneously.
+   - This is the capstone tier, analogous to the encoding tier in the source rationale.
+
+6. **Prevent alternative interpretations.** Apply the following checks to the data set:
+   - (a) The negative particle must be phonologically distinct from the question particle and from all content words. If they were similar, the solver might confuse them.
+   - (b) The question particle must appear in at least two sentences with different first constituents (subject vs. non-subject) to rule out the hypothesis that it is simply "after the subject" rather than "in second position."
+   - (c) The negative particle must appear in at least 3 sentences to rule out the hypothesis that it is simply "the first word" (i.e., to confirm it is specifically pre-subject and not, say, pre-object in some other analysis).
+   - (d) The possessive prefix must co-occur with at least one suffix in the data to rule out the hypothesis that "possessive nouns are simply a different class of word" rather than "the same noun with a prefix."
+   - (e) The suffix order must be uniquely determined: verify that no other ordering of the suffixes is consistent with all the data. If two orderings are both consistent, add a data point that distinguishes them.
+   - (f) The SOV order must be unambiguous: no sentence should be parseable as SVO or OVS given the glosses. The glosses should make the semantic roles clear.
+   - (g) No affix should be a substring of another affix or of a word stem, to prevent spurious segmentation.
+
+7. **Calibrate difficulty progression.** The overall difficulty arc should be:
+   - Tier 1 is accessible: pattern recognition of word order is a straightforward inductive task. The solver should be able to complete this tier with moderate effort.
+   - Tier 2 introduces the key counter-expectation (NegSOV). The difficulty here is not computational but cognitive: the solver must override a typological prior. The data must be clear enough that the override is forced, but the initial expectation should be strong enough to create genuine tension.
+   - Tier 3 requires systematic morphological analysis. The difficulty is in the combinatorial space: the solver must track multiple affixes and their order. This is a "working memory" and "pattern extraction" challenge.
+   - Tier 4 is integrative: the solver must combine all rules simultaneously. The difficulty is in the coordination of multiple constraints, not in any single rule.
+   - The overall puzzle should be solvable in a reasonable time (e.g., 30–60 minutes for a skilled solver) but should require sustained attention and systematic reasoning. The solver should not be able to "guess" the answer to any tier without having done the inductive work of the previous tiers.
+
+8. **Ensure the glosses are self-sufficient.** All glosses must follow standard Leipzig Glossing Rules and must be complete enough that a solver with no knowledge of Mono can determine the meaning of every sentence. Specifically:
+   - Every content word must be glossed with its English equivalent.
+   - Every affix must be glossed with its grammatical function (e.g., -PL, -DEF, -OBL, 1SG.POSS).
+   - The negative particle and question particle must be glossed (e.g., NEG, Q).
+   - The glosses should make the semantic roles (agent, patient, location, possessor, etc.) unambiguous.
+   - The solver should never need to know Mono to interpret a gloss; the gloss is the interface between the data and the solver's reasoning.

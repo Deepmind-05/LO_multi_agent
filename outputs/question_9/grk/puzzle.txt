@@ -1,0 +1,185 @@
+
+
+# CONTEXT
+
+The data below presents nouns from an unknown language, each accompanied by its definite article. The nouns are given in both singular and plural forms. The translations are provided for reference only and have no bearing on the solution.
+
+The language uses the Greek alphabet. The definite article is a separate word that precedes the noun.
+
+# DATA
+
+**Singular forms:**
+
+| Article | Noun | Translation |
+|---------|------|-------------|
+| ο | λόγος | word |
+| ο | δρόμος | road |
+| ο | άντρας | man |
+| η | γλώσσα | language |
+| η | θάλασσα | sea |
+| η | πόλη | city |
+| το | βιβλίο | book |
+| το | σπίτι | house |
+| το | δέντρο | tree |
+
+**Plural forms:**
+
+| Article | Noun | Translation |
+|---------|------|-------------|
+| οι | λόγοι | words |
+| οι | δρόμοι | roads |
+| οι | άντρες | men |
+| οι | γλώσσες | languages |
+| οι | θάλασσες | seas |
+| οι | πόλεις | cities |
+| τα | βιβλία | books |
+| τα | σπίτια | houses |
+| τα | δέντρα | trees |
+
+# QUESTIONS
+
+**Q1.** Based on the data above, determine the class (I, II, or III) of each of the following nouns. Class I is the class whose singular article is ο; Class II is the class whose singular article is η; Class III is the class whose singular article is το.
+
+| Noun | Translation |
+|------|-------------|
+| (a) δάσκαλος | teacher |
+| (b) χώρα | country |
+| (c) φρούτο | fruit |
+| (d) νύχτα | night |
+| (e) παιδί | child |
+| (f) φίλος | friend |
+
+**Q2.** Predict the plural form (including the plural article) of each of the following nouns.
+
+| Singular | Translation |
+|----------|-------------|
+| (a) ο δάσκαλος | teacher |
+| (b) η χώρα | country |
+| (c) το φρούτο | fruit |
+| (d) ο φίλος | friend |
+| (e) η νύχτα | night |
+| (f) το παιδί | child |
+
+**Q3.** Predict the singular form (including the singular article) of each of the following nouns. If more than one answer is possible, give all possibilities separated by a comma.
+
+| Plural | Translation |
+|--------|-------------|
+| (a) οι δάσκαλοι | teachers |
+| (b) οι νύχτες | nights |
+| (c) τα φρούτα | fruits |
+| (d) τα παιδιά | children |
+| (e) οι χώρες | countries |
+
+**Q4.** Explain the class system and the rules for plural formation. In your explanation, address:
+(i) How many classes are there, and what evidence identifies them?
+(ii) What is the plural article for each class, and why is the plural article alone insufficient to determine the class in all cases?
+(iii) What vowel changes occur in plural formation, and what determines which change applies?
+
+# ANSWERS
+
+**Q1:**
+(a) Class I
+(b) Class II
+(c) Class III
+(d) Class II
+(e) Class III
+(f) Class I
+
+**Q2:**
+(a) οι δάσκαλοι
+(b) οι χώρες
+(c) τα φρούτα
+(d) οι φίλοι
+(e) οι νύχτες
+(f) τα παιδιά
+
+**Q3:**
+(a) ο δάσκαλος
+(b) η νύχτα, ο νύχτας
+(c) το φρούτο
+(d) το παιδί
+(e) η χώρα, ο χώρας
+
+**Q4:** See solution.
+
+# SOLUTION
+
+**Rules to infer:**
+
+**1. Three-class system (from singular articles):**
+The singular article divides nouns into three classes:
+- Class I: article ο (λόγος, δρόμος, άντρας)
+- Class II: article η (γλώσσα, θάλασσα, πόλη)
+- Class III: article το (βιβλίο, σπίτι, δέντρο)
+
+The final vowel of the singular noun also identifies the class:
+- Class I nouns end in -ος or -ας
+- Class II nouns end in -α or -η
+- Class III nouns end in -ο or -ι
+
+This is evident from the data: all ο-nouns end in -ος or -ας; all η-nouns end in -α or -η; all το-nouns end in -ο or -ι.
+
+**2. Plural article syncretism:**
+The plural article has only two forms:
+- οι: used for both Class I and Class II nouns
+- τα: used for Class III nouns
+
+This is visible in the plural table: both masculine (λόγοι, δρόμοι, άντρες) and feminine (γλώσσες, θάλασσες, πόλεις) nouns take οι, while neuter nouns take τα. The article that was a perfect three-way diagnostic in the singular becomes only a two-way diagnostic in the plural.
+
+**3. Vowel alternations in plural formation (class-conditioned):**
+
+The specific vowel change depends on both the class AND the final singular vowel:
+
+| Class | Final singular vowel | Plural ending | Example |
+|-------|---------------------|---------------|---------|
+| I | -ος | -οι | λόγος → λόγοι |
+| I | -ας | -ες | άντρας → άντρες |
+| II | -α | -ες | γλώσσα → γλώσσες |
+| II | -η | -εις | πόλη → πόλεις |
+| III | -ο | -α | βιβλίο → βιβλία |
+| III | -ι | -ια | σπίτι → σπίτια |
+
+The alternations are:
+- Class I, -ος → -οι: the final -ος is replaced by -οι (the ο is retained, ι is added)
+- Class I, -ας → -ες: the final α becomes ε
+- Class II, -α → -ες: the final α becomes ε
+- Class II, -η → -εις: the final η becomes ει
+- Class III, -ο → -α: the final ο becomes α
+- Class III, -ι → -ια: the final ι is retained and α is added
+
+**4. The ambiguity of -ες:**
+Both Class I (from -ας) and Class II (from -α) produce the plural ending -ες. Given only a plural form ending in -ες with article οι, the class cannot be determined from the article alone. The solver must consider both possibilities.
+
+**How the rules produce each answer:**
+
+**Q1:** The solver uses the final vowel of each noun to determine its class:
+- (a) δάσκαλος ends in -ος → Class I
+- (b) χώρα ends in -α → Class II
+- (c) φρούτο ends in -ο → Class III
+- (d) νύχτα ends in -α → Class II
+- (e) παιδί ends in -ι → Class III
+- (f) φίλος ends in -ος → Class I
+
+**Q2:** The solver applies the plural formation rules:
+- (a) ο δάσκαλος: Class I, ends in -ος → plural ending -οι, article οι → οι δάσκαλοι
+- (b) η χώρα: Class II, ends in -α → plural ending -ες, article οι → οι χώρες
+- (c) το φρούτο: Class III, ends in -ο → plural ending -α, article τα → τα φρούτα
+- (d) ο φίλος: Class I, ends in -ος → plural ending -οι, article οι → οι φίλοι
+- (e) η νύχτα: Class II, ends in -α → plural ending -ες, article οι → οι νύχτες
+- (f) το παιδί: Class III, ends in -ι → plural ending -ια, article τα → τα παιδιά
+
+**Q3:** The solver works backwards from the plural form:
+- (a) οι δάσκαλοι: ends in -οι → Class I, singular ending -ος, article ο → ο δάσκαλος (unambiguous)
+- (b) οι νύχτες: ends in -ες → could be Class I (from -ας) or Class II (from -α) → η νύχτα OR ο νύχτας (ambiguous)
+- (c) τα φρούτα: article τα → Class III, ends in -α → singular ending -ο, article το → το φρούτο (unambiguous)
+- (d) τα παιδιά: article τα → Class III, ends in -ια → singular ending -ι, article το → το παιδί (unambiguous)
+- (e) οι χώρες: ends in -ες → could be Class I (from -ας) or Class II (from -α) → η χώρα OR ο χώρας (ambiguous)
+
+**Q4:** A complete explanation should cover:
+(i) Three classes identified by singular article (ο, η, το) and confirmed by final singular vowel (-ος/-ας, -α/-η, -ο/-ι).
+(ii) Plural articles are οι (Class I and II) and τα (Class III). The plural article is insufficient because Class I and Class II share the same plural article (οι), so the noun's own form must be consulted to distinguish them.
+(iii) The vowel change is determined by the intersection of class and final singular vowel. Class I: -ος→-οι, -ας→-ες. Class II: -α→-ες, -η→-εις. Class III: -ο→-α, -ι→-ια. The final vowel provides a second conditioning dimension within each class.
+
+# DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to discover a two-dimensional system (class × final vowel) from the data, notice the article syncretism that creates a diagnostic gap in the plural, and handle genuine ambiguity in the reverse-direction task (Q3). The difficulty arises from the interaction of multiple concepts: the solver must simultaneously track the class system, the article paradigm, the vowel alternation rules, and the syncretism that makes the article an incomplete diagnostic. The ambiguous items in Q3 require the solver to recognize that the system is not fully reversible, which is a non-trivial insight that builds on all earlier discoveries.

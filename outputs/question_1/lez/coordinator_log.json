@@ -1,0 +1,289 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language, Lez, so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic features for Lez suitable for a Linguistic Olympiad puzzle. Include core phonological, morphological, syntactic, and lexical features, with clear mappings between Lez forms and English glosses or semantic interpretations. Prioritize features that can support non-trivial inference questions, such as case marking, verb agreement, evidentiality, aspect, word order, or derivational morphology if present.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Lez are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules so that Agent 3 can generate a valid Olympiad puzzle.",
+    "directive": "Using the existing Lez concepts, design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how morphological, syntactic, and lexical features should be represented in data sentences, glosses, and questions. Ensure the rules support non-trivial inference, avoid contradictions, and provide enough structure for Agent 3 to generate a solvable puzzle with unambiguous answers.",
+    "elapsed_seconds": 10.5
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete Olympiad puzzle, including data sentences, glosses, questions, and answer key, based on the existing Lez concepts and rationale.",
+    "directive": "Generate a complete Lez Linguistic Olympiad puzzle using the existing concepts and rationale. Include a DATA section with enough Lez sentences and glosses, a vocabulary/legend if needed, multiple non-trivial inference questions, and an unambiguous answer key. Ensure all forms are glossed, questions are solvable from the data, and no vocabulary is missing or ambiguous.",
+    "elapsed_seconds": 17.6
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 rigorously validate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the generated Lez Linguistic Olympiad puzzle. Check that all data sentences are fully glossed, vocabulary is complete, questions are non-trivial and solvable from the provided data, answers are unambiguous, and the reasoning is internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 25.8
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 failed the current output because Agent 3 produced only an incomplete planning stream and no structured puzzle. The concepts and rationale are not identified as defective, so the issue is at the puzzle-generation level. Agent 3 must be called again to produce a complete, structured Lez Olympiad puzzle with all required fields and a resolved stem conflict.",
+    "directive": "Discard the incomplete planning stream and generate a complete, structured Lez Linguistic Olympiad puzzle. The output must contain explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections. Resolve the stem conflict by assigning distinct, consistent stems for 'carry' and 'go' or by explicitly deriving one from the other with a clear rule. Include enough fully glossed Lez data sentences to support non-trivial inference, a vocabulary/legend if needed, multiple solvable questions, and an unambiguous answer key. Do not include internal monologue, planning notes, or unresolved conflicts.",
+    "elapsed_seconds": 29.1
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, with no current validator verdict. The required next step is to have Agent 4 validate the latest Lez puzzle before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Check that the output is complete and structured, all data sentences are fully glossed, vocabulary is complete, the stem conflict is resolved consistently, questions are non-trivial and solvable from the data, answers are unambiguous, and the solution is internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 33.7
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 failed the latest output because it is not a structured puzzle and contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections. The concepts and rationale are not identified as defective, so this is a puzzle-generation failure. Agent 3 must regenerate the puzzle from scratch, explicitly resolving the lexical conflict and producing only the final structured puzzle without planning monologue.",
+    "directive": "Discard the current invalid output completely. Generate only a final, properly structured Lez Linguistic Olympiad puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Do not include internal monologue, planning notes, or unresolved conflicts. Resolve the 'dun' lexical conflict decisively by assigning one consistent meaning to 'dun' and using a different, clearly glossed stem for the other meaning; state this in the vocabulary/legend if needed. Ensure all data sentences are fully glossed, all vocabulary is present, questions are non-trivial and solvable from the data, and the answer key is unambiguous.",
+    "elapsed_seconds": 36.9
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, with no current validator verdict. The required next step is to have Agent 4 validate the latest Lez puzzle before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Check that the output is complete and structured with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all data sentences are fully glossed; that vocabulary is complete and unambiguous; that any lexical/stem conflict is resolved consistently; that questions are non-trivial and solvable from the provided data; and that the answer key and solution are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 44.4
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL because the current output is not a structured puzzle: it lacks CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, and it leaves a lexical conflict unresolved. The concepts and rationale are not identified as defective, so this is a puzzle-generation failure. Agent 3 must regenerate a complete, final, structured Lez Olympiad puzzle without internal monologue and with a decisive resolution of the 'dun' conflict.",
+    "directive": "Discard the current invalid output completely. Generate only a final, properly structured Lez Linguistic Olympiad puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Do not include internal monologue, planning notes, or unresolved conflicts. Resolve the 'dun' lexical conflict decisively by assigning one consistent meaning to 'dun' and using a different, clearly glossed stem for the other meaning; state this in the vocabulary/legend if needed. Ensure all data sentences are fully glossed, all vocabulary is present, questions are non-trivial and solvable from the provided data, and the answer key is unambiguous.",
+    "elapsed_seconds": 47.7
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, while last_verdict is null. The latest Agent 3 output must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Check that it is complete and structured with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all data sentences are fully glossed; that vocabulary is complete and unambiguous; that any lexical or stem conflict is resolved consistently; that questions are non-trivial and solvable from the provided data; and that the answer key and solution are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 52.7
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL because Agent 3 produced no structured puzzle at all: the output is an internal planning monologue with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections. The concepts and rationale are not reported as defective, so this is a puzzle-generation failure. Agent 3 must regenerate the puzzle from scratch with a strict final format and no internal monologue.",
+    "directive": "Discard the current invalid output completely. Do not include any internal monologue, planning notes, analysis, or unresolved conflicts. Output only the final structured Lez Linguistic Olympiad puzzle. Begin directly with the section header 'CONTEXT:' and include the required sections exactly: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. In DATA, include a complete vocabulary/legend and fully glossed example sentences. Resolve the 'dun' lexical conflict decisively by assigning one consistent meaning to 'dun' and using a different, clearly glossed stem for any other meaning; state this clearly in the vocabulary/legend. Ensure all questions are non-trivial, solvable from the provided data, and that the ANSWERS and SOLUTION sections are internally consistent and unambiguous.",
+    "elapsed_seconds": 55.6
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest state shows a revised Lez puzzle is present and puzzle_needs_validation is true, while last_verdict is null. According to the pipeline rules, whenever a new or revised puzzle has been generated, the next required action is validation by Agent 4. No new validator feedback is present, so the coordinator must route to Agent 4 to evaluate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict such as 'dun' is resolved consistently, all questions are non-trivial and solvable from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 60.1
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4's FAIL is not about the linguistic concepts or rationale; it reports that the current output is an unstructured planning monologue with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections. Since puzzle_needs_validation is false and the latest output is invalid, the next action is to have Agent 3 regenerate a final structured puzzle from scratch while retaining the existing concepts and rationale.",
+    "directive": "Discard the current output entirely. Do not output any analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle beginning with 'CONTEXT:' and containing exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve the 'dun' conflict decisively: assign 'dun' one consistent meaning and use a different clearly glossed stem for any other meaning; state this in the legend. Ensure every question is non-trivial, solvable solely from the provided data, and that ANSWERS and SOLUTION are internally consistent and unambiguous. Keep the puzzle concise enough to fit the output limit.",
+    "elapsed_seconds": 63.0
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The current state shows that a revised Lez puzzle has been generated and puzzle_needs_validation is true, while last_verdict is null. According to the pipeline rules, the latest puzzle must be validated before any further revision or completion. The concepts and rationale are present, and no new validator feedback is available, so the next required action is to call Agent 4 to validate the latest puzzle.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict such as 'dun' is resolved consistently, all questions are non-trivial and solvable from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 69.8
+  },
+  {
+    "step": 15,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it is an incomplete planning monologue with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections. The concepts and rationale are not reported as defective, so this is a puzzle-generation failure. Agent 3 must regenerate a final structured puzzle from scratch, resolve the lexical conflict decisively, and avoid any internal monologue.",
+    "directive": "Discard the current invalid output completely. Do not include any internal monologue, planning notes, analysis, or unresolved conflicts. Output only the final structured Lez Linguistic Olympiad puzzle. Begin directly with the section header 'CONTEXT:' and include exactly these sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve the 'c'ur' conflict decisively by assigning it one consistent meaning and using a different, clearly glossed stem for any other meaning; state this clearly in the vocabulary/legend. Ensure all questions are non-trivial, solvable solely from the provided data, and that ANSWERS and SOLUTION are internally consistent and unambiguous. Keep the puzzle concise enough to fit the output limit.",
+    "elapsed_seconds": 72.8
+  },
+  {
+    "step": 16,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Lez puzzle is present and puzzle_needs_validation is true, while last_verdict is null. The pipeline requires validation of the latest puzzle before any further revision or completion. No new validator feedback is available, so Agent 4 must evaluate the current structured puzzle.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict such as 'dun' or 'c'ur' is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 78.1
+  },
+  {
+    "step": 17,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections and appears to be an incomplete internal monologue. The concepts and rationale are not reported as defective, so the failure is at the puzzle-generation level. Agent 3 must regenerate a complete, final, structured Lez puzzle from scratch, with no planning text or internal monologue.",
+    "directive": "Discard the current invalid output completely. Do not output any analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle. Begin directly with 'CONTEXT:' and include exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve any lexical or stem conflict decisively by assigning each stem one consistent meaning and using a different clearly glossed stem for any other meaning; state this in the legend. Ensure every question is non-trivial, solvable solely from the provided data, and that ANSWERS and SOLUTION are internally consistent and unambiguous. Keep the puzzle concise enough to fit the output limit.",
+    "elapsed_seconds": 80.8
+  },
+  {
+    "step": 18,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a new or revised Lez puzzle has been generated and puzzle_needs_validation is true, while last_verdict is null. According to the required workflow, the latest puzzle must be validated before any further revision or completion. No validator feedback is present yet, so the next action is to call Agent 4 to evaluate the current puzzle.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 85.3
+  },
+  {
+    "step": 19,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections and appears to be an unresolved internal monologue. The concepts and rationale are not reported as defective, so the failure is at the puzzle-generation level. Agent 3 must regenerate a complete, final, structured Lez puzzle from scratch, decisively resolve the lexical conflict, and avoid any planning text or internal monologue.",
+    "directive": "Discard the current invalid output completely. Do not output any analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle. Begin directly with 'CONTEXT:' and include exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve the 'c'ur' conflict decisively by assigning it one consistent meaning and using a different, clearly glossed stem for any other meaning; state this clearly in the vocabulary/legend. Ensure every question is non-trivial, solvable solely from the provided data, and that ANSWERS and SOLUTION are internally consistent and unambiguous. Keep the puzzle concise enough to fit the output limit.",
+    "elapsed_seconds": 88.2
+  },
+  {
+    "step": 20,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle has been generated and puzzle_needs_validation is true, while last_verdict is null. No validator feedback is present yet, so the latest puzzle must be evaluated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 103.8
+  },
+  {
+    "step": 21,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections and is an unresolved internal monologue about a stem collision. The concepts and rationale are not reported as defective, so this is a Tier 3 puzzle-generation failure. Agent 3 must regenerate a complete, final, structured puzzle from scratch, decisively avoid the stem conflict, and output only the puzzle with no planning text.",
+    "directive": "Discard all previous output completely. Do not output any analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle, beginning directly with 'CONTEXT:' and using exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, include a complete vocabulary/legend and fully glossed example sentences. Resolve any lexical or stem conflict decisively: assign each stem exactly one meaning; if using 'c'ur', use it for only one meaning and use a different clearly glossed stem for the other meaning, or omit the conflicting pair entirely and use two unambiguous stems. Keep the puzzle concise, with enough data to make every question non-trivial and solvable solely from the provided data. Ensure ANSWERS and SOLUTION are internally consistent and unambiguous.",
+    "elapsed_seconds": 107.1
+  },
+  {
+    "step": 22,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle has been generated and puzzle_needs_validation is true, while last_verdict is null. No validator feedback is present yet, so the latest puzzle must be evaluated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 121.6
+  },
+  {
+    "step": 23,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a valid puzzle: it contains no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections and is an unresolved internal monologue about a stem conflict. The concepts and rationale are not reported as defective, so this is a Tier 3 puzzle-generation failure. Agent 3 must regenerate a complete, final, structured Lez puzzle from scratch, decisively avoid or resolve the lexical conflict, and output only the puzzle with no planning text.",
+    "directive": "Discard all previous output completely. Do not output any analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle, beginning directly with 'CONTEXT:' and using exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, include a complete vocabulary/legend and fully glossed example sentences. Resolve any lexical or stem conflict decisively: assign each stem exactly one meaning; if using 'c'ur', use it for only one meaning and use a different clearly glossed stem for the other meaning, or omit the conflicting pair entirely and use two unambiguous stems. Keep the puzzle concise, with enough data to make every question non-trivial and solvable solely from the provided data. Ensure ANSWERS and SOLUTION are internally consistent and unambiguous.",
+    "elapsed_seconds": 125.7
+  },
+  {
+    "step": 24,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle exists and puzzle_needs_validation is true, while last_verdict is null and no validator feedback is present. Therefore, the latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 136.0
+  },
+  {
+    "step": 25,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a puzzle at all and is stuck in an unresolved stem conflict between c'ur as 'water' and c'ur as 'eat'. Agent 3 has already been instructed twice to regenerate the puzzle and avoid this conflict, but the same failure recurred. This indicates the problem is likely in the rationale/morphological rule system, where the conflicting stem assignment is causing structural ambiguity or impossibility. Therefore, the pipeline should route to Agent 2 to revise the rationale and eliminate the stem conflict before another puzzle-generation attempt.",
+    "directive": "Revise the Lez rationale to eliminate the unresolved stem conflict between c'ur as 'water' and c'ur as 'eat'. Do not leave any ambiguous or contradictory lexical assignments. Preferably use two distinct, clearly glossed stems for these meanings, or omit one of the conflicting items entirely. Ensure every stem in the rationale has exactly one consistent meaning unless homonymy is explicitly and safely defined with unambiguous contextual cues. The revised rationale must be internally consistent, structurally solvable, and sufficient for Agent 3 to generate a complete final puzzle without internal monologue or unresolved conflicts.",
+    "elapsed_seconds": 138.7
+  },
+  {
+    "step": 26,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline now has concepts and a revised rationale, but no puzzle has been generated and puzzle_needs_validation is false. The previous failure was routed to Agent 2 to eliminate the stem conflict, so the next step is to have Agent 3 generate a complete final puzzle from the revised rationale.",
+    "directive": "Using the revised Lez rationale, generate a complete final Linguistic Olympiad puzzle. Output only the puzzle, beginning directly with 'CONTEXT:' and using exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. Do not include analysis, planning, notes, or internal monologue. Ensure DATA contains a complete vocabulary/legend and fully glossed example sentences. Resolve all lexical/stem conflicts decisively: each stem must have exactly one consistent meaning unless homonymy is explicitly and safely defined. Make every question non-trivial and solvable solely from the provided data, and ensure ANSWERS and SOLUTION are internally consistent and unambiguous.",
+    "elapsed_seconds": 145.2
+  },
+  {
+    "step": 27,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Lez puzzle has been generated and puzzle_needs_validation is true, while last_verdict is null and no validator feedback is present. The latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 150.1
+  },
+  {
+    "step": 28,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL because the latest output is not a usable puzzle: it is an incomplete internal monologue with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION sections and gets stuck on a trivial stem conflict. The concepts and rationale are not reported as fundamentally defective, so this is a Tier 3 puzzle-generation failure. Since time remains, Agent 3 must regenerate a complete final puzzle with decisive lexical choices and no planning text.",
+    "directive": "Discard all previous output. Output only a final Lez Linguistic Olympiad puzzle, starting directly with 'CONTEXT:' and using exactly these headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. Do not include analysis, planning, notes, or internal monologue. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve the stem conflict decisively: assign each stem exactly one meaning; for 'bread' and 'go', use two distinct clearly glossed stems, or omit one of the pair entirely, and never reuse a stem for a different meaning. Keep the puzzle concise and ensure every question is non-trivial and solvable solely from the provided data, with ANSWERS and SOLUTION internally consistent.",
+    "elapsed_seconds": 152.9
+  },
+  {
+    "step": 29,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle exists and puzzle_needs_validation is true, while last_verdict is null and no validator feedback is present. Therefore, the latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues if any.",
+    "elapsed_seconds": 161.0
+  },
+  {
+    "step": 30,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Revising puzzle implementation to address validator issues.",
+    "directive": "- [CRITICAL] The output is not a valid puzzle. It is an incomplete planning monologue that never produces the required sections (CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION). No puzzle exists to validate.\n- [CRITICAL] The output is stuck in an infinite loop repeating \"xan \u2192 NO\" and never reaches a final design decision, let alone a complete puzzle.\n- [CRITICAL] No questions, data, answers, or solution are present. The entire output is internal reasoning that was never converted into a deliverable.",
+    "elapsed_seconds": 164.2
+  },
+  {
+    "step": 31,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle exists and puzzle_needs_validation is true, while last_verdict is null and no validator feedback is present. Therefore, the latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. If the output is still an incomplete planning monologue or lacks required sections, return FAIL with specific issues.",
+    "elapsed_seconds": 171.5
+  },
+  {
+    "step": 32,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL because Agent 3 produced no usable puzzle, only an incomplete planning monologue, and failed to resolve a simple lexical/stem conflict. Concepts and rationale are present and not reported as fundamentally flawed, so this is a Tier 3 puzzle-generation failure. With time remaining, Agent 3 must be called again with a strict directive to discard all prior output and produce only a final, structured, solvable Lez puzzle.",
+    "directive": "Discard all previous output. Do not include analysis, planning, notes, or internal monologue. Output only a final Lez Linguistic Olympiad puzzle beginning directly with 'CONTEXT:' and using exactly these headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. In DATA, provide a complete vocabulary/legend and fully glossed example sentences. Resolve any lexical or stem conflict decisively: assign each stem exactly one meaning; if a stem such as 'bread' or 'go' conflicts, use a different clearly glossed stem or omit that item entirely. Keep the puzzle concise, ensure every question is non-trivial and solvable solely from the provided data, and make ANSWERS and SOLUTION internally consistent.",
+    "elapsed_seconds": 174.7
+  },
+  {
+    "step": 33,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline state shows that a revised Lez puzzle exists and puzzle_needs_validation is true, while last_verdict is null and no validator feedback is present. Therefore, the latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. If the output is still an incomplete planning monologue or lacks required sections, return FAIL with specific issues.",
+    "elapsed_seconds": 190.3
+  },
+  {
+    "step": 34,
+    "decision": "CALL_AGENT2",
+    "reasoning": "The validator\u2019s FAIL identifies two problems: trivial questions that copy data sentences and, more fundamentally, a difficulty level below target because the rules are individually transparent and do not interact. The triviality is a puzzle-level symptom, but the root cause is that Agent 2\u2019s rationale does not provide enough inferential depth for a difficulty-5 Olympiad puzzle. Therefore, the rationale should be redesigned to include interacting rules, context-sensitive allomorphy, or ambiguous segmentation before the puzzle is regenerated.",
+    "directive": "Revise the Lez rationale to reach difficulty 5. Keep the linguistic concepts, but redesign the rule system so that rules interact non-trivially: include at least one context-sensitive allomorphy, one ambiguous segmentation or rule-ordering effect, and one rule whose application is conditioned by another rule\u2019s output. Ensure the resulting puzzle can support novel production questions rather than verbatim data lookups. The revised rationale must make the target surface forms inferable but not immediately transparent from isolated examples.",
+    "elapsed_seconds": 196.2
+  },
+  {
+    "step": 35,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest state has concepts and a revised rationale but no puzzle, and no validation is pending. The prior validator failure was rooted in insufficient inferential depth, which has been addressed by calling Agent 2; the next required step is to generate a complete puzzle from the revised rationale.",
+    "directive": "Using the revised Lez rationale, produce only the final puzzle. Begin directly with CONTEXT: and include exactly the sections CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. No planning, notes, or internal monologue. DATA must contain a complete vocabulary/legend and fully glossed sentences. Implement the revised interacting rules so questions are non-trivial, require inference, and are solvable solely from DATA. Ensure all stems are unambiguous, all forms are consistent, and ANSWERS/SOLUTION are internally consistent. Keep it concise enough to fit the remaining time.",
+    "elapsed_seconds": 205.8
+  },
+  {
+    "step": 36,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Lez puzzle has just been generated after the rationale was redesigned for greater inferential depth, and puzzle_needs_validation is true while no validator verdict is present. The latest puzzle must be validated before any further revision or completion.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it is a final structured puzzle with explicit CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections and no internal monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, any lexical or stem conflict is resolved consistently, all questions are non-trivial and solvable solely from the provided data, and the ANSWERS and SOLUTION sections are internally consistent. If the output is still an incomplete planning monologue or lacks required sections, return FAIL with specific issues.",
+    "elapsed_seconds": 221.3
+  },
+  {
+    "step": 37,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest verdict is PASS_WITH_ISSUES, but the MAJOR Q5 word-order contradiction makes the puzzle not fully acceptable. The concepts and rationale are not reported as fundamentally flawed; this is a Tier 3 puzzle-level defect involving an inconsistent answer, missing/contradictory data, and a misleading solution table. Agent 3 should patch the existing puzzle directly.",
+    "directive": "Make minimal corrections to the existing Lez puzzle and output the complete final puzzle with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Fix Q5: if the data only supports Adv-loc + S-abs + V as in sent. 8, change the Q5 answer to that order; if the intended answer is S-abs + Adv-loc + V, add one fully glossed intransitive locative example in DATA demonstrating that order and ensure no contradiction remains. Also correct the solution's case allomorphy table: remove the unattested V-final ergative allomorph -l and state the ergative as -il, or exactly as attested, with no allomorphy unless the data supports it. Keep all other content unchanged and ensure ANSWERS and SOLUTION are internally consistent.",
+    "elapsed_seconds": 235.8
+  },
+  {
+    "step": 38,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest state shows that Agent 3 has produced a revised Lez puzzle and puzzle_needs_validation is true, while last_verdict is null. The prior PASS_WITH_ISSUES required direct puzzle-level fixes to Q5 and the case allomorphy table, so the revised puzzle must now be validated before any completion decision.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm that it contains only the final structured sections CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, with no planning monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, all stems and case forms are consistent, Q5 word order is now internally consistent with the data, and the solution\u2019s case allomorphy table no longer contains unsupported allomorphs. Verify that all questions are non-trivial and solvable solely from DATA, and that ANSWERS and SOLUTION are fully consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues.",
+    "elapsed_seconds": 244.5
+  },
+  {
+    "step": 39,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest verdict is PASS_WITH_ISSUES with a MAJOR data translation error in sentence 24 that contradicts the established genitive-before-head order. The concepts and rationale are not reported as fundamentally flawed; this is a Tier 3 puzzle-level defect. Agent 3 should patch the translation and output the complete corrected puzzle.",
+    "directive": "Make minimal corrections to the existing Lez puzzle and output the complete final puzzle with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Correct sentence 24's translation so that kora-a-n tara is rendered as the houses' (pl) water (sg), consistent with the genitive-before-head pattern in sentences 6, 10, 12, and 15. If any question, answer, or solution references this sentence, update it accordingly. Do not alter other content unless needed to preserve internal consistency.",
+    "elapsed_seconds": 252.0
+  },
+  {
+    "step": 40,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised Lez puzzle has just been generated after the latest Tier 3 correction to sentence 24, and puzzle_needs_validation is true while no validator verdict is present. The latest puzzle must be validated before any completion decision.",
+    "directive": "Validate the latest revised Lez Linguistic Olympiad puzzle. Confirm it contains only the final structured sections CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, with no planning monologue. Check that all data sentences are fully glossed, all vocabulary is present and unambiguous, all stems and case forms are consistent, sentence 24's translation now matches the established genitive-before-head pattern, and any related questions, answers, or solution references are updated consistently. Verify that all questions are non-trivial and solvable solely from DATA, and that ANSWERS and SOLUTION are fully consistent. Return PASS, PASS_WITH_ISSUES, or FAIL with specific issues.",
+    "elapsed_seconds": 257.1
+  },
+  {
+    "step": 41,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, puzzle_needs_validation is false, and the puzzle is fully verified and acceptable. The time budget has not expired, so the pipeline should finish successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 262.9
+  }
+]

@@ -1,0 +1,258 @@
+
+
+TARGET-LANGUAGE: Martuthunira (mrt), Western Pama-Nyungan, Australia
+
+CORE
+
+1. Concept: 100A-1 (No numeral classification)
+   - Target-language realization: Confirmed by WALS 55A-1 (numeral classifiers absent). Numerals directly modify nouns without an intervening classifier.
+   - Intended solver inference: If numerals appear in data, the solver recognizes the numeral-noun sequence as a direct modification with no classifier element. This is a negative inference (absence of a pattern).
+   - Priority: OPTIONAL
+
+2. Concept: 83A-2 (Dependent marking in noun-numeral phrases)
+   - DROPPED. In Estonian, the noun (dependent) takes partitive case in numeral phrases. In Martuthunira, the noun carries its regular case suffix in numeral phrases (head marking, not dependent marking). The specific Estonian phenomenon (numeral-triggered case change) has no natural parallel in Martuthunira. Forcing this concept would create an artificial or misleading puzzle element.
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Rich case system (10+ cases, suffixal, monoexponential)
+   - Evidence: WALS 49A-8 (10+ cases), 51A-1 (case suffixes), 21A-1 (monoexponential case), 26A-2 (strongly suffixing), 20A-1 (exclusively concatenative)
+   - Intended solver inference: The solver observes different suffixes on nouns in different syntactic/semantic contexts and must deduce the function of each case (nominative, accusative, dative, locative, ablative, allative, etc.). The concatenative, suffixal nature makes the morphemes segmentable.
+   - Interaction with CORE: Provides the primary means of encoding grammatical relations (see #2 below).
+   - Difficulty contribution: HIGH — multiple case functions must be distinguished from context alone.
+   - Priority: REQUIRED
+
+2. Phenomenon: No verbal person/number marking
+   - Evidence: WALS 102A-1 (no person marking), 29A-1 (no subject person/number marking), 100A-1 (neutral alignment, no verbal person marking), 40A-1 (no person marking in verbal inflection)
+   - Intended solver inference: The solver notices that the verb form does not change based on who is performing or receiving the action. Grammatical roles must be identified from case marking on NPs, not from verbal agreement.
+   - Interaction with CORE: This is what makes the case system the primary (and nearly sole) means of identifying grammatical roles. Without verbal agreement, case is indispensable.
+   - Difficulty contribution: HIGH — removes a major cue that solvers from agreement-rich languages would expect.
+   - Priority: REQUIRED
+
+3. Phenomenon: No adpositions (spatial/relational meaning expressed through case)
+   - Evidence: WALS 48A-1 (no adpositions), 85A-5 (no adpositions)
+   - Intended solver inference: The solver notices that spatial and relational meanings (location, direction, source, instrument, etc.) are encoded by case suffixes on nouns rather than by separate preposition/postposition words. This explains the richness of the case system.
+   - Interaction with CORE: Directly explains why the case system is so large (10+ cases). The solver can infer that each "missing" preposition has been absorbed into a case suffix.
+   - Difficulty contribution: HIGH — the solver must map case suffixes to spatial/relational meanings without the scaffold of prepositions.
+   - Priority: REQUIRED
+
+4. Phenomenon: Inclusive/exclusive distinction in independent pronouns
+   - Evidence: WALS 39A-5 (inclusive/exclusive differentiated), 39B-2 (Pama-Nyungan inclusive/exclusive)
+   - Intended solver inference: The solver observes that first-person plural pronouns have two forms and must determine which is inclusive (includes the addressee) and which is exclusive (excludes the addressee) from contextual clues in the data.
+   - Interaction with CORE: Pronouns also carry case marking, so the solver must simultaneously identify person/number/inclusivity AND case from the pronoun form.
+   - Difficulty contribution: MEDIUM-HIGH — requires contextual reasoning to distinguish inclusive from exclusive.
+   - Priority: HIGH
+
+5. Phenomenon: Adjoined (post-nominal) relative clauses
+   - Evidence: WALS 90A-5 (adjoined), 90F-1 (adjoined dominant)
+   - Intended solver inference: The solver observes that the modifying clause follows the noun it modifies (opposite of English). The relativized element is a gap in the clause.
+   - Interaction with CORE: The relativized noun carries its case suffix, so the solver can identify the relativized role from the case on the head noun.
+   - Difficulty contribution: MEDIUM — the post-nominal position is a clear structural cue, but identifying the gap requires reasoning.
+   - Priority: HIGH
+
+6. Phenomenon: Noun-Adjective order (adjectives follow noun)
+   - Evidence: WALS 87A-2 (Noun-Adjective)
+   - Intended solver inference: The solver observes that modifiers (adjectives) follow the noun, opposite to English. This is a clear, easily identifiable pattern.
+   - Interaction with CORE: Adjectives are unmarked; the noun carries case. The solver can identify the noun as the head because it is the marked element.
+   - Difficulty contribution: LOW-MEDIUM — straightforward once noticed.
+   - Priority: HIGH
+
+7. Phenomenon: Adjectives and relative clauses collapsed (same construction)
+   - Evidence: WALS 60A-4 (adjectives and relative clauses collapsed)
+   - Intended solver inference: The solver observes that a noun followed by a modifier could be either an adjective phrase or a relative clause, and the form is identical. The solver must use semantic/contextual cues to distinguish them, or recognize the ambiguity.
+   - Interaction with CORE: Interacts with #5 (adjoined relative clauses) and #6 (N-Adj order) — both adjectives and relative clauses follow the noun in the same form. This creates a genuine ambiguity that the solver must reason about.
+   - Difficulty contribution: MEDIUM-HIGH — creates a subtle but important inference challenge.
+   - Priority: HIGH
+
+8. Phenomenon: Evidentiality (indirect only, verbal suffix/clitic)
+   - Evidence: WALS 77A-2 (indirect evidentials only), 78A-2 (verbal affix or clitic)
+   - Intended solver inference: The solver observes a verbal suffix that marks indirect evidence (hearsay, inference, report). The solver must determine its function from contextual clues (e.g., narrative context suggesting reported information).
+   - Interaction with CORE: Interacts with tense marking (see #10). The evidential suffix is a separate morpheme from tense, and the solver must segment both.
+   - Difficulty contribution: MEDIUM — the function is inferable from context, but the solver must recognize it as evidentiality rather than, say, aspect.
+   - Priority: HIGH
+
+9. Phenomenon: Two possessive classes
+   - Evidence: WALS 59A-2 (two classes), 57A-2 (possessive suffixes), 58A-2 (no obligatorily possessed nouns)
+   - Intended solver inference: The solver observes that different nouns take different possessive suffixes for the same possessor. The solver must identify the two classes and determine what semantic/lexical property distinguishes them (e.g., body parts vs. non-body parts, or inalienable vs. alienable).
+   - Interaction with CORE: Possessive suffixes are a type of dependent marking (the possessor is marked, per WALS 24A-2). This interacts with the overall dependent-marking typology.
+   - Difficulty contribution: MEDIUM-HIGH — requires the solver to notice the split and hypothesize the class distinction.
+   - Priority: HIGH
+
+10. Phenomenon: Past/non-past + future tense (three-way, suffixal)
+    - Evidence: WALS 66A-1 (past/non-past, no remoteness), 67A-1 (inflectional future), 69A-2 (tense-aspect suffixes)
+    - Intended solver inference: The solver observes three verbal suffixes marking past, non-past (present), and future. The three-way distinction is clear and segmentable.
+    - Interaction with CORE: Interacts with evidentiality (#8) — both are verbal suffixes, and the solver must segment them correctly.
+    - Difficulty contribution: MEDIUM — the three-way distinction is relatively straightforward once the suffixes are identified.
+    - Priority: HIGH
+
+11. Phenomenon: SVO basic word order
+    - Evidence: WALS 81A-2 (SVO), 82A-1 (SV), 83A-2 (VO)
+    - Intended solver inference: The solver identifies the basic word order as SVO. Combined with case marking, this provides redundant information about grammatical roles.
+    - Interaction with CORE: In a language with no verbal person marking, word order provides additional (but not sole) evidence for grammatical roles. The solver can use both case and word order.
+    - Difficulty contribution: LOW — SVO is a common order and is easily identifiable.
+    - Priority: HIGH
+
+12. Phenomenon: Interrogative-based indefinites
+    - Evidence: WALS 46A-1 (interrogative-based)
+    - Intended solver inference: The solver observes that indefinite pronouns ("someone," "something") are formally related to interrogative pronouns ("who," "what"). The solver can recognize the morphological relationship.
+    - Interaction with CORE: Interacts with the pronoun system (#4). The solver must identify both the interrogative and indefinite forms and recognize their relationship.
+    - Difficulty contribution: MEDIUM — the morphological relationship is a clear cue once noticed.
+    - Priority: OPTIONAL
+
+13. Phenomenon: Morphological causative
+    - Evidence: WALS 111A-2 (morphological causative)
+    - Intended solver inference: The solver observes a verbal suffix that adds a causer argument. The transitivity of the verb changes (intransitive → transitive, or transitive → ditransitive).
+    - Interaction with CORE: The causative adds an argument that must be marked with case, interacting with the case system.
+    - Difficulty contribution: MEDIUM — the causative is identifiable from the change in argument structure.
+    - Priority: OPTIONAL
+
+14. Phenomenon: Full reduplication only
+    - Evidence: WALS 27A-2 (full reduplication only)
+    - Intended solver inference: If reduplication appears in the data, the solver observes that it is always full (entire stem repeated), not partial. The solver can use this to identify reduplicative morphology.
+    - Interaction with CORE: Reduplication may interact with other morphological processes (e.g., plural, distributive, or intensification).
+    - Difficulty contribution: LOW-MEDIUM — full reduplication is visually obvious.
+    - Priority: OPTIONAL
+
+15. Phenomenon: Small vowel inventory (2-4 vowels)
+    - Evidence: WALS 2A-1 (small, 2-4)
+    - Intended solver inference: The solver can identify the vowel inventory from the data. A small inventory (likely /a, i, u/ or /a, e, i, u/) is a clear phonological feature.
+    - Interaction with CORE: The small vowel inventory constrains the possible forms of morphemes, making the system more regular and easier to segment.
+    - Difficulty contribution: LOW — easily identifiable from the data.
+    - Priority: OPTIONAL
+
+16. Phenomenon: No fricatives, no voicing contrast
+    - Evidence: WALS 18A-3 (no fricatives), 4A-1 (no voicing contrast)
+    - Intended solver inference: The solver can identify the consonant inventory as lacking fricatives and voicing contrasts. This is a clear phonological feature.
+    - Interaction with CORE: Constrains the possible consonant forms in morphemes.
+    - Difficulty contribution: LOW — easily identifiable.
+    - Priority: OPTIONAL
+
+17. Phenomenon: Initial stress, trochaic rhythm
+    - Evidence: WALS 14A-2 (initial stress), 17A-1 (trochaic), 15A-8 (fixed, no weight-sensitivity)
+    - Intended solver inference: If stress is marked in the data, the solver can identify the initial/trochaic pattern.
+    - Interaction with CORE: Stress may aid in morpheme boundary identification.
+    - Difficulty contribution: LOW — straightforward if stress is marked.
+    - Priority: OPTIONAL
+
+18. Phenomenon: Gap relativization on subjects; relativization on obliques not possible
+    - Evidence: WALS 122A-4 (gap for subjects), 123A-5 (oblique relativization not possible)
+    - Intended solver inference: The solver observes that only core arguments (subject, object) can be relativized, and the relativized element is a gap. Oblique arguments cannot be relativized.
+    - Interaction with CORE: Interacts with the case system — the solver can identify which arguments are core (nominative/accusative) vs. oblique (other cases) and predict which can be relativized.
+    - Difficulty contribution: MEDIUM — the constraint on relativization is a clear typological pattern.
+    - Priority: OPTIONAL
+
+19. Phenomenon: Deranked subordinate clauses
+    - Evidence: WALS 125A-3, 126A-3, 127A-3, 128A-3 (all deranked)
+    - Intended solver inference: The solver observes that subordinate clauses (purpose, temporal, reason, complement) have reduced verb morphology compared to main clauses. The solver must identify the deranking strategy (e.g., loss of tense, use of a special form).
+    - Interaction with CORE: Interacts with the tense system (#10) — subordinate clauses may lack tense marking.
+    - Difficulty contribution: MEDIUM-HIGH — the deranking strategy must be inferred from comparison of main and subordinate clauses.
+    - Priority: OPTIONAL
+
+20. Phenomenon: Secondary-object construction for 'give'
+    - Evidence: WALS 105A-3 (secondary-object construction)
+    - Intended solver inference: The solver observes that the 'give' construction has two objects, both marked with the same case (typically accusative). This is different from a dative construction.
+    - Interaction with CORE: Interacts with the case system — both objects are marked with the same case, which is a distinctive pattern.
+    - Difficulty contribution: MEDIUM — the secondary-object pattern is identifiable from the case marking.
+    - Priority: OPTIONAL
+
+21. Phenomenon: Reciprocal distinct from reflexive
+    - Evidence: WALS 106A-2 (distinct from reflexive)
+    - Intended solver inference: The solver observes that reciprocal and reflexive constructions use different morphological strategies.
+    - Interaction with CORE: Both involve the verb, so the solver must identify the different markers.
+    - Difficulty contribution: MEDIUM — the distinction is clear once both are observed.
+    - Priority: OPTIONAL
+
+22. Phenomenon: Demonstrative-Noun order, two-way contrast
+    - Evidence: WALS 88A-1 (Dem-N), 41A-2 (two-way), 42A-1 (identical pronominal/adnominal)
+    - Intended solver inference: The solver observes that demonstratives precede nouns and there are two forms (proximal/distal). The same forms are used as independent pronouns.
+    - Interaction with CORE: The demonstrative-noun order contrasts with the adjective-noun order, creating a clear modifier-order pattern: Dem-N-Adj.
+    - Difficulty contribution: LOW-MEDIUM — straightforward.
+    - Priority: OPTIONAL
+
+23. Phenomenon: Numeral-Noun order, restricted numeral system
+    - Evidence: WALS 89A-1 (Num-N), 131A-6 (restricted)
+    - Intended solver inference: The solver observes that numerals precede nouns and the numeral system is limited in range.
+    - Interaction with CORE: Connects to source concept 100A-1 (no classification) — numerals directly modify nouns.
+    - Difficulty contribution: LOW — straightforward.
+    - Priority: OPTIONAL
+
+24. Phenomenon: Symmetric negation, preverbal negative particle
+    - Evidence: WALS 112A-2 (negative particle), 113A-1 (symmetric), 143A-1 (NegV), 144A-2 (SNegVO)
+    - Intended solver inference: The solver observes a preverbal negative particle that applies symmetrically to all clause types.
+    - Interaction with CORE: The negative particle's position (immediately preverbal) is a clear word-order cue.
+    - Difficulty contribution: LOW — straightforward.
+    - Priority: OPTIONAL
+
+25. Phenomenon: Passive construction
+    - Evidence: WALS 107A-1 (passive present)
+    - Intended solver inference: The solver observes a passive form where the agent is demoted or omitted and the patient is promoted to subject.
+    - Interaction with CORE: The passive changes the case marking pattern, interacting with the case system.
+    - Difficulty contribution: MEDIUM — the passive is identifiable from the change in case marking.
+    - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Case system + No verbal person marking + No adpositions (REQUIRED trio)
+   - Interaction: These three features together create the central puzzle insight: in Martuthunira, case suffixes on nouns do all the work that (a) verbal agreement, (b) prepositions, and (c) word order do in other languages. The solver must deduce the full case system from context, with no verbal agreement to help identify roles and no prepositions to signal spatial relations.
+   - Additional inference enabled: The solver can predict that the case system will be large (10+ cases) because it must cover all the functions that prepositions and verbal agreement would otherwise handle.
+
+2. Case system + Inclusive/exclusive pronouns
+   - Interaction: Pronouns carry both person/number/inclusivity AND case. The solver must simultaneously identify multiple features from a single form. The inclusive/exclusive distinction adds a dimension that is not present in most European languages.
+   - Additional inference enabled: The solver can use the case marking on pronouns to confirm their grammatical role, and the inclusive/exclusive distinction provides additional contextual information about the discourse participants.
+
+3. Adjoined relative clauses + Adjectives and relative clauses collapsed + Noun-Adjective order
+   - Interaction: All three features converge on the same structural position: a modifier following the noun. The solver cannot formally distinguish an adjective from a relative clause — they are the same construction. This creates a genuine ambiguity that the solver must reason about.
+   - Additional inference enabled: The solver must use semantic and contextual cues (e.g., presence of a gap, complexity of the modifier) to determine whether a post-nominal modifier is an adjective or a relative clause. This is a non-trivial reasoning challenge.
+
+4. Evidentiality + Tense (three-way)
+   - Interaction: Both are verbal suffixes. The solver must segment the verbal morphology into tense and evidentiality components. The order of these suffixes is a puzzle element.
+   - Additional inference enabled: The solver can use the interaction between tense and evidentiality to confirm the segmentation (e.g., certain combinations may be more or less frequent).
+
+5. Two possessive classes + Case system + Dependent marking (possessor marked)
+   - Interaction: Possessive suffixes are a type of dependent marking (the possessor is marked on the possessed noun). The two-class system means the solver must identify which nouns belong to which class and what the distinguishing property is.
+   - Additional inference enabled: The solver can use the possessive class to make predictions about other morphological behavior of the noun (e.g., whether it takes certain case suffixes differently).
+
+6. SVO + Case marking + No verbal person marking
+   - Interaction: In a language with no verbal person marking, word order and case marking are the two primary means of identifying grammatical roles. The SVO order provides a default, but case marking can override or confirm it. The solver must learn to use both cues together.
+   - Additional inference enabled: The solver can identify cases where word order and case marking disagree (e.g., topicalization or focus), which reveals additional discourse functions.
+
+7. No adpositions + Rich case system + Demonstrative-Noun order + Numeral-Noun order + Noun-Adjective order
+   - Interaction: The modifier order in noun phrases is: Demonstrative-Noun-Adjective (with numerals also preceding the noun). The absence of adpositions means that spatial/relational meaning is in the case suffix on the noun, not in a separate word. The solver can use the modifier order to identify the head noun (the marked element) and the case suffix to identify its grammatical/spatial role.
+   - Additional inference enabled: The solver can build a complete model of noun phrase structure: [Dem] [Num] N[Case] [Adj/RelCl].
+
+8. Interrogative-based indefinites + Inclusive/exclusive pronouns
+   - Interaction: Both are part of the pronoun system. The solver must identify the full pronoun paradigm, including the relationship between interrogatives and indefinites, and the inclusive/exclusive distinction.
+   - Additional inference enabled: The solver can use the morphological relationship between interrogatives and indefinites to confirm the identification of the interrogative forms.
+
+9. Deranked subordinate clauses + Tense + Evidentiality
+   - Interaction: Subordinate clauses have reduced verb morphology. The solver must identify what is lost in deranking (e.g., tense, evidentiality, or both) and how this contrasts with main clause verbs.
+   - Additional inference enabled: The solver can use the presence or absence of tense/evidentiality marking to identify clause type (main vs. subordinate).
+
+10. Gap relativization + Relativization on obliques not possible + Case system
+    - Interaction: Only core arguments (nominative/accusative) can be relativized. The solver can use the case system to predict which arguments are relativizable. The gap in the relative clause is identified by the case on the head noun.
+    - Additional inference enabled: The solver can predict that if a noun has an oblique case, it cannot be the head of a relative clause (or rather, the relative clause cannot be formed by gapping that oblique argument).
+
+CONSTRAINTS
+
+1. The puzzle must present sufficient data for the solver to identify at least 5-6 distinct case functions. Each case should appear in at least 2-3 different contexts to allow the solver to triangulate its function.
+
+2. The puzzle must include examples where the verb does NOT change for person/number, making it clear that verbal agreement is absent. At least two different subjects (different persons/numbers) should appear with the same verb form.
+
+3. The puzzle must include examples that demonstrate the absence of adpositions. Spatial/relational meanings should be expressed solely through case suffixes, with no separate preposition/postposition words.
+
+4. If inclusive/exclusive pronouns are included, the data must provide sufficient contextual clues (e.g., discourse context) for the solver to determine which form is inclusive and which is exclusive. At least one example of each should be present.
+
+5. If the adjective/relative clause collapse is included, the data must include at least one clear adjective and one clear relative clause in the same structural position (post-nominal), so the solver can observe the formal identity.
+
+6. If evidentiality is included, the data must provide contextual clues (e.g., narrative framing, reported speech) that allow the solver to identify the evidential function. The evidential suffix should appear in at least 2-3 examples.
+
+7. If two possessive classes are included, the data must include nouns from both classes with the same possessor, so the solver can observe the different possessive suffixes. At least 2-3 nouns from each class should be present.
+
+8. The phonological data (if included) should be consistent with the WALS evidence: small vowel inventory (2-4 vowels), no fricatives, no voicing contrast, no uvulars, no glottalized consonants, /l/ present, initial velar nasal possible.
+
+9. The puzzle should not require the solver to know that Martuthunira is a Pama-Nyungan language or to have any prior knowledge of Australian languages. All relevant properties must be inferable from the data.
+
+10. The source concept 83A-2 (dependent marking in noun-numeral phrases) is DROPPED. The puzzle should NOT include any element that suggests a special numeral-triggered case change on the noun. In Martuthunira, the noun simply carries its regular case in numeral phrases.
+
+11. The puzzle should maintain internal consistency: if a case suffix is identified as marking, e.g., locative, it should consistently mark locative throughout the data. No irregularities should be introduced unless they are part of the puzzle's challenge (e.g., the two possessive classes).
+
+12. Word order should be consistently SVO in the data, with any deviations (e.g., topicalization) being clearly marked or contextually motivated, so as not to confuse the solver about the basic order.

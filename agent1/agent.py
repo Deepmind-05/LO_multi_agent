@@ -1,8 +1,12 @@
 import json
 import os
+import time
 from pathlib import Path
 
 from cerebras.cloud.sdk import Cerebras
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 MODEL = "qwen-3.8-27b"
@@ -56,41 +60,64 @@ def extract_target_language_and_wals(target_profile: dict) -> tuple[dict, list]:
     return target_language, wals_evidence
 
 
+def extract_message_content(response) -> str:
+    if not response or not response.choices:
+        return ""
+    msg = response.choices[0].message
+    content = msg.content
+    if content:
+        return content
+    reasoning = getattr(msg, "reasoning_content", None) or getattr(msg, "reasoning", None)
+    return reasoning or ""
+
+
 def call_agent1(
     system_prompt: str,
     source_concepts: dict,
     target_language: dict,
     wals_evidence: list,
+    feedback: str = "",
 ) -> str:
     payload = {
         "SOURCE_CONCEPTS": source_concepts,
         "TARGET_LANGUAGE": target_language,
         "WALS_EVIDENCE": wals_evidence,
     }
+    if feedback:
+        payload["VALIDATOR_FEEDBACK_AND_DIRECTIVE"] = feedback
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-            },
-        ],
-        max_completion_tokens=MAX_COMPLETION_TOKENS,
-        temperature=0.2,
-        top_p=0.95,
-        reasoning_effort="low",
-    )
-
-    return response.choices[0].message.content
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt,
+                    },
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                    },
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+                temperature=0.2,
+                top_p=0.95,
+                reasoning_effort="low",
+            )
+            return extract_message_content(response)
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_sec = 2.0 * (2 ** attempt)
+                print(f"[Agent 1] API call error ({e}). Retrying in {wait_sec}s...")
+                time.sleep(wait_sec)
+            else:
+                raise e
 
 
 def run_agent1(
@@ -98,6 +125,7 @@ def run_agent1(
     source_input: dict | str,
     languages_path: str,
     prompt_path: str,
+    feedback: str = "",
 ) -> str:
     prompt = load_prompt(prompt_path)
     source = load_source(source_input)
@@ -109,4 +137,5 @@ def run_agent1(
         source_concepts=source.get("concepts"),
         target_language=target_language,
         wals_evidence=wals_evidence,
+        feedback=feedback,
     )

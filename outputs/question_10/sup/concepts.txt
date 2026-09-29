@@ -1,0 +1,100 @@
+
+
+TARGET-LANGUAGE: Supyire (Senufo, Niger-Congo, Côte d'Ivoire)
+
+CORE
+
+1. Word order (adapted from VSO source)
+   - Target-language realization: SOV basic order (WALS 81A-1). Subject precedes object, object precedes verb.
+   - Intended solver inference: From a set of transitive and intransitive sentences, the solver identifies that the verb is final and that the first NP is the subject (supported by obligatory pronominal subjects and lack of verbal person marking).
+   - Priority: REQUIRED
+
+2. Definite marking (adapted from definite articles source)
+   - Target-language realization: Definite affix on the noun (WALS 37A-3), likely a suffix given weakly suffixing tendency (26A-3). The affix likely agrees with the noun's gender class.
+   - Intended solver inference: The solver identifies a consistent morpheme that marks definiteness and notices it varies by gender class, linking definiteness to the gender system.
+   - Priority: REQUIRED
+
+3. Relative clause structure (adapted from postnominal relative clauses source)
+   - Target-language realization: Correlative relative clauses (WALS 90A-4, 90E-1). The relative clause is a separate clause containing a correlative element (likely a gendered 3rd-person pronoun) that corresponds to the head noun. Non-reduction strategy (122A-2, 123A-2).
+   - Intended solver inference: The solver identifies that relative clauses are not postnominal modifiers but separate clauses linked by a correferential element. The solver must identify the correlative element and its agreement properties.
+   - Priority: REQUIRED
+
+4. Tense/aspect marking (adapted from verbal prefixes source)
+   - Target-language realization: Grammatical perfective/imperfective distinction (65A-1); past with 2–3 remoteness distinctions (66A-2); no inflectional future (67A-2); suppletion in both tense and aspect (79A-3); monoexponential TAM (21B-1); mixed position of TAM affixes (69A-4).
+   - Intended solver inference: The solver identifies that tense/aspect is marked on the verb (or as a separate morpheme), that there is a perfective/imperfective contrast, and that past is distinguished from non-past. The solver may or may not identify the full remoteness system.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Gender system (5+ genders, non-sex-based)
+   - Phenomenon: Supyire has five or more genders (30A-5), non-sex-based (31A-3), with semantic and formal assignment (32A-3). Gender is reflected in 3rd-person pronouns (singular and non-singular; 44A-2) and likely in the definite affix.
+   - Intended solver inference: From the definite affix variants and 3rd-person pronoun forms, the solver identifies multiple gender classes and attempts to assign nouns to classes based on semantic or formal cues.
+   - Interaction with CORE: The definite affix (CORE #2) is the primary overt marker of gender in noun phrases. The correlative element in relative clauses (CORE #3) is likely a gendered 3rd-person pronoun, creating a direct link between the gender system and relative clause structure.
+   - Difficulty contribution: HIGH. The solver must discover an unfamiliar classification system with no prior cues (non-sex-based means no masculine/feminine default). Multiple classes increase combinatorial complexity.
+   - Priority: REQUIRED
+
+2. Obligatory plural suffix
+   - Phenomenon: All nouns take a plural suffix, always obligatory (33A-2, 34A-6).
+   - Intended solver inference: The solver identifies a consistent suffix that marks plurality on all nouns. This helps segment noun phrases and identify noun boundaries.
+   - Interaction with CORE: The plural suffix appears on the noun before or after the definite affix (depending on affix order), creating a morphological sequence the solver must parse. It may interact with gender (different plural forms per gender, or a single plural suffix that follows gender-specific definite affixes).
+   - Difficulty contribution: MEDIUM. Provides a reliable morphological cue for noun identification but adds a layer of morphological parsing.
+   - Priority: HIGH
+
+3. No verbal person marking + obligatory pronominal subjects
+   - Phenomenon: No person marking of any argument on the verb (102A-1, 29A-1, 100A-1). Pronominal subjects are obligatorily expressed as independent pronouns (101A-1).
+   - Intended solver inference: The solver recognizes that the verb carries no person/number information, so argument identification depends entirely on word order and independent pronouns. This makes the SOV order (CORE #1) crucial for argument identification.
+   - Interaction with CORE: Directly supports the inference of SOV order (CORE #1). The obligatory subject pronoun in initial position provides a clear subject marker. In transitive clauses, the object NP precedes the verb, and the solver must use word order to distinguish S from O.
+   - Difficulty contribution: MEDIUM-HIGH. Without verbal agreement, the solver cannot "cheat" by reading person/number off the verb. This makes word order and independent pronouns the sole evidence for argument structure.
+   - Priority: HIGH
+
+4. Postpositions
+   - Phenomenon: Postpositions (85A-1). Consistent with OV order (95A-1).
+   - Intended solver inference: The solver identifies that spatial/relational phrases have the form NP + postposition, consistent with the general "modifier follows head" tendency (also seen in N-Adj 87A-2, N-Num 89A-2).
+   - Interaction with CORE: Reinforces the SOV pattern. The postpositional phrase typically appears before the verb (OVX order, 84A-5), so the solver sees a consistent pattern of preverbal NPs.
+   - Difficulty contribution: LOW-MEDIUM. Provides additional evidence for word order but is not a central puzzle element.
+   - Priority: OPTIONAL
+
+5. Optional double negation
+   - Phenomenon: Negative particle (112A-2); both preverbal (143E-1) and postverbal (143F-1) negative words; optional double negation (143A-15, 144O-2: S(Neg)OVNeg).
+   - Intended solver inference: The solver identifies that negation involves a particle that can appear before and/or after the verb, and that double negation is optional (not obligatory). The solver must determine whether one or both negators are required.
+   - Interaction with CORE: The position of the negative particle relative to the verb interacts with the SOV order. In a negative transitive sentence, the solver must determine the linear order: S (Neg) O V (Neg).
+   - Difficulty contribution: MEDIUM. Creates an additional ordering constraint and a binary choice (single vs. double negation) that the solver must resolve from the data.
+   - Priority: OPTIONAL
+
+6. Split nominal/locational predication
+   - Phenomenon: Different encoding of nominal and locational predication (119A-1). Zero copula is impossible (120A-1).
+   - Intended solver inference: The solver notices that "X is Y" (identity) and "X is at Z" (location) use different constructions. This may involve different verbs or different structural patterns.
+   - Interaction with CORE: If existential/locational sentences are included, the solver must distinguish them from ordinary transitive/intransitive clauses. This adds a clause-type dimension to the puzzle.
+   - Difficulty contribution: MEDIUM. Adds a clause-type distinction but may overcomplicate the puzzle if combined with all other elements.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Gender × Definite affix (CORE #2 × TARGET #1)
+   - The definite affix is the primary overt exponent of gender in noun phrases. The solver can identify gender classes by observing which definite affix form co-occurs with which nouns. This is the central discovery mechanism for the gender system.
+
+2. Gender × Correlative relative clause (CORE #3 × TARGET #1)
+   - The correlative element in a relative clause is likely a 3rd-person pronoun that agrees with the gender of the head noun. This means the solver must know the gender of the head noun to predict the form of the correlative element. This creates a dependency: solving the gender system is necessary for fully parsing relative clauses.
+
+3. SOV × No verbal person marking (CORE #1 × TARGET #3)
+   - Because the verb carries no person/number information, the solver must rely entirely on linear order and independent pronouns to identify arguments. The obligatory subject pronoun in initial position anchors the subject, and the preverbal NP (after the subject) is the object. This makes word order the sole evidence for argument structure.
+
+4. SOV × Postpositions (CORE #1 × TARGET #4)
+   - Postpositional phrases (NP + postp) appear in preverbal position, consistent with the OV pattern. This reinforces the SOV inference and provides additional evidence for the basic word order.
+
+5. Plural suffix × Gender (TARGET #2 × TARGET #1)
+   - The plural suffix appears on the noun and may interact with the definite affix (which also attaches to the noun). The solver must determine the morphological order (e.g., N + Pl + Def vs. N + Def + Pl) and whether the definite affix form changes in the plural.
+
+6. Tense/aspect × SOV (CORE #4 × CORE #1)
+   - TAM markers attach to or appear near the verb, which is in final position. The solver must identify TAM markers in their preverbal or postverbal position and distinguish them from other preverbal elements (negation, adverbs).
+
+CONSTRAINTS
+
+- No passive, antipassive, or applicative constructions may appear in the data (107A-2, 108A-3, 109A-8). The puzzle must not require the solver to identify or predict these constructions.
+- No verbal person/number marking may appear on the verb. All argument identification must come from independent pronouns and word order.
+- The gender system must be discoverable from the data: sufficient examples of at least 3–4 distinct gender classes must be provided, with enough nouns per class to allow the solver to identify semantic or formal assignment patterns.
+- The correlative relative clause structure must be clearly distinguishable from main clauses and other subordinate clause types. At least 2–3 relative clause examples should be provided.
+- Phonological features (tone, nasal vowels, specific consonant inventory) should NOT be represented in the puzzle data, as they cannot be reliably conveyed in a text-based format and are not relevant to the grammatical inference.
+- The puzzle should not include future tense examples (no inflectional future exists; 67A-2), or if it does, the future must be expressed periphrastically and clearly distinguishable from other constructions.
+- The optional double negation, if included, must provide enough data for the solver to determine that double negation is optional (i.e., both single and double negation examples must appear with the same meaning).
+- The solver has no prior knowledge of Supyire or Senufo languages. All grammatical properties must be inferable from the provided data using general linguistic knowledge and logical reasoning.

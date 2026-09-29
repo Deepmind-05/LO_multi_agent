@@ -1,0 +1,103 @@
+
+
+TARGET-LANGUAGE: Sanuma (snm), Yanomam family, South America
+
+CORE
+
+1. Concept: Basic word order (adapted from source SVO)
+   - Target-language realization: SOV (WALS 81A-1 for snm)
+   - Intended solver inference: From multiple transitive and intransitive sentences, the solver identifies that the verb consistently appears in final position, with subject preceding object.
+   - Priority: REQUIRED
+
+2. Concept: Postverbal negation (from source)
+   - Target-language realization: Separate negative word, immediately postverbal; clause order SOVNeg (WALS 143F-1, 144B-4, 144A-8, 144S-1). Negative auxiliary verb type (112A-3). No double negation. No preverbal negative morpheme.
+   - Intended solver inference: The solver identifies a separate negative element that consistently follows the verb. In SOV order, this yields SOVNeg. The solver must distinguish the negative word from an object or other clause element.
+   - Priority: REQUIRED
+
+3. Concept: Three-way demonstrative contrast (adapted from source's definite article)
+   - Target-language realization: Three-way distance contrast in demonstratives (WALS 41A-3). Demonstrative precedes noun (88A-1).
+   - Intended solver inference: The solver identifies three distinct demonstrative forms and infers a three-way spatial/deictic contrast (e.g., proximal, medial, distal). The pre-nominal position is inferable from the data.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Ergative-absolutive alignment (WALS 98A-4, 99A-4)
+   - Intended solver inference: By comparing intransitive and transitive clauses, the solver identifies that the transitive subject (A) is marked differently from both the intransitive subject (S) and the transitive object (P), which share an unmarked (absolutive) form.
+   - Interaction with CORE: In SOV order, the ergative-marked A precedes the absolutive P. The solver cannot rely on position alone to identify arguments; case marking is essential. This is the central typological insight of the puzzle.
+   - Difficulty contribution: High. Ergative alignment is a major typological category that creates genuine inference when contrasted with the more familiar nominative-accusative pattern.
+   - Priority: REQUIRED
+
+2. Phenomenon: Case marking via postpositional clitics, 2 cases (WALS 51A-6, 49A-2, 28A-1)
+   - Intended solver inference: The ergative case is marked by a clitic attached to the right of the noun or pronoun. The absolutive is unmarked. The solver infers that this is a clitic (not a full inflectional affix) based on its behavior.
+   - Interaction with CORE: The clitic case marker is the mechanism by which ergative alignment is expressed. It interacts with SOV order (the ergative-marked NP appears in pre-verbal subject position).
+   - Difficulty contribution: Medium. The solver must identify the clitic and its function.
+   - Priority: HIGH
+
+3. Phenomenon: No verbal person marking + obligatory independent pronouns (WALS 102A-1, 29A-1, 101A-1)
+   - Intended solver inference: The verb does not change form based on the identity of the subject or object. The solver must rely on independent pronouns (which are obligatorily present in subject position) and case marking to identify arguments.
+   - Interaction with CORE: Because the verb carries no person information, the ergative-absolutive alignment on the pronouns/nouns becomes the primary means of argument identification. This makes the case-marking system more central to the puzzle.
+   - Difficulty contribution: Medium. The solver must recognize that the verb is "invariant" and shift attention to the nominal arguments.
+   - Priority: HIGH
+
+4. Phenomenon: Inclusive/exclusive distinction in first person plural pronouns (WALS 39A-5)
+   - Intended solver inference: The solver identifies that first person plural has two distinct forms: one that includes the addressee (inclusive) and one that does not (exclusive). This is inferable from context in the puzzle data.
+   - Interaction with CORE: The inclusive/exclusive forms also participate in ergative-absolutive alignment (the inclusive/exclusive ergative forms are distinct from the inclusive/exclusive absolutive forms). This adds a layer of complexity to the pronoun system.
+   - Difficulty contribution: Medium-high. The solver must simultaneously track the inclusive/exclusive distinction and the ergative/absolutive distinction in the pronoun paradigm.
+   - Priority: MEDIUM
+
+5. Phenomenon: Postpositions (WALS 85A-1, 95A-1)
+   - Intended solver inference: Spatial/relational markers appear after the noun phrase they modify. This is consistent with the OV order.
+   - Interaction with CORE: The postpositional phrase appears before the verb (XOV order, WALS 84A-3), consistent with SOV. The solver can use this to confirm the overall head-final pattern.
+   - Difficulty contribution: Low-medium. Reinforces the SOV pattern and provides additional structural data.
+   - Priority: MEDIUM
+
+6. Phenomenon: Noun-Adjective order (WALS 87A-2, 97A-2)
+   - Intended solver inference: Adjectives follow the noun they modify.
+   - Interaction with CORE: Consistent with the head-final (SOV) pattern. Provides additional evidence for the overall word-order typology.
+   - Difficulty contribution: Low. Reinforces the head-final pattern.
+   - Priority: OPTIONAL
+
+7. Phenomenon: Plural marked by a separate plural word (WALS 33A-7)
+   - Intended solver inference: Nominal plurality is not marked by an affix on the noun but by a separate word (likely following the noun, consistent with head-final tendency).
+   - Interaction with CORE: The plural word's position relative to the noun and any case clitic provides additional structural information.
+   - Difficulty contribution: Low-medium. Adds a morphological detail that the solver must account for.
+   - Priority: MEDIUM
+
+8. Phenomenon: Pre-nominal demonstrative in a head-final language (WALS 88A-1)
+   - Intended solver inference: The demonstrative precedes the noun, which contrasts with the post-nominal position of adjectives and postpositions. The solver may notice this as an exception to the general head-final pattern.
+   - Interaction with CORE: Creates a contrast within the noun phrase: Dem-N-Adj (demonstrative pre-nominal, adjective post-nominal). This is a notable typological detail.
+   - Difficulty contribution: Low-medium. Adds a subtle contrast that a careful solver will notice.
+   - Priority: MEDIUM
+
+INTERACTIONS
+
+1. SOV + Ergative-absolutive alignment:
+   - In SOV order, the ergative-marked transitive subject (A) appears in the pre-verbal subject position, while the absolutive object (P) appears immediately before the verb. The solver must use case marking (not position) to identify which pre-verbal NP is the agent and which is the patient. This is the central inference of the puzzle.
+
+2. SOV + Postverbal negation:
+   - The negative word follows the verb, yielding SOVNeg in negative clauses. The solver must identify the negative word as a separate element (not an object, not a postposition) based on its consistent position and its effect on clause meaning.
+
+3. Ergative-absolutive + No verbal person marking:
+   - Because the verb is invariant, the solver cannot use verbal morphology to identify arguments. The ergative-absolutive case marking on the nominals (and the obligatory independent pronouns) becomes the sole means of argument identification. This makes the case system the linchpin of the puzzle.
+
+4. Inclusive/exclusive + Ergative-absolutive:
+   - The first person plural pronoun paradigm has a 2x2 structure: inclusive/exclusive × ergative/absolutive. The solver must disentangle both dimensions simultaneously. This creates a small but meaningful combinatorial challenge.
+
+5. Postpositions + SOV + Noun-Adjective:
+   - All three point to a consistent head-final typology (OV, postpositions, NAdj). The solver can use this convergence as confirmation of the SOV analysis. The pre-nominal demonstrative is a notable exception that adds a subtle contrast.
+
+6. Three-way demonstrative + Pre-nominal position:
+   - The three demonstratives all precede the noun. The solver must identify the three-way contrast (likely spatial: near/medium/far) and the consistent pre-nominal position.
+
+CONSTRAINTS
+
+- The puzzle data must include both intransitive and transitive clauses to allow the solver to identify ergative-absolutive alignment. At least one intransitive clause and one transitive clause with different subjects/objects are needed.
+- The ergative case marker must be clearly visible as a clitic attached to the right of the noun/pronoun. It must not be ambiguous with a postposition or a separate word.
+- The negative word must be clearly identifiable as a separate, invariant element (not an inflected form of the verb). Its position must be consistently immediately postverbal across all negative examples.
+- The inclusive/exclusive distinction must be demonstrated in at least two contexts where the referential difference is clear from the puzzle's semantic content.
+- The three-way demonstrative contrast must be demonstrated in contexts where the spatial/deictic distinction is inferable (e.g., "here," "there nearby," "there far away" or similar).
+- The verb must be shown to be invariant across different subjects and objects (no person/number agreement) to support the "no verbal person marking" inference.
+- The solver must not need prior knowledge of Sanuma or the Yanomam family. All relevant properties must be inferable from the provided data.
+- Case marking is via postpositional clitics, not inflectional affixes. The puzzle should make this distinction clear (e.g., the clitic can appear on different hosts, or its behavior is clitic-like).
+- Do not include features that cannot be represented in written text (e.g., interrogative intonation, stress patterns, tone).
+- The antipassive, passive, causative, and evidentiality systems are available but should only be included if they do not overwhelm the central ergative-alignment + word-order + negation insight. They are OPTIONAL and should be used only if the puzzle needs additional depth.

@@ -1,0 +1,165 @@
+
+
+CONTEXT
+
+Below are sentences from an undescribed language, each followed by its English translation.
+
+DATA
+
+1. kaputua tapa kani — I saw the fish
+2. taputua tapa tani — You saw the fish
+3. karaputua tani kani — I saw you
+4. tanaputua kani tani — You saw me
+5. kabapae kapi kani — I eat the fruit
+6. kaputuo tapa kani — I will see the fish
+7. putua tapa yara — He saw the fish
+8. naputua kani yara — He saw me
+9. kadakua muni kani — I hit the dog
+10. nadakua kani yara — He hit me
+11. kabapaei kapi kani-tani — We (you and I) eat the fruit
+12. kabapae kapi kani-gapa — We (my friends and I) eat the fruit
+13. karaputuai tani kani-tani — We (you and I) saw you
+14. karaputua tani kani-gapa — We (my friends and I) saw you
+15. makaputua tapa kani — I didn't see the fish
+16. makaputuo tapa kani — I won't see the fish
+17. makabapae kapi kani — I don't eat the fruit
+18. manadakua kani yara — He didn't hit me
+19. makabapaei kapi kani-tani — We (you and I) don't eat the fruit
+20. mataputua tapa tani — You didn't see the fish
+21. pakue kani — I go
+22. pakua yara — He went
+23. banie tani — You sleep
+24. makapakue kani — I don't go
+
+Vocabulary: tapa = fish; kapi = fruit; muni = dog; wara = bird; kani = I/me; tani = you; yara = he/she/him/her; kani-tani = we (you and I); kani-gapa = we (my friends and I)
+
+QUESTIONS
+
+**Q1.** Translate the following sentences into English.
+
+(a) tadakue muni tani
+
+(b) manaputuo kani yara
+
+(c) pakuo yara
+
+**Q2.** Translate the following sentences into the language. Write the full sentence (verb + NPs).
+
+(a) We (you and I) hit the bird. (past)
+
+(b) We (my friends and I) hit the bird. (past)
+
+(c) I didn't hit the dog.
+
+(d) I don't sleep.
+
+(e) He saw you. (past)
+
+**Q3.** Based on the data, describe the person marking system on the verb.
+
+(a) List the distinct morphemes that mark the subject (A) and the object (P) in transitive verbs, and the subject (S) in intransitive verbs.
+
+(b) For which person/number values is the marker absent (zero) in the A-slot? In the P-slot? In the intransitive S-slot?
+
+(c) State the general principle that determines which persons receive an overt marker and which do not, in both transitive and intransitive contexts.
+
+(d) In what sense does this system exhibit a "split" in its marking pattern?
+
+**Q4.** Consider the following novel sentence:
+
+karadakua tani kani-gapa — We (my friends and I) hit you.
+
+(a) Provide a full morpheme-by-morpheme analysis of the verb.
+
+(b) The A-marker in this verb is ambiguous. Explain why, and identify what evidence in the sentence resolves the ambiguity.
+
+(c) Provide the full sentence if the subject were "we (you and I)" instead.
+
+**Q5.**
+
+(a) Compare sentences 5 and 17. Identify the morpheme that marks negation in sentence 17 and state its position in the verb complex.
+
+(b) State the complete morpheme order for a negative transitive verb, from left to right.
+
+(c) Predict the full sentence for: "You won't eat the fruit."
+
+ANSWERS
+
+**Q1.**
+(a) You hit the dog. (present)
+(b) He won't see me. (future, negative)
+(c) He will go. (future, intransitive)
+
+**Q2.**
+(a) kadakuai wara kani-tani
+(b) kadakua wara kani-gapa
+(c) makadakua muni kani
+(d) makabanie kani
+(e) raputua tani yara
+
+**Q3.**
+(a) Transitive A-markers: ka- (1st person), ta- (2nd person), ∅ (3rd person). Transitive P-markers: na- (1st person), ra- (2nd person), ∅ (3rd person). Intransitive S-markers: ka- (1st person), ∅ (2nd person), ∅ (3rd person).
+(b) A-slot: 3rd person is zero. P-slot: 3rd person is zero. Intransitive S-slot: 2nd and 3rd person are zero.
+(c) In transitive verbs, 1st and 2nd person receive overt markers in both the A and P slots; 3rd person is unmarked (zero) in both. In intransitive verbs, only 1st person receives an overt marker (ka-); 2nd and 3rd person are both unmarked (zero).
+(d) The system exhibits a split in two ways. First, within transitive verbs, there is a split between {1, 2} (overtly marked) and {3} (unmarked) in both argument positions. Second, between transitive and intransitive contexts, the marking pattern changes: the intransitive S-slot marks only 1st person, while the transitive A-slot marks both 1st and 2nd person. Thus the intransitive subject does not simply mirror the transitive agent in its marking pattern; instead, it aligns with a reduced paradigm in which only 1st person is distinguished from the rest.
+
+**Q4.**
+(a) ka- (A, 1pl.excl) + ra- (P, 2sg) + daku (hit) + -a (past)
+(b) The marker ka- is used for both 1st person singular and 1st person plural (syncretism). The ambiguity is resolved by the subject NP "kani-gapa" (= "we, my friends and I"), which specifies 1st person plural exclusive. Additionally, the absence of the inclusive suffix -i confirms the subject is not 1pl inclusive.
+(c) karadakuai tani kani-tani
+
+**Q5.**
+(a) The negative morpheme is ma-. It appears at the leftmost position of the verb complex, preceding all other morphemes (person markers, root, TAM, inclusive marker).
+(b) [ma-][A-marker][P-marker][Root][TAM-suffix][Inclusive-marker]
+(c) matapapao kapi tani
+
+SOLUTION
+
+**Rules to infer:**
+
+1. **VOS word order.** In every sentence, the verb complex precedes the object NP, which precedes the subject NP. This is consistent across all 24 examples and provides the structural key for identifying A (subject, final NP) and P (object, first NP after verb).
+
+2. **Verb template (affirmative transitive):** [A-marker][P-marker][Root][TAM-suffix][Inclusive-marker]. The A-marker precedes the P-marker, which precedes the root. TAM is a suffix on the root. The inclusive marker (if present) follows the TAM suffix.
+
+3. **Verb template (negative transitive):** [ma-][A-marker][P-marker][Root][TAM-suffix][Inclusive-marker]. The negative prefix ma- precedes all other elements. The TAM morpheme remains a suffix (same position as in affirmative). The inclusive marker, if present, remains the rightmost element.
+
+4. **Verb template (affirmative intransitive):** [S-marker][Root][TAM-suffix]. The P-slot is absent.
+
+5. **Verb template (negative intransitive):** [ma-][S-marker][Root][TAM-suffix].
+
+6. **Person markers:**
+   - Transitive A-slot: ka- (1st person), ta- (2nd person), ∅ (3rd person)
+   - Transitive P-slot: na- (1st person), ra- (2nd person), ∅ (3rd person)
+   - Intransitive S-slot: ka- (1st person), ∅ (2nd person), ∅ (3rd person)
+   - Evidence: Examples 1–4 establish ka-, ta-, na-, ra- in transitive context. Examples 7–10 establish that absence of a prefix = 3rd person in transitive context. Example 21 (pakue: ka- + paku + -e) shows 1st person intransitive is marked with ka-. Example 23 (banie: ∅ + bani + -e) shows 2nd person intransitive is unmarked. Example 22 (pakua: ∅ + paku + -a) shows 3rd person intransitive is unmarked.
+
+7. **Zero marking / Split alignment:** In transitive verbs, 3rd person is unmarked (zero) in both A and P slots. In intransitive verbs, both 2nd and 3rd person are unmarked (zero). This is demonstrated by example 7 (putua: both A and P are 3sg, so only root + TAM appears), example 8 (naputua: A is 3sg/zero, P is 1sg/na-), example 9 (kadakua: A is 1sg/ka-, P is 3sg/zero), example 22 (pakua: S is 3sg/zero), and example 23 (banie: S is 2sg/zero). The "split" operates at two levels: within transitive verbs ({1,2} marked vs. {3} unmarked) and between transitive and intransitive contexts (transitive A marks {1,2} while intransitive S marks only {1}).
+
+8. **Inclusive/exclusive distinction:** The suffix -i marks 1st person plural inclusive. It appears after the TAM suffix. Its absence with a 1pl subject indicates exclusive. Evidence: examples 11 vs. 12 (same verb form except for -i, with different subject NPs), and examples 13 vs. 14 (same pattern with a P-marker present).
+
+9. **Syncretism:** The A-marker ka- is used for both 1st person singular and 1st person plural. This is evident because examples 5 and 12 have identical verb forms (kabapae) but different subject NPs (kani = 1sg vs. kani-gapa = 1pl.excl). Similarly, examples 3 and 14 share the form karaputua. The inclusive marker -i distinguishes 1pl.incl from both 1sg and 1pl.excl; the NP context distinguishes 1sg from 1pl.excl.
+
+10. **TAM values:** -a (past), -e (present), -o (future). TAM is always a suffix, appearing after the root (and after the inclusive marker if present). Evidence: examples 1–4 show -a; example 5 shows -e; example 6 shows -o. The negative counterparts (15, 17, 16) show the same segments in the same suffixal position.
+
+11. **Intransitive verbs:** Intransitive verbs lack the P-slot entirely. The template is [S-marker][Root][TAM-suffix] (affirmative) or [ma-][S-marker][Root][TAM-suffix] (negative). Evidence: examples 21–24. In particular, example 22 (pakua yara) shows that 3sg intransitive affirmative is simply Root + TAM with no prefix at all, and example 23 (banie tani) shows that 2sg intransitive affirmative is also simply Root + TAM.
+
+**How rules produce each answer:**
+
+- **Q1(a):** ta- (2sg A) + ∅ (3sg P) + daku (hit) + -e (present) = tadakue. VOS: [tadakue] [muni] [tani] → "You hit the dog."
+- **Q1(b):** ma- (NEG) + ∅ (3sg A) + na- (1sg P) + putu (see) + -o (future) = manaputuo. VOS: [manaputuo] [kani] [yara] → "He won't see me."
+- **Q1(c):** ∅ (3sg S) + paku (go) + -o (future) = pakuo. Intransitive: [pakuo] [yara] → "He will go."
+- **Q2(a):** ka- (1pl.incl A) + ∅ (3sg P) + daku (hit) + -a (past) + -i (incl) = kadakuai. → kadakuai wara kani-tani.
+- **Q2(b):** ka- (1pl.excl A) + ∅ (3sg P) + daku (hit) + -a (past) = kadakua. → kadakua wara kani-gapa.
+- **Q2(c):** ma- (NEG) + ka- (1sg A) + ∅ (3sg P) + daku (hit) + -a (past) = makadakua. → makadakua muni kani.
+- **Q2(d):** ma- (NEG) + ka- (1sg S) + bani (sleep) + -e (present) = makabanie. Intransitive: → makabanie kani.
+- **Q2(e):** ∅ (3sg A) + ra- (2sg P) + putu (see) + -a (past) = raputua. → raputua tani yara.
+- **Q4(a):** ka- + ra- + daku + -a. The A-marker is 1pl.excl (resolved by NP).
+- **Q4(b):** ka- is syncretic for 1sg and 1pl. The NP "kani-gapa" specifies 1pl.excl; absence of -i rules out 1pl.incl.
+- **Q4(c):** ka- + ra- + daku + -a + -i = karadakuai. → karadakuai tani kani-tani.
+- **Q5(a):** ma- is the negative morpheme; it is leftmost in the verb complex.
+- **Q5(b):** [ma-][A-marker][P-marker][Root][TAM-suffix][Inclusive-marker].
+- **Q5(c):** ma- + ta- (2sg A) + ∅ (3sg P) + bapa (eat) + -o (future) = matapapao. → matapapao kapi tani.
+
+DIFFICULTY
+
+Level 4. The puzzle requires the solver to simultaneously track multiple interacting morphological systems: (i) a polypersonal agreement system with zero-marking and syncretism, where the zero-marking pattern differs between transitive and intransitive contexts (transitive: 3rd person zero in both slots; intransitive: 2nd and 3rd person zero), (ii) an inclusive/exclusive distinction marked by a suffix that follows the TAM morpheme, (iii) a negative prefix that occupies the leftmost position without altering the position of any other morpheme, and (iv) a transitive/intransitive distinction that removes an entire morphological slot and changes the person-marking paradigm. The questions progress from pattern recognition (Q1) to productive application (Q2), abstract generalization across transitivity (Q3), ambiguity resolution under syncretism (Q4), and rule articulation with novel prediction (Q5). Each later question requires correct induction of all rules from the data, and the construction questions demand simultaneous application of multiple rules in combinations not directly attested in the examples.

@@ -1,0 +1,97 @@
+
+
+TARGET-LANGUAGE: Sanuma (snm), Yanomami family, South America
+
+CORE
+
+1. Ergative-Absolutive Alignment
+   - Source: 16A-2 (Niuean: a marks absolutive S/O, e marks ergative A)
+   - Target-language realization: Two-case system (WALS 49A-2) with ergative-absolutive alignment for both full NPs (98A-4) and pronouns (99A-4). Absolutive (S/O) is unmarked; ergative (A) is marked by a postpositional clitic (51A-6). Additive-quantitatively asymmetrical (50A-3).
+   - Intended solver inference: By comparing intransitive clauses (S + V) with transitive clauses (A + O + V), the solver identifies that the intransitive subject and transitive object share the same (unmarked) form, while the transitive subject carries a distinct marker. This reveals ergative-absolutive alignment.
+   - Priority: REQUIRED
+
+2. Basic Word Order: SOV
+   - Source: 19A-1 (Niuean: VSO) — adapted
+   - Target-language realization: SOV (81A-1), with SV (82A-1) and OV (83A-1) confirmed. Oblique precedes object (XOV, 84A-3).
+   - Intended solver inference: Consistent ordering across examples reveals that the verb is final, the first NP is the subject (S or A), and the second NP is the object (O). This provides a structural scaffold for identifying grammatical roles before case marking is analyzed.
+   - Priority: HIGH
+
+3. Postpositional Case Marking
+   - Source: Polynesian a/e case system (prepositional) — adapted
+   - Target-language realization: Case markers are postpositional clitics (51A-6), attached to or following the noun. Monoexponential case (21A-1).
+   - Intended solver inference: The solver observes that the case marker appears after the noun (not before), distinguishing this from the source language's prepositional system. The solver identifies the marker as a clitic rather than a free preposition based on its tight association with the noun.
+   - Priority: REQUIRED
+
+4. Relative Clause Structure: Correlative / Internally-Headed
+   - Source: 22A-1 (Niuean: postnominal RC) — adapted
+   - Target-language realization: Mixed RC types with internally-headed or correlative types present (90A-7, 90D-4, 90E-4). The head noun (or a correlative pronoun) appears inside the relative clause.
+   - Intended solver inference: The solver encounters a noun phrase containing an embedded clause in which a pronoun or repeated noun appears with a specific case marking. The solver must recognize that this is a relative clause (not a main clause) and that the case marking of the internal element reveals the head's grammatical role in the embedded clause.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Inclusive/Exclusive First-Person Plural Distinction
+   - Phenomenon: Sanuma distinguishes inclusive and exclusive 1PL in independent pronouns (39A-5). No verbal person marking (40A-1), so the distinction is only visible in the pronoun itself.
+   - Intended solver inference: The solver encounters two different 1PL pronouns in different contexts. By examining the referential context (e.g., whether the addressee is included in the group), the solver identifies which is inclusive and which is exclusive.
+   - Interaction with CORE: The 1PL pronouns also carry ergative/absolutive case marking, so the solver must simultaneously identify the inclusive/exclusive distinction AND the case marking. This creates a two-dimensional identification task.
+   - Difficulty contribution: Moderate. Adds a pronoun-identification sub-task that is independent of but parallel to the alignment analysis.
+   - Priority: HIGH
+
+2. Antipassive Construction
+   - Phenomenon: Sanuma has an antipassive with the patient expressed as an oblique complement (108A-2). In the antipassive, the agent is absolutive (unmarked) rather than ergative.
+   - Intended solver inference: The solver encounters a clause where the agent is unmarked (like an intransitive subject) but an oblique-marked patient is present. The solver infers that this is a derived intransitive (antipassive) and uses it to confirm the ergative-absolutive system: the agent is ergative in the transitive but absolutive in the antipassive.
+   - Interaction with CORE: Directly confirms ergative-absolutive alignment by showing the agent's case changes when the object is demoted. Also interacts with SOV word order (the oblique patient appears in X position before the verb, consistent with XOV).
+   - Difficulty contribution: High. Provides a critical confirmation of the alignment system and introduces the concept of valence reduction.
+   - Priority: HIGH
+
+3. Absence of Verbal Person Marking
+   - Phenomenon: No person marking of any argument on the verb (102A-1, 100A-1, 103A-1). No subject person/number marking (29A-1).
+   - Intended solver inference: The solver notices that the verb form does not change based on the identity of the arguments. This forces reliance on NP case marking and word order for argument identification, making the ergative-absolutive system the primary (and only) morphological means of identifying grammatical relations.
+   - Interaction with CORE: Removes a potential shortcut. In many languages, verbal agreement helps identify S vs. A. In Sanuma, the solver must use case marking exclusively, making the alignment analysis more central and the puzzle more focused.
+   - Difficulty contribution: Moderate. Increases the weight of case-marking evidence and prevents the solver from using verbal morphology as a crutch.
+   - Priority: HIGH
+
+4. Evidentiality: Direct vs. Indirect
+   - Phenomenon: Sanuma distinguishes direct and indirect evidentials (77A-3) with mixed coding (78A-6).
+   - Intended solver inference: The solver encounters markers that distinguish whether the speaker directly witnessed the event or learned about it indirectly. The solver identifies the evidential markers and their semantic values.
+   - Interaction with CORE: Evidential markers are separate from case markers and word order, so they add a parallel identification task. In relative clauses, the evidential marking of the embedded clause may differ from the main clause, creating an additional layer.
+   - Difficulty contribution: Moderate to high. Adds a semantic-identification sub-task. Risk of overcomplicating the puzzle if too many evidential types are included.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Ergative-Absolutive + SOV Word Order
+   - Concepts: Core #1, Core #2
+   - Interaction: SOV order provides a structural template (NP1 + NP2 + V). The solver first identifies NP1 as subject and NP2 as object based on position, then confirms using case marking (NP1 is ergative in transitive, unmarked in intransitive; NP2 is always unmarked). The two systems mutually confirm each other.
+   - Additional inference: The solver can predict the case marking of a new clause based on its transitivity, and vice versa.
+
+2. Ergative-Absolutive + Correlative Relative Clause
+   - Concepts: Core #1, Core #4
+   - Interaction: In a correlative RC, the head noun is outside the clause and a correlative element (pronoun or noun) appears inside with case marking. The case marking of the internal element reveals the head's role: if the head is the agent, the internal element is ergative-marked; if the head is the patient, it is unmarked (absolutive). The solver must simultaneously parse the RC structure AND identify the case marking.
+   - Additional inference: The solver can determine the semantic role of the head noun in the embedded event without additional context.
+
+3. Ergative-Absolutive + Antipassive
+   - Concepts: Core #1, Target-Specific #2
+   - Interaction: The antipassive shows the agent shifting from ergative (transitive) to absolutive (antipassive) when the patient is demoted to oblique. This provides a controlled contrast that confirms the alignment system: the same noun is ergative in one construction and absolutive in another, depending on transitivity.
+   - Additional inference: The solver can identify the antipassive as a valence-reducing operation and understand its relationship to the basic transitive/intransitive distinction.
+
+4. No Verbal Person Marking + Ergative-Absolutive
+   - Concepts: Target-Specific #3, Core #1
+   - Interaction: The absence of verbal agreement means the case marking on NPs is the sole morphological indicator of grammatical role. This elevates the importance of case-marking evidence and makes the alignment analysis the central puzzle task rather than one of several parallel tasks.
+   - Additional inference: The solver learns that in this language, argument identification is entirely dependent on nominal morphology and word order, not verbal morphology.
+
+5. Inclusive/Exclusive + Ergative-Absolutive (Pronouns)
+   - Concepts: Target-Specific #1, Core #1
+   - Interaction: Pronouns carry both the inclusive/exclusive distinction (for 1PL) and the ergative/absolutive case marking. The solver must identify two independent dimensions simultaneously: person/number (including inclusive vs. exclusive) AND grammatical role (ergative vs. absolutive).
+   - Additional inference: The solver can verify the alignment system in the pronominal domain, confirming that the same alignment pattern holds for both full NPs and pronouns.
+
+CONSTRAINTS
+
+- The puzzle must provide at least one intransitive clause and one transitive clause with different subjects to allow the solver to distinguish S from A.
+- Case markers must be consistent across all examples; no irregular or optional marking that would confuse the solver.
+- If correlative relative clauses are included, the head noun must appear outside the embedded clause, and the correlative element inside must be clearly identifiable as referring to the head (e.g., through pronoun form or repetition).
+- The inclusive/exclusive distinction must be inferable from referential context (e.g., the addressee is or is not part of the group). At least one example of each type should be provided.
+- The antipassive example must clearly show an oblique-marked patient (distinct from both ergative and absolutive marking) to distinguish it from a simple intransitive.
+- No verbal person marking: verb forms must not vary by person or number of arguments. If the verb has any inflection, it must be for non-personal categories (e.g., tense, evidentiality) and must not encode argument identity.
+- If evidentiality is included (optional), it should be limited to two markers (direct/indirect) to avoid overcomplicating the puzzle. Evidential markers must be positionally distinct from case markers.
+- The puzzle should not require the solver to know the specific phonological forms of Sanuma; all forms should be presented as opaque strings that the solver analyzes structurally.

@@ -1,0 +1,117 @@
+
+
+TARGET-LANGUAGE: Tagalog
+
+CONSTRUCTION RATIONALE
+
+1. **Define the morphological system to be encoded in the puzzle.** The central system is a focus-marking paradigm on the verb combined with aspect marking via partial reduplication. Specify the following rules that the data will instantiate:
+
+   - **Focus affixes (3 types):**
+     - Actor focus: prefix *mag-*
+     - Patient focus: suffix *-in*
+     - Locative focus: suffix *-an*
+   
+   - **Aspect marking (2 values):**
+     - Perfective: no reduplication
+     - Imperfective: reduplication of the first syllable (CVC or CV) of the verb root
+   
+   - **Morphological ordering rule (the central puzzle insight):**
+     - With a prefix focus affix: [mag-] + [redup] + [root] (imperfective); [mag-] + [root] (perfective)
+     - With a suffix focus affix: [redup] + [root] + [-in / -an] (imperfective); [root] + [-in / -an] (perfective)
+   
+   - **Topic NP marking:** The argument corresponding to the focus role is marked by *ang* (common nouns) or *si* (personal names). All other arguments appear without a pre-nominal marker (or with *sa* for locatives in non-focus position).
+
+   These rules must be internally consistent. The solver should be able to extract a single, clean ordering generalization: reduplication always appears adjacent to the root, on the side opposite the focus affix.
+
+2. **Choose a closed vocabulary set.** Select:
+   - **4–5 verb roots**, all transitive or locative-capable, with semantically transparent meanings (e.g., cook, wash, carry, build, paint). Choose roots with distinct initial syllables so that reduplicated forms are unambiguous (avoid roots whose first syllable could be confused with a morpheme boundary).
+   - **4–6 nouns**: at least 2 personal names (for *si* marking) and 2–4 common nouns (for *ang* marking). Include at least one locative noun (e.g., a place name or common noun denoting a location).
+   - **3 classifiers**: *tao* (person), *hayop* (animal), *bagay* (thing). Select nouns that clearly fall into these categories.
+   - **Pronouns**: include first person singular, second person singular, third person singular, and both first person plural forms (inclusive and exclusive).
+
+   All semantic content must be provided through glosses or English translations in the data. The solver must not need prior Tagalog vocabulary.
+
+3. **Construct the primary verb data set (the focus/aspect matrix).** Generate verb forms covering the full cross of focus types × aspects for at least 3 different roots. This yields at minimum 3 roots × 3 focus types × 2 aspects = 18 verb forms. Organize the data as sentences (not a bare paradigm) so that the focus mapping is grounded in argument structure.
+
+   **Design logic for the sentences:**
+   - For each root, include at least one sentence in each focus type. In each sentence, the focus-marked argument is marked by *ang* or *si*, and the other arguments appear in their unmarked or *sa*-marked positions.
+   - For each focus type, include at least one perfective and one imperfective sentence. This makes the reduplication contrast visible within the same focus type.
+   - Include at least one sentence where the same root appears in two different focus types (e.g., actor focus and patient focus), so the solver can see that the affix changes while the root stays constant.
+   - Include at least one sentence where the same root appears in the same focus type but different aspects, making the reduplication contrast explicit.
+   - Vary which argument is in focus across sentences to prevent the solver from associating a fixed syntactic position with a fixed role.
+
+   **What the solver should infer at this stage:**
+   - That the verb carries an affix that is not part of the root.
+   - That the affix type correlates with which argument is marked by *ang/si* (i.e., the focus mapping).
+   - That some forms contain a repeated syllable that is not part of the root.
+   - That the repeated syllable's presence/absence correlates with a semantic distinction (aspect: completed vs. ongoing).
+
+4. **Introduce the ordering contrast explicitly.** Ensure that the data contains at least two clear cases where the same aspect (imperfective) is realized with reduplication in different positions depending on the focus affix:
+   - One case with a prefix focus affix (redup after the prefix, before the root).
+   - One case with a suffix focus affix (redup before the root, before the suffix).
+
+   These two cases should be presented in the same data set (not separated into different sections) so the solver is forced to notice the positional difference. The solver should be able to extract the rule: "reduplication is always adjacent to the root, on the side opposite the focus affix."
+
+   **What the solver should infer:**
+   - That reduplication position is not arbitrary but systematically determined by the focus affix.
+   - The general ordering rule: [prefix] + [redup] + [root] vs. [redup] + [root] + [suffix].
+
+5. **Add the classifier data as a secondary element.** Include 4–6 noun phrases with numerals, covering all three classifier categories. For each classifier, include at least 2 different nouns so the solver can identify the semantic category. Present these as part of the sentence data (e.g., "one person cooked the food") rather than as a separate list.
+
+   **Design logic:**
+   - Include at least one noun that could plausibly be ambiguous between categories (e.g., a pet animal that might be considered a "thing" by a naive solver) to test whether the solver is using semantic properties or just memorizing.
+   - Do not include a fourth classifier; three is sufficient for the puzzle.
+
+   **What the solver should infer:**
+   - That the word between the numeral and the noun is a classifier encoding a semantic category.
+   - The mapping: *tao* → human, *hayop* → non-human animate, *bagay* → inanimate.
+
+6. **Add the inclusive/exclusive pronoun data.** Include 2–3 sentences where the first person plural pronoun is used, with contextual or translational evidence that distinguishes inclusive from exclusive. For example, one sentence where the speaker addresses the listener directly and includes them ("We [you and I] will go"), and one where the speaker refers to a group not including the listener ("We [my group, not you] will go").
+
+   **Design logic:**
+   - The distinction must be inferable from context or translation, not from a paradigm table.
+   - Include the two forms in different sentences so the solver must use semantic context to assign which is which.
+
+   **What the solver should infer:**
+   - That Tagalog has two first person plural forms.
+   - Which one is inclusive and which is exclusive, based on the semantic context.
+
+7. **Design the question set with progressive difficulty.** Structure questions in at least three tiers:
+
+   **Tier 1 – Pattern identification (easier):**
+   - Ask the solver to identify what the affix on the verb encodes (which semantic role is in focus). Provide a set of verb forms and ask the solver to label each as actor/patient/locative focus.
+   - Ask the solver to identify what the reduplicated syllable encodes (aspect). Provide pairs of forms (with and without reduplication) and ask the solver to state the semantic difference.
+   - Ask the solver to identify the classifier for a given noun (semantic mapping task).
+
+   **Tier 2 – Rule extraction (medium):**
+   - Ask the solver to state the ordering rule: given a new focus affix type and aspect, where does the reduplicated syllable appear? The solver must articulate the generalization, not just apply it.
+   - Ask the solver to identify which argument is in focus in a given sentence, using both the verb affix and the *ang/si* marker as cross-verification.
+
+   **Tier 3 – Productive application (hardest):**
+   - Provide a novel verb root (not seen in the data) and ask the solver to produce the correct form for a specified focus type and aspect. This tests whether the solver has extracted the ordering rule and can apply it to new material.
+   - Provide a sentence with a novel noun and ask the solver to select the correct classifier.
+   - Provide a context and ask the solver to choose the correct first person plural pronoun (inclusive vs. exclusive).
+
+   **Optional Tier 4 – Metalinguistic identification:**
+   - Ask the solver to identify a property of the system that differs from what they might expect based on their knowledge of other languages (e.g., "In many languages, the verb is marked for whether the subject is agent or patient. In this language, what is the verb actually marking?"). This tests whether the solver has correctly identified the system as a focus/topic system rather than a simple active/passive voice.
+
+8. **Verify uniqueness of induction.** Before finalizing the data, check:
+   - That no alternative focus-to-affix mapping is consistent with all the data (e.g., the solver cannot assign *mag-* to patient focus and still be consistent with the *ang/si* marking).
+   - That the reduplication ordering rule is uniquely determined: there is no alternative ordering (e.g., "redup always comes first" or "redup always comes last") that fits all the data.
+   - That the classifier mapping is uniquely determined: no alternative semantic grouping is consistent with all the noun-classifier pairings.
+   - That the inclusive/exclusive assignment is uniquely determined by the contextual evidence.
+   - That no verb form in the data is ambiguous (e.g., a root whose first syllable is identical to a focus affix, creating a false morpheme boundary).
+
+9. **Prevent confounds and unintended interpretations:**
+   - Ensure that *ang/si* is the only overt topic marker. Do not introduce any other case markers that could confuse the solver into thinking Tagalog has a full case system.
+   - Ensure that the focus affixes are phonologically distinct from each other and from the reduplicated syllable (e.g., no focus affix should be identical to a possible reduplicated form).
+   - Ensure that verb roots do not begin with the same segment as a focus affix (e.g., avoid a root beginning with *mag-* or ending in *-in* or *-an*), to prevent false morpheme boundaries.
+   - Ensure that the *sa* preposition (for non-focus locatives) is not confused with the locative focus affix *-an*. They should appear in different positions and the solver should be able to distinguish them.
+   - Do not include any data that would suggest a gender system or adjective-noun agreement. These do not exist in Tagalog and would be factually incorrect.
+   - If adjectives-as-verbs is included (optional), present it in a way that does not confuse the solver about the verb paradigm (e.g., use a clearly non-action predicate like "beautiful" or "big" in a separate sentence).
+
+10. **Final quality check.** Solve the puzzle yourself using only the provided data. Confirm that:
+    - Every rule (focus mapping, aspect marking, ordering rule, classifier mapping, inclusive/exclusive distinction) is uniquely determined by the evidence.
+    - Every question has a single correct answer.
+    - The difficulty progression is smooth: Tier 1 questions require only pattern observation, Tier 2 requires rule extraction, Tier 3 requires productive application. No question should require a rule that has not been sufficiently evidenced in the data.
+    - The total data set is not so large that the solver is overwhelmed, but not so small that the rules are underdetermined. A target of 15–25 sentences for the primary data, plus 3–5 sentences for classifiers and pronouns, is a reasonable range.

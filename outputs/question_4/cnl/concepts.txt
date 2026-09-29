@@ -1,0 +1,106 @@
+
+
+TARGET-LANGUAGE: Canela (cnl), Macro-Ge / Je / Je Setentrional, South America
+
+CORE
+
+1. Dependent marking in possessive noun phrases (source: Yawalapiti 81A-1)
+   - Target-language realization: Possessor is marked via pronominal prefixes (WALS 24A-2, 57A-1). The possessed noun itself carries no possessive morphology.
+   - Intended solver inference: From possessive data, solver identifies that the possessor (not the possessed noun) bears the marking, and that the marking is a prefix.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Ergative P-marking (only the P/absolutive argument is marked on the verb)
+   - Phenomenon: Verbal person marking is ergative (WALS 100A-3) and only the P argument receives person marking (WALS 102A-3). A and P do not both occur on the verb (WALS 104A-1). Intransitive S is marked; transitive P is marked; transitive A is unmarked. Third person has a non-zero form (WALS 103A-2).
+   - Intended solver inference: From intransitive and transitive data, solver deduces that the verb marks the patient (transitive) or sole argument (intransitive), not the agent. This is the central ergative insight.
+   - Interaction with CORE: The P-marker is the same morphological slot that carries inclusive/exclusive distinctions (below), so the solver must simultaneously identify the ergative pattern and the inclusive/exclusive contrast within the same paradigm.
+   - Difficulty contribution: HIGH — requires understanding that "the marked argument" is not always the agent.
+   - Priority: REQUIRED
+
+2. Inclusive/exclusive distinction in verbal person marking
+   - Phenomenon: Canela distinguishes inclusive from exclusive first person plural in both independent pronouns (WALS 39A-4) and verbal inflection (WALS 40A-4). Pronouns are number-indifferent (WALS 35A-2), meaning 1SG ≈ 1PL, so the inclusive/exclusive contrast is the primary number-related distinction.
+   - Intended solver inference: From data showing two distinct first-person plural forms in the P-marker, solver identifies the inclusive/exclusive distinction and maps it to the semantic difference (speaker+addressee vs. speaker+other).
+   - Interaction with CORE: The inclusive/exclusive forms appear within the ergative P-marker paradigm, so the solver must parse both the alignment pattern and the inclusive/exclusive contrast from the same set of forms.
+   - Difficulty contribution: MEDIUM — well-known typological feature, but the interaction with ergative P-marking adds complexity.
+   - Priority: HIGH
+
+3. Locational possession
+   - Phenomenon: Predicative possession is expressed via a locational strategy (WALS 117A-1). "My house" is expressed as something like "house at-me" rather than a dedicated possessive predicate.
+   - Intended solver inference: From predicative possession data, solver recognizes that possession is expressed through a locative/postpositional construction rather than a dedicated possessive verb or copula.
+   - Interaction with CORE: The "possessive prefix" identified in the dependent-marking pattern is actually a locative marker on the possessor. This deepens the insight: what looks like a possessive prefix is a locative form, revealing the underlying locational strategy.
+   - Difficulty contribution: MEDIUM-HIGH — requires the solver to recognize that the same morpheme serves a locative function in predicative contexts.
+   - Priority: HIGH
+
+4. WITH-language: 'and' = 'with'
+   - Phenomenon: The conjunction 'and' and the comitative postposition 'with' are the same form (WALS 63A-2). Canela uses postpositions (WALS 85A-1).
+   - Intended solver inference: From data showing the same postpositional form used both for comitative ('with') and coordination ('and'), solver identifies the WITH-language property.
+   - Interaction with CORE: The postpositional nature of the form interacts with the consistent post-head ordering (postpositions, GenN, NAdj, NDem). The solver can use the postpositional position as a clue to the form's grammatical category.
+   - Difficulty contribution: MEDIUM — the ambiguity between 'and' and 'with' requires contextual disambiguation, adding a layer of reasoning.
+   - Priority: HIGH
+
+5. Verbal encoding of adjectives
+   - Phenomenon: Predicative adjectives have verbal encoding (WALS 118A-1). Adjectives take the same person marking as verbs.
+   - Intended solver inference: From adjective predicate data, solver recognizes that adjectives behave like verbs (they take the P-marker). This confirms the ergative P-marking pattern in an additional context.
+   - Interaction with CORE: Adjective predicates provide additional data points for the ergative P-marking pattern, making the inference more robust. The solver can cross-verify the ergative pattern using both verbal and adjectival predicates.
+   - Difficulty contribution: MEDIUM — the solver must recognize that "adjective" predicates are actually verbal in their morphology.
+   - Priority: HIGH
+
+6. Postverbal negation (SOVNeg)
+   - Phenomenon: Negation is a separate word that follows the verb immediately (WALS 143A-2, 144A-8, 144S-1). Symmetric negation (WALS 113A-1).
+   - Intended solver inference: From negative sentences, solver identifies the postverbal position of the negative particle.
+   - Interaction with CORE: The postverbal position is consistent with SOV word order and provides a clear positional rule.
+   - Difficulty contribution: LOW-MEDIUM — straightforward positional pattern.
+   - Priority: OPTIONAL
+
+7. Interrogative-based indefinites
+   - Phenomenon: Indefinite pronouns are based on interrogative forms (WALS 46A-1).
+   - Intended solver inference: From indefinite pronoun data, solver recognizes the formal relationship to interrogatives.
+   - Interaction with CORE: The interrogative-based indefinites can appear in the P-marker slot, providing additional data for the ergative pattern.
+   - Difficulty contribution: LOW-MEDIUM — a recognizable typological pattern.
+   - Priority: OPTIONAL
+
+8. Past tense with 2–3 remoteness distinctions
+   - Phenomenon: Canela distinguishes 2–3 degrees of past remoteness (WALS 66A-2). No inflectional future (WALS 67A-2). No perfect (WALS 68A-4).
+   - Intended solver inference: From temporal data, solver identifies the past remoteness distinctions and the absence of future marking.
+   - Interaction with CORE: Tense markers appear on the verb alongside the P-marker, adding morphological complexity to the verbal paradigm.
+   - Difficulty contribution: MEDIUM — adds a temporal dimension to the verbal paradigm.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Ergative P-marking × Inclusive/exclusive: The P-marker paradigm simultaneously encodes (a) which argument is marked (ergative alignment) and (b) the inclusive/exclusive distinction. The solver must disentangle two dimensions from the same set of forms. This is the puzzle's central challenge.
+
+2. Locational possession × Dependent marking: The "possessive prefix" on the possessor is revealed to be a locative marker when the solver examines predicative possession. This creates a two-stage inference: first identify dependent marking, then recognize the underlying locational strategy.
+
+3. WITH-language × Postpositional system: The identity of 'and' and 'with' means the language has a postposition that also functions as a conjunction. The solver must recognize that a postpositional form can appear in a coordinative function, which is typologically marked.
+
+4. Verbal adjectives × Ergative P-marking: Adjective predicates confirm the ergative P-marking pattern in a non-verbal context, strengthening the inference. The solver can use adjective data as a "control" to verify the ergative pattern.
+
+5. No case × Ergative: The absence of case marking (WALS 49A-1) means the ergative alignment is expressed purely through verbal person marking. This simplifies the puzzle (no case markers to confuse the solver) but also means the ergative pattern must be inferred solely from the verbal paradigm.
+
+6. No plural × Inclusive/exclusive: The absence of plural marking (WALS 33A-9) and number-indifferent pronouns (WALS 35A-2) mean the inclusive/exclusive distinction is the ONLY number-related contrast. This makes it more prominent and easier to identify, but also means the solver cannot use plural data to confirm number distinctions.
+
+CONSTRAINTS
+
+1. No case marking: The puzzle data must not include any case affixes or case markers. All grammatical relations are expressed through word order and verbal marking.
+
+2. No plural: The puzzle data must not include plural markers on nouns or pronouns. The inclusive/exclusive distinction is the only number-related contrast.
+
+3. No gender: The puzzle data must not include any gender markers or gender-based agreement.
+
+4. SOV word order: All main clauses must follow Subject-Object-Verb order. Obliques precede the object (XOV).
+
+5. Postpositions: All adpositions must be postpositions (follow the noun phrase).
+
+6. Postverbal negation: The negative particle must appear immediately after the verb.
+
+7. The ergative P-marking pattern must be clearly demonstrable: include at least 2 intransitive and 2 transitive examples with different person combinations to allow the solver to isolate the P-marker.
+
+8. The inclusive/exclusive distinction must be clearly demonstrable: include at least one inclusive and one exclusive first-person plural example in the P-marker.
+
+9. The WITH-language property must be clearly demonstrable: include at least one comitative ('with') and one coordinative ('and') example using the same form.
+
+10. The locational possession must be clearly demonstrable: include at least one predicative possession example showing the locational strategy.
+
+11. The source concept of "noun classes without agreement (classifiers)" is DROPPED: Canela has no gender system (WALS 31A-1, 32A-1) and no numeral classifiers (WALS 55A-1). There is no natural realization of this concept in Canela.

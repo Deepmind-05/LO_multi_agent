@@ -1,0 +1,13 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [MAJOR] The target difficulty is 5, but the actual difficulty is 4. Each of the six rule systems is independently and clearly inferable from well-controlled contrasts in the data (e.g., sentences 13/14 for subject RCs, 15/16 for object RCs, 10/11/12 for particle ordering). The questions require combining 3–4 rules, but the combination is mechanical once each rule is known—there are no deep dependencies where one rule's application non-obviously constrains another. A true level 5 would require either less transparent contrasts, non-obvious rule interactions, or structures where getting one sub-rule wrong cascades in a non-trivial way.

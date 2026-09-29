@@ -1,0 +1,91 @@
+
+
+TARGET-LANGUAGE
+
+Tukang Besi (Austronesian, Celebic, Sulawesi)
+
+CORE
+
+1. Polypersonal agreement (both A and P marked on verb)
+   - Target-language realization: Subject and object prefixes on the verb; accusative alignment (S and A share the same prefix set, O has a distinct prefix set); A precedes P in prefix order.
+   - Intended solver inference: Identify which prefix slots mark subject vs. object; determine the alignment pattern (accusative) from the distribution of prefixes across transitive and intransitive clauses.
+   - Priority: REQUIRED
+
+2. Verbal morphological structure (prefixing, multi-category)
+   - Target-language realization: Verb composed of TAM prefix + subject prefix + object prefix + root (approximately 6-7 categories per word); weakly prefixing tendency; TAM expressed by prefixes (not suffixes as in Zuni).
+   - Intended solver inference: Identify the morphological template of the verb; determine the order and function of each prefix slot.
+   - Priority: REQUIRED
+
+3. Tense marking (adapted from source)
+   - Source concept: Past/present distinction with progressive aspect suffixes.
+   - Target-language realization: Future/non-future distinction only; future marked by prefix; past (non-future) is unmarked. No progressive aspect marking.
+   - Intended solver inference: Discover that only one tense value is morphologically marked (future); infer that the unmarked form is past/non-future; identify the tense prefix.
+   - Priority: REQUIRED
+
+4. Suppletion (irregular verb morphology)
+   - Target-language realization: Certain verbs have different roots depending on tense (e.g., a verb may have one root in the future and a different root in the non-future).
+   - Intended solver inference: Identify that some verbs do not maintain a stable root across tenses; distinguish suppletive verbs from regular ones.
+   - Priority: HIGH
+
+5. Morpheme boundary ambiguity
+   - Target-language realization: Ambiguity in segmenting the verb complex (e.g., whether a string of consonants/vowels belongs to the root or to a prefix), creating multiple possible analyses.
+   - Intended solver inference: Use paradigmatic evidence (other forms of the same verb, other verbs with similar prefixes) to resolve segmentation.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Split alignment: ergative-absolutive in nominal domain, accusative in verbal domain
+   - Phenomenon: Full NPs and pronouns show ergative-absolutive alignment (transitive subject marked with ergative case; intransitive subject and transitive object unmarked/absolutive). Verbal person marking shows accusative alignment (S and A share the same prefix; O has a distinct prefix).
+   - Intended solver inference: Discover that the alignment system differs between the nominal and verbal domains; recognize that the ergative NP marker and the verbal subject prefix encode different alignment patterns.
+   - Interaction with CORE: Directly interacts with polypersonal agreement — the solver must reconcile the nominal alignment (ergative marks A) with the verbal alignment (subject prefix marks both S and A). This is the central linguistic insight of the puzzle.
+   - Difficulty contribution: HIGH. Requires the solver to analyze two separate alignment systems and recognize their contrast.
+   - Priority: REQUIRED
+
+2. No nominal plural marking
+   - Phenomenon: Nouns do not have a plural suffix or any other morphological plural marker. Number is expressed only through verbal agreement and independent pronouns.
+   - Intended solver inference: Recognize that the absence of plural marking on nouns means verbal agreement is the primary (or sole) morphological encoding of number for full NPs.
+   - Interaction with CORE: Makes polypersonal agreement more central to the grammar — the solver must rely on verbal prefixes to determine number, since nouns provide no number information.
+   - Difficulty contribution: MEDIUM. Reinforces the importance of the agreement system and creates a clear "gap" the solver notices.
+   - Priority: HIGH
+
+3. Asymmetric tense system (future marked, past unmarked)
+   - Phenomenon: Only future tense is grammatically marked (by prefix). Past/non-future is the unmarked default.
+   - Intended solver inference: Infer that the unmarked form is past (or at least non-future); recognize the asymmetry in the tense system.
+   - Interaction with CORE: Interacts with suppletion — suppletive verbs show their root alternation specifically in the contrast between the marked (future) and unmarked (non-future) forms.
+   - Difficulty contribution: MEDIUM. The solver must determine which form is marked and which is unmarked, and what the unmarked form means.
+   - Priority: HIGH
+
+4. Productive reduplication (full and partial)
+   - Phenomenon: Both full and partial reduplication are productive morphological processes.
+   - Intended solver inference: Identify reduplicated forms and determine their grammatical function (e.g., iterative, distributive, or other).
+   - Interaction with CORE: Adds an additional morphological process that the solver must identify alongside prefixal agreement and tense marking; can create additional morpheme boundary ambiguities.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a layer of morphological complexity that interacts with segmentation challenges.
+   - Priority: OPTIONAL (include if the puzzle has room; omit if it makes the puzzle too complex)
+
+INTERACTIONS
+
+1. Polypersonal agreement × Split alignment
+   - The solver must discover that the verbal agreement system (accusative) and the nominal case system (ergative-absolutive) encode alignment differently. The ergative NP marker marks the transitive subject, but the verbal subject prefix marks both intransitive and transitive subjects. This contrast is the central insight.
+
+2. Polypersonal agreement × No nominal plural
+   - Since nouns lack plural marking, the verbal agreement prefixes are the primary morphological encoding of number. This makes the agreement system more prominent and forces the solver to rely on it for number information.
+
+3. Tense × Suppletion
+   - Suppletive verbs show root alternation specifically in the future/non-future contrast. The solver must identify which verbs are suppletive and determine the pattern of root alternation.
+
+4. Verb structure × Morpheme boundary ambiguity
+   - The multi-prefix verbal template creates opportunities for ambiguous segmentation (e.g., a consonant cluster at the prefix-root boundary could be parsed as part of the root or as part of a prefix). The solver must use paradigmatic evidence to resolve these ambiguities.
+
+5. Split alignment × No nominal plural
+   - The ergative marker on NPs is the only morphological signal of transitivity in the nominal domain (since there is no plural to complicate things). This makes the ergative marker more salient and easier to identify.
+
+CONSTRAINTS
+
+- The puzzle data must clearly demonstrate BOTH the ergative-absolutive nominal alignment AND the accusative verbal alignment. At minimum, the data should include: (a) an intransitive clause showing the subject NP unmarked and the verbal subject prefix; (b) a transitive clause showing the subject NP marked with ergative, the object NP unmarked, and both verbal subject and object prefixes.
+- The tense system must be unambiguous: the future prefix must be identifiable, and the unmarked form must be interpretable as non-future/past.
+- Suppletive verbs must be clearly distinguishable from regular verbs in the data (at least one suppletive verb and one regular verb should be included).
+- Morpheme boundary ambiguities must be resolvable from the data alone (the solver should be able to use paradigmatic evidence to determine the correct segmentation).
+- The person system should be simple: 1, 2, 3 with singular/plural (no inclusive/exclusive distinction, no gender). This keeps the agreement paradigm manageable.
+- The puzzle should not require the solver to know that Tukang Besi is Austronesian or to have any prior knowledge of the language.
+- If reduplication is included, its function must be inferable from the data (e.g., through a clear contrast between a base form and a reduplicated form with a transparent semantic difference).
+- The phonological system (no voicing contrast, implosives, simple syllable structure) should be reflected in the data but should not be the focus of the puzzle. It serves to make the data look distinctive without adding unnecessary complexity.

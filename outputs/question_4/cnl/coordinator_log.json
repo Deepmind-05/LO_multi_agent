@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to establish the linguistic foundation for the target language, so Agent 1 must be called to extract the necessary linguistic features and mappings.",
+    "directive": "Extract a rich set of linguistic features and mappings for the target language 'cnl' suitable for a Linguistic Olympiad puzzle. Include typological phenomena, morphological or phonological patterns, syntactic structures, and clear feature-to-form mappings that can support non-trivial reasoning.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing linguistic concepts for 'cnl', design a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how linguistic features map to observable forms, specify the reasoning steps solvers should follow, and ensure the rules are internally consistent and sufficient for generating non-trivial questions.",
+    "elapsed_seconds": 9.8
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for target language 'cnl' using the existing concepts and rationale. Include a clear data section with glossed examples, non-trivial questions, and a complete answer key. Ensure all vocabulary is glossed, translations are unambiguous, and the questions require meaningful linguistic reasoning rather than direct copying.",
+    "elapsed_seconds": 19.9
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and validate the latest puzzle before any further revision or completion.",
+    "directive": "Solve and rigorously validate the generated Linguistic Olympiad puzzle for target language 'cnl'. Check the data section for complete glossing, internal consistency, unambiguous translations, solvability of all questions, correctness of the answer key, and whether the questions require meaningful linguistic reasoning. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if issues are found.",
+    "elapsed_seconds": 36.1
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4's FAIL is primarily a Tier 3 puzzle implementation defect: the answer requires the lexical item for 'stone' (b\u0268), but it is absent from the DATA and not derivable, making Q4c item 8 unsolvable. The minor difficulty shortfall is also a puzzle-level issue. Concepts and rationale appear adequate, so Agent 3 should patch the dataset, questions, and answer key rather than regenerate concepts or rationale.",
+    "directive": "Revise the puzzle directly: add at least one fully glossed DATA sentence containing the Canela word for 'stone' (b\u0268) or otherwise make it derivable, and update Q4c item 8 and the answer key so the translation is solvable from the data alone. Ensure all vocabulary is glossed and no answer depends on unprovided lexical items. Also raise the difficulty toward target 5 by making at least one or two questions require deeper interaction among the existing systems (e.g., ergative P-marking with inclusive/exclusive, locational possession, WITH-language, or verbal adjectives) rather than direct observation, while keeping all questions unambiguous and solvable.",
+    "elapsed_seconds": 42.8
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated after the previous validator failure, and puzzle_needs_validation is true with no current validator verdict. The required next step is to have Agent 4 validate the latest revised puzzle before any further revision or completion.",
+    "directive": "Solve and rigorously validate the revised Linguistic Olympiad puzzle for target language 'cnl'. Verify that the previously missing lexical item for 'stone' is now present or derivable, that all DATA entries are fully glossed, that all questions are unambiguous and solvable from the provided data, that the answer key is correct, and that the difficulty is appropriate. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any issues remain.",
+    "elapsed_seconds": 54.1
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest verdict is PASS_WITH_ISSUES, but it includes a MAJOR internal inconsistency in the data: item 12 uses *na-* with a 2P patient, contradicting the ergative alignment system. This is a concrete puzzle-level defect, not a conceptual or rationale failure. The minor issues are also puzzle-level: one question is a trivial verbatim copy of a data item, and another framing is misleading. Agent 3 should patch the puzzle directly, after which Agent 4 must revalidate.",
+    "directive": "Revise the puzzle directly without changing the underlying concepts or rationale. 1) Correct item 12 so the 2P patient is marked with the appropriate ergative prefix: change *ya na-s\u0268k* to *ya ta-s\u0268k* and update any related gloss, explanation, or answer key. 2) Replace Q4c item 2, which currently copies data item 11 verbatim, with a non-trivial production item that requires applying the same rule to a new person/number or morphological context, and update the answer key accordingly. 3) Revise the Q4b item 49 framing so it does not imply an accusative/ergative contrast; instead, present it as a contrast between predicative and dependent possession or another accurate linguistic distinction. Ensure all data entries, glosses, questions, and answers remain internally consistent and solvable.",
+    "elapsed_seconds": 61.9
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, while no current validator verdict is available. The required next step is to have Agent 4 solve and validate the latest revised puzzle, especially checking the previously reported ergative inconsistency, the replacement of the trivial question, and the corrected Q4b framing.",
+    "directive": "Solve and rigorously validate the latest revised Linguistic Olympiad puzzle for target language 'cnl'. Verify that item 12 now uses the correct ergative marking for a 2P patient, that Q4c item 2 is no longer a verbatim copy of a data item and is solvable from the data, that Q4b item 49 is framed accurately without implying an incorrect accusative/ergative contrast, and that all data entries, glosses, questions, and answers are internally consistent and unambiguous. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if any issues remain.",
+    "elapsed_seconds": 70.3
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL due to a concrete puzzle-level defect: item 48 uses the unattested verb root *-g\u00ecl* ('throw'), making the required translation unsolvable from the DATA. This is not a conceptual or rationale problem, so Agent 3 should patch the puzzle directly by either adding a fully glossed data sentence attesting *-g\u00ecl* or replacing the item with an already attested verb root, then updating the question and answer key accordingly.",
+    "directive": "Revise the puzzle directly without changing the underlying concepts or rationale. Fix the critical issue in item 48 (*ka na-g\u00ecl*): either add at least one fully glossed DATA sentence containing the verb root *-g\u00ecl* with the meaning 'throw' so that 'He throws me' is derivable, or replace item 48 with a new item using an already attested verb root such as *-t\u00ecp* or *-s\u00eck* and update Q4b and the answer key accordingly. Ensure that every lexical item required by any question is present and fully glossed in the DATA, and that all translations are solvable from the provided data alone.",
+    "elapsed_seconds": 78.6
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, while no current validator verdict is available. The latest revision was made to address the unattested verb root in item 48, so the required next step is to have Agent 4 solve and validate the latest puzzle before any further revision or completion.",
+    "directive": "Solve and rigorously validate the latest revised Linguistic Olympiad puzzle for target language 'cnl'. Verify that item 48 has been fixed so that the required translation is solvable from the DATA, that every lexical item required by any question is present and fully glossed, that all data entries, glosses, questions, and answers are internally consistent and unambiguous, and that the difficulty is appropriate. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback if any issues remain.",
+    "elapsed_seconds": 86.0
+  },
+  {
+    "step": 11,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 issued a PASS verdict and puzzle_needs_validation is false, indicating the latest puzzle has been fully validated and is acceptable. No further agent calls are required.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 104.7
+  }
+]

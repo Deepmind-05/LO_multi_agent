@@ -1,0 +1,93 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for Tagalog (tag) suitable for a Linguistic Olympiad puzzle. Include relevant phonological, morphological, syntactic, or semantic features, with clear mappings and examples that can support multi-step reasoning.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing Tagalog concepts, create a rigorous step-by-step rationale for a Linguistic Olympiad puzzle. Define the linguistic rules, morphological/syntactic transformations, glossing conventions, and sentence structure templates that will support multi-step inference. Ensure the rationale is internally consistent and sufficient for Agent 3 to generate a solvable puzzle.",
+    "elapsed_seconds": 6.8
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing Tagalog concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Tagalog using the provided concepts and rationale. Include a clear DATA section with glossed examples, well-formed questions requiring multi-step linguistic reasoning, and a complete answer key. Ensure all vocabulary is glossed, examples are unambiguous, and the puzzle is solvable from the given information.",
+    "elapsed_seconds": 15.0
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and validate the generated Tagalog Linguistic Olympiad puzzle. Check that all data entries are glossed, questions are unambiguous and non-trivial, the answer key is correct, and the puzzle is fully solvable from the provided information. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects are found.",
+    "elapsed_seconds": 23.0
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator returned PASS_WITH_ISSUES but identified a concrete puzzle-level defect: the answer key for Part 1d uses a space instead of the hyphenated reduplication convention established in the data. This is a Tier 3 answer-key inconsistency that should be patched before final acceptance.",
+    "directive": "Patch the puzzle answer key: change the answer for Part 1d from \"tatlong tatlong\" to \"tatlong-tatlong\" so it matches the hyphenated reduplication convention used in the data. Ensure all reduplicated forms in the data, questions, and answer key are orthographically consistent. Do not alter the linguistic concepts, rationale, or solvability of the puzzle unless necessary to maintain consistency.",
+    "elapsed_seconds": 28.6
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true. The latest change was a Tier 3 patch to the answer key for reduplication consistency, so the revised puzzle must be revalidated before acceptance.",
+    "directive": "Validate the revised Tagalog Linguistic Olympiad puzzle. Confirm that the Part 1d answer key now uses the hyphenated reduplication form \"tatlong-tatlong\" and that all reduplicated forms are orthographically consistent across the data, questions, and answer key. Re-solve the puzzle to ensure it remains fully solvable, unambiguous, and correctly keyed. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 33.8
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned FAIL due to concrete puzzle-level defects: the Part 1a answer contradicts the established vowel-final -ng / consonant-final na rule, and the 'mga + numeral + noun' construction is non-standard Tagalog. The concepts and rationale appear adequate, so this is a Tier 3 patch to the puzzle implementation.",
+    "directive": "Patch the puzzle: change the Part 1a answer from 'pitu na isda' to 'pitung isda' and audit all numeral+noun examples, questions, and answers for the same rule: vowel-final numerals take -ng, consonant-final numerals take na. Also remove or revise any non-standard 'mga + numeral + noun' constructions to standard Tagalog, using either 'mga + noun' for plural without a numeral or numeral+noun without 'mga', and update glosses, questions, and the answer key consistently. Do not alter the concepts or rationale unless necessary to maintain consistency.",
+    "elapsed_seconds": 41.1
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true. The latest step was a Tier 3 patch to fix the Part 1a numeral+noun answer, enforce the vowel-final -ng / consonant-final na rule, and remove non-standard 'mga + numeral + noun' constructions. The revised puzzle must now be revalidated before acceptance.",
+    "directive": "Validate the revised Tagalog Linguistic Olympiad puzzle. Confirm that the Part 1a answer is now 'pitung isda', that all numeral+noun examples, questions, and answers consistently follow the vowel-final -ng / consonant-final na rule, and that non-standard 'mga + numeral + noun' constructions have been removed or corrected. Also re-check reduplication orthography, glosses, question clarity, answer-key correctness, and full solvability from the provided data. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 61.3
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES with a concrete target-language accuracy defect: the ordinal forms 'ikanim na bahay' and 'ikapat na puno' are non-standard Tagalog and should use the epenthetic /a/ forms 'ikaanim na bahay' and 'ikaapat na puno'. This is a Tier 3 puzzle-level correction, not a conceptual or rationale failure. The puzzle should be patched and then revalidated.",
+    "directive": "Patch the Tagalog puzzle for standard ordinal morphology. Change 'ikanim na bahay' to 'ikaanim na bahay' and 'ikapat na puno' to 'ikaapat na puno'. Audit all data entries, questions, glosses, and answer-key entries for ika- ordinal forms before consonant-initial stems and correct any nonstandard forms consistently. If any in-puzzle rule or example implies the nonstandard form, revise it to match standard Tagalog. Preserve the puzzle's solvability, answer-key correctness, and overall structure.",
+    "elapsed_seconds": 67.8
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true. The latest step was a Tier 3 patch to correct nonstandard Tagalog ordinal forms, changing 'ikanim na bahay' to 'ikaanim na bahay' and 'ikapat na puno' to 'ikaapat na puno'. The revised puzzle must now be revalidated before acceptance.",
+    "directive": "Validate the revised Tagalog Linguistic Olympiad puzzle. Confirm that the ordinal forms are now standard: 'ikaanim na bahay' and 'ikaapat na puno'. Audit all data entries, questions, glosses, and answer-key entries for ika- ordinal forms before consonant-initial stems and ensure no nonstandard forms remain. Also re-check numeral+noun agreement, reduplication orthography, glosses, question clarity, answer-key correctness, and full solvability from the provided data. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 77.8
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the remaining issues are concrete puzzle-level defects: three questions are trivial because they directly copy data-table items. This is a Tier 3 issue, so Agent 3 should patch the puzzle by replacing those items with non-identical, rule-applicable examples while preserving solvability and answer-key correctness.",
+    "directive": "Patch the Tagalog puzzle to remove the three trivial questions that merely copy data-table rows. Replace Part 1b with a plural-marker example using a noun not already paired with 'mga' in the data, such as 'mga isda' if not already present as that exact data row. Replace Part 1c with a reduplication example using a noun not already reduplicated in the data, such as 'libro-libro' if not already present as that exact data row. Replace Part 2f with a numeral-noun combination not present in the data, such as 'siyam na bahay' or 'sampung isda', ensuring the numeral-noun linker follows the established rule. If any replacement introduces a new lexeme or numeral, add it to the DATA section with a clear gloss and ensure it is inferable from the provided rules. Update all affected questions, glosses, and answer-key entries consistently. Do not alter the concepts or rationale unless necessary for consistency.",
+    "elapsed_seconds": 83.4
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest step was a Tier 3 patch by Agent 3 to replace three trivial questions with non-identical, rule-applicable examples and to ensure any new lexemes or numerals are properly glossed. Since a revised puzzle is present and puzzle_needs_validation is true, the next required action is to send the puzzle to Agent 4 for validation before any acceptance decision can be made.",
+    "directive": "Validate the revised Tagalog Linguistic Olympiad puzzle after the Tier 3 patch. Confirm that the three previously trivial questions have been replaced with non-identical examples that require application of the stated rules rather than copying data-table rows. Verify that any newly introduced lexemes, numerals, nouns, or forms are present in the DATA section with clear glosses and are inferable from the provided rules. Re-check numeral+noun linker agreement, ordinal morphology, reduplication orthography, glosses, question clarity, answer-key correctness, and full solvability from the provided data. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 89.0
+  },
+  {
+    "step": 13,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, confirming the puzzle is internally consistent and solvable. The remaining issue is a minor target-language validity concern about noun reduplication being framed as a standard plural strategy in Tagalog. Since the verdict is PASS_WITH_ISSUES and the puzzle is acceptable under the coordinator policy, the pipeline can be finalized successfully.",
+    "directive": "",
+    "elapsed_seconds": 95.0
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the linguistic features and mappings for the target language 'sup' so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract a rich set of linguistic features and mappings for the target language 'sup'. Include typologically relevant phenomena such as phonology, morphology, syntax, word order, agreement, case or noun-class behavior, verb morphology, and any salient typological contrasts that can support a non-trivial puzzle. Provide clear feature-to-linguistic-phenomenon mappings suitable for rationale design.",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules from the extracted linguistic concepts.",
+    "directive": "Using the existing linguistic concepts for 'sup', design a clear step-by-step reasoning framework and sentence structure rules for an Olympiad puzzle. Specify how linguistic features should be encoded, how clues should guide inference, and what constraints ensure the puzzle is solvable and non-trivial.",
+    "elapsed_seconds": 13.3
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing concepts and rationale.",
+    "directive": "Generate the complete Olympiad puzzle for target language 'sup' using the existing linguistic concepts and rationale. Include a clear DATA section with all necessary vocabulary and glosses, well-formed questions that require non-trivial linguistic reasoning, and a complete answer key. Ensure the puzzle is internally consistent, solvable, and aligned with the rationale's sentence structure and inference rules.",
+    "elapsed_seconds": 20.4
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the generated puzzle for target language 'sup'. Solve it independently, check internal consistency of the DATA section, glosses, questions, answer key, and reasoning requirements. Confirm that the puzzle is non-trivial, unambiguous, and fully aligned with the concepts and rationale. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific critique if any defects are found.",
+    "elapsed_seconds": 36.3
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES with a major difficulty mismatch: the target difficulty is 1, but the production questions require multi-step integration of several independently inferred rules. This is a puzzle-level defect that can be fixed by simplifying or restructuring the questions rather than changing the underlying linguistic concepts or rationale. Agent 3 should revise the puzzle so the required inference is appropriately easy and single-step, then the revised puzzle must be revalidated.",
+    "directive": "Revise the puzzle to match the target difficulty of 1. Simplify the production items, especially Q3, so each question requires only a single straightforward inference or minimal chaining rather than simultaneous integration of noun class assignment, plural marking, definiteness, tense/suppletion, and asymmetric negation. If production is needed, split it into separate single-step questions or provide enough scaffolding that the solver does not need to combine multiple independently inferred rules at once. Keep the DATA section, glosses, answer key, and internal consistency intact, and update the answer key to match the revised questions.",
+    "elapsed_seconds": 44.0
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, so the latest revision must be independently solved and validated before any further action. The prior issue was a difficulty mismatch, so validation should specifically check whether the production questions are now appropriately single-step or minimally chained for target difficulty 1, while also confirming data, glosses, answer key, and internal consistency.",
+    "directive": "Validate the revised puzzle for target language 'sup'. Solve it independently and verify that the DATA section, glosses, questions, and answer key are internally consistent. Pay special attention to the difficulty level: confirm that each question, especially production items, now requires only a single straightforward inference or minimal chaining appropriate for target difficulty 1. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 49.6
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the reported issue is a major difficulty mismatch: the puzzle still requires multi-step inference despite the target difficulty being 1. This is a puzzle-level implementation problem, not a conceptual or rationale flaw. Agent 3 should revise the questions to make each required inference single-step or minimally chained, while preserving data, glosses, and answer-key consistency.",
+    "directive": "Revise the puzzle so it truly matches target difficulty 1. Reduce each question, especially production items, to a single straightforward inference or minimal chaining. Avoid requiring simultaneous integration of noun class assignment, plural marking, definiteness, tense/suppletion, and asymmetric negation. If a production item currently combines multiple rules, split it into separate simpler questions or add explicit scaffolding. Keep the DATA section, glosses, internal consistency, and answer key correct, and update the answer key to match the revised questions.",
+    "elapsed_seconds": 55.1
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, so the latest revision must be independently solved and validated before any further action. The prior issue was a difficulty mismatch, so validation should specifically check whether the production questions are now appropriately single-step or minimally chained for target difficulty 1, while also confirming data, glosses, answer key, and internal consistency.",
+    "directive": "Validate the revised puzzle for target language 'sup'. Solve it independently and verify that the DATA section, glosses, questions, and answer key are internally consistent. Pay special attention to the difficulty level: confirm that each question, especially production items, now requires only a single straightforward inference or minimal chaining appropriate for target difficulty 1. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 63.5
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the remaining issues are concrete puzzle-level defects: Q3(d) is ambiguous because optional k\u0254 creates two valid translations, and the puzzle still requires more multi-step inference than target difficulty 1. These can be fixed directly in the puzzle without changing the underlying concepts or rationale.",
+    "directive": "Patch the puzzle: (1) make Q3(d) unambiguous by either specifying the expected translation or explicitly accepting both valid forms in the answer key; (2) reduce the difficulty to target 1 by simplifying Q1(b) and Q2 so each requires only a single-step or minimally chained inference, adding scaffolding if necessary; (3) update the answer key and ensure all data, glosses, questions, and answers remain internally consistent.",
+    "elapsed_seconds": 70.2
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, so the latest revision must be independently solved and validated before any further action. The prior validator feedback identified concrete puzzle-level issues: Q3(d) ambiguity and residual difficulty above target level 1. Agent 4 should verify whether these have been fixed and whether the puzzle is now internally consistent and appropriately easy.",
+    "directive": "Validate the revised puzzle for target language 'sup'. Solve it independently and verify that the DATA section, glosses, questions, and answer key are internally consistent. Specifically check: (1) Q3(d) is no longer ambiguous or its answer key explicitly accepts all valid forms; (2) all questions, especially production items, now require only single-step or minimally chained inference appropriate for target difficulty 1; (3) no missing vocabulary, typos, inconsistent glosses, or answer-key errors remain. Return PASS, PASS_WITH_ISSUES, or FAIL with specific critique if any defects remain.",
+    "elapsed_seconds": 81.2
+  },
+  {
+    "step": 11,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict and the puzzle no longer needs validation. The latest puzzle is verified as internally consistent and appropriate for the target difficulty, so the pipeline can finish successfully.",
+    "directive": "No further action needed.",
+    "elapsed_seconds": 86.5
+  }
+]

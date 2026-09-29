@@ -95,6 +95,12 @@ IMPORTANT
 
 Return the complete puzzle, not only changed sections.
 
+Start immediately with the CONTEXT header.
+
+Do not output internal monologues, scratchpad reasoning, planning drafts, or conversational debate.
+
+Do not get stuck debating or looping over vocabulary words: pick distinct phonological forms for distinct meanings and proceed directly.
+
 Do not describe what you changed.
 
 Do not mention VALIDATOR_FEEDBACK.

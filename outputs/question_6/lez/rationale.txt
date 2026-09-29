@@ -1,0 +1,59 @@
+
+
+TARGET-LANGUAGE: Lezgian (lez)
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the core alignment system as the central discovery.** The puzzle's primary inferential target is the ergative-absolutive alignment pattern, specifically the rule that the suffix *-l* marks the subject of a clause when that clause contains another argument (a patient, an oblique, or a locative). The solver must discover this rule from data, not be told it. The critical contrast to build into the data is between (a) intransitive clauses with no other argument (subject unmarked) and (b) intransitive clauses that DO contain an oblique or locative argument (subject marked with *-l*). This contrast is what forces the solver to reject the naive hypothesis "*-l* marks the agent of transitive verbs" and arrive at the correct generalization: "*-l* marks the subject when the clause contains another argument." Without this contrast, the solver cannot distinguish the two hypotheses.
+
+2. **Select a small, controlled vocabulary.** Choose 4–6 nouns (concrete, semantically transparent: e.g., a person, an animal, a body part, a location, a natural object) and 4–6 verbs (mix of intransitive and transitive: e.g., 'run', 'eat', 'see', 'fall', 'sit', 'hit'). Keep the vocabulary minimal so the solver's attention is directed to morphological patterns rather than lexical mapping. The English glosses should make the semantic roles (agent, patient, location, etc.) unambiguous.
+
+3. **Construct the data set with a deliberate progression of complexity.** The data sentences should be ordered (or at least structured) so that simpler patterns appear before more complex ones. The progression should be:
+   - First: simple intransitive clauses with no other argument (subject unmarked, verb alone). This establishes the baseline: a single-argument clause has an unmarked subject.
+   - Second: simple transitive clauses (agent + patient + verb). The agent bears *-l*, the patient is unmarked. At this stage, the solver may form the hypothesis "*-l* marks the agent of transitive verbs."
+   - Third: intransitive clauses WITH a locative or oblique argument (subject + location/oblique + verb). Here the subject bears *-l* even though the verb is intransitive. This is the critical sentence type that forces revision of the hypothesis. The solver must now realize that *-l* is not about transitivity per se, but about the presence of another argument in the clause.
+   - Fourth: negated versions of the above, introducing the negative suffix on the verb.
+   - Fifth: aspectual contrasts (perfective vs. imperfective) on the same verb, showing that aspect is a separate morphological slot.
+
+4. **Design the negation pattern.** Negation in Lezgian is a suffix on the verb (e.g., *-ma* or a similar form). The data should include negated versions of both transitive and intransitive sentences. The solver should be able to identify the negative suffix by comparing a positive and negative pair. The negative suffix should be positionally distinct from the aspect suffix so the solver can segment the verb into stem + aspect + negation (or stem + negation + aspect, depending on the actual order—choose one and be consistent). The key point is that negation is morphological (bound to the verb), not a separate word, which contrasts with the source language's post-verbal negative particle.
+
+5. **Design the aspect system.** Include a perfective/imperfective contrast on at least two verbs. The aspect should be marked by a suffix on the verb, distinct from the negation suffix. The data should show the same verb in both aspects in at least one pair, so the solver can isolate the aspect morpheme. Aspect should be independent of the alignment system (i.e., the *-l* marking on the subject does not change with aspect), which the solver should be able to verify.
+
+6. **Incorporate SOV word order as a background pattern.** The basic word order is SOV (or more precisely, the verb is final). This should be visible in all data sentences. The solver should be able to identify the verb as the final element in each clause. Word order interacts with case marking: because case marks grammatical roles, word order is relatively free, but the default is SOV. The data should consistently show SOV order so the solver can identify it as the basic pattern. Do not make word order a primary discovery target (it is too obvious from the data); instead, let it serve as a structural scaffold that makes the case-marking patterns easier to parse.
+
+7. **Include postpositional phrases for locative/oblique arguments.** When a clause contains a locative or oblique argument, it should be expressed with a postposition (e.g., a locative postposition meaning 'at/in/on'). The postposition should be a separate word (or clitic) following the noun. This gives the solver a clear structural marker for identifying "another argument" in the clause. The presence of a postpositional phrase is what triggers *-l* on the subject in intransitive clauses. Make sure the postposition is morphologically distinct from case suffixes so the solver does not confuse them.
+
+8. **Ensure the critical contrast is unambiguous.** The most important design constraint is that the solver must be able to clearly distinguish between:
+   - "The dog ran" (intransitive, no other argument) → dog unmarked
+   - "The dog ran to the house" (intransitive + locative) → dog-l
+   - "The man hit the dog" (transitive) → man-l, dog unmarked
+   
+   These three sentences must all appear in the data (or be reconstructable from it). The first two together force the insight that *-l* is not about transitivity. The third confirms that in transitive clauses, the agent (subject) gets *-l* and the patient does not. Together, they support the unified rule: *-l* marks the subject when the clause contains another argument.
+
+9. **Design the questions in two tiers.** 
+   - **Tier 1 (Identification/Analysis):** Ask the solver to identify grammatical patterns from the data. For example: "In which sentences does the first noun bear the suffix *-l*? What do these sentences have in common that the others do not?" This tests whether the solver has discovered the alignment rule. Also ask: "What is the function of the suffix on the verb in sentence X?" (testing negation or aspect identification).
+   - **Tier 2 (Production/Translation):** Ask the solver to translate English sentences into Lezgian. The translations should require applying multiple rules simultaneously: correct case marking (including the *-l* rule), correct word order, correct aspect, and correct negation if applicable. Include at least one translation that is an intransitive sentence with a locative argument (testing the critical *-l* rule in a new context), at least one transitive sentence, and at least one negated sentence.
+
+10. **Include a "trap" sentence in the production questions.** One of the translation items should be an intransitive sentence with a locative/oblique argument (e.g., "The child sat on the wall"). A solver who has only learned the naive rule "*-l* marks the agent of transitive verbs" will fail to mark the subject with *-l* here. A solver who has correctly generalized the rule will mark it. This single item discriminates between the two hypotheses and is the key difficulty point of the puzzle.
+
+11. **Control for alternative explanations.** Ensure that:
+    - The *-l* suffix does not appear on any noun that is not the subject of a clause with another argument.
+    - The patient of a transitive verb is never marked with *-l* (it is in the absolutive, unmarked).
+    - The locative/oblique noun is never marked with *-l* (it has its own case marking or postposition).
+    - No other suffix in the data is identical to *-l* (avoid homophony with other case markers).
+    - The verb does not carry any person or number agreement (so the solver cannot use verbal morphology to identify the subject).
+
+12. **Set the difficulty gradient.** The identification questions should be solvable by a solver who has noticed the basic patterns (SOV order, the existence of *-l*, the negative suffix). The production questions should require full integration of all rules. The hardest production item should be the intransitive + locative sentence (the "trap"), because it requires the solver to apply the alignment rule in a context that is not a simple transitive clause. The overall difficulty should be such that a solver who correctly identifies all patterns from the data can answer all items, but a solver who forms the naive transitive-agent hypothesis will get the trap item wrong.
+
+13. **Verify internal consistency of all examples and explanations.** Every sentence in the data, every example in the solution, and every explanation must be consistent with the rule: *-l* marks the subject when the clause contains another argument. Specifically:
+    - In *ččul-l xan-d war-a* (or equivalent), the subject bears *-l* because the clause contains a locative/oblique argument, even though the verb is intransitive.
+    - In any transitive sentence, the agent bears *-l* because the clause contains a patient argument.
+    - In any simple intransitive sentence with no other argument, the subject is unmarked.
+    - No explanation should state or imply that *-l* is restricted to transitive agents. The rule is about the presence of another argument in the clause, full stop.
+
+14. **Final check: unique solvability.** Verify that the data set, taken as a whole, uniquely determines all the rules the solver needs. Specifically:
+    - The alignment rule is uniquely determined by the contrast between simple intransitive (unmarked subject) and intransitive + oblique (marked subject).
+    - The negation rule is uniquely determined by positive/negative pairs.
+    - The aspect rule is uniquely determined by aspectual pairs.
+    - The word order is uniquely determined by the consistent final position of the verb.
+    - No rule requires prior knowledge of Lezgian; all are inferable from the data alone.

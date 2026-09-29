@@ -1,0 +1,142 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has not started: there are no linguistic concepts, rationale, or puzzle. The first required step is to extract the linguistic features and mappings for the target language.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for Abkhaz (abk) suitable for a Linguistic Olympiad puzzle. Include salient phonological, morphological, syntactic, or semantic features, with clear mappings between surface forms and underlying structures, and enough depth to support multi-step reasoning.",
+    "elapsed_seconds": 0.0
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Linguistic concepts for Abkhaz are present, but the rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing Abkhaz linguistic concepts, create a clear step-by-step reasoning framework and sentence structure rules for a Linguistic Olympiad puzzle. Define how surface forms map to underlying structures, specify the reasoning steps solvers must follow, and ensure the rules are internally consistent and sufficient for generating a valid puzzle.",
+    "elapsed_seconds": 10.2
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Linguistic concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers from the existing concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Abkhaz (abk) using the existing linguistic concepts and rationale. Include a clear DATA section with glossed examples, well-formed questions requiring multi-step reasoning, and a complete answer key. Ensure all vocabulary is glossed, examples are internally consistent, and questions are non-trivial.",
+    "elapsed_seconds": 19.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The next required step is to have Agent 4 rigorously validate the newly generated puzzle.",
+    "directive": "Validate the generated Abkhaz Linguistic Olympiad puzzle. Check that all data entries are glossed and internally consistent, that questions are non-trivial and solvable, that the answer key is correct, and that the reasoning steps follow from the provided concepts and rationale. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 28.8
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that no actual puzzle was produced: the current output is an incomplete design process with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. Since concepts and rationale already exist and the failure is specifically incomplete puzzle generation, the next step is to instruct Agent 3 to regenerate a complete, well-formed puzzle.",
+    "directive": "Discard the incomplete design-process output and generate a complete Linguistic Olympiad puzzle for Abkhaz (abk). The output must include all required sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Provide glossed linguistic data, internally consistent examples, non-trivial multi-step questions, and a correct answer key. Do not loop on unresolved vocabulary conflicts; choose a consistent vocabulary set and proceed to a finished puzzle.",
+    "elapsed_seconds": 32.3
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle has been generated and puzzle_needs_validation is true, but no validator verdict exists yet. The required next step is to have Agent 4 validate the latest complete puzzle before any further revision or completion.",
+    "directive": "Validate the latest regenerated Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that questions are non-trivial and solvable; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 40.1
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4's FAIL indicates that the latest Agent 3 output is not a complete puzzle but an incomplete design loop with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. Concepts and rationale are present, so the defect is at the puzzle-generation level. Agent 3 must be called to produce a finished, self-contained puzzle.",
+    "directive": "Discard the incomplete stream-of-consciousness output. Generate a complete Abkhaz Linguistic Olympiad puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Commit immediately to a consistent vocabulary set; if adjective and verb stems conflict, choose distinct stems and do not revisit the choice. Ensure every lexical item in DATA is glossed, examples are internally consistent, questions require multi-step reasoning, and the answer key/solution is correct. Output only the final puzzle, not design notes.",
+    "elapsed_seconds": 43.2
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, with no current validator verdict. The required next step is to validate the latest puzzle before deciding whether to accept it or route it back for revision.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that questions are non-trivial and solvable; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 50.9
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the latest output is not a finished puzzle but an incomplete design process with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. Concepts and rationale already exist, so the defect is at the puzzle-generation level. Agent 3 must be called again with stricter constraints to commit to a fixed vocabulary and output only the final puzzle.",
+    "directive": "Discard the incomplete stream-of-consciousness output. Generate only the final Abkhaz Linguistic Olympiad puzzle, with no design notes, alternatives, or unresolved conflicts. The output must contain exactly these sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Immediately commit to a small, consistent lexicon and morphology; if any noun, adjective, or verb stem conflicts, choose one consistent option and do not revisit it. Ensure every lexical item in DATA is glossed, all examples are internally consistent, questions require multi-step reasoning, and the ANSWERS and SOLUTION are correct and complete.",
+    "elapsed_seconds": 54.3
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, but no validator verdict exists yet. The required next step is to have Agent 4 validate the latest puzzle before any further revision or completion.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that questions are non-trivial and solvable; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 64.8
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 4 reports that the latest output is not a complete puzzle and loops on unresolved ergative suffix choices. Concepts and rationale exist, but repeated Agent 3 failures suggest the rationale is under-specified or structurally open-ended rather than the problem being a simple puzzle typo. The next step is to revise the rationale into a deterministic, minimal, and fully committed design so Agent 3 can generate a complete puzzle without deliberation.",
+    "directive": "Revise the Abkhaz rationale to eliminate all open-ended morphological choices, especially ergative suffix selection. Provide one fixed, internally consistent ergative paradigm and a small closed lexicon. Do not include alternatives, unresolved options, or design notes. The rationale must be a deterministic puzzle blueprint that Agent 3 can directly convert into a complete puzzle with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Keep the puzzle at Olympiad difficulty 5, but simplify the morphology enough to guarantee solvability and convergence.",
+    "elapsed_seconds": 67.4
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle exists and no validation is pending. The previous validator failure indicated that the rationale needed to be made deterministic, and the pipeline has already routed to Agent 2 for that revision. The next missing artifact is the complete puzzle, so Agent 3 should now generate a final, self-contained puzzle from the revised rationale.",
+    "directive": "Generate only the final Abkhaz Linguistic Olympiad puzzle, with no design notes, alternatives, or unresolved choices. Use the revised rationale as a deterministic blueprint. The output must contain exactly these sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Commit to one fixed ergative paradigm and a small closed lexicon; do not introduce competing suffixes or lexical variants. Ensure every lexical item in DATA is glossed, all examples are internally consistent, questions require multi-step reasoning, and the ANSWERS and SOLUTION are complete and correct.",
+    "elapsed_seconds": 81.1
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, but no validator verdict exists yet. The required next step is to have Agent 4 validate the latest puzzle before deciding whether to accept it or route it back for revision.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that the ergative paradigm and lexicon are fixed and non-contradictory; that questions are non-trivial and solvable; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 92.7
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator returned PASS_WITH_ISSUES, but the major issue is puzzle-level: Q1 and Q2 are verbatim copies of data sentences and therefore trivial. The minor issue is that the puzzle is slightly below the target difficulty. Since the concepts and rationale are not reported as contradictory or insufficient, the correct next step is to route to Agent 3 to patch the puzzle by replacing the trivial questions with novel, rule-applying items and adding a deeper interacting layer if possible.",
+    "directive": "Revise the Abkhaz puzzle directly. Replace Q1 and Q2 with novel forms that are not verbatim copies of any DATA sentence and require applying inferred rules, such as a new transitive verb combination, a new possessive construction, or a new person/number combination. Also increase the difficulty toward level 5 by adding at least one additional interacting layer or a more complex multi-step question, for example a non-obvious interaction between plural and person marking, a morphophonological alternation, or a competing alignment in a different construction. Keep the existing fixed ergative paradigm and closed lexicon internally consistent. Update DATA, QUESTIONS, ANSWERS, and SOLUTION accordingly, gloss all new lexical items, and output only the final puzzle with no design notes or alternatives.",
+    "elapsed_seconds": 99.1
+  },
+  {
+    "step": 15,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, but no validator verdict exists yet. The latest Agent 3 revision addressed the previous trivial-question issue, so the required next step is to have Agent 4 validate the current puzzle before accepting it or routing further revisions.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that the fixed ergative paradigm and closed lexicon are non-contradictory; that the previously trivial Q1/Q2 have been replaced with non-trivial, rule-applying questions; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 112.1
+  },
+  {
+    "step": 16,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator found a concrete puzzle-level inconsistency: Q8 uses a 1sg P-prefix on a possessed noun patient, contradicting the established data rule that possessed nouns as patients take 3rd-person/empty P-prefix. This is not a conceptual or rationale failure; it is an incorrect question form and corresponding answer/solution error. Agent 3 should patch the puzzle directly.",
+    "directive": "Fix Q8 and all related answer/solution entries. Change the Q8 form to the internally consistent form with an empty/3rd-person P-prefix on the possessed patient, e.g. *ma-t\u02bcari-ba k\u02b7a-li* if that is the intended form, and update the answer and solution to match. Ensure the solution explains that a possessed noun serving as the patient takes 3rd-person/empty P-prefix, not the possessor\u2019s person. Check every other question for the same possessed-patient error, especially any possessed noun functioning as patient of a transitive verb. Keep the existing fixed ergative paradigm, closed lexicon, glosses, and Olympiad difficulty intact. Output only the corrected final puzzle with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, with no design notes or alternatives.",
+    "elapsed_seconds": 122.1
+  },
+  {
+    "step": 17,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, but no validator verdict exists yet. The latest Agent 3 step was specifically to fix the Q8 possessed-patient inconsistency, so the required next step is to have Agent 4 validate the current puzzle before accepting it or routing further revisions.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that the fixed ergative paradigm and closed lexicon are non-contradictory; that the Q8 possessed-patient issue has been corrected so possessed nouns as patients take the correct 3rd-person/empty P-prefix; that no other question contains the same error; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 128.5
+  },
+  {
+    "step": 18,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES but flagged a major difficulty shortfall: the puzzle currently relies on one substantial interaction rather than the multiple interacting layers required for difficulty 5. The concepts and rationale are not reported as weak or contradictory, so this is a puzzle-level design issue. Route to Agent 3 to add an additional non-obvious interacting layer and update the questions, answers, and solution.",
+    "directive": "Revise the Abkhaz puzzle to reach difficulty 5 by adding a second non-obvious interacting layer that is not merely an isolated feature. Introduce, for example, a formally identical morpheme serving different functions in another domain (nominal vs verbal, possessive vs plural, or an ejective/affricate alternation conditioned by a different feature) or a more complex agreement interaction involving plural possessor, possessed patient, and verbal P/E marking. Ensure the new layer interacts with the existing possessive/P-prefix insight, add fully glossed DATA sentences, replace or extend questions with multi-step rule-applying items, and update ANSWERS and SOLUTION consistently. Preserve the fixed ergative paradigm, closed lexicon, and internal consistency. Output only the final corrected puzzle with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION, with no design notes or alternatives.",
+    "elapsed_seconds": 137.8
+  },
+  {
+    "step": 19,
+    "decision": "CALL_AGENT4",
+    "reasoning": "A revised puzzle is present and puzzle_needs_validation is true, but no validator verdict exists yet. The latest Agent 3 revision was intended to add a second interacting layer to reach difficulty 5, so the required next step is to have Agent 4 validate the current puzzle before accepting it or routing further revisions.",
+    "directive": "Validate the latest Abkhaz Linguistic Olympiad puzzle. Confirm that it contains complete CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed and internally consistent; that the fixed ergative paradigm and closed lexicon are non-contradictory; that the previously identified Q8 possessed-patient issue remains corrected; that the puzzle now contains at least two non-obvious interacting layers sufficient for difficulty 5; and that the answer key and solution are correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 152.7
+  },
+  {
+    "step": 20,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 returned a PASS verdict and confirmed the puzzle is valid at difficulty 5. The puzzle is complete, internally consistent, and no further revisions are required.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 158.3
+  }
+]

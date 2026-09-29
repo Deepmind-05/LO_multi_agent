@@ -1,0 +1,76 @@
+
+
+TARGET-LANGUAGE: Māori (mao)
+
+CORE
+
+1. Concept: Noun-Numeral order (NNum)
+   - Source: Adapted from 83A-2 (Dependent marking in noun-numeral phrases). Estonian marks the noun in numeral phrases; Māori instead shows a fixed Noun-Numeral order with no morphological marking on the noun.
+   - Target-language realization: Numerals follow the noun. E.g., "te whare e rua" (the house two = the two houses). The noun does not change form.
+   - Intended solver inference: The solver should discover that numerals consistently follow the noun, and that no morphological change occurs on the noun when a numeral is present.
+   - Priority: HIGH
+
+2. Concept: No numeral classification
+   - Source: 100A-1 (No classification). Directly applicable.
+   - Target-language realization: Māori has no classifier system. Numerals combine directly with nouns without any intervening classifier.
+   - Intended solver inference: The solver should notice the absence of any classifier-like element between numeral and noun.
+   - Priority: OPTIONAL (negative feature; may be omitted if it weakens the puzzle)
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Ergative-absolutive alignment
+   - Intended solver inference: The solver should discover that a particle (ergative marker) appears before the agent in transitive clauses but is absent in intransitive clauses, while the object is unmarked. This reveals an ergative-absolutive alignment system.
+   - Interaction with CORE: The ergative particle appears within the noun phrase, creating a structural pattern the solver must parse alongside the NNum order and article system.
+   - Difficulty contribution: HIGH — this is the central linguistic insight of the puzzle.
+   - Priority: REQUIRED
+
+2. Phenomenon: VSO basic word order
+   - Intended solver inference: The solver should discover that the verb precedes both subject and object in affirmative clauses.
+   - Interaction with CORE: The VSO order positions the ergative particle between the verb and the transitive subject, creating the pattern V + ERG + A + P, which the solver must distinguish from the intransitive pattern V + S.
+   - Difficulty contribution: MEDIUM — provides the structural frame within which alignment is discovered.
+   - Priority: REQUIRED
+
+3. Phenomenon: NegSVO word order in negative clauses
+   - Intended solver inference: The solver should discover that negation triggers a word-order change: the negative particle precedes the subject, which precedes the verb. The ergative particle remains with the transitive subject.
+   - Interaction with CORE: The ergative particle's position shifts relative to the verb (from post-verbal in affirmative to pre-verbal in negative), requiring the solver to track alignment independently of word order.
+   - Difficulty contribution: HIGH — creates a non-trivial interaction between negation, word order, and alignment that prevents the solver from using a single positional heuristic.
+   - Priority: REQUIRED
+
+4. Phenomenon: Inclusive/exclusive first-person plural distinction
+   - Intended solver inference: The solver should discover that two distinct first-person plural pronouns exist and infer the inclusive (addressee included) vs. exclusive (addressee excluded) distinction from contextual clues in the data.
+   - Interaction with CORE: The inclusive/exclusive distinction applies to both S and A roles, so the ergative particle can appear before either inclusive or exclusive first-person plural pronouns in transitive clauses.
+   - Difficulty contribution: MEDIUM — adds a layer of pronoun complexity that interacts with alignment.
+   - Priority: HIGH
+
+5. Phenomenon: Definite article system (te / a)
+   - Intended solver inference: The solver should discover that a definite article precedes nouns, with different forms for common nouns vs. proper names/kinship terms.
+   - Interaction with CORE: The article appears between the ergative particle and the proper name (e.g., ERG + ART + Name), creating a multi-particle sequence the solver must segment correctly.
+   - Difficulty contribution: MEDIUM — adds segmentation complexity to noun phrases.
+   - Priority: HIGH
+
+INTERACTIONS
+
+1. Ergative alignment × VSO word order:
+   - The ergative particle appears post-verbally in affirmative transitive clauses (V + ERG + A + P), creating a surface pattern where the particle is adjacent to the verb. The solver must recognize it as a subject marker, not a verbal affix or object marker.
+
+2. Ergative alignment × NegSVO:
+   - In negative clauses, the ergative particle moves to a pre-verbal position (NEG + ERG + A + V + P). The solver must recognize that the same alignment system operates in both affirmative and negative clauses, despite the word-order change. This prevents the solver from using a simple "particle after verb = ergative" heuristic.
+
+3. Inclusive/exclusive × Ergative alignment:
+   - Both inclusive and exclusive first-person plural pronouns can serve as A (marked by ergative) or S (unmarked). The solver must track the inclusive/exclusive distinction independently of the alignment role.
+
+4. Definite article × Ergative alignment:
+   - The sequence ERG + ART + ProperName (e.g., "i a Hēmi") requires the solver to segment three elements and assign correct functions. The article "a" is not the ergative marker; the ergative is the preceding "i".
+
+5. Noun-Numeral order × Definite article:
+   - The full noun phrase with numeral follows the order: ART + Noun + Numeral (e.g., "te whare e rua"). The solver must discover that the article precedes the noun and the numeral follows the noun, creating a three-element sequence.
+
+CONSTRAINTS
+
+- The puzzle data must include both affirmative and negative transitive and intransitive clauses to allow the solver to discover both the ergative alignment and the NegSVO word-order change.
+- The puzzle data must include at least two different first-person plural pronouns in different contexts to allow the solver to infer the inclusive/exclusive distinction.
+- The puzzle data must include both proper names (taking article "a") and common nouns (taking article "te") to allow the solver to discover the article split.
+- The puzzle data must include at least one numeral-noun phrase to demonstrate NNum order.
+- The ergative particle must appear in sufficient transitive examples (both affirmative and negative) for the solver to reliably identify it as a subject marker rather than an object marker or verbal element.
+- All examples must be glossed consistently so the solver can map form to meaning without prior Māori knowledge.
+- The puzzle should avoid using dialectal variants of the ergative particle (e.g., "e" as ergative in some dialects) to maintain a single consistent pattern.

@@ -1,0 +1,229 @@
+
+
+CONTEXT
+
+Canela is a Je language spoken by a small community in the Brazilian Amazon. The language has approximately 400 fluent speakers. Below are Canela sentences and phrases with their English translations. Note that ɨ is a vowel (similar to the 'i' in English "roses").
+
+DATA
+
+**Part 1: Sentences**
+
+| # | Canela | English |
+|---|--------|---------|
+| 1 | na-wɨl | I go |
+| 2 | ta-mɨn | You sleep |
+| 3 | ka-lɨn | He comes |
+| 4 | wa-wɨl | We (incl.) go |
+| 5 | ya-mɨn | We (excl.) sleep |
+| 6 | ka na-tɨp | He sees me |
+| 7 | na ta-sɨk | I hit you |
+| 8 | ta na-pɨr | You take me |
+| 9 | na ka-tɨp | I see him |
+| 10 | ta ka-bɨn | You carry him |
+| 11 | wa ta-tɨp | We (incl.) see you |
+| 12 | ya ta-sɨk | We (excl.) hit you |
+| 13 | na pɨ ka-tɨp | I see the fish |
+| 14 | ka nɨ ka-sɨk | He hits the dog |
+| 15 | ta gɨ ka-kɨn | You eat the fruit |
+| 16 | na tɨ ka-dɨp | I drink the water |
+| 17 | ka bɨ ka-tɨp | He sees the stone |
+| 18 | na ka-gɨl | I throw him |
+
+**Part 2: Noun phrases and possession**
+
+| # | Canela | English |
+|---|--------|---------|
+| 19 | na-hu | my house |
+| 20 | ta-hu | your house |
+| 21 | ka-hu | his house |
+| 22 | wa-hu | our (incl.) house |
+| 23 | ya-hu | our (excl.) house |
+| 24 | na-pɨ | my fish |
+| 25 | ta-nɨ | your dog |
+| 26 | ka-tɨ | his water |
+| 27 | wa-kɨ | our (incl.) tree |
+| 28 | ya-sɨ | our (excl.) bird |
+| 29 | hu na | I have a house |
+| 30 | pɨ ta | You have a fish |
+| 31 | nɨ ka | He has a dog |
+| 32 | hu wa | We (incl.) have a house |
+| 33 | tɨ ya | We (excl.) have water |
+
+**Part 3: Additional sentences**
+
+| # | Canela | English |
+|---|--------|---------|
+| 34 | na mɨ ri wɨl | I go with the person |
+| 35 | ka nɨ ri lɨn | He comes with the dog |
+| 36 | na dɨ ri wɨl | The child and I go |
+| 37 | ta sɨ ri wɨl | The bird and you go |
+| 38 | na-tɨk | I am big |
+| 39 | ta-mɨk | You are small |
+| 40 | ka-wɨn | He is hot |
+| 41 | wa-tɨk | We (incl.) are big |
+| 42 | ya-pɨk | We (excl.) are cold |
+
+**Part 4: New sentences**
+
+| # | Canela |
+|---|--------|
+| 43 | ta wa-tɨp |
+| 44 | ya ka-bɨn |
+| 45 | wa-nɨ |
+| 46 | hu ya |
+| 47 | na sɨ ri wɨl |
+| 48 | ka-sɨn |
+
+| Letter | English |
+|--------|---------|
+| A | We (excl.) carry him |
+| B | I go with the bird |
+| C | He is new |
+| D | You see us (incl.) |
+| E | our (incl.) dog |
+| F | We (excl.) have a house |
+
+**Part 5: New sentences for translation**
+
+| # | Canela |
+|---|--------|
+| 49 | ka na-gɨl |
+| 50 | pɨ na |
+| 51 | na kɨ ri wɨl |
+| 52 | ta-wɨl |
+| 53 | wa-mɨk |
+
+QUESTIONS
+
+**Q1 (4 marks)**
+
+(a) What is the basic word order of Canela main clauses? (1 mark)
+
+(b) In transitive sentences, which argument (agent or patient) is marked by the prefix on the verb? Provide two pieces of evidence from the data that rule out an accusative (agent-marking) analysis. (2 marks)
+
+(c) What is the semantic difference between the prefixes *wa-* and *ya-*? (1 mark)
+
+**Q2 (3 marks)**
+
+(a) In the possessive noun phrases (items 19–28), which element bears the marking: the possessor or the possessed noun? (1 mark)
+
+(b) Compare item 19 (*na-hu*, "my house") with item 29 (*hu na*, "I have a house"). (i) What is the relationship between the form *na* in these two constructions, and what does this reveal about the nature of the "possessive" marking in Canela? (ii) Using your analysis, predict the Canela form for "You have a dog." (2 marks)
+
+**Q3 (3 marks)**
+
+(a) The form *ri* appears in items 34–37. In items 34–35 it means "with" (comitative), while in items 36–37 it means "and" (coordinative). What is the typological term for a language where the same form expresses both "with" and "and"? (1 mark)
+
+(b) The adjective predicates in items 38–42 take a person-marking prefix identical to the verbal P-marker. (i) Predict the Canela form for "We (incl.) are cold." (ii) A student argues that because adjectives cannot take transitive arguments, they must be a separate grammatical category from verbs. Do you agree? Use specific evidence from the data to support your answer. (2 marks)
+
+**Q4a (3 marks)**
+
+Match each Canela item (43–48) to its correct English gloss (A–F). Write the letter next to each number. (0.5 marks each)
+
+**Q4b (4 marks)**
+
+Translate items 49–53 into English. A linguist studying Canela was surprised by two of these items because they deviate from what one would initially predict based on the surface patterns in the data. For each surprising item, write the correct translation first, then write the translation the linguist would have initially expected, separated by a semicolon. (1 mark each; +0.5 bonus for correctly identifying the expected form)
+
+**Q4c (5 marks)**
+
+Translate each English gloss into Canela. (0.5 marks each for items 1–4; 1 mark each for items 5–8)
+
+1. I see the bird
+2. We (incl.) hit him
+3. You are cold
+4. I have a dog
+5. We (excl.) go with the child
+6. He takes the water
+7. our (incl.) fruit
+8. I go with the stone
+
+ANSWERS
+
+**Q1**
+
+(a) SOV (Subject–Object–Verb).
+
+(b) The patient (P) is marked. Evidence ruling out accusative (A-marking): (1) In item 6 (*ka na-tɨp*, "He sees me"), the agent is 3P (*ka*) but the verbal prefix is *na-* (1P), matching the patient ("me"), not the agent. (2) In item 7 (*na ta-sɨk*, "I hit you"), the agent is 1P (*na*) but the prefix is *ta-* (2P), matching the patient ("you"), not the agent. In both cases, an accusative analysis would predict the prefix matches the agent, which it does not.
+
+(c) *wa-* marks the inclusive first-person plural (speaker + addressee), while *ya-* marks the exclusive first-person plural (speaker + other, excluding addressee).
+
+**Q2**
+
+(a) The possessor bears the marking (as a prefix on the possessed noun).
+
+(b) (i) The form *na* in item 19 (*na-hu*) is the same morpheme as the *na* in item 29 (*hu na*). In item 29, *na* functions as a locative postposition ("at-me"), making the sentence literally "house at-me." This reveals that the "possessive prefix" in dependent noun phrases is actually a locative marker: possession is expressed through a locational strategy ("X at-me" = "my X"), not through a dedicated possessive morpheme. (ii) *nɨ ta* (literally "dog at-you" = "You have a dog").
+
+**Q3**
+
+(a) WITH-language (or a language with a WITH-conjunction).
+
+(b) (i) *wa-pɨk*. (ii) Disagree. The inability to take transitive arguments does not make adjectives a separate category; it simply means they are intransitive predicates. The critical evidence is that adjectives take the exact same P-marker prefix as verbs: item 38 (*na-tɨk*, "I am big") uses the same 1P prefix *na-* as item 1 (*na-wɨl*, "I go"), and item 42 (*ya-pɨk*, "We (excl.) are cold") uses the same exclusive 1PL prefix *ya-* as item 5 (*ya-mɨn*, "We (excl.) sleep"). This shows that the P-marking system is a general property of all predicates in Canela, not limited to a specific verb subclass. Adjectives are grammatically verbal.
+
+**Q4a**
+
+43 → D (You see us (incl.))
+44 → A (We (excl.) carry him)
+45 → E (our (incl.) dog)
+46 → F (We (excl.) have a house)
+47 → B (I go with the bird)
+48 → C (He is new)
+
+**Q4b**
+
+49. He throws me; I throw him
+50. I have a fish; my fish
+51. I go with the tree
+52. You go
+53. We (incl.) are small
+
+**Q4c**
+
+1. na sɨ ka-tɨp
+2. wa ka-sɨk
+3. ta-pɨk
+4. nɨ na
+5. ya dɨ ri wɨl
+6. ka tɨ ka-pɨr
+7. wa-gɨ
+8. na bɨ ri wɨl
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **SOV word order:** All main clauses follow Subject–Object–Verb order. Postpositions follow their noun phrase. This is immediately apparent from the data (e.g., item 13: *na pɨ ka-tɨp* = S O V).
+
+2. **Ergative P-marking:** The verb carries a prefix that marks the patient (P) in transitive clauses and the sole argument (S) in intransitive clauses. The agent (A) in transitive clauses is unmarked (appears as a bare noun or pronoun). The P-marker paradigm is:
+   - 1P: *na-*
+   - 2P: *ta-*
+   - 3P: *ka-*
+   - 1PL.incl: *wa-*
+   - 1PL.excl: *ya-*
+
+   Evidence: Intransitive items 1–5 show the prefix matching the S. Transitive items 6–12 show the prefix matching the patient, not the agent (e.g., item 6: *ka* is A=3P, but prefix *na-* marks P=1P; item 12: *ya* is A=1PL.excl, but prefix *ta-* marks P=2P). Items 13–18 confirm that noun objects are 3P (prefix is *ka-*).
+
+3. **Inclusive/exclusive distinction:** *wa-* = inclusive (speaker + addressee), *ya-* = exclusive (speaker + other). Evidenced by the glosses in items 4, 5, 11, 12.
+
+4. **Dependent marking in possessive NPs:** The possessor is marked by a prefix on the possessed noun. The possessed noun is unmarked. The prefix forms are identical to the verbal P-marker forms.
+
+5. **Locational possession:** Predicative possession is expressed as [possessed-noun] [possessor-locative], where the locative form is the same as the "possessive prefix." This reveals that the possessive prefix is actually a locative marker. The underlying strategy is locational: "my house" = "house at-me."
+
+6. **WITH-language:** The postposition *ri* serves both as a comitative ("with") and a coordinative ("and"). Disambiguation is contextual: if one NP is the main agent and the other accompanies, it is comitative; if both NPs are co-agents, it is coordinative.
+
+7. **Verbal adjectives:** Adjective predicates take the same P-marker prefix as verbs, confirming that adjectives are grammatically verbal in Canela. The P-marking system is a general property of all predicates.
+
+**How rules produce each answer:**
+
+- Q1(a): Directly observable from all sentences (verb is final).
+- Q1(b): Requires comparing the first word (A) with the verbal prefix in transitive sentences and explicitly showing that an accusative analysis fails. Items 6 and 7 provide clear contrasts where the prefix matches P but not A.
+- Q1(c): Requires mapping the two 1PL forms to their glosses (items 4, 5, 11, 12).
+- Q2(a): Directly observable from items 19–28 (prefix is on the possessor).
+- Q2(b)(i): Requires comparing the form *na* in its two positions (prefix in 19, postposition in 29) and recognizing the locational interpretation. Q2(b)(ii): Requires applying the locational strategy to a novel combination (dog + 2P), testing whether the solver has generalized the pattern rather than memorized examples.
+- Q3(a): Requires recognizing that the same form *ri* has two functions (comitative in 34–35, coordinative in 36–37).
+- Q3(b)(i): Requires combining the verbal adjective insight with the inclusive/exclusive distinction to produce a novel form. Q3(b)(ii): Requires the solver to articulate a linguistic argument using specific data points, demonstrating understanding that the P-marking system is a property of the predicate class, not a verb-specific feature.
+- Q4a: Each item requires applying the relevant rule(s): 43 (ergative + inclusive), 44 (ergative + exclusive), 45 (dependent marking), 46 (locational possession), 47 (WITH-language), 48 (verbal adjective).
+- Q4b: Item 49 is surprising because *na-* marks the patient (1P "me"), not the agent; a naive analysis would predict the prefix marks the agent, yielding "I throw him." The solver can confirm the meaning of *-gɨl* from item 18 (*na ka-gɨl*, "I throw him"), where *na* is the bare agent and *ka-* marks the patient. In item 49, the roles are reversed: *ka* is the bare agent (3P "he") and *na-* marks the patient (1P "me"). Item 50 is surprising because it is a predicative possession sentence (locational strategy: "fish at-me"), not a dependent possessive noun phrase; a naive analysis would interpret it as a possessive NP ("my fish"). Items 51–53 are straightforward applications of known rules.
+- Q4c: Each item requires combining multiple rules: (1) ergative + noun object; (2) ergative with 1PL.incl as unmarked agent and 3P patient marked; (3) verbal adjective; (4) locational possession; (5) exclusive P-marker + WITH-language comitative; (6) ergative with 3P A and 3P P; (7) dependent marking; (8) WITH-language comitative with a noun (bɨ) attested in item 17.
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously decode multiple interacting systems: (1) ergative alignment (the central insight that the marked argument is the patient, not the agent), (2) the inclusive/exclusive distinction embedded within the same P-marker paradigm, (3) the two-stage inference from surface "possessive prefix" to underlying locational strategy, (4) the WITH-language property requiring contextual disambiguation, and (5) the verbal nature of adjectives. The difficulty arises from the entanglement of these concepts in the same morphological forms (the P-marker, the locative marker, and the possessive prefix are all the same set of forms), requiring the solver to maintain a unified analysis across verbal, nominal, and adjectival domains. The prediction sub-tasks in Q2(b)(ii) and Q3(b)(i) require the solver to apply multiple rules simultaneously to novel combinations, while Q3(b)(ii) demands explicit argumentation using cross-domain evidence. The production task (Q4c) demands full generalization, including items with unseen verb/noun roots and combinations of multiple rules.

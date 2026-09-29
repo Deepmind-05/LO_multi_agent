@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract rich linguistic features and mappings for the target language so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract a broad, typologically rich set of linguistic features for Tagalog suitable for a Linguistic Olympiad puzzle. Include core morphological and syntactic phenomena such as affixation, reduplication, aspect, focus/voice, pronouns, noun classifiers, locative marking, and any relevant phonological or semantic mappings. Provide clear feature definitions, contrasts, and example-based mappings that can support non-trivial reasoning questions.",
+    "elapsed_seconds": 0.3
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Tagalog are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence-structure rules that will guide puzzle generation.",
+    "directive": "Using the existing Tagalog linguistic concepts, design a clear step-by-step rationale for a Linguistic Olympiad puzzle. Define the morphological and syntactic rules to be tested, the expected reasoning chain, and sentence-structure templates that support non-trivial inference questions.",
+    "elapsed_seconds": 7.5
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answer key based on the existing Tagalog concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Tagalog using the provided concepts and rationale. Include a clear DATA section with glossed examples, non-trivial questions requiring morphological/syntactic inference, and a complete answer key. Ensure all vocabulary is glossed, examples are unambiguous, and questions test the intended linguistic phenomena.",
+    "elapsed_seconds": 15.2
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and validate the generated Tagalog Linguistic Olympiad puzzle. Check that the DATA section is complete and glossed, all questions are unambiguous and non-trivial, the answer key is correct, and the intended morphological/syntactic reasoning is solvable. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 25.3
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 returned PASS_WITH_ISSUES, but the major difficulty mismatch and the trivial Q7 indicate the puzzle is not yet fully acceptable. The concepts and rationale appear sound; the defects are implementation-level: Q4 is too cognitively demanding for the intended difficulty, and Q7 relies only on reading provided glosses. Agent 3 should patch the puzzle directly.",
+    "directive": "Revise the Tagalog puzzle to resolve the validator issues. 1) Reduce the cognitive load of Q4 so it matches the intended very-easy/level-1 difficulty: avoid requiring simultaneous selection of focus affix, aspect marking, and linear order in one item; split the inference into simpler steps or provide additional scaffolding in the data. 2) Replace or strengthen Q7 so it requires genuine linguistic reasoning rather than merely copying the glosses 'including you' and 'not including you'. Keep all vocabulary glossed, preserve the intended Tagalog phenomena, and ensure the answer key remains correct.",
+    "elapsed_seconds": 30.5
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been generated or revised and puzzle_needs_validation is true, while no current validator verdict is present. The required next step is to have Agent 4 solve and validate the current Tagalog puzzle, especially checking that the previously reported issues with Q4 difficulty and Q7 triviality have been resolved.",
+    "directive": "Solve and rigorously validate the current revised Tagalog Linguistic Olympiad puzzle. Verify that all DATA entries are glossed and unambiguous, all questions are solvable and non-trivial, the answer key is correct, and the intended Tagalog morphological/syntactic reasoning is clear. Pay special attention to whether Q4 now matches the intended difficulty and whether Q7 requires genuine inference rather than copying glosses. Return PASS, PASS_WITH_ISSUES, or FAIL with specific feedback.",
+    "elapsed_seconds": 38.0
+  },
+  {
+    "step": 7,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "Agent 4 has issued a PASS verdict for the current Tagalog puzzle, and puzzle_needs_validation is false. The pipeline state indicates that concepts, rationale, and puzzle are present and the latest validation is successful, so the task can be completed.",
+    "directive": "",
+    "elapsed_seconds": 42.8
+  }
+]

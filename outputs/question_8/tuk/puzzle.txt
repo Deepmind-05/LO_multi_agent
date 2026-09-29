@@ -1,0 +1,140 @@
+
+
+## CONTEXT
+
+Below are some sentences from Tukang Besi, a language of Sulawesi, Indonesia. Each line gives a Tukang Besi sentence followed by its English translation.
+
+## DATA
+
+1. tu ne — the man goes
+2. tu tatene — the man will go
+3. ma mane — I go
+4. ma tamatene — I will go
+5. si la'a — the woman grows
+6. kapa we'a — the child is sick
+7. lapa tuku — the dog sleeps
+8. pata tala'a — the tree will grow
+9. e-tu mato nupatsi — the man chops the fish
+10. e-tu ma kupatsi — the man chops me
+11. e-ma mato manpatsi — I chop the fish
+12. e-tu nanapatsi — the man chops them
+13. e-si na muhanli — the woman steals you
+14. e-kapa ma kup'alo — the child buries me
+15. e-tu nanata — the man hangs them
+16. e-lapa na tamuutte — the dog will bite you
+17. e-mato ma ta-kuelate — the fish will overtake me
+18. e-tu mato ta-nuitcema — the man will love the fish
+19. e-ma mato manpehe'a — I tie the fish up
+20. e-si ma ta-ku-anhati — the woman will listen to me
+21. e-tu ma kupatsi-patsi — the man chops me repeatedly
+22. e-lapa na muutte-utte — the dog bites you repeatedly
+23. e-na mato nanutte — you bite the fish
+24. e-kapa na ta-na-p'ɔtuna — the child will fill them
+25. e-tu nananapatsi — the men chop them
+26. e-na mato nanhanli — you steal the fish
+27. e-tu ma ta-kupatsi — the man will chop me
+28. e-tu nananahanli — the men steal them
+
+## QUESTIONS
+
+**Q1.** Translate the following Tukang Besi sentences into English.
+
+(a) e-kapa na ta-mu-elate
+
+(b) na tatene
+
+(c) e-si na muhanli-hanli
+
+(d) kapa tawe'a
+
+**Q2.** Translate the following English sentences into Tukang Besi.
+
+(a) the dog will bite the fish
+
+(b) I will steal them
+
+(c) the men will go
+
+(d) you will tie the child up
+
+(e) the fish sleeps
+
+**Q3.** In this language, the transitive subject is marked differently in the noun phrase than on the verb. Describe both patterns and explain how they differ.
+
+**Q4.** One verb in the data does not maintain a stable root across tenses. Identify this verb, give its English translation, and provide both root forms.
+
+**Q5.** The data show the verb for 'hang' only in item 15. Based on the data, there are two possible analyses of this verb's root. What are the two possible Tukang Besi forms for "the man hangs it" (3rd singular subject, 3rd singular object)? Explain why the data does not uniquely determine which is correct.
+
+## ANSWERS
+
+**Q1.**
+
+(a) the child will overtake you
+
+(b) you will go
+
+(c) the woman steals you repeatedly
+
+(d) the child will be sick
+
+**Q2.**
+
+(a) e-lapa mato tanutte
+
+(b) e-ma tamanahanli
+
+(c) tu tanatene
+
+(d) e-na kapa tanampehe'a
+
+(e) mato tuku
+
+**Q3.** In the noun phrase, the transitive subject (A) is marked with the prefix *e-* (ergative), while the intransitive subject (S) and the transitive object (O) are unmarked (absolutive). This constitutes an ergative–absolutive alignment. On the verb, a single set of subject prefixes marks both S and A (ma- for 1st person, na- for 2nd/3rd plural, zero for 3rd singular), while a distinct set of object prefixes marks O (ku- for 1st person, mu- for 2nd singular, n- for 3rd singular, na- for 3rd plural). This constitutes an accusative alignment. The two systems differ in that the nominal system distinguishes A from S (the ergative prefix marks only the transitive subject), whereas the verbal system groups S and A together (same prefix set) and distinguishes O (a separate prefix set).
+
+**Q4.** The verb is "go" (or "to go"). Its non-future root is *ne* and its future root is *tene*.
+
+**Q5.** The two possible forms are **nnata** and **nanata**. In item 15, the verb form is *nanata*. This string can be segmented in two ways: (i) 3rd plural object prefix *na-* + root *nata*, or (ii) 3rd singular object prefix *n-* + root *anata*. Both segmentations yield the same surface form *nanata*. If the root is *nata*, then the 3rd singular object form is *n* + *nata* = *nnata*. If the root is *anata*, then the 3rd singular object form is *n* + *anata* = *nanata*. Since the data shows this verb only with the surface form *nanata* (item 15) and never with a different object value that would distinguish the two parses, the ambiguity cannot be resolved from the data alone.
+
+## SOLUTION
+
+**Rules to infer:**
+
+1. **Verbal template:** [TAM] [Subject prefix] [Object prefix] Root. The TAM slot is occupied by *ta-* (future) or zero (non-future). The subject prefix marks both intransitive subjects (S) and transitive subjects (A): ma- (1SG/1PL), na- (2SG/2PL/3PL), zero (3SG). The object prefix marks only transitive objects (O): ku- (1SG/1PL), mu- (2SG/2PL), n- (3SG), na- (3PL). Intransitive verbs have no object prefix.
+
+2. **Nominal alignment (ergative–absolutive):** The transitive subject NP is marked with the prefix *e-*; intransitive subject NPs and transitive object NPs are unmarked. Nouns have no plural morphology — number is encoded only on the verb.
+
+3. **Tense:** Future is marked by the prefix *ta-*; non-future (past) is unmarked.
+
+4. **Suppletion:** The verb "go" has root *ne* in the non-future and *tene* in the future. All other verbs maintain a stable root across tenses.
+
+5. **Reduplication:** Full reduplication of the root (e.g., *patsi-patsi*, *utte-utte*) expresses iterative/repeated action.
+
+6. **Morpheme boundary ambiguity:** The verb for "hang" appears only as *nanata* (item 15), which is compatible with two root analyses: *nata* (with 3PL object prefix *na-*) or *anata* (with 3SG object prefix *n-*).
+
+**Evidence for each rule:**
+
+- Rule 1: Intransitive clauses (items 1–8) show subject prefix + root with no object prefix. Transitive clauses (items 9–15, 19, 21–23, 26) show an additional object prefix between subject prefix and root. Future clauses (items 2, 4, 8, 16–18, 20, 24, 27) show *ta-* preceding the subject prefix.
+- Rule 2: *e-* appears on the subject NP in every transitive clause (items 9–28) and never on intransitive subjects (items 1–8) or transitive objects. The same noun *tu* appears as "the man" (3SG, items 1, 9, etc.) and "the men" (3PL, items 25, 28) with identical surface form, confirming no nominal plural.
+- Rule 3: *ta-* appears only in clauses translated with "will" and is absent in all other clauses.
+- Rule 4: "Go" appears as *ne* (items 1, 3) and *tatene* (items 2, 4), showing root alternation. All other verbs (e.g., *patsi* in items 9–12, 21, 25, 27; *la'a* in items 5, 8; *utte* in items 16, 22, 23) maintain the same root in both tenses.
+- Rule 5: Item 21 (*kupatsi-patsi* = "chops repeatedly") contrasts with item 10 (*kupatsi* = "chops"); item 22 (*muutte-utte* = "bites repeatedly") contrasts with item 16 (*tamuutte* = "will bite").
+- Rule 6: Item 15 (*nanata*) is the only occurrence of the "hang" verb. The string *nanata* = *na* + *nata* = *n* + *anata*. No other form of this verb appears in the data to resolve the ambiguity.
+
+**How rules produce each answer:**
+
+- Q1(a): *e-kapa* (erg, 3SG A) + *na* (abs, 2SG O) + *ta* (fut) + *mu* (2SG obj) + *elate* → "the child will overtake you."
+- Q1(b): *na* (abs, 2SG S) + *ta* (fut) + *na* (2SG subj) + *tene* (future root of "go") → "you will go."
+- Q1(c): *e-si* (erg, 3SG A) + *na* (abs, 2SG O) + *mu* (2SG obj) + *hanli-hanli* (reduplicated) → "the woman steals you repeatedly."
+- Q1(d): *kapa* (abs, 3SG S) + *ta* (fut) + zero (3SG subj) + *we'a* → "the child will be sick."
+- Q2(a): 3SG A → *e-lapa*; 3SG O → *mato*; future + 3SG subj (zero) + 3SG obj (*n-*) + *utte* → *tanutte*. Full: *e-lapa mato tanutte*.
+- Q2(b): 1SG A → *e-ma*; future + 1SG subj (*ma-*) + 3PL obj (*na-*) + *hanli* → *tamanahanli*. Full: *e-ma tamanahanli*.
+- Q2(c): 3PL S → *tu* (abs, no ergative); future + 3PL subj (*na-*) + *tene* → *tanatene*. Full: *tu tanatene*.
+- Q2(d): 2SG A → *e-na*; 3SG O → *kapa*; future + 2SG subj (*na-*) + 3SG obj (*n-*) + *pehe'a* → *tanampehe'a*. Full: *e-na kapa tanampehe'a*.
+- Q2(e): 3SG S → *mato* (abs); non-future + 3SG subj (zero) + *tuku* → *tuku*. Full: *mato tuku*.
+- Q3: See answer above. The contrast between *e-* on transitive subjects (nominal) and the shared subject prefix for S and A (verbal) is the key insight.
+- Q4: "Go" is the only verb with a root alternation: *ne* (non-future) vs. *tene* (future).
+- Q5: See answer above. The two parses of *nanata* in item 15 lead to two different 3SG object forms: *nnata* (if root = *nata*) and *nanata* (if root = *anata*).
+
+## DIFFICULTY
+
+**Level 4.** The puzzle requires the solver to independently induce two separate alignment systems (ergative–absolutive in the nominal domain, accusative in the verbal domain) and recognize their contrast — the central insight. Additional layers include: identifying the suppletive verb by contrast with regular verbs; recognizing that nouns lack plural marking and that verbal agreement is the sole morphological signal of number; discovering the reduplication process; and acknowledging genuine underdetermination in the segmentation of one verb. The questions test a clear progression from productive parsing (Q1) through construction (Q2) to metalinguistic synthesis (Q3–Q5), with later questions building on earlier discoveries.

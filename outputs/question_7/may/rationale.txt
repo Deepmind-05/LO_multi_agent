@@ -1,0 +1,72 @@
+
+
+TARGET-LANGUAGE: Maybrat (Papuan, Maybrat family)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the morphological rules to be encoded in the puzzle.** Establish the following system before constructing any data:
+   - **Nouns:** Morphologically invariant. No gender marking, no number marking. A noun has the same surface form regardless of whether it refers to one or many entities, and regardless of its semantic gender.
+   - **Pronouns:** A full person-number paradigm. 1sg, 2sg, 1pl, 2pl, 3pl are all gender-neutral (single form per cell). 3sg has two forms: one for masculine referents, one for feminine referents. This is the ONLY cell where gender is morphologically visible in the pronoun system.
+   - **Demonstratives:** A 3×2 paradigm. Three distance values (proximal, medial, distal) crossed with two gender values (masculine, feminine), yielding six distinct forms. Gender is visible here as well.
+   - **Possessive marking:** Dependent marking via prefixation on the possessor. The possessed noun (head) remains unmarked. The possessor (dependent) receives a prefix. There are TWO sets of possessive prefixes (Class A and Class B), assigned to possessed nouns based on a semantic classification (e.g., inalienable/body-part vs. alienable/non-body-part). This classification is INDEPENDENT of gender: a masculine noun can belong to either possessive class, and a feminine noun can belong to either possessive class.
+   - **Prefixing:** All morphological markers (possessive prefixes, demonstrative markers if any) attach to the left of the stem.
+
+2. **Choose a closed vocabulary set.** Select:
+   - 8–10 concrete nouns, split roughly evenly between masculine and feminine referents (e.g., 4–5 masculine: man, dog, fish, tree; 4–5 feminine: woman, bird, house, river). Choose semantically transparent items so the solver can guess meanings from context or cross-linguistic cognates.
+   - Of these nouns, assign each to a possessive class (Class A or Class B) such that the assignment is NOT perfectly correlated with gender. Specifically, ensure at least one masculine noun is Class B and at least one feminine noun is Class A. This is critical for proving independence.
+   - A small set of demonstrative forms (the 3×2 paradigm from Step 1).
+   - The full pronoun paradigm (from Step 1).
+   - Optionally, a copula or a simple verb (e.g., "is," "has") to embed the data in sentences. Keep the verb invariant (no agreement) to avoid confounding.
+
+3. **Construct the pronoun paradigm as the first layer of evidence.** Present the full set of personal pronouns (1sg through 3pl). Design the data so that:
+   - 1sg, 2sg, 1pl, 2pl, 3pl each have a single, unambiguous form.
+   - 3sg has two distinct forms.
+   - The two 3sg forms are used in contexts where the referent's sex is clear (e.g., "the man" vs. "the woman" in a gloss or contextual clue).
+   - The solver's first inference should be: "There are two forms for 3sg but only one form for all other person-number combinations. The two 3sg forms must encode a semantic distinction about the referent." The solver should identify this as a gender (sex-based) distinction.
+   - The solver should also note that 3pl is gender-neutral, establishing the 3sg restriction.
+
+4. **Construct the demonstrative paradigm as the second layer of evidence.** Present the six demonstrative forms in a way that allows the solver to isolate the two dimensions:
+   - Provide at least two sets of examples where the same referent (same gender) is described at different distances, showing that distance changes the form while gender stays constant.
+   - Provide at least two sets of examples where the same distance is used for referents of different genders, showing that gender changes the form while distance stays constant.
+   - The solver should infer: "Demonstratives encode two independent dimensions: a 3-way distance contrast and a 2-way gender contrast." The gender values in the demonstratives should be consistent with the gender values identified from the 3sg pronouns (i.e., the same referent that takes the masculine 3sg pronoun also takes the masculine demonstrative). This cross-confirmation strengthens the gender identification.
+
+5. **Construct the possessive data as the third layer of evidence.** This is the most complex layer and should be introduced after the solver has already identified the gender system. Design the possessive examples to reveal:
+   - **Dependent marking:** In every possessive construction, the possessor (the "owner") carries a prefix, and the possessed noun (the "thing owned") is in its bare, unmarked form. The solver should infer that the marking falls on the dependent, not the head.
+   - **Two possessive classes:** Present possessive examples with possessed nouns from both Class A and Class B. The prefixes should be clearly different between the two classes. The solver should notice that there are two distinct prefix sets and should attempt to determine what distinguishes the classes.
+   - **Independence from gender:** This is the critical inference. Include at least one example where a masculine noun (one the solver has already identified as masculine from pronoun/demonstrative data) takes a Class B prefix, and at least one example where a feminine noun takes a Class A prefix. The solver must recognize that the possessive class assignment does not follow the gender assignment. The two binary systems are independent.
+   - **No marking on the possessed noun:** In all possessive examples, the possessed noun should appear in its bare form (identical to how it appears in non-possessive contexts). This reinforces the "nouns are morphologically bare" principle.
+
+6. **Construct the full data set with progressive revelation.** Arrange the evidence so that simpler discoveries come first and more complex inferences build on them:
+   - **Phase 1 (simplest):** Present the pronoun paradigm. The solver identifies the 3sg gender contrast and the 3sg restriction.
+   - **Phase 2:** Present demonstrative examples. The solver identifies the 3×2 paradigm and confirms the gender system. The solver also observes that nouns in these sentences are morphologically invariant (no gender or number marking on the noun itself).
+   - **Phase 3:** Present possessive examples. The solver identifies dependent marking (prefix on possessor), the two possessive classes, and the independence of possessive class from gender.
+   - **Phase 4 (integration):** Present examples that combine multiple systems simultaneously (e.g., a possessive construction with a demonstrative, or a sentence where a 3sg pronoun refers back to a noun that also appears in a possessive construction). These force the solver to apply multiple rules at once.
+   - At each phase, the solver should be able to make the intended inference using only the evidence presented up to that point. Later phases should not be solvable without the discoveries from earlier phases.
+
+7. **Design the questions with progressive difficulty.** Structure the questions to test each layer of understanding:
+   - **Q1 (basic identification):** Ask the solver to identify the two 3sg pronoun forms and state what semantic distinction they encode. This tests Phase 1 understanding.
+   - **Q2 (paradigm completion):** Provide a partial demonstrative paradigm (e.g., 4 of 6 forms) and ask the solver to supply the missing forms. This tests whether the solver has correctly identified both dimensions and their interaction.
+   - **Q3 (possessive construction):** Give the solver a novel possessive construction to produce (e.g., "the woman's [Class A noun]" or "the man's [Class B noun]"). The solver must: (a) select the correct possessive prefix based on the possessed noun's class, (b) place it on the possessor, (c) leave the possessed noun unmarked. This tests Phase 3 understanding.
+   - **Q4 (independence test):** Give the solver a noun that has NOT appeared in the data set, along with information about its gender and its possessive class (e.g., "This noun refers to a male animal and belongs to possessive Class B"). Ask the solver to produce a possessive construction and a 3sg pronoun reference for this noun. This tests whether the solver truly understands that gender and possessive class are independent dimensions.
+   - **Q5 (metalinguistic / hardest):** Ask the solver to explain why the possessed noun in a possessive construction does not change form, even though the language has a gender system. The correct answer should reference the fact that gender is a semantic property of the referent that surfaces only in specific dependent elements (3sg pronouns, demonstratives), not in the noun itself. This tests the deepest level of understanding: the typological insight that gender in this language is not a morphological category on nouns but a semantic property that is only morphologically realized in restricted contexts.
+
+8. **Verify uniqueness of induction.** Before finalizing the puzzle, check:
+   - That no alternative interpretation of the 3sg pronoun contrast is consistent with the data (e.g., it cannot be a number distinction, a case distinction, or a tense distinction). The contextual clues (sex of referent) must make the gender interpretation the only viable one.
+   - That the possessive class assignment is not perfectly correlated with gender in the data. If it were, the solver could not distinguish "possessive class = gender" from "possessive class is independent." The counterexamples (masculine noun in Class B, feminine noun in Class A) are essential.
+   - That the demonstrative paradigm is unambiguous: the solver can isolate the distance dimension and the gender dimension independently. If two forms differ in both dimensions simultaneously without a controlled contrast, the solver cannot determine which dimension is responsible for the difference.
+   - That nouns are consistently unmarked across all contexts (singular, plural, possessive, with demonstratives). If a noun ever appears with a suffix or prefix that could be misinterpreted as gender or number marking, the "nouns are bare" inference is compromised.
+   - That the dependent-marking pattern is consistent: in every possessive example, the prefix is on the possessor and the possessed noun is bare. No exceptions.
+
+9. **Prevent confounds and unintended interpretations.**
+   - Do not use any noun whose form could be confused with a pronoun or demonstrative form.
+   - Keep the verb (if used) completely invariant. No agreement of any kind on the verb.
+   - Do not introduce case marking, tense, aspect, or any other morphological category that could distract from the target inferences.
+   - Ensure that the semantic categories for possessive classes are transparent enough that the solver can form a hypothesis about what distinguishes them (e.g., body parts vs. non-body parts), even if the puzzle does not require the solver to state the semantic criterion explicitly. The key inference is independence from gender, not the semantic content of the classes.
+   - If using glosses or contextual clues to indicate referent sex, make them unambiguous (e.g., use "man" vs. "woman" in the gloss, or provide a brief contextual sentence).
+
+10. **Final quality check.** Solve the puzzle yourself using only the provided data. Confirm that:
+    - Every rule (gender system, 3sg restriction, no noun marking, dependent marking, two possessive classes, independence of gender and possessive class, demonstrative 3×2 paradigm) is uniquely determined by the evidence.
+    - Every question has a single correct answer.
+    - The difficulty progression is smooth: no question requires a rule that has not been sufficiently evidenced in earlier data.
+    - A solver with no prior knowledge of Maybrat or Papuan languages can derive all answers using only general linguistic reasoning and the provided data.
+    - The puzzle is non-trivial: the solver must make at least three distinct inferences (gender identification, 3sg restriction, independence of possessive class from gender) and integrate them to answer the hardest questions.

@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to establish the linguistic concepts and mappings for the target language, Turkish, before designing rationale or generating the puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic features and mappings for Turkish suitable for a Linguistic Olympiad puzzle. Include relevant morphological, phonological, syntactic, or lexical phenomena, with clear feature-to-form mappings and enough depth to support nontrivial reasoning.",
+    "elapsed_seconds": 0.3
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts for Turkish are present, but rationale is missing. The next required step is to design the step-by-step reasoning blueprint, morphological/syntactic rules, and sentence structure constraints before puzzle generation.",
+    "directive": "Using the existing Turkish linguistic concepts, design a rigorous Olympiad-level rationale: define the reasoning steps, morphological or syntactic rule system, sentence construction constraints, and how solvers should infer the target forms. Ensure the rationale is internally consistent, nontrivial, and sufficient for generating a valid puzzle.",
+    "elapsed_seconds": 8.5
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answer key from the existing Turkish concepts and rationale.",
+    "directive": "Generate a complete Linguistic Olympiad puzzle for Turkish using the provided concepts and rationale. Include a clear DATA section with glossed examples, nontrivial questions requiring inference, and a complete answer key. Ensure all vocabulary is glossed, examples are unambiguous, and the puzzle is solvable from the given data.",
+    "elapsed_seconds": 19.8
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the required next step is to have Agent 4 solve and rigorously validate the newly generated puzzle.",
+    "directive": "Solve and rigorously validate the generated Turkish Linguistic Olympiad puzzle. Check that all data entries are glossed, the questions are nontrivial and unambiguous, the answer key is correct, and the puzzle is fully solvable from the provided data. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 32.6
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline contains concepts, rationale, and a generated puzzle. Agent 4 has already validated the puzzle and returned a PASS verdict, with no unresolved issues. Therefore the puzzle is acceptable and the process should finish successfully.",
+    "directive": "No further action required.",
+    "elapsed_seconds": 39.5
+  }
+]

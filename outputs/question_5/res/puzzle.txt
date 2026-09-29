@@ -1,0 +1,169 @@
+
+
+CONTEXT
+
+Resígaro is a language of the Japura region of Colombia. The orthography uses ë for a front mid vowel. Below are noun phrases recorded by a fieldworker. Each phrase consists of a numeral followed by a noun (or a possessed noun). Some phrases are glossed in English; the rest are not.
+
+DATA
+
+**Section A: Simple noun phrases**
+
+| # | Resígaro | Gloss |
+|---|----------|-------|
+| 1 | kapi pita | one dog |
+| 2 | turo sura-na | two fish |
+| 3 | mësa kama-na | three houses |
+| 4 | wani pita-na | |
+| 5 | dëlo sura-na | |
+| 6 | tëri kama-na | |
+| 7 | tëri kapi pita-na | |
+| 8 | tëri turo sura-na | |
+| 9 | tëri mësa kama-na | |
+| 10 | tëri wani pita-na | |
+| 11 | tëri dëlo sura-na | |
+| 12 | turo tëlu kama-na | |
+| 13 | turo tëlu kapi pita-na | |
+| 14 | turo tëlu turo sura-na | |
+| 15 | turo tëlu mësa kama-na | |
+| 16 | turo tëlu wani pita-na | |
+| 17 | turo tëlu dëlo sura-na | |
+| 18 | mësa tëlu kama-na | |
+| 19 | mësa tëlu kapi pita-na | |
+
+**Section B: Possessed noun phrases**
+
+| # | Resígaro | Gloss |
+|---|----------|-------|
+| 20 | turo ta-sura-na | your two fish |
+| 21 | kapi ma-pita | my one dog |
+| 22 | tëri kapi ta-nëlo-na | |
+| 23 | mësa ma-kama-na | |
+| 24 | turo tëlu ta-sura-na | |
+| 25 | mësa tëlu ma-pita-na | |
+
+QUESTIONS
+
+**Q1.** Based on the data, answer the following:
+
+(a) List the words that function as atomic numerals (i.e., the irreducible numeral words from which all other numerals are built).
+
+(b) What is the function of the suffix *-na*? State the condition under which it appears.
+
+(c) What are the functions of the prefixes *ma-* and *ta-*?
+
+**Q2.** Determine the numerical value (in Arabic numerals) of the numeral in each of the following unglossed phrases from Section A:
+
+(a) wani pita-na
+(b) dëlo sura-na
+(c) tëri kama-na
+(d) tëri wani pita-na
+(e) turo tëlu kama-na
+(f) mësa tëlu kapi pita-na
+
+**Q3.**
+
+(a) State the base of the Resígaro numeral system.
+
+(b) Describe the construction rule for each of the following ranges:
+- values 1 through the base
+- values base+1 through 2×base−1
+- the value 2×base
+- values 2×base+1 through 3×base−1
+
+(c) Explain the relationship between *tëri* and *tëlu*. In what structural contexts does each form appear?
+
+**Q4.** Write the Resígaro numeral (not the full noun phrase) for each of the following values:
+
+(a) 9
+(b) 12
+(c) 18
+(d) 22
+(e) 27
+
+**Q5.** Determine the numerical value of the numeral in each of the following unglossed possessed phrases from Section B:
+
+(a) tëri kapi ta-nëlo-na
+(b) mësa ma-kama-na
+(c) turo tëlu ta-sura-na
+(d) mësa tëlu ma-pita-na
+
+ANSWERS
+
+**Q1.**
+(a) kapi, turo, mësa, wani, dëlo, tëri
+(b) *-na* is a plural suffix. It appears on the noun if and only if the preceding numeral has a value greater than 1.
+(c) *ma-* is a first-person possessive prefix ("my"); *ta-* is a second-person possessive prefix ("your").
+
+**Q2.**
+(a) 4
+(b) 5
+(c) 6
+(d) 10
+(e) 12
+(f) 19
+
+**Q3.**
+(a) The base is **6**.
+
+(b)
+- Values 1–6: atomic (irreducible lexical items).
+- Values 7–11 (base+1 through 2×base−1): additive, formed as [base] + [n], i.e., *tëri* + the atomic numeral for *n*.
+- Value 12 (2×base): multiplicative, formed as [2] × [base], i.e., *turo tëlu*.
+- Values 13–17 (2×base+1 through 3×base−1): mixed, formed as [2] × [base] + [n], i.e., *turo tëlu* + the atomic numeral for *n*.
+
+(c) *tëlu* is a reduced (allomorphic) form of *tëri*. The full form *tëri* appears in additive compounds (values 7–11), where the base is added to a smaller number. The reduced form *tëlu* appears in multiplicative and mixed compounds (values 12 and above), where the base is multiplied by a smaller number. The alternation is conditioned by the structural role of the base: additive context → full form; multiplicative/mixed context → reduced form.
+
+**Q4.**
+(a) tëri mësa
+(b) turo tëlu
+(c) mësa tëlu
+(d) mësa tëlu wani
+(e) wani tëlu mësa
+
+**Q5.**
+(a) 7
+(b) 3
+(c) 12
+(d) 18
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Numeral identification and word order.** The words *kapi, turo, mësa, wani, dëlo, tëri* consistently appear as standalone words in pre-noun position and are the only such words. They are the atomic numerals. The nouns are *pita* (dog), *sura* (fish), *kama* (house), *nëlo* (child). The word *tëlu* never appears as a standalone pre-noun word; it occurs only within compound numerals (items 12–19, 24, 25), indicating it is not an atomic numeral but a reduced form of one of them.
+
+2. **Plural suffix.** The suffix *-na* appears on the noun stem if and only if the preceding numeral has value > 1. Evidence: *kapi pita* (no *-na*) vs. *turo sura-na* (with *-na*); this pattern is consistent across all 25 data items. The numeral *kapi* is the only one that never triggers *-na*, identifying it as "one."
+
+3. **Possessive prefixes.** *ma-* and *ta-* are attached to the noun stem (preceding it) and mark 1st- and 2nd-person possession, respectively. Evidence: *kapi ma-pita* = "my one dog" and *turo ta-sura-na* = "your two fish." The possessive prefix does not affect the plural suffix: *mësa ma-kama-na* has *-na* because the numeral (3) > 1.
+
+4. **Determining the base and atomic values.**
+   - From the glosses: *kapi* = 1, *turo* = 2, *mësa* = 3.
+   - The data shows 5 additive compounds of the form *tëri* + [atomic numeral]: *tëri kapi, tëri turo, tëri mësa, tëri wani, tëri dëlo*.
+   - In a mixed numeral system, the additive range (base+1 through 2×base−1) contains exactly base−1 members. Since there are 5 additive compounds, base−1 = 5, so **base = 6** and *tëri* = 6.
+   - The addends in the additive compounds are the values 1 through 5. Since *kapi* = 1, *turo* = 2, *mësa* = 3, the remaining addends *wani* and *dëlo* must be 4 and 5. The data presents them in ascending order (wani before dëlo in items 10–11), so *wani* = 4 and *dëlo* = 5.
+   - **Independent confirmation via morphological alternation:** The word *tëlu* appears in multiplicative compounds (*turo tëlu*, *mësa tëlu*) in the same structural position as the base. Since *tëlu* is not an atomic numeral (it never appears standalone in pre-noun position) and is phonologically related to *tëri* (shared onset /tə/, similar syllable structure), it must be a reduced form of *tëri*. This independently confirms that *tëri* is the base (value 6), converging with the counting argument.
+
+5. **Construction rules.**
+   - 1–6: atomic (*kapi, turo, mësa, wani, dëlo, tëri* = 1, 2, 3, 4, 5, 6).
+   - 7–11: *tëri* + [n] (additive, full form of base). E.g., *tëri kapi* = 6+1 = 7.
+   - 12: *turo tëlu* (multiplicative: 2×6, reduced form of base).
+   - 13–17: *turo tëlu* + [n] (mixed: 2×6+n, reduced form of base). E.g., *turo tëlu kapi* = 12+1 = 13.
+   - 18: *mësa tëlu* (3×6).
+   - 19–23: *mësa tëlu* + [n] (3×6+n).
+   - 24: *wani tëlu* (4×6).
+   - 25–29: *wani tëlu* + [n] (4×6+n).
+
+**How the rules produce each answer:**
+
+- **Q1:** Directly from pattern observation (rules 1–3).
+- **Q2:** Applying the construction rules:
+  - (a) *wani* = 4; (b) *dëlo* = 5; (c) *tëri* = 6; (d) *tëri wani* = 6+4 = 10; (e) *turo tëlu* = 2×6 = 12; (f) *mësa tëlu kapi* = 3×6+1 = 19.
+- **Q3:** As stated above.
+- **Q4:** Applying the construction rules productively:
+  - (a) 9 = 6+3 → *tëri mësa*; (b) 12 = 2×6 → *turo tëlu*; (c) 18 = 3×6 → *mësa tëlu*; (d) 22 = 3×6+4 → *mësa tëlu wani*; (e) 27 = 4×6+3 → *wani tëlu mësa*.
+- **Q5:** The possessive prefix is part of the noun and does not affect the numeral:
+  - (a) *tëri kapi* = 6+1 = 7; (b) *mësa* = 3; (c) *turo tëlu* = 2×6 = 12; (d) *mësa tëlu* = 3×6 = 18.
+
+DIFFICULTY
+
+**Level 4.** The puzzle requires the solver to integrate two independent lines of evidence to determine the numeral base: (1) counting the additive compounds (5 compounds → base−1 = 5 → base = 6), and (2) recognizing the morphological alternation between *tëri* (full form, used in additive compounds) and *tëlu* (reduced form, used in multiplicative/mixed compounds). The solver must first identify that *tëlu* is not an atomic numeral (it never appears standalone in pre-noun position, unlike all six true atomic numerals), then recognize its phonological relationship to *tëri* (shared onset /tə/), and finally use this to confirm that *tëri* is the base. The two lines of evidence interact: the counting argument identifies *tëri* as the base, while the morphological alternation provides independent confirmation and explains why the base appears in two different surface forms. A solver who relies on only one line of evidence may arrive at the correct base but fail to explain the *tëri*/*tëlu* alternation (Q3c) or may incorrectly treat *tëlu* as a separate atomic numeral. The productive application in Q4 requires the solver to choose the correct construction type (additive vs. multiplicative vs. mixed) and the correct allomorph of the base for values not directly exemplified in the data (e.g., 27 requires the multiplier *wani* in a multiplicative context, a combination not seen in the data). The possessed phrases in Q5 add a segmentation challenge that tests whether the solver can correctly isolate the numeral from a multi-morpheme noun. The difficulty arises from the dependency between deductions: the base cannot be fully confirmed without both the counting argument and the morphological analysis, the atomic values cannot be determined without knowing the base, and the productive application requires understanding the allomorphic alternation and generalizing it to new multipliers.

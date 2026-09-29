@@ -1,0 +1,75 @@
+
+
+TARGET-LANGUAGE: Carib (Cariban, South America)
+
+CORE
+
+1. Concept: Dependent marking in possessive noun phrases (source 81A-1)
+   - Target-language realization: Possessive prefixes on the possessed noun (WALS 57A-1). The possessor is encoded as a prefix on the possessed noun, e.g., a 1SG prefix on a noun meaning "my house."
+   - Intended solver inference: The solver observes that the possessor (the dependent in the possessive relationship) is marked on the possessed noun (the head), and identifies this as dependent marking.
+   - Priority: REQUIRED
+
+2. Concept: Ergative alignment in verbal person marking (replaces source 100A-3, which does not fit Carib)
+   - Target-language realization: Ergative alignment (WALS 100A-3). Intransitive subjects (S) are marked with the same set of person markers as transitive patients (P); transitive agents (A) are marked with a distinct set. Both A and P are marked on the verb (WALS 102A-5). No zero realization of 3rd person (WALS 103A-2).
+   - Intended solver inference: By comparing person markers across intransitive and transitive clauses, the solver identifies that S and P share a marker set while A has a separate set, revealing ergative alignment.
+   - Priority: REQUIRED
+
+TARGET-SPECIFIC
+
+1. Phenomenon: Inclusive/exclusive distinction in 1st person plural
+   - Intended solver inference: The solver observes two distinct 1PL forms (in pronouns and/or possessive prefixes) and infers a semantic distinction between "we including you" and "we excluding you." The verbal inflection differentiates only inclusive (WALS 40A-4), while independent pronouns distinguish both (WALS 39A-5).
+   - Interaction with CORE: The inclusive/exclusive distinction is reflected in possessive prefixes (e.g., "our-incl. house" vs. "our-excl. house"), enriching the possessive marking system. It also appears in the verbal person marking, adding a dimension to the ergative alignment puzzle.
+   - Difficulty contribution: MEDIUM. A well-known typological feature; the solver can use general linguistic knowledge to hypothesize the inclusive/exclusive distinction once two 1PL forms are observed.
+   - Priority: HIGH
+
+2. Phenomenon: 3rd person semantic (gender) distinctions limited to 3rd person
+   - Intended solver inference: The solver observes that 3rd person pronouns (and 3rd person possessive prefixes) have multiple forms corresponding to different semantic categories (e.g., masculine/feminine or animate/inanimate), while 1st and 2nd person do not show this distinction. The key insight is the asymmetry: the distinction is restricted to 3rd person (WALS 44A-2).
+   - Interaction with CORE: Different 3rd person semantic categories produce different possessive prefixes, adding complexity to the possessive system. In the verbal system, 3rd person A and 3rd person P would each have multiple forms, complicating the ergative alignment analysis.
+   - Difficulty contribution: MEDIUM-HIGH. The restriction to 3rd person is the critical insight; the solver must notice that 1st and 2nd person lack this distinction.
+   - Priority: HIGH
+
+3. Phenomenon: A and P person markers fused (single core-argument slot)
+   - Intended solver inference: The solver observes that the verb has a single set of person markers that serve as S in intransitive clauses and P in transitive clauses, while A is marked by a separate morpheme. The "fusion" of A and P in the verb template (WALS 104A-5) means they appear as an adjacent unit, but the S/P set is distinct from the A set.
+   - Interaction with CORE: This is the morphological mechanism that realizes the ergative alignment. It clarifies the structure of the verbal person marking system and helps the solver distinguish the S/P marker set from the A marker set.
+   - Difficulty contribution: MEDIUM. Helps the solver parse the verbal morphology correctly; without this insight, the solver might misanalyze the alignment.
+   - Priority: HIGH
+
+4. Phenomenon: Syncretism in person/number marking
+   - Intended solver inference: The solver observes that some person/number combinations share the same marker (WALS 29A-2), requiring careful comparison to distinguish all forms.
+   - Interaction with CORE: Syncretism adds complexity to both the possessive prefix system and the verbal person marking, requiring the solver to use context to disambiguate.
+   - Difficulty contribution: MEDIUM. Prevents the puzzle from being too straightforward; the solver must account for shared forms.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive marking × Ergative alignment:
+   - Both systems involve marking relationships between arguments. The possessive system shows dependent marking (possessor marked on possessed), while the verbal system shows ergative alignment (S/P marked together, A marked separately). The solver can draw a parallel: in both systems, one argument is "primary" (the possessed noun / the S-P core) and the other is marked differently (the possessor prefix / the A marker).
+   - Additional inference: The solver can recognize a consistent pattern of "core vs. peripheral" marking across the grammar.
+
+2. Inclusive/exclusive × Possessive marking:
+   - The 1PL inclusive/exclusive distinction is reflected in the possessive prefix system, creating two distinct 1PL possessive prefixes. This enriches the possessive paradigm and gives the solver additional data to work with.
+   - Additional inference: The solver can confirm the inclusive/exclusive analysis by observing that the two 1PL possessive prefixes behave differently in context.
+
+3. 3rd person distinctions × Ergative alignment:
+   - The 3rd person semantic distinctions multiply the number of 3rd person forms in both the S/P set and the A set. This creates a more complex pattern that the solver must untangle.
+   - Additional inference: The solver must determine which 3rd person forms belong to the S/P set and which to the A set, using the semantic categories as a guide.
+
+4. Inclusive/exclusive × Ergative alignment:
+   - In verbal inflection, only inclusive is differentiated (WALS 40A-4). This means that in the verbal person marking, 1PL-inclusive has a distinct form while 1PL-exclusive may be syncretic with another form. This asymmetry between the pronominal and verbal systems is an additional layer of complexity.
+   - Additional inference: The solver must notice that the verbal system does not fully reflect the pronominal distinction, and account for this asymmetry.
+
+CONSTRAINTS
+
+1. The puzzle must provide sufficient data to demonstrate ergative alignment: at minimum, intransitive and transitive clauses with 1st, 2nd, and 3rd person arguments must be shown, allowing the solver to compare S/P markers with A markers.
+
+2. The possessive prefix system must be clearly distinguishable from verbal morphology. Possessive prefixes should appear on nouns, not verbs, to avoid confusion.
+
+3. The inclusive/exclusive distinction must be inferable from the data: at least two 1PL forms with different referential meanings must be presented (e.g., in different sentences with different participants).
+
+4. The 3rd person semantic distinctions must be clearly limited to 3rd person: 1st and 2nd person forms must NOT show this distinction, so the solver can identify the asymmetry.
+
+5. No morphological case marking should appear in the puzzle data (consistent with WALS 49A-1, 50A-1), to keep the focus on person and possessive marking.
+
+6. The puzzle should avoid relying on the solver's knowledge of Carib-specific vocabulary. All linguistic patterns must be inferable from the morphological and distributional evidence alone.
+
+7. Syncretism (if included) must not make the puzzle unsolvable: the solver must be able to disambiguate syncretic forms using context or additional data points.

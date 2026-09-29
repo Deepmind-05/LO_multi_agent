@@ -1,0 +1,15 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+4
+
+ISSUES
+
+* [MAJOR] Q2(d) answer "tanampehe'a" contains an erroneous "m" where "n" is required. The 3SG object prefix is "n-" (attested in items 11, 23, 26 where it is retained after subject prefixes), so the correct form is "tanampehe'a" (ta- + na- + n- + pehe'a). No phonological rule in the data supports n → m before /p/ (item 11 "manpatsi" shows n is retained before p).
+* [MINOR] The solution's verbal template analysis (3PL subject = na-, 3PL object = na-) does not account for the extra "na" in items 25 (nananapatsi) and 28 (nananahanli). Simple concatenation of na- + na- + root yields only three syllables before the root, but the data shows four. The solution should acknowledge or explain this (e.g., a phonological rule na + na → na-na-na, or an additional morphological element).
+* [MINOR] Q5's stated surface forms "nnata" and "nanata" rely on phonological generalizations (nn → nn before nasals; nn → na before vowels) that are not directly attested in the data. The only attested nn environments (items 9, 18) both yield "nu." While the core ambiguity argument is valid, the specific surface forms presented are not derivable from the data without an unsupported phonological assumption.

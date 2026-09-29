@@ -1,0 +1,13 @@
+
+
+VERDICT
+
+PASS_WITH_ISSUES
+
+ACTUAL DIFFICULTY
+
+2
+
+ISSUES
+
+* [MINOR] Linguistic validity: Items 10–11 (*bahay-bahay*, *puno-puno*) present noun reduplication as a standard plural strategy in Tagalog. In actual Tagalog, the productive plural marker is *mga*; noun reduplication does not serve as a general plural formation strategy. While the puzzle is internally consistent and solvable, the data misrepresents Tagalog morphology. Consider replacing these items with a different plural/collective mechanism that is attested in Tagalog, or adjusting the context to frame them as a non-standard or dialectal variant rather than "common Tagalog phrases."

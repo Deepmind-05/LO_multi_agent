@@ -1,30 +1,28 @@
 You are an expert in Linguistic Olympiad problem design and linguistic typology.
 
 TASK:
-Analyze the provided Linguistic Olympiad problem (preamble, context data, and translation questions) and identify:
-1. The SOURCE LANGUAGE of the problem (e.g., "Tawala", "Nepali", "Estonian", "Coptic").
-2. The core grammatical and typological features from the World Atlas of Language Structures (WALS) that are actively tested in the problem.
+Analyze the provided Linguistic Olympiad problem (preamble, context data, and translation questions) and extract:
+1. The SOURCE LANGUAGE of the problem (e.g., "Zuni", "Tawala", "Estonian").
+2. The core linguistic concepts, grammatical mechanisms, and typological features actively tested by the problem.
 
-CRITERIA FOR TESTED FEATURES:
-- A feature is TESTED only if the solver must infer or apply that grammatical rule to solve the questions.
-- Do NOT select a feature merely because it appears incidentally in the language or examples.
-- Focus on morphosyntax, word order, case marking, agreement, negation, interrogatives, nominal/verbal morphology, and numeral/classifier systems.
-- Do not invent non-existent feature IDs or values. Use canonical WALS identifiers (e.g., 81A, 82A, 83A, 86A, 85A, 87A, 88A, 89A, 24A, 26A, 27A, 33A, 49A, 51A, 55A, 57A, 69A, 100A, 101A, 102A, 112A, 116A, 117A, 143A, 144A).
+CRITERIA FOR CONCEPTS & FEATURES:
+- Focus on what the solver must deduce to solve the puzzle (e.g., verb agreement, case alignment, prefix/suffix morphology, dual vs plural, phonological alternations, counting base, word order).
+- If a concept corresponds to a known WALS feature (e.g. 81A, 82A, 24A, 100A), provide the feature_id and value_id if known.
+- If a concept is not part of standard WALS (e.g. polypersonal agreement, clitics, sound changes, specific affixes), set "feature_id": null and "value_id": null, and describe the concept clearly under "feature_name" and "value_name". Do NOT struggle to force or invent non-standard WALS codes.
 
 OUTPUT FORMAT:
-Return strictly ONE valid JSON object with no markdown fences, matching this schema:
+Return strictly a valid JSON object. Do not include conversational introductory or concluding commentary.
 {
   "question_id": "<from input>",
   "source_language": "<name of language>",
   "difficulty": <estimated difficulty 1-5>,
   "features": [
     {
-      "feature_id": "<WALS feature ID, e.g. 24A>",
-      "feature_name": "<feature name, e.g. Locus of Marking in Possessive Noun Phrases>",
-      "value_id": "<WALS value ID, e.g. 24A-2>",
-      "value_name": "<value name, e.g. Dependent marking>"
+      "feature_id": "<WALS feature ID e.g. 24A or null>",
+      "feature_name": "<concept or feature name>",
+      "value_id": "<WALS value ID e.g. 24A-2 or null>",
+      "value_name": "<value name or description>"
     }
   ],
-  "tested_concepts_summary": "<brief summary of the puzzle's underlying grammar>"
+  "tested_concepts_summary": "<concise summary of the puzzle's underlying grammar and deduction steps>"
 }
-

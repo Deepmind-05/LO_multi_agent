@@ -1,0 +1,126 @@
+
+
+CONTEXT
+
+Yukulta is a language of the Tangkic family, spoken in the Gulf of Carpentaria region of Queensland, Australia.
+
+Below are some phrases and sentences in Yukulta along with their English translations.
+
+DATA
+
+1. wiri-na wala — the man's house
+2. yara-na kuru — the woman's water
+3. wara-na tama — the dog's fire
+4. ngaru-na muru — the tree's stone
+5. nga-na wala — my house
+6. ra-na wara — your dog
+7. wiri yiri — the man goes
+8. wiri-na wara waka — the man hits the dog
+9. yara yiri — the woman goes
+10. yara-na kuru tara — the woman sees the water
+11. nga-na wara waka-nga — I hit the dog
+12. ra-na kuru tara-ra — you see the water
+13. bala wiri yiri-ku — the man does not go
+14. bala wiri-na wara waka-ku — the man does not hit the dog
+15. bala nga-na wara waka-nga-ku — I do not hit the dog
+16. wiri-na turu — the man's food
+17. kura-na wala — the child's house
+
+QUESTIONS
+
+Q1. Translate into English:
+
+1. turu-na ngaru
+2. kura yiri
+3. muru-na kura waka
+4. bala yara-na tama tara-ku
+
+Q2. Translate into Yukulta:
+
+5. the child's water
+6. the stone sees the fire
+7. you do not go
+8. I do not hit the tree
+
+ANSWERS
+
+1. the food's tree
+2. the child goes
+3. the stone hits the child
+4. the woman does not see the fire
+5. kura-na kuru
+6. muru-na tama tara
+7. bala ra yiri-ra-ku
+8. bala nga-na ngaru waka-nga-ku
+
+SOLUTION
+
+**Step 1: Identify the genitive construction (items 1–6, 16–17).**
+
+Items 1–4 and 16–17 show two-noun phrases where the first noun bears the suffix *-na* and the second noun is unmarked. The English translations confirm that the first noun is the possessor and the second is the possessed noun. The linear order is Possessor–Possessed (GenN). Marking falls on the dependent (possessor), not the head (possessed).
+
+Items 5–6 show that pronominal possessors (*nga* = "I", *ra* = "you") also take the same suffix *-na* to form genitive phrases. This confirms that the genitive construction is the universal possessive strategy, with no separate pronominal possessive affixes on the possessed noun.
+
+**Step 2: Identify clause structure and alignment (items 7–10).**
+
+Item 7 (*wiri yiri* = "the man goes") is an intransitive clause: the subject *wiri* is unmarked and the verb *yiri* has no suffix.
+
+Item 8 (*wiri-na wara waka* = "the man hits the dog") is a transitive clause: the subject *wiri-na* bears the suffix *-na*, the object *wara* is unmarked, and the verb *waka* has no suffix.
+
+The critical contrast between items 7 and 8: the same noun *wiri* is unmarked as an intransitive subject (S) but bears *-na* as a transitive agent (A). The transitive patient (P, *wara*) is unmarked, just like the intransitive subject (S). This establishes ergative-absolutive alignment: A is marked, S and P are unmarked.
+
+The word order is SVO (subject–verb–object).
+
+The verb in both items 7 and 8 has no person marking, consistent with 3rd person being zero.
+
+**Step 3: Identify verbal person marking (items 11–12).**
+
+Item 11 (*nga-na wara waka-nga* = "I hit the dog"): the 1st person agent *nga-na* triggers the suffix *-nga* on the verb.
+
+Item 12 (*ra-na kuru tara-ra* = "you see the water"): the 2nd person agent *ra-na* triggers the suffix *-ra* on the verb.
+
+This confirms that the verb carries person markers for 1st and 2nd person, but 3rd person is zero (unmarked). In 3rd person transitive clauses, the ergative suffix on the agent is the only overt marker of transitivity.
+
+**Step 4: Identify the genitive/ergative identity.**
+
+The suffix *-na* appears in two distinct syntactic contexts:
+- On the possessor in genitive phrases (items 1–6, 16–17): *wiri-na wala*, *nga-na wala*, etc.
+- On the transitive agent in clauses (items 8, 10, 11, 12, 14, 15): *wiri-na wara waka*, *yara-na kuru tara*, etc.
+
+The form and position are identical in both contexts. This is a single morpheme serving a dual function: genitive (possessor marking) and ergative (transitive agent marking).
+
+**Step 5: Identify the negation system (items 13–15).**
+
+All three negative sentences contain two elements:
+- A preverbal free word *bala* (appearing before the subject)
+- A suffix *-ku* on the verb
+
+Item 13: *bala wiri yiri-ku* — intransitive, 3rd person: *bala* + S + V-ku
+Item 14: *bala wiri-na wara waka-ku* — transitive, 3rd person: *bala* + A-na + O + V-ku
+Item 15: *bala nga-na wara waka-nga-ku* — transitive, 1st person: *bala* + A-na + O + V-nga-ku
+
+Both elements are consistently present in all negative sentences, establishing that both are obligatory. The surface pattern is: *bala* + S/A + V[-nga/-ra (if 1st/2nd person)] + *-ku* + O.
+
+The suffix order on the verb is: stem + person (if not 3rd) + negative.
+
+**Step 6: Answer the questions.**
+
+Q1.1: *turu-na ngaru* — *turu* (food, from item 16) + *-na* (genitive) + *ngaru* (tree, from item 4) → "the food's tree"
+
+Q1.2: *kura yiri* — *kura* (child, from item 17; unmarked S) + *yiri* (go, 3rd person zero) → "the child goes"
+
+Q1.3: *muru-na kura waka* — *muru* (stone, from item 4) + *-na* (ergative) + *kura* (child, from item 17; unmarked P) + *waka* (hit, 3rd person zero) → "the stone hits the child"
+
+Q1.4: *bala yara-na tama tara-ku* — *bala* (neg) + *yara* (woman) + *-na* (ergative) + *tama* (fire, unmarked P) + *tara* (see) + *-ku* (neg) → "the woman does not see the fire"
+
+Q2.5: "the child's water" — *kura* (child, from item 17) + *-na* (genitive) + *kuru* (water, from item 2) → *kura-na kuru*
+
+Q2.6: "the stone sees the fire" — *muru* (stone) + *-na* (ergative) + *tama* (fire, unmarked P) + *tara* (see, 3rd person zero) → *muru-na tama tara*
+
+Q2.7: "you do not go" — *bala* (neg) + *ra* (you, intransitive S, no ergative) + *yiri* (go) + *-ra* (2nd person) + *-ku* (neg) → *bala ra yiri-ra-ku*
+
+Q2.8: "I do not hit the tree" — *bala* (neg) + *nga* (I) + *-na* (ergative) + *ngaru* (tree, unmarked P) + *waka* (hit) + *-nga* (1st person) + *-ku* (neg) → *bala nga-na ngaru waka-nga-ku*
+
+DIFFICULTY
+
+Medium. The puzzle requires the solver to simultaneously induce five interrelated patterns: (1) genitive construction with dependent marking and GenN order, (2) ergative-absolutive split alignment, (3) identity of the genitive and ergative suffixes, (4) zero 3rd person verbal morphology, and (5) obligatory double negation. The production questions (especially Q2.7 and Q2.8) require integrating multiple rules at once, with Q2.7 specifically testing the solver's ability to distinguish intransitive S (unmarked) from transitive A (ergative-marked) in a negative context with verbal person marking.

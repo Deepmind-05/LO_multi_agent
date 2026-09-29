@@ -1,0 +1,110 @@
+
+
+TARGET-LANGUAGE: Innamincka (inn), Pama-Nyungan, Central Pama-Nyungan, Australia
+
+CORE
+
+1. Numeral Base
+   - Target-language realization: Numerals expressed in a base to be determined from data (likely base 5 or 10, typologically plausible for Pama-Nyungan; the specific base is a puzzle parameter the solver must deduce). Numerals follow the noun (NNum order, WALS 89A-2).
+   - Intended solver inference: From the numeral forms (e.g., a word for "10" that is actually 5 or 6 in decimal, or a compound numeral showing the base), the solver identifies the counting base. The NNum order means the numeral appears after the noun it modifies, so the solver must first segment the noun-numeral pair before analyzing the numeral value.
+   - Priority: REQUIRED
+
+2. Noun-Numeral Order (NNum)
+   - Target-language realization: The numeral follows the noun it quantifies (WALS 89A-2). E.g., "three dogs" = "dogs three."
+   - Intended solver inference: The solver observes that the numeral consistently appears after the noun, establishing a modifier-follows-head pattern. This is the first structural clue that helps segment the noun phrase.
+   - Priority: REQUIRED
+
+3. SOV Word Order
+   - Target-language realization: Subject-Object-Verb clause order (WALS 81A-1, 82A-1, 83A-1).
+   - Intended solver inference: The solver identifies the verb as the final element in the clause, and distinguishes subject from object based on case marking or position. This provides the macro-structure for parsing.
+   - Priority: REQUIRED
+
+4. Strongly Suffixing Morphology
+   - Target-language realization: Inflectional morphology (case, tense-aspect, plurality) is realized as suffixes on the host word (WALS 26A-2).
+   - Intended solver inference: The solver observes that grammatical information is added to the right of lexical stems. This creates a parsing challenge: the solver must segment suffixes from stems and identify which suffix encodes which grammatical category.
+   - Priority: REQUIRED
+
+5. Postpositional Case Clitics
+   - Target-language realization: Case is marked by postpositional clitics (WALS 51A-6, 85A-1). The clitic attaches to the right of the noun phrase.
+   - Intended solver inference: The solver identifies that case marking appears after the noun (or noun phrase), consistent with the suffixing pattern. The solver must distinguish case clitics from other suffixes (e.g., plural, tense-aspect) based on distribution.
+   - Priority: HIGH
+
+6. Noun-Adjective Order (NAdj)
+   - Target-language realization: Adjectives follow the noun they modify (WALS 87A-2).
+   - Intended solver inference: The solver observes a consistent pattern: all modifiers (adjectives, numerals, demonstratives) follow the noun. This reinforces the "right-branching" typological profile and helps the solver segment noun phrases.
+   - Priority: HIGH
+
+7. Preverbal Negation at Clause Beginning
+   - Target-language realization: The negative word is a separate preverbal element that appears at the beginning of the clause, not immediately adjacent to the verb (WALS 144B-1, 144A-5, 144L-1). No double negation (144P-1).
+   - Intended solver inference: The solver notices that the negative word appears in a fixed position (clause-initial) that is distinct from the SOV order. This creates a contrast: most elements follow their heads, but negation precedes everything. The solver must identify the negative word and its scope.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Consistent Right-Branching Modifier Order (NNum + NAdj + NDem)
+   - Phenomenon: Numerals, adjectives, and demonstratives all follow the noun (WALS 89A-2, 87A-2, 88A-2). This creates a uniform "head-initial" noun phrase structure.
+   - Intended solver inference: The solver can generalize from multiple modifier types to a single rule: "modifiers follow the noun." This generalization is a key reasoning step and makes the puzzle more elegant.
+   - Interaction with CORE: Directly supports NNum (CORE #2) and NAdj (CORE #6). The uniformity across modifier types gives the solver confidence in the pattern.
+   - Difficulty contribution: Medium. The solver must notice the pattern across multiple data points before generalizing.
+   - Priority: HIGH
+
+2. Suffixal Morphology + Postpositional Clitics as a Unified Right-Branching System
+   - Phenomenon: Both inflectional morphology (suffixes) and case marking (postpositional clitics) attach to the right of their host. This creates a layered right-branching structure: stem + suffix + clitic.
+   - Intended solver inference: The solver must determine the order of attachment: does the case clitic attach after the plural suffix, or before? This requires careful observation of multiple forms.
+   - Interaction with CORE: Interacts with Suffixing Morphology (CORE #4) and Postpositional Case (CORE #5). The solver must parse a potentially complex right-edge: noun-stem + plural-suffix + case-clitic.
+   - Difficulty contribution: High. The ordering of multiple right-branching elements is a non-trivial parsing challenge.
+   - Priority: HIGH
+
+3. Negation as a Clause-Initial Exception to Right-Branching
+   - Phenomenon: While the language is consistently right-branching (modifiers follow heads, suffixes attach right, postpositions follow), the negative word appears at the clause beginning, before the subject. This is a typologically marked position (WALS 144B-1: "beginning, not immediately preverbal").
+   - Intended solver inference: The solver identifies the negative word as an outlier in the right-branching pattern. Its fixed clause-initial position (not adjacent to the verb) is a distinctive feature that the solver must notice and account for.
+   - Interaction with CORE: Creates a contrast with the overall right-branching profile. The solver must recognize that negation does NOT follow the same "right-branching" logic as other elements.
+   - Difficulty contribution: High. The solver might initially try to fit negation into the right-branching pattern and fail, then must discover the actual position.
+   - Priority: HIGH
+
+4. No Possessive Affixes
+   - Phenomenon: Possession is not marked by affixes on the possessed noun (WALS 57A-4). Possession is likely expressed by a separate word or construction.
+   - Intended solver inference: If possessive constructions appear in the data, the solver must recognize that the possessed noun does not carry a possessive suffix (unlike, e.g., English "my book" where the possessive is a separate word, or Turkish "kitabım" where it's a suffix). This helps the solver avoid misparsing.
+   - Interaction with CORE: Interacts with Suffixing Morphology (CORE #4) by showing a limit to the suffixing pattern: not all grammatical relations are suffixal.
+   - Difficulty contribution: Low-Medium. Mainly prevents a common misparse.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. NNum + NAdj + NDem → Uniform Right-Branching Noun Phrase
+   - Concepts: CORE #2, CORE #6, TARGET-SPECIFIC #1
+   - Interaction: All three modifier types follow the noun, creating a single generalizable rule.
+   - Additional inference: The solver can use this uniformity to segment noun phrases in ambiguous contexts. If a word could be either a noun or a modifier, its position relative to other words disambiguates.
+
+2. Suffixing + Postpositional Clitics → Layered Right-Edge Parsing
+   - Concepts: CORE #4, CORE #5, TARGET-SPECIFIC #2
+   - Interaction: Multiple right-branching elements (stem, suffix, clitic) create a complex right edge that must be parsed in the correct order.
+   - Additional inference: The solver must determine the morpheme order (e.g., stem + plural + case vs. stem + case + plural) from distributional evidence.
+
+3. Right-Branching Profile vs. Clause-Initial Negation → Typological Contrast
+   - Concepts: CORE #7, TARGET-SPECIFIC #3, all right-branching concepts
+   - Interaction: The negation word's clause-initial position contrasts with the otherwise consistent right-branching pattern.
+   - Additional inference: The solver must recognize that negation is a separate syntactic element (not a suffix or modifier) and that its position is clause-level rather than phrase-level.
+
+4. SOV + NNum → Verb-Final Clause with Right-Branching Noun Phrases
+   - Concepts: CORE #3, CORE #2
+   - Interaction: The SOV order means the verb is at the right edge of the clause, while noun phrases (with their right-branching modifiers) are to the left. This creates a clear structural hierarchy.
+   - Additional inference: The solver can use the verb's final position as an anchor for clause boundaries, then parse the preceding material as NP + NP.
+
+CONSTRAINTS
+
+1. The numeral base must be determinable from the data alone. Provide at least three numeral forms that make the base unambiguous (e.g., a "ten" that is actually 5 or 6 in decimal, plus compound numerals showing the base).
+
+2. The NNum order must be clearly demonstrated: numerals must consistently appear after the noun in all examples. Do not present any example where the numeral precedes the noun.
+
+3. The suffixing pattern must be consistent. All inflectional morphology (case, tense-aspect, plurality) must be suffixal. Do not introduce any prefixal or infixal morphology.
+
+4. The negation word must appear at the clause beginning (before the subject) in all negative examples. It must NOT appear immediately before the verb. This is a critical distinction (WALS 144B-1: "beginning, not immediately preverbal").
+
+5. The postpositional case clitics must attach to the right of the noun (or noun phrase). Do not use prepositional case marking.
+
+6. Do not introduce possessive affixes. If possession is needed in the data, use a separate word or construction that does not attach to the possessed noun.
+
+7. The puzzle must be solvable without prior knowledge of Innamincka or Pama-Nyungan. All rules must be inferable from the provided data. The solver should be able to: (a) identify word order, (b) segment morphology, (c) determine the numeral base, (d) identify the negation pattern.
+
+8. Maintain typological plausibility: the chosen numeral base should be one that is attested in Australian languages (base 5, 6, 10, or 20 are all plausible; base 12 or 20 are less common but not impossible). Do not use an implausible base like 7 or 13.

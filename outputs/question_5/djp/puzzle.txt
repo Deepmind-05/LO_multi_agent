@@ -1,0 +1,211 @@
+
+
+CONTEXT
+
+Djapu is a language spoken in western Australia. The data below consists of 22 Djapu sentences with English translations. The translations are provided to help you identify grammatical patterns. Some sentences contain elements that do not appear in others; your task is to work out the grammar of Djapu from the data.
+
+DATA
+
+1. ŋa wari-ŋa kupa-ri.
+   "I ate the fish."
+
+2. ga kura-ŋa wapi-ri.
+   "He saw the dog."
+
+3. ku tala-ŋa tula-ri.
+   "You drank the water."
+
+4. ŋa kuli-ri.
+   "I went."
+
+5. ga tuli-ri.
+   "He slept."
+
+6. ŋa pata-ŋa kupa-ŋu.
+   "I eat the food."
+
+7. ga wuli-ŋa wapi-ŋu.
+   "He sees the bird."
+
+8. bura ŋa kura-ŋa kupa-ri.
+   "I didn't eat the dog."
+
+9. bura ga tala-ŋa tula-ri.
+   "He didn't drink the water."
+
+10. ma ŋa wari-ŋa kupa-ri?
+    "Did I eat the fish?"
+
+11. ma bura ŋa pata-ŋa kupa-ri?
+    "Didn't I eat the food?"
+
+12. ŋa wari-ŋa ku-kupa-ri.
+    "I used to eat fish."
+
+13. ga tala-ŋa tu-tula-ri.
+    "He used to drink water."
+
+14. ku mapi-ŋa mu-mupa-ŋu.
+    "You keep making fire."
+
+15. ŋa kura wara-ŋa wapi-ri.
+    "I saw the dogs."
+
+16. kura wara kuli-ri.
+    "The dogs went."
+
+17. ŋa ŋa-ŋa kura-ŋa wapi-ri.
+    "I saw my dog."
+
+18. ga ga-ŋa kula-ŋa mupa-ri.
+    "He built his house."
+
+19. ŋa wura-ŋa wapi-ri.
+    "I saw you (and them, not me)."
+
+20. mura pata-ŋa kupa-ri.
+    "We (you and I) ate the food."
+
+21. wura tala-ŋa tula-ri.
+    "You (and them, not me) drank the water."
+
+22. wari-ŋa kupa-ri.
+    "(Someone) ate the fish."
+
+QUESTIONS
+
+**Q1.** In sentence 17 (ŋa ŋa-ŋa kura-ŋa wapi-ri), identify all elements that bear the suffix -ŋa and explain the grammatical function of each instance. How does this single sentence demonstrate that -ŋa serves more than one grammatical function?
+
+**Q2.** Explain why the sentence "ŋa kura wara-ŋa wapi-ri" (sentence 15) cannot be interpreted as "The dogs saw me." What specific grammatical evidence rules out this interpretation?
+
+**Q3.** Using the data in sentences 19, 20, and 21, determine which of *mura* and *wura* is the inclusive 2PL pronoun and which is the exclusive 2PL pronoun. Explain your reasoning step by step, showing how the co-reference constraint in sentence 19 forces the conclusion.
+
+**Q4.** Sentence 22 (wari-ŋa kupa-ri) has no subject pronoun. Suppose this sentence appeared immediately after sentence 20 (mura pata-ŋa kupa-ri) in a dialogue. What would be the most likely subject of sentence 22? Explain how the optional pronoun rule and the inclusive/exclusive distinction interact to make this inference possible.
+
+**Q5.** Consider the following two sentences:
+(a) ŋa wura-ŋa wapi-ri.
+(b) wura ŋa-ŋa wapi-ri.
+Are both sentences grammatical in Djapu? If so, provide an English translation for each. What does this pair demonstrate about the relationship between word order and case marking in Djapu?
+
+**Q6.** Explain the morphological pattern of reduplication in Djapu. Identify the base stem, the reduplicated segment, and the tense suffix in sentence 14 (mu-mupa-ŋu). How does this sentence demonstrate that reduplication and tense marking are independent morphological processes operating on different edges of the verb?
+
+**Q7.** Provide a full morpheme-by-morpheme analysis of the following sentence:
+ma bura wura ŋa-ŋa kura wara-ŋa ku-kupa-ri?
+Identify the function of every word and morpheme, and give an English translation.
+
+**Q8.** Translate into Djapu: "Didn't you (and them, not me) keep making the birds?"
+
+**Q9.** Translate into Djapu: "We (you and I) used to see my dogs."
+
+**Q10.** Translate into Djapu: "Did he see the food?"
+
+**Q11.** In sentence 16 (kura wara kuli-ri), the noun phrase "kura wara" has no case suffix. In sentence 15 (ŋa kura wara-ŋa wapi-ri), the same noun phrase has -ŋa attached to *wara*. Explain why the case suffix appears in one sentence but not the other, and what this tells you about the morphological status of -ŋa.
+
+**Q12.** A learner of Djapu wants to say "We (you and I) didn't eat the food" but produces:
+"bura wura pata-ŋa kupa-ri."
+Is this sentence correct? If not, identify the error and provide the correct sentence.
+
+ANSWERS
+
+**Q1.** In sentence 17, two elements bear -ŋa:
+- *ŋa-ŋa*: the possessor (1SG) bears -ŋa for genitive/possessive marking, meaning "my."
+- *kura-ŋa*: the possessed noun (dog) bears -ŋa for accusative/object marking, because it is the object of the transitive verb *wapi-ri*.
+This demonstrates that -ŋa is polyfunctional: within the same sentence, it serves as a genitive marker (on the possessor) and an accusative marker (on the object). The possessed noun is not "unmarked" — it is marked for its role as the transitive object.
+
+**Q2.** The sentence cannot mean "The dogs saw me" because:
+1. The suffix -ŋa marks the transitive object. In this sentence, -ŋa appears on *wara* (the plural word), making "kura wara-ŋa" the object.
+2. The subject is the unmarked element in the first position: *ŋa* (1SG, "I").
+3. If "the dogs" were the subject, they would be unmarked (as in sentence 16: *kura wara kuli-ri*), and "me" would bear -ŋa as the object (*ŋa-ŋa*).
+The case marking definitively identifies *kura wara* as the object and *ŋa* as the subject, ruling out the alternative interpretation.
+
+**Q3.**
+Step 1: In sentence 19, the subject is *ŋa* (1SG, "I") and the object is *wura-ŋa*. Since the speaker is already expressed as the subject, the 2PL object *wura* cannot include the speaker. Therefore, *wura* is the exclusive 2PL (addressee + third party, excluding speaker).
+Step 2: By elimination, *mura* must be the inclusive 2PL (speaker + addressee).
+Step 3: This is confirmed by sentence 20, where *mura* is translated as "We (you and I)," explicitly including the speaker.
+Step 4: Sentence 21 further confirms *wura* as exclusive: "You (and them, not me) drank the water" — the speaker is explicitly excluded.
+
+**Q4.** The most likely subject of sentence 22 is *mura* (inclusive 2PL, "we (you and I)"). Reasoning:
+1. Sentence 22 has no subject pronoun, which is grammatically possible (subject pronouns are optional in Djapu).
+2. In a dialogue, the most recent subject is typically the default subject for a following sentence with an omitted pronoun.
+3. The immediately preceding sentence (20) has *mura* as its subject.
+4. Therefore, the omitted subject in sentence 22 is most likely *mura*, giving the interpretation "(We (you and I)) ate the fish."
+The inclusive/exclusive distinction matters here because if the preceding sentence had *wura* as subject, the omitted subject would be *wura*. The solver must track which specific 2PL form was the most recent subject.
+
+**Q5.** Both sentences are grammatical.
+(a) *ŋa wura-ŋa wapi-ri* = "I saw you (and them, not me)." Subject: *ŋa* (1SG, unmarked). Object: *wura-ŋa* (exclusive 2PL-ACC).
+(b) *wura ŋa-ŋa wapi-ri* = "You (and them, not me) saw me." Subject: *wura* (exclusive 2PL, unmarked). Object: *ŋa-ŋa* (1SG-ACC).
+This pair demonstrates that in Djapu, the case suffix -ŋa (not position alone) is the primary indicator of the object. The subject is the unmarked argument. While word order is consistently SOV, it is the case marking that definitively identifies grammatical roles.
+
+**Q6.** In sentence 14 (*mu-mupa-ŋu*):
+- Base stem: *mupa* (CVCV, "make")
+- Reduplicated prefix: *mu-* (copy of the first CV of the stem)
+- Tense suffix: *-ŋu* (non-past)
+The reduplication operates on the LEFT edge of the verb stem (prefixation), while the tense suffix operates on the RIGHT edge (suffixation). They are independent processes: the reduplicated form *mu-mupa* can take either *-ri* or *-ŋu*, and the non-reduplicated form *mupa* can also take either (cf. sentence 18: *mupa-ri*). This shows that reduplication (aspect) and tense are separate morphological layers that can combine freely.
+
+**Q7.**
+- *ma* = question particle (clause-initial)
+- *bura* = negative particle (clause-initial, after question particle)
+- *wura* = exclusive 2PL pronoun (subject: "you and them, not me")
+- *ŋa-ŋa* = 1SG pronoun + genitive suffix (possessor: "my")
+- *kura* = "dog" (possessed noun, unmarked)
+- *wara* = plural marker (free word)
+- *-ŋa* = accusative suffix (on the plural word, marking the NP as object)
+- *ku-* = reduplicated prefix (first CV of *kupa*, marking iterative/habitual aspect)
+- *kupa* = "eat" (verb stem)
+- *-ri* = past tense suffix
+Full translation: "Didn't you (and them, not me) keep eating my dogs?"
+
+**Q8.** ma bura wura wuli wara-ŋa mu-mupa-ri?
+
+**Q9.** mura ŋa-ŋa kura wara-ŋa ku-wapi-ri.
+
+**Q10.** ma ga pata-ŋa wapi-ri?
+
+**Q11.** In sentence 16, "kura wara" is the subject of an intransitive verb (*kuli-ri*, "went"). Since intransitive subjects are unmarked, no case suffix appears. In sentence 15, "kura wara" is the object of a transitive verb (*wapi-ri*, "saw"), so it bears the accusative suffix -ŋa. The suffix attaches to *wara* (the rightmost element of the NP), giving *kura wara-ŋa*. This demonstrates that -ŋa is a true suffix (it can attach to different hosts: the noun itself in singular NPs, or the plural word in plural NPs) rather than a fixed particle or an inherent property of the noun.
+
+**Q12.** No, the sentence is incorrect. The learner has used *wura* (exclusive 2PL: addressee + third party, excluding speaker) where *mura* (inclusive 2PL: speaker + addressee) is required. The English "We (you and I)" explicitly includes the speaker, so the inclusive form *mura* must be used. The correct sentence is: *bura mura pata-ŋa kupa-ri.*
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Word order (SOV):** The verb is always clause-final. The subject (unmarked) precedes the object (marked with -ŋa), which immediately precedes the verb. (Sentences 1–3 establish this; intransitive sentences 4–5 confirm the subject position.)
+
+2. **Case marking (-ŋa, polyfunctional):** The suffix -ŋa marks (a) the transitive object (accusative) and (b) the possessor (genitive). The subject is unmarked. In intransitive clauses, no argument bears -ŋa. (Contrast between transitive sentences 1–3 and intransitive sentences 4–5; genitive function shown in sentences 17–18.)
+
+3. **Tense suffixes:** -ri = past; -ŋu = non-past. They attach to the right edge of the verb (or reduplicated verb). (Contrast between sentences 1–5 and 6–7.)
+
+4. **Negative particle (bura):** Clause-initial, before the subject. Marks negation. (Sentences 8–9, 11.)
+
+5. **Question particle (ma):** Clause-initial, before the subject (or before *bura*). Marks interrogation. (Sentences 10–11.)
+
+6. **Particle order:** ma > bura > Subject. (Sentence 11.)
+
+7. **Plural (wara):** A free word following the noun. Not a suffix. When the NP is an object, -ŋa attaches to *wara* (the rightmost element). (Sentences 15–16.)
+
+8. **Reduplication (iterative/habitual):** Copy the first CV of the CVCV stem and prefix it. Marks habitual/iterative aspect. Operates on the left edge; independent of the tense suffix on the right edge. (Sentences 12–14; compare with non-reduplicated forms in sentences 1, 3, 18.)
+
+9. **Possession:** Possessor-ŋa + Possessed. The possessor is marked with genitive -ŋa; the possessed noun is unmarked unless it also serves as the transitive object, in which case it bears accusative -ŋa. Both can bear -ŋa in the same sentence for different functions. (Sentences 17–18.)
+
+10. **Inclusive/exclusive 2PL:** *mura* = inclusive (speaker + addressee); *wura* = exclusive (addressee + third party, excluding speaker). Key evidence: sentence 19, where *ŋa* (1SG) is the subject and *wura-ŋa* is the object — since the speaker is already expressed, *wura* cannot include the speaker. (Sentences 19–21.)
+
+11. **Optional subject pronouns:** The subject pronoun may be omitted; the subject is then recoverable from discourse context (e.g., the most recent subject in a dialogue). (Sentence 22.)
+
+**How the rules produce each answer:**
+
+- Q1: In sentence 17, *ŋa-ŋa* = 1SG-GEN (possessor marked for genitive); *kura-ŋa* = dog-ACC (object marked for accusative). Both bear -ŋa for different functions.
+- Q2: -ŋa on *wara* identifies "kura wara" as the object; unmarked *ŋa* is the subject. The alternative would require *ŋa-ŋa* (object) and unmarked *kura wara* (subject), which contradicts the actual surface form.
+- Q3: Co-reference exclusion in sentence 19 forces *wura* = exclusive; *mura* = inclusive by elimination, confirmed by sentences 20–21.
+- Q4: Optional subject + discourse anaphora: most recent subject (*mura* from sentence 20) is the default referent for the omitted subject in sentence 22.
+- Q5: Both (a) and (b) are grammatical SOV sentences. In (a), *ŋa* is unmarked (subject) and *wura-ŋa* is marked (object). In (b), *wura* is unmarked (subject) and *ŋa-ŋa* is marked (object). Case marking, not position, determines roles.
+- Q6: *mu-mupa-ŋu* = [mu-][mupa][-ŋu]: reduplication (left edge) + stem + tense (right edge). Independent processes.
+- Q7: ma (Q) + bura (NEG) + wura (excl. 2PL, S) + ŋa-ŋa (1SG-GEN, possessor) + kura (dog, possessed) + wara-ŋa (PL-ACC) + ku-kupa-ri (ITER-eat-PAST).
+- Q8: ma (Q) + bura (NEG) + wura (excl. 2PL, S) + wuli wara-ŋa (bird PL-ACC, O) + mu-mupa-ri (ITER-make-PAST, V).
+- Q9: mura (incl. 2PL, S) + ŋa-ŋa (1SG-GEN, possessor) + kura wara-ŋa (dog PL-ACC, O) + ku-wapi-ri (ITER-see-PAST, V).
+- Q10: ma (Q) + ga (3SG, S) + pata-ŋa (food-ACC, O) + wapi-ri (see-PAST, V).
+- Q11: Intransitive subject (sentence 16) is unmarked; transitive object (sentence 15) bears -ŋa on the rightmost element (*wara*). -ŋa is a true suffix with variable host.
+- Q12: *wura* (exclusive) is incorrect for "We (you and I)"; *mura* (inclusive) is required. Correct: *bura mura pata-ŋa kupa-ri.*
+
+DIFFICULTY
+
+**Level 4 (upper range).** The puzzle requires the solver to simultaneously identify and integrate multiple interacting grammatical systems: word order, polyfunctional case marking (accusative + genitive), tense, clause-initial particles, a free-word plural system (contrasting with suffixal case), partial reduplication for aspect, dependent-marking in possession, an inclusive/exclusive pronoun distinction requiring co-reference reasoning, and optional subject pronouns with discourse anaphora. The questions are designed to require non-mechanical interaction among rules: Q1 requires recognizing polyfunctionality within a single sentence; Q2 requires using case marking to rule out a competing interpretation; Q4 requires integrating optional pronouns with discourse context and the inclusive/exclusive distinction; Q5 requires understanding that case marking (not position) determines grammatical roles; Q7 requires a full morpheme-by-morpheme decomposition of a sentence combining seven distinct grammatical features; and the production questions (Q8–Q10) each require combining 5–7 grammatical features in a single output. The error-identification question (Q12) tests whether the solver can apply the inclusive/exclusive distinction in a novel production context.

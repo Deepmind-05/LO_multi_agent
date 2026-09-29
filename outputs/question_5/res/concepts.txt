@@ -1,0 +1,60 @@
+
+
+TARGET-LANGUAGE: Resígaro (Arawakan, Japura-Colombia)
+
+CORE
+
+1. Numeral base identification
+   - Source concept: Base 6 (Ngkolmpu)
+   - Target-language realization: Resígaro numerals presented in context; the solver must identify the base of the numeral system from the internal structure of compound numerals (e.g., how "seven" is formed reveals the base).
+   - Intended solver inference: By examining how compound numerals are constructed (additive, multiplicative, or mixed), the solver deduces the base. For example, if "seven" = "one + five" and "ten" = "two × five," the base is 5.
+   - Priority: REQUIRED
+
+2. Numeral-Noun order (WALS 89A-1)
+   - Source concept: (implicit in numeral system puzzles — identifying which words are numerals)
+   - Target-language realization: In Resígaro, the numeral precedes the noun (NumN). This is confirmed by WALS evidence.
+   - Intended solver inference: The consistent pre-noun position of certain words helps the solver identify which lexical items are numerals versus nouns, especially when the vocabulary is unknown.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Plural suffix on nouns (WALS 33A-2)
+   - Phenomenon: Nouns in Resígaro take a plural suffix.
+   - Intended solver inference: When a numeral greater than one precedes a noun, the noun appears with a suffix not present in singular contexts. The solver can identify the plural suffix and confirm the numeral-noun relationship.
+   - Interaction with CORE: Reinforces numeral identification (the word before the suffixed noun is the numeral) and adds a morphological layer the solver must parse alongside the numeral base.
+   - Difficulty contribution: Moderate — adds a second pattern to track simultaneously with the numeral base.
+   - Priority: HIGH
+
+2. Possessive prefixes (WALS 57A-1)
+   - Phenomenon: Nouns in Resígaro take possessive prefixes.
+   - Intended solver inference: In phrases like "my three dogs," the solver must parse a prefix (possessor) + numeral + noun + plural suffix. This creates a multi-layered morphological analysis.
+   - Interaction with CORE: The possessive prefix is attached to the noun (not the numeral), so the solver must correctly segment the noun phrase and not confuse the prefix with part of the numeral. This tests the solver's ability to identify morpheme boundaries.
+   - Difficulty contribution: Moderate-high — adds a third morphological layer and tests segmentation skills.
+   - Priority: OPTIONAL (include if the puzzle needs additional difficulty; omit if it makes the puzzle too complex for the numeral-base insight to remain central)
+
+3. SOV word order (WALS 81A-1)
+   - Phenomenon: Resígaro is SOV.
+   - Intended solver inference: If the puzzle includes full sentences (not just noun phrases), the verb-final order provides additional structural context. The solver can use verb position to confirm clause boundaries.
+   - Interaction with CORE: Provides a frame for embedding numeral phrases in larger sentences, making the puzzle less "list-like" and more naturalistic.
+   - Difficulty contribution: Low-moderate — mainly provides context rather than adding a new inference challenge.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Numeral base + Numeral-Noun order:
+   - The pre-noun position of numerals allows the solver to isolate the numeral words from the noun words. Once isolated, the solver can analyze the internal structure of the numerals to determine the base. This is the primary inference chain.
+
+2. Numeral base + Plural suffix:
+   - The plural suffix on nouns after numerals > 1 provides independent confirmation of which words are numerals (the word that triggers the plural suffix is the numeral). This cross-verification makes the puzzle more robust and gives the solver a second line of evidence.
+
+3. Possessive prefix + Numeral-Noun order + Plural suffix:
+   - In a phrase like [poss-prefix + numeral + noun + plural-suffix], the solver must correctly segment all four morphological elements. The numeral is identified by its position (between prefix and noun) and its function (triggering plural). This creates a rich morphological parsing challenge that supports the central numeral-base inference.
+
+CONSTRAINTS
+
+- The puzzle must present at least enough numerals to reveal the base: minimally, the base value itself (e.g., "five" if base 5) and at least one compound numeral that demonstrates the base (e.g., "seven" = "two + five" or "ten" = "two × five"). Ideally, present numerals 1 through at least base+2.
+- The specific base used in the constructed data must be internally consistent and unambiguously identifiable from the presented numerals alone. The solver must not need external knowledge of Resígaro to determine the base.
+- All morphological patterns (plural suffix, possessive prefixes) must be consistent across all data items. No irregularities that cannot be inferred from the data.
+- The puzzle should not require the solver to know that Resígaro is Arawakan or South American. All relevant typological properties must be inferable from the data itself.
+- If possessive prefixes are included, the set of possessive markers should be small (2-3) and their function should be clear from context (e.g., contrast with non-possessed forms).
+- The central insight (numeral base) must remain the primary challenge. Morphological layers (plural, possessive) should support and enrich the puzzle, not obscure the numeral-base inference.

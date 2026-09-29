@@ -1,0 +1,76 @@
+
+
+CONTEXT
+
+The following data is from an undescribed Pama-Nyungan language of western Australia. The sentences describe events involving a man, a woman, a child, a dog, and a river.
+
+Lexicon:
+warru 'man'
+narra 'woman'
+djirri 'child'
+ngurra 'dog'
+wurrka 'river'
+yirri 'hit'
+ngurr 'sit'
+
+DATA
+
+(1) warru ngurra-ngku yirri
+    man dog hit
+    'The man hit the dog.'
+
+(2) narra ngurra-ngku yirri
+    woman dog hit
+    'The woman hit the dog.'
+
+(3) warru wurrka-ngka ngurr
+    man river sit
+    'The man sat at the river.'
+
+(4) djirri wurrka-ngka ngurr
+    child river sit
+    'The child sat at the river.'
+
+(5) warru wurrka-ngka ngurra-ngku yirri
+    man river dog hit
+    'The man hit the dog at the river.'
+
+QUESTIONS
+
+Q1. What grammatical or semantic function does the suffix -ngku serve? Provide evidence from the data.
+
+Q2. What grammatical or semantic function does the suffix -ngka serve? Provide evidence from the data.
+
+Q3. Translate the following English sentence into the target language: "The child hit the dog at the river."
+
+Q4. Does the verb in this language show agreement with the subject? Explain your reasoning with specific evidence from the data.
+
+ANSWERS
+
+Q1. The suffix -ngku marks the direct object (accusative case). Evidence: in (1) and (2), ngurra-ngku is the patient of the transitive verb yirri 'hit'; in (5), ngurra-ngku is again the patient. In all three cases, the -ngku suffix appears on the noun that receives the action.
+
+Q2. The suffix -ngka marks location (locative case). Evidence: in (3) and (4), wurrka-ngka is the location where the sitting takes place; in (5), wurrka-ngka is the location where the hitting takes place. In all three cases, the -ngka suffix appears on the noun denoting the spatial location of the event.
+
+Q3. djirri wurrka-ngka ngurra-ngku yirri
+
+Q4. No, the verb does not show agreement with the subject. Evidence: in (1) the subject is warru 'man' and the verb is yirri; in (2) the subject is narra 'woman' and the verb is still yirri; in (4) the subject is djirri 'child' and the verb is ngurr. The verb form yirri appears with two different subjects (warru, narra) without any change, demonstrating that the verb does not encode information about the subject's identity, person, or number.
+
+SOLUTION
+
+The puzzle tests the solver's ability to identify case functions and the absence of verbal agreement from a small set of data sentences.
+
+For Q1: The solver must observe that -ngku appears on ngurra in sentences (1), (2), and (5). In each case, the dog is the entity being hit (the patient/direct object). The suffix is absent when the dog is not present (sentences 3, 4), and it is present whenever the dog functions as the object of a transitive verb. This pattern uniquely identifies -ngku as an accusative (direct object) marker. The solver can also note that the subject nouns (warru, narra, djirri) never carry -ngku, confirming that it marks a specific grammatical role rather than being a property of particular nouns.
+
+For Q2: The solver must observe that -ngka appears on wurrka in sentences (3), (4), and (5). In each case, the river is the spatial location of the event. The suffix is absent when no location is expressed (sentences 1, 2). The solver can also note that no separate preposition or postposition word appears in any sentence to express location, confirming that the spatial meaning is encoded entirely within the case suffix on the noun. This identifies -ngka as a locative marker.
+
+For Q3: The solver must apply the rules identified in Q1 and Q2. The sentence "The child hit the dog at the river" has:
+- Subject: child → djirri (nominative, unmarked)
+- Location: river → wurrka-ngka (locative)
+- Object: dog → ngurra-ngku (accusative)
+- Verb: hit → yirri
+
+The word order is SVO (as observed in all data sentences: subject first, then any oblique phrases, then object, then verb). The locative phrase appears between the subject and the object, as in sentence (5). The result is: djirri wurrka-ngka ngurra-ngku yirri.
+
+For Q4: The solver must compare verb forms across sentences with different subjects. In (1), the subject is warru (man) and the verb is yirri. In (2), the subject is narra (woman) and the verb is still yirri. Since the verb form is identical despite the change in subject, the verb does not agree with the subject in person, number, or gender. Additionally, in (3) and (4), the verb ngurr appears with different subjects (warru, djirri) without change, further confirming the absence of verbal agreement.
+
+DIFFICULTY: 2

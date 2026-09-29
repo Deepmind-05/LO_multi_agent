@@ -1,0 +1,121 @@
+
+
+TARGET-LANGUAGE
+
+Cayuvava (cyv), Arawakan family, Bolivia.
+
+CONSTRUCTION RATIONALE
+
+1. **Establish the verb template and morpheme inventory.** Define the following morphological slots and their values. The verb complex in affirmative clauses follows the order: [A-marker][P-marker][Root][Inclusive-marker][TAM-suffix]. In negative clauses, the order shifts to: [Neg-prefix][A-marker][P-marker][TAM-prefix][Root][Inclusive-marker]. The morpheme inventory is:
+
+   - Negative prefix: *ma-*
+   - A-markers (subject): *ka-* (1st person), *ta-* (2nd person), ∅ (3rd person)
+   - P-markers (object): *na-* (1st person), *ra-* (2nd person), ∅ (3rd person)
+   - Inclusive marker: *-i* (suffix on root; appears only with 1pl inclusive; zero otherwise)
+   - TAM values (monoexponential): *-a* (past), *-e* (present), *-o* (future) when suffixed; *a-*, *e-*, *o-* when prefixed (negative context)
+
+   The solver must discover all of these from data. Do not provide glosses or morpheme brackets. The VOS clause structure is: [Verb complex] [Object NP] [Subject NP]. This word order is consistent across all examples and provides the structural key for identifying which argument is A and which is P.
+
+2. **Select 8–10 verb roots.** Choose roots that are phonologically distinct from all affixes (person markers, negative prefix, TAM morphemes, inclusive marker). Roots should be 2–4 syllables long. Include a mix of transitive verbs (e.g., "see," "eat," "give," "hit," "carry," "hear") and intransitive verbs (e.g., "go," "sleep," "fall"). Ensure no root begins with *ka-*, *ta-*, *na-*, *ra-*, *ma-*, or any TAM segment, to prevent accidental mergers with affixes. The intransitive verbs will appear without a P-marker (the P-slot is simply absent), which the solver must discover.
+
+3. **Design the data set for progressive discovery.** The data set should contain 18–24 sentences, each presented as a Cayuvava string followed by an English translation. Organize the examples so that simpler discoveries come first and more complex ones build on them. The data should be presented as a flat list (not grouped by concept), but the internal ordering should follow this discovery sequence:
+
+   **Phase A — Basic template and VOS identification (examples 1–6):**
+   Provide 6 affirmative transitive sentences using only 1st and 2nd person A and P markers, with two different TAM values and three different roots. All examples should use 1sg/2sg combinations. The solver should be able to:
+   - Identify that the verb is initial (VOS order)
+   - Identify that the verb contains at least two prefixed elements before the root
+   - Identify that the NP immediately after the verb is the object (P) and the final NP is the subject (A)
+   - Identify two distinct A-markers and two distinct P-markers
+   - Identify at least two TAM suffixes
+   - Notice that the A-marker and P-marker are in a fixed order (A before P)
+
+   **Phase B — Zero marking and 3rd person (examples 7–10):**
+   Provide 4 sentences where 3rd person appears as A and/or P. Include at least one sentence where both A and P are 3rd person (the verb will show only the root + TAM, with no person prefixes). Include one sentence where A is 3rd person but P is 1st or 2nd (the verb will show only the P-marker). Include one sentence where P is 3rd person but A is 1st or 2nd (the verb will show only the A-marker). The solver should infer:
+   - The absence of a prefix in the A-slot means 3rd person A
+   - The absence of a prefix in the P-slot means 3rd person P
+   - Zero is a valid morphological value, not missing data
+   - This establishes the split alignment: {1, 2} are marked, {3} is unmarked, and this applies symmetrically to both A and P
+
+   **Phase C — Inclusive/exclusive distinction (examples 11–14):**
+   Provide 4 sentences involving 1pl subject. Two should be inclusive (the context clearly includes the addressee, e.g., "We [you and I] saw him") and two should be exclusive (the context clearly excludes the addressee, e.g., "We [my friends and I] saw him"). The inclusive forms should show the *-i* suffix on the root; the exclusive forms should not. The A-marker for 1pl (both inclusive and exclusive) is *ka-* (syncretic with 1sg). The solver should infer:
+   - 1pl is marked with the same A-marker as 1sg (*ka-*), creating syncretism
+   - The inclusive/exclusive distinction is marked by a separate suffix on the root
+   - The inclusive marker is *-i*; its absence with 1pl indicates exclusive
+   - The syncretism means the solver cannot distinguish 1sg from 1pl based on the A-marker alone; the inclusive marker (or its absence, combined with context) is needed
+
+   **Phase D — Negative forms and TAM positional shift (examples 15–19):**
+   Provide 5 negative sentences. At least two should use 1st or 2nd person A and P (so the solver can compare with affirmative forms of the same person combination). At least one should use 3rd person A or P (to show that zero marking still applies in negative contexts). Use at least two different TAM values. The solver should infer:
+   - The negative prefix *ma-* appears before all other verb elements
+   - The TAM morpheme, which was a suffix in affirmative forms, now appears as a prefix immediately before the root
+   - The person markers remain in their original positions (after *ma-*, before the TAM prefix)
+   - The inclusive marker, if present, remains a suffix on the root
+   - The positional shift of TAM is triggered by negation, not by any other factor
+
+   **Phase E — Intransitive verbs and full paradigm coverage (examples 20–24):**
+   Provide 4–5 intransitive sentences. These should use various person values (including 3rd person, to show that intransitive 3sg has no person marker at all — just root + TAM). Include at least one negative intransitive form. The solver should infer:
+   - Intransitive verbs lack the P-slot entirely
+   - The template for intransitives is: [A-marker][Root][TAM] (affirmative) or [Neg][A-marker][TAM][Root] (negative)
+   - 3sg intransitive affirmative is just Root + TAM (no prefix at all)
+
+4. **Verify the data set for unintended ambiguities.** Check the following:
+   - No root begins with a segment identical to any person marker, the negative prefix, or a TAM morpheme.
+   - No two different parses of any form yield the same English translation.
+   - The zero-marking of 3rd person is unambiguous: in every example where 3rd person appears, the context (the NP) makes it clear that the argument is 3rd person, so the solver can confirm that the absence of a marker corresponds to 3rd person.
+   - The inclusive/exclusive contrast is unambiguous: the English translations must make it clear whether the addressee is included or excluded.
+   - The TAM positional shift is detectable: the solver must be able to match the TAM morpheme in a negative form to the same morpheme seen as a suffix in an affirmative form (same segment, different position).
+   - The syncretism (1sg = 1pl in the A-slot) does not create a situation where two different English translations map to the same Cayuvava form. The inclusive marker resolves this: 1sg has no *-i*, 1pl.incl has *-i*, 1pl.excl has no *-i* but the context distinguishes it from 1sg.
+
+5. **Design Question 1 (Parsing: Target → English).** Provide 3 novel Cayuvava sentences (not in the data set) that require the solver to decompose the full template. Choose sentences that:
+   - (a) Combine a person/number combination not directly attested in the data (e.g., 2pl A + 1sg P) with a familiar root and TAM value. This tests whether the solver has generalized the person-marker system.
+   - (b) Use a negative form with a TAM value not seen in negative context in the data. This tests whether the solver has correctly identified the TAM positional shift rule.
+   - (c) Use an intransitive verb with 3rd person subject (the verb will be just Root + TAM, or *ma-* + TAM + Root if negative). This tests whether the solver understands that 3sg intransitive has no person marker.
+
+6. **Design Question 2 (Construction: English → Target).** Provide 5 English sentences requiring the solver to build Cayuvava verb forms. Choose sentences that:
+   - (a) Require a 1pl inclusive subject with a transitive verb (testing the interaction of *ka-* A-marker + *-i* inclusive suffix + P-marker + TAM).
+   - (b) Require a 1pl exclusive subject with a transitive verb (testing that the inclusive marker is absent).
+   - (c) Require a negative transitive sentence with 3rd person object (testing: *ma-* + A-marker + ∅ P-marker + TAM-prefix + Root).
+   - (d) Require a negative intransitive sentence with 1st person subject (testing: *ma-* + *ka-* + TAM-prefix + Root).
+   - (e) Require a transitive sentence with 3rd person subject and 2nd person object (testing: ∅ A-marker + *ra-* P-marker + Root + TAM-suffix).
+
+   Accept morpheme-boundary notation (e.g., *ka-+ra-+put-+a*) to acknowledge that the solver may not know exact phonological rules at morpheme boundaries.
+
+7. **Design Question 3 (Metalinguistic: Identify the split alignment pattern).** Ask the solver to:
+   - (a) List all the distinct A-markers and P-markers they have identified.
+   - (b) Identify which person/number values are marked by zero (no overt morpheme) in the A-slot and which in the P-slot.
+   - (c) State the generalization: what condition determines whether a person/number value receives an overt marker or zero? (Expected answer: 1st and 2nd person are marked; 3rd person is unmarked, in both A and P slots.)
+   - (d) Explain why this constitutes a "split" in the marking system rather than a simple one-to-one mapping.
+
+   This question tests whether the solver has moved from pattern recognition to articulating the structural principle.
+
+8. **Design Question 4 (Syncretism and ambiguity resolution).** Provide a specific Cayuvava sentence (novel, not in the data) where the A-marker is *ka-* and there is no *-i* suffix on the root. The English context makes it clear that the subject is 1st person plural exclusive (e.g., "We [my siblings and I] ate the fish"). Ask the solver to:
+   - (a) Provide the full morpheme-by-morpheme analysis of the verb.
+   - (b) Explain why the A-marker *ka-* is ambiguous between 1sg and 1pl, and what evidence resolves the ambiguity in this case.
+   - (c) Provide the Cayuvava form for the same sentence if the subject were 1pl inclusive instead. (This tests whether the solver can productively apply the inclusive marker.)
+
+   This question tests the solver's awareness of syncretism and their ability to use contextual and morphological evidence to resolve ambiguity.
+
+9. **Design Question 5 (TAM positional shift: Explain the rule).** Ask the solver to:
+   - (a) Compare a specific affirmative sentence and its negative counterpart (both provided in the question, not from the data set). Identify the TAM morpheme in each and state its position.
+   - (b) State the rule that determines TAM position: when is TAM a suffix, and when is it a prefix?
+   - (c) Predict the form of a novel negative sentence with a TAM value not seen in the data (e.g., if the data showed past and present, predict the future negative form).
+
+   This question tests whether the solver has identified the interaction between negation and TAM position as a rule, not just a pattern.
+
+10. **Calibrate difficulty progression.** The questions should form a clear difficulty gradient:
+    - Q1 (Parsing): Requires correct identification of all morphemes and their functions. Tests pattern recognition and template decomposition. Solvable if the solver has correctly induced the basic template, person markers, zero marking, and TAM values.
+    - Q2 (Construction): Requires productive use of the full template, including the inclusive marker, zero marking, and negative forms. Tests whether the solver can apply the rules in novel combinations.
+    - Q3 (Metalinguistic): Requires the solver to step back from parsing and articulate the structural principle (split alignment). Tests abstract generalization.
+    - Q4 (Ambiguity resolution): Requires the solver to recognize that the system has a built-in ambiguity (syncretism) and to use multiple sources of evidence (context, inclusive marker) to resolve it. Tests metalinguistic awareness and reasoning under uncertainty.
+    - Q5 (Rule articulation and prediction): Requires the solver to identify a non-obvious interaction (negation triggers TAM positional shift) and apply it productively. Tests the deepest level of understanding.
+
+    Each question should be solvable only if the solver has correctly induced ALL relevant rules from the data, but each question tests a different cognitive operation on those rules.
+
+11. **Final validation.** Re-solve the entire problem from the solver's perspective using ONLY the provided data. Confirm that:
+    - (a) Every rule needed to answer every question is uniquely inducible from the data.
+    - (b) No question has an unintended alternative answer.
+    - (c) The split alignment pattern (3rd person = zero) is clearly demonstrated in at least 4 examples (2 with 3rd person A, 2 with 3rd person P).
+    - (d) The inclusive/exclusive distinction is unambiguously demonstrated in at least 2 examples of each type.
+    - (e) The TAM positional shift is detectable in at least 3 negative examples that can be compared with affirmative counterparts.
+    - (f) The syncretism (1sg = 1pl in A-slot) is visible in at least 2 examples where the inclusive marker is present (confirming 1pl) and at least 2 where it is absent (1sg or 1pl.excl).
+    - (g) No example requires prior knowledge of Cayuvava or Arawakan languages. All properties are inferable from the data alone.
+    - (h) The VOS word order is consistent across all examples, providing a reliable structural key for A/P identification.

@@ -1,0 +1,107 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract the foundational linguistic features and mappings for the target language.",
+    "directive": "Extract the core linguistic features, typological properties, and feature-to-form mappings for the target language 'eve'. Provide a rich, Olympiad-appropriate concept set that can support a valid puzzle, including relevant phonological, morphological, syntactic, or semantic features if present.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Concepts are present, but rationale is missing. The next required step is to design the reasoning blueprint and sentence structure rules before puzzle generation.",
+    "directive": "Using the existing concepts for 'eve', design a clear step-by-step reasoning framework and sentence structure rules suitable for an Olympiad puzzle. Define how linguistic features map to observable forms, how questions should be constructed, and what reasoning steps a solver must follow.",
+    "elapsed_seconds": 8.7
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Concepts and rationale are present, but no puzzle has been generated yet. The next required step is to generate the complete puzzle dataset, questions, and answers using the existing concepts and rationale.",
+    "directive": "Generate a complete Olympiad puzzle for the target language 'eve' using the existing concepts and rationale. Include a clear data section with all necessary vocabulary and glosses, well-formed questions, and a complete answer key. Ensure the puzzle is solvable, unambiguous, and consistent with the linguistic rules.",
+    "elapsed_seconds": 14.8
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a generated puzzle are all present, and the puzzle is flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 solve and rigorously validate the puzzle.",
+    "directive": "Solve the generated puzzle for target language 'eve' and rigorously validate it. Check that the data section is complete and unglossed items are absent, that all questions are unambiguous and non-trivial, that the linguistic rules are consistently applied, and that the answer key is correct. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 19.9
+  },
+  {
+    "step": 5,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The validator reports that Agent 3 produced no usable puzzle and got stuck in an incomplete generation loop. Concepts and rationale are present, so the failure is at the puzzle-generation stage. Agent 3 must regenerate the full structured puzzle from scratch.",
+    "directive": "Regenerate the complete puzzle for 'eve' from scratch. Do not continue the previous incomplete output. Produce a clean, structured Olympiad puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary is glossed, all questions are solvable and non-trivial, the linguistic rules are applied consistently, and the answer key is complete and correct. Avoid repetitive token loops and output only the final structured puzzle.",
+    "elapsed_seconds": 22.5
+  },
+  {
+    "step": 6,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline now has concepts, rationale, and a regenerated puzzle, and the puzzle is explicitly flagged as needing validation. No validator verdict is present yet, so the next required step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the latest regenerated puzzle for target language 'eve'. Verify that it contains clear CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary is glossed; that no unglossed or undefined forms appear; that all questions are unambiguous, non-trivial, and solvable from the provided data; that the linguistic rules are applied consistently; and that the answer key is complete and correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects are found.",
+    "elapsed_seconds": 31.2
+  },
+  {
+    "step": 7,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the latest puzzle output is invalid and effectively missing: it is a repetitive token loop with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. The concepts and rationale are present, so the failure is at the puzzle-generation stage. Agent 3 must regenerate a complete, structured puzzle from scratch.",
+    "directive": "Regenerate the complete Olympiad puzzle for 'eve' from scratch. Ignore the previous malformed output and do not continue it. Produce only a clean, final structured puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure all vocabulary and morphological forms are glossed, no undefined or unglossed items appear, all questions are solvable, unambiguous, and non-trivial, the linguistic rules are applied consistently, and the answer key is complete and correct. Avoid repetitive loops and output only the final puzzle.",
+    "elapsed_seconds": 34.2
+  },
+  {
+    "step": 8,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a regenerated puzzle are present, and the puzzle is explicitly flagged as needing validation. No validator verdict exists yet, so the next required step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the latest regenerated puzzle for target language 'eve'. Verify that it contains clear CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary and morphological forms are glossed; that no undefined or unglossed items appear; that all questions are unambiguous, non-trivial, and solvable from the provided data; that the linguistic rules are applied consistently; and that the answer key is complete and correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects are found.",
+    "elapsed_seconds": 39.2
+  },
+  {
+    "step": 9,
+    "decision": "CALL_AGENT3",
+    "reasoning": "Agent 4 reports that the latest puzzle is not a valid puzzle but a degenerate repetitive loop with no required sections. Concepts and rationale are present, so the defect is at the puzzle-generation stage. Agent 3 must regenerate a complete, finite, well-formed puzzle from scratch.",
+    "directive": "Discard the previous malformed output and regenerate the complete Olympiad puzzle for 'eve' from scratch. Output only a finite, well-formed puzzle with explicit sections: CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION. Ensure every lexical item and morphological form used in DATA/QUESTIONS is glossed or defined, all questions are solvable, unambiguous, and non-trivial, the linguistic rules are applied consistently, and the ANSWERS section is complete and correct. Avoid repetitive loops, truncation, or meta commentary.",
+    "elapsed_seconds": 41.9
+  },
+  {
+    "step": 10,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a newly regenerated puzzle are present, and the puzzle is explicitly flagged as needing validation. No validator verdict is available yet, so the required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the latest regenerated puzzle for target language 'eve'. Verify that it contains clear CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary and morphological forms are glossed or defined; that no undefined or unglossed items appear; that all questions are unambiguous, non-trivial, and solvable from the provided data; that the linguistic rules are applied consistently; and that the answer key is complete and correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects are found.",
+    "elapsed_seconds": 46.8
+  },
+  {
+    "step": 11,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest validator verdict is FAIL because the puzzle output is not a valid structured puzzle: it is a repetitive token loop with no CONTEXT, DATA, QUESTIONS, ANSWERS, or SOLUTION. Concepts and rationale are present, so the failure is at the puzzle-generation stage. Agent 3 must regenerate a complete, finite, well-formed puzzle from scratch, with strict output discipline to avoid another degenerate loop.",
+    "directive": "Discard all previous malformed puzzle output. Regenerate the complete Olympiad puzzle for target language 'eve' from scratch. Output ONLY the final puzzle, with no planning, no design monologue, no meta commentary, no repeated tokens, and no truncation. Use exactly these section headers: CONTEXT, DATA, QUESTIONS, ANSWERS, SOLUTION. Before writing, internally resolve all lexical and morphological choices, then write the final puzzle in one clean pass. Keep the puzzle compact and finite: include enough DATA sentences to make all questions solvable, gloss every lexical item and morphological form used, ensure no undefined or unglossed forms appear, make every question unambiguous and non-trivial, apply the linguistic rules consistently, and provide a complete correct ANSWERS section plus a clear SOLUTION explanation. Do not output any text before CONTEXT or after SOLUTION.",
+    "elapsed_seconds": 49.5
+  },
+  {
+    "step": 12,
+    "decision": "CALL_AGENT4",
+    "reasoning": "Concepts, rationale, and a newly regenerated puzzle are present, and the puzzle is explicitly flagged as needing validation. No validator verdict is available in the current state, so the required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the latest regenerated puzzle for target language 'eve'. Verify that it contains clear CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary and morphological forms are glossed or defined; that no undefined or unglossed items appear; that all questions are unambiguous, non-trivial, and solvable from the provided data; that the linguistic rules are applied consistently; and that the answer key is complete and correct. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects are found.",
+    "elapsed_seconds": 61.8
+  },
+  {
+    "step": 13,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The latest verdict is PASS_WITH_ISSUES, but the reported issue is a major internal inconsistency in the answer key: Q3 uses a different adjective placement in possessive constructions than Q7 and Q8. This is a concrete puzzle-level defect, not a conceptual or rationale failure. Agent 3 should patch the puzzle directly by making the adjective placement rule consistent across all answers, data, and solution explanations.",
+    "directive": "Patch the existing 'eve' puzzle to resolve the adjective-placement inconsistency in possessive constructions. Inspect the rationale and DATA to determine the intended rule. If the rule is possessor + adjective + possessed noun, change Q3's answer from 'biga sa-i kura-s-a' to 'sa-i biga kura-s-a' and update any related SOLUTION explanation. If the intended rule is instead adjective + possessor + possessed noun, revise Q7 and Q8 and all affected data/solution text to match that rule. Ensure every answer, gloss, and explanation is internally consistent, that no new undefined forms are introduced, and that the puzzle remains complete with CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections.",
+    "elapsed_seconds": 68.3
+  },
+  {
+    "step": 14,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The latest puzzle has been revised by Agent 3 and is explicitly flagged as needing validation, but no validator verdict is present yet. The required next step is to have Agent 4 solve and rigorously validate the current puzzle, especially checking that the previously reported adjective-placement inconsistency has been resolved and that all sections, glosses, questions, answers, and solution explanations are internally consistent.",
+    "directive": "Solve and rigorously validate the latest revised puzzle for target language 'eve'. Verify that it contains clear CONTEXT, DATA, QUESTIONS, ANSWERS, and SOLUTION sections; that all vocabulary and morphological forms are glossed or defined; that no undefined or unglossed items appear; that all questions are unambiguous, non-trivial, and solvable from the provided data; that the linguistic rules are applied consistently; and that the answer key is complete and correct. Pay special attention to the previously reported adjective-placement inconsistency in possessive constructions and confirm whether it has been fully resolved across DATA, QUESTIONS, ANSWERS, and SOLUTION. Return PASS, PASS_WITH_ISSUES, or FAIL with specific, actionable feedback if any defects remain.",
+    "elapsed_seconds": 75.7
+  },
+  {
+    "step": 15,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The latest validator verdict is PASS, the puzzle is present, and puzzle_needs_validation is false. The puzzle has been fully verified and is acceptable, so the pipeline should finish successfully.",
+    "directive": "No further action required; accept the validated puzzle.",
+    "elapsed_seconds": 81.1
+  }
+]

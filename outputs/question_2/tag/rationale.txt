@@ -1,0 +1,144 @@
+
+
+TARGET-LANGUAGE: Tagalog (tag)
+
+CONSTRUCTION RATIONALE
+
+1. **Define the linguistic rules to be encoded in the puzzle.** The puzzle will encode the following rules, which the solver must discover from data:
+   - (R1) Numeral-noun order: the numeral precedes the noun.
+   - (R2) Linker: a morpheme -ng (or -na after a vowel-final numeral) appears between the numeral and the noun. This morpheme is invariant with respect to the noun's identity, number, or any other property. It is a positional/syntactic marker, not a classifier and not an agreement suffix.
+   - (R3) Noun invariance: the noun does not change form regardless of the numeral preceding it. There is no dependent marking, no agreement, no classifier.
+   - (R4) Optional plural marker "mga": the word "mga" may optionally precede the numeral in a numeral-noun phrase. Its presence does not change the meaning. It is not obligatory.
+   - (R5) Reduplication for collective plurality: a noun may be reduplicated (full or partial) to express plurality without a numeral (e.g., "bahay-bahay" = houses).
+   - (R6) Reduplication for distributive meaning: a numeral may be reduplicated to express distributive/iterative meaning (e.g., "isang-isang" = one by one, each one separately).
+   - (R7, optional) Ordinal derivation: ordinals are formed with the prefix ika- attached to the cardinal (e.g., ika-lawa = second, ika-tlo = third), except "first" which is suppletive (unang).
+
+   **Glossing conventions to use in the puzzle data:**
+   - Numerals: gloss as NUM (e.g., dalawa → NUM.2)
+   - Linker: gloss as LINK
+   - "mga": gloss as PL (optional)
+   - Reduplicated noun: gloss as NOUN-PL.REDUP or NOUN.REDUP
+   - Reduplicated numeral (distributive): gloss as NUM.DIST
+   - Nouns: gloss by their English equivalent
+   - Ordinal prefix ika-: gloss as ORD
+   - Suppletive "unang": gloss as ORD.1
+
+   **Sentence structure templates:**
+   - [NUM] [LINK] [NOUN] → "N [noun]"
+   - [mga] [NUM] [LINK] [NOUN] → "N [noun]" (mga optional)
+   - [NOUN]-[NOUN] → "[noun]s" (collective plurality via reduplication)
+   - [NUM]-[NUM] → "N by N" / "each N separately" (distributive)
+   - [ika-][NUM] [LINK] [NOUN] → "the Nth [noun]" (ordinal, optional)
+
+2. **Select the vocabulary inventory.** Choose a small set of nouns (4–6) and numerals (1–10) that will appear in the data. Requirements:
+   - Nouns should be semantically transparent or easily guessable from context (e.g., words for common objects like "book," "house," "child," "tree," "fish"). The solver should not need to know Tagalog vocabulary; the English translations provided alongside each sentence will make the nouns transparent.
+   - Numerals: use the standard Tagalog cardinals isa (1), dalawa (2), tatlo (3), apat (4), lima (5), anim (6), pitu (7), walo (8), siyam (9), sampu (10).
+   - **Critical constraint for the linker:** In the baseline data, use only numerals ending in a consonant (isa, dalawa, tatlo, lima, anim, pitu, siyam) so that the linker is uniformly -ng. This allows the solver to identify the linker as a single invariant morpheme. If you wish to add the -na alternation as an additional layer, introduce a vowel-final numeral (apat, walo) only in the question set, not in the baseline. This makes the alternation a "new discovery" that the solver must handle at a higher difficulty level.
+   - The word "mga" must appear in the data.
+   - At least two reduplicated noun forms and at least one reduplicated numeral (distributive) must appear.
+
+3. **Design the baseline data set (the "given" examples).** Provide a set of Tagalog sentences with English translations, structured to establish the core rules progressively. The baseline should contain approximately 8–12 sentences organized in the following logical groups:
+
+   **Group A: Establish numeral-noun order and the linker (supports R1, R2, R3).**
+   - Provide 3–4 sentences of the form [NUM] [LINK] [NOUN] with different numerals and different nouns.
+   - Example pattern: "isang libro" (one book), "dalawang bahay" (two houses), "tatlong bata" (three children), "limang puno" (five trees).
+   - **Design constraint:** Use at least three different nouns and at least three different numerals. This allows the solver to observe that (a) the numeral always comes first, (b) the linker -ng always appears in the same position, (c) the noun form never changes, and (d) the linker does not change with the noun (ruling out agreement) or with the numeral's meaning (ruling out a classifier).
+   - **What the solver should infer from Group A:** The linear structure is Numeral-Linker-Noun. The linker is a fixed morpheme. The noun is invariant. There is no classifier (the linker is not semantically motivated by the noun's class).
+
+   **Group B: Establish the optionality of "mga" (supports R4).**
+   - Provide 2–3 pairs of sentences that are identical except for the presence or absence of "mga."
+   - Example pattern: "dalawang libro" (two books) and "mga dalawang libro" (two books) — same meaning, different form.
+   - **Design constraint:** The pairs must be semantically identical (same numeral, same noun, same context) so the solver can conclude that "mga" does not change the meaning. Use at least two different numeral-noun combinations to show the pattern generalizes.
+   - **What the solver should infer from Group B:** "mga" is an optional element. It is not required. It does not change the grammatical or semantic structure of the phrase. It is a plural marker that is redundant when a numeral is present.
+
+   **Group C: Introduce reduplication for collective plurality (supports R5).**
+   - Provide 2–3 sentences with reduplicated nouns, without numerals.
+   - Example pattern: "bahay-bahay" (houses), "puno-puno" (trees), "bata-bata" (children).
+   - **Design constraint:** These sentences must NOT contain numerals. This isolates reduplication as an independent plurality strategy. The English translations should make the plural meaning clear.
+   - **What the solver should infer from Group C:** Reduplication of a noun expresses plurality. This is a separate mechanism from the numeral system. It can be used without a numeral.
+
+   **Group D: Introduce reduplication for distributive meaning (supports R6).**
+   - Provide 1–2 sentences with reduplicated numerals.
+   - Example pattern: "isang-isang" (one by one), "dalawang-dalawang" (two by two).
+   - **Design constraint:** The English translations must make the distributive/iterative meaning clear (e.g., "They entered one by one," "The children sat two by two"). This distinguishes distributive reduplication from collective plurality.
+   - **What the solver should infer from Group D:** Reduplicating a numeral produces a distributive meaning ("N by N," "each N separately"). This is semantically different from reduplicating a noun (which gives collective plurality).
+
+   **Group E (optional): Introduce ordinals (supports R7).**
+   - Provide 2–3 sentences with ordinal expressions.
+   - Example pattern: "unang libro" (first book), "ikalawang bahay" (second house), "ikatlong bata" (third child).
+   - **Design constraint:** Include "unang" (first) alongside at least two ika- forms. This makes the suppletion visible: "unang" is not derived from "isa" by any transparent rule, while "ikalawa" is transparently ika- + dalawa.
+   - **What the solver should infer from Group E:** Ordinals are formed with the prefix ika- + cardinal, except "first" which is a separate form.
+
+   **Overall baseline design principle:** The groups should be presented in a way that the solver encounters the simpler patterns first (Group A) and the more complex ones later (Groups C, D, E). However, the groups do not need to be explicitly labeled; they can be interleaved in a natural text or list. The key is that the evidence for each rule is present and unambiguous.
+
+4. **Provide a supplementary reference table.** Include a table of Tagalog numerals 1 through 10 with their English equivalents. This serves two purposes:
+   - It gives the solver the full set of numeral forms needed for the questions.
+   - It allows the solver to see the full paradigm and notice patterns (e.g., which numerals end in vowels vs. consonants, if the -na alternation is to be tested).
+   - **Do NOT include** the linker, "mga," or reduplicated forms in this table. These must be discovered from the baseline sentences.
+   - If ordinals are included in the puzzle, do NOT include them in the table either; they must be inferred from Group E.
+
+5. **Design Question Set A: "Write the Tagalog expression."** Create 5–7 items where the solver must produce a Tagalog numeral-noun phrase from an English description. Coverage matrix:
+   - (a) A simple numeral-noun phrase with a numeral and noun both seen in the baseline (tests: R1, R2, R3 — basic pattern application).
+   - (b) A numeral-noun phrase with a numeral seen in the baseline but a noun NOT seen in the baseline (tests: R2 generalization — the linker applies to any noun, confirming it is positional, not noun-specific).
+   - (c) A numeral-noun phrase with "mga" (tests: R4 — the solver must know that "mga" is optional and can be included; or the question can specify "with the plural marker" to force its use).
+   - (d) A numeral-noun phrase with a vowel-final numeral (e.g., apat or walo) (tests: the -na alternation of the linker, if this layer is included. The solver must notice from the reference table that the numeral ends in a vowel and apply the alternation).
+   - (e) A reduplicated noun expression (tests: R5 — the solver must produce the reduplicated form for a noun, showing they understand reduplication as a plurality strategy).
+   - (f) A distributive expression with a reduplicated numeral (tests: R6 — the solver must reduplicate the numeral to express distributive meaning).
+   - (g, optional) An ordinal expression (tests: R7 — the solver must apply the ika- prefix, or use "unang" for first).
+
+   **Difficulty progression within Set A:** (a) → (b) → (c) → (d) → (e) → (f) → (g). Each step adds a new element or requires a new inference.
+
+6. **Design Question Set B: "What does this Tagalog expression mean?"** Create 5–7 items where the solver is given a Tagalog expression and must state its English meaning or identify a grammatical property. Coverage matrix:
+   - (a) A numeral-noun phrase with a new numeral (not in baseline) — tests whether the solver can parse the structure and identify the numeral's value.
+   - (b) A numeral-noun phrase with "mga" — tests whether the solver recognizes "mga" as optional and does not interpret it as changing the meaning.
+   - (c) A reduplicated noun — tests whether the solver identifies it as collective plurality.
+   - (d) A reduplicated numeral — tests whether the solver identifies it as distributive meaning.
+   - (e) A contrast pair: a reduplicated noun vs. a reduplicated numeral in similar contexts — tests whether the solver can distinguish collective plurality from distributive meaning.
+   - (f, optional) An ordinal expression — tests whether the solver can identify the ordinal and its relation to the cardinal.
+   - (g, optional) A "trick" item: a numeral-noun phrase where the solver might be tempted to insert a classifier or change the noun form — tests whether the solver has truly internalized the absence of classifiers and agreement.
+
+   **Difficulty progression within Set B:** (a) → (b) → (c) → (d) → (e) → (f) → (g).
+
+7. **Design a "meta-question" or "explanation" question (optional but recommended for Olympiad format).** Include one or two questions that ask the solver to explain a grammatical property in their own words. Examples:
+   - "What is the function of the morpheme -ng in these expressions? Is it a classifier, an agreement marker, or something else? Explain your reasoning."
+   - "Why can 'mga' be omitted without changing the meaning? What does this tell you about the role of numerals in expressing plurality in this language?"
+   - "How does reduplication of a noun differ from reduplication of a numeral in terms of meaning?"
+
+   These questions test whether the solver has achieved a genuine understanding of the rules rather than mere pattern-matching. They also force the solver to articulate the negative inference (no classifiers, no agreement) explicitly.
+
+8. **Verify the inference chain is uniquely determined.** Walk through the solver's perspective step by step:
+   - From Group A, the solver identifies: (i) numeral precedes noun, (ii) a morpheme -ng appears between them, (iii) the noun does not change, (iv) the -ng does not change with different nouns. The solver can now hypothesize: "-ng is a fixed linker, not a classifier (because it doesn't vary by noun class) and not agreement (because it doesn't vary by noun properties)."
+   - From Group B, the solver identifies: "mga" is optional. The solver can now hypothesize: "Plurality is already expressed by the numeral; 'mga' is a redundant optional marker."
+   - From Group C, the solver identifies: reduplication of nouns expresses plurality independently of numerals. The solver can now hypothesize: "This language has multiple, independent strategies for expressing plurality: numerals, optional 'mga', and reduplication."
+   - From Group D, the solver identifies: reduplication of numerals expresses distributive meaning. The solver can now distinguish: "Reduplication of nouns = collective plurality; reduplication of numerals = distributive/iterative."
+   - From Group E (if included), the solver identifies: ordinals use ika- prefix, with "unang" as an exception.
+   - The solver can now answer all questions in Sets A and B by applying the discovered rules.
+
+   **Critical check:** At no point should the solver need to guess a rule that is not supported by the data. Every rule must be inferable from at least two examples (to rule out coincidence).
+
+9. **Check for unintended alternative interpretations.** Specifically verify:
+   - **Could the solver interpret -ng as a classifier?** Prevent this by ensuring that the same -ng appears with nouns of different semantic categories (e.g., a concrete object, a living being, an abstract concept). If -ng were a classifier, it would be expected to vary by noun class. The invariance across semantically diverse nouns is the key evidence.
+   - **Could the solver interpret -ng as part of the numeral (a suffix)?** Prevent this by ensuring that the numeral forms in the reference table do NOT include -ng. The solver can then see that -ng is not part of the numeral's lexical form but is added in the phrase.
+   - **Could the solver interpret -ng as part of the noun (a prefix)?** Prevent this by ensuring that the nouns appear without -ng in other contexts (e.g., in the reduplicated forms in Group C, where the noun stem is visible without the linker).
+   - **Could the solver interpret "mga" as a definite article or a different grammatical category?** Prevent this by ensuring that "mga" only appears in numeral-noun phrases and never in other positions. Its consistent co-occurrence with numerals and its optionality make the "optional plural marker" interpretation the most natural.
+   - **Could the solver confuse collective reduplication with distributive reduplication?** Prevent this by ensuring that the English translations in the baseline clearly distinguish the two meanings (e.g., "houses" vs. "one by one"). The contrast in translation is the primary disambiguating evidence.
+   - **Could the solver interpret the absence of classifiers as simply "the data doesn't show them"?** This is the inherent challenge of negative inferences. Mitigate it by providing enough positive evidence of direct numeral-noun combinations (at least 4–5 different combinations) so that the absence of any intervening element becomes a robust pattern rather than a gap in the data.
+
+10. **Assign difficulty progression across the entire puzzle.** The overall difficulty should develop as follows:
+    - **Stage 1 (baseline reading):** The solver identifies the basic structure (Numeral-Linker-Noun), the invariance of the noun, and the fixed nature of the linker. This is the foundational discovery.
+    - **Stage 2 (optionality):** The solver identifies "mga" as optional. This requires comparing parallel examples and recognizing that the meaning is unchanged.
+    - **Stage 3 (reduplication):** The solver identifies reduplication as a morphological process and determines its two distinct functions (collective plurality vs. distributive). This requires recognizing a formal pattern (repetition) and mapping it to different semantic functions based on context.
+    - **Stage 4 (application):** The solver applies all discovered rules to produce or interpret new expressions. This tests whether the rules have been generalized correctly.
+    - **Stage 5 (meta-reasoning, optional):** The solver articulates the rules and explains the negative inferences (no classifiers, no agreement). This is the highest level of understanding.
+
+    Within each question set, items should progress from easier to harder as described in Steps 5 and 6.
+
+11. **Final consistency checklist.** Before finalizing the puzzle, verify:
+    - (a) Every rule the solver must apply is supported by at least two examples in the baseline.
+    - (b) No question item requires knowledge that is not derivable from the given data and reference table.
+    - (c) The linker is consistently -ng in all baseline examples (or the -na alternation is clearly motivated if included).
+    - (d) "mga" appears in at least two different numeral-noun combinations to show it is not specific to one phrase.
+    - (e) Reduplicated nouns and reduplicated numerals are clearly distinguishable in form (nouns are reduplicated as noun-noun; numerals as numeral-numeral) and in meaning (collective vs. distributive).
+    - (f) The total number of distinct rules the solver must discover is no more than 6–7 (R1 through R7). Each rule should be independently inferable.
+    - (g) No rule requires prior knowledge of Tagalog. All inferences are based on formal patterns (position, invariance, optionality, reduplication structure) visible in the data.
+    - (h) The puzzle is solvable by a person with no knowledge of Tagalog who can read English and has general linguistic reasoning skills.

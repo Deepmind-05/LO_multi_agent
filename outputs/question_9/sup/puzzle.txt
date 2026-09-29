@@ -1,0 +1,133 @@
+
+
+# CONTEXT
+
+Supyire is a Senufo language spoken in Côte d'Ivoire with approximately 100,000 speakers. The language possesses a complex system of noun classification. Below are data from Supyire.
+
+**Notation:** The tilde (˜) indicates nasalization of a vowel (e.g., ã is a nasalized [a]). The acute accent (´) indicates high tone; the grave accent (`) indicates low tone. The symbol ŋ represents a velar nasal consonant. The translations are provided for interest only and have no bearing on the solution. The columns "It" and "They" give the 3rd-person pronouns used to refer to the noun in singular and plural contexts, respectively.
+
+# DATA
+
+| # | Singular | Plural | It | They | Translation |
+|---|----------|--------|----|------|-------------|
+| 1 | káŋ | kɛ̀ŋɛ̀ | yí | yɛ̀ | river |
+| 2 | tó | túɛ̀ | yí | yɛ̀ | tree |
+| 3 | sɛ́ | sɛ̀ɛ̀ | yí | yɛ̀ | snake |
+| 4 | kàŋ | kɛ́ŋí | yà | yí | stone |
+| 5 | tò | túí | yà | yí | fish |
+| 6 | sɛ̀ | sɛ́í | yà | yí | leaf |
+| 7 | káŋ | kɛ̃ŋɔ́ | yɔ́ | yɔ́ | horse |
+| 8 | tó | tɔ̃ɔ́ | yɔ́ | yɔ́ | dog |
+| 9 | sɛ́ | sẽɔ́ | yɔ́ | yɔ́ | cat |
+| 10 | kàŋ | kɛ̃ŋ̀ɔ́ | yɔ́ | yɔ́ | path |
+| 11 | káŋ | kɛ̀ŋà | yí | yà | house |
+| 12 | tó | tɔ̀à | yí | yà | pot |
+| 13 | sɛ́ | sɛ̀à | yí | yà | road |
+| 14 | kàŋ | káŋɛ́ | yà | yɛ́ | water |
+| 15 | tɔ̀ɔ̃ | tóóɛ́ | yà | yɛ́ | milk |
+| 16 | sẽ̀ | séɛ́ | yà | yɛ́ | fire |
+
+# QUESTIONS
+
+**Q1 (4 marks).** For each of the following singular–plural pairs, state which class (1–5) the noun belongs to.
+
+(a) káŋ / kɛ̀ŋɛ̀
+(b) kàŋ / kɛ́ŋí
+(c) káŋ / kɛ̃ŋɔ́
+(d) káŋ / kɛ̀ŋà
+(e) kàŋ / káŋɛ́
+(f) tó / tɔ̀à
+
+**Q2 (4 marks).** Using the data above, answer the following.
+
+(a) Given the noun sɛ́ / sɛ̀ɛ̀, predict the forms of "It" and "They".
+(b) Given "It" = yà and "They" = yí, state which class the noun belongs to.
+(c) Given the noun tɔ̀ɔ̃ / tóóɛ́, predict the forms of "It" and "They".
+(d) Given "It" = yí and "They" = yà, state which class the noun belongs to.
+
+**Q3 (8 marks).** For each item below, give the missing form. If more than one form is possible, give all of them separated by commas.
+
+(a) káŋ / **?**
+(b) kàŋ / **?**
+(c) **?** / sɛ́í
+(d) **?** / mɪ̃ɔ́
+(e) tɔ̀à / **?**
+(f) sẽ̀ / **?**
+(g) bɔ́ / **?**
+(h) **?** / tóóɛ́
+
+**Q4 (4 marks).** Briefly explain:
+(i) How many noun classes are there, and what phonological properties determine class membership?
+(ii) What is the relationship between noun class and the pronoun forms?
+(iii) Why do some items in Q3 admit multiple answers?
+
+# ANSWERS
+
+**Q1:**
+(a) 1
+(b) 2
+(c) 3
+(d) 4
+(e) 5
+(f) 4
+
+**Q2:**
+(a) It = yí, They = yɛ̀
+(b) Class 2
+(c) It = yà, They = yɛ́
+(d) Class 4
+
+**Q3:**
+(a) kɛ̀ŋɛ̀, kɛ̃ŋɔ́, kɛ̀ŋà
+(b) kɛ́ŋí, kɛ̃ŋ̀ɔ́, káŋɛ́
+(c) sɛ̀
+(d) mɪ́
+(e) tó
+(f) séɛ́
+(g) búɛ̀, bɔ̃ɔ́, bɔ̀à
+(h) tɔ̀ɔ̃
+
+**Q4:**
+(i) There are 5 noun classes. Class membership is determined by the combination of three independent phonological parameters in the singular→plural alternation: (1) oral vowel quality change (a→e, o→u; or a→ɛ, o→ɔ; or none), (2) nasalization change (oral→nasal; or nasal→oral; or none), and (3) tone change (H→L; or L→H; or none). Each class also has a distinct plural suffix.
+(ii) The same noun class that determines the stem alternation pattern and the plural suffix also determines the form of the 3rd-person pronoun (both singular and plural). The correspondence is one-to-one: each class has a unique pair of pronoun forms.
+(iii) Multiple answers arise because different classes can share some phonological parameters. For example, Classes 1, 3, and 4 all accept a singular with H-tone and oral vowel /a/, but they differ in their quality change (a→e vs. a→ɛ̃ vs. a→ɛ), nasalization (none vs. oral→nasal vs. none), and suffix (−ɛ̀ vs. −ɔ́ vs. −à). Since the singular form alone does not specify which class the noun belongs to, multiple plural forms are possible.
+
+# SOLUTION
+
+**Inferred rules:**
+
+The data reveal 5 noun classes, each defined by a unique combination of:
+
+| Class | Vowel quality | Nasalization | Tone | Suffix |
+|-------|--------------|-------------|------|--------|
+| 1 | a→e, o→u | none | H→L | −ɛ̀ |
+| 2 | a→e, o→u | none | L→H | −í |
+| 3 | a→ɛ, o→ɔ | oral→nasal | none | −ɔ́ |
+| 4 | a→ɛ, o→ɔ | none | H→L | −à |
+| 5 | none | nasal→oral | L→H | −ɛ́ |
+
+Vowels not listed (e, i, u) are unaffected by the quality alternation. In Class 3, the nasalization applies to all vowels (e→ẽ, i→ɪ̃, etc.). In Class 5, the nasal→oral change applies to all nasal vowels (ã→a, ɔ̃→o, ẽ→e, etc.).
+
+**Evidence for each rule:**
+
+- *Suffix identification:* Comparing singular and plural forms reveals a consistent added segment at the end. Five distinct suffixes are observed: −ɛ̀ (rows 1–3), −í (rows 4–6), −ɔ́ (rows 7–10), −à (rows 11–13), −ɛ́ (rows 14–16).
+
+- *Vowel quality alternation:* In rows 1–3 and 4–6, /a/→/e/ and /o/→/u/ while /e/ is unchanged. In rows 7–10 and 11–13, /a/→/ɛ/ and /o/→/ɔ/ while /e/ is unchanged. In rows 14–16, no quality change occurs.
+
+- *Nasalization alternation:* In rows 7–10, oral vowels become nasal (a→ɛ̃, o→ɔ̃, e→ẽ). In rows 14–16, nasal vowels become oral (ã→a, ɔ̃→o, ẽ→e). In all other rows, nasalization is unchanged. The contrast between row 9 (sɛ́→sẽ: nasalization only) and row 7 (káŋ→kɛ̃ŋ: quality + nasalization) establishes that these are independent operations.
+
+- *Tone alternation:* Rows 1–3 and 11–13 show H→L. Rows 4–6 and 14–16 show L→H. Rows 7–10 show no tone change (both H→H in rows 7–9 and L→L in row 10).
+
+- *Cross-paradigm correspondence:* The pronouns are constant within each class group: Class 1 = yí/yɛ̀, Class 2 = yà/yí, Class 3 = yɔ́/yɔ́, Class 4 = yí/yà, Class 5 = yà/yɛ́.
+
+**How rules produce each answer:**
+
+- **Q1:** Each pair is matched to a class by its suffix and alternation pattern. (a)–(e) all share similar singulars but differ in plural, forcing use of the suffix and stem changes. (f) tó/tɔ̀à has suffix −à and o→ɔ with H→L, matching Class 4.
+
+- **Q2(a):** sɛ́/sɛ̀ɛ̀ has suffix −ɛ̀ → Class 1 → yí/yɛ̀. **Q2(b):** yà/yí matches Class 2. **Q2(c):** tɔ̀ɔ̃/tóóɛ́ has suffix −ɛ́ → Class 5 → yà/yɛ́. **Q2(d):** yí/yà matches Class 4.
+
+- **Q3(a):** káŋ (H, oral /a/) is compatible with Classes 1, 3, and 4 (all accept H-tone oral /a/ singulars). Applying each class's rules: C1 → kɛ̀ŋɛ̀, C3 → kɛ̃ŋɔ́, C4 → kɛ̀ŋà. **Q3(b):** kàŋ (L, oral /a/) is compatible with Classes 2, 3, and 5. C2 → kɛ́ŋí, C3 → kɛ̃ŋ̀ɔ́, C5 → káŋɛ́. **Q3(c):** Suffix −í → Class 2. Stem sɛ́ (H) with L→H rule means singular had L: sɛ̀. **Q3(d):** Suffix −ɔ́ → Class 3. Stem mɪ̃ (nasal, H) with oral→nasal rule means singular had oral: mɪ́. **Q3(e):** Suffix −à → Class 4. Stem tɔ̀ (L) with H→L rule means singular had H: tó. **Q3(f):** sẽ̀ (L, nasal /e/) can only be Class 5 (the only class with nasal→oral alternation). Applying C5: ẽ→e, L→H, add −ɛ́ → séɛ́. **Q3(g):** bɔ́ (H, oral /o/) is compatible with Classes 1, 3, and 4. C1 → búɛ̀, C3 → bɔ̃ɔ́, C4 → bɔ̀à. **Q3(h):** Suffix −ɛ́ → Class 5. Stem tóó (H, oral /o/) with nasal→oral and L→H rules means singular had nasal /ɔ/ and L: tɔ̀ɔ̃.
+
+# DIFFICULTY
+
+**Level 5 (maximum).** The puzzle requires simultaneous tracking of three independent phonological dimensions (vowel quality, nasalization, tone) plus suffix identity across five classes with deliberate partial overlaps. The solver must recognize nasalization as a dimension independent of oral vowel quality (evidenced by the contrast between quality+nasalization changes in Class 3 and nasalization-only changes in Class 5), must identify the cross-paradigm correspondence between nouns and pronouns, and must handle genuine ambiguity in Q3 where a single surface form is compatible with multiple class assignments. The layered structure—first identifying patterns, then discovering the cross-paradigm link, then applying all rules to novel forms with ambiguity—creates a multi-stage reasoning chain characteristic of the highest difficulty level.

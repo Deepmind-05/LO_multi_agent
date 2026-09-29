@@ -1,0 +1,90 @@
+
+
+TARGET-LANGUAGE
+
+Cantonese (cnt)
+
+CORE
+
+1. Genitive/possessive construction (from source 83A-1)
+   - Target-language realization: Cantonese uses a genitive construction with a post-possessive particle 嘅 (ge3). Structure: Possessor + 嘅 + Possessed (e.g., "my book" = 我嘅書 ngo5 ge3 syu1).
+   - Intended solver inference: Identify the possessive particle, determine that it is a separate word (not an affix), and recognize the construction as a genitive/possessive phrase.
+   - Priority: REQUIRED
+
+2. Order of possessor and possessed (adapted from source 84A-2)
+   - Target-language realization: Cantonese has POSSessor before POSSEssed (opposite of Coptic). The possessor precedes the possessed noun, with the particle 嘅 intervening.
+   - Intended solver inference: Determine the linear order of possessor and possessed from the data; recognize that the possessor is the first element in the possessive phrase.
+   - Priority: REQUIRED
+
+3. Locus of marking in possessive constructions (adapted from source 81A-2)
+   - Target-language realization: Cantonese has INDEPENDENT marking — the possessive particle 嘅 attaches to (follows) the possessor, not the possessed noun. This is the opposite of Coptic's dependent marking.
+   - Intended solver inference: Determine that the possessive marker is associated with the possessor (independent marking), not the possessed noun. The solver should be able to identify which element "carries" the possessive information.
+   - Priority: HIGH
+
+TARGET-SPECIFIC
+
+1. Obligatory numeral classifiers (WALS 55A-3)
+   - Phenomenon: When a numeral modifies a noun, a classifier (measure word) is obligatory between the numeral and the noun. Different nouns take different classifiers (e.g., 本 bun1 for books, 隻 zek1 for animals, 張 zoeng1 for flat objects). "Three books" = 三本書 saam1 bun1 syu1.
+   - Intended solver inference: Identify that a classifier is required between numeral and noun; recognize that different nouns require different classifiers; determine that the classifier is a property of the noun's semantic class, not of the numeral.
+   - Interaction with CORE concepts: The classifier appears within the possessed noun phrase in possessive constructions (e.g., "my three books" = 我嘅三本書 ngo5 ge3 saam1 bun1 syu1). This shows the possessive particle can precede a classifier-noun phrase, clarifying the internal structure of the possessed NP.
+   - Difficulty contribution: HIGH — adds a layer of structure that the solver must parse; creates a non-obvious requirement (classifiers are obligatory, not optional); the semantic assignment of classifiers adds a reasoning challenge.
+   - Priority: HIGH
+
+2. No inflectional morphology / isolating typology (WALS 26A-1)
+   - Phenomenon: Cantonese has little or no inflectional morphology. Words are largely monomorphemic; grammatical relations are expressed through separate particles and word order rather than affixation.
+   - Intended solver inference: The possessive particle 嘅 is a free word, not a bound affix. The solver should infer that Cantonese relies on separate particles and word order for grammatical marking.
+   - Interaction with CORE concepts: Supports the inference about independent marking — the particle is a separate element following the possessor, not a suffix on the possessed noun. This contrasts with the Coptic source pattern where marking is on the dependent.
+   - Difficulty contribution: MEDIUM — helps the solver correctly analyze the morphological status of the possessive particle (free word vs. affix), which is relevant to the locus-of-marking inference.
+   - Priority: HIGH
+
+3. No plural marking on nouns (WALS 33A-9)
+   - Phenomenon: Cantonese does not mark plural on the noun itself. "book" and "books" are both 書 syu1. Plurality is expressed through classifiers, numerals, or context.
+   - Intended solver inference: The noun form does not change for number; the classifier system (not the noun) is the primary means of expressing quantity.
+   - Interaction with CORE concepts: In possessive constructions, the possessed noun does not change form regardless of number. The classifier (when present) carries the quantitative information. This clarifies that the possessive construction operates on the noun phrase as a whole, not on a specific noun form.
+   - Difficulty contribution: MEDIUM — prevents the solver from incorrectly assuming that noun form changes encode number; reinforces the role of classifiers.
+   - Priority: OPTIONAL
+
+4. No case marking (WALS 51A-9)
+   - Phenomenon: Cantonese has no case affixes or adpositional clitics. Grammatical relations are expressed through word order and particles.
+   - Intended solver inference: The possessive relationship is expressed solely through the particle 嘅 and word order, not through case marking on the nouns.
+   - Interaction with CORE concepts: Reinforces that the possessive construction is a particle-based genitive, not a case-marked construction. The solver should not expect case-like morphology on either the possessor or the possessed.
+   - Difficulty contribution: LOW-MEDIUM — provides a constraint that simplifies the analysis (no case to worry about) but also means the possessive particle is the sole marker of the relationship.
+   - Priority: OPTIONAL
+
+INTERACTIONS
+
+1. Possessive particle + Classifier system:
+   - Concepts: Genitive construction (CORE 1) + Obligatory numeral classifiers (TS 1)
+   - Interaction: The possessive particle 嘅 can precede a classifier-noun phrase (e.g., 我嘅三本書 "my three books"). This demonstrates that the possessed element in a possessive construction can be a complex NP containing a classifier.
+   - Additional inference enabled: The solver can determine that the classifier is part of the possessed noun phrase, not part of the possessive construction itself. The possessive particle marks the relationship between possessor and the entire possessed NP.
+
+2. Independent marking + Isolating morphology:
+   - Concepts: Locus of marking (CORE 3) + No inflectional morphology (TS 2)
+   - Interaction: Because Cantonese is isolating, the possessive particle must be a free word. This means the "marking" is a separate element that follows the possessor, making the independent-marking analysis more transparent.
+   - Additional inference enabled: The solver can distinguish between a bound affix (which would suggest dependent marking) and a free particle (which supports independent marking). The morphological status of 嘅 as a free word is a key piece of evidence for the locus-of-marking inference.
+
+3. Classifier system + No plural:
+   - Concepts: Obligatory numeral classifiers (TS 1) + No plural marking (TS 3)
+   - Interaction: Since nouns do not change for number, the classifier is the sole morphological means of expressing quantity in a noun phrase. This creates a tight dependency: numeral + classifier + noun is the obligatory pattern for quantified NPs.
+   - Additional inference enabled: The solver can infer that the classifier is not optional but required whenever a numeral is present, and that it is semantically selected by the noun (not the numeral).
+
+4. Possessive order + SVO word order:
+   - Concepts: Order of possessor and possessed (CORE 2) + SVO (general Cantonese property)
+   - Interaction: Cantonese is SVO, and within the NP, the possessor precedes the possessed. This creates a consistent "specifier before head" pattern (possessor before possessed, subject before verb, verb before object).
+   - Additional inference enabled: The solver may notice a general tendency toward pre-modification in Cantonese, which supports the identification of the possessive order.
+
+CONSTRAINTS
+
+1. The puzzle data must clearly demonstrate the possessive particle 嘅 in multiple contexts to allow the solver to identify it as a consistent element. At least 3-4 possessive examples are needed.
+
+2. The classifier system must be demonstrated with at least 2-3 different classifiers for different noun types to show that classifiers are noun-class-specific, not arbitrary.
+
+3. The puzzle should present data in a form that does not require knowledge of Chinese characters or tone values. Romanization with tone numbers (or tone marks) should be used, and the solver should be able to work with the phonological forms.
+
+4. The possessive particle 嘅 must be distinguishable from other particles in the data. If other particles (e.g., aspect markers, question particles) appear, they must be clearly different in form to avoid confusion.
+
+5. The puzzle should not require the solver to know the semantic content of individual words. Glosses or translations should be provided for all examples.
+
+6. The classifier assignment should follow a consistent, inferable pattern in the puzzle data (e.g., all books take 本, all animals take 隻) so that the solver can identify the pattern without external knowledge.
+
+7. The contrast between independent marking (Cantonese) and dependent marking (Coptic source) should be made available through the data itself — the solver should be able to see that the particle follows the possessor, not the possessed noun, without being told this is "independent marking."

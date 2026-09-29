@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "decision": "CALL_AGENT1",
+    "reasoning": "The pipeline has no concepts, rationale, or puzzle yet. The first required step is to extract linguistic concepts for the target language 'kro' so that later agents can build a valid Olympiad puzzle.",
+    "directive": "Extract rich, typologically grounded linguistic concepts for the target language 'kro'. Identify core phonological, morphological, syntactic, and lexical features suitable for a Linguistic Olympiad puzzle, including clear mappings, contrasts, and any relevant glossing conventions.",
+    "elapsed_seconds": 0.1
+  },
+  {
+    "step": 2,
+    "decision": "CALL_AGENT2",
+    "reasoning": "Agent 1 has already produced linguistic concepts for 'kro', but the pipeline currently lacks rationale and puzzle. The next required step is to have Agent 2 design the reasoning blueprint, morphological/syntactic rules, and sentence structure templates that will guide puzzle generation.",
+    "directive": "Using the existing concepts for 'kro', design a clear step-by-step rationale for a Linguistic Olympiad puzzle. Define the linguistic phenomena to be tested, the reasoning chain solvers should follow, the morphological and syntactic rules, sentence structure templates, and any necessary contrasts or glossing conventions. Ensure the rationale is internally consistent and sufficient for Agent 3 to generate a valid puzzle.",
+    "elapsed_seconds": 9.1
+  },
+  {
+    "step": 3,
+    "decision": "CALL_AGENT3",
+    "reasoning": "The pipeline already has concepts and rationale for 'kro', but no puzzle has been generated yet. The next required step is to have Agent 3 produce the complete puzzle dataset, questions, and answer key based on the existing concepts and rationale.",
+    "directive": "Using the existing concepts and rationale for 'kro', generate a complete Linguistic Olympiad puzzle. Include a clear data section with fully glossed vocabulary and sentences, well-formed questions, and a complete answer key. Ensure all linguistic phenomena are solvable from the provided data, avoid missing glosses or ambiguous translations, and make the questions non-trivial but rigorously answerable.",
+    "elapsed_seconds": 19.3
+  },
+  {
+    "step": 4,
+    "decision": "CALL_AGENT4",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle for 'kro', and puzzle_needs_validation is true with no prior validator verdict. The required next step is to have Agent 4 solve and rigorously validate the latest puzzle.",
+    "directive": "Solve and rigorously validate the generated 'kro' Linguistic Olympiad puzzle. Check that all data are fully glossed, all questions are solvable from the provided data, the answer key is correct, there are no typos or ambiguities, and the linguistic reasoning is sound. Return a PASS, PASS_WITH_ISSUES, or FAIL verdict with specific feedback if any defects are found.",
+    "elapsed_seconds": 29.8
+  },
+  {
+    "step": 5,
+    "decision": "FINISH_SUCCESS",
+    "reasoning": "The pipeline already contains concepts, rationale, and a generated puzzle for 'kro'. Agent 4 has validated the puzzle and returned a PASS verdict, so the puzzle is complete and acceptable.",
+    "directive": "",
+    "elapsed_seconds": 34.0
+  }
+]

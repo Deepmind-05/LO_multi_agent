@@ -1,0 +1,452 @@
+[
+  {
+    "question_id": "question_1",
+    "target_language": "ame",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 26.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\ame"
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "eve",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 6,
+    "elapsed_seconds": 82.1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\eve"
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "lez",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 18,
+    "elapsed_seconds": 263.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\lez"
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "sup",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 3,
+    "elapsed_seconds": 93.4,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\sup"
+  },
+  {
+    "question_id": "question_1",
+    "target_language": "abk",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 8,
+    "elapsed_seconds": 159.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_1\\abk"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mrt",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 14,
+    "elapsed_seconds": 174.9,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\mrt"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "kro",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 35.4,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\kro"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mao",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 48.3,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\mao"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "mal",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 49.8,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\mal"
+  },
+  {
+    "question_id": "question_2",
+    "target_language": "tag",
+    "verdict": "PASS_WITH_ISSUES",
+    "actual_difficulty": "Not specified",
+    "attempts": 5,
+    "elapsed_seconds": 97.2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_2\\tag"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "yuk",
+    "verdict": "PASS_WITH_ISSUES",
+    "actual_difficulty": "Not specified",
+    "attempts": 8,
+    "elapsed_seconds": 89.8,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\yuk"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "fin",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 35.1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\fin"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "hak",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 33.3,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\hak"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "tur",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 40.2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\tur"
+  },
+  {
+    "question_id": "question_3",
+    "target_language": "cnt",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 26.6,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_3\\cnt"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "cnl",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 4,
+    "elapsed_seconds": 105.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\cnl"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "ame",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 64.8,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\ame"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "eve",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 6,
+    "elapsed_seconds": 118.9,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\eve"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "abk",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 10,
+    "elapsed_seconds": 131.8,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\abk"
+  },
+  {
+    "question_id": "question_4",
+    "target_language": "car",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 3,
+    "elapsed_seconds": 69.6,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_4\\car"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "djp",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 61.6,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\djp"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "mny",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 32.0,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\mny"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "inn",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 6,
+    "elapsed_seconds": 99.8,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\inn"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "mno",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 56.2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\mno"
+  },
+  {
+    "question_id": "question_5",
+    "target_language": "res",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 3,
+    "elapsed_seconds": 95.3,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_5\\res"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "niv",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 4,
+    "elapsed_seconds": 55.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\niv"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "snm",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 29.5,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\snm"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "yaq",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 8,
+    "elapsed_seconds": 81.4,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\yaq"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "lez",
+    "verdict": "PASS_WITH_ISSUES",
+    "actual_difficulty": "Not specified",
+    "attempts": 5,
+    "elapsed_seconds": 110.9,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\lez"
+  },
+  {
+    "question_id": "question_6",
+    "target_language": "sup",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 4,
+    "elapsed_seconds": 87.1,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_6\\sup"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "may",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 44.3,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\may"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "heb",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 29.2,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\heb"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "tag",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 43.4,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\tag"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "orh",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 4,
+    "elapsed_seconds": 78.7,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\orh"
+  },
+  {
+    "question_id": "question_7",
+    "target_language": "hau",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 11,
+    "elapsed_seconds": 240.9,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_7\\hau"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "cyv",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 2,
+    "elapsed_seconds": 64.7,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_8\\cyv"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "cle",
+    "verdict": "PASS",
+    "actual_difficulty": "Not specified",
+    "attempts": 1,
+    "elapsed_seconds": 35.4,
+    "output_dir": "D:\\Projects\\LO_multi_agent_v2\\outputs\\question_8\\cle"
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "zqc",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "tuk",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_8",
+    "target_language": "otm",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "ame",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "eve",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "sup",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "grk",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_9",
+    "target_language": "hun",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "snm",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "eve",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "ndy",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "sup",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  },
+  {
+    "question_id": "question_10",
+    "target_language": "hmo",
+    "verdict": "ERROR: Error code: 402 - {'message': 'Payment required to access this resource. Visit your billing tab.', 'type': 'payment_required_error', 'param': 'quota', 'code': 'payment_required'}",
+    "actual_difficulty": "N/A",
+    "attempts": 0,
+    "elapsed_seconds": 0.0,
+    "output_dir": ""
+  }
+]

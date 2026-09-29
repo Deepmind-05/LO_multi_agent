@@ -1,0 +1,136 @@
+
+
+CONTEXT
+
+The following data are from a Northwest Caucasian language spoken by a small community in the western Caucasus. The language has a small vowel inventory and a large consonant inventory; the apostrophe (ʼ) marks a distinct type of consonant. All morphological processes are concatenative (morphemes are added as discrete segments).
+
+**Lexicon**
+
+| Form | Meaning | Form | Meaning |
+|------|---------|------|---------|
+| fana | house | lare | big |
+| amre | water | wone | good |
+| tʼari | child | kʼari | old |
+| tari | mother | bile | new |
+| kʼaba | dog | ra | go |
+| kaba | tree | kʼa | see |
+| sore | path | ta | fall |
+| pʼano | stone | ba | eat |
+| pano | father | wa | give |
+
+DATA
+
+1. kʼaba lare ta — "The big dog fell."
+2. tari ta — "The mother fell."
+3. tʼari wone — "The child is good."
+4. kaba lare — "The tree is big."
+5. ma-fana — "My house."
+6. da-fana — "Your house."
+7. fana — "The house."
+8. kʼaba fana — "The dog's house."
+9. ma-ra — "I go."
+10. da-ra — "You go."
+11. ra — "He/she goes."
+12. da-kʼa-ri — "I see you."
+13. ma-kʼa-li — "You see me."
+14. ma-kʼa — "He/she sees me."
+15. ga-ma-ra — "I don't go."
+16. tʼari-ba lare — "The big children."
+17. pano pʼano — "The father's stone."
+18. amre-ba kʼa-ri — "I see the waters."
+19. ma-wa-li — "You give me."
+20. ma-fana kʼa-ri — "I see my house."
+21. tʼari-ba fana-ba — "The children's house."
+22. tʼari-ba fana-ba kʼa-ri — "I see the children's house."
+
+QUESTIONS
+
+**Q1.** Translate into English: *da-wa-ri.*
+
+**Q2.** Translate into English: *tʼari-ba lare.*
+
+**Q3.** Translate into English: *kʼaba lare fana ga-kʼa-ri.*
+
+**Q4.** Translate into the target language: "You see the big tree."
+
+**Q5.** Translate into the target language: "I don't see your child."
+
+**Q6.** Translate into the target language: "The old mother's big house."
+
+**Q7.** Translate into the target language: "You see the new father's stone."
+
+**Q8.** Translate into English: *ma-tʼari-ba kʼa-li.*
+
+**Q9.** Translate into English: *kʼaba-ba fana-ba ga-kʼa-ri.*
+
+**Q10.** Translate into the target language: "The children's house is big."
+
+ANSWERS
+
+**Q1.** I give you.
+
+**Q2.** The big children.
+
+**Q3.** I don't see the big dog's house.
+
+**Q4.** kaba lare kʼa-li
+
+**Q5.** da-tʼari ga-kʼa-ri
+
+**Q6.** tari kʼari fana lare
+
+**Q7.** pano bile pʼano kʼa-li
+
+**Q8.** You see my children.
+
+**Q9.** I don't see the dogs' house.
+
+**Q10.** tʼari-ba fana-ba lare
+
+SOLUTION
+
+**Inference chain:**
+
+**(a) Phonology.** The data contain exactly four vowels: a, e, i, o. Three ejective/plain consonant contrasts are identifiable from minimal pairs: t/tʼ (tari 'mother' vs. tʼari 'child'), k/kʼ (kaba 'tree' vs. kʼaba 'dog'), p/pʼ (pano 'father' vs. pʼano 'stone'). The apostrophe marks the ejective member of each pair.
+
+**(b) Word order and modifier order.** Sentences (1), (2), (9)–(15), (18), (22) show SOV order (NP precedes V). Sentences (1), (3), (4), (16) show that adjectives follow the noun (NAdj order): kʼaba lare, tʼari wone, kaba lare, tʼari-ba lare. Sentences (8), (17), (21) show that the possessor NP precedes the possessed noun: kʼaba fana, pano pʼano, tʼari-ba fana-ba. Thus the language has a mixed modifier order: adjectives are post-nominal, while genitives (possessors) are pre-nominal.
+
+**(c) Possessive head-marking.** Sentences (5)–(8) show that the possessor is unmarked and the possessed noun bears a prefix encoding the possessor's person: ma- (1sg), da- (2sg), ∅ (3sg). This is head-marking: the grammatical head (the possessed noun) carries the agreement morpheme.
+
+**(d) The 3PL possessive suffix and the -ba homomorph.** Sentences (16) and (18) establish that -ba is a plural suffix on nouns: tʼari-ba 'children', amre-ba 'waters'. Sentences (21) and (22) introduce a new use of -ba: in a possessive construction with a plural possessor, the possessed noun bears -ba as a 3PL possessive suffix. In (21) tʼari-ba fana-ba 'The children's house', the translation confirms that fana-ba means 'their house' (singular house, 3PL possessor), not 'houses' (plural). The -ba on tʼari marks the possessor's plurality; the -ba on fana marks the 3PL possessor on the head. Thus -ba is a **homomorph** with two distinct functions: (i) a plural suffix on nouns in non-possessive contexts, and (ii) a 3PL possessive suffix on the possessed noun in possessive constructions. The possessive paradigm is therefore: 1sg = ma- (prefix), 2sg = da- (prefix), 3sg = ∅, 3pl = -ba (suffix).
+
+**(e) Intransitive verbal person marking.** Sentences (9)–(11) show that intransitive verbs bear a prefix marking the intransitive subject (S): ma- (1sg), da- (2sg), ∅ (3sg). This prefix paradigm is identical to the possessive prefix paradigm (for 1sg and 2sg).
+
+**(f) Transitive verbal person marking and ergative alignment.** Sentences (12)–(14) and (19) show that transitive verbs bear two person markers: a prefix (P slot) and a suffix (A slot). The P prefix paradigm is identical to the intransitive S prefix (ma-/da-/∅). The A suffix paradigm is: -ri (1sg), -li (2sg), ∅ (3sg). Comparing (9) ma-ra 'I go' (S=1sg → ma-) with (13) ma-kʼa-li 'You see me' (P=1sg → ma-) shows that S and P are marked by the same prefix, while A is marked by a distinct suffix. This establishes **ergative alignment** (S=P≠A).
+
+**(g) Linear order of person markers.** In all transitive examples, the P prefix precedes the verb stem and the A suffix follows it: P-prefix + stem + A-suffix.
+
+**(h) Negation.** Sentence (15) ga-ma-ra 'I don't go' contrasts with (9) ma-ra 'I go', showing that ga- is a negation prefix attached to the verb (preceding the P/S prefix).
+
+**(i) Independence of possessive marking and verbal P-marking.** Sentence (20) ma-fana kʼa-ri 'I see my house' is critical: the ma- on fana is a possessive prefix (marking the possessor of the house as 1sg), while the ∅ P-prefix on kʼa indicates the patient is 3rd person. The -ri A-suffix indicates the agent is 1sg. The patient "my house" is a 3rd-person entity (a house), regardless of who possesses it. Sentence (22) tʼari-ba fana-ba kʼa-ri 'I see the children's house' confirms this principle with the 3PL possessive: the -ba on fana marks the 3PL possessor, but the patient is still a 3rd-person entity (a house), so the P-prefix is ∅. The possessive marking on the noun (whether a prefix or a suffix) never affects the verbal P-marking; the patient's person is determined by the referent of the noun phrase as a whole.
+
+**Answers:**
+
+**Q1.** da-wa-ri: P=2sg (da-), stem=wa (give), A=1sg (-ri) → "I give you."
+
+**Q2.** tʼari-ba lare: tʼari-ba = child-pl (children); lare = big (NAdj) → "The big children."
+
+**Q3.** kʼaba lare fana ga-kʼa-ri: kʼaba lare = big dog (NAdj); fana = house (3sg possessor, ∅ prefix) → "the big dog's house." Verb: ga (neg) + ∅ (3sg P) + kʼa (see) + -ri (1sg A) → "I don't see [it]." Full: "I don't see the big dog's house."
+
+**Q4.** "You see the big tree." A=2sg → -li; P=3rd person (the tree) → ∅. Verb: kʼa-li. Object: kaba lare (NAdj). SOV: **kaba lare kʼa-li**.
+
+**Q5.** "I don't see your child." The object "your child" = da-tʼari (2sg possessive prefix + child). The patient is a 3rd-person entity (a child), so P=∅. A=1sg → -ri. Negation: ga-. Verb: ga-kʼa-ri. SOV: **da-tʼari ga-kʼa-ri**.
+
+**Q6.** "The old mother's big house." Possessor: tari kʼari (mother + old, NAdj). Possessed: fana lare (house + big, NAdj). Possessor is 3sg → ∅ prefix on possessed noun. Full: **tari kʼari fana lare**.
+
+**Q7.** "You see the new father's stone." A=2sg → -li; P=3rd person (the stone) → ∅. Verb: kʼa-li. Object: pano bile pʼano (father + new [NAdj] + stone [3sg possessor, ∅ prefix]). SOV: **pano bile pʼano kʼa-li**.
+
+**Q8.** ma-tʼari-ba kʼa-li: The ma- on tʼari-ba is a possessive prefix (1sg possessor) → "my children." The patient "my children" is a 3rd-person entity, so the P-prefix on the verb is ∅. The A-suffix -li indicates the agent is 2sg (you). Full: "You see my children."
+
+**Q9.** kʼaba-ba fana-ba ga-kʼa-ri: kʼaba-ba = dog-pl (dogs); fana-ba = house + 3PL possessive suffix (their house) → "the dogs' house." Verb: ga (neg) + ∅ (3sg P, the house is a 3rd-person entity) + kʼa (see) + -ri (1sg A) → "I don't see [it]." Full: "I don't see the dogs' house." The -ba on kʼaba marks the possessor's plurality; the -ba on fana marks the 3PL possessor on the head. Neither affects the verbal P-marking.
+
+**Q10.** "The children's house is big." Possessor: tʼari-ba (child + PL = children). Possessed: fana-ba (house + 3PL possessive suffix = their house). Adjective: lare (big, NAdj, follows the possessed noun). Stative clause (no verb). Full: **tʼari-ba fana-ba lare**.
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires multi-step inference across interacting systems: (1) phonological analysis of ejective contrasts; (2) identification of head-marking in the possessive domain; (3) cross-clause comparison to establish ergative alignment; (4) recognition that possessive prefixes and verbal P-prefixes, while formally identical, serve different grammatical functions; (5) identification of -ba as a homomorph with two distinct functions (plural suffix on nouns vs. 3PL possessive suffix on the possessed noun), requiring the solver to disambiguate based on syntactic context; (6) recognition that the 3PL possessive suffix, like the 1sg/2sg possessive prefixes, does not affect verbal P-marking (the patient remains 3rd person). The hardest questions (Q9, Q10) require the solver to simultaneously apply the -ba homomorph disambiguation, the possessive/P-marking independence principle, and additional rules (negation, NAdj order, possessor-precedes-possessed order) in a single item. Q9 in particular demands that the solver parse two instances of -ba in the same noun phrase (one as plural on the possessor, one as 3PL possessive on the head) and then correctly assign ∅ to the verbal P-slot despite the presence of the possessive suffix on the object.

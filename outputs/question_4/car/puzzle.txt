@@ -1,0 +1,151 @@
+
+
+CONTEXT
+
+Carib (also called Cariban) is a language of the Cariban family, spoken in parts of South America. The data below consists of words and sentences in Carib with English glosses. The items are not arranged in any particular order.
+
+Glossing conventions: (sg) = singular; (pl) = plural; (anim.) = animate; (inanim.) = inanimate; (incl.) = inclusive ("we" including the addressee); (excl.) = exclusive ("we" excluding the addressee).
+
+DATA
+
+**Words**
+
+| # | Form | Gloss |
+|---|------|-------|
+| 1 | kukari | your (sg) house |
+| 2 | nuka | I |
+| 3 | tauka | its (inanim.) fire |
+| 4 | maka | we (excl.) |
+| 5 | rikari | his (anim.) house |
+| 6 | puka | you (pl) |
+| 7 | wakari | our (incl.) house |
+| 8 | tika | it (inanim.) |
+| 9 | nukari | my house |
+| 10 | raika | they (anim.) |
+| 11 | makari | our (excl.) house |
+| 12 | taika | they (inanim.) |
+| 13 | nuuka | my fire |
+| 14 | kuka | you (sg) |
+| 15 | raikari | their (anim.) house |
+| 16 | waka | we (incl.) |
+| 17 | tikari | its (inanim.) house |
+| 18 | pukari | your (pl) house |
+| 19 | rika | he/it (anim.) |
+| 20 | taikari | their (inanim.) house |
+
+**Sentences**
+
+| # | Form | Gloss |
+|---|------|-------|
+| 1 | kanukama | you (sg) eat me |
+| 2 | tipita | it (inanim.) goes |
+| 3 | narikama | I eat him (anim.) |
+| 4 | pupita | we (excl.) go |
+| 5 | nakukama | I eat you (sg) |
+| 6 | wapita | we (incl.) go |
+| 7 | ranukama | he (anim.) eats me |
+| 8 | nulaka | I fall |
+| 9 | putisira | you (pl) see it (inanim.) |
+| 10 | karikama | you (sg) eat him (anim.) |
+| 11 | nupita | I go |
+| 12 | warisira | we (incl.) see him (anim.) |
+| 13 | takukama | it (inanim.) eats you (sg) |
+| 14 | punusira | we (excl.) see me |
+| 15 | kupita | you (sg) go |
+| 16 | napusira | I see you (pl) |
+| 17 | raipita | they (anim.) go |
+| 18 | taikusira | they (inanim.) see you (sg) |
+| 19 | rainukama | they (anim.) eat me |
+
+QUESTIONS
+
+**Q1 (4 marks).** The noun root *-tapa* means "tree."
+
+a. Identify the person/number of the possessor in *kutapa*.
+b. Identify the person/number of the possessor in *raitapa*.
+c. Identify the person/number of the possessor in *taitapa*.
+d. What is the Carib form for "its (inanim.) tree"?
+e. What is the Carib form for "their (inanim.) fire"?
+
+**Q2 (3 marks).** What type of alignment does the Carib verbal person-marking system exhibit? Provide specific evidence from the data to support your answer.
+
+**Q3 (4 marks).** The verb root *-dara* means "to break." Parse each of the following transitive clauses by identifying the person/number of the agent (A) and the patient (P). If a form is ambiguous, state both possible interpretations.
+
+a. *natidara*
+b. *kaidara*
+c. *raidara*
+d. *wainudara*
+e. *punidara*
+
+**Q4 (3 marks).** In the independent pronoun system, 1PL.exclusive (*maka*) and 2PL (*puka*) are distinct forms. In the possessive prefix system, 1PL.exclusive (*ma-*) and 2PL (*pu-*) are also distinct. However, in the verbal system, 1PL.exclusive and 2PL share the same form. Identify this shared verbal form and explain what this pattern reveals about the relationship between the different morphological systems in Carib.
+
+**Q5 (4 marks).** Produce the correct Carib form for each of the following English glosses.
+
+a. "our (excl.) tree"
+b. "they (inanim.) see us (excl.)"
+c. "I break you (pl)"
+d. "it (inanim.) falls"
+e. "we (incl.) eat him (anim.)"
+
+ANSWERS
+
+**Q1:**
+a. your (sg)
+b. their (anim.)
+c. their (inanim.)
+d. *titapa*
+e. *taiuka*
+
+**Q2:**
+The system exhibits **ergative alignment**. Evidence: the person marker on intransitive subjects is identical to the person marker on transitive patients, while the agent marker is a distinct set. For example, the 1SG intransitive subject marker is *nu-* (as in *nupita* "I go"), and the same form *nu-* appears as the 1SG transitive patient marker (as in *kanukama* "you (sg) eat me"), while the 1SG agent marker is *na-* (as in *nakukama* "I eat you (sg)"). Similarly, the 2SG intransitive subject marker *ku-* (as in *kupita*) matches the 2SG transitive patient marker *ku-* (as in *nakukama*), while the 2SG agent marker is *ka-* (as in *kanukama*). This pattern (S = P ≠ A) holds for all person/number values and is the defining property of ergative alignment.
+
+**Q3:**
+a. A = 1SG, P = 3SG.inanim.
+b. A = 2SG, P = 3SG.inanim.
+c. A = 3PL.anim., P = 3SG.inanim.
+d. A = 1PL.incl., P = 1SG
+e. A = 1PL.excl. or 2PL (ambiguous), P = 1SG
+
+**Q4:**
+The shared verbal form is *pu-*. In the verbal system, both 1PL.exclusive and 2PL use *pu-* as their person marker (visible in sentence 4, where *pupita* glosses as "we (excl.) go," showing 1PL.excl. S/P = *pu-*, and in sentence 9, where *putisira* glosses as "you (pl) see it (inanim.)," showing 2PL A = *pu-*, and in sentence 16, where *napusira* glosses as "I see you (pl)," showing 2PL P = *pu-*). This reveals that the verbal system has **syncretism** between 1PL.exclusive and 2PL, while the pronominal and possessive systems maintain a full distinction. The different morphological systems in Carib do not all encode the same set of person/number contrasts: the verbal system has a coarser person/number paradigm than the pronominal and possessive systems.
+
+**Q5:**
+a. *matapa*
+b. *taipusira*
+c. *napudara*
+d. *tilaka*
+e. *warikama*
+
+SOLUTION
+
+**Inferred rules:**
+
+1. **Dependent marking in possessive NPs:** The possessor is encoded as a prefix on the possessed noun. The prefix is invariant across different noun roots (e.g., *nu-* appears on *-kari* and *-uka*), confirming it is a separate morpheme. The possessed noun root is invariant.
+
+2. **Person/number paradigm:** There are nine person/number values: 1SG, 2SG, 3SG.anim., 3SG.inanim., 1PL.incl., 1PL.excl., 2PL, 3PL.anim., 3PL.inanim. The 3rd person has a binary semantic sub-distinction (animate/inanimate) that is **restricted to 3rd person** — 1st and 2nd person have no such sub-distinction.
+
+3. **Inclusive/exclusive distinction:** 1PL.inclusive and 1PL.exclusive are distinct in the pronominal system (*waka* vs. *maka*) and the possessive system (*wa-* vs. *ma-*).
+
+4. **Phonological alternation in the possessive system:** The 3SG.inanim. possessive prefix has two allomorphs: *ti-* before consonant-initial roots (e.g., *tikari* "its house") and *ta-* before vowel-initial roots (e.g., *tauka* "its fire"). This alternation is specific to the 3SG.inanim. prefix; other prefixes (e.g., *tai-* for 3PL.inanim.) do not show this change (e.g., *taiuka* would be "their (inanim.) fire").
+
+5. **Ergative alignment:** The verb has two person-marker slots. In intransitive clauses, a single S/P marker appears before the verb root. In transitive clauses, an A marker appears before the S/P marker, which appears before the verb root. The S/P marker set is identical to the intransitive subject marker set, establishing S = P ≠ A (ergative alignment).
+
+6. **A vs. S/P marker contrast:** For singular persons, the A marker differs from the S/P marker (1SG: *na-* vs. *nu-*; 2SG: *ka-* vs. *ku-*; 3SG.anim.: *ra-* vs. *ri-*; 3SG.inanim.: *ta-* vs. *ti-*). For plural persons, the A marker is identical to the S/P marker (1PL.incl.: *wa-*; 1PL.excl./2PL: *pu-*; 3PL.anim.: *rai-*; 3PL.inanim.: *tai-*).
+
+7. **Verbal syncretism:** In the verbal system, 1PL.exclusive and 2PL share the same marker *pu-* in both the A and S/P slots. This contrasts with the pronominal and possessive systems, where they are distinct.
+
+**How the rules produce each answer:**
+
+- **Q1:** Apply the possessive prefix paradigm to the new root *-tapa*. (a) *ku-* = 2SG. (b) *rai-* = 3PL.anim. (c) *tai-* = 3PL.inanim. (d) 3SG.inanim. prefix *ti-* + *-tapa* = *titapa* (C-initial root, so no alternation). (e) 3PL.inanim. prefix *tai-* + *-uka* = *taiuka* (the alternation applies only to 3SG.inanim., not 3PL.inanim.).
+
+- **Q2:** Compare intransitive subject markers with transitive argument markers. The intransitive 1SG marker *nu-* (= S) matches the transitive 1SG patient marker *nu-* (= P) in *kanukama*, while the 1SG agent marker is *na-* (= A). The intransitive 2SG marker *ku-* (= S) matches the transitive 2SG patient marker *ku-* (= P) in *nakukama*, while the 2SG agent marker is *ka-* (= A). Since S = P ≠ A, the alignment is ergative.
+
+- **Q3:** Segment each form into A-marker + S/P-marker + root. (a) *na-ti-dara*: 1SG A + 3SG.inanim. P. (b) *ka-ti-dara*: 2SG A + 3SG.inanim. P. (c) *rai-ti-dara*: 3PL.anim. A + 3SG.inanim. P. (d) *wa-nu-dara*: 1PL.incl. A + 1SG P. (e) *pu-nu-dara*: *pu-* is ambiguous (1PL.excl. or 2PL A) + 1SG P.
+
+- **Q4:** The shared form is *pu-*. The verbal system merges 1PL.excl. and 2PL, while the pronominal and possessive systems keep them separate. This demonstrates that morphological systems within a single language can have different levels of person/number differentiation.
+
+- **Q5:** (a) 1PL.excl. prefix *ma-* + *-tapa* = *matapa*. (b) 3PL.inanim. A *tai-* + 1PL.excl. P *pu-* + *-sira* = *taipusira*. (c) 1SG A *na-* + 2PL P *pu-* + *-dara* = *napudara*. (d) 3SG.inanim. S/P *ti-* + *-laka* = *tilaka*. (e) 1PL.incl. A *wa-* + 3SG.anim. P *ri-* + *-kama* = *warikama*.
+
+DIFFICULTY
+
+**Level 5.** The puzzle requires the solver to simultaneously track multiple interacting systems and discover non-obvious relationships between them under conditions of reduced explicit scaffolding. The data is presented as two mixed lists (words and sentences) rather than clearly separated morphological categories, requiring the solver to independently identify which items are possessive noun phrases, independent pronouns, intransitive clauses, and transitive clauses. The key inferences are: (i) **ergative alignment**, which requires cross-referencing intransitive and transitive data that are interleaved in the sentence list; (ii) the **3rd-person-only semantic sub-distinction**, which requires noticing the asymmetry between 1st/2nd and 3rd person across both the nominal and verbal systems; (iii) the **inclusive/exclusive distinction and its partial neutralization in the verbal system** (syncretism of 1PL.excl. with 2PL), which requires comparing all three morphological systems and is not directly signaled by a repeated form with different glosses but must be inferred by comparing *pu-* across different clause types and argument positions; (iv) a **phonological alternation** in the possessive system (3SG.inanim. prefix *ti-* → *ta-* before vowel-initial roots), which must be discovered from the contrast between *tikari* and *tauka* and correctly applied (or correctly not applied) in production; and (v) the **production questions** require correct application of multiple rules simultaneously, including choosing the correct A marker, the correct S/P marker, the correct verb root, and the correct allomorph of the possessive prefix. The interaction between the phonological alternation and the person/number paradigm creates a genuine competing-hypothesis situation: the solver must determine whether *ta-* in *tauka* is a distinct prefix or an allomorph of *ti-*, and must correctly restrict the alternation to 3SG.inanim. only.
