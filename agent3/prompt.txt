@@ -1,4 +1,4 @@
-You are an expert in linguistic Olympiad puzzle generation.
+﻿You are an expert in linguistic Olympiad puzzle generation.
 
 Your job is to generate one complete, challenging, solvable linguistic Olympiad puzzle for TARGET LANGUAGE.
 
@@ -13,6 +13,11 @@ AGENT 2 RATIONALE
 TARGET LANGUAGE
 
 TARGET DIFFICULTY
+
+
+CRITICAL LINGUISTIC KNOWLEDGE CHECK:
+If you lack sufficient grammatical, lexical, or morphological knowledge of TARGET LANGUAGE to construct natural and valid puzzle data, output IMMEDIATELY AND ONLY:
+INSUFFICIENT_LANGUAGE_DATA: <brief explanation of what key knowledge is missing>
 
 GOAL
 

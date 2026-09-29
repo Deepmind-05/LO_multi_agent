@@ -1,10 +1,10 @@
-import json
+﻿import json
 import os
+import re
 import time
 from pathlib import Path
 
 from cerebras.cloud.sdk import Cerebras
-
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -103,6 +103,7 @@ def call_agent4(
                         ),
                     },
                 ],
+                response_format={"type": "json_object"},
                 max_completion_tokens=MAX_COMPLETION_TOKENS,
                 temperature=0.1,
                 top_p=0.95,
@@ -139,9 +140,58 @@ def run_agent4(
     )
 
 
-def parse_validation(output: str) -> tuple[str, str, str]:
-    lines = [line.strip() for line in output.splitlines()]
+def parse_validation_dict(output: str) -> dict:
+    """Safely extracts JSON dictionary from Agent 4 output."""
+    cleaned = output.strip()
+    if cleaned.startswith("```json"):
+        cleaned = cleaned.split("```json", 1)[1].split("```", 1)[0].strip()
+    elif cleaned.startswith("```"):
+        cleaned = cleaned.split("```", 1)[1].split("```", 1)[0].strip()
 
+    try:
+        data = json.loads(cleaned)
+        if isinstance(data, dict):
+            return data
+    except Exception:
+        pass
+
+    # Fallback bracket match
+    m = re.search(r"\{.*\}", cleaned, re.DOTALL)
+    if m:
+        try:
+            data = json.loads(m.group(0))
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+
+    return {}
+
+
+def parse_validation(output: str) -> tuple[str, str, str]:
+    data = parse_validation_dict(output)
+    if data:
+        verdict = data.get("verdict", "FAIL")
+        if verdict not in {"PASS", "PASS_WITH_ISSUES", "FAIL"}:
+            verdict = "FAIL"
+        actual_difficulty = str(data.get("actual_difficulty", "Not specified"))
+        issues = data.get("issues", [])
+        formatted_issues = []
+        for it in issues:
+            if isinstance(it, dict):
+                sev = it.get("severity", "ISSUE").upper()
+                desc = it.get("description", "")
+                cat = it.get("category", "")
+                cat_str = f" [{cat}]" if cat else ""
+                formatted_issues.append(f"- [{sev}]{cat_str} {desc}")
+            elif isinstance(it, str):
+                formatted_issues.append(f"- {it}")
+
+        feedback = "\n".join(formatted_issues) if formatted_issues else data.get("difficulty_justification", "")
+        return verdict, actual_difficulty, feedback
+
+    # Legacy text parsing fallback
+    lines = [line.strip() for line in output.splitlines()]
     verdict = None
     actual_difficulty = None
     issues = []

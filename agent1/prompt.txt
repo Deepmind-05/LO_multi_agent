@@ -10,6 +10,10 @@ TARGET LANGUAGE
 
 TARGET-LANGUAGE WALS EVIDENCE, if provided
 
+CRITICAL LINGUISTIC KNOWLEDGE CHECK:
+If you lack sufficient grammatical, lexical, or morphological knowledge of TARGET LANGUAGE to reliably design or adapt concepts, output IMMEDIATELY AND ONLY:
+INSUFFICIENT_LANGUAGE_DATA: <brief explanation of what key knowledge is missing>
+
 GOAL
 
 Determine:

@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 import time
 from pathlib import Path
@@ -157,6 +157,9 @@ def call_agent3_revision(
     agent2_rationale: str = "",
     source_question: dict | None = None,
 ) -> str:
+    if len(current_puzzle) > 20000:
+        current_puzzle = current_puzzle[:20000]
+
     payload = {
         "CURRENT_PUZZLE": current_puzzle,
         "TARGET_LANGUAGE": target_language,
