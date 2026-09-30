@@ -1,94 +1,63 @@
 
 
-TARGET-LANGUAGE: Evenki (eve)
+TARGET-LANGUAGE: Evenki (Tungusic, Altaic)
 
 CORE
 
-1. Possessive marking: Double marking
-   - Source concept: 81A-1 "Dependent marking" (adapted)
-   - Target-language realization: Evenki marks possession with BOTH a genitive case suffix on the possessor AND a possessive suffix on the possessed noun (WALS 24A-3, 57A-2, 86A-1).
-   - Intended solver inference: The solver should identify that both the possessor and the possessed noun receive morphological marking, determine the specific suffix forms, and recognize that this is a "double marking" strategy rather than pure dependent or head marking.
+1. Concept: Double marking in possessive noun phrases (adapted from source 81A "Dependent marking")
+   - Target-language realization: Evenki exhibits double marking in possessive constructions (WALS 24A-3). The possessed noun takes a possessive suffix (WALS 57A-2), and the possessor is marked with a genitive case suffix. Both elements in the possessive phrase carry overt morphological marking.
+   - Intended solver inference: From multiple possessive examples, the solver identifies that BOTH the possessor and the possessed noun carry marking, distinguishing this from a single-marking strategy. The solver can contrast this with what they might expect (one element marked, the other unmarked).
    - Priority: REQUIRED
 
-2. Modifier-head order: Consistent prenominal modification
-   - Source concept: 82A-1 "Noun before modifier" (adapted/reversed)
-   - Target-language realization: Evenki consistently places modifiers before the head noun across all modifier types: AdjN (87A-1), GenN (86A-1), DemN (88A-1), NumN (89A-1), RelN (90A-2).
-   - Intended solver inference: The solver should identify the consistent modifier-before-head pattern from multiple modifier types and recognize it as a systematic word order property.
-   - Priority: REQUIRED
+2. Concept: Modifier-before-noun order (adapted from source 82A "Noun before modifier")
+   - Target-language realization: Evenki consistently places modifiers before the head noun: adjectives precede nouns (WALS 87A-1), demonstratives precede nouns (88A-1), numerals precede nouns (89A-1), relative clauses precede nouns (90A-2). This is the opposite of the source language's pattern.
+   - Intended solver inference: From multiple noun-phrase examples, the solver identifies a consistent pre-nominal modifier order across different modifier types (adjectival, demonstrative, numeral). The consistency across types strengthens the inference.
+   - Priority: HIGH
 
 TARGET-SPECIFIC
 
-1. Obligatory double negation (SONeg[V-Neg])
-   - Phenomenon: Evenki requires both a preverbal negative word AND a negative verbal suffix for clause negation; both are obligatory (WALS 143A-14, 143B-2, 144N-4, 144L-16).
-   - Intended solver inference: The solver should identify that negation involves two separate morphological elements (a free word and a bound suffix), both of which must appear, and determine their relative positions.
-   - Interaction with CORE: The preverbal negative word's position between S/O and V provides additional evidence for SOV word order; the negative suffix is another instance of the suffixing tendency.
-   - Difficulty contribution: HIGH — creates a distinctive "aha" moment; the obligatoriness of both elements is non-obvious and requires careful data analysis.
+1. Phenomenon: Obligatory double negation
+   - Intended solver inference: From negative sentence examples, the solver discovers that negation requires TWO morphological elements: a preverbal negative word AND a negative suffix on the verb (WALS 143A-14, 144N-4: SONeg[V-Neg]). Neither element alone is sufficient. The solver can identify this as a "double" strategy parallel to the possessive double marking.
+   - Interaction with CORE concepts: Creates a typological parallel with double marking in possession — both domains in Evenki employ a "doubling" strategy. This gives the puzzle a unifying thematic insight (Evenki as a language that "doubles up" in certain domains).
+   - Difficulty contribution: HIGH. The solver must notice that two separate elements are both obligatory, not that one is optional or that one is the "real" negation and the other is something else. This is a non-trivial inference.
    - Priority: HIGH
 
-2. Rich case system (10+ cases, no syncretism, suffixal)
-   - Phenomenon: Evenki has 10 or more case categories (49A-8), each with a distinct suffix (51A-1), and no syncretism between any case forms (28A-4).
-   - Intended solver inference: The solver should identify multiple distinct case suffixes, recognize that no two cases share the same form, and map each suffix to its semantic function.
-   - Interaction with CORE: The genitive case is the possessor marking in the possessive system (CORE 1); the case suffixes demonstrate the suffixing tendency and interact with the modifier-head order (genitive NPs precede the head noun).
-   - Difficulty contribution: MEDIUM — provides rich morphological data; the no-syncretism property means the solver can unambiguously identify each case from form alone.
+2. Phenomenon: Suffixing as the primary morphological strategy
+   - Intended solver inference: Across all domains (case, possession, negation, number), Evenki marks grammatical relations via suffixes on the relevant word (WALS 26A-2: strongly suffixing; 51A-1: case suffixes; 57A-2: possessive suffixes; 143F-2: negative suffix). The solver can identify a consistent suffixing strategy as the language's default morphological means.
+   - Interaction with CORE concepts: The suffixing strategy is the mechanism that realizes both the double marking in possession (possessive suffix + genitive suffix) and the double negation (negative suffix + preverbal word). It provides the morphological "glue" that makes the other patterns work.
+   - Difficulty contribution: MEDIUM. It's a unifying observation that helps the solver organize their understanding, but it's relatively straightforward once the individual patterns are identified.
    - Priority: HIGH
 
-3. Strongly suffixing inflectional morphology
-   - Phenomenon: Evenki is strongly suffixing (26A-2); case, possessive, plural, and verbal markers are all suffixes.
-   - Intended solver inference: The solver should recognize that morphological marking is predominantly (or exclusively) suffixal, and identify the consistent suffixal order on nouns.
-   - Interaction with CORE: Unifies the possessive suffix, case suffixes, and (if included) plural suffix into a single morphological pattern; the suffixal chain order (root + plural + possessive + case) is inferable from data.
-   - Difficulty contribution: MEDIUM — provides a unifying structural principle that makes the morphological system more tractable and creates a clear pattern for the solver to discover.
-   - Priority: HIGH
-
-4. Obligatory plural marking on all nouns
-   - Phenomenon: Plural is marked by a suffix (33A-2) and is obligatory on all nouns (34A-6).
-   - Intended solver inference: The solver should notice that plural is never zero-marked and identify the plural suffix; the obligatoriness means the solver can use its presence/absence as a reliable signal.
-   - Interaction with CORE: The plural suffix occupies a fixed position in the suffixal chain (before possessive and case suffixes), adding a layer to the morphological analysis.
-   - Difficulty contribution: MEDIUM — adds a morphological layer without requiring semantic inference about plurality (since it's always present).
-   - Priority: OPTIONAL
-
-5. Inclusive/exclusive distinction in 1st person plural
-   - Phenomenon: Evenki distinguishes inclusive and exclusive 1st person plural in both independent pronouns (39A-5) and verbal inflection (40A-5).
-   - Intended solver inference: The solver should identify two distinct 1st person plural forms and infer the inclusive/exclusive semantic distinction from context.
-   - Interaction with CORE: The inclusive/exclusive forms appear as possessors in possessive constructions (CORE 1), providing a semantic dimension to the possessive data.
-   - Difficulty contribution: MEDIUM — adds a semantic inference layer; the distinction is inferable from context (e.g., "we including you" vs. "we excluding you").
+3. Phenomenon: Rich case system (10+ cases)
+   - Intended solver inference: If the puzzle includes examples with different case forms on nouns, the solver can infer that Evenki has a large number of distinct case categories (WALS 49A-8). The solver may not be able to name all cases, but can recognize that there are many distinct suffixes marking different grammatical/semantic roles.
+   - Interaction with CORE concepts: The genitive case (used in possessive constructions) is one member of a larger case system. Showing multiple cases provides context for why the possessor in a possessive phrase is "marked" — it's receiving a case suffix that is part of a broader system.
+   - Difficulty contribution: MEDIUM-HIGH. Adds complexity because the solver must distinguish case suffixes from possessive suffixes and other suffixes. However, if too many cases are shown, the puzzle becomes unwieldy.
    - Priority: OPTIONAL
 
 INTERACTIONS
 
-1. Possessive double marking × Case system × Suffixing morphology:
-   - The genitive case suffix (one of 10+ distinct case forms) on the possessor and the possessive suffix on the possessed noun are both suffixes, demonstrating the suffixing tendency. The solver can identify the genitive case form from possessive data and then recognize it in non-possessive contexts (e.g., "from the house" vs. "the house's roof").
-   - Additional inference: The solver can build a case paradigm from possessive data and verify it against other case-marked NPs.
+1. Double marking (possession) × Double negation:
+   - Both domains in Evenki employ a "doubling" strategy where two morphological elements are required. This creates a cross-domain parallel that gives the puzzle a thematic coherence. The solver who identifies both patterns can make a higher-level observation about the language's typological profile.
 
-2. Modifier-head order × Case system:
-   - The genitive-noun order (GenN) is one instance of the consistent modifier-before-head pattern. The case suffix on the genitive NP does not alter its prenominal position.
-   - Additional inference: The solver can confirm the word order pattern from multiple independent modifier types (adjective, genitive, demonstrative, numeral, relative clause), making the pattern robust.
+2. Suffixing strategy × Double marking (possession):
+   - The suffixing strategy explains HOW double marking is realized: the possessed noun gets a possessive suffix, the possessor gets a genitive case suffix. Without the suffixing strategy, the double marking would be harder to parse. The solver can use the consistent suffixing to segment words into stem + suffix(es).
 
-3. Double negation × SOV word order:
-   - The negation pattern SONeg[V-Neg] places the preverbal negative word between the arguments and the verb, providing independent evidence for SOV order.
-   - Additional inference: The solver can use the negation pattern as a cross-check for word order identification, especially in sentences where argument roles are ambiguous.
+3. Suffixing strategy × Double negation:
+   - The negative suffix on the verb is one of the two required negation elements. The solver must identify that the verb carries a suffix that is part of the negation, not a separate grammatical category (e.g., tense or aspect). This requires the solver to compare affirmative and negative verb forms.
 
-4. Suffixing morphology × Obligatory plural × Possessive × Case:
-   - The noun suffixal chain (root + plural + possessive + case) creates a fixed morphological order that the solver can discover.
-   - Additional inference: The consistent ordering of suffixes provides a structural constraint that helps the solver segment complex noun forms and identify individual morphemes.
-
-5. Inclusive/exclusive × Possessive system:
-   - The two 1st person plural forms appear as possessors, and their inclusive/exclusive semantics can be inferred from the broader discourse context.
-   - Additional inference: The solver can use the inclusive/exclusive distinction to disambiguate possessive constructions where the possessor is a 1st person plural pronoun.
+4. Modifier-before-noun order × Suffixing:
+   - Creates a structural contrast: modifiers are PRE-nominal (free words before the noun), while inflectional marking is SUFFIXAL (attached to the right edge of the noun). This contrast is typologically interesting and helps the solver distinguish between free modifiers and bound morphological markers.
 
 CONSTRAINTS
 
-1. The puzzle must present sufficient possessive data (at least 3-4 examples with different possessors and possessed nouns) for the solver to identify both the genitive case suffix and the possessive suffix independently.
+1. The puzzle must provide enough possessive examples (at least 3-4 with different persons/numbers) for the solver to reliably identify double marking rather than attributing one of the two markers to a different function.
 
-2. The puzzle must include at least 3 different modifier types (e.g., adjective, genitive, demonstrative or numeral) to establish the consistent modifier-before-head pattern as a systematic property rather than an isolated instance.
+2. The double negation examples must include at least one affirmative counterpart to allow the solver to isolate the negative suffix by comparison. Without an affirmative form, the solver cannot determine which suffix is "negative" vs. some other category.
 
-3. If double negation is included, the puzzle must show at least 2 negative sentences to establish that BOTH the preverbal word and the verbal suffix are obligatory (not optional or variable).
+3. If the rich case system is included, the puzzle must limit the number of distinct case forms shown to avoid overwhelming the solver. The genitive (for possession) should be clearly identifiable; other cases can be shown but need not all be distinguished by the solver.
 
-4. The case system should be represented with enough examples to show at least 4-5 distinct case forms, demonstrating the no-syncretism property.
+4. The modifier-before-noun order should be demonstrated across at least two different modifier types (e.g., adjective + noun, and numeral + noun) to establish that it is a general pattern, not specific to one modifier class.
 
-5. All suffixal forms must be consistent across examples; the suffixal order on nouns (if plural, possessive, and case all appear) must be the same in every instance.
+5. All morphological marking should be suffixal (no prefixing or infixing) to maintain consistency with Evenki's strongly suffixing profile and to keep the puzzle's morphological analysis tractable.
 
-6. The puzzle must not rely on the solver knowing that Evenki is a Tungusic/Altaic language or having any prior knowledge of the language. All properties must be inferable from the presented data.
-
-7. The source concept of "dependent marking" (81A-1) does NOT directly apply to Evenki; the puzzle must present the double marking system accurately and not mislead the solver into thinking only one element is marked.
-
-8. The source concept of "noun before modifier" (82A-1) is the OPPOSITE of Evenki's actual pattern; the puzzle must present the modifier-before-head order clearly and not create confusion with the source language's pattern.
+6. The puzzle should avoid using obligatorily possessed nouns (WALS 58A-1) in the data, as these would complicate the possessive analysis by introducing a class of nouns that cannot appear without a possessor — a constraint the solver would have no way to infer from limited data.

@@ -1,79 +1,76 @@
 
 
-TARGET-LANGUAGE
-
-Supyire (sup), Niger-Congo > Senufo
+TARGET-LANGUAGE: Supyire (Senufo, Niger-Congo)
 
 CORE
 
-1. Noun-modifier order (from source 82A-1, adapted)
-   - Target-language realization: Mixed modifier order. Genitive precedes noun (86A-1: GenN), demonstrative precedes noun (88A-1: DemN), but adjective follows noun (87A-2: NAdj) and numeral follows noun (89A-2: NNum).
-   - Intended solver inference: Solver identifies that modifier order is not uniform; some modifiers (genitive, demonstrative) are pre-nominal while others (adjective, numeral) are post-nominal. The solver must classify which type of modifier falls in which position.
+1. Concept: Locus of Marking in Possessive Noun Phrases (adapted from source)
+   - Source value: Dependent marking (Tawala)
+   - Target-language realization: Head marking (WALS 24A-1). The possessed noun (head) carries the possessive marking, not the possessor. No dedicated pronominal possessive affixes (WALS 57A-4). Predicative possession uses a conjunctional strategy (WALS 117A-4).
+   - Intended solver inference: From possessive noun phrases in the data, the solver identifies that the head noun (possessed item) is the element that changes form or receives a marker, while the possessor remains unmarked. This contrasts with the more familiar English pattern (dependent marking via 's or possessive pronouns).
    - Priority: REQUIRED
 
-2. Possessive marking (from source 81A-1, adapted)
-   - Target-language realization: Head marking (24A-1). The possessed noun (head) hosts the possessive construction. No possessive affixes on pronouns (57A-4); no possessive classification (59A-1). The possessive marker is a separate element associated with the head noun, followed by the possessor.
-   - Intended solver inference: Solver identifies that the possessive relationship is marked on the head (possessed noun), not on the dependent (possessor). This is the opposite of the source language's dependent marking. The solver must recognize the structural pattern: possessed_noun + possessive_element + possessor.
-   - Priority: HIGH
+2. Concept: Locus of Marking in Noun-Modifier Order (adapted from source)
+   - Source value: Noun before modifier (Tawala)
+   - Target-language realization: Mixed modifier order. Adjectives follow the noun (WALS 87A-2: Noun-Adjective). Numerals follow the noun (WALS 89A-2: Noun-Numeral). Demonstratives precede the noun (WALS 88A-1: Demonstrative-Noun). Genitive precedes the noun (WALS 86A-1: Genitive-Noun).
+   - Intended solver inference: The solver discovers that modifier order is not uniform in Supyire: some modifiers (adjectives, numerals) follow the noun, while others (demonstratives, genitives) precede it. The solver must categorize which type of modifier goes where.
+   - Priority: REQUIRED
 
 TARGET-SPECIFIC
 
-1. Noun class (gender) system with 5+ classes
-   - Phenomenon: Five or more genders (30A-5), non-sex-based (31A-3), assigned by both semantic and formal criteria (32A-3). Gender distinctions appear in 3rd person pronouns in both singular and non-singular (44A-2).
-   - Intended solver inference: Solver identifies a multi-class noun system from agreement patterns (e.g., different forms of modifiers, possessive markers, or pronouns associated with different nouns). The solver must classify nouns into classes based on the evidence.
-   - Interaction with CORE: Gender likely affects the form of post-nominal modifiers (adjectives, numerals) and possibly the possessive element, creating a system where the solver must track class-specific allomorphy.
-   - Difficulty contribution: HIGH — requires systematic classification and pattern recognition across multiple data points.
+1. Phenomenon: Noun class (gender) system with 5+ classes, non-sex-based, semantic and formal assignment (WALS 30A-5, 31A-3, 32A-3)
+   - Intended solver inference: From agreement patterns across noun phrases (e.g., different forms of definite article, plural suffix, or possessive markers on different nouns), the solver identifies a noun class system. The solver can infer that some classes are semantically motivated (e.g., humans, animals, plants) while others are formally assigned (e.g., based on phonological shape or default).
+   - Interaction with CORE: The noun class system determines the form of the head-marking in possessive constructions and the form of the plural suffix. The solver must identify classes to understand the possessive marking pattern.
+   - Difficulty contribution: HIGH. This is the central inferential challenge. The solver must identify an abstract classification system from surface patterns without prior knowledge of Niger-Congo noun class typology.
    - Priority: REQUIRED
 
-2. Obligatory plural suffix on all nouns
-   - Phenomenon: Plural marked by suffix (33A-2), obligatory in all nouns (34A-6).
-   - Intended solver inference: Solver identifies a consistent plural marker and recognizes its obligatoriness (every plural noun shows it; no plural is unmarked).
-   - Interaction with CORE: Plural suffix may be class-specific (different allomorphs per noun class), interacting with the gender system. The position of the plural suffix relative to other noun-internal morphology (definite marker, possessive element) creates ordering constraints.
-   - Difficulty contribution: MEDIUM — the pattern is regular but its interaction with gender adds complexity.
-   - Priority: REQUIRED
-
-3. Definite affix on noun
-   - Phenomenon: Definiteness marked by affix on the noun (37A-3).
-   - Intended solver inference: Solver identifies a definite marker and distinguishes it from the plural marker and any possessive element.
-   - Interaction with CORE: The definite affix occupies a specific position in the noun's internal morphology, interacting with plural suffix and potentially the possessive element. The solver must determine the linear order of noun-internal markers.
-   - Difficulty contribution: MEDIUM — adds a layer to the nominal morphology that must be parsed alongside gender, number, and possession.
+2. Phenomenon: Obligatory plural suffix on all nouns (WALS 33A-2, 34A-6)
+   - Intended solver inference: The solver observes that every noun in the data appears with a plural marker (suffix), and that this marker is not optional. The solver can infer that Supyire requires explicit plural marking on all nouns (unlike English, where many nouns are unmarked in the singular).
+   - Interaction with CORE: The plural suffix is likely class-specific (different forms for different noun classes), which reinforces the noun class inference. The solver must track both the presence of plural marking and its class-specific form.
+   - Difficulty contribution: MEDIUM. The obligatoriness is straightforward to infer, but the class-specific forms add a layer of complexity that supports the noun class inference.
    - Priority: HIGH
 
-4. SOV word order with postpositions
-   - Phenomenon: SOV (81A-1), SV (82A-1), OV (83A-1), postpositions (85A-1), OVX (84A-5).
-   - Intended solver inference: Solver identifies the basic clause word order as SOV and recognizes postpositions (as opposed to prepositions).
-   - Interaction with CORE: Provides the clausal context in which NPs (with their internal modifier order and possessive structure) are embedded. The OV order is consistent with the post-nominal modifier pattern (NAdj, NNum), creating a typological harmony that the solver can note.
-   - Difficulty contribution: LOW-MEDIUM — relatively straightforward but provides essential context.
+3. Phenomenon: Definite article as a suffix/affix on the noun (WALS 37A-3)
+   - Intended solver inference: The solver identifies a definite marker that attaches to the noun. If the definite marker is class-specific, this provides additional evidence for the noun class system.
+   - Interaction with CORE: The definite affix interacts with the noun class system (different forms per class) and may interact with the possessive head-marking (both are on the head noun). The solver must parse the noun phrase structure to identify which element is the definite marker, which is the plural suffix, and which is the possessive marker.
+   - Difficulty contribution: MEDIUM-HIGH. Adds a layer of morphological complexity to the noun phrase that the solver must parse.
    - Priority: HIGH
 
-5. Optional double negation
-   - Phenomenon: Negative particle (112A-2), both preverbal (143E-1) and postverbal (143F-1) negative words, optional double negation (143A-15, 144A-19). Pattern: S(Neg)OVNeg (144O-2).
-   - Intended solver inference: Solver identifies that negation can be expressed by a single particle (preverbal or postverbal) or optionally by both simultaneously. The solver must recognize that the double form is optional, not obligatory.
-   - Interaction with CORE: The negation pattern is independent of the nominal morphology but adds a clause-level pattern that the solver must parse. The preverbal negative's position relative to S and O provides additional word-order evidence.
-   - Difficulty contribution: MEDIUM-HIGH — the optionality creates ambiguity that the solver must resolve.
+4. Phenomenon: SOV word order with postpositions (WALS 81A-1, 85A-1)
+   - Intended solver inference: The solver identifies the basic clause order as SOV and that spatial/relational phrases use postpositions (noun + postposition). This is consistent with the genitive-noun order and provides a coherent typological picture.
+   - Interaction with CORE: The SOV order and postpositional strategy are typologically consistent with the noun-before-adjective order, reinforcing the modifier order inference. The solver can use the overall typological profile to confirm their analysis.
+   - Difficulty contribution: LOW-MEDIUM. Provides confirmatory evidence rather than a primary inference challenge.
    - Priority: OPTIONAL
 
 INTERACTIONS
 
-1. Gender × Modifier order: Post-nominal modifiers (adjectives, numerals) likely show class-specific allomorphy, meaning the solver must identify both the modifier's position AND its class-specific form. This creates a two-dimensional classification task.
+1. Noun class system × Possessive head-marking:
+   - The possessive head-marking is likely class-specific (different markers or forms for different noun classes). The solver must identify the noun class system to fully understand the possessive pattern. This creates a dependency: solving the possessive marking requires solving the noun class system first (or simultaneously).
 
-2. Gender × Possessive marking: The possessive element associated with the head noun may vary by noun class, requiring the solver to track class-specific possessive forms alongside the structural pattern (head + possessive + possessor).
+2. Noun class system × Plural suffix:
+   - The plural suffix is class-specific. The solver sees different plural forms on different nouns and must group nouns by their plural form to identify classes. This is the primary evidence for the noun class system.
 
-3. Gender × Plural: The plural suffix may have class-specific allomorphs, so the solver must identify both the plural marker and its interaction with the noun class system.
+3. Noun class system × Definite affix:
+   - The definite affix is class-specific. This provides a second (or third) set of class-specific forms, reinforcing the noun class inference through multiple agreement slots.
 
-4. Modifier order × Possessive structure: The genitive (possessor) precedes the head noun (86A-1: GenN), while the possessive element is associated with the head. The solver must distinguish between the genitive order (possessor before head) and the internal possessive construction (head + possessive element + possessor), or recognize that these are the same structure described differently.
+4. Mixed modifier order × Noun class system:
+   - The modifier order (demonstrative before, adjective after) is independent of noun class, but the solver must correctly identify the head noun (with its class-specific morphology) to determine which side each modifier is on. Misidentifying the head would lead to incorrect modifier order conclusions.
 
-5. Noun-internal morphology ordering: The definite affix, plural suffix, and possessive element all attach to or follow the noun. The solver must determine their linear order, creating a morphological ordering puzzle.
-
-6. SOV × Post-nominal modifiers: The typological harmony between OV clause order and NAdj/NNum NP-internal order provides a cross-confirmation that helps the solver verify their analysis.
+5. Plural suffix × Possessive marking:
+   - In possessive noun phrases, the head noun may carry both a possessive marker and a plural suffix. The solver must determine the order of these morphemes on the head noun, adding a morphological ordering inference.
 
 CONSTRAINTS
 
-- The puzzle must provide sufficient examples to demonstrate the full gender system (all 5+ classes must be attested in the data).
-- The mixed modifier order must be clearly demonstrated: at least one pre-nominal modifier type (genitive or demonstrative) and at least one post-nominal modifier type (adjective or numeral) must appear in the data.
-- The possessive construction must be structurally distinguishable from other NP-internal patterns (e.g., from relative clauses or apposition).
-- Plural and definite marking must be independently identifiable (i.e., there must be examples showing plural without definite, definite without plural, and both together).
-- The gender system must be inferable purely from the data — the solver should not need to know Supyire's semantic class assignments in advance. Formal cues (agreement patterns, allomorphy) must be sufficient.
-- If optional double negation is included, the data must include both single-negation and double-negation examples to demonstrate optionality.
-- The puzzle must not require knowledge of Supyire's tone system to solve the core morphological/syntactic patterns (tone can be present in the data but should not be essential to the solution).
-- All target-language facts used must be consistent with the WALS evidence provided; no contradictions with established Supyire grammar.
+1. The noun class system must be presented with sufficient data for the solver to identify at least 3-4 distinct classes. Each class should be evidenced by at least 2-3 nouns with consistent agreement forms across multiple slots (plural, definite, possessive).
+
+2. The possessive head-marking must be clearly distinguishable from other head-marking (definite, plural). The puzzle data should include possessive NPs where the possessor is unmarked and the head noun carries a distinct possessive marker, contrasted with non-possessive NPs.
+
+3. The mixed modifier order must be demonstrated with clear examples: at least one demonstrative + noun phrase (demonstrative before) and at least one noun + adjective phrase (adjective after). The solver should be able to contrast these to discover the split.
+
+4. The source concept of "dependent marking" is NOT present in Supyire. The puzzle must present head marking as the actual pattern. The solver's inference should be "the head noun is marked, not the possessor" — not "the possessor is marked." Do not frame the puzzle as if dependent marking is present.
+
+5. The noun class system should not require the solver to know Niger-Congo typology. All class distinctions must be inferable purely from the morphological patterns in the data (different forms of agreement markers on different nouns).
+
+6. If the definite affix is included, it must be morphologically distinct from the plural suffix and the possessive marker to avoid ambiguity in parsing. The puzzle should provide enough examples for the solver to segment the noun phrase into its constituent morphemes.
+
+7. The puzzle should not require knowledge of tone (WALS 13A-3: complex tone system) as a distinguishing feature, since tone is difficult to represent unambiguously in text-based puzzle data and would add unnecessary difficulty unrelated to the core concepts.

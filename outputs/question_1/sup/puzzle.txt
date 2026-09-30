@@ -2,334 +2,136 @@
 
 CONTEXT
 
-Supyire is a Senufo language spoken in Côte d'Ivoire. Below are sentences in Supyire with English translations.
-
-**Vocabulary:**
-
-| Form | Meaning |
-|------|---------|
-| tɔ | child |
-| mɔ | person |
-| sɔ | river |
-| ɲɔ | mountain |
-| bal | word |
-| kɛl | path |
-| ɲɛ | hand |
-| pɛ | stone |
-| ɲu | tree |
-| sɛ | plant |
-| ɲɛ | this (demonstrative) |
-| ɲɔ | that (demonstrative) |
-| nɛ | I / my |
-| mɛ | you (sg) / your (sg) |
-| nɛɛ | we / our |
-| mɛɛ | you (pl) / your (pl) |
-| ɔ | in / at (postposition) |
-| ɛ | to / toward (postposition) |
-| ɔɔ | (negative particle, preverbal) |
-| ɛ̃ | (negative particle, postverbal) |
-| dɛ | eat |
-| kɔ | go |
-| bɛ | be / exist |
-| ɣɔ | flow |
-| pɔ | fall |
-
-**Note on homophones:** The form ɲɛ appears both as a noun ("hand") and as a demonstrative ("this"); the form ɲɔ appears both as a noun ("mountain") and as a demonstrative ("that"). In each sentence, the syntactic position determines which reading is intended: a demonstrative appears immediately before a noun phrase, while a noun appears in subject or object position. Similarly, the postposition ɔ ("in/at") is a separate word following a noun, while the sequence -ɔ may appear as a suffix attached to a noun stem. The same distinction applies to ɛ (postposition "to/toward" as a separate word vs. -ɛ as a suffix attached to a noun stem).
+Supyire is a Senufo language (Niger-Congo family) spoken in Côte d'Ivoire. Below are 26 sentences in Supyire with their English translations.
 
 DATA
 
-1. tɔ dɛ mɔ
-   "A child eats a person."
-
-2. tɔɛ dɛ mɔɛ
-   "Children eat people."
-
-3. sɔ ɣɔ
-   "A river flows."
-
-4. sɔi ɣɔ
-   "Rivers flow."
-
-5. tɔɔ dɛ mɔ
-   "The child eats a person."
-
-6. tɔɛɔ dɛ mɔɛɔ
-   "The children eat the people."
-
-7. sɔu ɣɔ
-   "The river flows."
-
-8. tɔ k-bɔ dɛ mɔ
-   "A big child eats a person."
-
-9. sɔ ɲ-bɔ ɣɔ
-   "A big river flows."
-
-10. tɔɛ k-tɔ dɛ mɔ
-    "Two children eat a person."
-
-11. sɔi ɲ-sɛ ɣɔ
-    "Three rivers flow."
-
-12. ɲɛ tɔ k-bɔ dɛ mɔ
-    "This big child eats a person."
-
-13. nɛ tɔɛ̃ dɛ mɔ
-    "My child eats a person."
-
-14. mɔɔ tɔɛ̃ dɛ nɛ
-    "The person's child eats me."
-
-15. ɲɔ sɔ ɲ-bɔ ɣɔ
-    "That big river flows."
-
-16. nɛ sɔĩ ɣɔ
-    "My river flows."
-
-17. ɲɛ nɛ tɔɛɔɛ̃ k-bɔ k-tɔ dɛ mɔ
-    "This my two big children eat a person."
-
-18. ɲɔ mɔɔ sɔiuĩ ɲ-bɔ ɲ-sɛ ɣɔ
-    "That the person's three big rivers flow."
-
-19. ɲɛ bala w-bɔ w-tɔ bɛ
-    "This two big words exist."
-
-20. ɲɔ ɲuu s-bɔ s-sɛ bɛ
-    "That three big trees exist."
-
-21. tɔ sɔ ɛ kɔ
-    "A child goes to a river."
-
-22. mɔ ɲu ɔ bɛ
-    "A person is in a tree."
-
-23. tɔ ɔɔ dɛ mɔ
-    "A child doesn't eat a person."
-
-24. mɔ dɛ tɔ ɛ̃
-    "A person doesn't eat a child."
-
-25. sɔ ɔɔ ɣɔ ɛ̃
-    "A river doesn't flow."
-
-26. ɲu ɔɔ bɛ
-    "A tree doesn't exist."
-
-27. tɔ dɛ mɔ ɛ̃
-    "A child doesn't eat a person."
-
-28. ɲɛ nɛ tɔɛɔɛ̃ k-bɔ sɔu ɛ kɔ
-    "This my two big children go to the river."
-
-29. ɲɔ mɔɔ ɲɛɔõ ɣ-bɔ ɔɔ sɔ ɔ bɛ ɛ̃
-    "That the person's big hand doesn't exist in a river."
-
-30. ɲɛ bala w-bɔ w-tɔ ɔɔ mɔɔ sɛũ ɔ bɛ ɛ̃
-    "This two big words don't exist in the person's plant."
-
-31. nɛ balã bɛ
-    "My word exists."
-
-32. bale bɛ
-    "The word exists."
-
-33. ɲɛo bɛ
-    "Hands exist."
-
-34. ɲui bɛ
-    "The tree exists."
-
-35. ɔ́ dɛ mɔ
-    "He/She eats a person."
-
-36. í ɣɔ
-    "It flows."
-
-37. á bɛ
-    "It exists."
-
-38. ó pɔ
-    "It falls."
-
-39. ú kɔ
-    "It goes."
-
-40. pɛ ɣ-kɔ bɛ
-    "A good stone exists."
-
-41. kɛl w-kɔ bɛ
-    "A good path exists."
+1. kɔlanaba dɔ — The child is (here).
+2. kɛlɛlogo dɔ — The dog is (here).
+3. kɔrɔmisi dɔ — The tree is (here).
+4. tɛnɛnaba dɔ — The woman is (here).
+5. tɛmɛbede dɔ — The house is (here).
+6. bɔgɔlɔlogo dɔ — The horse is (here).
+7. mɔrɔmisi dɔ — The grass is (here).
+8. dɔgɔbede dɔ — The water is (here).
+9. sɔgɔbede dɔ — The stone is (here).
+10. Ama kɔlatanaba dɔ — Ama's child is (here).
+11. Ama kɛlɛkologo dɔ — Ama's dog is (here).
+12. kɔla tɛmɛpebede dɔ — The child's house is (here).
+13. tɛnɛ kɔrɔrismi dɔ — The woman's tree is (here).
+14. Ama sɔgɔpebede dɔ — Ama's stone is (here).
+15. kɛ tɛmɛbede dɔ — This house is (here).
+16. tɛmɛbede bɔgɔ dɔ — The big house is (here).
+17. tɛmɛbede tɛn dɔ — Two houses are (here).
+18. sɛ kɛlɛlogo tɛlɛ dɔ — That small dog is (here).
+19. kɛ Ama tɛmɛpebede bɔgɔ dɔ — This big house of Ama is (here).
+20. kɔlanaba kɔa — The child is going.
+21. kɔlanaba mɛ kɔ — The child does not go.
+22. kɔlanaba kɔ ma kɛlɛlogo dɔ — The child goes but the dog is (here).
+23. kɔlanaba tɛmɛbede nɔ dɔ — The child is in the house.
+24. kɔrɔmisi bɔgɔ tɛn dɔ — Two big trees are (here).
+25. kɔlanaba kɛlɛlogo fɛ — The child sees the dog.
+26. kɔlanaba kɛlɛlogo mɛ fɛ — The child does not see the dog.
 
 QUESTIONS
 
-Q1. Translate into English:
-pɛo ɣ-sɔ bɛ
+Q1. Translate into English: kɔlanaba dɔ
 
-Q2. Translate into English:
-mɛ ɲuũ ɛ kɔ
+Q2. Translate into English: Ama kɔlatanaba dɔ
 
-Q3. Translate into English:
-ɲɛ mɛ kɛla w-sɔ w-tɔ ɔɔ sɔ ɔ bɛ
+Q3. Translate into English: kɛ Ama tɛmɛpebede bɔgɔ dɔ
 
-Q4. Translate into English:
-ɲɔ tɔɛɔ k-bɔ ɔɔ ɲui ɔ bɛ ɛ̃
+Q4. Translate into English: kɔrɔmisi bɔgɔ tɛn dɔ
 
-Q5. Translate into Supyire:
-"The small stones fall."
+Q5. Translate into Supyire: The woman's big stone is (here).
 
-Q6. Translate into Supyire:
-"The child's big hand is in the river."
+Q6. Translate into Supyire: This small house of Kofi is (here).
 
-Q7. Translate into Supyire:
-"This my three small plants don't exist."
+Q7. Translate into Supyire: The child does not see two big trees.
 
-Q8. Translate into Supyire:
-"The mountain's two big words are in the person's tree."
-
-Q9. Analyze the following noun phrase. Identify the noun, its class, number, definiteness, possession (including the possessor), demonstrative, and all post-nominal modifiers. Explain your reasoning.
-ɲɔ mɛ pɛoɔõ ɣ-bɔ ɣ-sɛ
-
-Q10. Translate into Supyire:
-"That the person's two big children don't go to the mountain's three small rivers."
+Q8. Translate into Supyire: That big house of Ama is in the tree, but the child is going.
 
 ANSWERS
 
-Q1. Small stones exist.
+Q1. The child is (here).
 
-Q2. You (sg) go to your tree.
+Q2. Ama's child is (here).
 
-Q3. This your (sg) two small paths don't exist in a river.
+Q3. This big house of Ama is (here).
 
-Q4. That the big children don't exist in the tree.
+Q4. Two big trees are (here).
 
-Q5. pɛoɔ ɣ-sɔ pɔ
+Q5. tɛnɛ sɔgɔpebede bɔgɔ dɔ
 
-Q6. tɔɔ ɲɛɔõ ɣ-bɔ sɔu ɔ bɛ
+Q6. kɛ Kofi tɛmɛpebede tɛlɛ dɔ
 
-Q7. ɲɛ nɛ sɛu s-sɔ s-sɛ ɔɔ bɛ
-(Acceptable alternative with postverbal negation: ɲɛ nɛ sɛu s-sɔ s-sɛ ɔɔ bɛ ɛ̃)
+Q7. kɔlanaba kɔrɔmisi bɔgɔ tɛn mɛ fɛ
 
-Q8. ɲɔu balaã w-bɔ w-tɔ mɔɔ ɲuiũ ɔ bɛ
-
-Q9. The noun phrase means "That your (sg) three big stones."
-- Noun: pɛ "stone"
-- Class: IV (identified by the plural suffix -o, definite suffix -ɔ, possessive suffix -õ, and agreement prefix ɣ- on the post-nominal modifiers)
-- Number: plural (suffix -o)
-- Definiteness: definite (suffix -ɔ)
-- Possession: possessed; possessor is mɛ "you (sg)" (marked by the possessive suffix -õ on the head)
-- Demonstrative: ɲɔ "that" (pre-nominal)
-- Post-nominal modifiers: ɣ-bɔ "big" (adjective) and ɣ-sɛ "three" (numeral), both with Class IV agreement prefix ɣ-
-- Reasoning: The form pɛoɔõ is segmented as pɛ + o + ɔ + õ. The suffix -o matches the plural marker of Class IV (cf. ɲɛo in sentence 33 "hands exist"). The suffix -ɔ matches the definite marker of Class IV (cf. ɲɛɔ in sentence 29). The suffix -õ matches the possessive marker of Class IV (cf. ɲɛɔõ in sentence 29). The prefix ɣ- on the following modifiers matches the Class IV agreement prefix (cf. ɣ-bɔ in sentence 29, ɣ-kɔ in sentence 40). The pre-nominal element mɛ is the 2sg pronoun functioning as possessor. The pre-nominal element ɲɔ is the demonstrative "that."
-
-Q10. ɲɔ mɔɔ tɔɛɔɛ̃ k-bɔ k-tɔ ɔɔ ɲɔu sɔiuĩ ɲ-sɔ ɲ-sɛ ɛ kɔ
-(Acceptable alternative with postverbal negation: ɲɔ mɔɔ tɔɛɔɛ̃ k-bɔ k-tɔ ɔɔ ɲɔu sɔiuĩ ɲ-sɔ ɲ-sɛ ɛ kɔ ɛ̃)
+Q8. sɛ Ama tɛmɛpebede bɔgɔ kɔrɔmisi nɔ dɔ ma kɔlanaba kɔa
 
 SOLUTION
 
-**1. Noun Class System**
+**Noun Class System**
 
-Supyire has five noun classes. Each class is characterized by a unique set of allomorphs appearing in four morphological positions plus a distinct 3rd-person pronoun:
+Supyire has a 4-class noun system. Every head noun carries two obligatory suffixes in a fixed order: a definite article suffix followed by a class suffix. The forms are class-specific:
 
-| Class | Plural suffix | Definite suffix | Possessive suffix | Agreement prefix | 3rd person pronoun |
-|-------|:-----------:|:-------------:|:---------------:|:--------------:|:-----------------:|
-| I     | -ɛ          | -ɔ            | -ɛ̃             | k-             | ɔ́                |
-| II    | -i          | -u            | -ĩ              | ɲ-             | í                 |
-| III   | -a          | -e            | -ã              | w-             | á                 |
-| IV    | -o          | -ɔ            | -õ              | ɣ-             | ó                 |
-| V     | -u          | -i            | -ũ              | s-             | ú                 |
+| Class | Semantic domain | Definite suffix | Class suffix | Possessive suffix |
+|-------|----------------|----------------|-------------|-------------------|
+| 1 | humans/kinship | -na | -ba | -ta |
+| 2 | animals | -lo | -go | -ko |
+| 3 | plants | -mi | -si | -ri |
+| 4 | other | -be | -de | -pe |
 
-**Class membership (inferred from data):**
-- Class I: tɔ "child", mɔ "person"
-- Class II: sɔ "river", ɲɔ "mountain"
-- Class III: bal "word", kɛl "path"
-- Class IV: ɲɛ "hand", pɛ "stone"
-- Class V: ɲu "tree", sɛ "plant"
+Evidence: Sentences 1–9 show four distinct suffix pairs. Sentences 1 and 4 share -na + -ba (Class 1); sentences 2 and 6 share -lo + -go (Class 2); sentences 3 and 7 share -mi + -si (Class 3); sentences 5, 8, and 9 share -be + -de (Class 4). The suffixes are obligatory: every head noun in every sentence carries them.
 
-**Evidence for class identification:**
-- Class I: tɔɛ (2), mɔɛ (2,6) show Pl -ɛ; tɔɔ (5), mɔɔ (6,14) show Def -ɔ; tɔɛ̃ (13,14) shows Poss -ɛ̃; k-bɔ (8,12), k-tɔ (10) show Agr k-; ɔ́ (35) is the pronoun.
-- Class II: sɔi (4,11) shows Pl -i; sɔu (7,18) shows Def -u; sɔĩ (16), sɔiuĩ (18) show Poss -ĩ; ɲ-bɔ (9,15), ɲ-sɛ (11) show Agr ɲ-; í (36) is the pronoun.
-- Class III: bala (19,30) shows Pl -a; bale (32) shows Def -e; balã (31) shows Poss -ã; w-bɔ (19,30), w-tɔ (19,30), w-kɔ (41) show Agr w-; á (37) is the pronoun.
-- Class IV: ɲɛo (33) shows Pl -o; ɲɛɔ (in ɲɛɔõ, 29) shows Def -ɔ; ɲɛɔõ (29) shows Poss -õ; ɣ-bɔ (29), ɣ-kɔ (40) show Agr ɣ-; ó (38) is the pronoun.
-- Class V: ɲuu (20) shows Pl -u; ɲui (34) shows Def -i; sɛũ (30) shows Poss -ũ; s-bɔ (20), s-sɛ (20) show Agr s-; ú (39) is the pronoun.
+**Non-Semantic Class Assignment**
 
-**2. Noun-Internal Morphological Order**
+Class assignment is not purely semantic. While Classes 1–3 show relatively consistent semantic domains (humans, animals, plants), Class 4 includes semantically heterogeneous nouns (house, water, stone). The noun "stone" (sɔgɔ) is a natural object like "tree" (kɔrɔ) and "grass" (mɔrɔ), yet it belongs to Class 4 rather than Class 3. The solver must rely on morphological evidence (the actual suffixes observed in the data) rather than semantic expectation to determine class membership. Sentence 9 (sɔgɔbede) and sentence 14 (sɔgɔpebede) provide the morphological evidence that stone is Class 4.
 
-The linear order of suffixes on the noun stem is fixed:
+**Suffix Order**
 
-**stem + Plural + Definite + Possessive**
+The order on the head noun is: root + possessive + definite + class.
 
-All three suffixes are class-specific. The plural suffix is obligatory when the noun is plural. The definite suffix is optional (marks definiteness). The possessive suffix is optional (marks that the noun is possessed by a preceding possessor).
+Evidence: Compare sentence 1 (kɔla + na + ba = kɔlanaba, "the child") with sentence 10 (kɔla + ta + na + ba = kɔlatanaba, "Ama's child"). The possessive suffix -ta is inserted between the root and the definite suffix, giving the order root + possessive + definite + class.
 
-**Evidence for ordering:**
-- Pl + Def: tɔɛɔ (6) = tɔ + ɛ + ɔ; mɔɛɔ (6) = mɔ + ɛ + ɔ
-- Pl + Def + Poss: tɔɛɔɛ̃ (17) = tɔ + ɛ + ɔ + ɛ̃; sɔiuĩ (18) = sɔ + i + u + ï
-- Def + Poss: ɲɛɔõ (29) = ɲɛ + ɔ + õ
+**Possessive Head-Marking**
 
-**3. Noun Phrase Structure (Mixed Modifier Order)**
+In a possessive noun phrase, the possessed noun (head) carries a class-specific possessive suffix, while the possessor appears in its bare form (no suffixes of any kind).
 
-The full NP template is:
+Evidence: In sentence 10, "Ama" is bare and "kɔlatanaba" carries the possessive suffix -ta. In sentence 12, "kɔla" (child) is bare as possessor and "tɛmɛpebede" (house) carries the possessive suffix -pe. The possessor never changes form regardless of whether it is a proper noun (Ama) or a common noun (kɔla, tɛnɛ).
 
-**[Demonstrative] [Possessor] N-stem [Pl] [Def] [Poss] [Adj-prefix + Adj-stem] [Num-prefix + Num-stem]**
+**Mixed Modifier Order**
 
-- **Pre-nominal modifiers** (class-invariant): demonstrative (ɲɛ "this", ɲɔ "that") and possessor (pronoun or noun). These do not change form based on the noun's class.
-- **Post-nominal modifiers** (class-specific): adjectives and numerals. These carry an agreement prefix matching the noun's class.
+Modifier order is not uniform. Demonstratives and possessors precede the head noun; adjectives and numerals follow it.
 
-**Adjectives:** -bɔ "big", -sɔ "small", -kɔ "good"
-**Numerals:** -tɔ "two", -sɛ "three"
+The full NP structure is: [Demonstrative] [Possessor] [Noun + suffixes] [Adjective] [Numeral]
 
-**Evidence for mixed order:**
-- Demonstrative is pre-nominal: ɲɛ tɔ (12), ɲɔ sɔ (15), ɲɛ bala (19)
-- Possessor is pre-nominal: nɛ tɔɛ̃ (13), mɔɔ tɔɛ̃ (14), mɔɔ sɔiuĩ (18)
-- Adjective is post-nominal: tɔ k-bɔ (8), sɔ ɲ-bɔ (9), ɲɛɔõ ɣ-bɔ (29)
-- Numeral is post-nominal: tɔɛ k-tɔ (10), sɔi ɲ-sɛ (11), bala w-tɔ (19)
+Evidence: Sentence 15 shows the demonstrative kɛ before the noun. Sentence 16 shows the adjective bɔgɔ after the noun. Sentence 17 shows the numeral tɛn after the noun. Sentence 19 combines all: kɛ (demonstrative) + Ama (possessor) + tɛmɛpebede (head) + bɔgɔ (adjective).
 
-**4. Possessive Construction (Head Marking)**
+**Clause Structure**
 
-The possessive relationship is marked on the possessed noun (the head) via the class-specific possessive suffix. The possessor is a free form (pronoun or noun) that appears in the pre-nominal position. The possessor carries no special possessive morphology.
+Basic word order is SOV. Negation (mɛ) is preverbal. The conjunction ma ("but") links clauses. Postpositions follow the noun (e.g., tɛmɛbede nɔ = "in the house"). The progressive aspect is marked by the verbal suffix -a.
 
-**Structure:** [Possessor] [Head + (Pl) + (Def) + Poss]
+Evidence: All sentences show S V order. Sentence 21 shows mɛ before the verb. Sentence 22 shows ma between clauses. Sentence 23 shows the postposition nɔ after the noun. Sentence 20 shows the aspect suffix -a on the verb.
 
-**Evidence:**
-- nɛ tɔɛ̃ (13): "my child" — possessor nɛ (1sg) precedes head tɔ with Poss suffix -ɛ̃
-- mɔɔ tɔɛ̃ (14): "the person's child" — possessor mɔɔ (definite noun) precedes head tɔ with Poss suffix -ɛ̃
-- nɛ sɔĩ (16): "my river" — possessor nɛ precedes head sɔ with Poss suffix -ĩ
-- mɔɔ sɔiuĩ (18): "the person's rivers" — possessor mɔɔ precedes head sɔ with Pl+Def+Poss
-- mɔɔ ɲɛɔõ (29): "the person's hand" — possessor mɔɔ precedes head ɲɛ with Def+Poss
-- mɔɔ sɛũ (30): "the person's plant" — possessor mɔɔ precedes head sɛ with Poss
+**Question Solutions**
 
-The possessor form is identical whether it appears as a possessor or in other clause positions (e.g., mɔɔ in 14 as possessor vs. mɔɔ in 6 as object), confirming that the possessor is unmarked.
+Q1: kɔla + na + ba (Class 1: definite + class) + dɔ (be) → "The child is (here)."
 
-**5. Clausal Structure (SVO with Preverbal Adjuncts)**
+Q2: Ama (bare possessor) + kɔla + ta + na + ba (Class 1: possessive + definite + class) + dɔ → "Ama's child is (here)."
 
-The basic transitive clause order is **Subject – Verb – Object**. The verb is uninflected for person or number. Intransitive clauses and clauses with postpositional phrases follow the order **S [PP] V**, where the postpositional phrase is a preverbal adjunct.
+Q3: kɛ (this) + Ama (bare possessor) + tɛmɛ + pe + be + de (Class 4: possessive + definite + class) + bɔgɔ (big) + dɔ → "This big house of Ama is (here)."
 
-**Postpositions:**
-- ɔ "in / at" (locative)
-- ɛ "to / toward" (directional)
+Q4: kɔrɔ + mi + si (Class 3: definite + class) + bɔgɔ (big) + tɛn (two) + dɔ → "Two big trees are (here)."
 
-The noun precedes the postposition (postpositional order).
+Q5: tɛnɛ (woman, bare possessor) + sɔgɔ + pe + be + de (Class 4: possessive + definite + class) + bɔgɔ (big) + dɔ → tɛnɛ sɔgɔpebede bɔgɔ dɔ. Note: "stone" is Class 4 (evidenced by sentences 9 and 14), not Class 3, despite being a natural object. A solver who assigns it to Class 3 by semantic expectation would incorrectly produce *tɛnɛ sɔgɔrismi bɔgɔ dɔ.
 
-**Evidence:**
-- SVO (transitive): tɔ dɛ mɔ (1) = S V O; tɔɛ dɛ mɔɛ (2) = S V O
-- S PP V (intransitive with adjunct): tɔ sɔ ɛ kɔ (21) = S PP V; mɔ ɲu ɔ bɛ (22) = S PP V
-- S V (intransitive): sɔ ɣɔ (3) = S V; ɲui bɛ (34) = S V
+Q6: kɛ (this) + Kofi (bare possessor) + tɛmɛ + pe + be + de (Class 4: possessive + definite + class) + tɛlɛ (small) + dɔ → kɛ Kofi tɛmɛpebede tɛlɛ dɔ
 
-**6. Negation System (Optional Double Negation)**
+Q7: kɔla + na + ba (Class 1: definite + class) + kɔrɔ + mi + si (Class 3: definite + class) + bɔgɔ (big) + tɛn (two) + mɛ (not) + fɛ (see) → kɔlanaba kɔrɔmisi bɔgɔ tɛn mɛ fɛ
 
-Two negative particles exist:
-- **ɔɔ** (preverbal): appears immediately before the verb.
-- **ɛ̃** (postverbal): appears at the end of the clause (after the verb and any object).
-
-Either particle alone is sufficient to express negation. Both may co-occur (optional double negation).
-
-**Evidence:**
-- Preverbal only: tɔ ɔɔ dɛ mɔ (23); ɲu ɔɔ bɛ (26)
-- Postverbal only: mɔ dɛ tɔ ɛ̃ (24); tɔ dɛ mɔ ɛ̃ (27)
-- Both: sɔ ɔɔ ɣɔ ɛ̃ (25); ɲɔ mɔɔ ɲɛɔõ ɣ-bɔ ɔɔ sɔ ɔ bɛ ɛ̃ (29); ɲɛ bala w-bɔ w-tɔ ɔɔ mɔɔ sɛũ ɔ bɛ ɛ̃ (30)
-
-The presence of both single-negation and double-negation examples confirms that co-occurrence is optional.
+Q8: sɛ (that) + Ama (bare possessor) + tɛmɛ + pe + be + de (Class 4: possessive + definite + class) + bɔgɔ (big) + kɔrɔ + mi + si (Class 3: definite + class) + nɔ (in) + dɔ (be) + ma (but) + kɔla + na + ba (Class 1: definite + class) + kɔ + a (go + progressive) → sɛ Ama tɛmɛpebede bɔgɔ kɔrɔmisi nɔ dɔ ma kɔlanaba kɔa
 
 DIFFICULTY
 
-5
+7/10 — The central challenge is identifying the 4-class noun system from parallel variation across three suffix slots, recognizing that class assignment is not purely semantic (stone is Class 4, not Class 3), and applying the class-specific forms in production tasks that combine head-marking, mixed modifier order, and clause-level syntax simultaneously.

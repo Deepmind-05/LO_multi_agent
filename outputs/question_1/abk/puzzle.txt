@@ -2,135 +2,168 @@
 
 CONTEXT
 
-The following data are from a Northwest Caucasian language spoken by a small community in the western Caucasus. The language has a small vowel inventory and a large consonant inventory; the apostrophe (ʼ) marks a distinct type of consonant. All morphological processes are concatenative (morphemes are added as discrete segments).
-
-**Lexicon**
-
-| Form | Meaning | Form | Meaning |
-|------|---------|------|---------|
-| fana | house | lare | big |
-| amre | water | wone | good |
-| tʼari | child | kʼari | old |
-| tari | mother | bile | new |
-| kʼaba | dog | ra | go |
-| kaba | tree | kʼa | see |
-| sore | path | ta | fall |
-| pʼano | stone | ba | eat |
-| pano | father | wa | give |
+The data below consists of noun phrases from a language spoken by a small community in the Caucasus region, along with their English translations. Plural (pl) is indicated in the translations. The language uses a Latin-based orthography for this exercise. Hyphens mark morpheme boundaries within a word; spaces mark word boundaries.
 
 DATA
 
-1. kʼaba lare ta — "The big dog fell."
-2. tari ta — "The mother fell."
-3. tʼari wone — "The child is good."
-4. kaba lare — "The tree is big."
-5. ma-fana — "My house."
-6. da-fana — "Your house."
-7. fana — "The house."
-8. kʼaba fana — "The dog's house."
-9. ma-ra — "I go."
-10. da-ra — "You go."
-11. ra — "He/she goes."
-12. da-kʼa-ri — "I see you."
-13. ma-kʼa-li — "You see me."
-14. ma-kʼa — "He/she sees me."
-15. ga-ma-ra — "I don't go."
-16. tʼari-ba lare — "The big children."
-17. pano pʼano — "The father's stone."
-18. amre-ba kʼa-ri — "I see the waters."
-19. ma-wa-li — "You give me."
-20. ma-fana kʼa-ri — "I see my house."
-21. tʼari-ba fana-ba — "The children's house."
-22. tʼari-ba fana-ba kʼa-ri — "I see the children's house."
+1. a-rə — my house
+2. u-rə — your (sg) house
+3. rə — his house
+4. i-rə — our house
+5. a-wə — my child
+6. u-wə — your (sg) child
+7. wə — her child
+8. gə — his boat
+9. a-rə gəla — my big house
+10. u-wə təla — your (sg) old child
+11. a-rə-ra — my houses (pl)
+12. u-wə-ra — your (sg) children (pl)
+13. i-gə-ra — our boats (pl)
+14. rə-ra — his houses (pl)
+15. a-rə la — in my house
+16. u-tə na — to your (sg) path
+17. a-rə gəla la — in my big house
+18. u-wə-ra wəla na — to your (sg) new children (pl)
+19. a-rə ma u-wə — my house and your (sg) child
+20. a-mə — my mother
+21. tə dala — his long path
+22. a-ra — my road
+23. ra — his road
+24. a-ra-la — my roads (pl)
+25. ra-la — his roads (pl)
+26. a-ba — my tree
+27. ba-la — his trees (pl)
+28. a-ra la — in my road
+29. i-ba-la gəla la — in our big trees (pl)
 
 QUESTIONS
 
-**Q1.** Translate into English: *da-wa-ri.*
+**Q1.** Translate into English: **u-mə**
 
-**Q2.** Translate into English: *tʼari-ba lare.*
+**Q2.** Translate into English: **i-ra dala**
 
-**Q3.** Translate into English: *kʼaba lare fana ga-kʼa-ri.*
+**Q3.** Translate into English: **u-ra-la gəla**
 
-**Q4.** Translate into the target language: "You see the big tree."
+**Q4.** Translate into English: **a-gə la**
 
-**Q5.** Translate into the target language: "I don't see your child."
+**Q5.** Translate into English: **i-ba-la wəla na**
 
-**Q6.** Translate into the target language: "The old mother's big house."
+**Q6.** Translate into the target language: "our new boats (pl)"
 
-**Q7.** Translate into the target language: "You see the new father's stone."
+**Q7.** Translate into the target language: "in your (sg) big roads (pl)"
 
-**Q8.** Translate into English: *ma-tʼari-ba kʼa-li.*
-
-**Q9.** Translate into English: *kʼaba-ba fana-ba ga-kʼa-ri.*
-
-**Q10.** Translate into the target language: "The children's house is big."
+**Q8.** Translate into the target language: "to his long road and in our new trees (pl)"
 
 ANSWERS
 
-**Q1.** I give you.
+**Q1.** your (sg) mother
 
-**Q2.** The big children.
+**Q2.** our long road
 
-**Q3.** I don't see the big dog's house.
+**Q3.** your (sg) big roads (pl)
 
-**Q4.** kaba lare kʼa-li
+**Q4.** in my boat
 
-**Q5.** da-tʼari ga-kʼa-ri
+**Q5.** to our new trees (pl)
 
-**Q6.** tari kʼari fana lare
+**Q6.** i-gə-ra wəla
 
-**Q7.** pano bile pʼano kʼa-li
+**Q7.** u-ra-la gəla la
 
-**Q8.** You see my children.
-
-**Q9.** I don't see the dogs' house.
-
-**Q10.** tʼari-ba fana-ba lare
+**Q8.** ra dala na ma i-ba-la wəla la
 
 SOLUTION
 
-**Inference chain:**
+**Inferred rules:**
 
-**(a) Phonology.** The data contain exactly four vowels: a, e, i, o. Three ejective/plain consonant contrasts are identifiable from minimal pairs: t/tʼ (tari 'mother' vs. tʼari 'child'), k/kʼ (kaba 'tree' vs. kʼaba 'dog'), p/pʼ (pano 'father' vs. pʼano 'stone'). The apostrophe marks the ejective member of each pair.
+1. **Possessive prefix (head marking):** The possessor is encoded as a prefix fused to the possessed noun. The paradigm is:
+   - a- = 1SG ("my")
+   - u- = 2SG ("your (sg)")
+   - ∅ (zero) = 3SG ("his/her")
+   - i- = 1PL ("our")
 
-**(b) Word order and modifier order.** Sentences (1), (2), (9)–(15), (18), (22) show SOV order (NP precedes V). Sentences (1), (3), (4), (16) show that adjectives follow the noun (NAdj order): kʼaba lare, tʼari wone, kaba lare, tʼari-ba lare. Sentences (8), (17), (21) show that the possessor NP precedes the possessed noun: kʼaba fana, pano pʼano, tʼari-ba fana-ba. Thus the language has a mixed modifier order: adjectives are post-nominal, while genitives (possessors) are pre-nominal.
+   *Evidence:* Examples 1–4 show the same stem *rə* with four different prefixes, each corresponding to a different possessor. Examples 5–7 confirm the pattern with stem *wə*. Example 8 shows *gə* bare (= 3SG). Example 23 shows *ra* bare (= 3SG). The prefix is orthographically fused to the stem, confirming it is a bound morpheme on the head noun.
 
-**(c) Possessive head-marking.** Sentences (5)–(8) show that the possessor is unmarked and the possessed noun bears a prefix encoding the possessor's person: ma- (1sg), da- (2sg), ∅ (3sg). This is head-marking: the grammatical head (the possessed noun) carries the agreement morpheme.
+2. **Noun–Adjective order:** The adjective is a separate word that follows the noun (head-first order).
 
-**(d) The 3PL possessive suffix and the -ba homomorph.** Sentences (16) and (18) establish that -ba is a plural suffix on nouns: tʼari-ba 'children', amre-ba 'waters'. Sentences (21) and (22) introduce a new use of -ba: in a possessive construction with a plural possessor, the possessed noun bears -ba as a 3PL possessive suffix. In (21) tʼari-ba fana-ba 'The children's house', the translation confirms that fana-ba means 'their house' (singular house, 3PL possessor), not 'houses' (plural). The -ba on tʼari marks the possessor's plurality; the -ba on fana marks the 3PL possessor on the head. Thus -ba is a **homomorph** with two distinct functions: (i) a plural suffix on nouns in non-possessive contexts, and (ii) a 3PL possessive suffix on the possessed noun in possessive constructions. The possessive paradigm is therefore: 1sg = ma- (prefix), 2sg = da- (prefix), 3sg = ∅, 3pl = -ba (suffix).
+   *Evidence:* Example 9 (a-rə gəla = "my big house"), example 10 (u-wə təla = "your (sg) old child"), and example 21 (tə dala = "his long path") all show the noun preceding the adjective.
 
-**(e) Intransitive verbal person marking.** Sentences (9)–(11) show that intransitive verbs bear a prefix marking the intransitive subject (S): ma- (1sg), da- (2sg), ∅ (3sg). This prefix paradigm is identical to the possessive prefix paradigm (for 1sg and 2sg).
+3. **Plural suffix with allomorphs:** Plurality of the possessed noun is marked by a suffix that has two allomorphs conditioned by the final vowel of the stem:
+   - *-ra* after stems ending in /ə/
+   - *-la* after stems ending in /a/
 
-**(f) Transitive verbal person marking and ergative alignment.** Sentences (12)–(14) and (19) show that transitive verbs bear two person markers: a prefix (P slot) and a suffix (A slot). The P prefix paradigm is identical to the intransitive S prefix (ma-/da-/∅). The A suffix paradigm is: -ri (1sg), -li (2sg), ∅ (3sg). Comparing (9) ma-ra 'I go' (S=1sg → ma-) with (13) ma-kʼa-li 'You see me' (P=1sg → ma-) shows that S and P are marked by the same prefix, while A is marked by a distinct suffix. This establishes **ergative alignment** (S=P≠A).
+   When a possessive prefix is present, the structure is [prefix + stem + plural-suffix].
 
-**(g) Linear order of person markers.** In all transitive examples, the P prefix precedes the verb stem and the A suffix follows it: P-prefix + stem + A-suffix.
+   *Evidence for -ra after /ə/:* Examples 11 (a-rə-ra), 12 (u-wə-ra), 13 (i-gə-ra), 14 (rə-ra) all show -ra following stems ending in /ə/ (rə, wə, gə).
 
-**(h) Negation.** Sentence (15) ga-ma-ra 'I don't go' contrasts with (9) ma-ra 'I go', showing that ga- is a negation prefix attached to the verb (preceding the P/S prefix).
+   *Evidence for -la after /a/:* Examples 24 (a-ra-la), 25 (ra-la), 27 (ba-la) all show -la following stems ending in /a/ (ra, ba).
 
-**(i) Independence of possessive marking and verbal P-marking.** Sentence (20) ma-fana kʼa-ri 'I see my house' is critical: the ma- on fana is a possessive prefix (marking the possessor of the house as 1sg), while the ∅ P-prefix on kʼa indicates the patient is 3rd person. The -ri A-suffix indicates the agent is 1sg. The patient "my house" is a 3rd-person entity (a house), regardless of who possesses it. Sentence (22) tʼari-ba fana-ba kʼa-ri 'I see the children's house' confirms this principle with the 3PL possessive: the -ba on fana marks the 3PL possessor, but the patient is still a 3rd-person entity (a house), so the P-prefix is ∅. The possessive marking on the noun (whether a prefix or a suffix) never affects the verbal P-marking; the patient's person is determined by the referent of the noun phrase as a whole.
+   *Critical disambiguation:* The plural allomorph *-la* (fused, marked by hyphen) is a distinct morpheme from the postposition *la* (free, marked by space). Example 28 (a-ra la = "in my road") shows *la* as a separate postposition following the singular stem *ra*, while example 24 (a-ra-la = "my roads (pl)") shows *-la* as a fused plural suffix. Example 29 (i-ba-la gəla la = "in our big trees (pl)") contains BOTH: the fused *-la* (plural suffix on *ba*) and the free *la* (postposition) in the same phrase.
 
-**Answers:**
+4. **Postpositions:** Locative/directional relations are expressed by separate postpositions following the noun phrase:
+   - la = "in/on"
+   - na = "to/toward"
 
-**Q1.** da-wa-ri: P=2sg (da-), stem=wa (give), A=1sg (-ri) → "I give you."
+   *Evidence:* Examples 15–16 introduce la and na as separate words following the noun. Their meanings are clear from the translations.
 
-**Q2.** tʼari-ba lare: tʼari-ba = child-pl (children); lare = big (NAdj) → "The big children."
+5. **Linear order within the noun phrase:** The full order is [possessive prefix + stem (+ plural suffix)] + adjective + postposition.
 
-**Q3.** kʼaba lare fana ga-kʼa-ri: kʼaba lare = big dog (NAdj); fana = house (3sg possessor, ∅ prefix) → "the big dog's house." Verb: ga (neg) + ∅ (3sg P) + kʼa (see) + -ri (1sg A) → "I don't see [it]." Full: "I don't see the big dog's house."
+   *Evidence:* Example 17 (a-rə gəla la = "in my big house") shows adjective before postposition. Example 18 (u-wə-ra wəla na = "to your (sg) new children (pl)") confirms the same order with a plural noun. Example 29 (i-ba-la gəla la = "in our big trees (pl)") confirms the order with the -la allomorph.
 
-**Q4.** "You see the big tree." A=2sg → -li; P=3rd person (the tree) → ∅. Verb: kʼa-li. Object: kaba lare (NAdj). SOV: **kaba lare kʼa-li**.
+6. **Conjunction:** *ma* = "and," appearing between coordinated noun phrases.
 
-**Q5.** "I don't see your child." The object "your child" = da-tʼari (2sg possessive prefix + child). The patient is a 3rd-person entity (a child), so P=∅. A=1sg → -ri. Negation: ga-. Verb: ga-kʼa-ri. SOV: **da-tʼari ga-kʼa-ri**.
+   *Evidence:* Example 19 (a-rə ma u-wə = "my house and your (sg) child").
 
-**Q6.** "The old mother's big house." Possessor: tari kʼari (mother + old, NAdj). Possessed: fana lare (house + big, NAdj). Possessor is 3sg → ∅ prefix on possessed noun. Full: **tari kʼari fana lare**.
+7. **Critical segmentation: stem *ra* vs. suffix *-ra*:** The noun stem *ra* ("road") is identical in form to the plural allomorph *-ra* (after /ə/-final stems). This creates a segmentation ambiguity in forms containing the sequence *ra-ra*. The correct analysis is determined by cross-referencing the paradigm:
+   - Example 22: *a-ra* = "my road" (singular) → the single *ra* after the prefix is the stem.
+   - Example 23: *ra* = "his road" (singular) → the bare stem is *ra*.
+   - Example 24: *a-ra-la* = "my roads (pl)" → must be [a- + ra + -la]; the stem is *ra*, the suffix is *-la* (the /a/-final allomorph).
+   - Example 25: *ra-la* = "his roads (pl)" → [ra + -la]; confirms the second *-la* is the suffix.
+   - Parallel with example 14: *rə-ra* = "his houses (pl)" → [rə + -ra] structure with the /ə/-final allomorph.
 
-**Q7.** "You see the new father's stone." A=2sg → -li; P=3rd person (the stone) → ∅. Verb: kʼa-li. Object: pano bile pʼano (father + new [NAdj] + stone [3sg possessor, ∅ prefix]). SOV: **pano bile pʼano kʼa-li**.
+   The solver must use the singular/plural contrast (examples 22–23 vs. 24–25) and the allomorph pattern to correctly segment forms.
 
-**Q8.** ma-tʼari-ba kʼa-li: The ma- on tʼari-ba is a possessive prefix (1sg possessor) → "my children." The patient "my children" is a 3rd-person entity, so the P-prefix on the verb is ∅. The A-suffix -li indicates the agent is 2sg (you). Full: "You see my children."
+8. **Critical segmentation: suffix *-la* vs. postposition *la*:** The plural allomorph *-la* (after /a/-final stems) is homographic with the postposition *la* ("in/on"). The distinction is:
+   - *-la* is a bound morpheme (fused to the stem, marked by hyphen)
+   - *la* is a free word (separate from the noun, marked by space)
 
-**Q9.** kʼaba-ba fana-ba ga-kʼa-ri: kʼaba-ba = dog-pl (dogs); fana-ba = house + 3PL possessive suffix (their house) → "the dogs' house." Verb: ga (neg) + ∅ (3sg P, the house is a 3rd-person entity) + kʼa (see) + -ri (1sg A) → "I don't see [it]." Full: "I don't see the dogs' house." The -ba on kʼaba marks the possessor's plurality; the -ba on fana marks the 3PL possessor on the head. Neither affects the verbal P-marking.
+   *Evidence:* Example 28 (a-ra la = "in my road") vs. example 24 (a-ra-la = "my roads (pl)"). The same surface string "ra la" vs. "ra-la" has different meanings. Example 29 (i-ba-la gəla la) contains both in a single phrase, confirming they are distinct morphemes.
 
-**Q10.** "The children's house is big." Possessor: tʼari-ba (child + PL = children). Possessed: fana-ba (house + 3PL possessive suffix = their house). Adjective: lare (big, NAdj, follows the possessed noun). Stative clause (no verb). Full: **tʼari-ba fana-ba lare**.
+**How the rules produce each answer:**
+
+- **Q1:** *u-* (2SG) + *mə* (mother) → "your (sg) mother."
+
+- **Q2:** *i-* (1PL) + *ra* (road, singular — no plural suffix present) + *dala* (long) → "our long road."
+  - Key: The single *ra* after *i-* is the stem, not the plural suffix. Compare example 22 (a-ra = singular) with example 24 (a-ra-la = plural). The absence of a second suffix confirms singular.
+
+- **Q3:** *u-* (2SG) + *ra* (road) + *-la* (plural allomorph after /a/-final stem) + *gəla* (big) → "your (sg) big roads (pl)."
+  - Key: The *-la* is fused to the stem (hyphenated), identifying it as the plural suffix, not the postposition. Compare with example 28 where *la* is a separate word.
+
+- **Q4:** *a-* (1SG) + *gə* (boat) + *la* (in/on, free postposition) → "in my boat."
+  - Key: *la* is a separate word (space before it), identifying it as the postposition. The stem *gə* ends in /ə/, so the plural allomorph would be *-ra*, not *-la*. There is no ambiguity here.
+
+- **Q5:** *i-* (1PL) + *ba* (tree) + *-la* (plural allomorph after /a/-final stem) + *wəla* (new) + *na* (to/toward) → "to our new trees (pl)."
+  - Key: *-la* is fused to the stem (hyphenated), identifying it as the plural suffix. *na* is the free postposition. The solver must not confuse the fused *-la* with the postposition *la*.
+
+- **Q6:** 1PL → *i-*; boat → *gə*; plural → *-ra* (stem ends in /ə/); new → *wəla* (adjective after noun) → **i-gə-ra wəla**.
+  - Key: The solver must select the correct allomorph (-ra, not -la) based on the stem's final vowel.
+
+- **Q7:** 2SG → *u-*; road → *ra*; plural → *-la* (stem ends in /a/); big → *gəla*; in/on → *la* → **u-ra-la gəla la**.
+  - Key: This is the most critical question. The output contains BOTH the fused plural suffix *-la* (part of the noun) AND the free postposition *la* (separate word). The solver must produce *u-ra-la gəla la* with correct hyphenation: the first *-la* is attached to the stem, the second *la* is a separate word.
+
+- **Q8:** 3SG road → *ra* (zero prefix); long → *dala*; to/toward → *na*; and → *ma*; 1PL tree → *i-ba*; plural → *-la* (stem ends in /a/); new → *wəla*; in/on → *la* → **ra dala na ma i-ba-la wəla la**.
+  - Key: Requires correct application of zero prefix, allomorph selection for *ba* (-la), adjective order, postposition placement, and conjunction in a single coordinated structure.
 
 DIFFICULTY
 
-**Level 5.** The puzzle requires multi-step inference across interacting systems: (1) phonological analysis of ejective contrasts; (2) identification of head-marking in the possessive domain; (3) cross-clause comparison to establish ergative alignment; (4) recognition that possessive prefixes and verbal P-prefixes, while formally identical, serve different grammatical functions; (5) identification of -ba as a homomorph with two distinct functions (plural suffix on nouns vs. 3PL possessive suffix on the possessed noun), requiring the solver to disambiguate based on syntactic context; (6) recognition that the 3PL possessive suffix, like the 1sg/2sg possessive prefixes, does not affect verbal P-marking (the patient remains 3rd person). The hardest questions (Q9, Q10) require the solver to simultaneously apply the -ba homomorph disambiguation, the possessive/P-marking independence principle, and additional rules (negation, NAdj order, possessor-precedes-possessed order) in a single item. Q9 in particular demands that the solver parse two instances of -ba in the same noun phrase (one as plural on the possessor, one as 3PL possessive on the head) and then correctly assign ∅ to the verbal P-slot despite the presence of the possessive suffix on the object.
+**Level 5.** The puzzle requires identifying multiple morphological and syntactic rules and applying them in interaction. The primary difficulty elevations over a simpler puzzle are:
+
+1. **Allomorph discovery:** The plural suffix is not invariant; it has two allomorphs (-ra, -la) conditioned by the stem's final vowel. The solver must discover this pattern from the distributional data rather than assuming a single invariant suffix.
+
+2. **Homographic morpheme disambiguation (-la vs. la):** The plural allomorph *-la* is homographic with the postposition *la*. The solver must use orthographic cues (hyphen vs. space) and distributional evidence to distinguish the two, and must correctly apply both in a single output (Q7). This creates a genuine competing-analysis situation: a form like *ra-la* could initially be misread as "road in/on" before the solver recognizes the allomorph pattern.
+
+3. **Homophonic stem-suffix interaction (ra vs. -ra):** The stem *ra* ("road") is identical in form to the plural allomorph *-ra* (after /ə/-final stems). The solver must use the singular/plural paradigm to correctly segment forms like *a-ra* (singular) vs. *a-ra-la* (plural).
+
+4. **Combined application under ambiguity:** Questions Q7 and Q8 require the solver to simultaneously apply allomorph selection, prefix selection, adjective order, postposition placement, and conjunction while correctly managing the -la/la and ra/-ra ambiguities. Q7 specifically demands producing a string where the same phonological sequence "la" appears as two different morphemes (fused suffix and free postposition) in the correct positions.
+
+5. **Competing analyses resolved by later evidence:** A solver who encounters examples 24–25 early might hypothesize that *-la* is simply the postposition "in/on" attached to the noun. This hypothesis is only resolved by example 28 (showing *ra la* as a separate-word postposition) and example 29 (showing both in one phrase). The puzzle is designed so that the full set of evidence is needed to arrive at the correct analysis.

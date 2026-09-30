@@ -2,98 +2,69 @@
 
 TARGET-LANGUAGE
 
-Abkhaz (abk), Northwest Caucasian
+Abkhaz (Northwest Caucasian)
 
 CORE
 
-1. Concept: Locus of marking in possessive noun phrases (source: dependent marking in Tawala)
-   Target-language realization: Head marking — possessive prefixes attached to the possessed noun (WALS 24A-1, 57A-1). The possessor is unmarked; the head noun carries a prefix encoding person/number of the possessor.
-   Intended solver inference: From a set of possessive phrases with different possessor persons, the solver identifies that the varying element is a prefix on the head noun, not a suffix on the possessor. This reveals a head-marking strategy.
-   Priority: REQUIRED
+1. Concept: Locus of Marking in Possessive Noun Phrases (source 81A, adapted)
+   - Source value: Dependent marking (possessor marked)
+   - Target-language realization: Head marking — the possessed noun (head) carries a possessive prefix encoding the possessor (WALS 24A-1, 57A-1). E.g., "house-1SG" = "my house."
+   - Intended solver inference: The possessor is not a separate word or a marker on the possessor; it is a prefix fused to the possessed noun. The solver must identify which morpheme is the possessive prefix and which is the noun stem.
+   - Priority: REQUIRED
+   - Note: This is a CONTRAST with the source language (Tawala has dependent marking). The puzzle exploits this contrast: the solver must discover that the marking strategy is the opposite of what the source pattern would predict.
 
-2. Concept: Noun-modifier order (source: noun before modifier in Tawala)
-   Target-language realization: Noun-Adjective order (WALS 87A-2). Adjectives follow the head noun. However, other modifiers (genitives, relative clauses) precede the noun (WALS 86A-1, 90A-2).
-   Intended solver inference: The solver identifies that adjectives follow the noun (matching the source pattern), but also notices that genitives and relative clauses precede the noun. This split creates a typological observation: Abkhaz has a mixed modifier order with adjectives as the exception to the pre-nominal pattern.
-   Priority: HIGH
+2. Concept: Noun before modifier (source 82A)
+   - Source value: Noun before modifier
+   - Target-language realization: Noun-Adjective order (WALS 87A-2). The modifying adjective follows the head noun.
+   - Intended solver inference: The head noun precedes its modifier. This is consistent with the source and provides a stable "head-first" anchor in the nominal domain.
+   - Priority: REQUIRED
 
 TARGET-SPECIFIC
 
-1. Phenomenon: Ergative alignment in verbal person marking with P-before-A ordering (WALS 100A-3, 102A-5, 104A-3)
-   Intended solver inference: By comparing intransitive and transitive clauses, the solver identifies that the intransitive subject (S) is marked by the same prefix/suffix as the transitive patient (P), while the transitive agent (A) is marked differently. The P marker precedes the A marker in the verb. This reveals ergative alignment.
-   Interaction with CORE: Both possessive head-marking and ergative alignment are manifestations of the same typological tendency (head-marking, WALS 25A-1). The solver can use the possessive data as a "warm-up" to recognize the head-marking strategy, then apply the same reasoning to verbal alignment.
-   Difficulty contribution: HIGH — requires cross-clause comparison and understanding of alignment typology.
-   Priority: HIGH
+1. Phenomenon: Possessive prefixes (WALS 57A-1)
+   - Intended solver inference: The possessive markers are specifically prefixes (not suffixes, clitics, or separate words). The solver must identify the prefix as distinct from the noun stem.
+   - Interaction with CORE: Directly instantiates the head-marking concept; the prefix is the morphological realization of head marking.
+   - Difficulty contribution: Medium. The solver must segment the word into prefix + stem, which requires identifying the noun stem across different possessive forms.
+   - Priority: HIGH
 
-2. Phenomenon: Small vowel inventory (4 vowels: a, e, i, o) combined with large consonant inventory including ejective series (WALS 2A-1, 1A-5, 7A-2)
-   Intended solver inference: The solver identifies the limited vowel set from the data and recognizes that consonant contrasts (especially ejectives vs. plain vs. voiced) carry the primary phonological load. The ejective series (e.g., pʼ, tʼ, kʼ, qʼ) is a distinctive contrast that must be identified from minimal pairs or distributional patterns.
-   Interaction with CORE: The consonant-heavy phonology interacts with concatenative morphology to produce complex surface forms. The solver must segment words that contain long consonant clusters, making morphological analysis more challenging.
-   Difficulty contribution: MEDIUM-HIGH — requires phonological analysis before or alongside morphological analysis.
-   Priority: HIGH
+2. Phenomenon: Plural suffix (WALS 33A-2, 34A-6)
+   - Intended solver inference: Plurality is marked by a suffix on the noun. When combined with a possessive prefix, the noun appears as [poss-prefix + stem + plural-suffix].
+   - Interaction with CORE: Creates a prefix-suffix sandwich that demonstrates the language uses both prefixing and suffixing on the same noun. The solver must distinguish the possessive prefix from the plural suffix.
+   - Difficulty contribution: High. The solver must identify two different affixes on the same word and determine which is possessive and which is plural.
+   - Priority: HIGH
 
-3. Phenomenon: Exclusively concatenative morphology (WALS 20A-1)
-   Intended solver inference: All morphological processes are done by adding discrete morphemes (prefixes, suffixes). No suppletion, no internal vowel changes, no consonant alternations as morphological processes. This guarantees that the solver can reliably decompose words into morphemes by identifying recurring segments.
-   Interaction with CORE: This property makes the head-marking analysis (possessive prefixes, verbal person markers) tractable. The solver can confidently identify morpheme boundaries.
-   Difficulty contribution: LOW (it reduces difficulty by making segmentation reliable) but is a crucial enabling constraint.
-   Priority: HIGH
+3. Phenomenon: Postpositions (WALS 85A-1)
+   - Intended solver inference: Locative/oblique phrases use postpositions (noun + postposition), consistent with the head-first tendency.
+   - Interaction with CORE: Reinforces the head-first pattern in the nominal domain (Noun-Adjective, Noun-Postposition). Creates a contrast: the possessor is NOT a separate post-nominal element but is fused as a prefix, while other modifiers (adjectives, postpositions) are separate post-nominal elements.
+   - Difficulty contribution: Medium. The solver must distinguish postpositions from adjectives (both follow the noun) and recognize that the possessor uses a different strategy (prefix) than other modifiers.
+   - Priority: HIGH
 
-4. Phenomenon: SOV word order with consistent pre-nominal modifiers (GenN, RelN, postpositions) except for adjectives (NAdj) (WALS 81A-1, 85A-1, 86A-1, 90A-2, 87A-2)
-   Intended solver inference: The solver identifies the basic SOV order and the consistent pattern of modifiers preceding the head (genitives, relative clauses, postpositions). The adjective order (NAdj) stands out as an exception, creating a typological observation.
-   Interaction with CORE: The NAdj order directly realizes the source concept (noun before modifier). The contrast with other pre-nominal modifiers adds depth.
-   Difficulty contribution: MEDIUM — the solver must notice the exception and not overgeneralize.
-   Priority: HIGH
-
-5. Phenomenon: Three-way sex-based gender system (WALS 30A-3, 31A-2, 32A-2)
-   Intended solver inference: If gender is relevant in the data (e.g., in pronouns or certain agreement contexts), the solver identifies three genders assigned by sex/animacy semantics.
-   Interaction with CORE: Gender could interact with possessive marking if the possessive prefixes show any gender sensitivity (they typically do not in Abkhaz, so this is limited). More relevant for pronoun identification.
-   Difficulty contribution: LOW-MEDIUM — adds a semantic classification dimension.
-   Priority: OPTIONAL
-
-6. Phenomenon: Obligatory plural suffix on all nouns (WALS 33A-2, 34A-6)
-   Intended solver inference: The solver identifies a consistent plural suffix that appears on all nouns in plural contexts. The obligatoriness means the solver can use its presence/absence as a reliable number marker.
-   Interaction with CORE: Plural marking on the head noun is another instance of head-marking (the noun itself marks its number, not the modifier).
-   Difficulty contribution: LOW — straightforward identification.
-   Priority: OPTIONAL
-
-7. Phenomenon: Lexical (unpredictable) stress (WALS 14A-1, 15A-7, 16A-6)
-   Intended solver inference: If stress is marked in the data, the solver recognizes that stress position is not rule-governed but must be learned lexically. This means stress cannot be predicted from morphological structure.
-   Interaction with CORE: Stress adds a phonological dimension that is independent of the morphological analysis.
-   Difficulty contribution: LOW — mostly a "note" rather than a reasoning step.
-   Priority: OPTIONAL
-
-8. Phenomenon: No passive construction (WALS 107A-2)
-   Intended solver inference: If the puzzle includes transitive clauses, the solver can note the absence of a passive. This is a negative identification.
-   Interaction with CORE: Limited direct interaction.
-   Difficulty contribution: LOW.
-   Priority: OPTIONAL
+4. Phenomenon: SOV word order (WALS 81A-1)
+   - Intended solver inference: If verbal data is included, the verb follows its arguments.
+   - Interaction with CORE: Consistent with the overall head-final / dependent-final tendency in the clause, while the nominal domain shows head-first order. This cross-domain contrast is typologically interesting.
+   - Difficulty contribution: Low-Medium. Only useful if verbal data is included; may overcomplicate the puzzle.
+   - Priority: OPTIONAL
 
 INTERACTIONS
 
-1. Head-marking (possessive) × Ergative alignment:
-   Both are manifestations of the same typological parameter (head-marking, WALS 25A-1). The solver first identifies head-marking in the possessive domain (easier, more transparent), then applies the same reasoning to the verbal domain (harder, requires understanding of alignment). This creates a multi-step inference chain: "Possession is marked on the head → this language is head-marking → verbal alignment should also be head-marking → ergative alignment is the head-marking strategy for transitive clauses → verify: S aligns with P, not A."
+1. Possessive prefix × Plural suffix:
+   - Interaction: Both attach to the same noun, creating a [prefix-stem-suffix] structure.
+   - Additional inference enabled: The solver can confirm that the prefix is possessive (varies by person/number of possessor) and the suffix is plural (varies by number of possessed), by observing which morpheme changes in which contexts.
 
-2. Word order consistency × NAdj exception:
-   The consistent pre-nominal pattern (GenN, RelN, postpositions) creates an expectation that all modifiers precede the head. The NAdj order violates this expectation. The solver must notice the exception and recognize that adjective order is a separate parameter from other modifier orders. This prevents overgeneralization.
+2. Noun-Adjective × Postpositions × Head-marking possessives:
+   - Interaction: Adjectives and postpositions are separate post-nominal elements, while the possessor is a prefix on the noun.
+   - Additional inference enabled: The solver can identify a systematic distinction: the possessor is "fused" to the head (head-marking), while other modifiers are "free" post-nominal elements. This is a meaningful typological contrast that the solver can discover from the data.
 
-3. Small vowel inventory × Ejective consonants × Concatenative morphology:
-   The phonological system is consonant-heavy (4 vowels, many consonant contrasts including ejectives). Combined with concatenative morphology (multiple prefixes/suffixes per word), surface forms can be very consonant-dense. The solver must carefully segment these forms, using the ejective/plain/voiced contrasts as morpheme boundaries. This creates a phonological-morphological interaction that increases difficulty.
-
-4. Ergative alignment × P-before-A ordering:
-   The solver must not only identify ergative alignment but also determine the linear order of the two person markers on the verb. The P-before-A order is a specific detail that requires careful comparison of transitive clauses with different argument combinations.
+3. Head-marking possessives × Noun-Adjective order:
+   - Interaction: Both concepts involve the relationship between a noun and its modifier/possessor. The noun is the head in both cases, but the marking strategy differs (prefix for possessor, separate word for adjective).
+   - Additional inference enabled: The solver can recognize that "head" is a consistent concept: the noun is the head in both possessive and adjective constructions, but the language uses different strategies for different types of modification.
 
 CONSTRAINTS
 
-1. The puzzle must provide at least 3 possessive examples with different possessor persons (1sg, 2sg, 3sg) to allow identification of the possessive prefix paradigm and the head-marking strategy.
-
-2. The puzzle must include both intransitive and transitive clauses (at least 2 of each) to allow identification of ergative alignment. The transitive clauses should include different A/P person combinations to reveal the P-before-A ordering.
-
-3. The phonological data must include enough words to identify the 4-vowel inventory (a, e, i, o) and at least one ejective contrast (e.g., p vs. pʼ or t vs. tʼ). Minimal pairs or near-minimal pairs are ideal.
-
-4. All morphological processes in the puzzle data must be strictly concatenative. No suppletion, no internal changes, no consonant alternations as morphological processes. This ensures the solver can reliably segment words.
-
-5. The NAdj order must be clearly demonstrated with at least 2 adjective-noun examples to distinguish it from the pre-nominal pattern of genitives and relative clauses.
-
-6. If stress is included in the data, it must be marked (e.g., with an acute accent) since it is lexical and unpredictable. The solver should not be expected to predict stress.
-
-7. The puzzle should not require prior knowledge of Abkhaz or Northwest Caucasian languages. All rules must be inferable from the provided data using general linguistic knowledge.
-
-8. The ejective series should be presented in a way that makes the contrast identifiable (e.g., through consistent distributional patterns or minimal pairs), not through orthographic conventions the solver would need to know in advance.
+- The puzzle data must include enough possessive examples (at least 3-4 different possessors) for the solver to identify the possessive prefix pattern and distinguish it from the noun stem.
+- The plural suffix must appear in at least one example alongside a possessive prefix to demonstrate the prefix-suffix interaction.
+- If postpositions are included, they must be clearly distinguishable from adjectives (e.g., by semantic content or by appearing in a different syntactic context).
+- The puzzle must NOT include data that would make the solver think the possessive marker is a separate word (e.g., no spaces or clear word boundaries that could be misinterpreted).
+- The head-marking pattern must be unambiguous: the same noun stem should appear with different possessive prefixes, making it clear that the prefix is the variable element.
+- If SOV word order is included, it should be in a separate section or clearly marked as verbal data to avoid confusion with the nominal-domain patterns.
+- The puzzle should not require the solver to know Abkhaz phonology or orthography; all patterns should be inferable from the distributional data alone.

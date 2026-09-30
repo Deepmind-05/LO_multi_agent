@@ -2,103 +2,112 @@
 
 CONTEXT
 
-The following data consists of sentences from an undescribed language and their English translations. The language is spoken by a small community in northeastern Siberia.
+Evenki is a Tungusic language spoken in northeastern China and the Russian Far East. Below are some Evenki sentences with English translations.
 
 DATA
 
-1. kura-a vura — The dog runs.
-2. nana-r-a nura — The children eat.
-3. kura-a nana-n kama — The dog sees the child.
-4. nana-a kura-n nura — The child eats the dog.
-5. na-i kura-m-a nana-n kama — My dog sees the child.
-6. ta-i tura-t-a biga — Your house is big.
-7. sa-i nana-s-a nura — His child eats.
-8. biga kura-a vura — The big dog runs.
-9. taka tura-a biga — This house is big.
-10. turu nana-r-a nura — Three children eat.
-11. kura-a tura-u vura — The dog goes to the house.
-12. nana-a sara-y vura — The child comes from the river.
-13. kura-a nana-n ega kama-na — The dog does not see the child.
-14. nana-a ega nura-na — The child does not eat.
-15. pa-i tura-p-a biga — Our (incl.) house is big.
-16. ba-i tura-b-a biga — Our (excl.) house is big.
-17. na-i kura-r-m-a nana-r-n kama — My dogs see the children.
-18. nana-a na-i tura-r-m-n kama — The child sees my houses.
-19. tura-i kura-s-a biga — The house's dog is big.
-20. kura-a tura-o vura — The dog runs in the house.
-21. sa-i biga kura-s-a vura — His big dog runs.
+1. ne dara tara-a tun-s — The child goes to the big river.
+2. sira tala kora-t kela-s — The man sees the old reindeer.
+3. ana nara du-t mala-s — The mother eats the new meat.
+4. ne bira-m-a tun-s — The child goes to my tent.
+5. sira ne-r-t kela-s — The man sees your child.
+6. ana bira-s-t amar-n kela-s — The mother sees Amar's tent.
+7. tul kora-s-t ana-n mala-s — Tul eats the mother's reindeer.
+8. ne tara-a tun-s — The child goes to the river.
+9. ne tara-a mura tun-e-s — The child does not go to the river.
+10. sira kora-t kela-s — The man sees the reindeer.
+11. sira kora-t mura kela-e-s — The man does not see the reindeer.
+12. ne dara bira-s-t amar-n mura kela-e-s — The child does not see Amar's big tent.
+13. sira tala bira-i nala-s — The man falls at the old tent.
+14. tul tula kora-t mura kela-e-s — Tul does not see the white reindeer.
 
 QUESTIONS
 
-Q1. Translate into English: kura-r-a nana-n kama
+Translate between Evenki and English.
 
-Q2. Translate into English: ta-i kura-t-a nana-n kama
+A. ne nara tara-a tun-s
 
-Q3. Translate into English: sa-i biga kura-s-a nana-n kama
+B. tul nara bira-r-a tun-s
 
-Q4. Translate into English: kura-a tura-r-n ega kama-na
+C. ana tala du-t mura mala-e-s
 
-Q5. Translate into the language: The child sees your dogs.
+D. sira dara kora-s-t tul-n mura kela-e-s
 
-Q6. Translate into the language: The big dog's child goes to the house.
+E. The child sees Amar's old tent.
 
-Q7. Translate into the language: Our (excl.) big house does not see the three children.
+F. The mother does not see your big reindeer.
 
-Q8. Translate into the language: The child's big dogs do not see our (incl.) houses in the river.
+G. Tul goes to the man's new tent.
+
+H. The child does not eat the mother's new meat.
 
 ANSWERS
 
-Q1. The dogs see the child.
-Q2. Your dog sees the child.
-Q3. His big dog sees the child.
-Q4. The dog does not see the houses.
-Q5. nana-a ta-i kura-r-t-n kama
-Q6. biga kura-i nana-s-a tura-u vura
-Q7. ba-i biga tura-b-a turu nana-r-n ega kama-na
-Q8. nana-i biga kura-r-s-a pa-i tura-r-p-n sara-o ega kama-na
+A. The child goes to the new river.
+B. Tul goes to your new tent.
+C. The mother does not eat the old meat.
+D. The man does not see Tul's big reindeer.
+E. ne tala bira-s-t amar-n kela-s
+F. ana dara kora-r-t mura kela-e-s
+G. tul nara bira-s-a sira-n tun-s
+H. ne nara du-s-t ana-n mura mala-e-s
 
 SOLUTION
 
-**Morphological system:**
+**Inferred rules:**
 
-Nouns have a fixed suffixal chain: root + plural + possessive + case.
+1. **Word order:** SOV (Subject–Object–Verb). The negative word *mura* appears immediately before the verb.
 
-- Plural suffix: -r (obligatory on all plural nouns)
-- Possessive suffixes (on the possessed noun, agreeing with possessor): -m (1sg), -t (2sg), -s (3sg), -p (1pl incl), -b (1pl excl), -d (2pl), -l (3pl)
-- Case suffixes: -a (nominative), -n (accusative), -i (genitive), -o (locative), -u (allative), -y (ablative)
+2. **Modifier order:** Adjectives precede the noun they modify (e.g., *dara tara* "big river," *tala kora* "old reindeer").
 
-Pronouns: na (I), ta (you sg), sa (he/she), pa (we incl), ba (we excl), da (you pl), la (they). When used as possessors, pronouns take the genitive suffix -i.
+3. **Case suffixes** (on nouns, after any possessive suffix):
+   - Nominative: ∅ (unmarked)
+   - Genitive: *-n* (marks the possessor in a possessive phrase)
+   - Accusative: *-t* (marks the direct object)
+   - Locative: *-i* (marks location)
+   - Allative: *-a* (marks goal/destination)
 
-**Key rules:**
+4. **Possessive suffixes** (on the possessed noun, before any case suffix):
+   - 1sg: *-m*
+   - 2sg: *-r*
+   - 3sg: *-s*
+   - 3pl: *-w*
 
-1. **Double possessive marking:** In a possessive construction, the possessor takes the genitive case suffix (-i) AND the possessed noun takes a possessive suffix agreeing with the possessor's person/number. Evidence: sentences 5–7, 15–19. For example, in (5) na-i kura-m-a, the possessor "I" is marked with genitive -i and the possessed noun "dog" is marked with possessive -m (1sg).
+   The possessive suffix encodes the person/number of the possessor. For 1sg and 2sg, the possessor is a zero pronoun (understood from the suffix). For 3sg, the possessor appears as an explicit noun with the genitive suffix *-n*.
 
-2. **Modifier-before-head word order:** Adjectives, demonstratives, and numerals all precede the noun they modify. Evidence: (8) biga kura-a (Adj-Nom), (9) taka tura-a (Dem-Nom), (10) turu nana-r-a (Num-Nom). In possessive constructions with an attributive adjective, the order is: possessor-Gen + adjective + possessed-noun-poss-Case. Evidence: (21) sa-i biga kura-s-a (Poss-Adj-Nom).
+5. **Double marking in possession:** Both elements in a possessive phrase carry overt marking — the possessor receives a genitive case suffix, and the possessed noun receives a possessive suffix agreeing with the possessor.
 
-3. **SOV word order:** The verb appears at the end of the clause. Evidence: all transitive sentences (3, 4, 5, 13, 17, 18) and intransitive sentences (1, 2, 7, 8, 10, 11, 12, 14, 20, 21).
+6. **Person/number agreement on verbs:**
+   - 1sg: *-m*, 2sg: *-r*, 3sg: *-s*, 1pl: *-l*, 2pl: *-k*, 3pl: *-w*
 
-4. **Double negation:** Negation requires both a preverbal negative word (ega) and a negative suffix on the verb (-na). Both are obligatory. Evidence: (13) kura-a nana-n ega kama-na and (14) nana-a ega nura-na. In both, ega appears between the object/subject and the verb, and -na is attached to the verb stem.
+7. **Double negation:** Negation requires two elements:
+   - The preverbal negative word *mura* (immediately before the verb)
+   - The negative suffix *-e* on the verb (between the stem and the agreement suffix)
 
-5. **Inclusive/exclusive 1st person plural:** The language distinguishes inclusive (pa, -p) and exclusive (ba, -b) 1st person plural. Evidence: (15) pa-i tura-p-a vs. (16) ba-i tura-b-a.
+   Neither element alone is sufficient; both must co-occur.
 
-**Derivations:**
+8. **Suffix order:**
+   - On nouns: stem + possessive suffix + case suffix
+   - On verbs: stem + negative suffix + agreement suffix
 
-Q1: kura-r-a = dog-pl-Nom ("the dogs"), nana-n = child-Acc ("the child"), kama = "see." SOV order → "The dogs see the child."
+**Solutions to questions:**
 
-Q2: ta-i = you-Gen ("your"), kura-t-a = dog-poss2sg-Nom ("dog"), nana-n = child-Acc, kama = "see." → "Your dog sees the child."
+A. *ne* (child, subject) + *nara* (new, modifier) + *tara-a* (river-allative) + *tun-s* (go-3sg) → "The child goes to the new river."
 
-Q3: sa-i = he-Gen ("his"), biga = "big" (prenominal adjective), kura-s-a = dog-poss3sg-Nom, nana-n = child-Acc, kama = "see." Order: possessor + adjective + possessed noun (cf. 21). → "His big dog sees the child."
+B. *tul* (Tul, subject) + *nara* (new, modifier) + *bira-r-a* (tent-2sg.poss-allative) + *tun-s* (go-3sg) → "Tul goes to your new tent."
 
-Q4: kura-a = dog-Nom, tura-r-n = house-pl-Acc ("the houses"), ega = NEG, kama-na = see-NEG. → "The dog does not see the houses."
+C. *ana* (mother, subject) + *tala* (old, modifier) + *du-t* (meat-acc) + *mura* (NEG) + *mala-e-s* (eat-NEG-3sg) → "The mother does not eat the old meat."
 
-Q5: "The child" = nana-a (Nom), "your dogs" = ta-i (you-Gen) + kura-r-t-n (dog-pl-poss2sg-Acc), "sees" = kama. → nana-a ta-i kura-r-t-n kama.
+D. *sira* (man, subject) + *dara* (big, modifier) + *kora-s-t* (reindeer-3sg.poss-acc) + *tul-n* (Tul-Gen) + *mura* (NEG) + *kela-e-s* (see-NEG-3sg) → "The man does not see Tul's big reindeer."
 
-Q6: "The big dog's child" = [biga kura-i] (big dog-Gen, adjective before its head within the genitive NP) + nana-s-a (child-poss3sg-Nom), "goes to the house" = tura-u (house-All) + vura (go). → biga kura-i nana-s-a tura-u vura.
+E. "The child sees Amar's old tent." → *ne* (child) + *tala* (old, before noun) + *bira-s-t* (tent-3sg.poss-acc) + *amar-n* (Amar-Gen) + *kela-s* (see-3sg) → **ne tala bira-s-t amar-n kela-s**
 
-Q7: "Our (excl.) big house" = ba-i (we-excl-Gen) + biga (Adj) + tura-b-a (house-poss1pl.excl-Nom), "the three children" = turu (Num) + nana-r-n (child-pl-Acc), "does not see" = ega + kama-na. → ba-i biga tura-b-a turu nana-r-n ega kama-na.
+F. "The mother does not see your big reindeer." → *ana* (mother) + *dara* (big, before noun) + *kora-r-t* (reindeer-2sg.poss-acc) + *mura* (NEG) + *kela-e-s* (see-NEG-3sg) → **ana dara kora-r-t mura kela-e-s**
 
-Q8: "The child's big dogs" = nana-i (child-Gen) + biga (Adj) + kura-r-s-a (dog-pl-poss3sg-Nom), "our (incl.) houses" = pa-i (we-incl-Gen) + tura-r-p-n (house-pl-poss1pl.incl-Acc), "in the river" = sara-o (river-Loc), "do not see" = ega + kama-na. → nana-i biga kura-r-s-a pa-i tura-r-p-n sara-o ega kama-na.
+G. "Tul goes to the man's new tent." → *tul* (Tul) + *nara* (new, before noun) + *bira-s-a* (tent-3sg.poss-allative) + *sira-n* (man-Gen) + *tun-s* (go-3sg) → **tul nara bira-s-a sira-n tun-s**
+
+H. "The child does not eat the mother's new meat." → *ne* (child) + *nara* (new, before noun) + *du-s-t* (meat-3sg.poss-acc) + *ana-n* (mother-Gen) + *mura* (NEG) + *mala-e-s* (eat-NEG-3sg) → **ne nara du-s-t ana-n mura mala-e-s**
 
 DIFFICULTY
 
-Hard. The puzzle requires the solver to simultaneously integrate multiple interacting systems: a multi-layered suffixal chain on nouns (root + plural + possessive + case), double possessive marking, consistent modifier-before-head word order (including the specific ordering of possessor + adjective + head in possessive constructions), SOV clause structure, obligatory double negation, and an inclusive/exclusive person distinction. The later questions (Q7–Q8) demand correct application of five or more rules in a single output, with no verbatim parallel in the data.
+5

@@ -1,9 +1,3 @@
 
 
-VERDICT
-
-PASS
-
-ACTUAL DIFFICULTY
-
-5
+{"verdict":"PASS_WITH_ISSUES","actual_difficulty":4,"difficulty_justification":"The main non-obvious step is discovering the allomorph pattern for the plural suffix (-ra after /ə/-final stems, -la after /a/-final stems), which requires comparing multiple examples. The hyphenation system makes the fused -la vs. free la distinction relatively transparent, reducing what would otherwise be a deeper ambiguity. The harder questions (Q7, Q8) require combining multiple rules simultaneously, but the rules don't create deep interdependencies—each rule applies independently once identified. This places the puzzle at a solid 4 rather than a 5.","solvable":true,"issues":[{"severity":"MINOR","category":"DIFFICULTY_MISMATCH","description":"The puzzle is rated as difficulty 5 but is more appropriately a 4. The allomorph discovery is the primary non-obvious inference, and the hyphenation orthography makes the -la/la distinction (fused suffix vs. free postposition) transparent rather than requiring deep disambiguation. The 'stem ra vs. suffix -ra' issue highlighted in the solution is not actually ambiguous in the data: the stem ra always takes -la (not -ra) as its plural suffix, so no form in the data is genuinely ambiguous between these analyses. A true difficulty-5 puzzle would require deeper interacting dependencies or genuinely competing analyses that cannot be resolved by surface cues."},{"severity":"MINOR","category":"SOLVABILITY","description":"The target language is labeled as Abkhaz (Northwest Caucasian), but the data does not represent actual Abkhaz morphology. Abkhaz does not use prefixal possessive marking on nouns in this manner, does not have this type of adjective-noun order, and its noun morphology is fundamentally different. While this does not affect the internal consistency or solvability of the puzzle (the data is self-contained and internally consistent), the language label is misleading. This is a metadata issue rather than a puzzle validity issue."}]}

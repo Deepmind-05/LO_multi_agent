@@ -2,174 +2,229 @@
 
 CONTEXT
 
-Lezgian is a Nakh-Daghestanian language spoken in the Caucasus region. Below are Lezgian sentences with English translations. Plural (pl) and singular (sg) are indicated in the translations.
+The following sentences are from a Nakh-Daghestanian language spoken in the Caucasus. The language uses a suffixal case system and has no verbal person or number agreement. Below are 19 sentences with their English translations.
 
 DATA
 
-| # | Lezgian | English |
-|---|---------|---------|
-| 1 | tara ba. | Water (sg) is (here). |
-| 2 | tara-a ba. | Waters (pl) are (here). |
-| 3 | bat-i ba. | Dogs (pl) are (here). |
-| 4 | kora ba. | A house (sg) is (here). |
-| 5 | kər-il tara vur. | The man (sg) eats water (sg). |
-| 6 | tara-n kora ba. | The water's (sg) house (sg) is (here). |
-| 7 | kər-il kora-d dʷa. | The man (sg) gives (to) the house (sg). |
-| 8 | zera-s kər tʼa. | The man (sg) goes on the road (sg). |
-| 9 | zera-a-il bat-i kʷa. | The roads (pl) see the dogs (pl). |
-| 10 | tara-a-n kora ba. | The waters' (pl) house (sg) is (here). |
-| 11 | bat-il tara vur. | The dogs (pl) eat water (sg). |
-| 12 | kər-in tara ba. | The men's (pl) water (sg) is (here). |
-| 13 | kər-il dal-id dʷa. | The man (sg) gives (to) the children (pl). |
-| 14 | bat-il tara vur. | The dog (sg) eats water (sg). |
-| 15 | kər-in kora ba. | The man's (sg) house (sg) is (here). |
-| 16 | kər-il tara vur-t. | The man (sg) ate water (sg). |
-| 17 | kər-il tara vur-a. | The man (sg) is eating water (sg). |
-| 18 | kər-il tara vur-t. | The man (sg) was eating water (sg). |
-| 19 | kər-il tara vur-t-r. | The man (sg) ate water (sg) (I heard). |
-| 20 | kər-il tara vur-m. | The man (sg) doesn't eat water (sg). |
-| 21 | kər-il tara vur-q? | Does the man (sg) eat water (sg)? |
-| 22 | kər-il tara vur-mq? | Does the man (sg) not eat water (sg)? |
-| 23 | bat-il tara-a-n kora vur-t-r. | The dogs (pl) ate the waters' (pl) house (sg) (I heard). |
-| 24 | dal-in bat-il kora-a-n tara kʷa-t-r. | The children's (pl) dogs (pl) saw the houses' (pl) water (sg) (I heard). |
+**Vocabulary**
 
-**Vocabulary:** tara = water; kora = house; zera = road; bat = dog; kər = man; dal = child; ba = be/stay; vur = eat; kʷa = see; tʼa = go; dʷa = give.
+| Form | Meaning |
+|------|---------|
+| xan | man |
+| xana | men |
+| kel | child |
+| kelə | children |
+| guz | dog |
+| guza | dogs |
+| did | woman |
+| didə | women |
+| vur | water |
+| vura | waters |
+| tar | house |
+| tara | houses |
+| Lemi | (proper name) |
+| Nura | (proper name) |
+| kan | come |
+| lar | sit |
+| par | fall |
+| sel | see |
+| tur | take |
+| var | eat / drink |
+| kur | big |
+| lur | small |
+
+**Sentences**
+
+| # | Sentence | Translation |
+|---|----------|-------------|
+| 1 | kelə kan | The children come. |
+| 2 | xana kan | The men come. |
+| 3 | guz par | The dog falls. |
+| 4 | didə lar | The women sit. |
+| 5 | Lemi-n kel kan | Lemi's child comes. |
+| 6 | Nura-n guz par | Nura's dog falls. |
+| 7 | did-n kelə lar | The woman's children sit. |
+| 8 | xan-n kur guz kan | The man's big dog comes. |
+| 9 | xan-l kel sel | The man sees the child. |
+| 10 | did-l guz tur | The woman takes the dog. |
+| 11 | kelə-l vur var | The children drink the water. |
+| 12 | xana-l did sel | The men see the woman. |
+| 13 | Lemi kel sel | Lemi sees the child. |
+| 14 | Nura guz tur | Nura takes the dog. |
+| 15 | Lemi-n kel-l did sel | Lemi's child sees the woman. |
+| 16 | did-n kelə-l xana sel | The woman's children see the men. |
+| 17 | xana-l Nura-n kur guz tur | The men take Nura's big dog. |
+| 18 | kel-l Nura sel | The child sees Nura. |
+| 19 | guza-l vur var | The dogs drink the water. |
 
 QUESTIONS
 
-Translate each English sentence into Lezgian.
+Translate the following between English and the target language.
 
-**Q1.** The children (pl) give (to) the dogs (pl).
+**Q1.** Translate into English: *Nura lur kel sel*
 
-**Q2.** The man (sg) was eating the dogs' (pl) water (sg) (I heard).
+**Q2.** Translate into English: *guza-l vur var*
 
-**Q3.** Do the dogs (pl) not eat the houses' (pl) water (sg)?
+**Q3.** Translate into English: *guza-l xan-n didə sel*
 
-**Q4.** The children's (pl) dogs (pl) ate the waters' (pl) road (sg) (I heard).
+**Q4.** Translate into the target language: "The small woman's dogs see the men."
 
-**Q5.** Are the children (pl) going on the roads (pl)?
+**Q5.** Translate into the target language: "Lemi's men take the big house."
 
-**Q6.** Do the children's (pl) dogs (pl) not see the houses' (pl) water (sg)?
+**Q6.** Translate into the target language: "Nura sees the woman's small child."
+
+**Q7.** Translate into the target language: "The big dogs drink Nura's water."
 
 ANSWERS
 
-**Q1.** dal-il bat-id dʷa.
+**Q1.** Nura sees the small child.
 
-**Q2.** kər-il bat-in tara vur-t-r.
+**Q2.** The dogs drink the water.
 
-**Q3.** bat-il kora-a-n tara vur-mq?
+**Q3.** The dogs see the man's women.
 
-**Q4.** dal-in bat-il tara-a-n zera vur-t-r.
+**Q4.** did-n lur guza-l xana sel
 
-**Q5.** zera-a-s dal-i tʼa-a-q?
+**Q5.** Lemi-n xana-l kur tar tur
 
-**Q6.** dal-in bat-il kora-a-n tara kʷa-mq?
+**Q6.** Nura did-n lur kel sel
+
+**Q7.** kur guza-l Nura-n vur var
 
 SOLUTION
 
-**Inferred rules:**
+**Step 1: Identify the plural suffix and vowel harmony.**
 
-**1. Noun stems and plural allomorphy.**
-Stems divide into vowel-final (tara, kora, zera) and consonant-final (bat, kər, dal). Plural is marked by -a after vowel-final stems (sentences 2: tara-a) and -i after consonant-final stems (sentence 3: bat-i).
+Comparing singular and plural forms in the vocabulary table:
+- xan (man) → xana (men): stem has back vowel /a/ → suffix is -a
+- guz (dog) → guza (dogs): stem has back vowel /u/ → suffix is -a
+- vur (water) → vura (waters): stem has back vowel /u/ → suffix is -a
+- tar (house) → tara (houses): stem has back vowel /a/ → suffix is -a
+- kel (child) → kelə (children): stem has front vowel /e/ → suffix is -ə
+- did (woman) → didə (women): stem has front vowel /i/ → suffix is -ə
 
-**2. Case marking.**
-Four cases are marked by suffixes. The ergative is -il with no allomorphy (attested on both V-final and C-final stems: sent. 9: zera-a-il; sent. 5: kər-il; sent. 11/14: bat-il). The genitive, dative, and locative show two-way allomorphy conditioned by the stem's final segment:
+The plural suffix is conditioned by vowel harmony:
+- Stems with back vowels (a, o, u) take **-a**
+- Stems with front vowels (e, i, ə) take **-ə**
 
-| Case | After V-final | After C-final |
-|------|--------------|---------------|
-| Ergative | -il | -il |
-| Genitive | -n | -in |
-| Dative | -d | -id |
-| Locative | -s | -is |
+This is confirmed in the data: xana (2, 12, 16, 17), guza (19) are back-harmony plurals; kelə (1, 7, 11, 16), didə (4, 16) are front-harmony plurals.
 
-Evidence: ergative -il (sent. 5: kər-il; sent. 9: zera-a-il); genitive -n (sent. 6: tara-n) vs. -in (sent. 15: kər-in); dative -d (sent. 7: kora-d) vs. -id (sent. 13: dal-id); locative -s (sent. 8: zera-s).
+**Step 2: Identify the genitive (possessive) suffix and dependent marking.**
 
-**3. Plural + case on vowel-final stems (no deletion).**
-The plural suffix -a simply precedes the case suffix: zera-a-il (sent. 9), tara-a-n (sent. 10).
+In possessive noun phrases, the possessor bears a suffix and the possessed noun (head) is bare:
+- Sentence 5: Lemi-n kel → "Lemi's child" (Lemi bears -n, kel is bare)
+- Sentence 6: Nura-n guz → "Nura's dog" (Nura bears -n, guz is bare)
+- Sentence 7: did-n kelə → "the woman's children" (did bears -n, kelə is bare)
+- Sentence 8: xan-n kur guz → "the man's big dog" (xan bears -n, guz is bare)
 
-**4. Plural + case on consonant-final stems (deletion of -i).**
-The plural suffix -i is deleted before any case suffix. Evidence:
-- Sent. 11: bat-il = "dogs (pl) eat" — the form is identical to singular ergative (sent. 14: bat-il = "dog (sg) eats"), but the translation confirms plurality. Underlying: bat-i-il → bat-il.
-- Sent. 12: kər-in = "men's (pl)" — identical to singular genitive (sent. 15: kər-in = "man's (sg)"). Underlying: kər-i-in → kər-in.
-- Sent. 13: dal-id = "children (pl)" (dative) — identical to what singular dative would be. Underlying: dal-i-id → dal-id.
+The genitive suffix is **-n**, appearing on the **possessor** (dependent element). The head noun is unmarked. This is **dependent marking**.
 
-This deletion applies before all case suffixes (erg, gen, dat, loc).
+**Step 3: Identify modifier-before-noun order.**
 
-**5. Ergative-absolutive alignment.**
-In transitive clauses, the agent bears ergative case and the patient is unmarked (absolutive). The verb carries no person/number agreement. Evidence: sent. 5 (kər-il tara vur: man-erg water-abs eat), sent. 9 (zera-a-il bat-i kʷa: roads-erg dogs-abs see).
+In every noun phrase, modifiers precede the head noun:
+- Genitive possessor before head: Lemi-n kel (5), Nura-n guz (6), did-n kelə (7), xan-n kur guz (8)
+- Adjective before head: kur guz (8, 17), lur kel (Q1)
+- Genitive + adjective before head: xan-n kur guz (8), Nura-n kur guz (17)
 
-**6. Modifier-before-noun order.**
-Genitive possessors precede the head noun (sent. 6: tara-n kora; sent. 10: tara-a-n kora; sent. 24: kora-a-n tara).
+The order is consistently: [possessor-gen] [adjective] [head noun].
 
-**7. Intransitive clause word order: Adv-loc + S-abs + V.**
-In intransitive clauses with a locative adverbial, the locative NP precedes the subject, which precedes the verb. Evidence: sent. 8 (zera-s kər tʼa: road-loc man-abs go).
+**Step 4: Identify the ergative suffix and ergative-absolutive alignment.**
 
-**8. Verbal morphology: suffix order and allomorphy.**
-Suffix order: Stem + Aspect + Tense + Evidentiality + Negation + Interrogative.
+In transitive clauses with common-noun agents, the agent bears a suffix:
+- Sentence 9: xan-l kel sel → "The man sees the child" (xan bears -l)
+- Sentence 10: did-l guz tur → "The woman takes the dog" (did bears -l)
+- Sentence 11: kelə-l vur var → "The children drink the water" (kelə bears -l)
+- Sentence 12: xana-l did sel → "The men see the woman" (xana bears -l)
+- Sentence 19: guza-l vur var → "The dogs drink the water" (guza bears -l)
 
-| Category | Marked | Unmarked |
-|----------|--------|----------|
-| Aspect | imperfective: -a | perfective: ∅ |
-| Tense | past: -t | non-past: ∅ |
-| Evidentiality | indirect: -r | direct: ∅ |
-| Negation | negative: -m | affirmative: ∅ |
-| Interrogative | question: -q | statement: ∅ |
+The ergative suffix is **-l**, appearing on the **agent (A)** of transitive clauses. The patient (P) is unmarked.
 
-Evidence: perfective non-past = bare stem (sent. 5: vur); past = -t (sent. 16: vur-t); imperfective = -a (sent. 17: vur-a); indirect = -r (sent. 19: vur-t-r); negation = -m (sent. 20: vur-m); interrogative = -q (sent. 21: vur-q).
+In intransitive clauses, the subject is unmarked:
+- Sentence 1: kelə kan → S = kelə (unmarked)
+- Sentence 2: xana kan → S = xana (unmarked)
+- Sentence 3: guz par → S = guz (unmarked)
+- Sentence 4: didə lar → S = didə (unmarked)
 
-**9. Aspect-tense deletion (imperfective -a deleted before past -t).**
-Sent. 18: vur-t = "was eating" (imperfective past). Underlying: vur-a-t → vur-t. This is surface-identical to perfective past (sent. 16: vur-t = "ate"). The distinction is only recoverable from semantic context.
+The intransitive subject (S) is unmarked, just like the transitive patient (P). This gives: **S = P (absolutive, unmarked) ≠ A (ergative, marked with -l)**.
 
-**10. Evidentiality conditioned on past tense.**
-The suffix -r (indirect evidentiality) appears only in the presence of -t (past). It never appears on non-past verbs in the data. Evidence: sent. 19 (vur-t-r: past + indirect) vs. sent. 16 (vur-t: past + direct). The semantic contrast ("I heard" vs. no evidential marking) confirms -r encodes source of information, not tense.
+**Step 5: Identify ergative suppression on proper names.**
 
-**11. Negation-interrogative fusion.**
-In negated questions, -m and -q fuse into a single surface form -mq. Evidence: sent. 22 (vur-mq? = "Does... not...?"). The form -m-q never appears; only -mq is attested.
+Sentences 13 and 14 present a critical contrast:
+- Sentence 13: Lemi kel sel → "Lemi sees the child" (Lemi is the agent but bears NO -l)
+- Sentence 14: Nura guz tur → "Nura takes the dog" (Nura is the agent but bears NO -l)
 
-**Answers derived:**
+Compare with common-noun agents in sentences 9–12, 19, which all bear -l. The proper names Lemi and Nura are unmarked in the agent position.
 
-**Q1.** dal-il bat-id dʷa.
-- dal (C-final) + i (pl) + il (erg) → dal-il (deletion of -i)
-- bat (C-final) + i (pl) + id (dat) → bat-id (deletion of -i)
-- dʷa (give, perfective non-past)
-- Order: A-erg + O-dat + V
+Sentence 18 confirms that proper names are also unmarked in the patient position:
+- Sentence 18: kel-l Nura sel → "The child sees Nura" (Nura is the patient, unmarked)
 
-**Q2.** kər-il bat-in tara vur-t-r.
-- kər-il: C-final sg ergative
-- bat-in: bat (C-final) + i (pl) + in (gen) → bat-in (deletion)
-- tara: V-final sg absolutive
-- vur-t-r: vur + a (imperf) + t (past) → vur-t (deletion of -a) + r (indirect)
-- Order: A-erg + [P-gen P-abs] + V
+Since the patient is always unmarked (absolutive), sentence 18 is expected. The critical observation is from sentences 13–14: proper names in the **agent** position lack the ergative suffix that common nouns receive. The rule is: **the ergative suffix -l is suppressed on proper names.**
 
-**Q3.** bat-il kora-a-n tara vur-mq?
-- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
-- kora-a-n: kora (V-final) + a (pl) + n (gen) — no deletion
-- tara: V-final sg absolutive
-- vur-mq: vur + mq (negation-interrogative fusion)
-- Order: A-erg + [P-gen P-abs] + V
+Word order (SOV: Agent–Patient–Verb) resolves the ambiguity of which unmarked NP is the agent when both are proper names or when a proper name is the agent.
 
-**Q4.** dal-in bat-il tara-a-n zera vur-t-r.
-- dal-in: dal (C-final) + i (pl) + in (gen) → dal-in (deletion)
-- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
-- tara-a-n: tara (V-final) + a (pl) + n (gen) — no deletion
-- zera: V-final sg absolutive
-- vur-t-r: vur + a (imperf) + t (past) → vur-t (deletion) + r (indirect)
-- Order: [A-gen A-erg] + [P-gen P-abs] + V
+**Step 6: Confirm no verbal agreement.**
 
-**Q5.** zera-a-s dal-i tʼa-a-q?
-- zera-a-s: zera (V-final) + a (pl) + s (loc) — no deletion
-- dal-i: dal (C-final) + i (pl) — absolutive, no case suffix, so NO deletion
-- tʼa-a-q: tʼa + a (imperf) + q (interrogative) — NO deletion of -a (no -t present); NO fusion (affirmative question)
-- Order: Adv-loc + S-abs + V (per sent. 8)
+Verbs are invariant regardless of argument number or identity:
+- kan: with kelə (1), xana (2), Lemi-n kel (5), xan-n kur guz (8) — all identical
+- sel: with xan-l kel (9), xana-l did (12), Lemi kel (13), Lemi-n kel-l did (15), did-n kelə-l xana (16), kel-l Nura (18), guza-l xan-n didə (Q3) — all identical
+- var: with kelə-l vur (11), guza-l vur (19) — all identical
+- tur: with did-l guz (10), Nura guz (14), xana-l Nura-n kur guz (17) — all identical
 
-**Q6.** dal-in bat-il kora-a-n tara kʷa-mq?
-- dal-in: dal (C-final) + i (pl) + in (gen) → dal-in (deletion)
-- bat-il: bat (C-final) + i (pl) + il (erg) → bat-il (deletion)
-- kora-a-n: kora (V-final) + a (pl) + n (gen) — no deletion
-- tara: V-final sg absolutive
-- kʷa-mq: kʷa + mq (negation-interrogative fusion)
-- Order: [A-gen A-erg] + [P-gen P-abs] + V
+Grammatical roles are identified solely through case marking on noun phrases.
+
+**Step 7: Confirm suffix stacking order.**
+
+When a plural noun bears a case suffix, the order is: stem + plural + case:
+- kelə-l (11, 16): kel + -ə (pl) + -l (erg)
+- xana-l (12, 17): xan + -a (pl) + -l (erg)
+- guza-l (19): guz + -a (pl) + -l (erg)
+- did-n (7, 16): did + -n (gen) [no plural here, but the pattern holds]
+
+**Solving the questions:**
+
+**Q1.** Nura lur kel sel:
+- Nura: proper name in first (agent) position → agent, ergative suppressed
+- lur kel: adjective + bare noun → "the small child" (patient, absolutive)
+- sel: see
+→ "Nura sees the small child."
+
+**Q2.** guza-l vur var:
+- guza-l: guz + -a (back pl) + -l (erg) → "the dogs" (agent)
+- vur: bare noun → "the water" (patient, absolutive)
+- var: drink
+→ "The dogs drink the water."
+
+**Q3.** guza-l xan-n didə sel:
+- guza-l: guz + -a (back pl) + -l (erg) → "the dogs" (agent)
+- xan-n: xan + -n (gen) → "the man's" (possessor)
+- didə: did + -ə (front pl), bare → "the women" (head of possessive NP, patient, absolutive)
+- sel: see
+→ "The dogs see the man's women."
+
+**Q4.** "The small woman's dogs see the men."
+- Agent: "the small woman's dogs" = did-n (gen possessor) + lur (adjective) + guza-l (guz + -a back pl + -l erg) = did-n lur guza-l
+- Patient: "the men" = xana (xan + -a back pl, bare)
+- Verb: sel
+- Order: A + P + V → **did-n lur guza-l xana sel**
+
+**Q5.** "Lemi's men take the big house."
+- Agent: "Lemi's men" = Lemi-n (gen possessor) + xana-l (xan + -a back pl + -l erg) = Lemi-n xana-l
+- Patient: "the big house" = kur (adjective) + tar (bare head) = kur tar
+- Verb: tur
+- Order: A + P + V → **Lemi-n xana-l kur tar tur**
+
+**Q6.** "Nura sees the woman's small child."
+- Agent: "Nura" = Nura (proper name, ergative suppressed)
+- Patient: "the woman's small child" = did-n (gen possessor) + lur (adjective) + kel (bare head) = did-n lur kel
+- Verb: sel
+- Order: A + P + V → **Nura did-n lur kel sel**
+
+**Q7.** "The big dogs drink Nura's water."
+- Agent: "the big dogs" = kur (adjective) + guza-l (guz + -a back pl + -l erg) = kur guza-l
+- Patient: "Nura's water" = Nura-n (gen possessor) + vur (bare head) = Nura-n vur
+- Verb: var
+- Order: A + P + V → **kur guza-l Nura-n vur var**
 
 DIFFICULTY
 
-**Level 5.** The puzzle requires the solver to discover and compose multiple interacting rules: (a) a two-way allomorphy system for most nominal suffixes (genitive, dative, locative) plus a uniform ergative; (b) a deletion rule creating genuine singular/plural ambiguity on consonant-final nouns; (c) a parallel deletion rule in the verbal system creating perfective/imperfective past ambiguity; (d) a conditioned rule (evidentiality requires past tense); (e) a fusion rule (negation + interrogative). The production questions require applying 3–5 rules simultaneously in configurations not present in the data, and Q5 specifically tests the solver's understanding of the *conditions* under which rules do NOT apply (no deletion without a case suffix; no -a deletion without -t; no fusion in affirmative questions) as well as the intransitive word order (Adv-loc + S-abs + V).
+Hard. The solver must integrate multiple interacting systems with non-obvious constraints: (1) identify a vowel-harmony-conditioned plural suffix (-a after back-vowel stems, -ə after front-vowel stems) from the data; (2) discover dependent marking in possessive NPs (genitive -n on possessor, head unmarked); (3) recognize consistent modifier-before-noun order; (4) infer ergative-absolutive alignment by contrasting transitive and intransitive clauses; (5) identify the ergative suppression rule for proper names — a non-obvious exception that creates ambiguity requiring resolution via word order; (6) recognize the absence of verbal agreement; (7) apply suffix stacking (stem + plural + case) in production. The production questions (Q4–Q7) require simultaneous application of at least four systems, with Q4 and Q7 being the most demanding as they require vowel-harmony-correct plural formation, ergative stacking, genitive marking, and adjective placement all at once. Q6 specifically tests the ergative suppression rule in production, requiring the solver to correctly leave a proper name unmarked in the agent position.

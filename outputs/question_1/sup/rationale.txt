@@ -1,94 +1,86 @@
 
 
-TARGET-LANGUAGE
-
-Supyire (sup), Niger-Congo > Senufo
+TARGET-LANGUAGE: Supyire (Senufo, Niger-Congo) (sup)
 
 CONSTRUCTION RATIONALE
 
-1. **Design the noun class system (5 classes).** Establish five noun classes, each with a distinct set of allomorphs that appear in four positions: (a) plural suffix, (b) definite suffix, (c) possessive suffix, and (d) pre-nominal agreement prefix on post-nominal modifiers (adjectives and numerals). Additionally, assign each class a distinct 3rd-person singular pronoun form. The classes should be assigned by a mix of semantic and formal criteria (e.g., one class for humans, one for natural features, one for abstracta, one for body parts/small objects, one for plants/cultivated items), but the semantic assignments must NOT be stated to the solver. The solver will infer class membership purely from which marker set a noun takes. Ensure that all five marker sets are phonologically distinct from one another in every position so that class identification is unambiguous. Choose at least two nouns per class for the data set (10+ nouns total) so the solver can confirm each class by seeing the pattern repeat.
+1. **Confirm the typological profile and identify the central inferential challenge.**
+   Supyire exhibits head marking in possessive NPs (the possessed noun carries the possessive marker; the possessor is unmarked), a mixed modifier order (demonstratives and genitives precede the noun; adjectives and numerals follow it), an obligatory class-specific plural suffix, a class-specific definite article suffix, and a noun class system with at least 5 classes. The central inferential challenge for the solver is the noun class system: it is not directly labeled, and the solver must discover it by noticing that multiple agreement slots (plural, definite, possessive) show parallel class-specific variation across nouns. The possessive head-marking and mixed modifier order are secondary inferences that depend on correctly parsing the noun phrase, which in turn depends on identifying the noun class.
 
-2. **Fix the noun-internal morphological order.** Establish a fixed linear order for suffixes on the noun stem: stem + plural suffix + definite suffix + possessive suffix. All three suffixes are class-specific (their form depends on the noun's class). The plural suffix is obligatory whenever the noun is plural (no unmarked plurals exist). The definite suffix is optional (marks definiteness). The possessive suffix is optional (marks that the noun is possessed). This ordering must be consistent across all data. The solver will need to determine this order by seeing nouns in combinations: singular-indefinite (bare stem), plural-indefinite (stem + Pl), singular-definite (stem + Def), plural-definite (stem + Pl + Def), and possessed forms (stem + [Pl] + [Def] + Poss). Provide at least one example of each combination for at least two different classes so the solver can confirm the order is invariant.
+2. **Design the noun class system (3–4 classes for the puzzle).**
+   Select 3 or 4 noun classes. Assign each class a distinct set of agreement forms across three slots: (a) plural suffix, (b) definite article suffix, (c) possessive marker suffix. The forms must be morphologically distinct from one another within each slot (so the solver can segment them) and distinct across slots for the same class (so the solver can tell which suffix is which). For example, if Class 1 has plural -ba, definite -na, possessive -ta, then no other class should share any of these forms in the same slot, and no slot should reuse a form from another slot for the same class. The classes should be semantically motivated where possible (e.g., humans, animals, plants, abstract/other) to give the solver a partial semantic cue, but at least one class should be "default" or formally assigned to prevent the solver from reducing the system to pure semantics.
 
-3. **Design the modifier system with mixed order.** Establish that the noun phrase has two modifier positions: a pre-nominal position (immediately before the noun stem) and a post-nominal position (immediately after the noun's internal morphology). Assign the following modifiers to each position:
-   - Pre-nominal: demonstrative (e.g., "this/that") and possessor (genitive noun or pronoun).
-   - Post-nominal: adjective and numeral.
-   
-   Post-nominal modifiers (adjectives, numerals) carry a class-specific agreement prefix that matches the noun's class. Pre-nominal modifiers (demonstrative, possessor) are class-invariant (they do not change form based on the noun's class). This asymmetry is important: it gives the solver a clear diagnostic for identifying which modifiers are pre-nominal vs. post-nominal (the post-nominal ones change form, the pre-nominal ones do not). The full NP template is:
-   
-   [Dem] [Possessor] N-stem [Pl] [Def] [Poss] [Adj-prefix + Adj-stem] [Num-prefix + Num-stem]
-   
-   (All bracketed elements are optional except N-stem; Pl is obligatory if plural; Poss is obligatory if possessed.)
+3. **Select the vocabulary set.**
+   Choose 8–12 countable nouns distributed across the 3–4 classes (at least 2–3 nouns per class). Include nouns from at least three semantic domains (e.g., kinship, animals, natural objects, body parts) so the solver can test whether class assignment is semantic or formal. Choose 4–6 adjectives that can modify nouns across classes. Choose 2–3 demonstratives (e.g., proximal, distal). Choose 3–5 verbs with person/number agreement. Include 2–3 proper nouns (personal names) to serve as unmarked possessors. Include 2–3 numerals (e.g., "two," "three") to demonstrate the noun-numeral order.
 
-4. **Design the possessive construction (head marking).** The possessive relationship is marked on the possessed noun (the head) via the possessive suffix described in step 2. The possessor is a free form (pronoun, proper noun, or common noun) that appears in the pre-nominal position. The possessor carries NO special possessive morphology (no genitive case marker, no possessive prefix). The possessive suffix on the head is class-specific (reflects the class of the possessed noun, not the possessor). There is no possessive classification (the suffix does not encode features of the possessor). This means:
-   - "the child's house" = [child] [house + Poss(class of house)]
-   - "my house" = [1sg-pronoun] [house + Poss(class of house)]
-   - "the house of the child" is NOT the structure; the possessor always precedes.
-   
-   The solver must infer that the possessive suffix is on the head (not the possessor) by observing that the possessor form is identical whether it appears in a possessive construction or in a non-possessive context (e.g., as a subject or object).
+4. **Design the possessive head-marking.**
+   In a possessive NP, the structure is: [Possessor-Noun] [Possessed-Noun + possessive-suffix + (definite-suffix) + (plural-suffix)]. The possessive suffix is a general marker (not person/number specific, per WALS 57A-4) but is class-specific (different form per noun class). The possessor noun appears in its bare form (no genitive case marking, no possessive affix). This is the critical contrast with English: the solver must notice that the possessor never changes form, while the possessed noun acquires an extra suffix. The possessive suffix must be morphologically distinct from the definite and plural suffixes to allow unambiguous segmentation.
 
-5. **Design the clausal structure (SOV with postpositions).** Establish that the basic clause order is Subject – Object – Verb. The verb is uninflected for person/number in this design (to keep the focus on nominal morphology); instead, person is expressed by free pronouns or by the noun itself. Locative and directional complements are expressed by postpositions (the noun precedes the postposition, e.g., "house in" = "in the house"). This postpositional order is typologically consistent with the post-nominal modifier order and the SOV clause order, providing a cross-confirmation pattern the solver can use to verify their analysis. Provide at least two postpositions (e.g., one for "in/at" and one for "to/toward") in the data.
+5. **Design the definite article and plural suffix.**
+   Both are suffixes on the noun, both are class-specific. The definite article marks a specific/known referent. The plural suffix is obligatory (every noun in the data appears with it, even in singular contexts—this reflects the typological fact that Supyire requires explicit plural marking, and in the puzzle, the "unmarked" form is actually the plural form, or alternatively, the puzzle can present both singular and plural forms with the plural being the marked one; the key is that the suffix is always present in the data). The order of suffixes on the noun should be fixed (e.g., root + possessive + definite + plural, or root + plural + definite + possessive—choose one and be consistent). This fixed order is itself a discoverable rule.
 
-6. **Design the negation system (optional double negation).** Establish two negative particles: a preverbal particle (appearing between S and O, or between O and V) and a postverbal particle (appearing after V). Negation can be expressed by either particle alone or by both simultaneously. The double form is optional (not obligatory). The data must include: (a) at least two examples with only the preverbal particle, (b) at least two examples with only the postverbal particle, (c) at least two examples with both particles, and (d) at least two affirmative examples with no negation. This allows the solver to infer that both particles are individually sufficient for negation and that their co-occurrence is optional. The preverbal particle's position (between S and O, or between O and V) should be fixed and consistent in the data so the solver can identify its slot.
+6. **Design the mixed modifier order.**
+   Demonstratives and genitive (possessor) phrases precede the noun. Adjectives and numerals follow the noun. This creates a "sandwich" structure in complex NPs: [Demonstrative] [Possessor] [Noun + suffixes] [Adjective] [Numeral]. The solver must discover that the order is not uniform: some modifiers go before, some after. The critical evidence is a contrast: a sentence with a demonstrative + noun (showing demonstrative before) and a sentence with a noun + adjective (showing adjective after), ideally with the same noun in both to control for class effects.
 
-7. **Construct the data set in progressive complexity.** Organize the sentences (or glossed examples) in a sequence that introduces systems gradually:
-   
-   **Phase A – Basic nouns and number (sentences 1–4):** Present simple noun phrases in isolation or as subjects/objects of minimal clauses. Show singular and plural forms of nouns from at least three different classes. The solver should be able to identify: (a) the plural suffix and its class-specific allomorphs, (b) the existence of multiple noun classes (by noticing that different nouns take different plural suffixes), and (c) the basic SOV clause order.
-   
-   **Phase B – Definiteness (sentences 5–7):** Introduce the definite suffix. Show the same noun in definite and indefinite forms. Show definite + plural combinations. The solver should identify the definite suffix, its class-specific allomorphs, and its position relative to the plural suffix (confirming the order from step 2).
-   
-   **Phase C – Post-nominal modifiers (sentences 8–11):** Introduce adjectives and numerals. Show them following the noun with class-specific agreement prefixes. Show at least two different adjectives and two different numerals modifying nouns from at least three classes. The solver should identify: (a) that adjectives and numerals are post-nominal, (b) that they carry class-specific prefixes, and (c) that this provides additional evidence for the noun class system.
-   
-   **Phase D – Pre-nominal modifiers and possession (sentences 12–16):** Introduce demonstratives and possessive constructions. Show a demonstrative preceding a noun. Show a possessive construction with a pronoun possessor and a noun possessor. Show the possessive suffix on the head noun. The solver should identify: (a) that demonstratives are pre-nominal, (b) that the possessor precedes the possessed noun, (c) that the possessive suffix is on the head (not the possessor), and (d) that the possessive suffix is class-specific.
-   
-   **Phase E – Full NP combinations (sentences 17–20):** Present noun phrases that combine multiple elements: demonstrative + possessor + noun + plural + definite + possessive + adjective + numeral. These "maximal" NPs allow the solver to verify the complete template and confirm the linear order of all elements. Include at least one example from each of the five noun classes in this phase to ensure all class marker sets are fully attested.
-   
-   **Phase F – Clausal context with postpositions and negation (sentences 21–26):** Embed the NPs in full clauses. Show postpositions. Show the negation system (single and double). Show the preverbal negative's position. The solver should identify: (a) postpositional case marking, (b) the two negative particles and their positions, and (c) the optionality of double negation.
-   
-   **Phase G – Complex sentences (sentences 27–30):** Combine multiple systems in single sentences: e.g., a possessive NP with a demonstrative and adjective as subject, a postpositional phrase as object, a negated verb, and a numeral. These sentences test the solver's ability to integrate all rules simultaneously.
+7. **Design verb morphology and clause structure.**
+   Use SOV word order. Verbs carry person/number agreement (prefix or suffix—choose one and be consistent). Include at least one aspectual marker (e.g., a suffix for progressive or habitual) that is morphologically distinct from person/number marking. Use postpositions for spatial/relational phrases (noun + postposition), consistent with the SOV profile. This provides confirmatory typological evidence: the solver who has already inferred noun-before-adjective and SOV will find the postpositional strategy consistent and reinforcing.
 
-8. **Design the questions with progressive difficulty.** Create 8–10 questions that test the inferred rules in increasing combinations:
-   
-   - **Q1 (easy, target→English):** A simple SOV sentence with a plural noun and a post-nominal adjective. Tests: SOV order, plural suffix, post-nominal adjective position, class agreement.
-   
-   - **Q2 (easy, target→English):** A sentence with a possessive NP (pronoun possessor + possessed noun with possessive suffix) and a postposition. Tests: head-marking possessive, pre-nominal possessor, postposition.
-   
-   - **Q3 (medium, target→English):** A sentence with a demonstrative + possessed noun + adjective + numeral, all in one NP, in an SOV clause. Tests: full NP template, mixed modifier order, class agreement on post-nominal modifiers.
-   
-   - **Q4 (medium, target→English):** A negated sentence (double negation) with a definite plural noun and a postpositional phrase. Tests: negation optionality, definite + plural order, postposition.
-   
-   - **Q5 (medium, English→target):** Translate a sentence requiring the solver to select the correct class-specific plural suffix, definite suffix, and adjective prefix for a noun whose class must be identified from context (the noun appears earlier in the data with its markers). Tests: class identification, noun-internal morphology order, post-nominal modifier agreement.
-   
-   - **Q6 (medium-hard, English→target):** Translate a sentence with a possessive NP (noun possessor + possessed noun) modified by an adjective, in a clause with a postposition. The solver must: place the possessor before the head, add the correct possessive suffix (class of the possessed noun), place the adjective after the noun with the correct prefix, and use the correct postposition. Tests: possessive structure, modifier order, class agreement, postposition.
-   
-   - **Q7 (hard, English→target):** Translate a sentence with a demonstrative + possessive NP + adjective + numeral, in a negated clause (the solver must choose whether to use single or double negation—accept either). Tests: full NP template, possessive head-marking, class agreement, negation.
-   
-   - **Q8 (hard, English→target):** Translate a sentence that requires the solver to identify the noun class of a noun that has NOT been seen with all its markers in the data (only seen in one or two contexts), then apply the correct class-specific forms for plural, definite, possessive, and adjective agreement. This tests whether the solver has truly internalized the class system or is merely pattern-matching.
-   
-   - **Q9 (hard, analysis question):** Present a novel NP (not seen in the data) and ask the solver to identify the noun class, number, definiteness, possession, and modifiers, explaining their reasoning. This tests metalinguistic awareness and the ability to apply the full system to new data.
-   
-   - **Q10 (optional, very hard, English→target):** A sentence combining all systems: a complex NP (demonstrative + possessive + plural + definite + adjective + numeral) as subject, a postpositional phrase as object, double negation, and a second clause (if a conjunction is included). Tests full integration.
+8. **Design secondary systems (negation, conjunctions, conditionals).**
+   Include a preverbal negation particle. Include at least one conjunction (adversative or additive). Optionally include a conditional construction (if-then markers). These are not the focus of the puzzle but provide material for the harder translation questions and make the data set feel like a natural text rather than a grammar sketch.
 
-9. **Verify solvability and disambiguation.** Before finalizing the puzzle, check the following:
-   
-   - **Class identifiability:** For each of the five classes, confirm that at least two nouns are attested with enough marker combinations (plural, definite, possessive, adjective agreement) that the solver can unambiguously group them. No two classes should share any allomorph in any position.
-   
-   - **Modifier order disambiguation:** Confirm that no sentence in the data could be reanalyzed with a different modifier order. Specifically: (a) the demonstrative must never appear after the noun; (b) the adjective must never appear before the noun; (c) the possessor must never appear after the possessed noun. If a noun and an adjective could be confused (e.g., if an adjective looks like a noun), ensure that context (e.g., the presence of a class-specific prefix on the adjective) disambiguates.
-   
-   - **Possessive structure disambiguation:** Confirm that the possessive suffix cannot be reanalyzed as a plural or definite suffix. The possessive suffix must be phonologically distinct from both the plural and definite suffixes in every class. Additionally, confirm that the possessor is never marked (no genitive case on the possessor) so the solver cannot confuse the possessive suffix with a case marker on the possessor.
-   
-   - **Noun-internal order disambiguation:** Confirm that the order Pl > Def > Poss is the only order consistent with the data. If a noun appears with both Pl and Def, the solver must be able to determine which is which (they should be phonologically distinct). If a noun appears with Pl, Def, and Poss, the three suffixes must be mutually distinguishable.
-   
-   - **Negation optionality:** Confirm that the data contains both single-negation and double-negation examples, so the solver can infer that both particles are individually sufficient and that co-occurrence is optional. If only double negation appeared, the solver might incorrectly infer that both are obligatory.
-   
-   - **No rule is stated:** Verify that no gloss, label, or metadata in the puzzle directly states any rule the solver is meant to discover (e.g., do not label a suffix as "PL" or "DEF" in the data; present the forms without morphological labels).
-   
-   - **Question coverage:** Confirm that every rule tested in the questions is supported by at least one example in the data. Confirm that the two CORE concepts (mixed modifier order and head-marking possession) are each tested in at least three questions and are always tested in combination with at least one other rule.
+9. **Construct baseline sentences (sentences 1–4): introduce the noun class system and obligatory plural.**
+   - Sentence 1: A simple declarative sentence with a single noun (Class A) in the definite + plural form, as subject of a verb. This introduces the noun with its class-specific suffixes and the basic SOV order.
+   - Sentence 2: A sentence with a noun from Class B in the same structural position. The solver now sees that the suffixes differ from Sentence 1, raising the question: why?
+   - Sentence 3: A sentence with a noun from Class C (or D) in the same position. Now three (or four) different suffix sets are visible. The solver should begin grouping nouns by their suffix patterns.
+   - Sentence 4: A sentence with a second noun from Class A (a different noun, same class). This confirms that the suffixes are not idiosyncratic to a single noun but are shared by a group of nouns—i.e., they are class markers.
 
-10. **Ensure typological consistency and avoid contradictions.** Verify that all design choices are mutually consistent:
-    - SOV clause order is consistent with post-nominal modifiers (NAdj, NNum) and postpositions.
-    - Head-marking possession is consistent with the possessor being a free pre-nominal element (the head bears the marker; the dependent is unmarked).
-    - The noun class system is non-sex-based (no class is defined by biological sex; classes are based on semantic categories like animate/inanimate, natural/artificial, etc.).
-    - The plural suffix is obligatory (no zero-plural exists), which means every plural noun in the data must show the suffix—this is a strong diagnostic for the solver.
-    - The definite suffix is optional (both definite and indefinite NPs appear in the data), so the solver must distinguish the definite suffix from the plural suffix and possessive suffix.
-    - The optional double negation does not interact with the noun class system (negation is a clause-level phenomenon independent of nominal morphology), keeping the systems separable for the solver.
+   At this stage, the solver should be able to: (a) identify that nouns carry suffixes, (b) notice that the suffixes vary across nouns in a systematic way, (c) group nouns into classes based on shared suffix forms, and (d) infer that the suffixes are obligatory (they appear on every noun in every sentence).
+
+10. **Construct contrastive sentences (sentences 5–8): introduce possessive head-marking.**
+    - Sentence 5: A possessive NP where a proper noun is the possessor and a Class A noun is the possessed. The possessed noun carries the Class A possessive suffix. The proper noun is bare. This is the first evidence of head marking.
+    - Sentence 6: A possessive NP with the same proper noun as possessor but a Class B noun as possessed. The possessed noun now carries the Class B possessive suffix. The proper noun is still bare. This confirms: (a) the possessor is unmarked, (b) the possessive marker is on the head, (c) the possessive marker is class-specific.
+    - Sentence 7: A non-possessive NP with the same Class A noun from Sentence 5, now without the possessive suffix. This provides a minimal pair: with vs. without the possessive marker, confirming that the marker is specifically a possessive marker (not just a general suffix that appears in all contexts).
+    - Sentence 8: A possessive NP where the possessor is a common noun (not a proper name), e.g., "the child's house." The possessor noun is bare (no genitive case, no possessive affix). The possessed noun carries the possessive suffix. This confirms that the head-marking strategy applies regardless of possessor type.
+
+    At this stage, the solver should infer: the possessed noun (head) is marked for possession; the possessor is unmarked; the possessive marker is class-specific; the possessive marker is distinct from the definite and plural suffixes.
+
+11. **Construct modifier-order sentences (sentences 9–12): introduce the mixed order.**
+    - Sentence 9: A noun phrase with a demonstrative + noun (e.g., "this house"). The demonstrative precedes the noun. The noun carries its class-specific suffixes.
+    - Sentence 10: A noun phrase with a noun + adjective (e.g., "house big"). The adjective follows the noun. The noun carries its class-specific suffixes.
+    - Sentence 11: A noun phrase with a noun + numeral (e.g., "house two"). The numeral follows the noun. This confirms that the "after" position is not limited to adjectives.
+    - Sentence 12: A complex NP combining a demonstrative + possessor + noun + adjective (e.g., "this [person's] house big"). This shows the full sandwich structure and confirms that the order is: [Demonstrative] [Possessor] [Noun+suffixes] [Adjective]. The solver must now integrate the possessive head-marking (from step 10) with the modifier order (from steps 9–11).
+
+    At this stage, the solver should infer: modifier order is not uniform; demonstratives and possessors precede the noun; adjectives and numerals follow the noun; the head noun (with its class-specific morphology) is the anchor point for determining which side each modifier is on.
+
+12. **Construct secondary-system sentences (sentences 13–16): introduce aspect, negation, conjunctions.**
+    - Sentence 13: A verb with the aspectual marker in a context where the interpretation is unambiguous (e.g., a progressive reading).
+    - Sentence 14: A negated clause, showing the negation particle in its canonical position.
+    - Sentence 15: Two clauses linked by a conjunction (adversative or additive).
+    - Sentence 16: A sentence combining a postpositional phrase with the SOV order, confirming the postpositional strategy.
+
+    These sentences are not the focus of the core inferences but provide material for the harder translation questions and make the data set feel like a coherent text.
+
+13. **Construct complex sentences (sentences 17–20): combine three or more systems simultaneously.**
+    - Sentence 17: A possessive NP (head-marked, class-specific) + adjective modifier (after the noun) + definite article + plural suffix, all on the same noun, in an SOV clause with person/number agreement on the verb.
+    - Sentence 18: A demonstrative + possessive NP + numeral, showing the full modifier sandwich, in a clause with the aspectual marker.
+    - Sentence 19: A negated clause containing a possessive NP with a Class C or D noun (a class the solver has seen less frequently), testing whether the solver can generalize the class-specific forms to less-frequent classes.
+    - Sentence 20: The most complex sentence in the set, combining at least four systems (e.g., possessive head-marking + mixed modifier order + aspect + conjunction + postpositional phrase). This sentence should be translatable only if the solver has correctly identified all the core rules.
+
+14. **Design the translation questions with progressive difficulty.**
+    - Q1 (easy, target→English): A simple sentence with a single noun (Class A) in definite + plural form, as subject of a verb. Tests: noun class identification (the solver must recognize the Class A suffixes), obligatory plural, SOV order.
+    - Q2 (easy, target→English): A possessive NP with a proper noun possessor and a Class B possessed noun. Tests: head-marking inference (the solver must identify that the suffix on the possessed noun is the possessive marker, not the definite or plural), class-specific possessive form.
+    - Q3 (medium, target→English): A sentence with a demonstrative + noun + adjective, where the noun is Class C. Tests: mixed modifier order (demonstrative before, adjective after), class-specific suffixes on a less-frequent class.
+    - Q4 (medium, target→English): A sentence with a possessive NP + adjective modifier + numeral, all on the same noun (Class D). Tests: full modifier sandwich, head-marking, class-specific forms, integration of multiple rules.
+    - Q5 (medium-hard, English→target): A sentence requiring the solver to produce a possessive NP with a specific noun class, a definite article, and an adjective modifier. The solver must select the correct class-specific forms for all three suffixes and place the adjective in the correct position.
+    - Q6 (hard, English→target): A sentence requiring a demonstrative + possessive NP + adjective + numeral, with the aspectual marker on the verb. The solver must produce the full modifier sandwich with correct class-specific forms and correct verb morphology.
+    - Q7 (hard, English→target): A sentence requiring a possessive NP (with a common noun possessor) + negation + conjunction + postpositional phrase. The solver must leave the possessor unmarked, apply the correct possessive suffix to the head, position the negator, select the conjunction, and use the postposition.
+    - Q8 (hard, English→target): The most complex translation, requiring at least four systems simultaneously (e.g., possessive head-marking + mixed modifier order + aspect + negation + class-specific morphology on a less-frequent class).
+
+15. **Verify disambiguation and solvability.**
+    - Confirm that no sentence allows an alternative analysis where the possessive marker could be interpreted as a definite article or plural suffix. The three suffix types must be morphologically distinct in every class, and the data must include at least one minimal pair (same noun, with vs. without the possessive marker) to confirm the possessive marker's identity.
+    - Confirm that no sentence allows an alternative analysis where the modifier order is uniform. The data must include at least one demonstrative-before-noun example and at least one adjective-after-noun example, ideally with the same noun to control for class effects.
+    - Confirm that the noun class system is uniquely determined: no two classes should share a suffix form in any slot, and the data should include enough nouns per class (at least 2–3) to rule out the possibility that the suffixes are idiosyncratic to individual nouns.
+    - Confirm that the possessive head-marking is unambiguously head-marking (not dependent marking): in every possessive NP, the possessor must be morphologically bare, and the possessed noun must carry the marker. No sentence should show a possessor with any kind of possessive affix.
+    - Confirm that every rule required by the questions is uniquely determined by at least one sentence in the data. No question should require a rule that is absent from the data.
+    - Confirm that the noun class system is tested in at least 4 of the 8 questions (since it underlies all the other inferences), head-marking in at least 3, and mixed modifier order in at least 3. Each core feature should always be tested in combination with at least one other rule.
+    - Confirm that tone is not used as a distinguishing feature anywhere in the data. All class distinctions and morphological contrasts should be segmental (vowel/consonant differences in suffixes), not tonal.

@@ -1,55 +1,48 @@
 
 
-TARGET-LANGUAGE
-
-Abkhaz (abk), Northwest Caucasian
+TARGET-LANGUAGE: Abkhaz (abk)
 
 CONSTRUCTION RATIONALE
 
-1. Establish the fixed phonological inventory. The language has exactly four vowels: a, e, i, o. The consonant inventory includes three ejective stops (pʼ, tʼ, kʼ) contrasted with their plain counterparts (p, t, k), plus the following non-ejective consonants: s, m, n, r, l, w, y, b, d, g, f. The ejective is marked orthographically with an apostrophe (ʼ). The solver must identify the 4-vowel inventory from the full lexicon and the ejective contrast from minimal pairs. No other phonological processes (stress, tone, vowel harmony) are present.
+1. **Establish the morphological inventory and vocabulary set.**
+   Select 5–7 countable nouns spanning at least two semantic categories (e.g., kinship terms like "child, mother, brother" and natural/cultural objects like "house, path, boat"). Select 4–6 adjectives that can naturally modify these nouns (e.g., "big, old, new, good, long"). Establish the possessive prefix paradigm for at least four person/number values (1SG, 2SG, 3SG, 1PL or 2PL — choose whichever set gives the clearest contrast). Establish the plural suffix form. If postpositions are included, select 1–2 (e.g., a locative "in/on" and a directional "to/toward"). Optionally include 2–3 verbs for SOV data, but keep verbal data minimal and clearly separable from the nominal-domain focus.
 
-2. Fix the closed lexicon. Use exactly the following items. Nouns: fana (house), amre (water), tʼari (child), tari (mother), kʼaba (dog), kaba (tree), sore (path), pʼano (stone), pano (father). Adjectives: lare (big), wone (good), kʼari (old), bile (new). Verb stems: ra (go), kʼa (see), ba (eat), ta (fall), wa (give). The minimal pairs are: tari/tʼari (t/tʼ), kaba/kʼaba (k/kʼ), pano/pʼano (p/pʼ). All four vowels appear across the lexicon: a (fana, kaba, lare), e (amre, sore, lare, bile), i (tʼari, tari, kʼari, bile), o (sore, pʼano, pano, wone).
+2. **Construct the first data block: possessive prefix discovery (the primary "aha").**
+   Present 3–4 sentences (or noun-phrase fragments) in which the SAME noun stem appears with different possessive prefixes, and the possessor is NOT a separate word. The critical design principle: the solver must be able to identify the invariant portion (the noun stem) and the variable portion (the prefix) purely from distributional evidence. For example, if the noun "house" appears as [prefix-A + stem] meaning "my house" and [prefix-B + stem] meaning "your house," the solver can isolate the stem and recognize the prefix as the possessive marker. Ensure that no sentence in this block contains a separate possessor word — the possessor is encoded ONLY by the prefix. This is the moment the solver discovers head marking: the possessor is not a free element; it is fused to the head.
 
-3. Fix the possessive prefix paradigm. The possessed noun bears a prefix encoding the possessor's person. The possessor itself is morphologically unmarked (no free pronoun appears). The paradigm is: 1sg = ma-, 2sg = da-, 3sg = zero. There is no plural distinction in the possessive prefix; number of the possessor is not encoded. Examples: ma-fana (my house), da-fana (your house), fana (his/her/the house), kʼaba fana (the dog's house).
+3. **Construct the second data block: noun-adjective order (the stable anchor).**
+   Present 2–3 examples showing a noun modified by an adjective, with the noun clearly preceding the adjective. The noun should be identifiable as the head (e.g., it can take a possessive prefix in another example, or its semantic category is clearly nominal). The adjective should be a separate word following the noun. This establishes the head-first pattern in the nominal domain and gives the solver a stable reference point: "the noun comes first, the modifier comes after." This pattern will later contrast with the possessive strategy.
 
-4. Fix the verbal person-marking paradigm. The verb encodes person through two slots: a prefix (P/S slot) and a suffix (A slot). The P/S prefix paradigm is identical to the possessive prefix paradigm: 1sg = ma-, 2sg = da-, 3sg = zero. The A suffix paradigm is: 1sg = -ri, 2sg = -li, 3sg = zero. In intransitive clauses, only the P/S prefix appears (marking S). In transitive clauses, both the P prefix and the A suffix appear. The linear order is always P-prefix + verb stem + A-suffix. This yields ergative alignment: S (intransitive subject) is marked by the same prefix as P (transitive patient), while A (transitive agent) is marked by a distinct suffix.
+4. **Construct contrastive evidence: forcing unique identification of the prefix vs. the stem.**
+   Present a near-minimal pair or small set where the same noun stem appears with two different possessive prefixes, and also appears WITHOUT a possessive prefix (e.g., in a 3SG context if 3SG is unmarked, or in a context where the possessor is not specified). This forces the solver to confirm: (a) the prefix is the variable element encoding the possessor, (b) the stem is invariant, (c) the prefix is not a separate word (it is orthographically fused to the stem). If 3SG is unmarked in Abkhaz, this is a natural and elegant way to show the "zero" form. If all persons have overt prefixes, use a context where the noun appears without any prefix (e.g., in a non-possessive context) to establish the bare stem.
 
-5. Fix the remaining morphological and syntactic rules. Plural is marked by the suffix -ba on the noun (obligatory for plural, absent for singular). Adjectives follow the head noun (NAdj order). The basic clause order is SOV (subject NP, object NP, verb). Negation is a preverbal particle ga placed immediately before the verb. Stative clauses (noun + adjective) have no verb. Possessive noun phrases have the structure: [Possessor NP] [possessive-prefix + possessed noun], where the possessor NP is unmarked.
+5. **Introduce the plural suffix: the prefix-suffix sandwich.**
+   Present 2–3 examples where a noun bears BOTH a possessive prefix AND a plural suffix, creating the structure [poss-prefix + stem + plural-suffix]. The key design principle: the plural suffix must be distinguishable from the possessive prefix by its position (suffix vs. prefix) and by its invariance across different possessors (the suffix stays the same whether the possessor is 1SG or 2SG, while the prefix changes). The solver should infer: "The language uses both prefixing and suffixing on the same noun; the prefix encodes the possessor, the suffix encodes plurality of the possessed." This is the second major "aha" — the noun is a morphological sandwich.
 
-6. Construct the data set as exactly the following 18 sentences, presented to the solver with English translations. The ordering is designed so that earlier sentences establish simpler systems and later sentences build on them. Sentences 1–4 establish NAdj order, SOV, and ejective contrasts. Sentences 5–8 establish possessive head-marking. Sentences 9–11 establish intransitive verbal person marking. Sentences 12–14 establish transitive verbal person marking and ergative alignment. Sentences 15–18 introduce negation, plural, the p/pʼ contrast, and a plural object in a transitive clause.
+6. **Introduce postpositions: the systematic contrast with possessive marking.**
+   Present 2–3 examples showing a noun followed by a postposition (e.g., "house + in" = "in the house"). The postposition is a SEPARATE word, just like the adjective in step 3. The solver should now be able to recognize a systematic pattern: adjectives and postpositions are free, post-nominal elements, while the possessor is a bound prefix on the noun. This is the third "aha": the language treats possession morphologically (fused to the head) while treating other modification syntactically (separate post-nominal words). The solver should be able to articulate this contrast.
 
-   (1) kʼaba lare ta — "The big dog fell."
-   (2) tari ta — "The mother fell."
-   (3) tʼari wone — "The child is good."
-   (4) kaba lare — "The tree is big."
-   (5) ma-fana — "My house."
-   (6) da-fana — "Your house."
-   (7) fana — "The house."
-   (8) kʼaba fana — "The dog's house."
-   (9) ma-ra — "I go."
-   (10) da-ra — "You go."
-   (11) ra — "He/she goes."
-   (12) da-kʼa-ri — "I see you."
-   (13) ma-kʼa-li — "You see me."
-   (14) ma-kʼa — "He/she sees me."
-   (15) ga-ra — "I don't go."
-   (16) tʼari-ba lare — "The big children."
-   (17) pano pʼano — "The father's stone."
-   (18) amre-ba kʼa-ri — "I see the waters."
+7. **Construct complex combination sentences.**
+   Present 3–4 sentences that combine multiple systems simultaneously:
+   - A possessive NP with a plural suffix AND an adjective: [poss-prefix + stem + plural-suffix] + adjective. This tests whether the solver can correctly segment all three morphological/syntactic elements.
+   - A possessive NP with a postposition: [poss-prefix + stem] + postposition. This tests whether the solver can distinguish the fused possessive prefix from the free postposition.
+   - A sentence with two different possessors and the same noun type, showing that the prefix changes while the stem and any suffix remain constant.
+   - Optionally, a simple SOV sentence with a possessive NP as an argument, to show that the possessive NP functions as a unit within the clause.
 
-7. Design exactly 8 questions with the following specifications. Q1 and Q2 are easy target-to-English translations testing single systems. Q3 is a medium target-to-English translation combining four systems. Q4 and Q5 are medium English-to-target translations. Q6, Q7, and Q8 are hard, combining three or more systems in configurations not seen verbatim in the data.
+8. **Design the translation questions with progressive difficulty.**
+   - Q1 (easy): Target-to-English. A simple possessive NP with a 1SG or 2SG prefix. Tests: prefix identification, stem identification. All elements appear individually in the data.
+   - Q2 (easy): Target-to-English. A noun + adjective sequence. Tests: noun-adjective order. The solver must identify which word is the noun and which is the adjective.
+   - Q3 (medium): Target-to-English. A possessive NP with a plural suffix. Tests: prefix-suffix segmentation. The solver must identify both the possessive prefix and the plural suffix and determine which is which.
+   - Q4 (medium): Target-to-English. A possessive NP with a postposition. Tests: distinguishing the fused possessive prefix from the free postposition. The solver must recognize that the prefix is part of the noun while the postposition is a separate word.
+   - Q5 (medium-hard): English-to-Target. A sentence requiring the solver to apply the correct possessive prefix + plural suffix + adjective in the correct order. The solver must select the right prefix for the given possessor, add the plural suffix, and place the adjective after the noun.
+   - Q6 (hard): English-to-Target. A sentence requiring a possessive NP with a postposition AND an adjective, testing the solver's ability to correctly order all elements: [poss-prefix + stem (+ plural-suffix)] + adjective + postposition (or the correct linear order as determined by the data).
+   - Q7 (hard): English-to-Target. A sentence with two possessive NPs (different possessors, same or different nouns) in a single clause, requiring the solver to apply different prefixes to different nouns and maintain correct noun-modifier order throughout.
 
-   Q1 (easy, T→E): Translate "da-kʼa-ri."
-   Q2 (easy, T→E): Translate "tʼari-ba lare."
-   Q3 (medium, T→E): Translate "kʼaba lare fana ga-da-kʼa-ri."
-   Q4 (medium, E→T): Translate "You see the big tree."
-   Q5 (medium-hard, E→T): Translate "I don't see your child."
-   Q6 (hard, E→T): Translate "The old mother's big house."
-   Q7 (hard, E→T): Translate "You see the new father's stone."
-   Q8 (hard, T→E): Translate "ga-kaba-ba lare kʼa-li."
-
-8. Verify the following solvability conditions before finalizing. (a) The ejective contrast is identifiable from at least two minimal pairs in the data (tari/tʼari in sentences 2–3, kaba/kʼaba in sentences 1 and 4, pano/pʼano in sentence 17). (b) The 4-vowel inventory is fully attested across the data. (c) The possessive prefix paradigm is uniquely determined by sentences 5–8: ma- and da- are distinguished by contrast, and zero is inferred from the absence of a prefix in (7) and (8) where the possessor is 3sg. (d) The ergative alignment is uniquely determined by comparing sentences 9–11 (intransitive: S prefix = ma-/da-/zero) with sentences 12–14 (transitive: P prefix = ma-/da-/zero, A suffix = -ri/-li/zero). The solver observes that the intransitive S prefix is identical to the transitive P prefix, establishing S=P alignment. (e) The P-before-A ordering is determined by the linear order in sentences 12–14: the P prefix always precedes the verb stem, and the A suffix always follows it. (f) The NAdj order is established by sentences 1, 3, 4, and 16, and is never contradicted. (g) The SOV order is established by sentences 1, 2, 9, 10, 11, 12, 13, 14, 15, and 18. (h) Negation is established by sentence 15 and confirmed in Q3 and Q8. (i) Plural is established by sentences 16 and 18. (j) No question requires a rule that is not attested in the data. (k) No sentence in the data permits an alternative analysis that contradicts the intended grammar (e.g., no sentence allows the possessive prefix to be reanalyzed as a suffix on the possessor, because the possessor is always morphologically bare).
-
-9. Provide the following answers for the solution key. Q1: "I see you." Q2: "The big children." Q3: "I don't see the big dog's house." Q4: kaba lare da-kʼa. Q5: ga-da-tʼari da-kʼa-ri. Q6: tari kʼari fana lare. Q7: pano bile pʼano da-kʼa. Q8: "You don't see the big trees."
-
-10. In the solution explanation, walk through the inference chain in the following order: (a) identify the 4-vowel inventory and ejective contrasts from the lexicon; (b) identify NAdj order and SOV from the sentence structures; (c) identify the possessive prefix paradigm and head-marking strategy from sentences 5–8; (d) identify the intransitive P/S prefix from sentences 9–11 and note its identity with the possessive prefix; (e) identify the transitive P-prefix + A-suffix structure from sentences 12–14 and conclude ergative alignment (S=P≠A); (f) identify the P-before-A linear order; (g) identify negation and plural from sentences 15–18; (h) show how each question applies these rules in combination.
+9. **Verify disambiguation and solvability.**
+   - Confirm that no example allows the possessive prefix to be reanalyzed as a separate word or as a marker on the possessor. The prefix must be orthographically fused to the noun stem in every instance.
+   - Confirm that the noun stem is uniquely identifiable across all possessive forms (the invariant portion must be the same string in every form of the same noun).
+   - Confirm that the plural suffix is never ambiguous with the possessive prefix (they must differ in position AND in their distributional behavior: the prefix varies by possessor, the suffix is invariant across possessors).
+   - Confirm that postpositions are never ambiguous with adjectives (use semantically distinct postpositions, or place them in contexts where their function is clear).
+   - Confirm that every rule required by the questions is uniquely determined by at least one example in the data.
+   - Confirm that the two core features (head-marking possessives, noun-before-modifier order) are each tested in at least three questions and are always tested in combination with at least one other rule.
+   - Confirm that the puzzle does not require any prior knowledge of Abkhaz phonology, orthography, or grammar — all patterns must be inferable from the distributional data alone.

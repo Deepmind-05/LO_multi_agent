@@ -4,192 +4,68 @@ TARGET-LANGUAGE: Lezgian (lez)
 
 CORE
 
-1. Concept: Dependent marking in possessive NPs (source 81A-1)
-   - Target-language realization: Lezgian marks the possessor with genitive case (WALS 24A-2); the possessed noun carries no possessive affix (WALS 57A-4). Predicative possession also uses genitive (WALS 117A-2).
-   - Intended solver inference: In a possessive construction, the case-marked noun is the possessor, not the possessed. The possessed noun is unmarked.
-   - Priority: HIGH
+1. Concept: Dependent marking in possessive noun phrases (source 81A-1)
+   - Target-language realization: The possessor receives genitive case (a suffix); the possessed noun (head) is unmarked for possession. WALS 24A confirms "possessor is dependent-marked." WALS 57A confirms no possessive affixes on the possessed noun.
+   - Intended solver inference: From data showing possessive NPs, the solver identifies that one NP element bears a suffix (the possessor) while the other (the head noun) does not, and infers that the language marks the dependent (possessor) rather than the head.
+   - Priority: REQUIRED
 
 2. Concept: Noun before modifier (source 82A-1)
-   - Target-language realization: NOT APPLICABLE. Lezgian has the opposite order: modifier-before-noun across all modifier types (AdjN 87A-1, DemN 88A-1, NumN 89A-1, RelN 90A-2, GenN 86A-1).
-   - Decision: DROPPED. The specific source value does not hold in Lezgian. The feature (noun-modifier order) is captured as a target-specific concept below with the correct Lezgian value.
+   - DROPPED. Lezgian is consistently modifier-before-noun (WALS 87A: AdjN; 88A: DemN; 89A: NumN; 90A: RelN; 86A: GenN). The source value does not apply. Replaced by target-specific concept below.
 
 TARGET-SPECIFIC
 
-1. Phenomenon: Ergative-absolutive alignment (WALS 98A-4, 99A-4)
-   - Intended solver inference: In transitive clauses, the agent (A) bears ergative case; the patient (P) and intransitive subject (S) are unmarked (absolutive). The solver must identify which noun is the agent based on case marking, not position or verbal agreement.
-   - Interaction with CORE: Parallel to dependent marking in possession — in both, the "higher" argument (A / possessor) is the one that is case-marked. This parallel is the puzzle's central structural insight.
-   - Difficulty contribution: HIGH — this is the central typological inference.
+1. Phenomenon: Modifier-before-noun order (inverse of source 82A-1)
+   - Intended solver inference: All modifiers (genitive possessor, adjective, demonstrative, numeral, relative clause) precede the head noun. The solver recognizes a consistent head-final pattern in noun phrases.
+   - Interaction with CORE: The genitive possessor is both the marked element (dependent marking) AND the pre-noun element (modifier-before-noun). The solver discovers that the marked element systematically precedes the unmarked head.
+   - Difficulty contribution: Medium. Requires recognizing a consistent ordering pattern across multiple modifier types.
    - Priority: REQUIRED
 
-2. Phenomenon: No verbal person/number marking (WALS 102A-1, 100A-1, 103A-1)
-   - Intended solver inference: The verb does not encode any information about its arguments' person or number. Grammatical roles must be recovered entirely from case marking on the noun phrases.
-   - Interaction with CORE: Reinforces that case marking is the sole diagnostic for grammatical role, making the ergative-absolutive inference essential.
-   - Difficulty contribution: HIGH — removes the "easy" strategy of reading agreement off the verb.
-   - Priority: REQUIRED
-
-3. Phenomenon: Case suffixes (WALS 51A-1); rich case system with 10+ cases (WALS 49A-8)
-   - Intended solver inference: Case is marked by suffixes on the noun. The solver must identify which suffix corresponds to which case (ergative, genitive, dative, locative, etc.) from distributional evidence.
-   - Interaction with CORE: Provides the morphological mechanism for both ergative alignment and genitive possession.
-   - Difficulty contribution: HIGH — the solver must segment and identify multiple case suffixes.
-   - Priority: REQUIRED
-
-4. Phenomenon: SOV basic word order (WALS 81A-1, 82A-1, 83A-1)
-   - Intended solver inference: The default clause order is Subject–Object–Verb. In transitive clauses, the ergative-marked NP (agent) precedes the absolutive NP (patient), which precedes the verb.
-   - Interaction with CORE: Provides the structural frame within which case-marking patterns are observed.
-   - Difficulty contribution: MEDIUM — helps the solver parse clause structure.
+2. Phenomenon: Ergative-absolutive alignment
+   - Intended solver inference: In transitive clauses, the agent (A) bears ergative case (a suffix); the patient (P) is unmarked (absolutive). In intransitive clauses, the subject (S) is unmarked (absolutive). The solver infers a parallel to possessive dependent marking: the "agentive" or "dependent" role is marked, the "patientive" or "head" role is unmarked.
+   - Interaction with CORE: Extends the dependent-marking pattern from possessive NPs to clause-level argument structure. The solver sees a unified principle: the language marks the semantically dependent/agentive role with case.
+   - Difficulty contribution: High. Requires the solver to distinguish transitive from intransitive clauses and identify the ergative/absolutive contrast from data.
    - Priority: HIGH
 
-5. Phenomenon: Modifier-before-noun order (WALS 87A-1, 88A-1, 89A-1, 90A-2, 86A-1)
-   - Intended solver inference: Adjectives, demonstratives, numerals, relative clauses, and genitive possessors all precede the head noun. The solver should recognize that the rightmost noun in a noun phrase is the head.
-   - Interaction with CORE: Complements the genitive-possession pattern (genitive precedes possessed noun).
-   - Difficulty contribution: MEDIUM — helps the solver identify noun-phrase boundaries and heads.
+3. Phenomenon: Suffixal case marking (strongly suffixing morphology)
+   - Intended solver inference: All case markers (genitive, ergative, etc.) are suffixes attached to the noun stem. The solver identifies the morphological mechanism of dependent marking.
+   - Interaction with CORE: Provides the observable morphological form of the dependent marking. The solver can segment noun + case suffix.
+   - Difficulty contribution: Low. Directly observable from data.
    - Priority: HIGH
 
-6. Phenomenon: Obligatory plural suffix on all nouns (WALS 33A-2, 34A-6)
-   - Intended solver inference: A specific suffix on the noun indicates plurality; its absence indicates singular. Plural marking is always present when the referent is plural.
-   - Interaction with CORE: Adds a second suffixal layer to nouns (plural + case), requiring the solver to segment multiple suffixes.
-   - Difficulty contribution: MEDIUM — increases suffix-parsing complexity.
+4. Phenomenon: No verbal person/number marking
+   - Intended solver inference: Verbs do not encode person or number of any argument. Grammatical roles are identified solely through case marking on noun phrases.
+   - Interaction with CORE: Reinforces the centrality of NP-internal case marking. The solver cannot rely on verbal agreement and must attend to case on NPs, making the dependent-marking pattern more salient.
+   - Difficulty contribution: Medium. The solver must notice the absence of verbal agreement and recognize that case on NPs is the sole role-identifying mechanism.
    - Priority: HIGH
 
-7. Phenomenon: Indirect evidentiality marked by verbal affix/clitic (WALS 77A-2, 78A-2)
-   - Intended solver inference: A specific verbal suffix indicates that the speaker's knowledge is indirect (hearsay, inference). The solver should distinguish evidential-marked from unmarked (direct) statements.
-   - Interaction with CORE: Adds a layer of verbal morphology that the solver must parse alongside tense, aspect, and negation.
-   - Difficulty contribution: HIGH — creates a meaningful semantic inference (source of information) from a formal marker.
-   - Priority: HIGH
+5. Phenomenon: Obligatory plural suffix on all nouns
+   - Intended solver inference: Plural nouns always bear a plural suffix; singular nouns do not. This provides a reliable morphological boundary marker.
+   - Interaction with CORE: The plural suffix helps the solver identify noun boundaries and distinguish the noun stem from case suffixes (plural suffix + case suffix stacking).
+   - Difficulty contribution: Low. Provides a useful reference point for morphological analysis.
+   - Priority: OPTIONAL
 
-8. Phenomenon: Perfective/imperfective aspect (WALS 65A-1)
-   - Intended solver inference: The verb distinguishes between completed (perfective) and ongoing/habitual (imperfective) events. The solver should identify which aspect is marked in each example.
-   - Interaction with CORE: Adds to the verbal morphology layer.
-   - Difficulty contribution: MEDIUM — another suffix to identify.
-   - Priority: HIGH
-
-9. Phenomenon: Past and future tense (WALS 66A-1, 67A-1)
-   - Intended solver inference: The verb marks past vs. non-past, and future vs. non-future. The solver should identify tense from verbal morphology.
-   - Interaction with CORE: Adds to the verbal morphology layer.
-   - Difficulty contribution: MEDIUM — another suffix to identify.
-   - Priority: HIGH
-
-10. Phenomenon: Negative suffix on verb (WALS 143F-2, 144S-2)
-    - Intended solver inference: A specific verbal suffix indicates negation. The solver should identify negated vs. affirmative clauses.
-    - Interaction with CORE: Adds to the verbal morphology layer.
-    - Difficulty contribution: MEDIUM — another suffix to identify.
-    - Priority: HIGH
-
-11. Phenomenon: Genitive possessive / predicative possession via genitive (WALS 117A-2)
-    - Intended solver inference: "I have X" is expressed as "X is in my genitive" (i.e., the possessor is in genitive case, the possessed is in absolutive). The solver should recognize this construction.
-    - Interaction with CORE: Directly instantiates the dependent-marking-in-possession source concept.
-    - Difficulty contribution: MEDIUM — reinforces the case-marking pattern.
-    - Priority: HIGH
-
-12. Phenomenon: Postpositions (WALS 85A-1)
-    - Intended solver inference: Adpositions follow the noun phrase (postpositional). The solver should recognize that a word following a noun phrase is a postposition, not a preposition.
-    - Interaction with CORE: Consistent with SOV and OV&Postp typological profile (WALS 95A-1).
-    - Difficulty contribution: MEDIUM — helps the solver identify adpositional phrases.
-    - Priority: HIGH
-
-13. Phenomenon: Interrogative verb morphology (WALS 116A-2); no question particle (WALS 92A-6)
-    - Intended solver inference: Questions are marked by a specific verbal suffix, not by a separate particle or intonation-only strategy. The solver should identify interrogative clauses from verbal morphology.
-    - Interaction with CORE: Adds to the verbal morphology layer.
-    - Difficulty contribution: MEDIUM — another suffix to identify.
-    - Priority: HIGH
-
-14. Phenomenon: Suppletion in tense and aspect (WALS 79A-3)
-    - Intended solver inference: Some tense/aspect combinations use a different verb stem (suppletive) rather than a regular suffix. The solver should recognize that not all verb forms share the same stem.
-    - Interaction with CORE: Makes verbal morphology parsing more challenging; the solver cannot assume a single stem + suffix pattern.
-    - Difficulty contribution: HIGH — prevents the solver from over-generalizing a single stem.
-    - Priority: OPTIONAL
-
-15. Phenomenon: Morphological causative (WALS 111A-2)
-    - Intended solver inference: A specific verbal suffix indicates causation ("make X do Y"). The solver should identify causative clauses.
-    - Interaction with CORE: Adds a derivational layer to verbal morphology.
-    - Difficulty contribution: MEDIUM — another suffix to identify.
-    - Priority: OPTIONAL
-
-16. Phenomenon: Gap relativization (WALS 122A-4, 123A-4)
-    - Intended solver inference: Relative clauses are formed by leaving a gap (no relative pronoun or complementizer). The solver should identify the relativized role from the gap position.
-    - Interaction with CORE: Adds syntactic complexity; the solver must identify which argument is missing in the relative clause.
-    - Difficulty contribution: MEDIUM — adds a layer of syntactic inference.
-    - Priority: OPTIONAL
-
-17. Phenomenon: Locational comparative (WALS 121A-1)
-    - Intended solver inference: "X is bigger than Y" is expressed as "X is in the big state of Y" (locative case on the standard of comparison). The solver should recognize that the locative case has a comparative function.
-    - Interaction with CORE: Extends the case system's functional range; the solver must recognize a non-spatial use of a spatial case.
-    - Difficulty contribution: MEDIUM — creates an interesting case-function mapping.
-    - Priority: OPTIONAL
-
-18. Phenomenon: Third person pronouns related to non-remote demonstratives (WALS 43A-4)
-    - Intended solver inference: Third person pronouns share forms with (non-remote) demonstratives. The solver should recognize this formal identity.
-    - Interaction with CORE: Adds to the pronominal/demonstrative system.
-    - Difficulty contribution: LOW — additional detail.
-    - Priority: OPTIONAL
-
-19. Phenomenon: Interrogative-based indefinites (WALS 46A-1)
-    - Intended solver inference: Indefinite pronouns ("someone," "something") are formed from interrogative words ("who," "what") with a derivational suffix. The solver should recognize this derivation.
-    - Interaction with CORE: Adds to the pronominal system.
-    - Difficulty contribution: MEDIUM — creates a derivational pattern to identify.
-    - Priority: OPTIONAL
-
-20. Phenomenon: Intensifier = reflexive (WALS 47A-1)
-    - Intended solver inference: The same form means both "self" (reflexive) and "very/really" (intensifier). The solver should recognize this polysemy.
-    - Interaction with CORE: Adds to the pronominal system.
-    - Difficulty contribution: MEDIUM — creates a potential ambiguity to resolve from context.
-    - Priority: OPTIONAL
-
-21. Phenomenon: No definite article; indefinite article = numeral 'one' (WALS 37A-4, 38A-2)
-    - Intended solver inference: Definiteness is marked by the absence of an article; indefiniteness is marked by the numeral 'one' used as an article. The solver should recognize this pattern.
-    - Interaction with CORE: Adds to the nominal system.
-    - Difficulty contribution: LOW — additional detail.
-    - Priority: OPTIONAL
-
-22. Phenomenon: Case syncretism (core and non-core) (WALS 28A-3)
-    - Intended solver inference: Some case forms are identical (syncretic) across different case categories. The solver should recognize that a single form may correspond to multiple case functions.
-    - Interaction with CORE: Adds complexity to case identification; the solver cannot always determine the case from form alone.
-    - Difficulty contribution: MEDIUM — creates ambiguity that must be resolved from context.
-    - Priority: OPTIONAL
-
-23. Phenomenon: Differentiation of comitative and instrumental (WALS 52A-2)
-    - Intended solver inference: "With (accompaniment)" and "with (instrument)" are expressed by different case suffixes. The solver should distinguish between these two uses.
-    - Interaction with CORE: Adds to the case system.
-    - Difficulty contribution: MEDIUM — another case distinction to identify.
-    - Priority: OPTIONAL
+6. Phenomenon: SOV basic word order
+   - Intended solver inference: The verb follows both subject and object. Combined with modifier-before-noun, the language shows a consistent head-final profile.
+   - Interaction with CORE: Reinforces the head-final typological profile established by modifier-before-noun order.
+   - Difficulty contribution: Low. Easily observable.
+   - Priority: OPTIONAL
 
 INTERACTIONS
 
-1. Ergative-absolutive + No verbal person marking + Case suffixes:
-   - The solver must identify grammatical roles (A, S, P) solely from case marking on nouns because the verb provides no agreement information. This is the puzzle's central inference chain.
+1. Dependent marking (possessive) × Ergative alignment: Both constructions mark the "dependent" or "agentive" role with a case suffix while leaving the "head" or "patientive" role unmarked. The solver infers a unified dependent-marking principle operating across both NP-internal and clause-level syntax.
 
-2. Ergative-absolutive + Dependent marking in possession (CORE):
-   - In both transitive clauses and possessive NPs, the "higher" argument (A / possessor) is the one that is case-marked. This structural parallel allows the solver to use possession examples to build intuition for the ergative pattern, and vice versa.
+2. Modifier-before-noun × Dependent marking: The marked element (genitive possessor) is also the pre-noun element. The solver discovers that marking and ordering are aligned: the marked/dependent element precedes the unmarked/head element.
 
-3. Case suffixes + Obligatory plural:
-   - Nouns may carry both a plural suffix and a case suffix. The solver must segment these correctly (e.g., Noun-Plural-Case vs. Noun-Case). This adds a layer of morphological parsing.
+3. No verbal person marking × Ergative alignment: Since verbs carry no person/number information, case on NPs is the sole means of identifying grammatical roles. This makes the ergative/absolutive contrast more prominent and easier to isolate from data.
 
-4. Tense + Aspect + Evidentiality + Negation + Interrogative (verbal morphology stack):
-   - The verb may carry multiple suffixes encoding different categories. The solver must identify and segment each suffix. Suppletion (if included) complicates this by introducing stem alternations.
-
-5. Modifier-before-noun + SOV + Postpositions:
-   - The language exhibits a consistent "modifier-before-head" pattern at multiple levels: adjectives before nouns, objects before verbs, postpositions after NPs (but the postpositional phrase as a whole modifies the noun it follows). This creates a coherent structural profile the solver can use to parse complex sentences.
-
-6. Genitive possessive + Ergative-absolutive:
-   - The genitive case (used for possession) and the ergative case (used for transitive agents) are distinct suffixes. The solver must not conflate them. The genitive appears in pre-nominal position (GenN), while the ergative appears on the agent NP in clause-internal position.
-
-7. Locational comparative + Case system:
-   - The locative case has a non-spatial (comparative) function. The solver must recognize that a spatial case can be extended to a non-spatial domain, which is a common typological pattern but requires inference from the data.
+4. Suffixal case × Obligatory plural: Case suffixes stack on top of (or after) the plural suffix. The solver can use the obligatory plural as a fixed reference point to identify the variable case suffix.
 
 CONSTRAINTS
 
-1. The puzzle must provide sufficient examples for the solver to identify the ergative case suffix and distinguish it from other case suffixes (genitive, dative, locative, etc.). At minimum, the solver needs to see the ergative in multiple transitive clauses and the genitive in multiple possessive constructions.
-
-2. Because Lezgian has no verbal person marking, the puzzle must NOT include any verbal agreement morphology. All grammatical role information must come from case marking on NPs.
-
-3. The puzzle must make clear which nouns are singular vs. plural (via the obligatory plural suffix) so that the solver can correctly segment case suffixes from plural suffixes.
-
-4. If suppletion is included, the puzzle must provide enough examples for the solver to recognize that different stems are in use, without making the stem identification arbitrary.
-
-5. The modifier-before-noun order must be consistent across all examples (adjectives, demonstratives, numerals, genitives, relative clauses all precede the noun). Inconsistency would confuse the solver.
-
-6. The puzzle should avoid using the passive, antipassive, or applicative constructions (none exist in Lezgian per WALS 107A-2, 108A-3, 109A-8). All transitive clauses must have an explicit ergative-marked agent.
-
-7. If evidentiality is included, the puzzle must provide clear semantic context (e.g., "I heard that..." vs. "I saw that...") so the solver can map the formal marker to its semantic function.
-
-8. The puzzle should not require the solver to know Lezgian-specific vocabulary. All content words should be glossed or their meaning inferable from context.
+1. The puzzle data must clearly show that the genitive suffix appears on the possessor, not on the possessed noun. No possessive affix may appear on the head noun.
+2. Modifier-before-noun order must be demonstrated with at least two types of modifiers (e.g., genitive + adjective, or genitive + demonstrative) to establish it as a general pattern rather than a genitive-specific property.
+3. If ergative alignment is included, the data must include both transitive and intransitive clauses with clear semantic roles, allowing the solver to identify the A-marked vs. S/P-unmarked contrast.
+4. Verbs in the data must not show any person or number agreement morphology.
+5. Case markers must be presented as suffixes (not prefixes, circumfixes, or independent words).
+6. The puzzle should not require the solver to identify more than two case values (genitive and ergative). The richness of the full case system (10+ cases) is background context, not a puzzle requirement.
+7. If the plural suffix is included, it must be shown to be obligatory (all plural nouns bear it) and distinct from case suffixes.

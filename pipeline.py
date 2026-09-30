@@ -172,6 +172,7 @@ Return valid JSON with keys:
                 response_format={"type": "json_object"},
                 temperature=0.1,
                 max_completion_tokens=1024,
+                reasoning_effort="low",
             )
             raw = resp.choices[0].message.content or ""
             data = json.loads(raw)
@@ -357,7 +358,7 @@ def run_single_puzzle(
             final_act_diff = None
 
         has_issues = False
-        if val_dict and val_dict.get("issues"):
+        if val_dict and isinstance(val_dict.get("issues"), list):
             has_issues = len(val_dict["issues"]) > 0
         elif feedback and feedback.strip():
             has_issues = True
@@ -390,6 +391,11 @@ def run_single_puzzle(
                 feedback=directive,
             )
             save_text(concepts_path, concepts)
+            is_insuf, reason = is_insufficient_data(concepts)
+            if is_insuf:
+                print(f'⚠️  Agent 1 flagged: {reason}. Skipping.')
+                final_verdict = 'SKIPPED_INSUFFICIENT_DATA'
+                break
             # Downstream cascade to Agent 2 and Agent 3
             rationale = run_agent2(
                 agent1_output_path=str(concepts_path),
