@@ -88,7 +88,7 @@ Select TARGET-LANGUAGE-SPECIFIC properties only when they:
 * increase difficulty without making puzzle arbitrary;
 * do not require prior knowledge of TARGET LANGUAGE.
 
-Prefer properties that create useful interactions rather than unrelated extra complexity.
+Prefer properties that create useful interactions and extra complexity for inference.
 
 Ask:
 
